@@ -1269,8 +1269,16 @@
       try {
         const wrap = JSON.parse(ev.data);
         const raw = (wrap && wrap.message != null) ? wrap.message : ev.data;
-        const msg = (typeof raw === "string" && raw.trim().startsWith("{")) ? JSON.parse(raw)
+        let msg = (typeof raw === "string" && raw.trim().startsWith("{")) ? JSON.parse(raw)
                   : (raw && typeof raw === "object" ? raw : null);
+        // ntfy turns bodies >4KB into attachments; pull the JSON if needed
+        if (!msg && wrap && wrap.attachment && wrap.attachment.url) {
+          fetch(wrap.attachment.url, { cache: "no-store" }).then(r => r.json()).then(m => {
+            if (m && (m.t === "cmdack")) { if (lastData) lastData.last_cmd_ack = m; noteAck(m); }
+            else if (m) applyLive(m);
+          }).catch(() => {});
+          return;
+        }
         if (!msg) return;
         if (msg.t === "cmdack") {
           if (lastData) lastData.last_cmd_ack = msg;
