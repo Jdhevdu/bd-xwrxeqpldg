@@ -1,6 +1,16 @@
-/* Cache static PWA assets only. Never cache live data or market APIs. */
-const CACHE = "fomo-terminal-v7";
-const PRECACHE = ["./index.html", "./manifest.json", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
+/* Cache icons only. Never cache HTML or live data — phone sells broke
+   when an old index.html was served from the service worker. */
+const CACHE = "fomo-terminal-v8";
+const PRECACHE = ["./manifest.json", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
+const VERSION = "v8";
+
+function isHTML(request) {
+  if (request.mode === "navigate") return true;
+  const u = new URL(request.url);
+  const p = u.pathname;
+  return p.endsWith("/") || p.endsWith("/index.html") || p.endsWith("index.html") ||
+    (request.headers.get("accept") || "").includes("text/html");
+}
 
 function isLiveData(requestUrl) {
   const u = new URL(requestUrl);
@@ -12,7 +22,7 @@ function isLiveData(requestUrl) {
     host === "api.dexscreener.com" ||
     host.includes("ntfy")
   ) return true;
-  if (u.pathname.endsWith("data.json")) return true;
+  if (u.pathname.endsWith("data.json") || u.pathname.endsWith("sw.js")) return true;
   return false;
 }
 
@@ -27,13 +37,27 @@ self.addEventListener("activate", (event) => {
   );
 });
 
+self.addEventListener("message", (event) => {
+  if (event.data === "skipWaiting" || (event.data && event.data.type === "skipWaiting")) {
+    self.skipWaiting();
+  }
+});
+
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
-  if (isLiveData(event.request.url)) {
-    event.respondWith(fetch(event.request, { cache: "no-store" }));
+  if (isHTML(event.request) || isLiveData(event.request.url)) {
+    event.respondWith(
+      fetch(event.request, { cache: "no-store" }).catch(() => caches.match(event.request))
+    );
     return;
   }
   event.respondWith(
-    caches.match(event.request).then((hit) => hit || fetch(event.request))
+    fetch(event.request, { cache: "no-store" }).then((res) => {
+      if (res && res.ok) {
+        const copy = res.clone();
+        caches.open(CACHE).then((c) => c.put(event.request, copy)).catch(() => {});
+      }
+      return res;
+    }).catch(() => caches.match(event.request))
   );
 });

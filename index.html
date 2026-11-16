@@ -2,6 +2,8 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#6A0B0B">
   <meta name="color-scheme" content="dark">
@@ -87,6 +89,8 @@
       70% { box-shadow: 0 0 0 8px rgba(255,68,68,0); }
       100% { box-shadow: 0 0 0 0 rgba(255,68,68,0); }
     }
+    .appver { margin-left: 8px; opacity: .7; font-size: 9px; letter-spacing: .08em; }
+    .eq-cash { font-size: 13px; color: #ffd0d0; font-weight: 600; margin-top: 4px; }
     .badge {
       margin: 0 16px 10px;
       display: inline-block;
@@ -314,7 +318,7 @@
       </div>
       <div id="livepill" class="live"><span class="dot"></span> Live</div>
     </div>
-    <div class="badge">Spielgeld · Paper Trading</div>
+    <div class="badge">Spielgeld · Paper Trading <span class="appver" id="appver">v8</span></div>
     <div id="banners"></div>
 
     <div id="view-home" class="view on"></div>
@@ -351,7 +355,8 @@
   </nav>
 
   <script>
-  const POLL_MS = 15000;
+  const POLL_MS = 8000;
+  const APP_VERSION = "v8";
   const DATA_BRANCH = "main";
   const bootAt = Date.now();
   let lastData = null;
@@ -637,6 +642,7 @@
           </div>
           <div class="eq-usd" data-count="equity_usd">${usd(d.equity_usd)}</div>
           <div class="eq-eur">${eur(d.equity_eur)}</div>
+          <div class="eq-cash" data-count="cash_usd">Bargeld ${d.cash_usd!=null?usd(d.cash_usd):"—"}</div>
           <div class="eq-pnl ${cls(d.pnl_usd)}">${d.pnl_usd>=0?"+":""}${usd(d.pnl_usd)} (${pct(d.roi_pct, true)})</div>
           ${controlHtml(d)}
           <div class="tf">${["LIVE","1H","4H","1D","1W","ALL"].map(x => `<button data-tf="${x}" class="${tf===x?"on":""}">${x}</button>`).join("")}</div>
@@ -933,11 +939,8 @@
   function render(d, stale) {
     lastData = d;
     const live = $("#livepill");
-    live.classList.toggle("off", !d.running && !d.paused);
-    live.classList.toggle("paused", !!d.paused);
-    if (d.paused) live.innerHTML = `<span class="dot"></span> Paused`;
-    else if (d.running) live.innerHTML = `<span class="dot"></span> Live`;
-    else live.innerHTML = `<span class="dot"></span> ${esc(d.status_label || "Offline")}`;
+    if (!stale) lastTickAt = Date.now();
+    paintLiveAge();
     paintBanners(d, stale);
     renderHome(d);
     renderFeed(d);
@@ -1028,10 +1031,10 @@
     root.innerHTML = `<div class="modal-bg" role="dialog" aria-modal="true">
       <div class="modal">
         <h3>${esc(symbol || "Coin")} verkaufen?</h3>
-        <p>Paper-Marktverkauf der ganzen Position (Gebühren und Slippage wie im Bot). Nur Spielgeld, keine echte Wallet.</p>
+        <p>Bist du sicher? Paper-Marktverkauf der ganzen Position (Gebühren und Slippage wie im Bot). Nur Spielgeld, keine echte Wallet.</p>
         <div class="rowbtns">
           <button class="cancel" type="button" id="mdl-cancel">Abbrechen</button>
-          <button class="ok" type="button" id="mdl-ok">Verkaufen</button>
+          <button class="ok" type="button" id="mdl-ok">Ja, verkaufen</button>
         </div>
       </div>
     </div>`;
@@ -1190,8 +1193,8 @@
           setStatus("ok", "Alle Positionen verkauft.");
           clearInterval(iv); resolve(true); return;
         }
-        if (Date.now() - t0 > 15000) {
-          setStatus("err", "Verkauf gesendet, aber keine Bestätigung. Bitte in ein paar Sekunden erneut versuchen.");
+        if (Date.now() - t0 > 8000) {
+          setStatus("err", "Bot hat nicht reagiert. Bitte erneut versuchen.");
           clearInterval(iv); resolve(false);
         }
       }, 300);
@@ -1218,12 +1221,28 @@
     }
     try {
       const url = `${String(r.base).replace(/\/$/,"")}/${encodeURIComponent(r.topic)}`;
-      const res = await fetch(url, {
-        method: "POST",
-        headers: { "Content-Type": "text/plain; charset=utf-8", "Priority": "min" },
-        body: JSON.stringify(Object.assign({ cmd, k: r.key, t: "cmd" }, extra || {}))
-      });
-      if (!res.ok) throw new Error("HTTP " + res.status);
+      const body = JSON.stringify(Object.assign({ cmd, k: r.key, t: "cmd" }, extra || {}));
+      let res = null, lastErr = null;
+      for (let i = 0; i < 3; i++) {
+        try {
+          res = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "text/plain; charset=utf-8", "Priority": "min" },
+            body,
+            cache: "no-store"
+          });
+          if (res.ok) break;
+          lastErr = "HTTP " + res.status;
+        } catch (e) {
+          lastErr = e && e.message ? e.message : "Netzwerkfehler";
+          res = null;
+        }
+        if (i < 2) await new Promise(r => setTimeout(r, 400));
+      }
+      if (!res || !res.ok) {
+        setStatus("err", "Befehl konnte nicht gesendet werden" + (lastErr ? " (" + lastErr + ")." : "."));
+        return;
+      }
       if (isSell) {
         await waitForSellAck(extra && extra.mint, cmd === "sell_all");
       } else {
@@ -1278,6 +1297,8 @@
     if (msg.equity_usd != null) d.equity_usd = msg.equity_usd;
     if (msg.equity_eur != null) d.equity_eur = msg.equity_eur;
     if (msg.cash_usd != null) d.cash_usd = msg.cash_usd;
+    lastTickAt = Date.now();
+    paintLiveAge();
     if (msg.pnl_usd != null) d.pnl_usd = msg.pnl_usd;
     if (msg.pnl_eur != null) d.pnl_eur = msg.pnl_eur;
     if (msg.roi_pct != null) d.roi_pct = msg.roi_pct;
@@ -1321,6 +1342,8 @@
       const st = document.querySelector(".ctrl .st");
       if (usdEl && d.equity_usd != null) animateText(usdEl, prevEq, d.equity_usd, v => usd(v));
       if (eurEl && d.equity_eur != null) eurEl.textContent = eur(d.equity_eur);
+      const cashEl = document.querySelector("[data-count=cash_usd]");
+      if (cashEl && d.cash_usd != null) cashEl.textContent = "Bargeld " + usd(d.cash_usd);
       if (pnlEl && d.pnl_usd != null) {
         pnlEl.className = "eq-pnl " + cls(d.pnl_usd);
         animateText(pnlEl, prevPnl, d.pnl_usd, v => `${v>=0?"+":""}${usd(v)} (${pct(d.roi_pct, true)})`);
@@ -1371,10 +1394,43 @@
       }
     }
   }
+  let lastTickAt = 0;
+  function paintLiveAge() {
+    const live = document.getElementById("livepill");
+    if (!live || !lastData) return;
+    const paused = !!lastData.paused;
+    const running = !!lastData.running;
+    const age = lastTickAt ? Math.max(0, Math.round((Date.now() - lastTickAt) / 1000)) : null;
+    live.classList.toggle("off", !running && !paused);
+    live.classList.toggle("paused", paused);
+    let label;
+    if (paused) label = "Paused";
+    else if (age == null) label = running ? "Live" : (lastData.status_label || "Offline");
+    else if (age <= 8) label = "Live · " + age + "s";
+    else label = "Update vor " + age + "s";
+    if (age != null && age > 20) live.classList.add("off");
+    live.innerHTML = `<span class="dot"></span> ${label}`;
+  }
+  setInterval(paintLiveAge, 1000);
+
   document.querySelectorAll("#nav [data-tab]").forEach(btn => btn.onclick = () => setTab(btn.dataset.tab));
   tick();
   setInterval(tick, POLL_MS);
-  if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js").catch(() => {});
+  if ("serviceWorker" in navigator) {
+    let reloading = false;
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (reloading) return;
+      reloading = true;
+      location.reload();
+    });
+    navigator.serviceWorker.register("./sw.js?v=8", { updateViaCache: "none" }).then((reg) => {
+      const ping = () => { try { reg.update(); } catch (_) {} };
+      ping();
+      setInterval(ping, 15000);
+      if (reg.waiting) { try { reg.waiting.postMessage("skipWaiting"); } catch (_) {} }
+      navigator.serviceWorker.addEventListener("message", () => {});
+    }).catch(() => {});
+  }
   </script>
 </body>
 </html>
