@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Spielgeld · Paper Trading",
-  "exported_at": "2026-11-16 19:16:24 CET",
-  "last_update": "2026-11-16 19:16:16 CET",
+  "exported_at": "2026-11-16 19:17:25 CET",
+  "last_update": "2026-11-16 19:17:10 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 21.290533219057174,
@@ -24,10 +24,10 @@
   "wins": 0,
   "halted": false,
   "counters": {
-    "cycles": 146,
-    "pools_scanned": 17350,
-    "unique_pools": 3984,
-    "prefilter_rejected": 3992,
+    "cycles": 148,
+    "pools_scanned": 17775,
+    "unique_pools": 3995,
+    "prefilter_rejected": 4003,
     "safety_rejected": 129,
     "scored": 207,
     "buys": 8,
@@ -40,8 +40,8 @@
     "trending_5m_p2": 15,
     "ds_boosts_top": 3,
     "ds_boosts": 17,
+    "new": 57,
     "ds_profiles": 19,
-    "new": 50,
     "watchlist": 57
   },
   "watch_count": 400,
@@ -76,7 +76,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 16:13:47 CET",
       "entry_ts": 1794842027.9097335,
-      "held": "3h 02m"
+      "held": "3h 03m"
     },
     {
       "symbol": "CATE",
@@ -107,7 +107,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 16:13:47 CET",
       "entry_ts": 1794842027.9097967,
-      "held": "3h 02m"
+      "held": "3h 03m"
     },
     {
       "symbol": "HOGE",
@@ -138,7 +138,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 16:14:24 CET",
       "entry_ts": 1794842064.7546785,
-      "held": "3h 02m"
+      "held": "3h 03m"
     },
     {
       "symbol": "WIGGLES",
@@ -169,7 +169,7 @@
       "risk_label": "trailing 40%",
       "entry_time": "2026-11-16 16:15:02 CET",
       "entry_ts": 1794842102.025648,
-      "held": "3h 01m"
+      "held": "3h 02m"
     },
     {
       "symbol": "rockstar",
@@ -200,7 +200,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 18:51:02 CET",
       "entry_ts": 1794851462.0988588,
-      "held": "25m"
+      "held": "26m"
     },
     {
       "symbol": "Cupsey",
@@ -231,7 +231,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 18:51:02 CET",
       "entry_ts": 1794851462.0989182,
-      "held": "25m"
+      "held": "26m"
     },
     {
       "symbol": "GTA",
@@ -262,7 +262,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 18:51:02 CET",
       "entry_ts": 1794851462.0989587,
-      "held": "25m"
+      "held": "26m"
     },
     {
       "symbol": "JOB",
@@ -293,7 +293,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 18:52:01 CET",
       "entry_ts": 1794851521.9232492,
-      "held": "24m"
+      "held": "25m"
     }
   ],
   "closed": [],
@@ -645,6 +645,105 @@
   ],
   "scanner": [
     {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "BBT",
+      "reason": "mcap/price not rising in 5m (-1.8%)",
+      "text": "BBT (pump-fun) - mcap/price not rising in 5m (-1.8%)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "BetOnBlak",
+      "reason": "liquidity $5 < $10,000",
+      "text": "BetOnBlak (pumpswap) - liquidity $5 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "REDCANDLE",
+      "reason": "curve liquidity $500 < $2,000",
+      "text": "REDCANDLE (pump-fun) - curve liquidity $500 < $2,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "jobless",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "jobless (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "VICE",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "VICE (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "GUT",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "GUT (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "AURAAA",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "AURAAA (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "DANI",
+      "reason": "curve liquidity $1,642 < $2,000",
+      "text": "DANI (pump-fun) - curve liquidity $1,642 < $2,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "luciabbl",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "luciabbl (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "beans",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "beans (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "155",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "155 (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
+    {
       "t": "2026-11-16 19:16:16 CET",
       "ts": 1794852976.0,
       "kind": "Skipped",
@@ -904,108 +1003,108 @@
       "reason": "liquidity $5,080 < $10,000",
       "text": "FiveM (pumpswap) - liquidity $5,080 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-16 19:16:09 CET",
-      "ts": 1794852969.0,
-      "kind": "Rejected",
-      "symbol": "penny",
-      "reason": "liquidity $6,911 < $10,000",
-      "text": "penny (pumpswap) - liquidity $6,911 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:16:09 CET",
-      "ts": 1794852969.0,
-      "kind": "Rejected",
-      "symbol": "BASIS",
-      "reason": "dex raydium-launchlab not graduated/allowed",
-      "text": "BASIS (raydium-launchlab) - dex raydium-launchlab not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 19:15:38 CET",
-      "ts": 1794852938.0,
-      "kind": "Rejected",
-      "symbol": "001",
-      "reason": "dex meteora-dbc not graduated/allowed",
-      "text": "001 (meteora-dbc) - dex meteora-dbc not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 19:15:38 CET",
-      "ts": 1794852938.0,
-      "kind": "Rejected",
-      "symbol": "OTTER",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "OTTER (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:15:38 CET",
-      "ts": 1794852938.0,
-      "kind": "Rejected",
-      "symbol": "Vicegirl",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "Vicegirl (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:15:38 CET",
-      "ts": 1794852938.0,
-      "kind": "Rejected",
-      "symbol": "MOM",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "MOM (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:15:38 CET",
-      "ts": 1794852938.0,
-      "kind": "Rejected",
-      "symbol": "155",
-      "reason": "pool age 1 min < 2 (early)",
-      "text": "155 (pump-fun) - pool age 1 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:15:38 CET",
-      "ts": 1794852938.0,
-      "kind": "Rejected",
-      "symbol": "sol",
-      "reason": "pool age 1 min < 2 (early)",
-      "text": "sol (pump-fun) - pool age 1 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:15:38 CET",
-      "ts": 1794852938.0,
-      "kind": "Rejected",
-      "symbol": "EX001",
-      "reason": "pool age 1 min < 2 (early)",
-      "text": "EX001 (pump-fun) - pool age 1 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:15:38 CET",
-      "ts": 1794852938.0,
-      "kind": "Rejected",
-      "symbol": "GTA6",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "GTA6 (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:15:38 CET",
-      "ts": 1794852938.0,
-      "kind": "Rejected",
-      "symbol": "JAPE",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "JAPE (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "BBT",
+      "reason": "mcap/price not rising in 5m (-1.8%)",
+      "text": "BBT (pump-fun) - mcap/price not rising in 5m (-1.8%)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "BetOnBlak",
+      "reason": "liquidity $5 < $10,000",
+      "text": "BetOnBlak (pumpswap) - liquidity $5 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "REDCANDLE",
+      "reason": "curve liquidity $500 < $2,000",
+      "text": "REDCANDLE (pump-fun) - curve liquidity $500 < $2,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "jobless",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "jobless (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "VICE",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "VICE (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "GUT",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "GUT (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "AURAAA",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "AURAAA (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "DANI",
+      "reason": "curve liquidity $1,642 < $2,000",
+      "text": "DANI (pump-fun) - curve liquidity $1,642 < $2,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "luciabbl",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "luciabbl (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "beans",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "beans (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:16:39 CET",
+      "ts": 1794852999.0,
+      "kind": "Rejected",
+      "symbol": "155",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "155 (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
     {
       "t": "2026-11-16 19:16:16 CET",
       "ts": 1794852976.0,
@@ -1130,105 +1229,6 @@
       "symbol": "REDCANDLE",
       "reason": "pool age 2 min < 2 (early)",
       "text": "REDCANDLE (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:16:09 CET",
-      "ts": 1794852969.0,
-      "kind": "Rejected",
-      "symbol": "tort",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "tort (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:16:09 CET",
-      "ts": 1794852969.0,
-      "kind": "Rejected",
-      "symbol": "jobless",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "jobless (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:16:09 CET",
-      "ts": 1794852969.0,
-      "kind": "Rejected",
-      "symbol": "ANSEMCOIN",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "ANSEMCOIN (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:16:09 CET",
-      "ts": 1794852969.0,
-      "kind": "Rejected",
-      "symbol": "Niggerworldwi",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "Niggerworldwi (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:16:09 CET",
-      "ts": 1794852969.0,
-      "kind": "Rejected",
-      "symbol": "TREENU",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "TREENU (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:16:09 CET",
-      "ts": 1794852969.0,
-      "kind": "Rejected",
-      "symbol": "$AURA",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "$AURA (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:16:09 CET",
-      "ts": 1794852969.0,
-      "kind": "Rejected",
-      "symbol": "made🇺🇸",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "made🇺🇸 (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:16:09 CET",
-      "ts": 1794852969.0,
-      "kind": "Rejected",
-      "symbol": "Anthropig",
-      "reason": "liquidity $2,403 < $10,000",
-      "text": "Anthropig (pumpswap) - liquidity $2,403 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:16:09 CET",
-      "ts": 1794852969.0,
-      "kind": "Rejected",
-      "symbol": "call",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "call (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:16:09 CET",
-      "ts": 1794852969.0,
-      "kind": "Rejected",
-      "symbol": "NINU",
-      "reason": "liquidity $3,106 < $10,000",
-      "text": "NINU (pumpswap) - liquidity $3,106 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:16:09 CET",
-      "ts": 1794852969.0,
-      "kind": "Rejected",
-      "symbol": "blue",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "blue (pump-fun) - pool age 2 min < 2 (early)",
       "curve": false
     }
   ],
@@ -1623,6 +1623,18 @@
       "t_label": "2026-11-16 19:16:16 CET",
       "usd": 23.5303,
       "eur": 21.2905
+    },
+    {
+      "t": 1794852999.8739064,
+      "t_label": "2026-11-16 19:16:39 CET",
+      "usd": 23.5303,
+      "eur": 21.2905
+    },
+    {
+      "t": 1794853030.3685572,
+      "t_label": "2026-11-16 19:17:10 CET",
+      "usd": 23.5303,
+      "eur": 21.2905
     }
   ],
   "agents": {
@@ -1631,10 +1643,10 @@
     "scanner": {
       "name": "Scanner",
       "title": "Pool discovery",
-      "token": "BIG",
-      "pill": "206 pools",
+      "token": "BBT",
+      "pill": "213 pools",
       "pill_kind": "blue",
-      "detail": "3984 einzigartige Pools insgesamt"
+      "detail": "3995 einzigartige Pools insgesamt"
     },
     "analyst": {
       "name": "Analyst",
@@ -1664,11 +1676,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "3984 Pools · 146 Scans · Watch 400 · Graduiert 24 · letzter Scan: trending_5m 17 · trending_1h_p2 11 · trending_1h 17 · trending_5m_p2 15 · ds_boosts_top 3 · ds_boosts 17 · ds_profiles 19 · new 50 · watchlist 57"
+      "detail": "3995 Pools · 148 Scans · Watch 400 · Graduiert 24 · letzter Scan: trending_5m 17 · trending_1h_p2 11 · trending_1h 17 · trending_5m_p2 15 · ds_boosts_top 3 · ds_boosts 17 · new 57 · ds_profiles 19 · watchlist 57"
     },
     {
       "name": "Analyst",
-      "detail": "207 bewertet · 4121 abgelehnt"
+      "detail": "207 bewertet · 4132 abgelehnt"
     },
     {
       "name": "Brain",
@@ -1703,7 +1715,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 8.0,
+  "heartbeat_age_s": 15.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
