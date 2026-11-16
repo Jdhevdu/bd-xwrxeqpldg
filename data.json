@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Spielgeld · Paper Trading",
-  "exported_at": "2026-11-16 18:49:39 CET",
+  "exported_at": "2026-11-16 18:50:33 CET",
   "last_update": "2026-11-16 18:49:10 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -66,10 +66,13 @@
       "pnl_pct": 0.05335705319690498,
       "tp_done": false,
       "tp_label": "Teilgewinn offen (bei +50 %)",
+      "early": false,
+      "venue": "pumpswap",
+      "tag": null,
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 16:13:47 CET",
       "entry_ts": 1794842027.9097335,
-      "held": "2h 35m"
+      "held": "2h 36m"
     },
     {
       "symbol": "CATE",
@@ -94,10 +97,13 @@
       "pnl_pct": 0.04107738912810355,
       "tp_done": false,
       "tp_label": "Teilgewinn offen (bei +50 %)",
+      "early": false,
+      "venue": "pumpswap",
+      "tag": null,
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 16:13:47 CET",
       "entry_ts": 1794842027.9097967,
-      "held": "2h 35m"
+      "held": "2h 36m"
     },
     {
       "symbol": "HOGE",
@@ -122,10 +128,13 @@
       "pnl_pct": 0.20661196824453065,
       "tp_done": false,
       "tp_label": "Teilgewinn offen (bei +50 %)",
+      "early": false,
+      "venue": "pumpswap",
+      "tag": null,
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 16:14:24 CET",
       "entry_ts": 1794842064.7546785,
-      "held": "2h 35m"
+      "held": "2h 36m"
     },
     {
       "symbol": "WIGGLES",
@@ -150,10 +159,13 @@
       "pnl_pct": 0.0747288905418424,
       "tp_done": true,
       "tp_label": "Teilgewinn +50 % genommen · Trailing 40 %",
+      "early": false,
+      "venue": "pumpswap",
+      "tag": null,
       "risk_label": "trailing 40%",
       "entry_time": "2026-11-16 16:15:02 CET",
       "entry_ts": 1794842102.025648,
-      "held": "2h 34m"
+      "held": "2h 35m"
     }
   ],
   "closed": [],
@@ -1067,11 +1079,17 @@
       "t_label": "2026-11-16 18:49:10 CET",
       "usd": 23.1987,
       "eur": 20.9905
+    },
+    {
+      "t": 1794851408.0,
+      "t_label": "2026-11-16 18:50:08 CET",
+      "usd": 23.2,
+      "eur": 20.9917
     }
   ],
   "agents": {
-    "running": 4,
-    "running_label": "4 running",
+    "running": 0,
+    "running_label": "stopped",
     "scanner": {
       "name": "Scanner",
       "title": "Pool discovery",
@@ -1116,7 +1134,7 @@
     },
     {
       "name": "Brain",
-      "detail": "Score ≥90: 30 % · ≥70: 15 % · ≥50: 5 % · max 4 Positionen"
+      "detail": "Score ≥90: 12 % · ≥70: 9 % · ≥50: 7 % · max 8 Positionen · pump.fun early fest $1.50, max 3"
     },
     {
       "name": "Executor",
@@ -1124,7 +1142,7 @@
     },
     {
       "name": "Risk",
-      "detail": "Teilgewinn 50 % bei +50 % · Trailing 40 % · Stop −25 % · aktiv"
+      "detail": "Teilgewinn 50 % bei +50 % · Trailing 40 % · Stop −25 % · pump.fun: +40 % / −20 % / 2 h · aktiv · PAUSIERT"
     }
   ],
   "rules": {
@@ -1133,13 +1151,21 @@
     "stop": "Hard Stop −25 %",
     "max_hold": "Max. Haltedauer 12.0 h",
     "daily_loss": "Tagesverlust-Limit 15 % — dann keine neuen Käufe bis Mitternacht (Vienna)",
-    "mode_note": "Nur Spielgeld: simulierte Fills, keine Wallet, keine echten Swaps."
+    "mode_note": "Nur Spielgeld: simulierte Fills, keine Wallet, keine echten Swaps.",
+    "early": "pump.fun Frühphase (Bonding Curve): fest $1.50, max 3, Stop −20 %, Teilgewinn 50 % bei +40 %, max. 2 h Halt, 1 % Gebühr + höhere Slippage"
   },
   "error": null,
-  "status": "running",
-  "status_label": "Läuft",
-  "running": true,
-  "heartbeat_age_s": 29.8,
+  "realtime": {
+    "base": "https://ntfy.adminforge.de",
+    "topic": "pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR",
+    "key": "2Q8Qh08sbvvPZapJJqr3iwzr",
+    "channel": "ntfy"
+  },
+  "status": "paused",
+  "status_label": "Pausiert",
+  "running": false,
+  "paused": true,
+  "heartbeat_age_s": 83.2,
   "bot_alive": true,
   "supervisor_alive": true
 }
