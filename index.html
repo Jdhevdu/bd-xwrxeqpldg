@@ -97,6 +97,8 @@
       padding: 4px 8px; border-radius: 999px;
     }
     .errb { margin: 0 16px 10px; background: rgba(255,68,68,.15); color: #ffc9c9; border-radius: 12px; padding: 10px 12px; font-size: 13px; font-weight: 600; }
+    .okb { margin: 0 16px 10px; background: rgba(74,222,128,.16); color: #bbf7d0; border-radius: 12px; padding: 10px 12px; font-size: 13px; font-weight: 600; }
+    .infob { margin: 0 16px 10px; background: rgba(251,191,36,.16); color: #fde68a; border-radius: 12px; padding: 10px 12px; font-size: 13px; font-weight: 600; }
 
     .ticker-wrap { overflow: hidden; margin: 0 0 8px; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
     .ticker { display: flex; gap: 10px; width: max-content; animation: tick 28s linear infinite; padding: 0 16px 6px; }
@@ -267,6 +269,9 @@
       background: #fff; color: #b91c1c; vertical-align: middle;
     }
     .tag-pf.tag-grad { background: #3a2a00; color: #ffd36a; }
+    .tag-pf.tag-sm { background: #06281a; color: #86efac; }
+    .tag-pf.tag-nar { background: #1e1530; color: #d8b4fe; }
+    .tag-pf.tag-bundle { background: #3a0000; color: #fda4af; }
     .learn-lesson { font-size: 14px; line-height: 1.45; color: #fff; margin: 0 0 10px; }
     .live.paused { color: #fbbf24; }
     .live.paused .dot { background: #fbbf24; }
@@ -572,9 +577,17 @@
 
   function pumpTag(p) {
     if (!p) return "";
-    if (p.tag === "pump.fun" || p.early) return `<span class="tag-pf">pump.fun</span>`;
-    if (p.tag === "graduiert" || p.graduated) return `<span class="tag-pf tag-grad">graduiert</span>`;
-    return "";
+    let s = "";
+    if (p.tag === "pump.fun" || p.early) s += `<span class="tag-pf">pump.fun</span>`;
+    else if (p.tag === "graduiert" || p.graduated) s += `<span class="tag-pf tag-grad">graduiert</span>`;
+    if (p.smart_label) {
+      const bundle = String(p.smart_label).indexOf("Bundle") >= 0;
+      s += `<span class="tag-pf ${bundle?"tag-bundle":"tag-sm"}">${esc(p.smart_label)}</span>`;
+    } else if (p.smart_n) {
+      s += `<span class="tag-pf tag-sm">Smart Money: ${esc(p.smart_n)} Wallet${p.smart_n==1?"":"s"}</span>`;
+    }
+    if (p.narrative) s += `<span class="tag-pf tag-nar">${esc(p.narrative)}</span>`;
+    return s;
   }
 
   function lernenHtml(d) {
@@ -760,6 +773,8 @@
         <div class="k" style="margin-bottom:6px">Risk</div>
         <div class="row"><span class="l">Status</span><span class="r">${p.tp_done ? "Watching · trailing" : "Watching"}</span></div>
         <div class="row"><span class="l">Rule</span><span class="r">${esc(p.tp_label || p.risk_label || "−25% stop")}</span></div>
+        ${p.smart_label || p.smart_n ? `<div class="row"><span class="l">Smart Money</span><span class="r">${esc(p.smart_label || ("Smart Money: " + p.smart_n + " Wallets"))}</span></div>` : ""}
+        ${p.narrative ? `<div class="row"><span class="l">Narrativ</span><span class="r">${esc(p.narrative)}${p.narrative_score!=null?" · "+esc(p.narrative_score):""}</span></div>` : ""}
       </div>
       <p class="hint">Kursdaten von GeckoTerminal. ${p.dexscreener_url?`<a href="${esc(p.dexscreener_url)}" target="_blank" rel="noopener" style="color:#ffb4b4">Auf DexScreener öffnen</a>`:""}</p>`;
     $("#backhome").onclick = () => $("#detail").classList.remove("on");
@@ -879,6 +894,42 @@
     });
   }
 
+  let statusBanner = null; // {kind, text, t}
+  let lastAckTs = 0;
+  function setStatus(kind, text) {
+    statusBanner = { kind, text, t: Date.now() };
+    paintBanners(lastData || {}, false);
+  }
+  function paintBanners(d, stale) {
+    d = d || {};
+    const banners = [];
+    if (statusBanner) {
+      const cls = statusBanner.kind === "ok" ? "okb" : (statusBanner.kind === "info" ? "infob" : "errb");
+      banners.push(`<div class="${cls}">${esc(statusBanner.text)}</div>`);
+    }
+    if (stale) banners.push(`<div class="errb">Keine frischen Daten — letzte bekannte Werte werden angezeigt.</div>`);
+    if (d.error) banners.push(`<div class="errb">${esc(d.error)}</div>`);
+    if (d.halted) banners.push(`<div class="errb">Risk: Tagesverlust-Limit erreicht. Heute keine neuen Käufe.</div>`);
+    const b = document.getElementById("banners");
+    if (b) b.innerHTML = banners.join("");
+  }
+  function noteAck(ack) {
+    if (!ack || ack.t !== "cmdack") return false;
+    const ts = Number(ack.ts || 0);
+    const tsSec = ts > 1e12 ? ts / 1000 : ts;
+    if (tsSec && tsSec <= lastAckTs) return false;
+    if (tsSec) lastAckTs = tsSec;
+    if (tsSec && (Date.now()/1000 - tsSec) > 60) return false; // ignore stale acks on first paint
+    if (ack.ok) {
+      const name = ack.symbol || "";
+      const pnl = (ack.pnl_usd != null && ack.pnl_usd !== "") ? ` (${ack.pnl_usd>=0?"+":""}${usd(ack.pnl_usd)})` : "";
+      setStatus("ok", name ? (`Verkauft: ${name}${pnl}`) : ("Verkauft." + pnl));
+    } else {
+      setStatus("err", ack.error || "Verkauf fehlgeschlagen.");
+    }
+    return true;
+  }
+
   function render(d, stale) {
     lastData = d;
     const live = $("#livepill");
@@ -887,11 +938,7 @@
     if (d.paused) live.innerHTML = `<span class="dot"></span> Paused`;
     else if (d.running) live.innerHTML = `<span class="dot"></span> Live`;
     else live.innerHTML = `<span class="dot"></span> ${esc(d.status_label || "Offline")}`;
-    const banners = [];
-    if (stale) banners.push(`<div class="errb">Keine frischen Daten — letzte bekannte Werte werden angezeigt.</div>`);
-    if (d.error) banners.push(`<div class="errb">${esc(d.error)}</div>`);
-    if (d.halted) banners.push(`<div class="errb">Risk: Tagesverlust-Limit erreicht. Heute keine neuen Käufe.</div>`);
-    $("#banners").innerHTML = banners.join("");
+    paintBanners(d, stale);
     renderHome(d);
     renderFeed(d);
     renderAgents(d);
@@ -1118,16 +1165,50 @@
     return (d && d.realtime) || rt || null;
   }
 
+  function setCmdBusy(on) {
+    cmdBusy = !!on;
+    document.querySelectorAll("[data-cmd], [data-sell], #sell-all, #dt-sell").forEach(b => { if (b) b.disabled = !!on; });
+  }
+
+  function waitForSellAck(mint, all) {
+    const t0 = Date.now();
+    const before = new Set((lastData && lastData.positions || []).map(p => p.mint).filter(Boolean));
+    return new Promise((resolve) => {
+      const iv = setInterval(() => {
+        const ack = lastData && lastData.last_cmd_ack;
+        const ackTsMs = ack && ack.ts ? (ack.ts < 1e12 ? ack.ts * 1000 : ack.ts) : 0;
+        if (ack && ack.t === "cmdack" && ackTsMs >= t0 - 2000) {
+          const same = all ? (ack.cmd === "sell_all") : (!mint || !ack.mint || ack.mint === mint);
+          if (same) { noteAck(ack); clearInterval(iv); resolve(true); return; }
+        }
+        const now = new Set((lastData && lastData.positions || []).map(p => p.mint).filter(Boolean));
+        if (mint && before.has(mint) && !now.has(mint)) {
+          setStatus("ok", "Verkauft.");
+          clearInterval(iv); resolve(true); return;
+        }
+        if (all && before.size && now.size === 0) {
+          setStatus("ok", "Alle Positionen verkauft.");
+          clearInterval(iv); resolve(true); return;
+        }
+        if (Date.now() - t0 > 15000) {
+          setStatus("err", "Verkauf gesendet, aber keine Bestätigung. Bitte in ein paar Sekunden erneut versuchen.");
+          clearInterval(iv); resolve(false);
+        }
+      }, 300);
+    });
+  }
+
   async function sendCmd(cmd, extra) {
     const r = realtimeCfg(lastData);
     if (!r || !r.base || !r.topic || !r.key) {
-      const b = document.getElementById("banners");
-      if (b) b.innerHTML = `<div class="errb">Steuerkanal ist noch nicht bereit. Daten neu laden.</div>`;
+      setStatus("err", "Steuerkanal ist noch nicht bereit. Daten neu laden.");
       return;
     }
     if (cmdBusy) return;
-    cmdBusy = true;
-    document.querySelectorAll("[data-cmd], [data-sell], #sell-all").forEach(b => b.disabled = true);
+    setCmdBusy(true);
+    const isSell = cmd === "sell" || cmd === "sell_all" || (typeof cmd === "string" && cmd.indexOf("sell:") === 0);
+    if (isSell) setStatus("info", "Verkauf gesendet…");
+    else setStatus("info", "Befehl gesendet…");
     if ((cmd === "pause" || cmd === "resume") && lastData) {
       lastData.paused = cmd === "pause";
       lastData.status = cmd === "pause" ? "paused" : "running";
@@ -1143,12 +1224,15 @@
         body: JSON.stringify(Object.assign({ cmd, k: r.key, t: "cmd" }, extra || {}))
       });
       if (!res.ok) throw new Error("HTTP " + res.status);
+      if (isSell) {
+        await waitForSellAck(extra && extra.mint, cmd === "sell_all");
+      } else {
+        setStatus("ok", "Befehl gesendet.");
+      }
     } catch (e) {
-      const b = document.getElementById("banners");
-      if (b) b.innerHTML = `<div class="errb">Befehl konnte nicht gesendet werden.</div>`;
+      setStatus("err", "Befehl konnte nicht gesendet werden.");
     } finally {
-      cmdBusy = false;
-      document.querySelectorAll("[data-cmd], [data-sell], #sell-all").forEach(b => b.disabled = false);
+      setCmdBusy(false);
     }
   }
 
@@ -1169,6 +1253,11 @@
         const msg = (typeof raw === "string" && raw.trim().startsWith("{")) ? JSON.parse(raw)
                   : (raw && typeof raw === "object" ? raw : null);
         if (!msg) return;
+        if (msg.t === "cmdack") {
+          if (lastData) lastData.last_cmd_ack = msg;
+          noteAck(msg);
+          return;
+        }
         if (msg.t === "live" || msg.t === "state" || msg.equity_usd != null || msg.paused != null) {
           applyLive(msg);
         }
@@ -1207,6 +1296,10 @@
       if (tab === "feed") renderFeed(d);
     }
     if (msg.feed_stats) d.feed_stats = msg.feed_stats;
+    if (msg.last_cmd_ack) {
+      d.last_cmd_ack = msg.last_cmd_ack;
+      noteAck(msg.last_cmd_ack);
+    }
     if (msg.ts && Array.isArray(d.equity_history) && msg.equity_usd != null) {
       const last = d.equity_history[d.equity_history.length - 1];
       const ts = Date.now() / 1000;
