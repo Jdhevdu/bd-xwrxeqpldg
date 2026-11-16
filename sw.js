@@ -1,11 +1,16 @@
-/* Cache only static PWA assets. Never cache live data (data.json, raw.githubusercontent.com, api.github.com). */
-const CACHE = "paper-bot-mobile-v2";
+/* Cache static PWA assets only. Never cache live data or market APIs. */
+const CACHE = "fomo-terminal-v3";
 const PRECACHE = ["./index.html", "./manifest.json", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
 
 function isLiveData(requestUrl) {
   const u = new URL(requestUrl);
   const host = u.hostname;
-  if (host === "raw.githubusercontent.com" || host === "api.github.com") return true;
+  if (
+    host === "raw.githubusercontent.com" ||
+    host === "api.github.com" ||
+    host === "api.geckoterminal.com" ||
+    host === "api.dexscreener.com"
+  ) return true;
   if (u.pathname.endsWith("data.json")) return true;
   return false;
 }
