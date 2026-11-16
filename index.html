@@ -221,6 +221,29 @@
     .acct a { color: #ffb4b4; }
     .star.on { color: #fbbf24; }
 
+    .pos { display:flex; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid var(--line); }
+    .pos:last-child { border-bottom:0; }
+    .pos .rhs { text-align:right; font-weight:800; font-size:13px; line-height:1.2; }
+    .btn-sell, .btn-sell-all {
+      font-size:12px; font-weight:800; padding:7px 11px; border-radius:999px;
+      background:#fff; color:#8B0000; flex-shrink:0;
+    }
+    .btn-sell-all { background:rgba(255,255,255,.12); color:#fff; }
+    .chips { display:flex; gap:6px; padding:0 16px 10px; overflow-x:auto; }
+    .chip {
+      font-size:12px; font-weight:800; padding:6px 12px; border-radius:999px;
+      background:rgba(255,255,255,.08); color:var(--muted); white-space:nowrap;
+    }
+    .chip.on { background:#fff; color:#8B0000; }
+    .feed-item { display:flex; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid var(--line); text-align:left; width:100%; }
+    .feed-item:last-child { border-bottom:0; }
+    .feed-item .why { font-size:11px; color:var(--muted); margin-top:2px; }
+    .dec { font-size:10px; font-weight:800; letter-spacing:.04em; padding:2px 7px; border-radius:999px; flex-shrink:0; text-transform:uppercase; }
+    .dec.seen { background:rgba(96,165,250,.16); color:var(--blue); }
+    .dec.accepted, .dec.bought { background:rgba(74,222,128,.16); color:var(--green); }
+    .dec.rejected, .dec.skipped { background:rgba(255,68,68,.16); color:var(--loss); }
+    .nav button { font-size:9px; }
+
     .ctrl {
       display: flex; align-items: center; justify-content: space-between;
       gap: 10px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line);
@@ -288,6 +311,7 @@
     <div id="banners"></div>
 
     <div id="view-home" class="view on"></div>
+    <div id="view-feed" class="view"></div>
     <div id="view-agents" class="view pad"></div>
     <div id="view-activity" class="view pad"></div>
     <div id="view-account" class="view pad"></div>
@@ -300,6 +324,10 @@
     <button data-tab="home" class="on">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11.5 12 4l8 7.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z"/></svg>
       Home
+    </button>
+    <button data-tab="feed">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 13c4-6 12-6 16 0"/><path d="M6.5 15.5c3-4 8-4 11 0"/><circle cx="12" cy="18.5" r="1.4" fill="currentColor"/></svg>
+      Feed
     </button>
     <button data-tab="agents">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="9" r="2.4"/><circle cx="12" cy="16.5" r="2.6"/></svg>
@@ -320,6 +348,8 @@
   const DATA_BRANCH = "main";
   const bootAt = Date.now();
   let lastData = null;
+  let feedFilter = "all";
+  let feedItems = [];
   let tab = "home";
   let tf = "LIVE";
   let knownActs = new Set();
@@ -494,7 +524,7 @@
 
   function tickerHtml(positions) {
     if (!positions.length) return "";
-    const item = (p) => `<button class="tick" data-open="${esc(p.symbol)}">${avatar(p.image_url, p.symbol)}${esc(p.symbol)}${p.tag==="pump.fun"||p.early?`<span class="tag-pf">pump.fun</span>`:""} <span class="${cls(p.pnl_pct)}">${arrow(p.pnl_pct)} ${pct(p.pnl_pct)}</span></button>`;
+    const item = (p) => `<button class="tick" data-open="${esc(p.symbol)}">${avatar(p.image_url, p.symbol)}${esc(p.symbol)}${p.tag==="pump.fun"||p.early?`<span class="tag-pf">pump.fun</span>`:""} <span class="${cls(p.pnl_usd != null ? p.pnl_usd : p.pnl_pct)}">${p.pnl_usd!=null?((p.pnl_usd>=0?"+":"")+usd(p.pnl_usd)+" "):""}${arrow(p.pnl_pct)} ${pct(p.pnl_pct)}</span></button>`;
     const row = positions.map(item).join("");
     const copies = positions.length < 3 ? row + row + row + row : row + row;
     return `<div class="ticker-wrap"><div class="ticker">${copies}</div></div>`;
@@ -570,6 +600,7 @@
           <div class="tf">${["LIVE","1H","4H","1D","1W","ALL"].map(x => `<button data-tf="${x}" class="${tf===x?"on":""}">${x}</button>`).join("")}</div>
           <div class="chart-box"><canvas id="eqchart"></canvas></div>
         </div>
+        ${positionsHtml(d)}
         ${agentsHtml(d, true)}
         <div class="sec-h"><h2>Activity</h2><button class="see" data-tab="activity">See all</button></div>
         <div class="card" id="home-act">${activityRows((d.trade_events || d.trades || []).slice(0,6), !firstPaint)}</div>
@@ -624,7 +655,7 @@
 
   function setTab(name) {
     tab = name;
-    ["home","agents","activity","account"].forEach(t => {
+    ["home","feed","agents","activity","account"].forEach(t => {
       $(`#view-${t}`).classList.toggle("on", t === name);
       document.querySelector(`#nav button[data-tab="${t}"]`).classList.toggle("on", t === name);
     });
@@ -675,12 +706,13 @@
         ${avatar(p.image_url, p.symbol, 44)}
         <div class="nm">${esc(p.symbol)}${(p.tag==="pump.fun"||p.early)?` <span class="tag-pf">pump.fun</span>`:""}</div>
         <div class="sp">
+          ${p.mint && p.value_usd!=null ? `<button class="btn-sell" id="dt-sell" type="button">Sell</button>` : ""}
           <button id="star" class="${starred?"star on":"star"}" aria-label="Merken">★</button>
           <button id="share" aria-label="Teilen">↗</button>
         </div>
       </div>
       <div class="mcap" id="dt-mcap">…</div>
-      <div class="since ${cls(p.pnl_pct)}">${arrow(p.pnl_pct)} ${pct(p.pnl_pct)} since Grok Bot bought</div>
+      <div class="since ${cls(p.pnl_usd != null ? p.pnl_usd : p.pnl_pct)}">${p.pnl_usd!=null?((p.pnl_usd>=0?"+":"")+usd(p.pnl_usd)+" · "):""}${arrow(p.pnl_pct)} ${pct(p.pnl_pct)} since Grok Bot bought</div>
       <div class="meta" id="dt-meta">${esc(p.symbol)} · Solana${(p.tag==="pump.fun"||p.early)?" · pump.fun":""}</div>
       <div class="card" style="padding:8px 8px 4px"><div class="chart-box" style="height:200px"><canvas id="candle"></canvas></div></div>
       <div class="stats">
@@ -714,6 +746,8 @@
         else await navigator.clipboard.writeText(url);
       } catch {}
     };
+    const dsell = document.getElementById("dt-sell");
+    if (dsell && p.mint) dsell.onclick = (ev) => { ev.preventDefault(); ev.stopPropagation(); confirmSell(p.mint, p.symbol); };
     loadTokenMarket(p);
   }
 
@@ -829,6 +863,7 @@
     if (d.halted) banners.push(`<div class="errb">Risk: Tagesverlust-Limit erreicht. Heute keine neuen Käufe.</div>`);
     $("#banners").innerHTML = banners.join("");
     renderHome(d);
+    renderFeed(d);
     renderAgents(d);
     renderActivity(d);
     renderAccount(d);
@@ -836,6 +871,7 @@
     document.querySelectorAll("[data-tf]").forEach(btn => btn.onclick = () => { tf = btn.dataset.tf; renderHome(d); bindHome(); });
     document.querySelectorAll("[data-tab]").forEach(btn => btn.onclick = () => setTab(btn.dataset.tab));
     bindControl();
+    bindSell();
     connectLive(d);
     (d.trade_events || d.trades || []).forEach(t => knownActs.add((t.t||"") + t.kind + t.symbol));
     firstPaint = false;
@@ -845,6 +881,7 @@
     document.querySelectorAll("[data-tf]").forEach(btn => btn.onclick = () => { tf = btn.dataset.tf; if (lastData) { renderHome(lastData); bindHome(); }});
     document.querySelectorAll("[data-tab]").forEach(btn => btn.onclick = () => setTab(btn.dataset.tab));
     bindControl();
+    bindSell();
   }
 
 
@@ -858,6 +895,157 @@
       ? `<button class="btn-ctrl start" data-cmd="resume" type="button">Start bot</button>`
       : `<button class="btn-ctrl" data-cmd="pause" type="button">Pause bot</button>`;
     return `<div class="ctrl"><div class="st ${stCls}"><span class="dot"></span>${esc(label)}</div>${btn}</div>`;
+  }
+
+
+  function animateText(el, from, to, fmt, ms) {
+    if (!el || to == null || Number.isNaN(to)) return;
+    const start = (from == null || Number.isNaN(from)) ? to : from;
+    const t0 = performance.now();
+    const dur = ms || 420;
+    const step = (now) => {
+      const p = Math.min(1, (now - t0) / dur);
+      const e = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(start + (to - start) * e);
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  function positionsHtml(d) {
+    const ps = d.positions || [];
+    const head = `<div class="sec-h"><h2>Positions</h2>${ps.length ? `<button class="btn-sell-all" type="button" id="sell-all">Sell all</button>` : ""}</div>`;
+    if (!ps.length) return `${head}<div class="card"><div class="hint">Keine offenen Positionen.</div></div>`;
+    const rows = ps.map(p => {
+      const key = p.mint || p.symbol;
+      const pu = p.pnl_usd, pp = p.pnl_pct;
+      return `<div class="pos">
+        <button type="button" data-open="${esc(p.symbol)}" style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;text-align:left">
+          ${avatar(p.image_url, p.symbol)}
+          <div class="mid">
+            <div class="nm">${esc(p.symbol)}${p.tag==="pump.fun"||p.early?`<span class="tag-pf">pump.fun</span>`:""}</div>
+            <div class="sub">${p.value_usd!=null?usd(p.value_usd):"—"} · ${esc(p.risk_label||"")}</div>
+          </div>
+          <div class="rhs">
+            <div class="${cls(pu)}" data-pnl-usd="${esc(key)}">${pu==null?"—":((pu>=0?"+":"")+usd(pu))}</div>
+            <div class="${cls(pp)}" data-pnl-pct="${esc(key)}">${pp==null?"—":pct(pp)}</div>
+          </div>
+        </button>
+        ${p.mint ? `<button class="btn-sell" type="button" data-sell="${esc(p.mint)}" data-sym="${esc(p.symbol)}">Sell</button>` : ""}
+      </div>`;
+    }).join("");
+    return `${head}<div class="card" id="pos-card">${rows}</div>`;
+  }
+
+  function bindSell() {
+    document.querySelectorAll("[data-sell]").forEach(btn => {
+      btn.onclick = (ev) => { ev.preventDefault(); ev.stopPropagation(); confirmSell(btn.dataset.sell, btn.dataset.sym || ""); };
+    });
+    const all = document.getElementById("sell-all");
+    if (all) all.onclick = (ev) => { ev.preventDefault(); confirmSellAll(); };
+  }
+
+  function confirmSell(mint, symbol) {
+    const root = document.getElementById("modal-root");
+    if (!root) return;
+    root.innerHTML = `<div class="modal-bg" role="dialog" aria-modal="true">
+      <div class="modal">
+        <h3>${esc(symbol || "Coin")} verkaufen?</h3>
+        <p>Paper-Marktverkauf der ganzen Position (Gebühren und Slippage wie im Bot). Nur Spielgeld, keine echte Wallet.</p>
+        <div class="rowbtns">
+          <button class="cancel" type="button" id="mdl-cancel">Abbrechen</button>
+          <button class="ok" type="button" id="mdl-ok">Verkaufen</button>
+        </div>
+      </div>
+    </div>`;
+    const close = () => { root.innerHTML = ""; };
+    document.getElementById("mdl-cancel").onclick = close;
+    root.querySelector(".modal-bg").addEventListener("click", ev => { if (ev.target.classList.contains("modal-bg")) close(); });
+    document.getElementById("mdl-ok").onclick = async () => { close(); await sendCmd("sell", { mint }); };
+  }
+
+  function confirmSellAll() {
+    const root = document.getElementById("modal-root");
+    if (!root) return;
+    const n = (lastData && lastData.positions || []).length;
+    root.innerHTML = `<div class="modal-bg" role="dialog" aria-modal="true">
+      <div class="modal">
+        <h3>Wirklich alle verkaufen?</h3>
+        <p>Das schließt <strong style="color:#fff">alle ${n} offenen Paper-Positionen</strong> sofort per Marktverkauf (mit Gebühren und Slippage). Das ist stärker als ein einzelner Sell und kann nicht rückgängig gemacht werden. Weiterhin nur Spielgeld.</p>
+        <div class="rowbtns">
+          <button class="cancel" type="button" id="mdl-cancel">Abbrechen</button>
+          <button class="ok" type="button" id="mdl-ok">Ja, alle verkaufen</button>
+        </div>
+      </div>
+    </div>`;
+    const close = () => { root.innerHTML = ""; };
+    document.getElementById("mdl-cancel").onclick = close;
+    root.querySelector(".modal-bg").addEventListener("click", ev => { if (ev.target.classList.contains("modal-bg")) close(); });
+    document.getElementById("mdl-ok").onclick = async () => { close(); await sendCmd("sell_all"); };
+  }
+
+  function normFeed(e) {
+    const mint = e.mint || "";
+    return {
+      id: e.id || (mint + ":" + (e.decision || e.d || "") + ":" + (e.ts || e.t || "")),
+      t: e.t, ts: e.ts || 0,
+      symbol: e.symbol || e.s || "?",
+      mint, pool: e.pool, dex: e.dex,
+      early: !!(e.early || e.dex === "pump-fun" || e.dex === "pumpfun" || e.tag === "pump.fun"),
+      source: e.source || e.src || e.origin || "",
+      mcap: e.mcap || e.mc || e.fdv,
+      liq: e.liq || e.liquidity_usd,
+      age_min: e.age_min != null ? e.age_min : e.age,
+      decision: e.decision || e.d || "seen",
+      reason: e.reason || e.why || "",
+      score: e.score != null ? e.score : e.sc,
+      image_url: e.image_url || (mint ? ("https://cdn.dexscreener.com/tokens/solana/" + mint + ".png") : null)
+    };
+  }
+
+  function mergeFeed(list) {
+    const byId = new Map(feedItems.map(x => [x.id, x]));
+    (list || []).forEach(e => {
+      const n = normFeed(e);
+      if (n.id) byId.set(n.id, n);
+    });
+    feedItems = [...byId.values()].sort((a, b) => (b.ts || 0) - (a.ts || 0)).slice(0, 250);
+  }
+
+  function feedRow(e) {
+    const dec = e.decision || "seen";
+    let mc = "—";
+    if (e.mcap) mc = e.mcap >= 1000 ? ("$" + (e.mcap/1000).toFixed(1) + "k") : usd(e.mcap);
+    const age = e.age_min != null ? (e.age_min < 60 ? (Math.max(0, Math.round(e.age_min)) + "m") : ((e.age_min/60).toFixed(1) + "h")) : "";
+    const why = e.reason || (e.score != null ? ("score " + e.score) : "");
+    return `<button class="feed-item" data-open="${esc(e.symbol || "")}">
+      ${avatar(e.image_url, e.symbol)}
+      <div class="mid">
+        <div class="nm">${esc(e.symbol || "?")}${e.early ? `<span class="tag-pf">pump.fun</span>` : ""}</div>
+        <div class="sub">${mc} mcap${age ? " · " + age : ""} · ${esc(e.source || e.dex || "")}</div>
+        ${why ? `<div class="why">${esc(why)}</div>` : ""}
+      </div>
+      <span class="dec ${esc(dec)}">${esc(dec)}</span>
+    </button>`;
+  }
+
+  function renderFeed(d) {
+    if (d && d.feed) mergeFeed(d.feed);
+    const items = feedItems.filter(e => {
+      if (feedFilter === "pump.fun") return e.early;
+      if (feedFilter === "bought") return e.decision === "bought";
+      if (feedFilter === "rejected") return e.decision === "rejected" || e.decision === "skipped";
+      return true;
+    });
+    const chips = [["all","All"],["pump.fun","pump.fun"],["bought","Bought"],["rejected","Rejected"]];
+    const host = $("#view-feed");
+    if (!host) return;
+    host.innerHTML = `
+      <div class="sec-h"><h2>Live Feed</h2><div class="k">${items.length}</div></div>
+      <div class="chips">${chips.map(([id,l]) => `<button class="chip ${feedFilter===id?"on":""}" data-ff="${id}" type="button">${l}</button>`).join("")}</div>
+      <div class="pad"><div class="card">${items.length ? items.map(feedRow).join("") : `<div class="hint">Noch keine Coins im Feed — der Scanner füllt die Liste in Echtzeit.</div>`}</div></div>`;
+    document.querySelectorAll("[data-ff]").forEach(b => b.onclick = () => { feedFilter = b.dataset.ff; renderFeed(lastData || d); });
+    document.querySelectorAll("#view-feed [data-open]").forEach(b => b.onclick = () => openDetail(b.dataset.open));
   }
 
   function bindControl() {
@@ -899,7 +1087,7 @@
     return (d && d.realtime) || rt || null;
   }
 
-  async function sendCmd(cmd) {
+  async function sendCmd(cmd, extra) {
     const r = realtimeCfg(lastData);
     if (!r || !r.base || !r.topic || !r.key) {
       const b = document.getElementById("banners");
@@ -908,22 +1096,20 @@
     }
     if (cmdBusy) return;
     cmdBusy = true;
-    document.querySelectorAll("[data-cmd]").forEach(b => b.disabled = true);
-    // Optimistic UI
-    if (lastData) {
+    document.querySelectorAll("[data-cmd], [data-sell], #sell-all").forEach(b => b.disabled = true);
+    if ((cmd === "pause" || cmd === "resume") && lastData) {
       lastData.paused = cmd === "pause";
       lastData.status = cmd === "pause" ? "paused" : "running";
       lastData.status_label = cmd === "pause" ? "Pausiert" : "Läuft";
       lastData.running = cmd !== "pause";
       if (tab === "home") { renderHome(lastData); bindHome(); }
-      else if (lastData) render(lastData, false);
     }
     try {
       const url = `${String(r.base).replace(/\/$/,"")}/${encodeURIComponent(r.topic)}`;
       const res = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "text/plain; charset=utf-8", "Priority": "min" },
-        body: JSON.stringify({ cmd, k: r.key, t: "cmd" })
+        body: JSON.stringify(Object.assign({ cmd, k: r.key, t: "cmd" }, extra || {}))
       });
       if (!res.ok) throw new Error("HTTP " + res.status);
     } catch (e) {
@@ -931,7 +1117,7 @@
       if (b) b.innerHTML = `<div class="errb">Befehl konnte nicht gesendet werden.</div>`;
     } finally {
       cmdBusy = false;
-      document.querySelectorAll("[data-cmd]").forEach(b => b.disabled = false);
+      document.querySelectorAll("[data-cmd], [data-sell], #sell-all").forEach(b => b.disabled = false);
     }
   }
 
@@ -978,7 +1164,18 @@
     if (msg.multiplier != null) d.multiplier = msg.multiplier;
     if (msg.open_count != null) d.open_count = msg.open_count;
     if (msg.halted != null) d.halted = msg.halted;
+    const prevPos = {};
+    (d.positions || []).forEach(p => { prevPos[p.mint || p.symbol] = p; });
+    const prevCount = (d.positions || []).length;
+    const prevEq = d.equity_usd;
+    const prevPnl = d.pnl_usd;
     if (Array.isArray(msg.positions)) d.positions = msg.positions;
+    if (Array.isArray(msg.feed)) {
+      d.feed = (d.feed || []).concat(msg.feed);
+      mergeFeed(msg.feed);
+      if (tab === "feed") renderFeed(d);
+    }
+    if (msg.feed_stats) d.feed_stats = msg.feed_stats;
     if (msg.ts && Array.isArray(d.equity_history) && msg.equity_usd != null) {
       const last = d.equity_history[d.equity_history.length - 1];
       const ts = Date.now() / 1000;
@@ -998,11 +1195,11 @@
       const pnlEl = document.querySelector(".eq-pnl");
       const eurEl = document.querySelector(".eq-eur");
       const st = document.querySelector(".ctrl .st");
-      if (usdEl) usdEl.textContent = usd(d.equity_usd);
+      if (usdEl && d.equity_usd != null) animateText(usdEl, prevEq, d.equity_usd, v => usd(v));
       if (eurEl && d.equity_eur != null) eurEl.textContent = eur(d.equity_eur);
       if (pnlEl && d.pnl_usd != null) {
         pnlEl.className = "eq-pnl " + cls(d.pnl_usd);
-        pnlEl.textContent = `${d.pnl_usd>=0?"+":""}${usd(d.pnl_usd)} (${pct(d.roi_pct, true)})`;
+        animateText(pnlEl, prevPnl, d.pnl_usd, v => `${v>=0?"+":""}${usd(v)} (${pct(d.roi_pct, true)})`);
       }
       if (st) {
         st.className = "st " + (d.paused ? "paused" : (d.running ? "" : "off"));
@@ -1012,6 +1209,24 @@
       if (btn) {
         if (d.paused) { btn.className = "btn-ctrl start"; btn.dataset.cmd = "resume"; btn.textContent = "Start bot"; }
         else { btn.className = "btn-ctrl"; btn.dataset.cmd = "pause"; btn.textContent = "Pause bot"; }
+      }
+      if (Array.isArray(msg.positions) && msg.positions.length !== prevCount) {
+        renderHome(d); bindHome();
+      } else if (Array.isArray(msg.positions)) {
+        msg.positions.forEach(p => {
+          const key = p.mint || p.symbol;
+          const old = prevPos[key] || {};
+          const usdNode = document.querySelector("[data-pnl-usd=\"" + key + "\"]");
+          const pctNode = document.querySelector("[data-pnl-pct=\"" + key + "\"]");
+          if (usdNode && p.pnl_usd != null) {
+            usdNode.className = cls(p.pnl_usd);
+            animateText(usdNode, old.pnl_usd, p.pnl_usd, v => (v>=0?"+":"") + usd(v));
+          }
+          if (pctNode && p.pnl_pct != null) {
+            pctNode.className = cls(p.pnl_pct);
+            animateText(pctNode, old.pnl_pct, p.pnl_pct, v => pct(v));
+          }
+        });
       }
       const c = document.getElementById("eqchart");
       if (c) drawEquity(c, filterHistory(d.equity_history || [], tf), d.trade_events || []);
