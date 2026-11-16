@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Spielgeld · Paper Trading",
-  "exported_at": "2026-11-16 18:42:37 CET",
-  "last_update": "2026-11-16 18:41:33 CET",
+  "exported_at": "2026-11-16 18:43:37 CET",
+  "last_update": "2026-11-16 18:43:03 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 20.921461883403644,
@@ -24,21 +24,22 @@
   "wins": 0,
   "halted": false,
   "counters": {
-    "cycles": 97,
-    "pools_scanned": 8199,
-    "unique_pools": 2989,
-    "prefilter_rejected": 2965,
+    "cycles": 98,
+    "pools_scanned": 8301,
+    "unique_pools": 3008,
+    "prefilter_rejected": 2984,
     "safety_rejected": 83,
-    "scored": 140,
+    "scored": 141,
     "buys": 4,
     "sells": 1
   },
   "last_scan_sources": {
     "trending_5m": 16,
     "trending_1h": 18,
-    "ds_boosts": 16,
+    "ds_boosts": 15,
     "ds_profiles": 12,
-    "new": 21
+    "new": 40,
+    "ds_boosts_top": 1
   },
   "watch_count": 400,
   "graduation_count": 24,
@@ -69,7 +70,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 16:13:47 CET",
       "entry_ts": 1794842027.9097335,
-      "held": "2h 28m"
+      "held": "2h 29m"
     },
     {
       "symbol": "CATE",
@@ -97,7 +98,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 16:13:47 CET",
       "entry_ts": 1794842027.9097967,
-      "held": "2h 28m"
+      "held": "2h 29m"
     },
     {
       "symbol": "HOGE",
@@ -125,7 +126,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 16:14:24 CET",
       "entry_ts": 1794842064.7546785,
-      "held": "2h 28m"
+      "held": "2h 29m"
     },
     {
       "symbol": "WIGGLES",
@@ -153,7 +154,7 @@
       "risk_label": "trailing 40%",
       "entry_time": "2026-11-16 16:15:02 CET",
       "entry_ts": 1794842102.025648,
-      "held": "2h 27m"
+      "held": "2h 28m"
     }
   ],
   "closed": [],
@@ -353,6 +354,195 @@
   ],
   "scanner": [
     {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Skipped",
+      "symbol": "VI",
+      "reason": "max 4 positions open",
+      "text": "VI score 63 - max 4 positions open",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Scored",
+      "symbol": "VI",
+      "reason": "VI [trending_1h] score 63 | liq $15,698 | h1 -18.6% | top10 18% | LP 100% | liquidity:0.2 vol_liq:15 buy_pressure:9.1 holders:13.8 authorities:10 lp:10.0 age:5 momentum:0",
+      "text": "VI [trending_1h] score 63 | liq $15,698 | h1 -18.6% | top10 18% | LP 100% | liquidity:0.2 vol_liq:15 buy_pressure:9.1 holders:13.8 authorities:10 lp:10.0 age:5 momentum:0",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "SHIBG",
+      "reason": "liquidity $16 < $15,000",
+      "text": "SHIBG (pumpswap) - liquidity $16 < $15,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "STATE",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "STATE (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "NTR0",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "NTR0 (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "$CAT",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "$CAT (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "puck",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "puck (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "MONY",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "MONY (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "CATSWAPAPP",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "CATSWAPAPP (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "cool",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "cool coin (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "WARM",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "WARM (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "SI",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "SI (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "CHERRIES",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "CHERRIES (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "SI",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "SI (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "BOTTOM",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "BOTTOM (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "Et",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "Et pump (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "GIGI",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "GIGI (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "LOOPIER",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "LOOPIER (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "awd",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "awd (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "SENDOOR",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "SENDOOR (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "CoinGecko",
+      "reason": "liquidity $12,763 < $15,000",
+      "text": "CoinGecko (pumpswap) - liquidity $12,763 < $15,000",
+      "curve": false
+    },
+    {
       "t": "2026-11-16 18:41:33 CET",
       "ts": 1794850893.0,
       "kind": "Skipped",
@@ -522,198 +712,45 @@
       "reason": "dex pump-fun not graduated/allowed",
       "text": "BRAINROT (pump-fun) - dex pump-fun not graduated/allowed",
       "curve": true
-    },
-    {
-      "t": "2026-11-16 18:41:32 CET",
-      "ts": 1794850892.0,
-      "kind": "Rejected",
-      "symbol": "155",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "155 (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:41:32 CET",
-      "ts": 1794850892.0,
-      "kind": "Rejected",
-      "symbol": "ZELLE",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "ZELLE (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:41:32 CET",
-      "ts": 1794850892.0,
-      "kind": "Rejected",
-      "symbol": "NINE1NINE",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "NINE1NINE (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:41:32 CET",
-      "ts": 1794850892.0,
-      "kind": "Rejected",
-      "symbol": "GONE",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "GONE (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Skipped",
-      "symbol": "WIZARD",
-      "reason": "max 4 positions open",
-      "text": "WIZARD score 65 - max 4 positions open",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Scored",
-      "symbol": "WIZARD",
-      "reason": "WIZARD [trending_1h] score 65 | liq $79,450 | h1 -3.3% | top10 24% | LP 100% | liquidity:7.9 vol_liq:8 buy_pressure:15 holders:11.0 authorities:10 lp:10.0 age:3 momentum:0",
-      "text": "WIZARD [trending_1h] score 65 | liq $79,450 | h1 -3.3% | top10 24% | LP 100% | liquidity:7.9 vol_liq:8 buy_pressure:15 holders:11.0 authorities:10 lp:10.0 age:3 momentum:0",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "Zcat",
-      "reason": "liquidity $0 < $15,000",
-      "text": "Zcat (meteora-damm-v2) - liquidity $0 < $15,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "GTA",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "GTA (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "CTB",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "CTB (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "TULP",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "TULP (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "FOX",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "FOX PUMP (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "$BUFBEAST",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "$BUFBEAST (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "ch",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "ch (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "155",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "155 (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "FAKERB",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "FAKERB (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "EXITPING",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "EXITPING (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "$PILLY",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "$PILLY (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "$CLANCY",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "$CLANCY (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "OVENMAN",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "OVENMAN (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "NEH",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "NEH (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "SHIHTZU",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "SHIHTZU (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Skipped",
+      "symbol": "VI",
+      "reason": "max 4 positions open",
+      "text": "VI score 63 - max 4 positions open",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Scored",
+      "symbol": "VI",
+      "reason": "VI [trending_1h] score 63 | liq $15,698 | h1 -18.6% | top10 18% | LP 100% | liquidity:0.2 vol_liq:15 buy_pressure:9.1 holders:13.8 authorities:10 lp:10.0 age:5 momentum:0",
+      "text": "VI [trending_1h] score 63 | liq $15,698 | h1 -18.6% | top10 18% | LP 100% | liquidity:0.2 vol_liq:15 buy_pressure:9.1 holders:13.8 authorities:10 lp:10.0 age:5 momentum:0",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "SHIBG",
+      "reason": "liquidity $16 < $15,000",
+      "text": "SHIBG (pumpswap) - liquidity $16 < $15,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 18:43:03 CET",
+      "ts": 1794850983.0,
+      "kind": "Rejected",
+      "symbol": "CoinGecko",
+      "reason": "liquidity $12,763 < $15,000",
+      "text": "CoinGecko (pumpswap) - liquidity $12,763 < $15,000",
+      "curve": false
+    },
     {
       "t": "2026-11-16 18:41:33 CET",
       "ts": 1794850893.0,
@@ -767,27 +804,9 @@
       "reason": "liquidity $0 < $15,000",
       "text": "Zcat (meteora-damm-v2) - liquidity $0 < $15,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "Lemon",
-      "reason": "liquidity $2,904 < $15,000",
-      "text": "Lemon (meteora-damm-v2) - liquidity $2,904 < $15,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 18:40:02 CET",
-      "ts": 1794850802.0,
-      "kind": "Rejected",
-      "symbol": "SUl",
-      "reason": "liquidity $5,097 < $15,000",
-      "text": "SUl (orca) - liquidity $5,097 < $15,000",
-      "curve": false
     }
   ],
-  "curve_skips": 2446,
+  "curve_skips": 2463,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -884,6 +903,12 @@
       "t_label": "2026-11-16 18:41:33 CET",
       "usd": 23.1224,
       "eur": 20.9215
+    },
+    {
+      "t": 1794850983.4026327,
+      "t_label": "2026-11-16 18:43:03 CET",
+      "usd": 23.1224,
+      "eur": 20.9215
     }
   ],
   "agents": {
@@ -892,18 +917,18 @@
     "scanner": {
       "name": "Scanner",
       "title": "Pool discovery",
-      "token": "PAID",
-      "pill": "83 pools",
+      "token": "VI",
+      "pill": "102 pools",
       "pill_kind": "blue",
-      "detail": "2989 einzigartige Pools insgesamt"
+      "detail": "3008 einzigartige Pools insgesamt"
     },
     "analyst": {
       "name": "Analyst",
       "title": "Entry checks",
-      "token": "PAID",
-      "pill": "66 score",
+      "token": "VI",
+      "pill": "63 score",
       "pill_kind": "purple",
-      "detail": "PAID [trending_5m] score 66 | liq $208,765 | h1 +4.9% | top10 17% | LP 100% | liquidity:12.5 vol_liq:8 buy_pressure:8.2 holders:14.3 authorities:10 lp:10.0 age:3 momentum:0"
+      "detail": "VI [trending_1h] score 63 | liq $15,698 | h1 -18.6% | top10 18% | LP 100% | liquidity:0.2 vol_liq:15 buy_pressure:9.1 holders:13.8 authorities:10 lp:10.0 age:5 momentum:0"
     },
     "executor": {
       "name": "Executor",
@@ -925,11 +950,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "2989 Pools · 97 Scans · Watch 400 · Graduiert 24 · letzter Scan: trending_5m 16 · trending_1h 18 · ds_boosts 16 · ds_profiles 12 · new 21"
+      "detail": "3008 Pools · 98 Scans · Watch 400 · Graduiert 24 · letzter Scan: trending_5m 16 · trending_1h 18 · ds_boosts 15 · ds_profiles 12 · new 40 · ds_boosts_top 1"
     },
     {
       "name": "Analyst",
-      "detail": "140 bewertet · 3048 abgelehnt"
+      "detail": "141 bewertet · 3067 abgelehnt"
     },
     {
       "name": "Brain",
@@ -956,7 +981,7 @@
   "status": "running",
   "status_label": "Läuft",
   "running": true,
-  "heartbeat_age_s": 63.8,
+  "heartbeat_age_s": 34.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
