@@ -318,7 +318,7 @@
       </div>
       <div id="livepill" class="live"><span class="dot"></span> Live</div>
     </div>
-    <div class="badge">Spielgeld · Paper Trading <span class="appver" id="appver">v9</span></div>
+    <div class="badge">Realistisch-Modus (Spielgeld) <span class="appver" id="appver">v10</span></div>
     <div id="banners"></div>
 
     <div id="view-home" class="view on"></div>
@@ -356,7 +356,7 @@
 
   <script>
   const POLL_MS = 8000;
-  const APP_VERSION = "v9";
+  const APP_VERSION = "v10";
   const DATA_BRANCH = "main";
   const bootAt = Date.now();
   let lastData = null;
@@ -371,6 +371,7 @@
   const $ = (s, el=document) => el.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
   const de = (n, d=2) => (n==null || Number.isNaN(+n)) ? "—" : Number(n).toLocaleString("en-US", {minimumFractionDigits:d, maximumFractionDigits:d});
+  const solAmt = (v) => (v==null || Number.isNaN(+v)) ? "—" : (Number(v).toLocaleString("de-DE", { minimumFractionDigits: 4, maximumFractionDigits: 6 }) + " SOL");
   const usd = (n, d=2) => (n==null || Number.isNaN(+n)) ? "—" : (Number(n)<0?"-":"") + "$" + de(Math.abs(n), d);
   const eur = (n, d=2) => (n==null || Number.isNaN(+n)) ? "—" : de(n, d) + " €";
   const pct = (n, already=false) => {
@@ -641,8 +642,8 @@
             <div class="mult">${de((d.multiplier || (d.start_usd ? d.equity_usd / d.start_usd : 1)), 2)}x</div>
           </div>
           <div class="eq-usd" data-count="equity_usd">${usd(d.equity_usd)}</div>
-          <div class="eq-eur">${eur(d.equity_eur)}</div>
-          <div class="eq-cash" data-count="cash_usd">Bargeld ${d.cash_usd!=null?usd(d.cash_usd):"—"}</div>
+          <div class="eq-eur">${eur(d.equity_eur)}${d.equity_sol!=null? " · "+solAmt(d.equity_sol):""}</div>
+          <div class="eq-cash" data-count="cash_usd">Bargeld ${d.cash_sol!=null?solAmt(d.cash_sol)+" · ":""}${d.cash_usd!=null?usd(d.cash_usd):"—"}</div>
           <div class="eq-pnl ${cls(d.pnl_usd)}">${d.pnl_usd>=0?"+":""}${usd(d.pnl_usd)} (${pct(d.roi_pct, true)})</div>
           ${controlHtml(d)}
           <div class="tf">${["LIVE","1H","4H","1D","1W","ALL"].map(x => `<button data-tf="${x}" class="${tf===x?"on":""}">${x}</button>`).join("")}</div>
@@ -678,13 +679,29 @@
     $("#view-account").innerHTML = `
       <div class="sec-h"><h2>Account</h2></div>
       <div class="card acct">
-        <p><strong style="color:#fff">Spielgeld · Paper Trading.</strong> ${esc(r.mode_note || "Nur simuliertes Guthaben, keine echten Trades.")}</p>
-        <div class="row"><span class="l">Startkapital</span><span class="r">${usd(d.start_usd)} · ${eur(d.start_eur)}</span></div>
-        <div class="row"><span class="l">Aktuelles Equity</span><span class="r">${usd(d.equity_usd)} · ${eur(d.equity_eur)}</span></div>
-        <div class="row"><span class="l">Bargeld</span><span class="r">${usd(d.cash_usd)}</span></div>
-        <div class="row"><span class="l">Realisiert / Gebühren</span><span class="r">${usd(d.realized_usd)} / ${usd(d.fees_usd)}</span></div>
+        <p><strong style="color:#fff">Realistisch-Modus (Spielgeld).</strong> ${esc(r.mode_note || "Nur simuliertes Guthaben, keine echten Trades.")}</p>
+        <div class="row"><span class="l">Startkapital</span><span class="r">${usd(d.start_usd)} · ${eur(d.start_eur)}${d.start_sol!=null? " · "+solAmt(d.start_sol):""}</span></div>
+        <div class="row"><span class="l">Aktuelles Equity</span><span class="r">${usd(d.equity_usd)} · ${eur(d.equity_eur)}${d.equity_sol!=null? " · "+solAmt(d.equity_sol):""}</span></div>
+        <div class="row"><span class="l">Bargeld (Wallet)</span><span class="r">${d.cash_sol!=null?solAmt(d.cash_sol)+" · ":""}${usd(d.cash_usd)}</span></div>
+        <div class="row"><span class="l">Realisiert</span><span class="r">${usd(d.realized_usd)}</span></div>
+        <div class="row"><span class="l">Gebühren gesamt</span><span class="r">${usd(d.fees_usd)}</span></div>
+        <div class="row"><span class="l">— Swap / Slippage</span><span class="r">${usd((d.fees||{}).swap)} / ${usd((d.fees||{}).slippage)}</span></div>
+        <div class="row"><span class="l">— Netz / Priority / Jito</span><span class="r">${usd((d.fees||{}).network)} / ${usd((d.fees||{}).priority)} / ${usd((d.fees||{}).jito)}</span></div>
+        <div class="row"><span class="l">— Token-Konto (Rent)</span><span class="r">${usd((d.fees||{}).rent)}</span></div>
+        <div class="row"><span class="l">Fehlgeschlagene Trades</span><span class="r">${d.failed_count||0}</span></div>
         <div class="row"><span class="l">Letztes Update</span><span class="r">${esc(d.last_update || "—")} (Europe/Vienna)</span></div>
       </div>
+      ${(d.failed_trades && d.failed_trades.length) ? `<div class="card acct">
+        <div class="k" style="margin-bottom:8px">Fehlgeschlagene Trades</div>
+        ${d.failed_trades.slice(0,12).map(f => `<div class="row"><span class="l">${esc(f.symbol||"")} ${esc(f.t_label||"")}</span><span class="r">${esc(f.reason||"")}</span></div>`).join("")}
+      </div>` : ""}
+      ${d.evening ? `<div class="card acct">
+        <div class="k" style="margin-bottom:8px">Abendbericht ${esc(d.evening.day||"")}</div>
+        <div class="row"><span class="l">Equity</span><span class="r">${usd(d.evening.equity_usd)}${d.evening.equity_sol!=null? " · "+solAmt(d.evening.equity_sol):""}</span></div>
+        <div class="row"><span class="l">Gebühren</span><span class="r">${usd(d.evening.fees_total_usd)}</span></div>
+        <div class="row"><span class="l">Heute PnL / Failed</span><span class="r">${usd(d.evening.pnl_today_usd)} / ${(d.evening.failed_today||[]).length}</span></div>
+        <p class="hint">${esc(d.evening.note||"")}</p>
+      </div>` : ""}
       <div class="card acct">
         <div class="k" style="margin-bottom:8px">Exit-Regeln</div>
         <div class="row"><span class="l">Take profit</span><span class="r">${esc(r.take_profit||"")}</span></div>
@@ -1031,7 +1048,7 @@
     root.innerHTML = `<div class="modal-bg" role="dialog" aria-modal="true">
       <div class="modal">
         <h3>${esc(symbol || "Coin")} verkaufen?</h3>
-        <p>Bist du sicher? Paper-Marktverkauf der ganzen Position (Gebühren und Slippage wie im Bot). Nur Spielgeld, keine echte Wallet.</p>
+        <p>Bist du sicher? Paper-Marktverkauf der ganzen Position — realistische Gebühren, Slippage und 0,5–2 s Bestätigung. Nur Spielgeld, keine echte Wallet.</p>
         <div class="rowbtns">
           <button class="cancel" type="button" id="mdl-cancel">Abbrechen</button>
           <button class="ok" type="button" id="mdl-ok">Ja, verkaufen</button>
@@ -1470,6 +1487,10 @@
     if (msg.equity_usd != null) d.equity_usd = msg.equity_usd;
     if (msg.equity_eur != null) d.equity_eur = msg.equity_eur;
     if (msg.cash_usd != null) d.cash_usd = msg.cash_usd;
+    if (msg.cash_sol != null) d.cash_sol = msg.cash_sol;
+    if (msg.equity_sol != null) d.equity_sol = msg.equity_sol;
+    if (msg.fees_usd != null) d.fees_usd = msg.fees_usd;
+    if (msg.failed_count != null) d.failed_count = msg.failed_count;
     if (msg.direct && d.realtime && d.realtime.direct !== msg.direct) {
       if (d.realtime.direct_proto === "mqtt" && msg.direct_proto !== "mqtt") {
         // snapshot used to append /live to the broker URL; ignore that
@@ -1538,7 +1559,9 @@
       if (usdEl && d.equity_usd != null) animateText(usdEl, prevEq, d.equity_usd, v => usd(v));
       if (eurEl && d.equity_eur != null) eurEl.textContent = eur(d.equity_eur);
       const cashEl = document.querySelector("[data-count=cash_usd]");
-      if (cashEl && d.cash_usd != null) cashEl.textContent = "Bargeld " + usd(d.cash_usd);
+      if (cashEl && (d.cash_usd != null || d.cash_sol != null)) {
+        cashEl.textContent = "Bargeld " + (d.cash_sol != null ? solAmt(d.cash_sol) + " · " : "") + (d.cash_usd != null ? usd(d.cash_usd) : "");
+      }
       if (pnlEl && d.pnl_usd != null) {
         pnlEl.className = "eq-pnl " + cls(d.pnl_usd);
         animateText(pnlEl, prevPnl, d.pnl_usd, v => `${v>=0?"+":""}${usd(v)} (${pct(d.roi_pct, true)})`);
@@ -1621,7 +1644,7 @@
       reloading = true;
       location.reload();
     });
-    navigator.serviceWorker.register("./sw.js?v=9", { updateViaCache: "none" }).then((reg) => {
+    navigator.serviceWorker.register("./sw.js?v=10", { updateViaCache: "none" }).then((reg) => {
       const ping = () => { try { reg.update(); } catch (_) {} };
       ping();
       setInterval(ping, 15000);
