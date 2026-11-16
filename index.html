@@ -220,6 +220,48 @@
     .acct p { margin: 0 0 10px; color: var(--muted); font-size: 14px; line-height: 1.45; }
     .acct a { color: #ffb4b4; }
     .star.on { color: #fbbf24; }
+
+    .ctrl {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 10px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line);
+    }
+    .ctrl .st { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; }
+    .ctrl .st .dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--green);
+      box-shadow: 0 0 0 3px rgba(74,222,128,.18);
+    }
+    .ctrl .st.paused .dot { background: #fbbf24; box-shadow: 0 0 0 3px rgba(251,191,36,.2); }
+    .ctrl .st.off .dot { background: var(--muted); box-shadow: none; }
+    .btn-ctrl {
+      font-size: 13px; font-weight: 800; padding: 8px 14px; border-radius: 999px;
+      background: #fff; color: #8B0000; letter-spacing: -.01em;
+    }
+    .btn-ctrl.start { background: var(--green); color: #052e16; }
+    .btn-ctrl:disabled { opacity: .55; }
+    .tag-pf {
+      display: inline-block; margin-left: 6px; font-size: 9px; font-weight: 800;
+      letter-spacing: .04em; padding: 1px 6px; border-radius: 999px;
+      background: #fff; color: #b91c1c; vertical-align: middle;
+    }
+    .live.paused { color: #fbbf24; }
+    .live.paused .dot { background: #fbbf24; }
+    .modal-bg {
+      position: fixed; inset: 0; z-index: 90;
+      background: rgba(0,0,0,.62);
+      display: flex; align-items: flex-end; justify-content: center;
+      padding: 16px 16px calc(16px + env(safe-area-inset-bottom));
+    }
+    .modal {
+      width: 100%; max-width: 440px;
+      background: #1a0505; border: 1px solid var(--line);
+      border-radius: 20px; padding: 18px 16px 16px;
+    }
+    .modal h3 { margin: 0 0 8px; font-size: 18px; font-weight: 800; }
+    .modal p { margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.45; }
+    .modal .rowbtns { display: flex; gap: 8px; }
+    .modal .rowbtns button { flex: 1; padding: 12px; border-radius: 12px; font-weight: 800; }
+    .modal .cancel { background: rgba(255,255,255,.08); color: #fff; }
+    .modal .ok { background: #fff; color: #8B0000; }
   </style>
 </head>
 <body>
@@ -252,6 +294,7 @@
   </div>
 
   <div id="detail"></div>
+  <div id="modal-root"></div>
 
   <nav class="nav" id="nav">
     <button data-tab="home" class="on">
@@ -451,7 +494,7 @@
 
   function tickerHtml(positions) {
     if (!positions.length) return "";
-    const item = (p) => `<button class="tick" data-open="${esc(p.symbol)}">${avatar(p.image_url, p.symbol)}${esc(p.symbol)} <span class="${cls(p.pnl_pct)}">${arrow(p.pnl_pct)} ${pct(p.pnl_pct)}</span></button>`;
+    const item = (p) => `<button class="tick" data-open="${esc(p.symbol)}">${avatar(p.image_url, p.symbol)}${esc(p.symbol)}${p.tag==="pump.fun"||p.early?`<span class="tag-pf">pump.fun</span>`:""} <span class="${cls(p.pnl_pct)}">${arrow(p.pnl_pct)} ${pct(p.pnl_pct)}</span></button>`;
     const row = positions.map(item).join("");
     const copies = positions.length < 3 ? row + row + row + row : row + row;
     return `<div class="ticker-wrap"><div class="ticker">${copies}</div></div>`;
@@ -469,7 +512,8 @@
 
   function agentsHtml(d, compact) {
     const a = d.agents || {};
-    const running = a.running > 0 && d.running;
+    const paused = !!(d.paused || d.status === "paused");
+    const running = a.running > 0 && d.running && !paused;
     const rows = [
       ["scan", a.scanner],
       ["brain", a.analyst],
@@ -488,7 +532,7 @@
     return `
       <div class="sec-h">
         <h2>Agents</h2>
-        <div class="run ${running?"":"off"}"><span class="g"></span>${esc(running ? (a.running_label || "4 running") : "stopped")}</div>
+        <div class="run ${running?"":"off"}"><span class="g"></span>${esc(paused ? "Paused" : (running ? (a.running_label || "4 running") : "stopped"))}</div>
       </div>
       <div class="card">${body || `<div class="hint">Keine Agent-Daten.</div>`}</div>`;
   }
@@ -522,6 +566,7 @@
           <div class="eq-usd" data-count="equity_usd">${usd(d.equity_usd)}</div>
           <div class="eq-eur">${eur(d.equity_eur)}</div>
           <div class="eq-pnl ${cls(d.pnl_usd)}">${d.pnl_usd>=0?"+":""}${usd(d.pnl_usd)} (${pct(d.roi_pct, true)})</div>
+          ${controlHtml(d)}
           <div class="tf">${["LIVE","1H","4H","1D","1W","ALL"].map(x => `<button data-tf="${x}" class="${tf===x?"on":""}">${x}</button>`).join("")}</div>
           <div class="chart-box"><canvas id="eqchart"></canvas></div>
         </div>
@@ -568,8 +613,10 @@
         <div class="row"><span class="l">Stop</span><span class="r">${esc(r.stop||"")}</span></div>
         <div class="row"><span class="l">Max hold</span><span class="r">${esc(r.max_hold||"")}</span></div>
         <p class="hint">${esc(r.daily_loss||"")}</p>
+        ${r.early ? `<p class="hint">${esc(r.early)}</p>` : ""}
       </div>
       <div class="card acct">
+        <p>Start/Stop und Live-Updates laufen über einen öffentlichen Pub/Sub-Kanal (kein neues Konto). Das Thema steckt in der Seite — wer die URL kennt, könnte den Bot theoretisch pausieren. Deshalb akzeptiert der Listener nur <code>pause</code>/<code>resume</code> und keinen anderen Befehl.</p>
         <p>Charts und Token-Bilder kommen live von GeckoTerminal und DexScreener.</p>
         <p><a href="https://dexscreener.com/solana" target="_blank" rel="noopener">DexScreener öffnen</a></p>
       </div>`;
@@ -626,7 +673,7 @@
       <button class="back" id="backhome">&lt; Home</button>
       <div class="tok-h">
         ${avatar(p.image_url, p.symbol, 44)}
-        <div class="nm">${esc(p.symbol)}</div>
+        <div class="nm">${esc(p.symbol)}${(p.tag==="pump.fun"||p.early)?` <span class="tag-pf">pump.fun</span>`:""}</div>
         <div class="sp">
           <button id="star" class="${starred?"star on":"star"}" aria-label="Merken">★</button>
           <button id="share" aria-label="Teilen">↗</button>
@@ -634,7 +681,7 @@
       </div>
       <div class="mcap" id="dt-mcap">…</div>
       <div class="since ${cls(p.pnl_pct)}">${arrow(p.pnl_pct)} ${pct(p.pnl_pct)} since Grok Bot bought</div>
-      <div class="meta" id="dt-meta">${esc(p.symbol)} · Solana</div>
+      <div class="meta" id="dt-meta">${esc(p.symbol)} · Solana${(p.tag==="pump.fun"||p.early)?" · pump.fun":""}</div>
       <div class="card" style="padding:8px 8px 4px"><div class="chart-box" style="height:200px"><canvas id="candle"></canvas></div></div>
       <div class="stats">
         <div class="card"><div class="k">Market cap</div><div class="v" id="st-mcap">…</div></div>
@@ -771,8 +818,11 @@
   function render(d, stale) {
     lastData = d;
     const live = $("#livepill");
-    if (d.running) { live.classList.remove("off"); live.innerHTML = `<span class="dot"></span> Live`; }
-    else { live.classList.add("off"); live.innerHTML = `<span class="dot"></span> ${esc(d.status_label || "Offline")}`; }
+    live.classList.toggle("off", !d.running && !d.paused);
+    live.classList.toggle("paused", !!d.paused);
+    if (d.paused) live.innerHTML = `<span class="dot"></span> Paused`;
+    else if (d.running) live.innerHTML = `<span class="dot"></span> Live`;
+    else live.innerHTML = `<span class="dot"></span> ${esc(d.status_label || "Offline")}`;
     const banners = [];
     if (stale) banners.push(`<div class="errb">Keine frischen Daten — letzte bekannte Werte werden angezeigt.</div>`);
     if (d.error) banners.push(`<div class="errb">${esc(d.error)}</div>`);
@@ -785,6 +835,8 @@
     document.querySelectorAll("[data-open]").forEach(btn => btn.onclick = () => openDetail(btn.dataset.open));
     document.querySelectorAll("[data-tf]").forEach(btn => btn.onclick = () => { tf = btn.dataset.tf; renderHome(d); bindHome(); });
     document.querySelectorAll("[data-tab]").forEach(btn => btn.onclick = () => setTab(btn.dataset.tab));
+    bindControl();
+    connectLive(d);
     (d.trade_events || d.trades || []).forEach(t => knownActs.add((t.t||"") + t.kind + t.symbol));
     firstPaint = false;
   }
@@ -792,6 +844,178 @@
     document.querySelectorAll("[data-open]").forEach(btn => btn.onclick = () => openDetail(btn.dataset.open));
     document.querySelectorAll("[data-tf]").forEach(btn => btn.onclick = () => { tf = btn.dataset.tf; if (lastData) { renderHome(lastData); bindHome(); }});
     document.querySelectorAll("[data-tab]").forEach(btn => btn.onclick = () => setTab(btn.dataset.tab));
+    bindControl();
+  }
+
+
+  function isPaused(d) { return !!(d && (d.paused || d.status === "paused")); }
+
+  function controlHtml(d) {
+    const paused = isPaused(d);
+    const label = paused ? "Paused" : (d && d.running ? "Running" : (d && d.status_label) || "Offline");
+    const stCls = paused ? "paused" : (d && d.running ? "" : "off");
+    const btn = paused
+      ? `<button class="btn-ctrl start" data-cmd="resume" type="button">Start bot</button>`
+      : `<button class="btn-ctrl" data-cmd="pause" type="button">Pause bot</button>`;
+    return `<div class="ctrl"><div class="st ${stCls}"><span class="dot"></span>${esc(label)}</div>${btn}</div>`;
+  }
+
+  function bindControl() {
+    document.querySelectorAll("[data-cmd]").forEach(btn => {
+      btn.onclick = () => confirmCmd(btn.dataset.cmd);
+    });
+  }
+
+  function confirmCmd(cmd) {
+    const root = document.getElementById("modal-root");
+    if (!root) return;
+    const pause = cmd === "pause";
+    root.innerHTML = `<div class="modal-bg" role="dialog" aria-modal="true">
+      <div class="modal">
+        <h3>${pause ? "Bot pausieren?" : "Bot starten?"}</h3>
+        <p>${pause
+          ? "Keine neuen Käufe und kein Scan, solange der Bot pausiert ist. Offene Positionen bleiben durch Stops und Take-Profit geschützt. Nur Spielgeld."
+          : "Scanner und neue Käufe laufen weiter — weiterhin nur Spielgeld, keine echte Wallet."}</p>
+        <div class="rowbtns">
+          <button class="cancel" type="button" id="mdl-cancel">Abbrechen</button>
+          <button class="ok" type="button" id="mdl-ok">${pause ? "Pausieren" : "Starten"}</button>
+        </div>
+      </div>
+    </div>`;
+    const close = () => { root.innerHTML = ""; };
+    document.getElementById("mdl-cancel").onclick = close;
+    root.querySelector(".modal-bg").addEventListener("click", ev => { if (ev.target.classList.contains("modal-bg")) close(); });
+    document.getElementById("mdl-ok").onclick = async () => {
+      close();
+      await sendCmd(cmd);
+    };
+  }
+
+  let es = null;
+  let rt = null;
+  let cmdBusy = false;
+
+  function realtimeCfg(d) {
+    return (d && d.realtime) || rt || null;
+  }
+
+  async function sendCmd(cmd) {
+    const r = realtimeCfg(lastData);
+    if (!r || !r.base || !r.topic || !r.key) {
+      const b = document.getElementById("banners");
+      if (b) b.innerHTML = `<div class="errb">Steuerkanal ist noch nicht bereit. Daten neu laden.</div>`;
+      return;
+    }
+    if (cmdBusy) return;
+    cmdBusy = true;
+    document.querySelectorAll("[data-cmd]").forEach(b => b.disabled = true);
+    // Optimistic UI
+    if (lastData) {
+      lastData.paused = cmd === "pause";
+      lastData.status = cmd === "pause" ? "paused" : "running";
+      lastData.status_label = cmd === "pause" ? "Pausiert" : "Läuft";
+      lastData.running = cmd !== "pause";
+      if (tab === "home") { renderHome(lastData); bindHome(); }
+      else if (lastData) render(lastData, false);
+    }
+    try {
+      const url = `${String(r.base).replace(/\/$/,"")}/${encodeURIComponent(r.topic)}`;
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain; charset=utf-8", "Priority": "min" },
+        body: JSON.stringify({ cmd, k: r.key, t: "cmd" })
+      });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+    } catch (e) {
+      const b = document.getElementById("banners");
+      if (b) b.innerHTML = `<div class="errb">Befehl konnte nicht gesendet werden.</div>`;
+    } finally {
+      cmdBusy = false;
+      document.querySelectorAll("[data-cmd]").forEach(b => b.disabled = false);
+    }
+  }
+
+  function connectLive(d) {
+    const r = realtimeCfg(d);
+    if (!r || !r.base || !r.topic) return;
+    rt = r;
+    const url = `${String(r.base).replace(/\/$/,"")}/${encodeURIComponent(r.topic)}/sse`;
+    if (es) {
+      if (es.url === url) return;
+      try { es.close(); } catch (_) {}
+    }
+    es = new EventSource(url);
+    es.onmessage = (ev) => {
+      try {
+        const wrap = JSON.parse(ev.data);
+        const raw = (wrap && wrap.message != null) ? wrap.message : ev.data;
+        const msg = (typeof raw === "string" && raw.trim().startsWith("{")) ? JSON.parse(raw)
+                  : (raw && typeof raw === "object" ? raw : null);
+        if (!msg) return;
+        if (msg.t === "live" || msg.t === "state" || msg.equity_usd != null || msg.paused != null) {
+          applyLive(msg);
+        }
+      } catch (_) {}
+    };
+    es.onerror = () => { /* browser reconnects EventSource automatically */ };
+  }
+
+  function applyLive(msg) {
+    if (!lastData) lastData = {};
+    const d = lastData;
+    if (msg.paused != null) {
+      d.paused = !!msg.paused;
+      d.status = d.paused ? "paused" : (d.bot_alive === false ? (d.status || "stopped") : "running");
+      d.status_label = d.paused ? "Pausiert" : "Läuft";
+      d.running = !d.paused && d.status === "running";
+    }
+    if (msg.equity_usd != null) d.equity_usd = msg.equity_usd;
+    if (msg.equity_eur != null) d.equity_eur = msg.equity_eur;
+    if (msg.cash_usd != null) d.cash_usd = msg.cash_usd;
+    if (msg.pnl_usd != null) d.pnl_usd = msg.pnl_usd;
+    if (msg.pnl_eur != null) d.pnl_eur = msg.pnl_eur;
+    if (msg.roi_pct != null) d.roi_pct = msg.roi_pct;
+    if (msg.multiplier != null) d.multiplier = msg.multiplier;
+    if (msg.open_count != null) d.open_count = msg.open_count;
+    if (msg.halted != null) d.halted = msg.halted;
+    if (Array.isArray(msg.positions)) d.positions = msg.positions;
+    if (msg.ts && Array.isArray(d.equity_history) && msg.equity_usd != null) {
+      const last = d.equity_history[d.equity_history.length - 1];
+      const ts = Date.now() / 1000;
+      if (!last || Math.abs((last.equity_usd || last.y || 0) - msg.equity_usd) > 0.001 || (ts - (last.ts || 0)) > 8) {
+        d.equity_history = d.equity_history.concat([{ ts, t: msg.ts, equity_usd: msg.equity_usd, equity_eur: msg.equity_eur }]);
+      }
+    }
+    const live = document.getElementById("livepill");
+    if (live) {
+      live.classList.toggle("off", !d.running && !d.paused);
+      live.classList.toggle("paused", !!d.paused);
+      if (d.paused) live.innerHTML = `<span class="dot"></span> Paused`;
+      else if (d.running) live.innerHTML = `<span class="dot"></span> Live`;
+    }
+    if (tab === "home") {
+      const usdEl = document.querySelector("[data-count=equity_usd]");
+      const pnlEl = document.querySelector(".eq-pnl");
+      const eurEl = document.querySelector(".eq-eur");
+      const st = document.querySelector(".ctrl .st");
+      if (usdEl) usdEl.textContent = usd(d.equity_usd);
+      if (eurEl && d.equity_eur != null) eurEl.textContent = eur(d.equity_eur);
+      if (pnlEl && d.pnl_usd != null) {
+        pnlEl.className = "eq-pnl " + cls(d.pnl_usd);
+        pnlEl.textContent = `${d.pnl_usd>=0?"+":""}${usd(d.pnl_usd)} (${pct(d.roi_pct, true)})`;
+      }
+      if (st) {
+        st.className = "st " + (d.paused ? "paused" : (d.running ? "" : "off"));
+        st.innerHTML = `<span class="dot"></span>${d.paused ? "Paused" : (d.running ? "Running" : (d.status_label || "Offline"))}`;
+      }
+      const btn = document.querySelector("[data-cmd]");
+      if (btn) {
+        if (d.paused) { btn.className = "btn-ctrl start"; btn.dataset.cmd = "resume"; btn.textContent = "Start bot"; }
+        else { btn.className = "btn-ctrl"; btn.dataset.cmd = "pause"; btn.textContent = "Pause bot"; }
+      }
+      const c = document.getElementById("eqchart");
+      if (c) drawEquity(c, filterHistory(d.equity_history || [], tf), d.trade_events || []);
+    }
   }
 
   async function tick() {

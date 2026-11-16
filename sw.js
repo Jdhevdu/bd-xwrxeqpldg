@@ -1,5 +1,5 @@
 /* Cache static PWA assets only. Never cache live data or market APIs. */
-const CACHE = "fomo-terminal-v3";
+const CACHE = "fomo-terminal-v4";
 const PRECACHE = ["./index.html", "./manifest.json", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
 
 function isLiveData(requestUrl) {
@@ -9,7 +9,8 @@ function isLiveData(requestUrl) {
     host === "raw.githubusercontent.com" ||
     host === "api.github.com" ||
     host === "api.geckoterminal.com" ||
-    host === "api.dexscreener.com"
+    host === "api.dexscreener.com" ||
+    host.includes("ntfy")
   ) return true;
   if (u.pathname.endsWith("data.json")) return true;
   return false;
