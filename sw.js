@@ -23,7 +23,7 @@ function isLiveData(requestUrl) {
     host.includes("ntfy") ||
     host.endsWith("trycloudflare.com") ||
     host.endsWith("loca.lt") ||
-    host.endsWith("demo.tbmq.io") || host.endsWith("unpkg.com")
+    host.endsWith("unpkg.com")
   ) return true;
   if (u.pathname.endsWith("data.json") || u.pathname.endsWith("sw.js")) return true;
   return false;
@@ -48,6 +48,10 @@ self.addEventListener("message", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+  const dest = event.request.destination || "";
+  if (dest === "websocket" || (event.request.headers.get("Upgrade") || "").toLowerCase() === "websocket") return;
+  const host = new URL(event.request.url).hostname;
+  if (host.endsWith("demo.tbmq.io")) return;
   if (isHTML(event.request) || isLiveData(event.request.url)) {
     event.respondWith(
       fetch(event.request, { cache: "no-store" }).catch(() => caches.match(event.request))

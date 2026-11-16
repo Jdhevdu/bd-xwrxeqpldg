@@ -1191,12 +1191,14 @@
     window.__directWsState = "connecting";
     loadMqttLib().then((mqtt) => {
       if (directUrl !== ident) return;
-      const c = mqtt.connect(url, {
+      const broker = (url || "").replace(/\/live\/?$/, "");
+      const c = mqtt.connect(broker, {
         username: r.direct_user || "demo",
         protocolVersion: 4,
         clean: true,
         reconnectPeriod: 1500,
         connectTimeout: 8000,
+        path: "/mqtt",
         clientId: "fomo-app-" + Math.random().toString(16).slice(2),
       });
       mqttClient = c;
@@ -1468,9 +1470,12 @@
     if (msg.equity_usd != null) d.equity_usd = msg.equity_usd;
     if (msg.equity_eur != null) d.equity_eur = msg.equity_eur;
     if (msg.cash_usd != null) d.cash_usd = msg.cash_usd;
-    if (msg.direct && d.realtime) {
-      if (d.realtime.direct !== msg.direct) {
+    if (msg.direct && d.realtime && d.realtime.direct !== msg.direct) {
+      if (d.realtime.direct_proto === "mqtt" && msg.direct_proto !== "mqtt") {
+        // snapshot used to append /live to the broker URL; ignore that
+      } else {
         d.realtime.direct = msg.direct;
+        if (msg.direct_proto) d.realtime.direct_proto = msg.direct_proto;
         try { connectDirect(d); } catch (_) {}
       }
     }
