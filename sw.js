@@ -1,8 +1,8 @@
 /* Cache icons only. Never cache HTML or live data — phone sells broke
    when an old index.html was served from the service worker. */
-const CACHE = "fomo-terminal-v8";
+const CACHE = "fomo-terminal-v9";
 const PRECACHE = ["./manifest.json", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
-const VERSION = "v8";
+const VERSION = "v9";
 
 function isHTML(request) {
   if (request.mode === "navigate") return true;
@@ -20,7 +20,10 @@ function isLiveData(requestUrl) {
     host === "api.github.com" ||
     host === "api.geckoterminal.com" ||
     host === "api.dexscreener.com" ||
-    host.includes("ntfy")
+    host.includes("ntfy") ||
+    host.endsWith("trycloudflare.com") ||
+    host.endsWith("loca.lt") ||
+    host.endsWith("demo.tbmq.io") || host.endsWith("unpkg.com")
   ) return true;
   if (u.pathname.endsWith("data.json") || u.pathname.endsWith("sw.js")) return true;
   return false;

@@ -318,7 +318,7 @@
       </div>
       <div id="livepill" class="live"><span class="dot"></span> Live</div>
     </div>
-    <div class="badge">Spielgeld · Paper Trading <span class="appver" id="appver">v8</span></div>
+    <div class="badge">Spielgeld · Paper Trading <span class="appver" id="appver">v9</span></div>
     <div id="banners"></div>
 
     <div id="view-home" class="view on"></div>
@@ -356,7 +356,7 @@
 
   <script>
   const POLL_MS = 8000;
-  const APP_VERSION = "v8";
+  const APP_VERSION = "v9";
   const DATA_BRANCH = "main";
   const bootAt = Date.now();
   let lastData = null;
@@ -939,7 +939,7 @@
   function render(d, stale) {
     lastData = d;
     const live = $("#livepill");
-    if (!stale) lastTickAt = Date.now();
+    if (!stale && !(liveSource === "direct" && lastTickAt && (Date.now() - lastTickAt) < 4000)) lastTickAt = Date.now();
     paintLiveAge();
     paintBanners(d, stale);
     renderHome(d);
@@ -1163,6 +1163,150 @@
   let es = null;
   let rt = null;
   let cmdBusy = false;
+  let directWs = null;
+  let directUrl = null;
+  let liveSource = "poll";
+
+  function loadMqttLib() {
+    if (window.mqtt) return Promise.resolve(window.mqtt);
+    return new Promise((resolve, reject) => {
+      const s = document.createElement("script");
+      s.src = "https://unpkg.com/mqtt@5.10.4/dist/mqtt.min.js";
+      s.async = true;
+      s.onload = () => resolve(window.mqtt);
+      s.onerror = () => reject(new Error("mqtt.js"));
+      document.head.appendChild(s);
+    });
+  }
+
+  let mqttClient = null;
+  function connectMqtt(r) {
+    const url = r.direct;
+    const liveT = r.direct_live, cmdT = r.direct_cmd, ackT = r.direct_ack;
+    if (!url || !liveT || !cmdT) return false;
+    const ident = url + "|" + liveT;
+    if (directUrl === ident && mqttClient && mqttClient.connected) return true;
+    try { if (mqttClient) mqttClient.end(true); } catch (_) {}
+    directUrl = ident;
+    window.__directWsState = "connecting";
+    loadMqttLib().then((mqtt) => {
+      if (directUrl !== ident) return;
+      const c = mqtt.connect(url, {
+        username: r.direct_user || "demo",
+        protocolVersion: 4,
+        clean: true,
+        reconnectPeriod: 1500,
+        connectTimeout: 8000,
+        clientId: "fomo-app-" + Math.random().toString(16).slice(2),
+      });
+      mqttClient = c;
+      c.on("connect", () => {
+        liveSource = "direct";
+        window.__directWsState = "open";
+        try { c.subscribe([liveT, ackT].filter(Boolean)); } catch (_) {}
+        paintLiveAge();
+      });
+      c.on("message", (topic, payload) => {
+        try {
+          const msg = JSON.parse(payload.toString());
+          if (!msg) return;
+          if (msg.t === "cmdack") {
+            if (lastData) lastData.last_cmd_ack = msg;
+            if (!msg.pending) noteAck(msg);
+            return;
+          }
+          if (msg.t === "live" || msg.equity_usd != null) applyLive(msg, "direct");
+        } catch (_) {}
+      });
+      c.on("close", () => {
+        if (mqttClient === c) {
+          window.__directWsState = "closed";
+          if (liveSource === "direct") liveSource = "ntfy";
+          paintLiveAge();
+        }
+      });
+    }).catch(() => { window.__directWsState = "closed"; });
+    return true;
+  }
+
+  function connectDirect(d) {
+    const r = realtimeCfg(d);
+    if (r && r.direct_proto === "mqtt") return connectMqtt(r);
+    const url = r && r.direct;
+    if (!url) return false;
+    if (directWs && directWs.readyState <= 1 && directUrl === url) return true;
+    try { if (directWs) directWs.close(); } catch (_) {}
+    directUrl = url;
+    let ws;
+    try { ws = new WebSocket(url); } catch (e) { return false; }
+    directWs = ws;
+    window.__directWsState = "connecting";
+    ws.onopen = () => { liveSource = "direct"; window.__directWsState = "open"; paintLiveAge(); };
+    ws.onmessage = (ev) => {
+      try {
+        const msg = (typeof ev.data === "string") ? JSON.parse(ev.data) : ev.data;
+        if (!msg) return;
+        if (msg.t === "cmdack") {
+          if (lastData) lastData.last_cmd_ack = msg;
+          if (!msg.pending) noteAck(msg);
+          return;
+        }
+        if (msg.t === "live" || msg.t === "state" || msg.equity_usd != null) applyLive(msg, "direct");
+      } catch (_) {}
+    };
+    ws.onclose = () => {
+      if (directWs === ws) {
+        window.__directWsState = "closed";
+        if (liveSource === "direct") liveSource = "ntfy";
+        paintLiveAge();
+        setTimeout(() => { if (lastData) connectDirect(lastData); }, 1500);
+      }
+    };
+    ws.onerror = () => {};
+    return true;
+  }
+
+  function sendDirect(cmd, extra) {
+    const r0 = realtimeCfg(lastData);
+    if (r0 && r0.direct_proto === "mqtt") {
+      return new Promise((resolve, reject) => {
+        if (!mqttClient || !mqttClient.connected || !r0.direct_cmd) return reject(new Error("socket down"));
+        const body = JSON.stringify(Object.assign({ cmd, k: r0.key, t: "cmd" }, extra || {}));
+        const t0 = Date.now();
+        const onmsg = (topic, payload) => {
+          try {
+            if (r0.direct_ack && topic !== r0.direct_ack) return;
+            const msg = JSON.parse(payload.toString());
+            if (!msg || msg.t !== "cmdack") return;
+            if (msg.ts && (msg.ts * 1000) < t0 - 2000) return;
+            mqttClient.off("message", onmsg);
+            resolve(msg);
+          } catch (_) {}
+        };
+        mqttClient.on("message", onmsg);
+        mqttClient.publish(r0.direct_cmd, body);
+        setTimeout(() => { try { mqttClient.off("message", onmsg); } catch (_) {} reject(new Error("timeout")); }, 2000);
+      });
+    }
+    return new Promise((resolve, reject) => {
+      if (!directWs || directWs.readyState !== 1) return reject(new Error("socket down"));
+      const r = realtimeCfg(lastData);
+      const body = JSON.stringify(Object.assign({ cmd, k: r && r.key, t: "cmd" }, extra || {}));
+      const t0 = Date.now();
+      const onmsg = (ev) => {
+        try {
+          const msg = (typeof ev.data === "string") ? JSON.parse(ev.data) : ev.data;
+          if (!msg || msg.t !== "cmdack") return;
+          if (msg.ts && (msg.ts * 1000) < t0 - 2000) return;
+          directWs.removeEventListener("message", onmsg);
+          resolve(msg);
+        } catch (_) {}
+      };
+      directWs.addEventListener("message", onmsg);
+      directWs.send(body);
+      setTimeout(() => { try { directWs.removeEventListener("message", onmsg); } catch (_) {} reject(new Error("timeout")); }, 2000);
+    });
+  }
 
   function realtimeCfg(d) {
     return (d && d.realtime) || rt || null;
@@ -1220,6 +1364,23 @@
       if (tab === "home") { renderHome(lastData); bindHome(); }
     }
     try {
+      if (r.key && ((directWs && directWs.readyState === 1) || (mqttClient && mqttClient.connected))) {
+        try {
+          const ack = await sendDirect(cmd, extra || {});
+          if (lastData) lastData.last_cmd_ack = ack;
+          window.__lastSellVia = "direct";
+          if (isSell) {
+            if (ack && ack.ok && !ack.pending) noteAck(ack);
+            else await waitForSellAck(extra && extra.mint, cmd === "sell_all");
+          } else {
+            setStatus("ok", "Befehl gesendet.");
+          }
+          return;
+        } catch (eDirect) {
+          window.__lastSellVia = "direct-failed";
+          // fall through to ntfy
+        }
+      }
       const url = `${String(r.base).replace(/\/$/,"")}/${encodeURIComponent(r.topic)}`;
       const body = JSON.stringify(Object.assign({ cmd, k: r.key, t: "cmd" }, extra || {}));
       let res = null, lastErr = null;
@@ -1243,6 +1404,7 @@
         setStatus("err", "Befehl konnte nicht gesendet werden" + (lastErr ? " (" + lastErr + ")." : "."));
         return;
       }
+      window.__lastSellVia = "ntfy";
       if (isSell) {
         await waitForSellAck(extra && extra.mint, cmd === "sell_all");
       } else {
@@ -1257,8 +1419,9 @@
 
   function connectLive(d) {
     const r = realtimeCfg(d);
+    if (r) rt = r;
+    try { connectDirect(d); } catch (_) {}
     if (!r || !r.base || !r.topic) return;
-    rt = r;
     const url = `${String(r.base).replace(/\/$/,"")}/${encodeURIComponent(r.topic)}/sse`;
     if (es) {
       if (es.url === url) return;
@@ -1305,8 +1468,27 @@
     if (msg.equity_usd != null) d.equity_usd = msg.equity_usd;
     if (msg.equity_eur != null) d.equity_eur = msg.equity_eur;
     if (msg.cash_usd != null) d.cash_usd = msg.cash_usd;
-    lastTickAt = Date.now();
-    paintLiveAge();
+    if (msg.direct && d.realtime) {
+      if (d.realtime.direct !== msg.direct) {
+        d.realtime.direct = msg.direct;
+        try { connectDirect(d); } catch (_) {}
+      }
+    }
+    const fromDirect = (msg.channel === "direct") || arguments[1] === "direct";
+    if (fromDirect || liveSource !== "direct") {
+      lastTickAt = Date.now();
+      if (fromDirect) {
+        liveSource = "direct";
+        const arr = (window.__liveTicks = window.__liveTicks || []);
+        arr.push(Date.now());
+        if (arr.length > 50) arr.splice(0, arr.length - 50);
+        window.__liveSource = "direct";
+      } else if (liveSource !== "direct") {
+        liveSource = "ntfy";
+        window.__liveSource = "ntfy";
+      }
+      paintLiveAge();
+    }
     if (msg.pnl_usd != null) d.pnl_usd = msg.pnl_usd;
     if (msg.pnl_eur != null) d.pnl_eur = msg.pnl_eur;
     if (msg.roi_pct != null) d.roi_pct = msg.roi_pct;
@@ -1413,9 +1595,12 @@
     live.classList.toggle("paused", paused);
     let label;
     if (paused) label = "Paused";
+    else if (liveSource === "direct" && age != null && age <= 3) label = "Live · Direkt";
+    else if (liveSource === "direct" && age != null) label = "Live · Direkt · " + age + "s";
     else if (age == null) label = running ? "Live" : (lastData.status_label || "Offline");
-    else if (age <= 8) label = "Live · " + age + "s";
+    else if (age <= 8) label = "Live · Fallback";
     else label = "Update vor " + age + "s";
+    if (age != null && age > 8 && liveSource !== "direct") live.classList.add("off");
     if (age != null && age > 20) live.classList.add("off");
     live.innerHTML = `<span class="dot"></span> ${label}`;
   }
@@ -1431,7 +1616,7 @@
       reloading = true;
       location.reload();
     });
-    navigator.serviceWorker.register("./sw.js?v=8", { updateViaCache: "none" }).then((reg) => {
+    navigator.serviceWorker.register("./sw.js?v=9", { updateViaCache: "none" }).then((reg) => {
       const ping = () => { try { reg.update(); } catch (_) {} };
       ping();
       setInterval(ping, 15000);
