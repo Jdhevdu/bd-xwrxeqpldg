@@ -1,5 +1,5 @@
 /* Cache static PWA assets only. Never cache live data or market APIs. */
-const CACHE = "fomo-terminal-v5";
+const CACHE = "fomo-terminal-v6";
 const PRECACHE = ["./index.html", "./manifest.json", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
 
 function isLiveData(requestUrl) {

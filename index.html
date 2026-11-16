@@ -266,6 +266,8 @@
       letter-spacing: .04em; padding: 1px 6px; border-radius: 999px;
       background: #fff; color: #b91c1c; vertical-align: middle;
     }
+    .tag-pf.tag-grad { background: #3a2a00; color: #ffd36a; }
+    .learn-lesson { font-size: 14px; line-height: 1.45; color: #fff; margin: 0 0 10px; }
     .live.paused { color: #fbbf24; }
     .live.paused .dot { background: #fbbf24; }
     .modal-bg {
@@ -524,7 +526,7 @@
 
   function tickerHtml(positions) {
     if (!positions.length) return "";
-    const item = (p) => `<button class="tick" data-open="${esc(p.symbol)}">${avatar(p.image_url, p.symbol)}${esc(p.symbol)}${p.tag==="pump.fun"||p.early?`<span class="tag-pf">pump.fun</span>`:""} <span class="${cls(p.pnl_usd != null ? p.pnl_usd : p.pnl_pct)}">${p.pnl_usd!=null?((p.pnl_usd>=0?"+":"")+usd(p.pnl_usd)+" "):""}${arrow(p.pnl_pct)} ${pct(p.pnl_pct)}</span></button>`;
+    const item = (p) => `<button class="tick" data-open="${esc(p.symbol)}">${avatar(p.image_url, p.symbol)}${esc(p.symbol)}${pumpTag(p)} <span class="${cls(p.pnl_usd != null ? p.pnl_usd : p.pnl_pct)}">${p.pnl_usd!=null?((p.pnl_usd>=0?"+":"")+usd(p.pnl_usd)+" "):""}${arrow(p.pnl_pct)} ${pct(p.pnl_pct)}</span></button>`;
     const row = positions.map(item).join("");
     const copies = positions.length < 3 ? row + row + row + row : row + row;
     return `<div class="ticker-wrap"><div class="ticker">${copies}</div></div>`;
@@ -564,7 +566,34 @@
         <h2>Agents</h2>
         <div class="run ${running?"":"off"}"><span class="g"></span>${esc(paused ? "Paused" : (running ? (a.running_label || "4 running") : "stopped"))}</div>
       </div>
-      <div class="card">${body || `<div class="hint">Keine Agent-Daten.</div>`}</div>`;
+      <div class="card">${body || `<div class="hint">Keine Agent-Daten.</div>`}</div>
+      ${lernenHtml(d)}`;
+  }
+
+  function pumpTag(p) {
+    if (!p) return "";
+    if (p.tag === "pump.fun" || p.early) return `<span class="tag-pf">pump.fun</span>`;
+    if (p.tag === "graduiert" || p.graduated) return `<span class="tag-pf tag-grad">graduiert</span>`;
+    return "";
+  }
+
+  function lernenHtml(d) {
+    const L = (d && d.learn) || {};
+    const n = L.trades_learned || 0;
+    const lesson = L.last_lesson || "Noch keine Lektion — der Bot übt mit Papiergeld und lernt nach jedem Trade.";
+    const params = L.params || [];
+    const rows = params.map(r => `<div class="row"><span class="l">${esc(r.label)}</span><span class="r">${esc(r.value)}</span></div>`).join("");
+    const recent = (L.recent || []).slice().reverse().map(h =>
+      `<div class="sub" style="margin:6px 0">${esc(h.when || "")} · ${esc(h.lesson || "")}</div>`
+    ).join("");
+    return `
+      <div class="sec-h"><h2>Lernen</h2><div class="run">${n} Trade${n===1?"":"s"}</div></div>
+      <div class="card acct">
+        <p class="learn-lesson">${esc(lesson)}</p>
+        ${rows || `<div class="hint">Noch keine Parameter geladen.</div>`}
+        ${recent ? `<div class="k" style="margin:12px 0 4px">Letzte Änderungen</div>${recent}` : ""}
+        <p class="hint">${esc(L.bounds_note || "")}</p>
+      </div>`;
   }
 
   function activityRows(items, animate) {
@@ -646,6 +675,7 @@
         <p class="hint">${esc(r.daily_loss||"")}</p>
         ${r.early ? `<p class="hint">${esc(r.early)}</p>` : ""}
       </div>
+      ${lernenHtml(d)}
       <div class="card acct">
         <p>Start/Stop und Live-Updates laufen über einen öffentlichen Pub/Sub-Kanal (kein neues Konto). Das Thema steckt in der Seite — wer die URL kennt, könnte den Bot theoretisch pausieren. Deshalb akzeptiert der Listener nur <code>pause</code>/<code>resume</code> und keinen anderen Befehl.</p>
         <p>Charts und Token-Bilder kommen live von GeckoTerminal und DexScreener.</p>
@@ -704,7 +734,7 @@
       <button class="back" id="backhome">&lt; Home</button>
       <div class="tok-h">
         ${avatar(p.image_url, p.symbol, 44)}
-        <div class="nm">${esc(p.symbol)}${(p.tag==="pump.fun"||p.early)?` <span class="tag-pf">pump.fun</span>`:""}</div>
+        <div class="nm">${esc(p.symbol)}${pumpTag(p)}</div>
         <div class="sp">
           ${p.mint && p.value_usd!=null ? `<button class="btn-sell" id="dt-sell" type="button">Sell</button>` : ""}
           <button id="star" class="${starred?"star on":"star"}" aria-label="Merken">★</button>
@@ -713,7 +743,7 @@
       </div>
       <div class="mcap" id="dt-mcap">…</div>
       <div class="since ${cls(p.pnl_usd != null ? p.pnl_usd : p.pnl_pct)}">${p.pnl_usd!=null?((p.pnl_usd>=0?"+":"")+usd(p.pnl_usd)+" · "):""}${arrow(p.pnl_pct)} ${pct(p.pnl_pct)} since Grok Bot bought</div>
-      <div class="meta" id="dt-meta">${esc(p.symbol)} · Solana${(p.tag==="pump.fun"||p.early)?" · pump.fun":""}</div>
+      <div class="meta" id="dt-meta">${esc(p.symbol)} · Solana${p.tag==="pump.fun"||p.early?" · pump.fun":(p.tag==="graduiert"||p.graduated?" · pump.fun graduiert":"")}</div>
       <div class="card" style="padding:8px 8px 4px"><div class="chart-box" style="height:200px"><canvas id="candle"></canvas></div></div>
       <div class="stats">
         <div class="card"><div class="k">Market cap</div><div class="v" id="st-mcap">…</div></div>
@@ -923,7 +953,7 @@
         <button type="button" data-open="${esc(p.symbol)}" style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;text-align:left">
           ${avatar(p.image_url, p.symbol)}
           <div class="mid">
-            <div class="nm">${esc(p.symbol)}${p.tag==="pump.fun"||p.early?`<span class="tag-pf">pump.fun</span>`:""}</div>
+            <div class="nm">${esc(p.symbol)}${pumpTag(p)}</div>
             <div class="sub">${p.value_usd!=null?usd(p.value_usd):"—"} · ${esc(p.risk_label||"")}</div>
           </div>
           <div class="rhs">
@@ -992,6 +1022,7 @@
       symbol: e.symbol || e.s || "?",
       mint, pool: e.pool, dex: e.dex,
       early: !!(e.early || e.dex === "pump-fun" || e.dex === "pumpfun" || e.tag === "pump.fun"),
+      graduated: !!(e.graduated || e.tag === "graduiert" || e.venue === "pump.fun-grad"),
       source: e.source || e.src || e.origin || "",
       mcap: e.mcap || e.mc || e.fdv,
       liq: e.liq || e.liquidity_usd,
@@ -1021,7 +1052,7 @@
     return `<button class="feed-item" data-open="${esc(e.symbol || "")}">
       ${avatar(e.image_url, e.symbol)}
       <div class="mid">
-        <div class="nm">${esc(e.symbol || "?")}${e.early ? `<span class="tag-pf">pump.fun</span>` : ""}</div>
+        <div class="nm">${esc(e.symbol || "?")}${pumpTag(e)}</div>
         <div class="sub">${mc} mcap${age ? " · " + age : ""} · ${esc(e.source || e.dex || "")}</div>
         ${why ? `<div class="why">${esc(why)}</div>` : ""}
       </div>
@@ -1032,7 +1063,7 @@
   function renderFeed(d) {
     if (d && d.feed) mergeFeed(d.feed);
     const items = feedItems.filter(e => {
-      if (feedFilter === "pump.fun") return e.early;
+      if (feedFilter === "pump.fun") return !!(e.early || e.graduated || e.tag === "pump.fun" || e.tag === "graduiert");
       if (feedFilter === "bought") return e.decision === "bought";
       if (feedFilter === "rejected") return e.decision === "rejected" || e.decision === "skipped";
       return true;
