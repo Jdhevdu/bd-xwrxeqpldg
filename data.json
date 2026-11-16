@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Spielgeld · Paper Trading",
-  "exported_at": "2026-11-16 19:11:22 CET",
-  "last_update": "2026-11-16 19:11:20 CET",
+  "exported_at": "2026-11-16 19:12:23 CET",
+  "last_update": "2026-11-16 19:12:05 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 20.93767012090449,
@@ -24,24 +24,24 @@
   "wins": 0,
   "halted": false,
   "counters": {
-    "cycles": 137,
-    "pools_scanned": 15540,
-    "unique_pools": 3855,
-    "prefilter_rejected": 3857,
+    "cycles": 138,
+    "pools_scanned": 15737,
+    "unique_pools": 3857,
+    "prefilter_rejected": 3858,
     "safety_rejected": 127,
-    "scored": 199,
+    "scored": 200,
     "buys": 8,
     "sells": 1
   },
   "last_scan_sources": {
-    "trending_1h_p2": 12,
-    "trending_1h": 17,
-    "trending_5m": 16,
+    "trending_5m": 17,
+    "trending_1h_p2": 11,
+    "trending_1h": 18,
     "trending_5m_p2": 14,
     "ds_boosts_top": 3,
     "ds_boosts": 18,
     "ds_profiles": 18,
-    "new": 60,
+    "new": 41,
     "watchlist": 57
   },
   "watch_count": 400,
@@ -76,7 +76,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 16:13:47 CET",
       "entry_ts": 1794842027.9097335,
-      "held": "2h 57m"
+      "held": "2h 58m"
     },
     {
       "symbol": "CATE",
@@ -107,7 +107,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 16:13:47 CET",
       "entry_ts": 1794842027.9097967,
-      "held": "2h 57m"
+      "held": "2h 58m"
     },
     {
       "symbol": "HOGE",
@@ -138,7 +138,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 16:14:24 CET",
       "entry_ts": 1794842064.7546785,
-      "held": "2h 56m"
+      "held": "2h 57m"
     },
     {
       "symbol": "WIGGLES",
@@ -169,7 +169,7 @@
       "risk_label": "trailing 40%",
       "entry_time": "2026-11-16 16:15:02 CET",
       "entry_ts": 1794842102.025648,
-      "held": "2h 56m"
+      "held": "2h 57m"
     },
     {
       "symbol": "rockstar",
@@ -200,7 +200,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 18:51:02 CET",
       "entry_ts": 1794851462.0988588,
-      "held": "20m"
+      "held": "21m"
     },
     {
       "symbol": "Cupsey",
@@ -231,7 +231,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 18:51:02 CET",
       "entry_ts": 1794851462.0989182,
-      "held": "20m"
+      "held": "21m"
     },
     {
       "symbol": "GTA",
@@ -262,7 +262,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 18:51:02 CET",
       "entry_ts": 1794851462.0989587,
-      "held": "20m"
+      "held": "21m"
     },
     {
       "symbol": "JOB",
@@ -293,7 +293,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-16 18:52:01 CET",
       "entry_ts": 1794851521.9232492,
-      "held": "19m"
+      "held": "20m"
     }
   ],
   "closed": [],
@@ -645,6 +645,33 @@
   ],
   "scanner": [
     {
+      "t": "2026-11-16 19:12:05 CET",
+      "ts": 1794852725.0,
+      "kind": "Skipped",
+      "symbol": "NEVERDOOM",
+      "reason": "max 8 positions open",
+      "text": "NEVERDOOM score 66 - max 8 positions open",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:12:05 CET",
+      "ts": 1794852725.0,
+      "kind": "Scored",
+      "symbol": "NEVERDOOM",
+      "reason": "NEVERDOOM [trending_5m] score 66 | liq $46,313 | h1 -8.0% | top10 21% | LP 100% | liquidity:5.4 vol_liq:8 buy_pressure:15 holders:12.5 authorities:10 lp:10.0 age:5 momentum:0",
+      "text": "NEVERDOOM [trending_5m] score 66 | liq $46,313 | h1 -8.0% | top10 21% | LP 100% | liquidity:5.4 vol_liq:8 buy_pressure:15 holders:12.5 authorities:10 lp:10.0 age:5 momentum:0",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:12:04 CET",
+      "ts": 1794852724.0,
+      "kind": "Rejected",
+      "symbol": "mei",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "mei (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
+    {
       "t": "2026-11-16 19:11:20 CET",
       "ts": 1794852680.0,
       "kind": "Rejected",
@@ -976,36 +1003,36 @@
       "reason": "pool age 1 min < 2 (early)",
       "text": "$HOMER (pump-fun) - pool age 1 min < 2 (early)",
       "curve": false
-    },
-    {
-      "t": "2026-11-16 19:10:19 CET",
-      "ts": 1794852619.0,
-      "kind": "Rejected",
-      "symbol": "MOM",
-      "reason": "liquidity $3 < $10,000",
-      "text": "MOM (meteora-damm-v2) - liquidity $3 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:10:19 CET",
-      "ts": 1794852619.0,
-      "kind": "Rejected",
-      "symbol": "lptp",
-      "reason": "pool age 1 min < 2 (early)",
-      "text": "lptp (pump-fun) - pool age 1 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:10:19 CET",
-      "ts": 1794852619.0,
-      "kind": "Rejected",
-      "symbol": "GLCH",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "GLCH (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-16 19:12:05 CET",
+      "ts": 1794852725.0,
+      "kind": "Skipped",
+      "symbol": "NEVERDOOM",
+      "reason": "max 8 positions open",
+      "text": "NEVERDOOM score 66 - max 8 positions open",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:12:05 CET",
+      "ts": 1794852725.0,
+      "kind": "Scored",
+      "symbol": "NEVERDOOM",
+      "reason": "NEVERDOOM [trending_5m] score 66 | liq $46,313 | h1 -8.0% | top10 21% | LP 100% | liquidity:5.4 vol_liq:8 buy_pressure:15 holders:12.5 authorities:10 lp:10.0 age:5 momentum:0",
+      "text": "NEVERDOOM [trending_5m] score 66 | liq $46,313 | h1 -8.0% | top10 21% | LP 100% | liquidity:5.4 vol_liq:8 buy_pressure:15 holders:12.5 authorities:10 lp:10.0 age:5 momentum:0",
+      "curve": false
+    },
+    {
+      "t": "2026-11-16 19:12:04 CET",
+      "ts": 1794852724.0,
+      "kind": "Rejected",
+      "symbol": "mei",
+      "reason": "pool age 2 min < 2 (early)",
+      "text": "mei (pump-fun) - pool age 2 min < 2 (early)",
+      "curve": false
+    },
     {
       "t": "2026-11-16 19:11:20 CET",
       "ts": 1794852680.0,
@@ -1202,33 +1229,6 @@
       "symbol": "LUCIA",
       "reason": "pool age 7 min < 15",
       "text": "LUCIA (pumpswap) - pool age 7 min < 15",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:10:48 CET",
-      "ts": 1794852648.0,
-      "kind": "Rejected",
-      "symbol": "SXSN",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "SXSN (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:10:48 CET",
-      "ts": 1794852648.0,
-      "kind": "Rejected",
-      "symbol": "MCH",
-      "reason": "pool age 2 min < 2 (early)",
-      "text": "MCH (pump-fun) - pool age 2 min < 2 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-16 19:10:48 CET",
-      "ts": 1794852648.0,
-      "kind": "Rejected",
-      "symbol": "POP",
-      "reason": "pool age 1 min < 2 (early)",
-      "text": "POP CAT (pump-fun) - pool age 1 min < 2 (early)",
       "curve": false
     }
   ],
@@ -1569,6 +1569,12 @@
       "t_label": "2026-11-16 19:11:20 CET",
       "usd": 23.1403,
       "eur": 20.9377
+    },
+    {
+      "t": 1794852725.3046196,
+      "t_label": "2026-11-16 19:12:05 CET",
+      "usd": 23.1403,
+      "eur": 20.9377
     }
   ],
   "agents": {
@@ -1577,18 +1583,18 @@
     "scanner": {
       "name": "Scanner",
       "title": "Pool discovery",
-      "token": "12",
-      "pill": "215 pools",
+      "token": "NEVERDOOM",
+      "pill": "197 pools",
       "pill_kind": "blue",
-      "detail": "3855 einzigartige Pools insgesamt"
+      "detail": "3857 einzigartige Pools insgesamt"
     },
     "analyst": {
       "name": "Analyst",
       "title": "Entry checks",
-      "token": "WIZARD",
-      "pill": "65 score",
+      "token": "NEVERDOOM",
+      "pill": "66 score",
       "pill_kind": "purple",
-      "detail": "WIZARD [trending_1h] score 65 | liq $78,758 | h1 -4.7% | top10 24% | LP 100% | liquidity:7.9 vol_liq:8 buy_pressure:15 holders:11.0 authorities:10 lp:10.0 age:3 momentum:0"
+      "detail": "NEVERDOOM [trending_5m] score 66 | liq $46,313 | h1 -8.0% | top10 21% | LP 100% | liquidity:5.4 vol_liq:8 buy_pressure:15 holders:12.5 authorities:10 lp:10.0 age:5 momentum:0"
     },
     "executor": {
       "name": "Executor",
@@ -1610,11 +1616,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "3855 Pools · 137 Scans · Watch 400 · Graduiert 24 · letzter Scan: trending_1h_p2 12 · trending_1h 17 · trending_5m 16 · trending_5m_p2 14 · ds_boosts_top 3 · ds_boosts 18 · ds_profiles 18 · new 60 · watchlist 57"
+      "detail": "3857 Pools · 138 Scans · Watch 400 · Graduiert 24 · letzter Scan: trending_5m 17 · trending_1h_p2 11 · trending_1h 18 · trending_5m_p2 14 · ds_boosts_top 3 · ds_boosts 18 · ds_profiles 18 · new 41 · watchlist 57"
     },
     {
       "name": "Analyst",
-      "detail": "199 bewertet · 3984 abgelehnt"
+      "detail": "200 bewertet · 3985 abgelehnt"
     },
     {
       "name": "Brain",
@@ -1649,7 +1655,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 2.5,
+  "heartbeat_age_s": 17.8,
   "bot_alive": true,
   "supervisor_alive": true
 }
