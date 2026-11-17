@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-17 21:58:45 CET",
+  "exported_at": "2026-11-17 21:59:05 CET",
   "last_update": "2026-11-17 21:58:42 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -125,12 +125,12 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 52235.9,
-    "last_ms": 1000.4,
+    "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 1.1,
     "work_p95_ms": 2.6,
     "work_max_ms": 386.8,
-    "work_last_ms": 2.8,
+    "work_last_ms": 1.4,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 72.89090196518538,
@@ -242,7 +242,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-17 18:02:59 CET",
       "entry_ts": 1794934979.1738517,
-      "held": "3h 55m",
+      "held": "3h 56m",
       "smart_n": 0,
       "smart_label": "",
       "narrative": null,
@@ -292,7 +292,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-17 18:18:00 CET",
       "entry_ts": 1794935880.2840817,
-      "held": "3h 40m",
+      "held": "3h 41m",
       "smart_n": 0,
       "smart_label": "Bundle-Risiko",
       "narrative": null,
@@ -5466,14 +5466,14 @@
       "price_s": 1.0,
       "price_stale_s": 1.0,
       "stop_to_sell_s": 2.0,
-      "bot_to_phone_s": 0.223,
+      "bot_to_phone_s": 0.222,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": 0.0,
       "confirm_s": 1.297,
       "n_discovery": 200,
       "n_buys": 6,
-      "updated_ts": 1794949124.7289386,
+      "updated_ts": 1794949145.733911,
       "stages": {
         "discovery": {
           "p50_s": 63.119,
@@ -5528,7 +5528,7 @@
           "p50_s": 1.0,
           "p95_s": 1.003,
           "max_s": 1.005,
-          "last_s": 0.999,
+          "last_s": 1.0,
           "n": 200
         },
         "stop_to_fill": {
@@ -5539,10 +5539,10 @@
           "n": 7
         },
         "bot_to_phone": {
-          "p50_s": 0.223,
-          "p95_s": 0.328,
+          "p50_s": 0.222,
+          "p95_s": 0.421,
           "max_s": 1.961,
-          "last_s": 0.219,
+          "last_s": 0.221,
           "n": 200
         },
         "event_to_phone": {
@@ -9962,7 +9962,7 @@
   ],
   "feed_stats": {
     "emitted": 24821,
-    "per_min": 175.79,
+    "per_min": 175.43,
     "by_decision": {
       "seen": 21522,
       "rejected": 3157,
@@ -9987,7 +9987,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.9,
+  "heartbeat_age_s": 0.2,
   "bot_alive": true,
   "supervisor_alive": true
 }
