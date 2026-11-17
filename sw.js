@@ -1,8 +1,8 @@
 /* Cache icons only. Never cache HTML or live data — phone sells broke
    when an old index.html was served from the service worker. */
-const CACHE = "fomo-terminal-v11";
+const CACHE = "fomo-terminal-v12";
 const PRECACHE = ["./manifest.json", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
-const VERSION = "v11";
+const VERSION = "v12";
 
 function isHTML(request) {
   if (request.mode === "navigate") return true;
@@ -23,7 +23,10 @@ function isLiveData(requestUrl) {
     host.includes("ntfy") ||
     host.endsWith("trycloudflare.com") ||
     host.endsWith("loca.lt") ||
-    host.endsWith("unpkg.com")
+    host.endsWith("unpkg.com") ||
+    host === "api.mainnet-beta.solana.com" ||
+    host.endsWith(".solana.com") ||
+    host.endsWith("publicnode.com")
   ) return true;
   if (u.pathname.endsWith("data.json") || u.pathname.endsWith("sw.js")) return true;
   return false;

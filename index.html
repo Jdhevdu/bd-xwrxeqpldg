@@ -296,6 +296,26 @@
     .modal .rowbtns button { flex: 1; padding: 12px; border-radius: 12px; font-weight: 800; }
     .modal .cancel { background: rgba(255,255,255,.08); color: #fff; }
     .modal .ok { background: #fff; color: #8B0000; }
+    .wallet-box {
+      margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line);
+    }
+    .wallet-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .wallet-addr { font-size: 16px; font-weight: 800; letter-spacing: -.02em; margin-top: 2px; font-variant-numeric: tabular-nums; }
+    .wallet-bal { font-size: 13px; color: #ffd0d0; font-weight: 600; margin-top: 2px; }
+    .wallet-note { margin: 10px 0 0; color: var(--muted); font-size: 11px; line-height: 1.45; font-weight: 600; }
+    .wallet-alt { margin-top: 8px; font-size: 12px; font-weight: 700; color: #ffb4b4; }
+    .wallet-err { margin-top: 8px; font-size: 12px; font-weight: 700; color: var(--loss); }
+    .btn-wallet {
+      font-size: 13px; font-weight: 800; padding: 8px 14px; border-radius: 999px;
+      background: #fff; color: #8B0000; letter-spacing: -.01em; white-space: nowrap;
+    }
+    .btn-wallet:disabled { opacity: .55; }
+    .btn-wallet-off {
+      font-size: 12px; font-weight: 800; padding: 7px 11px; border-radius: 999px;
+      background: rgba(255,255,255,.12); color: #fff; flex-shrink: 0;
+    }
+    .wallet-deep { margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .wallet-deep a { color: #ffb4b4; font-size: 12px; font-weight: 700; }
   </style>
 </head>
 <body>
@@ -318,7 +338,7 @@
       </div>
       <div id="livepill" class="live"><span class="dot"></span> Live</div>
     </div>
-    <div class="badge">Realistisch-Modus (Spielgeld) <span class="appver" id="appver">v11</span></div>
+    <div class="badge">Realistisch-Modus (Spielgeld) <span class="appver" id="appver">v12</span></div>
     <div id="banners"></div>
 
     <div id="view-home" class="view on"></div>
@@ -356,7 +376,7 @@
 
   <script>
   const POLL_MS = 8000;
-  const APP_VERSION = "v11";
+  const APP_VERSION = "v12";
   const DATA_BRANCH = "main";
   const bootAt = Date.now();
   let lastData = null;
@@ -645,6 +665,7 @@
           <div class="eq-eur">${eur(d.equity_eur)}${d.equity_sol!=null? " · "+solAmt(d.equity_sol):""}</div>
           <div class="eq-cash" data-count="cash_usd">Bargeld ${d.cash_sol!=null?solAmt(d.cash_sol)+" · ":""}${d.cash_usd!=null?usd(d.cash_usd):"—"}</div>
           <div class="eq-pnl ${cls(d.pnl_usd)}">${d.pnl_usd>=0?"+":""}${usd(d.pnl_usd)} (${pct(d.roi_pct, true)})</div>
+          ${walletHtml()}
           ${controlHtml(d)}
           <div class="tf">${["LIVE","1H","4H","1D","1W","ALL"].map(x => `<button data-tf="${x}" class="${tf===x?"on":""}">${x}</button>`).join("")}</div>
           <div class="chart-box"><canvas id="eqchart"></canvas></div>
@@ -918,6 +939,241 @@
     });
   }
 
+  const WALLET_LS = "fomo_wallet_v1";
+  const SOLANA_RPC = "https://api.mainnet-beta.solana.com";
+  const SOLANA_RPC_FALLBACK = "https://solana-rpc.publicnode.com";
+  const WALLET_NOTICE = "Nur verbunden – der Bot handelt weiter mit Spielgeld. Bitte eine separate Bot-Wallet verwenden, nicht die Haupt-Wallet.";
+  let walletState = {
+    status: "idle",
+    address: null,
+    providerName: null,
+    balanceSol: null,
+    balanceErr: false,
+    error: null
+  };
+  let walletBusy = false;
+  let walletBalanceAt = 0;
+
+  function shortAddr(a) {
+    const s = String(a || "");
+    if (s.length < 10) return s || "—";
+    return s.slice(0, 4) + "…" + s.slice(-4);
+  }
+  function loadWalletLs() {
+    try { return JSON.parse(localStorage.getItem(WALLET_LS) || "null"); }
+    catch (_) { return null; }
+  }
+  function saveWalletLs(addr, name) {
+    try { localStorage.setItem(WALLET_LS, JSON.stringify({ address: addr, provider: name || "phantom" })); }
+    catch (_) {}
+  }
+  function clearWalletLs() {
+    try { localStorage.removeItem(WALLET_LS); } catch (_) {}
+  }
+  function phantomProvider() {
+    const injected = window.phantom && window.phantom.solana;
+    if (injected && typeof injected.connect === "function") return injected;
+    const s = window.solana;
+    if (s && typeof s.connect === "function" && s.isPhantom) return s;
+    return null;
+  }
+  function solflareProvider() {
+    const s = window.solflare || (window.solana && window.solana.isSolflare ? window.solana : null);
+    if (s && typeof s.connect === "function") return s;
+    return null;
+  }
+  function hasInjectedWallet() { return !!(phantomProvider() || solflareProvider()); }
+  function isMobileUa() { return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || ""); }
+  function appBrowseUrl() { return location.origin + location.pathname + location.search; }
+  function phantomBrowseLink() {
+    return "https://phantom.app/ul/browse/" + encodeURIComponent(appBrowseUrl()) + "?ref=" + encodeURIComponent(location.origin);
+  }
+  function solflareBrowseLink() {
+    return "https://solflare.com/ul/v1/browse/" + encodeURIComponent(appBrowseUrl()) + "?ref=" + encodeURIComponent(location.origin);
+  }
+  function pubkeyOf(resp, provider) {
+    const pk = (resp && resp.publicKey) || (provider && provider.publicKey);
+    if (!pk) return null;
+    if (typeof pk === "string") return pk;
+    try { if (typeof pk.toBase58 === "function") return pk.toBase58(); } catch (_) {}
+    try { if (typeof pk.toString === "function") return pk.toString(); } catch (_) {}
+    return null;
+  }
+
+  function walletHtml() {
+    const note = `<p class="wallet-note">${esc(WALLET_NOTICE)}</p>`;
+    if (walletState.status === "connected" && walletState.address) {
+      const bal = walletState.balanceSol != null
+        ? solAmt(walletState.balanceSol)
+        : (walletState.balanceErr ? "Guthaben nicht verfügbar" : "Guthaben wird geladen…");
+      const who = walletState.providerName === "solflare" ? "Solflare" : "Phantom";
+      return `<div class="wallet-box" id="wallet-box">
+        <div class="wallet-row">
+          <div>
+            <div class="k">Verbunden · ${esc(who)}</div>
+            <div class="wallet-addr" title="${esc(walletState.address)}">${esc(shortAddr(walletState.address))}</div>
+            <div class="wallet-bal" id="wallet-bal">${esc(bal)}</div>
+          </div>
+          <button class="btn-wallet-off" type="button" id="btn-wallet-disconnect">Trennen</button>
+        </div>
+        ${note}
+      </div>`;
+    }
+    const err = walletState.error ? `<div class="wallet-err">${esc(walletState.error)}</div>` : "";
+    const needDeep = !hasInjectedWallet();
+    const deep = needDeep ? `<div class="wallet-alt">${isMobileUa()
+      ? "Kein Wallet im Browser. Tippe auf „Wallet verbinden“, um die Seite in der Phantom-App zu öffnen."
+      : "Kein Wallet gefunden. Bitte die Phantom-Erweiterung installieren oder die Seite in der Phantom-App öffnen (nur über HTTPS)."}</div>
+      ${isMobileUa() ? `<div class="wallet-deep"><a href="${esc(solflareBrowseLink())}">Oder in Solflare öffnen</a></div>` : ""}` : "";
+    const label = walletState.status === "connecting" ? "Verbinden…" : "Wallet verbinden";
+    return `<div class="wallet-box" id="wallet-box">
+      <div class="wallet-row">
+        <div class="k">Wallet</div>
+        <button class="btn-wallet" type="button" id="btn-wallet-connect"${walletState.status==="connecting"?" disabled":""}>${label}</button>
+      </div>
+      ${deep}${err}${note}
+    </div>`;
+  }
+
+  function bindWallet() {
+    const c = document.getElementById("btn-wallet-connect");
+    if (c) c.onclick = (ev) => { ev.preventDefault(); ev.stopPropagation(); connectWallet(); };
+    const d = document.getElementById("btn-wallet-disconnect");
+    if (d) d.onclick = (ev) => { ev.preventDefault(); ev.stopPropagation(); disconnectWallet(); };
+  }
+
+  async function connectWallet() {
+    if (walletBusy) return;
+    const ph = phantomProvider();
+    const sf = solflareProvider();
+    if (!ph && !sf) {
+      if (isMobileUa()) {
+        location.href = phantomBrowseLink();
+        return;
+      }
+      walletState.error = "Kein Wallet gefunden. Phantom unter https://phantom.app installieren und die Seite über HTTPS öffnen.";
+      if (lastData) { renderHome(lastData); bindHome(); }
+      return;
+    }
+    walletBusy = true;
+    walletState.status = "connecting";
+    walletState.error = null;
+    if (lastData) { renderHome(lastData); bindHome(); }
+    try {
+      const provider = ph || sf;
+      const name = ph ? "phantom" : "solflare";
+      const resp = await provider.connect();
+      const addr = pubkeyOf(resp, provider);
+      if (!addr) throw new Error("Keine Adresse erhalten");
+      await setConnected(addr, name, provider);
+    } catch (e) {
+      walletState.status = "idle";
+      walletState.error = (e && (e.code === 4001 || e.code === "4001"))
+        ? "Verbindung abgebrochen."
+        : ((e && e.message) ? String(e.message) : "Verbindung fehlgeschlagen.");
+      if (lastData) { renderHome(lastData); bindHome(); }
+    } finally {
+      walletBusy = false;
+    }
+  }
+
+  async function setConnected(addr, name, provider) {
+    walletState.status = "connected";
+    walletState.address = addr;
+    walletState.providerName = name;
+    walletState.error = null;
+    walletState.balanceErr = false;
+    if (walletState.balanceSol == null) walletBalanceAt = 0;
+    saveWalletLs(addr, name);
+    bindProviderEvents(provider);
+    if (lastData) { renderHome(lastData); bindHome(); }
+    else {
+      const box = document.getElementById("wallet-box");
+      if (box) { /* home not painted yet */ }
+    }
+    await refreshBalance(true);
+  }
+
+  async function silentReconnect() {
+    const ph = phantomProvider();
+    const sf = solflareProvider();
+    const saved = loadWalletLs();
+    const prefer = (saved && saved.provider === "solflare") ? (sf || ph) : (ph || sf);
+    if (!prefer) return;
+    try {
+      const resp = await prefer.connect({ onlyIfTrusted: true });
+      const addr = pubkeyOf(resp, prefer);
+      if (!addr) return;
+      const name = (prefer.isSolflare && !prefer.isPhantom) ? "solflare" : "phantom";
+      await setConnected(addr, name, prefer);
+    } catch (_) {}
+  }
+
+  async function disconnectWallet() {
+    const ph = phantomProvider();
+    const sf = solflareProvider();
+    try { if (ph && typeof ph.disconnect === "function") await ph.disconnect(); } catch (_) {}
+    try { if (sf && typeof sf.disconnect === "function") await sf.disconnect(); } catch (_) {}
+    clearWalletLs();
+    walletState = { status: "idle", address: null, providerName: null, balanceSol: null, balanceErr: false, error: null };
+    if (lastData) { renderHome(lastData); bindHome(); }
+  }
+
+  async function rpcGetBalance(addr, url) {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "getBalance", params: [addr] }),
+      cache: "no-store"
+    });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+    const lamports = data && data.result && data.result.value;
+    if (typeof lamports !== "number") throw new Error("bad rpc");
+    return lamports / 1e9;
+  }
+
+  async function refreshBalance(force) {
+    const addr = walletState.address;
+    if (!addr) return;
+    if (!force && walletBalanceAt && (Date.now() - walletBalanceAt) < 30000) return;
+    try {
+      let sol = null;
+      try { sol = await rpcGetBalance(addr, SOLANA_RPC); }
+      catch (_) { sol = await rpcGetBalance(addr, SOLANA_RPC_FALLBACK); }
+      walletState.balanceSol = sol;
+      walletState.balanceErr = false;
+    } catch (_) {
+      walletState.balanceErr = true;
+    }
+    walletBalanceAt = Date.now();
+    const el = document.getElementById("wallet-bal");
+    if (el) {
+      el.textContent = walletState.balanceSol != null ? solAmt(walletState.balanceSol) : "Guthaben nicht verfügbar";
+    }
+  }
+
+  function bindProviderEvents(provider) {
+    if (!provider || typeof provider.on !== "function" || provider.__fomoBound) return;
+    provider.__fomoBound = true;
+    try {
+      provider.on("accountChanged", (pk) => {
+        const addr = pk ? pubkeyOf({ publicKey: pk }, provider) : null;
+        if (!addr) { disconnectWallet(); return; }
+        walletState.address = addr;
+        walletState.balanceSol = null;
+        saveWalletLs(addr, walletState.providerName || "phantom");
+        if (lastData) { renderHome(lastData); bindHome(); }
+        refreshBalance(true);
+      });
+      provider.on("disconnect", () => {
+        clearWalletLs();
+        walletState = { status: "idle", address: null, providerName: null, balanceSol: null, balanceErr: false, error: null };
+        if (lastData) { renderHome(lastData); bindHome(); }
+      });
+    } catch (_) {}
+  }
+
   let statusBanner = null; // {kind, text, t}
   let lastAckTs = 0;
   function setStatus(kind, text) {
@@ -970,6 +1226,7 @@
     document.querySelectorAll("[data-tab]").forEach(btn => btn.onclick = () => setTab(btn.dataset.tab));
     bindControl();
     bindSell();
+    bindWallet();
     connectLive(d);
     (d.trade_events || d.trades || []).forEach(t => knownActs.add((t.t||"") + t.kind + t.symbol));
     firstPaint = false;
@@ -980,6 +1237,7 @@
     document.querySelectorAll("[data-tab]").forEach(btn => btn.onclick = () => setTab(btn.dataset.tab));
     bindControl();
     bindSell();
+    bindWallet();
   }
 
 
@@ -1637,6 +1895,14 @@
   setInterval(paintLiveAge, 1000);
 
   document.querySelectorAll("#nav [data-tab]").forEach(btn => btn.onclick = () => setTab(btn.dataset.tab));
+  try { silentReconnect(); } catch (_) {}
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      try { if (walletState.status !== "connected") silentReconnect(); } catch (_) {}
+      if (walletState.status === "connected") refreshBalance(false);
+    }
+  });
+  setInterval(() => { if (walletState.status === "connected") refreshBalance(false); }, 45000);
   tick();
   setInterval(tick, POLL_MS);
   if ("serviceWorker" in navigator) {
@@ -1646,7 +1912,7 @@
       reloading = true;
       location.reload();
     });
-    navigator.serviceWorker.register("./sw.js?v=11", { updateViaCache: "none" }).then((reg) => {
+    navigator.serviceWorker.register("./sw.js?v=12", { updateViaCache: "none" }).then((reg) => {
       const ping = () => { try { reg.update(); } catch (_) {} };
       ping();
       setInterval(ping, 15000);
