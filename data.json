@@ -1,20 +1,20 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-17 23:30:22 CET",
-  "last_update": "2026-11-17 23:28:36 CET",
+  "exported_at": "2026-11-17 23:31:27 CET",
+  "last_update": "2026-11-17 23:30:30 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
-  "equity_eur": 8.988084031907027,
-  "equity_usd": 9.933630472063646,
-  "cash_usd": 1.7990207468633475,
-  "cash_eur": 1.6277784535498983,
+  "equity_eur": 8.99073253092483,
+  "equity_usd": 9.936557593178122,
+  "cash_usd": 1.8019478679778238,
+  "cash_eur": 1.6304269525677018,
   "start_eur": 20.0,
   "start_usd": 22.104,
-  "pnl_usd": -12.170369527936353,
-  "pnl_eur": -11.011915968092973,
-  "roi_pct": -55.05957984046487,
-  "multiplier": 0.4494,
+  "pnl_usd": -12.167442406821877,
+  "pnl_eur": -11.00926746907517,
+  "roi_pct": -55.04633734537585,
+  "multiplier": 0.4495,
   "realized_usd": -8.77747968691425,
   "fees_usd": 13.228244135340548,
   "fees": {
@@ -27,7 +27,7 @@
   },
   "fees_slippage_usd": 5.0015999954253125,
   "cash_sol": 0.024465404419135375,
-  "equity_sol": 0.13509031914891206,
+  "equity_sol": 0.1349106177660657,
   "start_sol": 0.2735353172331269,
   "failed_count": 4,
   "failed_trades": [
@@ -124,28 +124,28 @@
   "loop_latency": {
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
-    "max_ms": 9160.2,
+    "max_ms": 5225.0,
     "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 1.0,
     "work_p95_ms": 2.3,
     "work_max_ms": 252.8,
-    "work_last_ms": 0.9,
+    "work_last_ms": 5.6,
     "lock_wait_ms": 0.0
   },
-  "sol_usd": 73.5332519357931,
+  "sol_usd": 73.65289521102083,
   "eur_usd": 1.1052,
   "open_count": 5,
   "closed_count": 79,
   "wins": 17,
   "halted": false,
   "counters": {
-    "cycles": 1940,
+    "cycles": 1941,
     "pools_scanned": 386624,
     "unique_pools": 20009,
     "prefilter_rejected": 49145,
-    "safety_rejected": 1516,
-    "scored": 1841,
+    "safety_rejected": 1517,
+    "scored": 1845,
     "buys": 84,
     "sells": 84
   },
@@ -192,7 +192,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-17 17:32:15 CET",
       "entry_ts": 1794933135.1958413,
-      "held": "5h 58m",
+      "held": "5h 59m",
       "smart_n": 0,
       "smart_label": "Bundle-Risiko",
       "narrative": null,
@@ -242,7 +242,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-17 18:02:59 CET",
       "entry_ts": 1794934979.1738517,
-      "held": "5h 27m",
+      "held": "5h 28m",
       "smart_n": 0,
       "smart_label": "",
       "narrative": null,
@@ -292,7 +292,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-17 21:13:36 CET",
       "entry_ts": 1794946416.3470705,
-      "held": "2h 16m",
+      "held": "2h 17m",
       "smart_n": 0,
       "smart_label": "",
       "narrative": null,
@@ -341,7 +341,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-17 21:41:26 CET",
       "entry_ts": 1794948086.7226748,
-      "held": "1h 48m",
+      "held": "1h 50m",
       "smart_n": 0,
       "smart_label": "",
       "narrative": null,
@@ -390,7 +390,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-17 23:13:02 CET",
       "entry_ts": 1794953582.6366339,
-      "held": "17m",
+      "held": "18m",
       "smart_n": 0,
       "smart_label": "",
       "narrative": null,
@@ -1812,6 +1812,69 @@
   ],
   "scanner": [
     {
+      "t": "2026-11-17 23:30:30 CET",
+      "ts": 1794954630.0,
+      "kind": "Skipped",
+      "symbol": "6STAR",
+      "reason": "score 54 < 62",
+      "text": "6STAR score 54 - score 54 < 62",
+      "curve": false
+    },
+    {
+      "t": "2026-11-17 23:30:30 CET",
+      "ts": 1794954630.0,
+      "kind": "Skipped",
+      "symbol": "WANTED",
+      "reason": "score 61 < 62",
+      "text": "WANTED  score 61 - score 61 < 62",
+      "curve": false
+    },
+    {
+      "t": "2026-11-17 23:30:30 CET",
+      "ts": 1794954630.0,
+      "kind": "Scored",
+      "symbol": "6STAR",
+      "reason": "6STAR [ds_boosts] score 54 | liq $12,102 | h1 -24.8% | top10 33% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:3.4 holders:7.3 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Dex-Boost, Socials ergänzt)",
+      "text": "6STAR [ds_boosts] score 54 | liq $12,102 | h1 -24.8% | top10 33% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:3.4 holders:7.3 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Dex-Boost, Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-17 23:30:30 CET",
+      "ts": 1794954630.0,
+      "kind": "Rejected",
+      "symbol": "GREENDILDO",
+      "reason": "top10 holders 60% > 50%",
+      "text": "GREENDILDO - top10 holders 60% > 50%",
+      "curve": false
+    },
+    {
+      "t": "2026-11-17 23:30:30 CET",
+      "ts": 1794954630.0,
+      "kind": "Scored",
+      "symbol": "RESPECT+",
+      "reason": "RESPECT+ [ds_boosts] score 66 | liq $16,604 | h1 +5.9% | top10 29% | LP 100% | liquidity:0.5 vol_liq:15 buy_pressure:13.7 holders:8.8 authorities:10 lp:10.0 age:5 momentum:0 pump:24 | pump 24 (Dex-Boost, Socials ergänzt)",
+      "text": "RESPECT+ [ds_boosts] score 66 | liq $16,604 | h1 +5.9% | top10 29% | LP 100% | liquidity:0.5 vol_liq:15 buy_pressure:13.7 holders:8.8 authorities:10 lp:10.0 age:5 momentum:0 pump:24 | pump 24 (Dex-Boost, Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-17 23:30:26 CET",
+      "ts": 1794954626.0,
+      "kind": "Scored",
+      "symbol": "WANTED",
+      "reason": "WANTED  [ds_boosts] score 61 | liq $22,196 | h1 -16.6% | top10 31% | LP 100% | liquidity:1.9 vol_liq:15 buy_pressure:7.6 holders:8.0 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Dex-Boost, Socials ergänzt)",
+      "text": "WANTED  [ds_boosts] score 61 | liq $22,196 | h1 -16.6% | top10 31% | LP 100% | liquidity:1.9 vol_liq:15 buy_pressure:7.6 holders:8.0 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Dex-Boost, Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-17 23:30:26 CET",
+      "ts": 1794954626.0,
+      "kind": "Scored",
+      "symbol": "LUNO",
+      "reason": "LUNO [ds_boosts] score 75 | liq $38,925 | h1 -26.3% | top10 10% | LP 100% | liquidity:4.5 vol_liq:15 buy_pressure:11.2 holders:15 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Dex-Boost, Socials ergänzt)",
+      "text": "LUNO [ds_boosts] score 75 | liq $38,925 | h1 -26.3% | top10 10% | LP 100% | liquidity:4.5 vol_liq:15 buy_pressure:11.2 holders:15 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Dex-Boost, Socials ergänzt)",
+      "curve": false
+    },
+    {
       "t": "2026-11-17 23:29:56 CET",
       "ts": 1794954596.0,
       "kind": "Rejected",
@@ -2107,72 +2170,72 @@
       "reason": "liquidity $7,110 < $10,000",
       "text": "GTAMAS (pumpswap) - liquidity $7,110 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-17 23:29:45 CET",
-      "ts": 1794954585.0,
-      "kind": "Rejected",
-      "symbol": "INU",
-      "reason": "liquidity $7,703 < $10,000",
-      "text": "INU (pumpswap) - liquidity $7,703 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-17 23:29:45 CET",
-      "ts": 1794954585.0,
-      "kind": "Rejected",
-      "symbol": "DPRF",
-      "reason": "liquidity $7,949 < $10,000",
-      "text": "DPRF (pumpswap) - liquidity $7,949 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-17 23:29:45 CET",
-      "ts": 1794954585.0,
-      "kind": "Rejected",
-      "symbol": "GTA",
-      "reason": "pool age 4 min < 15",
-      "text": "GTA (pumpswap) - pool age 4 min < 15",
-      "curve": false
-    },
-    {
-      "t": "2026-11-17 23:29:45 CET",
-      "ts": 1794954585.0,
-      "kind": "Rejected",
-      "symbol": "FARMCATS",
-      "reason": "only 2 txns in 1h",
-      "text": "FARMCATS (meteora) - only 2 txns in 1h",
-      "curve": false
-    },
-    {
-      "t": "2026-11-17 23:29:45 CET",
-      "ts": 1794954585.0,
-      "kind": "Rejected",
-      "symbol": "ALON",
-      "reason": "only 0 txns in 1h",
-      "text": "ALON (pumpswap) - only 0 txns in 1h",
-      "curve": false
-    },
-    {
-      "t": "2026-11-17 23:29:45 CET",
-      "ts": 1794954585.0,
-      "kind": "Rejected",
-      "symbol": "NPCS",
-      "reason": "only 0 txns in 1h",
-      "text": "NPCS (raydium) - only 0 txns in 1h",
-      "curve": false
-    },
-    {
-      "t": "2026-11-17 23:29:45 CET",
-      "ts": 1794954585.0,
-      "kind": "Rejected",
-      "symbol": "FISTFLOOR",
-      "reason": "dex rise not graduated/allowed",
-      "text": "FISTFLOOR (rise) - dex rise not graduated/allowed",
-      "curve": true
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-17 23:30:30 CET",
+      "ts": 1794954630.0,
+      "kind": "Skipped",
+      "symbol": "6STAR",
+      "reason": "score 54 < 62",
+      "text": "6STAR score 54 - score 54 < 62",
+      "curve": false
+    },
+    {
+      "t": "2026-11-17 23:30:30 CET",
+      "ts": 1794954630.0,
+      "kind": "Skipped",
+      "symbol": "WANTED",
+      "reason": "score 61 < 62",
+      "text": "WANTED  score 61 - score 61 < 62",
+      "curve": false
+    },
+    {
+      "t": "2026-11-17 23:30:30 CET",
+      "ts": 1794954630.0,
+      "kind": "Scored",
+      "symbol": "6STAR",
+      "reason": "6STAR [ds_boosts] score 54 | liq $12,102 | h1 -24.8% | top10 33% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:3.4 holders:7.3 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Dex-Boost, Socials ergänzt)",
+      "text": "6STAR [ds_boosts] score 54 | liq $12,102 | h1 -24.8% | top10 33% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:3.4 holders:7.3 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Dex-Boost, Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-17 23:30:30 CET",
+      "ts": 1794954630.0,
+      "kind": "Rejected",
+      "symbol": "GREENDILDO",
+      "reason": "top10 holders 60% > 50%",
+      "text": "GREENDILDO - top10 holders 60% > 50%",
+      "curve": false
+    },
+    {
+      "t": "2026-11-17 23:30:30 CET",
+      "ts": 1794954630.0,
+      "kind": "Scored",
+      "symbol": "RESPECT+",
+      "reason": "RESPECT+ [ds_boosts] score 66 | liq $16,604 | h1 +5.9% | top10 29% | LP 100% | liquidity:0.5 vol_liq:15 buy_pressure:13.7 holders:8.8 authorities:10 lp:10.0 age:5 momentum:0 pump:24 | pump 24 (Dex-Boost, Socials ergänzt)",
+      "text": "RESPECT+ [ds_boosts] score 66 | liq $16,604 | h1 +5.9% | top10 29% | LP 100% | liquidity:0.5 vol_liq:15 buy_pressure:13.7 holders:8.8 authorities:10 lp:10.0 age:5 momentum:0 pump:24 | pump 24 (Dex-Boost, Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-17 23:30:26 CET",
+      "ts": 1794954626.0,
+      "kind": "Scored",
+      "symbol": "WANTED",
+      "reason": "WANTED  [ds_boosts] score 61 | liq $22,196 | h1 -16.6% | top10 31% | LP 100% | liquidity:1.9 vol_liq:15 buy_pressure:7.6 holders:8.0 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Dex-Boost, Socials ergänzt)",
+      "text": "WANTED  [ds_boosts] score 61 | liq $22,196 | h1 -16.6% | top10 31% | LP 100% | liquidity:1.9 vol_liq:15 buy_pressure:7.6 holders:8.0 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Dex-Boost, Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-17 23:30:26 CET",
+      "ts": 1794954626.0,
+      "kind": "Scored",
+      "symbol": "LUNO",
+      "reason": "LUNO [ds_boosts] score 75 | liq $38,925 | h1 -26.3% | top10 10% | LP 100% | liquidity:4.5 vol_liq:15 buy_pressure:11.2 holders:15 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Dex-Boost, Socials ergänzt)",
+      "text": "LUNO [ds_boosts] score 75 | liq $38,925 | h1 -26.3% | top10 10% | LP 100% | liquidity:4.5 vol_liq:15 buy_pressure:11.2 holders:15 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Dex-Boost, Socials ergänzt)",
+      "curve": false
+    },
     {
       "t": "2026-11-17 23:29:56 CET",
       "ts": 1794954596.0,
@@ -2333,69 +2396,6 @@
       "symbol": "GTAMAS",
       "reason": "liquidity $7,110 < $10,000",
       "text": "GTAMAS (pumpswap) - liquidity $7,110 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-17 23:29:45 CET",
-      "ts": 1794954585.0,
-      "kind": "Rejected",
-      "symbol": "INU",
-      "reason": "liquidity $7,703 < $10,000",
-      "text": "INU (pumpswap) - liquidity $7,703 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-17 23:29:45 CET",
-      "ts": 1794954585.0,
-      "kind": "Rejected",
-      "symbol": "DPRF",
-      "reason": "liquidity $7,949 < $10,000",
-      "text": "DPRF (pumpswap) - liquidity $7,949 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-17 23:29:45 CET",
-      "ts": 1794954585.0,
-      "kind": "Rejected",
-      "symbol": "GTA",
-      "reason": "pool age 4 min < 15",
-      "text": "GTA (pumpswap) - pool age 4 min < 15",
-      "curve": false
-    },
-    {
-      "t": "2026-11-17 23:29:45 CET",
-      "ts": 1794954585.0,
-      "kind": "Rejected",
-      "symbol": "FARMCATS",
-      "reason": "only 2 txns in 1h",
-      "text": "FARMCATS (meteora) - only 2 txns in 1h",
-      "curve": false
-    },
-    {
-      "t": "2026-11-17 23:29:45 CET",
-      "ts": 1794954585.0,
-      "kind": "Rejected",
-      "symbol": "ALON",
-      "reason": "only 0 txns in 1h",
-      "text": "ALON (pumpswap) - only 0 txns in 1h",
-      "curve": false
-    },
-    {
-      "t": "2026-11-17 23:29:45 CET",
-      "ts": 1794954585.0,
-      "kind": "Rejected",
-      "symbol": "NPCS",
-      "reason": "only 0 txns in 1h",
-      "text": "NPCS (raydium) - only 0 txns in 1h",
-      "curve": false
-    },
-    {
-      "t": "2026-11-17 23:29:45 CET",
-      "ts": 1794954585.0,
-      "kind": "Rejected",
-      "symbol": "PUMP",
-      "reason": "impersonates PUMP (mint is not the official one)",
-      "text": "PUMP (pumpswap) - impersonates PUMP (mint is not the official one)",
       "curve": false
     }
   ],
@@ -4202,18 +4202,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1794947304.0116339,
-      "t_label": "2026-11-17 21:28:24 CET",
-      "usd": 10.0568,
-      "eur": 9.0995
-    },
-    {
-      "t": 1794947304.0116339,
-      "t_label": "2026-11-17 21:28:24 CET",
-      "usd": 10.0322,
-      "eur": 9.0772
-    },
-    {
       "t": 1794947340.342093,
       "t_label": "2026-11-17 21:29:00 CET",
       "usd": 10.0322,
@@ -5400,6 +5388,18 @@
       "t_label": "2026-11-17 23:28:36 CET",
       "usd": 9.9336,
       "eur": 8.9881
+    },
+    {
+      "t": 1794954630.7008169,
+      "t_label": "2026-11-17 23:30:30 CET",
+      "usd": 9.9336,
+      "eur": 8.9881
+    },
+    {
+      "t": 1794954630.7008169,
+      "t_label": "2026-11-17 23:30:30 CET",
+      "usd": 9.9366,
+      "eur": 8.9907
     }
   ],
   "agents": {
@@ -5422,7 +5422,7 @@
       "confirm_s": 1.296,
       "n_discovery": 200,
       "n_buys": 1,
-      "updated_ts": 1794954621.88867,
+      "updated_ts": 1794954687.1821086,
       "stages": {
         "discovery": {
           "p50_s": 58.848,
@@ -5469,14 +5469,14 @@
         "price_interval": {
           "p50_s": 1.0,
           "p95_s": 1.001,
-          "max_s": 1.009,
-          "last_s": 1.0,
+          "max_s": 40.29,
+          "last_s": 40.29,
           "n": 200
         },
         "price_staleness": {
           "p50_s": 1.0,
-          "p95_s": 1.001,
-          "max_s": 1.007,
+          "p95_s": 1.0,
+          "max_s": 1.005,
           "last_s": 1.0,
           "n": 200
         },
@@ -5489,9 +5489,9 @@
         },
         "bot_to_phone": {
           "p50_s": 0.227,
-          "p95_s": 0.393,
+          "p95_s": 0.467,
           "max_s": 0.644,
-          "last_s": 0.223,
+          "last_s": 0.224,
           "n": 200
         },
         "event_to_phone": {
@@ -5524,13 +5524,38 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "Ribombee",
+      "token": "6STAR",
       "pill": "163 pools",
       "pill_kind": "blue",
       "detail": "20,009 unique pools",
       "pools": 163,
       "unique": 20009,
       "filters": [
+        {
+          "symbol": "6STAR",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "GREENDILDO",
+          "text": "top 10 > 25%",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "RESPECT+",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "WANTED",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "LUNO",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "Ribombee",
           "text": "dex pump-fun not graduated/allowed",
@@ -5545,45 +5570,20 @@
           "symbol": "Money",
           "text": "dex pump-fun not graduated/allowed",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "DACT",
-          "text": "dex pump-fun not graduated/allowed",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "NVIDIANS",
-          "text": "pool age 1 min < 15",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "chair",
-          "text": "dex pump-fun not graduated/allowed",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "NVDA",
-          "text": "dex pump-fun not graduated/allowed",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "Huang",
-          "text": "dex pump-fun not graduated/allowed",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "Lucia",
-      "pill": "69",
+      "token": "6STAR",
+      "pill": "54",
       "pill_kind": "purple",
-      "detail": "Lucia [ds_boosts] score 69 | liq $47,361 | h1 +11.2% | top10 27% | LP 100% | liquidity:5.5 vol_liq:8 buy_pressure:8.5 holders:9.9 authorities:10 lp:10.0 age:3 momentum:10 pump:31 | pump 31 (Dex-Boost, Socials ergänzt, Geringer Price Impact)",
-      "score": 69,
+      "detail": "6STAR [ds_boosts] score 54 | liq $12,102 | h1 -24.8% | top10 33% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:3.4 holders:7.3 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Dex-Boost, Socials ergänzt)",
+      "score": 54,
       "passed": true,
       "status": "passed",
-      "rejected": 50661
+      "rejected": 50662
     },
     "executor": {
       "name": "Executor",
@@ -5773,11 +5773,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20009 Pools · 1940 Scans · Watch 400 · Graduiert 55 · letzter Scan: ds_search 15 · trending_1h 12 · trending_5m 16 · ds_boosts_top 11 · ds_boosts 26 · ds_profiles 24 · watchlist 59"
+      "detail": "20009 Pools · 1941 Scans · Watch 400 · Graduiert 55 · letzter Scan: ds_search 15 · trending_1h 12 · trending_5m 16 · ds_boosts_top 11 · ds_boosts 26 · ds_profiles 24 · watchlist 59"
     },
     {
       "name": "Analyst",
-      "detail": "1841 bewertet · 50661 abgelehnt"
+      "detail": "1845 bewertet · 50662 abgelehnt"
     },
     {
       "name": "Brain",
@@ -5890,7 +5890,84 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "LUNO",
+      "mint": "EVbsBwxqdbMqadwAsVZ6KP9SJiaNmLSHAAb4W2mUpump",
+      "pool": "sVVcu9n1FbKwYS39gWw76NAE2jWBckCBdbC6jquaWC6",
+      "score": 33,
+      "reasons": [
+        "Dex-Boost",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 283480.0,
+      "origin": "ds_boosts",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/EVbsBwxqdbMqadwAsVZ6KP9SJiaNmLSHAAb4W2mUpump.png"
+    },
+    {
+      "symbol": "Lucia",
+      "mint": "2FcsqRrhvgSfYxJWh32xW873vyqBZ9jmMyXqYSPgNtuZ",
+      "pool": "9LP64XgWXb7Q8qzmLfRinGjYCfUTxe4KNMXWwZSwuKjF",
+      "score": 31,
+      "reasons": [
+        "Dex-Boost",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 297318.0,
+      "origin": "ds_boosts",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/2FcsqRrhvgSfYxJWh32xW873vyqBZ9jmMyXqYSPgNtuZ.png"
+    },
+    {
+      "symbol": "WANTED ",
+      "mint": "GLzXQj2Gk4oUYUKwrJEyt333wYjKwjujNp9erxzCpump",
+      "pool": "8NxiZK7Z9Bu3bTKyb5nrn1UEU9wXYznMAb3ttu2sKZvG",
+      "score": 29,
+      "reasons": [
+        "Dex-Boost",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 68808.0,
+      "origin": "ds_boosts",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/GLzXQj2Gk4oUYUKwrJEyt333wYjKwjujNp9erxzCpump.png"
+    },
+    {
+      "symbol": "6STAR",
+      "mint": "9ASEjk3rPt7AUmGdMzwmzoabMKg1mrqdf4q1hKPzpump",
+      "pool": "ChzdZwu8HGU4CLdCjB2V474tEANQZixW1SfsNNW7Qqxd",
+      "score": 29,
+      "reasons": [
+        "Dex-Boost",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 22856.0,
+      "origin": "ds_boosts",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/9ASEjk3rPt7AUmGdMzwmzoabMKg1mrqdf4q1hKPzpump.png"
+    },
+    {
+      "symbol": "RESPECT+",
+      "mint": "AXVowhHHiw1vdcWg8eSrdbTp7jDTLdqmtP9PibDipump",
+      "pool": "8iT4TCfeeajeqvkr9wtuUmeM1oJXrHMyBjZqGtWBzMBq",
+      "score": 24,
+      "reasons": [
+        "Dex-Boost",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 39954.0,
+      "origin": "ds_boosts",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/AXVowhHHiw1vdcWg8eSrdbTp7jDTLdqmtP9PibDipump.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -5908,226 +5985,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "JALU",
-      "mint": "BSsmLA6UN8fzJ8qUkV4KwC5LxR7ab3TaUtcwvAyJpump",
-      "pool": "GnwWXPwh9VyYT9e7tj7dADkuU95Q5CC2VTBpQERECvfy",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 675687.897013993,
-      "liq": 62278.4639,
-      "age_min": 220.73,
-      "created_at": "2026-11-17T18:49:01Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1794954584.7926495,
-      "t": "2026-11-17 23:29:44 CET",
-      "id": "BSsmLA6UN8fzJ8qUkV4KwC5LxR7ab3TaUtcwvAyJpump-1794954584792"
-    },
-    {
-      "symbol": "PFP",
-      "mint": "5TfqNKZbn9AnNtzq8bbkyhKgcPGTfNDc9wNzFrTBpump",
-      "pool": "GdFCD7L8x1GiudFz1wthNHEb352k3Ni37rSwtJgMgLpT",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 149812.0,
-      "liq": 54204.03,
-      "age_min": 592102.63,
-      "created_at": "2025-10-02T18:07:07Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1794954584.795897,
-      "t": "2026-11-17 23:29:44 CET",
-      "id": "5TfqNKZbn9AnNtzq8bbkyhKgcPGTfNDc9wNzFrTBpump-1794954584795"
-    },
-    {
-      "symbol": "Leonida",
-      "mint": "BWJfBNeXpapG7uoqByp5KSwWgCQba8QcDmA2DQiEpump",
-      "pool": "5GxdoPcK2LJ6QYcJ3uvtC37tgsFHma55ULFkufTYe49R",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts_top",
-      "mcap": 420206.0,
-      "liq": 53035.07,
-      "age_min": 17448.51,
-      "created_at": "2026-11-05T19:41:14Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1794954584.799296,
-      "t": "2026-11-17 23:29:44 CET",
-      "id": "BWJfBNeXpapG7uoqByp5KSwWgCQba8QcDmA2DQiEpump-1794954584799"
-    },
-    {
-      "symbol": "DIGS",
-      "mint": "9QT8K685Hrae4k11dhGXirdtpfAaimExtyfwt8cPpump",
-      "pool": "3mxDjdZ1gAe5HziC4dj4UnLdXJ5DBcC9jsSYq55mFyKg",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts_top",
-      "mcap": 261901.0,
-      "liq": 47992.19,
-      "age_min": 29396.91,
-      "created_at": "2026-10-28T12:32:50Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1794954584.8026686,
-      "t": "2026-11-17 23:29:44 CET",
-      "id": "9QT8K685Hrae4k11dhGXirdtpfAaimExtyfwt8cPpump-1794954584802"
-    },
-    {
-      "symbol": "Lucia",
-      "mint": "2FcsqRrhvgSfYxJWh32xW873vyqBZ9jmMyXqYSPgNtuZ",
-      "pool": "9LP64XgWXb7Q8qzmLfRinGjYCfUTxe4KNMXWwZSwuKjF",
-      "dex": "raydium",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 297318.0,
-      "liq": 47360.64,
-      "age_min": 1020899.0,
-      "created_at": "2024-12-08T23:30:45Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1794954584.8060074,
-      "t": "2026-11-17 23:29:44 CET",
-      "id": "2FcsqRrhvgSfYxJWh32xW873vyqBZ9jmMyXqYSPgNtuZ-1794954584806"
-    },
-    {
-      "symbol": "SantaHat",
-      "mint": "AyTyF2DQH3sqS6gE5feWBTw2skE1dr1Si5hiT2S3Yqay",
-      "pool": "9bUDoVRDA75EQZz4onrFe7HZQAR7y56x1Zzy3pvnMn7q",
-      "dex": "meteora-damm-v2",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 0.0,
-      "liq": 43281.4743,
-      "age_min": 6.3,
-      "created_at": "2026-11-17T22:23:27Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1794954584.8096857,
-      "t": "2026-11-17 23:29:44 CET",
-      "id": "AyTyF2DQH3sqS6gE5feWBTw2skE1dr1Si5hiT2S3Yqay-1794954584809"
-    },
-    {
-      "symbol": "ALON",
-      "mint": "7XSmrerjGbVi9uVW8qVHfp7SN1GU1vnxHguzUEt1pump",
-      "pool": "J7HdS6Hi2HejMLLpkpRerVQHjHiCDYXy4LK18p1zyYVk",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 295033.0,
-      "liq": 42815.33,
-      "age_min": 201953.95,
-      "created_at": "2026-06-30T16:35:48Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1794954584.812996,
-      "t": "2026-11-17 23:29:44 CET",
-      "id": "7XSmrerjGbVi9uVW8qVHfp7SN1GU1vnxHguzUEt1pump-1794954584812"
-    },
-    {
-      "symbol": "REFU",
-      "mint": "4ULpYvaTGRq1KnaCiPhz52nyQFx86wN1vqqX3ny8refu",
-      "pool": "6S5Gz32QqcSzU9pDLFhrKodEfxeiBKmCmz57WF4CtBVC",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 285051.0,
-      "liq": 39525.71,
-      "age_min": 343.81,
-      "created_at": "2026-11-17T16:45:56Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1794954584.8163753,
-      "t": "2026-11-17 23:29:44 CET",
-      "id": "4ULpYvaTGRq1KnaCiPhz52nyQFx86wN1vqqX3ny8refu-1794954584816"
-    },
-    {
-      "symbol": "LUNO",
-      "mint": "EVbsBwxqdbMqadwAsVZ6KP9SJiaNmLSHAAb4W2mUpump",
-      "pool": "sVVcu9n1FbKwYS39gWw76NAE2jWBckCBdbC6jquaWC6",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 283480.0,
-      "liq": 38924.61,
-      "age_min": 101.83,
-      "created_at": "2026-11-17T20:47:55Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1794954584.819822,
-      "t": "2026-11-17 23:29:44 CET",
-      "id": "EVbsBwxqdbMqadwAsVZ6KP9SJiaNmLSHAAb4W2mUpump-1794954584819"
-    },
-    {
-      "symbol": "$PLAY",
-      "mint": "EvEFaj8bU5vNa4jc15GgRQrVMqu7Wzf9Kz6aKn3yeB1z",
-      "pool": "ybzE4HgVLVCdEUnXmgfkFXB7GMmBCiWxb4WT98ux1P4",
-      "dex": "raydium",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 336815.0,
-      "liq": 35197.46,
-      "age_min": 1219668.6,
-      "created_at": "2024-07-23T22:41:09Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1794954584.8231397,
-      "t": "2026-11-17 23:29:44 CET",
-      "id": "EvEFaj8bU5vNa4jc15GgRQrVMqu7Wzf9Kz6aKn3yeB1z-1794954584823"
-    },
-    {
-      "symbol": "KATIA",
-      "mint": "6eNZ6FScBYPakFiWZdCPBcWWZXmSBBaf8oEUimsGpump",
-      "pool": "B4fmVsfWqkfZFYgP9QUFtZwH55NRFrGGYnoKhEs5ZPBF",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 195121.0,
-      "liq": 32238.46,
-      "age_min": 90.51,
-      "created_at": "2026-11-17T20:59:14Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1794954584.8264158,
-      "t": "2026-11-17 23:29:44 CET",
-      "id": "6eNZ6FScBYPakFiWZdCPBcWWZXmSBBaf8oEUimsGpump-1794954584826"
-    },
     {
       "symbol": "CJ",
       "mint": "F4vEFNoH9H2oLYRabaQQ2Z6jAAi2AhRVdTdVH6Nn2J1q",
@@ -9911,36 +9768,284 @@
       "ts": 1794954596.8384652,
       "t": "2026-11-17 23:29:56 CET",
       "id": "GssXcY8EWgjnD7LA38DsuYTAyPBfC1ySVXT4RBjtpump-1794954596838"
+    },
+    {
+      "symbol": "LUNO",
+      "mint": "EVbsBwxqdbMqadwAsVZ6KP9SJiaNmLSHAAb4W2mUpump",
+      "pool": "sVVcu9n1FbKwYS39gWw76NAE2jWBckCBdbC6jquaWC6",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 283480.0,
+      "liq": 38924.61,
+      "age_min": 102.53,
+      "created_at": "2026-11-17T20:47:55Z",
+      "decision": "accepted",
+      "reason": "score 75",
+      "score": 75,
+      "pump_score": 33,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Socials ergänzt"
+      ],
+      "ts": 1794954626.5578253,
+      "t": "2026-11-17 23:30:26 CET",
+      "id": "EVbsBwxqdbMqadwAsVZ6KP9SJiaNmLSHAAb4W2mUpump-1794954626557"
+    },
+    {
+      "symbol": "WANTED ",
+      "mint": "GLzXQj2Gk4oUYUKwrJEyt333wYjKwjujNp9erxzCpump",
+      "pool": "8NxiZK7Z9Bu3bTKyb5nrn1UEU9wXYznMAb3ttu2sKZvG",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 68808.0,
+      "liq": 22196.13,
+      "age_min": 275.68,
+      "created_at": "2026-11-17T17:54:46Z",
+      "decision": "accepted",
+      "reason": "score 61",
+      "score": 61,
+      "pump_score": 29,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Socials ergänzt"
+      ],
+      "ts": 1794954626.5621004,
+      "t": "2026-11-17 23:30:26 CET",
+      "id": "GLzXQj2Gk4oUYUKwrJEyt333wYjKwjujNp9erxzCpump-1794954626562"
+    },
+    {
+      "symbol": "RESPECT+",
+      "mint": "AXVowhHHiw1vdcWg8eSrdbTp7jDTLdqmtP9PibDipump",
+      "pool": "8iT4TCfeeajeqvkr9wtuUmeM1oJXrHMyBjZqGtWBzMBq",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 39954.0,
+      "liq": 16603.82,
+      "age_min": 3688.56,
+      "created_at": "2026-11-15T09:01:57Z",
+      "decision": "accepted",
+      "reason": "score 66",
+      "score": 66,
+      "pump_score": 24,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Socials ergänzt"
+      ],
+      "ts": 1794954630.6618145,
+      "t": "2026-11-17 23:30:30 CET",
+      "id": "AXVowhHHiw1vdcWg8eSrdbTp7jDTLdqmtP9PibDipump-1794954630661"
+    },
+    {
+      "symbol": "GREENDILDO",
+      "mint": "DiCKhrU3jpUXk1UvxtPGTCZTx91Pfy1H4UALXY8diLdo",
+      "pool": "GFktaGWuMHKwpZLWJVyFpRBFktnrwJGjwfBMbxUeFdhh",
+      "dex": "raydium",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 50507.0,
+      "liq": 16122.35,
+      "age_min": 7410.46,
+      "created_at": "2026-11-12T19:00:03Z",
+      "decision": "rejected",
+      "reason": "top10 holders 60% > 50%",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1794954630.6666725,
+      "t": "2026-11-17 23:30:30 CET",
+      "id": "DiCKhrU3jpUXk1UvxtPGTCZTx91Pfy1H4UALXY8diLdo-1794954630666"
+    },
+    {
+      "symbol": "6STAR",
+      "mint": "9ASEjk3rPt7AUmGdMzwmzoabMKg1mrqdf4q1hKPzpump",
+      "pool": "ChzdZwu8HGU4CLdCjB2V474tEANQZixW1SfsNNW7Qqxd",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 22856.0,
+      "liq": 12101.96,
+      "age_min": 1042.11,
+      "created_at": "2026-11-17T05:08:24Z",
+      "decision": "accepted",
+      "reason": "score 54",
+      "score": 54,
+      "pump_score": 29,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Socials ergänzt"
+      ],
+      "ts": 1794954630.671127,
+      "t": "2026-11-17 23:30:30 CET",
+      "id": "9ASEjk3rPt7AUmGdMzwmzoabMKg1mrqdf4q1hKPzpump-1794954630671"
+    },
+    {
+      "symbol": "LUNO",
+      "mint": "EVbsBwxqdbMqadwAsVZ6KP9SJiaNmLSHAAb4W2mUpump",
+      "pool": "sVVcu9n1FbKwYS39gWw76NAE2jWBckCBdbC6jquaWC6",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 283480.0,
+      "liq": 38924.61,
+      "age_min": 102.59,
+      "created_at": "2026-11-17T20:47:55Z",
+      "decision": "skipped",
+      "reason": "fehlgeschlagen: nicht genug SOL",
+      "score": 75,
+      "pump_score": 33,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Socials ergänzt"
+      ],
+      "ts": 1794954630.6750305,
+      "t": "2026-11-17 23:30:30 CET",
+      "id": "EVbsBwxqdbMqadwAsVZ6KP9SJiaNmLSHAAb4W2mUpump-1794954630675"
+    },
+    {
+      "symbol": "Lucia",
+      "mint": "2FcsqRrhvgSfYxJWh32xW873vyqBZ9jmMyXqYSPgNtuZ",
+      "pool": "9LP64XgWXb7Q8qzmLfRinGjYCfUTxe4KNMXWwZSwuKjF",
+      "dex": "raydium",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 297318.0,
+      "liq": 47360.64,
+      "age_min": 1020899.76,
+      "created_at": "2024-12-08T23:30:45Z",
+      "decision": "skipped",
+      "reason": "fehlgeschlagen: nicht genug SOL",
+      "score": 69,
+      "pump_score": 31,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1794954630.678716,
+      "t": "2026-11-17 23:30:30 CET",
+      "id": "2FcsqRrhvgSfYxJWh32xW873vyqBZ9jmMyXqYSPgNtuZ-1794954630678"
+    },
+    {
+      "symbol": "RESPECT+",
+      "mint": "AXVowhHHiw1vdcWg8eSrdbTp7jDTLdqmtP9PibDipump",
+      "pool": "8iT4TCfeeajeqvkr9wtuUmeM1oJXrHMyBjZqGtWBzMBq",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 39954.0,
+      "liq": 16603.82,
+      "age_min": 3688.56,
+      "created_at": "2026-11-15T09:01:57Z",
+      "decision": "skipped",
+      "reason": "fehlgeschlagen: nicht genug SOL",
+      "score": 66,
+      "pump_score": 24,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Socials ergänzt"
+      ],
+      "ts": 1794954630.6822493,
+      "t": "2026-11-17 23:30:30 CET",
+      "id": "AXVowhHHiw1vdcWg8eSrdbTp7jDTLdqmtP9PibDipump-1794954630682"
+    },
+    {
+      "symbol": "WANTED ",
+      "mint": "GLzXQj2Gk4oUYUKwrJEyt333wYjKwjujNp9erxzCpump",
+      "pool": "8NxiZK7Z9Bu3bTKyb5nrn1UEU9wXYznMAb3ttu2sKZvG",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 68808.0,
+      "liq": 22196.13,
+      "age_min": 275.74,
+      "created_at": "2026-11-17T17:54:46Z",
+      "decision": "skipped",
+      "reason": "score 61 < 62",
+      "score": 61,
+      "pump_score": 29,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Socials ergänzt"
+      ],
+      "ts": 1794954630.6856587,
+      "t": "2026-11-17 23:30:30 CET",
+      "id": "GLzXQj2Gk4oUYUKwrJEyt333wYjKwjujNp9erxzCpump-1794954630685"
+    },
+    {
+      "symbol": "6STAR",
+      "mint": "9ASEjk3rPt7AUmGdMzwmzoabMKg1mrqdf4q1hKPzpump",
+      "pool": "ChzdZwu8HGU4CLdCjB2V474tEANQZixW1SfsNNW7Qqxd",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 22856.0,
+      "liq": 12101.96,
+      "age_min": 1042.11,
+      "created_at": "2026-11-17T05:08:24Z",
+      "decision": "skipped",
+      "reason": "score 54 < 62",
+      "score": 54,
+      "pump_score": 29,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Socials ergänzt"
+      ],
+      "ts": 1794954630.6893842,
+      "t": "2026-11-17 23:30:30 CET",
+      "id": "9ASEjk3rPt7AUmGdMzwmzoabMKg1mrqdf4q1hKPzpump-1794954630689"
+    },
+    {
+      "symbol": "NEW",
+      "mint": "",
+      "pool": "565fUhJHEZvVuNXbqGy8JtYdS5mwhyZJpUCva6RQHCP3Lgg42r2R4Mos7CBPqka5BnKrnr3NxVmfLeKhitQJMR9C",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "pump_logs",
+      "mcap": null,
+      "liq": 0.0,
+      "age_min": 0,
+      "created_at": null,
+      "decision": "seen",
+      "reason": "pump program log",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1794954638.8912046,
+      "t": "2026-11-17 23:30:38 CET",
+      "id": "NEW-1794954638891"
     }
   ],
   "feed_stats": {
-    "emitted": 6023,
-    "per_min": 137.16,
+    "emitted": 6034,
+    "per_min": 136.48,
     "by_decision": {
-      "seen": 5109,
-      "rejected": 869,
-      "accepted": 23,
-      "skipped": 21,
+      "seen": 5110,
+      "rejected": 870,
+      "accepted": 27,
+      "skipped": 26,
       "bought": 1
     },
     "by_source": {
       "new": 1118,
       "ds_search": 461,
       "ds_profiles": 692,
-      "ds_boosts": 741,
+      "ds_boosts": 751,
       "trending_5m": 498,
       "trending_1h": 379,
       "ds_boosts_top": 314,
       "watchlist": 1810,
-      "pump_logs": 10
+      "pump_logs": 11
     },
-    "pumpfun": 3101
+    "pumpfun": 3102
   },
   "status": "running",
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.8,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
