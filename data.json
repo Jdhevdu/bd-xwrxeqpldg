@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-17 12:08:49 CET",
+  "exported_at": "2026-11-17 12:09:50 CET",
   "last_update": "2026-11-17 12:08:20 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -71,11 +71,11 @@
   },
   "realistic": true,
   "loop_latency": {
-    "p50_ms": 4.3,
-    "p95_ms": 4.3,
+    "p50_ms": 0.4,
+    "p95_ms": 0.9,
     "max_ms": 4.3,
-    "last_ms": 4.3,
-    "n": 1,
+    "last_ms": 0.3,
+    "n": 62,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 72.18545299830937,
@@ -85,7 +85,7 @@
   "wins": 9,
   "halted": true,
   "counters": {
-    "cycles": 1037,
+    "cycles": 1038,
     "pools_scanned": 214225,
     "unique_pools": 20046,
     "prefilter_rejected": 28756,
@@ -4326,7 +4326,7 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20046 Pools · 1037 Scans · Watch 400 · Graduiert 24 · letzter Scan: ds_search 14 · trending_1h 14 · trending_1h_p2 6 · trending_5m 16 · trending_5m_p2 15 · new 59 · ds_boosts 17 · ds_profiles 22 · ds_boosts_top 2 · watchlist 57"
+      "detail": "20046 Pools · 1038 Scans · Watch 400 · Graduiert 24 · letzter Scan: ds_search 14 · trending_1h 14 · trending_1h_p2 6 · trending_5m 16 · trending_5m_p2 15 · new 59 · ds_boosts 17 · ds_profiles 22 · ds_boosts_top 2 · watchlist 57"
     },
     {
       "name": "Analyst",
@@ -7783,7 +7783,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.5,
+  "heartbeat_age_s": 0.4,
   "bot_alive": true,
   "supervisor_alive": true
 }
