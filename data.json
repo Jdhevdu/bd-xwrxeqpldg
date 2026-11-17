@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-17 10:58:21 CET",
+  "exported_at": "2026-11-17 10:58:29 CET",
   "last_update": "2026-11-17 10:57:36 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -70,6 +70,13 @@
     "note": "Netto-PnL nach Gebühren und Slippage. Nur Spielgeld, keine echte Wallet."
   },
   "realistic": true,
+  "loop_latency": {
+    "p50_ms": 0.3,
+    "p95_ms": 0.3,
+    "max_ms": 0.6,
+    "last_ms": 0.3,
+    "n": 34
+  },
   "sol_usd": 72.64739319014548,
   "eur_usd": 1.1052,
   "open_count": 2,
@@ -7774,7 +7781,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.3,
+  "heartbeat_age_s": 0.4,
   "bot_alive": true,
   "supervisor_alive": true
 }

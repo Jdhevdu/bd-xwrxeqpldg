@@ -318,7 +318,7 @@
       </div>
       <div id="livepill" class="live"><span class="dot"></span> Live</div>
     </div>
-    <div class="badge">Realistisch-Modus (Spielgeld) <span class="appver" id="appver">v10</span></div>
+    <div class="badge">Realistisch-Modus (Spielgeld) <span class="appver" id="appver">v11</span></div>
     <div id="banners"></div>
 
     <div id="view-home" class="view on"></div>
@@ -356,7 +356,7 @@
 
   <script>
   const POLL_MS = 8000;
-  const APP_VERSION = "v10";
+  const APP_VERSION = "v11";
   const DATA_BRANCH = "main";
   const bootAt = Date.now();
   let lastData = null;
@@ -689,6 +689,7 @@
         <div class="row"><span class="l">— Netz / Priority / Jito</span><span class="r">${usd((d.fees||{}).network)} / ${usd((d.fees||{}).priority)} / ${usd((d.fees||{}).jito)}</span></div>
         <div class="row"><span class="l">— Token-Konto (Rent)</span><span class="r">${usd((d.fees||{}).rent)}</span></div>
         <div class="row"><span class="l">Fehlgeschlagene Trades</span><span class="r">${d.failed_count||0}</span></div>
+        <div class="row"><span class="l">Fast loop p50 / p95 / max</span><span class="r">${(d.loop_latency&&d.loop_latency.n)?(d.loop_latency.p50_ms+" / "+d.loop_latency.p95_ms+" / "+d.loop_latency.max_ms+" ms"):"—"}</span></div>
         <div class="row"><span class="l">Letztes Update</span><span class="r">${esc(d.last_update || "—")} (Europe/Vienna)</span></div>
       </div>
       ${(d.failed_trades && d.failed_trades.length) ? `<div class="card acct">
@@ -1491,6 +1492,7 @@
     if (msg.equity_sol != null) d.equity_sol = msg.equity_sol;
     if (msg.fees_usd != null) d.fees_usd = msg.fees_usd;
     if (msg.failed_count != null) d.failed_count = msg.failed_count;
+    if (msg.loop_latency) d.loop_latency = msg.loop_latency;
     if (msg.direct && d.realtime && d.realtime.direct !== msg.direct) {
       if (d.realtime.direct_proto === "mqtt" && msg.direct_proto !== "mqtt") {
         // snapshot used to append /live to the broker URL; ignore that
@@ -1644,7 +1646,7 @@
       reloading = true;
       location.reload();
     });
-    navigator.serviceWorker.register("./sw.js?v=10", { updateViaCache: "none" }).then((reg) => {
+    navigator.serviceWorker.register("./sw.js?v=11", { updateViaCache: "none" }).then((reg) => {
       const ping = () => { try { reg.update(); } catch (_) {} };
       ping();
       setInterval(ping, 15000);
