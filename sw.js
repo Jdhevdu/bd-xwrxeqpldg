@@ -1,6 +1,6 @@
 /* Cache icons only. Never cache HTML or live data — phone sells broke
    when an old index.html was served from the service worker. */
-const CACHE = "fomo-terminal-v16";
+const CACHE = "fomo-terminal-v17";
 const PRECACHE = ["./manifest.json", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
 const VERSION = "v16";
 

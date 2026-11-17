@@ -413,6 +413,14 @@
     .ag-card .st.on { color: var(--green); }
     .ag-card .st.warn { color: var(--orange); }
     .ag-card.ag-speed { min-width: 228px; }
+    .ag-card.ag-ins { min-width: 228px; flex: 0 0 228px; }
+    .ag-ins-list { margin-top: 8px; display:flex; flex-direction:column; gap:4px; overflow:hidden; flex:1; }
+    .ag-ins-row { display:grid; grid-template-columns: 64px 28px 1fr auto; gap:6px; align-items:center;
+      font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+    .ag-ins-row .w { color:#fff; font-weight:700; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .ag-ins-row .q { color: var(--green); font-weight:800; }
+    .ag-ins-row .s { color:#fff; font-weight:700; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .ag-ins-row .tm { color: var(--muted); }
     .ag-speed .rows { display:flex; flex-direction:column; gap:6px; margin-top:10px; }
     .ag-speed .rows div, .speed-strip div {
       display:flex; justify-content:space-between; align-items:baseline; gap:10px;
@@ -584,7 +592,7 @@
 
   <script>
   const POLL_MS = 8000;
-  const APP_VERSION = "v16";
+  const APP_VERSION = "v17";
   const DATA_BRANCH = "main";
   const bootAt = Date.now();
   let lastData = null;
@@ -848,6 +856,21 @@
       </div>
     </div>`;
   }
+  function insAgo(t) {
+    if (!t) return "";
+    let ms;
+    if (typeof t === "number") ms = t > 1e12 ? t : t * 1000;
+    else {
+      const dte = new Date(String(t).replace(" ", "T").replace(/Z$/, "Z"));
+      ms = dte.getTime();
+    }
+    if (!ms || isNaN(ms)) return "";
+    const s = Math.max(0, (Date.now() - ms) / 1000);
+    if (s < 60) return Math.round(s) + "s";
+    if (s < 3600) return Math.round(s / 60) + "m";
+    if (s < 86400) return Math.round(s / 3600) + "h";
+    return Math.round(s / 86400) + "d";
+  }
   function agentsCarousel(d) {
     const a = d.agents || {};
     const paused = !!(d.paused || d.status === "paused");
@@ -904,9 +927,17 @@
         <div class="ag-badges"><span>stop −${Math.round(hard*100)}%</span><span>trail +${Math.round(trail*100)}%</span></div>
       </div>`
     ];
-    if (sm.on !== false) cards.push(`<div class="ag-card">
-        <div class="hd"><div class="ico">${ico("scan")}</div><div><div class="nm">Smart Money</div><div class="st on">• ${sm.n||0} wallets</div></div></div>
-        <div class="hint" style="margin-top:12px">${esc(sm.detail||"Early-buyer clusters")}</div>
+    const insRecent = (sm.recent && sm.recent.length ? sm.recent : (d.ins || []));
+    const insN = sm.n || d.ins_n || 0;
+    const insRows = insRecent.slice(0, 5).map(e => {
+      const q = e.q != null ? e.q : e.quality;
+      const w = e.w || e.wallet || "";
+      const s = e.s || e.symbol || "—";
+      return `<div class="ag-ins-row"><span class="w">${esc(w)}</span><span class="q">${q!=null?q:""}</span><span class="s">${esc(s)}</span><span class="tm">${esc(insAgo(e.t))}</span></div>`;
+    }).join("");
+    if (sm.on !== false) cards.push(`<div class="ag-card ag-ins">
+        <div class="hd"><div class="ico">${ico("scan")}</div><div><div class="nm">Insider</div><div class="st on">• ${insN} wallets</div></div></div>
+        <div class="ag-ins-list">${insRows || '<div class="hint">Noch keine Insider-Käufe.</div>'}</div>
       </div>`);
     if (nv.on !== false) cards.push(`<div class="ag-card">
         <div class="hd"><div class="ico">${ico("brain")}</div><div><div class="nm">X-Narrative</div><div class="st on">• Scanning X</div></div></div>
@@ -918,9 +949,11 @@
       </div>`);
     const label = paused ? "Paused" : (running ? (a.running_label || (cards.length + " running")) : "stopped");
     return `
+      <div id="ag-wrap">
       <div class="ag-head"><h2>Agents</h2><div class="run">${esc(label)}</div></div>
       <div class="ag-scroller" id="ag-scroll">${cards.join("")}</div>
-      <div class="ag-dots">${cards.map((_,i)=>`<i class="${i===0?"on":""}"></i>`).join("")}</div>`;
+      <div class="ag-dots">${cards.map((_,i)=>`<i class="${i===0?"on":""}"></i>`).join("")}</div>
+      </div>`;
   }
   function agentsHtml(d, compact) {
     if (compact) return agentsCarousel(d);
@@ -1719,7 +1752,7 @@
         <div class="k">Signale & Lernen</div>
         <div class="set-row"><div><div class="nm">Selbst-Lernen</div><div class="sub">Der Bot passt Regeln nach Trades vorsichtig an</div></div>${swBtn("self_tuning_on", !!setVal(s,"self_tuning_on"))}</div>
         <div class="set-row"><div><div class="nm">X-Narratives</div><div class="sub">Bonus für heiße Themen von X</div></div>${swBtn("narratives_on", !!setVal(s,"narratives_on"))}</div>
-        <div class="set-row"><div><div class="nm">Smart Money</div><div class="sub">Frühe Käufe beobachteter Wallets</div></div>${swBtn("smart_money_on", !!setVal(s,"smart_money_on"))}</div>
+        <div class="set-row"><div><div class="nm">Insider</div><div class="sub">Frühe Käufe beobachteter Wallets (5x-Gewinner)</div></div>${swBtn("smart_money_on", !!setVal(s,"smart_money_on"))}</div>
         <div class="k" style="margin-top:10px">Pump-Signale</div>
         <div class="set-row"><div><div class="nm">Volumen-Beschleunigung</div><div class="sub">Käufe und Volumen 1/5 Min. gegen vorher</div></div>${swBtn("signal_accel_on", !!setVal(s,"signal_accel_on"))}</div>
         <div class="set-row"><div><div class="nm">Bonding-Kurve</div><div class="sub">Fortschritt und Graduation-Tempo</div></div>${swBtn("signal_curve_on", !!setVal(s,"signal_curve_on"))}</div>
@@ -2617,6 +2650,17 @@
         });
       });
     }
+    if (msg.ins || msg.ins_n != null) {
+      d.agents = d.agents || {};
+      d.agents.smart = Object.assign({}, d.agents.smart || {}, {
+        recent: msg.ins || (d.agents.smart || {}).recent || [],
+        n: msg.ins_n != null ? msg.ins_n : ((d.agents.smart || {}).n || 0),
+        name: "Insider",
+        on: (d.agents.smart || {}).on !== false
+      });
+      if (msg.ins) d.ins = msg.ins;
+      if (msg.ins_n != null) d.ins_n = msg.ins_n;
+    }
     if (msg.settings_rev != null) d.settings_rev = msg.settings_rev;
     if (msg.last_cmd_ack) {
       d.last_cmd_ack = msg.last_cmd_ack;
@@ -2659,6 +2703,15 @@
       if (btn) {
         if (d.paused) { btn.className = "btn-ctrl start"; btn.dataset.cmd = "resume"; btn.textContent = "Start bot"; }
         else { btn.className = "btn-ctrl"; btn.dataset.cmd = "pause"; btn.textContent = "Pause bot"; }
+      }
+      if (msg.ins || msg.ins_n != null) {
+        const box = document.getElementById("ag-wrap");
+        if (box) {
+          const tmp = document.createElement("div");
+          tmp.innerHTML = agentsCarousel(d);
+          const next = tmp.querySelector("#ag-wrap");
+          if (next) box.replaceWith(next);
+        }
       }
       if (Array.isArray(msg.radar)) {
         const box = document.getElementById("radar-card");
