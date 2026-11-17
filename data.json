@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-17 14:49:15 CET",
-  "last_update": "2026-11-17 14:48:42 CET",
+  "exported_at": "2026-11-17 14:49:25 CET",
+  "last_update": "2026-11-17 14:49:18 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 16.844347461894348,
@@ -74,12 +74,12 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 1004.1,
-    "last_ms": 1001.0,
+    "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.1,
     "work_max_ms": 63.2,
-    "work_last_ms": 0.7,
+    "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 73.48257723049485,
@@ -89,25 +89,25 @@
   "wins": 9,
   "halted": true,
   "counters": {
-    "cycles": 1241,
-    "pools_scanned": 260306,
-    "unique_pools": 20044,
-    "prefilter_rejected": 34835,
+    "cycles": 1242,
+    "pools_scanned": 260524,
+    "unique_pools": 20072,
+    "prefilter_rejected": 34866,
     "safety_rejected": 1025,
-    "scored": 1350,
+    "scored": 1351,
     "buys": 42,
     "sells": 47
   },
   "last_scan_sources": {
     "ds_search": 14,
-    "trending_1h": 12,
+    "trending_1h": 9,
     "trending_1h_p2": 12,
-    "trending_5m_p2": 13,
+    "trending_5m_p2": 17,
+    "trending_5m": 13,
     "ds_boosts_top": 6,
-    "trending_5m": 14,
-    "new": 48,
+    "new": 55,
     "ds_boosts": 13,
-    "ds_profiles": 21,
+    "ds_profiles": 22,
     "watchlist": 57
   },
   "watch_count": 400,
@@ -429,6 +429,15 @@
     }
   ],
   "scanner": [
+    {
+      "t": "2026-11-17 14:49:18 CET",
+      "ts": 1794923358.0,
+      "kind": "Scored",
+      "symbol": "GOODTIME",
+      "reason": "GOODTIME [trending_5m_p2] score 72 | liq $20,161 | h1 +21.7% | top10 18% | LP 100% | liquidity:1.4 vol_liq:15 buy_pressure:8.3 holders:13.9 authorities:10 lp:10.0 age:3 momentum:10",
+      "text": "GOODTIME [trending_5m_p2] score 72 | liq $20,161 | h1 +21.7% | top10 18% | LP 100% | liquidity:1.4 vol_liq:15 buy_pressure:8.3 holders:13.9 authorities:10 lp:10.0 age:3 momentum:10",
+      "curve": false
+    },
     {
       "t": "2026-11-17 14:49:15 CET",
       "ts": 1794923355.0,
@@ -779,18 +788,18 @@
       "reason": "pool age 2 min < 6 (early)",
       "text": "Fiona (pump-fun) - pool age 2 min < 6 (early)",
       "curve": false
-    },
-    {
-      "t": "2026-11-17 14:48:12 CET",
-      "ts": 1794923292.0,
-      "kind": "Rejected",
-      "symbol": "SQUIRRE",
-      "reason": "pool age 2 min < 6 (early)",
-      "text": "SQUIRRE (pump-fun) - pool age 2 min < 6 (early)",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-17 14:49:18 CET",
+      "ts": 1794923358.0,
+      "kind": "Scored",
+      "symbol": "GOODTIME",
+      "reason": "GOODTIME [trending_5m_p2] score 72 | liq $20,161 | h1 +21.7% | top10 18% | LP 100% | liquidity:1.4 vol_liq:15 buy_pressure:8.3 holders:13.9 authorities:10 lp:10.0 age:3 momentum:10",
+      "text": "GOODTIME [trending_5m_p2] score 72 | liq $20,161 | h1 +21.7% | top10 18% | LP 100% | liquidity:1.4 vol_liq:15 buy_pressure:8.3 holders:13.9 authorities:10 lp:10.0 age:3 momentum:10",
+      "curve": false
+    },
     {
       "t": "2026-11-17 14:49:15 CET",
       "ts": 1794923355.0,
@@ -1005,15 +1014,6 @@
       "symbol": "dollar",
       "reason": "pool age 2 min < 6 (early)",
       "text": "dollar (pump-fun) - pool age 2 min < 6 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-17 14:49:15 CET",
-      "ts": 1794923355.0,
-      "kind": "Rejected",
-      "symbol": "POORLESS",
-      "reason": "pool age 3 min < 6 (early)",
-      "text": "POORLESS (pump-fun) - pool age 3 min < 6 (early)",
       "curve": false
     }
   ],
@@ -2822,12 +2822,6 @@
     {
       "t": 1794914779.901013,
       "t_label": "2026-11-17 12:26:19 CET",
-      "usd": 18.4498,
-      "eur": 16.6936
-    },
-    {
-      "t": 1794914779.901013,
-      "t_label": "2026-11-17 12:26:19 CET",
       "usd": 18.4628,
       "eur": 16.7054
     },
@@ -4018,6 +4012,12 @@
       "t_label": "2026-11-17 14:48:42 CET",
       "usd": 18.6164,
       "eur": 16.8443
+    },
+    {
+      "t": 1794923358.407657,
+      "t_label": "2026-11-17 14:49:18 CET",
+      "usd": 18.6164,
+      "eur": 16.8443
     }
   ],
   "agents": {
@@ -4026,18 +4026,18 @@
     "scanner": {
       "name": "Scanner",
       "title": "Pool discovery",
-      "token": "$MEME",
-      "pill": "210 pools",
+      "token": "GOODTIME",
+      "pill": "218 pools",
       "pill_kind": "blue",
-      "detail": "20044 einzigartige Pools insgesamt"
+      "detail": "20072 einzigartige Pools insgesamt"
     },
     "analyst": {
       "name": "Analyst",
       "title": "Entry checks",
-      "token": "",
-      "pill": "1350 scored",
+      "token": "GOODTIME",
+      "pill": "72 score",
       "pill_kind": "purple",
-      "detail": "Noch keine Bewertung in diesem Ausschnitt"
+      "detail": "GOODTIME [trending_5m_p2] score 72 | liq $20,161 | h1 +21.7% | top10 18% | LP 100% | liquidity:1.4 vol_liq:15 buy_pressure:8.3 holders:13.9 authorities:10 lp:10.0 age:3 momentum:10"
     },
     "executor": {
       "name": "Executor",
@@ -4178,11 +4178,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20044 Pools · 1241 Scans · Watch 400 · Graduiert 24 · letzter Scan: ds_search 14 · trending_1h 12 · trending_1h_p2 12 · trending_5m_p2 13 · ds_boosts_top 6 · trending_5m 14 · new 48 · ds_boosts 13 · ds_profiles 21 · watchlist 57"
+      "detail": "20072 Pools · 1242 Scans · Watch 400 · Graduiert 24 · letzter Scan: ds_search 14 · trending_1h 9 · trending_1h_p2 12 · trending_5m_p2 17 · trending_5m 13 · ds_boosts_top 6 · new 55 · ds_boosts 13 · ds_profiles 22 · watchlist 57"
     },
     {
       "name": "Analyst",
-      "detail": "1350 bewertet · 35860 abgelehnt"
+      "detail": "1351 bewertet · 35891 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4223,23 +4223,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "JVOLT",
-      "mint": "ANNzAQ2ADnquKGoKMsMt3ByLASo93pFnA23D8KW7pump",
-      "pool": "5vFQQm98tuKBiaRAH7y9ecy9GSmBogMH8zpNtbjsMAuJ",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 257931.643836603,
-      "liq": 36033.7146,
-      "age_min": 13.76,
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "ts": 1794923354.4853296,
-      "t": "2026-11-17 14:49:14 CET",
-      "id": "ANNzAQ2ADnquKGoKMsMt3ByLASo93pFnA23D8KW7pump-1794923354485"
-    },
     {
       "symbol": "TRENCHER",
       "mint": "EtUdbPUuSrBcBpxxefoYoiLg8wJwP6RT1yYeNmCwTnJb",
@@ -7622,36 +7605,53 @@
       "ts": 1794923355.132445,
       "t": "2026-11-17 14:49:15 CET",
       "id": "AkJNCE3ctyKoZ6fWdYxhn85kwZsUAR2ibcAXWNfrpump-1794923355132"
+    },
+    {
+      "symbol": "GOODTIME",
+      "mint": "Eyo1o3QYKQwdvP6UtK9dQLTZj2BBtoJdN4tMWB2Dpump",
+      "pool": "DtDvAyZtenCP2qd3KycTnJoVxWWvum9S3QNfqLR6Hy8Y",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m_p2",
+      "mcap": 72011.79375359,
+      "liq": 20160.6926,
+      "age_min": 17124.62,
+      "decision": "accepted",
+      "reason": "score 72",
+      "score": 72,
+      "ts": 1794923358.4019408,
+      "t": "2026-11-17 14:49:18 CET",
+      "id": "Eyo1o3QYKQwdvP6UtK9dQLTZj2BBtoJdN4tMWB2Dpump-1794923358401"
     }
   ],
   "feed_stats": {
-    "emitted": 33215,
-    "per_min": 250.14,
+    "emitted": 33357,
+    "per_min": 250.89,
     "by_decision": {
-      "seen": 29368,
-      "rejected": 3702,
-      "accepted": 145
+      "seen": 29478,
+      "rejected": 3733,
+      "accepted": 146
     },
     "by_source": {
-      "ds_search": 1733,
-      "new": 9862,
+      "ds_search": 1736,
+      "new": 9917,
       "trending_1h": 1238,
-      "trending_5m_p2": 1876,
-      "trending_5m": 1697,
+      "trending_5m_p2": 1884,
+      "trending_5m": 1699,
       "trending_1h_p2": 1225,
-      "ds_boosts": 1941,
-      "ds_boosts_top": 547,
-      "ds_profiles": 2511,
-      "watchlist": 6941,
+      "ds_boosts": 1944,
+      "ds_boosts_top": 548,
+      "ds_profiles": 2524,
+      "watchlist": 6998,
       "pump_logs": 3644
     },
-    "pumpfun": 19973
+    "pumpfun": 20095
   },
   "status": "running",
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.1,
+  "heartbeat_age_s": 0.2,
   "bot_alive": true,
   "supervisor_alive": true
 }
