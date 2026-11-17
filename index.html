@@ -316,6 +316,42 @@
     }
     .wallet-deep { margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap; }
     .wallet-deep a { color: #ffb4b4; font-size: 12px; font-weight: 700; }
+    .set-card .k { margin-bottom: 8px; }
+    .set-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+    .set-row:last-child { border-bottom: 0; }
+    .set-row .l { color: var(--muted); font-size: 13px; font-weight: 600; flex: 1; }
+    .set-row .nm { font-size: 14px; font-weight: 700; }
+    .set-row .sub { font-size: 11px; color: var(--muted); margin-top: 2px; font-weight: 600; }
+    .set-num { display: inline-flex; align-items: center; gap: 4px; font-weight: 800; font-size: 13px; }
+    .set-num input {
+      width: 76px; text-align: right; font: inherit; font-weight: 800; color: #fff;
+      background: rgba(255,255,255,.08); border: 1px solid var(--line); border-radius: 10px;
+      padding: 7px 8px;
+    }
+    .sw {
+      width: 46px; height: 28px; border-radius: 999px; flex-shrink: 0;
+      background: rgba(255,255,255,.14); position: relative;
+    }
+    .sw::after {
+      content: ""; position: absolute; top: 3px; left: 3px;
+      width: 22px; height: 22px; border-radius: 50%; background: #fff;
+      transition: transform .18s ease;
+    }
+    .sw.on { background: var(--green); }
+    .sw.on::after { transform: translateX(18px); }
+    .set-warn { margin: 8px 0 0; font-size: 12px; font-weight: 700; color: #fde68a; line-height: 1.4; }
+    .btn-save {
+      width: 100%; margin: 4px 0 8px; padding: 13px; border-radius: 14px;
+      background: #fff; color: #8B0000; font-weight: 800; font-size: 15px;
+    }
+    .btn-save:disabled { opacity: .55; }
+    .btn-ghost {
+      width: 100%; margin: 0 0 8px; padding: 12px; border-radius: 14px;
+      background: rgba(255,255,255,.1); color: #fff; font-weight: 800; font-size: 13px;
+    }
+    .set-seg { margin: 8px 0 4px; }
+    .always { font-size: 11px; font-weight: 800; padding: 4px 8px; border-radius: 999px;
+      background: rgba(74,222,128,.16); color: var(--green); flex-shrink: 0; }
   </style>
 </head>
 <body>
@@ -338,7 +374,7 @@
       </div>
       <div id="livepill" class="live"><span class="dot"></span> Live</div>
     </div>
-    <div class="badge">Realistisch-Modus (Spielgeld) <span class="appver" id="appver">v12</span></div>
+    <div class="badge">Realistisch-Modus (Spielgeld) <span class="appver" id="appver">v13</span></div>
     <div id="banners"></div>
 
     <div id="view-home" class="view on"></div>
@@ -346,6 +382,7 @@
     <div id="view-agents" class="view pad"></div>
     <div id="view-activity" class="view pad"></div>
     <div id="view-account" class="view pad"></div>
+    <div id="view-settings" class="view pad"></div>
   </div>
 
   <div id="detail"></div>
@@ -368,6 +405,10 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 6h14M5 12h14M5 18h9"/></svg>
       Activity
     </button>
+    <button data-tab="settings">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H8a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V8c.3.6.9 1 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+      Einstell.
+    </button>
     <button data-tab="account">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 19c1.5-3.2 4-5 7-5s5.5 1.8 7 5"/></svg>
       Account
@@ -376,7 +417,7 @@
 
   <script>
   const POLL_MS = 8000;
-  const APP_VERSION = "v12";
+  const APP_VERSION = "v13";
   const DATA_BRANCH = "main";
   const bootAt = Date.now();
   let lastData = null;
@@ -700,6 +741,7 @@
     $("#view-account").innerHTML = `
       <div class="sec-h"><h2>Account</h2></div>
       <div class="card acct">
+        <p><button class="see" data-tab="settings" type="button">Einstellungen öffnen</button></p>
         <p><strong style="color:#fff">Realistisch-Modus (Spielgeld).</strong> ${esc(r.mode_note || "Nur simuliertes Guthaben, keine echten Trades.")}</p>
         <div class="row"><span class="l">Startkapital</span><span class="r">${usd(d.start_usd)} · ${eur(d.start_eur)}${d.start_sol!=null? " · "+solAmt(d.start_sol):""}</span></div>
         <div class="row"><span class="l">Aktuelles Equity</span><span class="r">${usd(d.equity_usd)} · ${eur(d.equity_eur)}${d.equity_sol!=null? " · "+solAmt(d.equity_sol):""}</span></div>
@@ -743,7 +785,7 @@
 
   function setTab(name) {
     tab = name;
-    ["home","feed","agents","activity","account"].forEach(t => {
+    ["home","feed","agents","activity","settings","account"].forEach(t => {
       $(`#view-${t}`).classList.toggle("on", t === name);
       document.querySelector(`#nav button[data-tab="${t}"]`).classList.toggle("on", t === name);
     });
@@ -751,6 +793,7 @@
     if (name === "home" && lastData) {
       requestAnimationFrame(() => { const c = $("#eqchart"); if (c) drawEquity(c, filterHistory(lastData.equity_history||[], tf), lastData.trade_events||[]); });
     }
+    if (name === "settings" && lastData && !settingsDirty) renderSettings(lastData, true);
   }
 
   function findToken(symbol) {
@@ -1174,6 +1217,197 @@
     } catch (_) {}
   }
 
+  let settingsDirty = false;
+  const SET_PCT = new Set([
+    "daily_loss_limit_pct","size_fixed_pct","size_max_equity_frac",
+    "take_profit_pct","trailing_stop_pct","hard_stop_pct",
+    "early_take_profit_pct","early_trailing_stop_pct","early_hard_stop_pct"
+  ]);
+  const SET_DEFAULTS = {
+    daily_limit_on: true, daily_loss_limit_pct: 0.15,
+    size_mode: "auto", size_fixed_pct: 0.07, size_max_equity_frac: 0.20,
+    take_profit_pct: 0.50, trailing_stop_pct: 0.40, hard_stop_pct: 0.25,
+    early_take_profit_pct: 0.40, early_trailing_stop_pct: 0.30, early_hard_stop_pct: 0.20,
+    max_open_positions: 8, pump_max_open: 4,
+    self_tuning_on: true, narratives_on: true, smart_money_on: true,
+    early_min_mcap_usd: 15000, min_liquidity_usd: 10000
+  };
+  function setVal(s, k) {
+    const v = (s && s[k] != null) ? s[k] : SET_DEFAULTS[k];
+    return v;
+  }
+  function pctView(v) {
+    if (v == null || Number.isNaN(+v)) return "";
+    const n = Number(v);
+    const p = n <= 1 ? n * 100 : n;
+    return String(Math.round(p * 10) / 10);
+  }
+  function swBtn(key, on) {
+    return `<button type="button" class="sw ${on?"on":""}" data-set-toggle="${esc(key)}" aria-pressed="${on?"true":"false"}" aria-label="${esc(key)}"></button>`;
+  }
+  function numInp(key, val, step, min, max) {
+    return `<label class="set-num"><input data-set="${esc(key)}" type="number" inputmode="decimal" step="${step}" min="${min}" max="${max}" value="${esc(val)}"> </label>`;
+  }
+
+  function renderSettings(d, force) {
+    const host = $("#view-settings");
+    if (!host) return;
+    if (settingsDirty && !force && host.innerHTML) return;
+    const s = (d && d.settings) || {};
+    const dailyOn = !!setVal(s, "daily_limit_on");
+    const mode = setVal(s, "size_mode") === "fixed" ? "fixed" : "auto";
+    host.innerHTML = `
+      <div class="sec-h"><h2>Einstellungen</h2></div>
+      <p class="hint" style="margin-top:0">Änderungen gelten sofort für den Bot. Weiterhin nur Spielgeld, keine echte Wallet.</p>
+
+      <div class="card set-card">
+        <div class="set-row">
+          <div><div class="nm">Tageslimit</div><div class="sub">Keine neuen Käufe, wenn der Tagesverlust erreicht ist</div></div>
+          ${swBtn("daily_limit_on", dailyOn)}
+        </div>
+        <div class="set-row"><span class="l">Tagesverlust</span>${numInp("daily_loss_limit_pct", pctView(setVal(s,"daily_loss_limit_pct")), 1, 1, 50)}&nbsp;%</div>
+        <p class="set-warn" id="daily-warn" ${dailyOn?"hidden":""}>Ohne Tageslimit kann das Spielgeld an einem Tag stärker fallen.</p>
+      </div>
+
+      <div class="card set-card">
+        <div class="k">Einsatz pro Trade</div>
+        <div class="tf set-seg" data-set-seg="size_mode">
+          <button type="button" data-val="auto" class="${mode==="auto"?"on":""}">Auto (Bot entscheidet)</button>
+          <button type="button" data-val="fixed" class="${mode==="fixed"?"on":""}">Fester Anteil</button>
+        </div>
+        <div class="set-row"><span class="l">Fester Anteil</span>${numInp("size_fixed_pct", pctView(setVal(s,"size_fixed_pct")), 1, 1, 20)}&nbsp;%</div>
+        <div class="set-row"><span class="l">Max. je Position</span>${numInp("size_max_equity_frac", pctView(setVal(s,"size_max_equity_frac")), 1, 4, 20)}&nbsp;%</div>
+        <p class="hint">Höchstens 20 % des Equitys pro Position. Early-pump.fun bleibt bei fest $1.50.</p>
+      </div>
+
+      <div class="card set-card">
+        <div class="k">Ausstieg</div>
+        <div class="set-row"><span class="l">Take-Profit</span>${numInp("take_profit_pct", pctView(setVal(s,"take_profit_pct")), 5, 10, 200)}&nbsp;%</div>
+        <div class="set-row"><span class="l">Trailing-Stop</span>${numInp("trailing_stop_pct", pctView(setVal(s,"trailing_stop_pct")), 5, 10, 80)}&nbsp;%</div>
+        <div class="set-row"><span class="l">Stop-Loss</span>${numInp("hard_stop_pct", pctView(setVal(s,"hard_stop_pct")), 1, 5, 50)}&nbsp;%</div>
+        <div class="k" style="margin-top:10px">pump.fun Frühphase</div>
+        <div class="set-row"><span class="l">Take-Profit</span>${numInp("early_take_profit_pct", pctView(setVal(s,"early_take_profit_pct")), 5, 10, 200)}&nbsp;%</div>
+        <div class="set-row"><span class="l">Trailing-Stop</span>${numInp("early_trailing_stop_pct", pctView(setVal(s,"early_trailing_stop_pct")), 5, 10, 80)}&nbsp;%</div>
+        <div class="set-row"><span class="l">Stop-Loss</span>${numInp("early_hard_stop_pct", pctView(setVal(s,"early_hard_stop_pct")), 1, 5, 50)}&nbsp;%</div>
+      </div>
+
+      <div class="card set-card">
+        <div class="k">Positionen</div>
+        <div class="set-row"><span class="l">Max. offene Positionen</span>${numInp("max_open_positions", setVal(s,"max_open_positions"), 1, 1, 12)}</div>
+        <div class="set-row"><span class="l">Davon pump.fun-Slots</span>${numInp("pump_max_open", setVal(s,"pump_max_open"), 1, 0, 12)}</div>
+      </div>
+
+      <div class="card set-card">
+        <div class="k">Signale & Lernen</div>
+        <div class="set-row"><div><div class="nm">Selbst-Lernen</div><div class="sub">Der Bot passt Regeln nach Trades vorsichtig an</div></div>${swBtn("self_tuning_on", !!setVal(s,"self_tuning_on"))}</div>
+        <div class="set-row"><div><div class="nm">X-Narratives</div><div class="sub">Bonus für heiße Themen von X</div></div>${swBtn("narratives_on", !!setVal(s,"narratives_on"))}</div>
+        <div class="set-row"><div><div class="nm">Smart Money</div><div class="sub">Frühe Käufe beobachteter Wallets</div></div>${swBtn("smart_money_on", !!setVal(s,"smart_money_on"))}</div>
+      </div>
+
+      <div class="card set-card">
+        <div class="k">Filter</div>
+        <div class="set-row"><span class="l">Min. Marketcap</span>${numInp("early_min_mcap_usd", setVal(s,"early_min_mcap_usd"), 500, 5000, 250000)}&nbsp;$</div>
+        <div class="set-row"><span class="l">Min. Liquidität</span>${numInp("min_liquidity_usd", setVal(s,"min_liquidity_usd"), 500, 1000, 250000)}&nbsp;$</div>
+      </div>
+
+      <div class="card set-card">
+        <div class="k">Sicherheit</div>
+        <div class="set-row"><span class="l">Rug-Check</span><span class="always">immer an</span></div>
+        <div class="set-row"><span class="l">Impersonator-Check</span><span class="always">immer an</span></div>
+        <div class="set-row"><span class="l">Spielgeld-Modus</span><span class="always">immer an</span></div>
+      </div>
+
+      <button class="btn-save" type="button" id="btn-settings-save">Speichern</button>
+      <button class="btn-ghost" type="button" id="btn-settings-default">Standard wiederherstellen</button>
+      <button class="btn-ghost" type="button" id="btn-learn-reset">Lernen zurücksetzen</button>
+    `;
+    bindSettings();
+  }
+
+  function collectSettings() {
+    const out = {};
+    document.querySelectorAll("#view-settings [data-set]").forEach(inp => {
+      const k = inp.dataset.set;
+      const n = Number(inp.value);
+      if (Number.isNaN(n)) return;
+      out[k] = SET_PCT.has(k) ? (n / 100) : n;
+    });
+    document.querySelectorAll("#view-settings [data-set-toggle]").forEach(btn => {
+      out[btn.dataset.setToggle] = btn.getAttribute("aria-pressed") === "true";
+    });
+    const seg = document.querySelector("#view-settings [data-set-seg]");
+    if (seg) {
+      const on = seg.querySelector("button.on");
+      if (on) out[seg.dataset.setSeg] = on.dataset.val;
+    }
+    return out;
+  }
+
+  function bindSettings() {
+    const root = $("#view-settings");
+    if (!root) return;
+    const mark = () => { settingsDirty = true; };
+    root.querySelectorAll("[data-set]").forEach(inp => { inp.oninput = mark; inp.onchange = mark; });
+    root.querySelectorAll("[data-set-toggle]").forEach(btn => {
+      btn.onclick = (ev) => {
+        ev.preventDefault();
+        const on = btn.getAttribute("aria-pressed") !== "true";
+        btn.setAttribute("aria-pressed", on ? "true" : "false");
+        btn.classList.toggle("on", on);
+        if (btn.dataset.setToggle === "daily_limit_on") {
+          const w = document.getElementById("daily-warn");
+          if (w) w.hidden = on;
+        }
+        mark();
+      };
+    });
+    const seg = root.querySelector("[data-set-seg]");
+    if (seg) seg.querySelectorAll("button[data-val]").forEach(btn => {
+      btn.onclick = () => {
+        seg.querySelectorAll("button").forEach(b => b.classList.toggle("on", b === btn));
+        mark();
+      };
+    });
+    const save = document.getElementById("btn-settings-save");
+    if (save) save.onclick = () => sendSettings("set_settings", collectSettings());
+    const def = document.getElementById("btn-settings-default");
+    if (def) def.onclick = () => confirmSettings(
+      "Standard wiederherstellen?",
+      "Alle Optionen gehen auf die Werkseinstellung zurück. Das Lernen bleibt erhalten, bis du es extra zurücksetzt.",
+      () => sendSettings("reset_settings")
+    );
+    const lr = document.getElementById("btn-learn-reset");
+    if (lr) lr.onclick = () => confirmSettings(
+      "Lernen zurücksetzen?",
+      "Die selbst gelernten Regeln fallen auf die Standardwerte zurück. Deine gespeicherten Optionen bleiben.",
+      () => sendSettings("reset_params")
+    );
+  }
+
+  function confirmSettings(title, text, onOk) {
+    const root = document.getElementById("modal-root");
+    if (!root) return;
+    root.innerHTML = `<div class="modal-bg" role="dialog" aria-modal="true">
+      <div class="modal">
+        <h3>${esc(title)}</h3>
+        <p>${esc(text)}</p>
+        <div class="rowbtns">
+          <button class="cancel" type="button" id="mdl-cancel">Abbrechen</button>
+          <button class="ok" type="button" id="mdl-ok">Ja</button>
+        </div>
+      </div>
+    </div>`;
+    const close = () => { root.innerHTML = ""; };
+    document.getElementById("mdl-cancel").onclick = close;
+    root.querySelector(".modal-bg").addEventListener("click", ev => { if (ev.target.classList.contains("modal-bg")) close(); });
+    document.getElementById("mdl-ok").onclick = () => { close(); onOk(); };
+  }
+
+  async function sendSettings(cmd, settings) {
+    const extra = settings ? { settings } : {};
+    await sendCmd(cmd, extra);
+  }
+
   let statusBanner = null; // {kind, text, t}
   let lastAckTs = 0;
   function setStatus(kind, text) {
@@ -1200,6 +1434,20 @@
     if (tsSec && tsSec <= lastAckTs) return false;
     if (tsSec) lastAckTs = tsSec;
     if (tsSec && (Date.now()/1000 - tsSec) > 60) return false; // ignore stale acks on first paint
+    const acmd = ack.cmd || "";
+    if (acmd === "set_settings" || acmd === "reset_settings" || acmd === "reset_params") {
+      if (ack.settings && lastData) lastData.settings = Object.assign(lastData.settings || {}, ack.settings);
+      settingsDirty = false;
+      if (ack.ok && ack.pending) setStatus("info", "Einstellungen unterwegs…");
+      else if (ack.ok) setStatus("ok", "Gespeichert ✓");
+      else setStatus("err", ack.error || "Einstellungen konnten nicht gespeichert werden.");
+      if (tab === "settings") renderSettings(lastData || {}, true);
+      return true;
+    }
+    if (acmd === "pause" || acmd === "resume") {
+      setStatus("ok", acmd === "pause" ? "Bot pausiert." : "Bot gestartet.");
+      return true;
+    }
     if (ack.ok) {
       const name = ack.symbol || "";
       const pnl = (ack.pnl_usd != null && ack.pnl_usd !== "") ? ` (${ack.pnl_usd>=0?"+":""}${usd(ack.pnl_usd)})` : "";
@@ -1221,6 +1469,7 @@
     renderAgents(d);
     renderActivity(d);
     renderAccount(d);
+    renderSettings(d);
     document.querySelectorAll("[data-open]").forEach(btn => btn.onclick = () => openDetail(btn.dataset.open));
     document.querySelectorAll("[data-tf]").forEach(btn => btn.onclick = () => { tf = btn.dataset.tf; renderHome(d); bindHome(); });
     document.querySelectorAll("[data-tab]").forEach(btn => btn.onclick = () => setTab(btn.dataset.tab));
@@ -1563,7 +1812,7 @@
         };
         mqttClient.on("message", onmsg);
         mqttClient.publish(r0.direct_cmd, body);
-        setTimeout(() => { try { mqttClient.off("message", onmsg); } catch (_) {} reject(new Error("timeout")); }, 2000);
+        setTimeout(() => { try { mqttClient.off("message", onmsg); } catch (_) {} reject(new Error("timeout")); }, (cmd === "set_settings" || cmd === "reset_settings" || cmd === "reset_params") ? 3500 : 2000);
       });
     }
     return new Promise((resolve, reject) => {
@@ -1582,7 +1831,7 @@
       };
       directWs.addEventListener("message", onmsg);
       directWs.send(body);
-      setTimeout(() => { try { directWs.removeEventListener("message", onmsg); } catch (_) {} reject(new Error("timeout")); }, 2000);
+      setTimeout(() => { try { directWs.removeEventListener("message", onmsg); } catch (_) {} reject(new Error("timeout")); }, (cmd === "set_settings" || cmd === "reset_settings" || cmd === "reset_params") ? 3500 : 2000);
     });
   }
 
@@ -1632,7 +1881,9 @@
     if (cmdBusy) return;
     setCmdBusy(true);
     const isSell = cmd === "sell" || cmd === "sell_all" || (typeof cmd === "string" && cmd.indexOf("sell:") === 0);
+    const isSettings = cmd === "set_settings" || cmd === "reset_settings" || cmd === "reset_params";
     if (isSell) setStatus("info", "Verkauf gesendet…");
+    else if (isSettings) setStatus("info", "Einstellungen werden gespeichert…");
     else setStatus("info", "Befehl gesendet…");
     if ((cmd === "pause" || cmd === "resume") && lastData) {
       lastData.paused = cmd === "pause";
@@ -1650,6 +1901,8 @@
           if (isSell) {
             if (ack && ack.ok && !ack.pending) noteAck(ack);
             else await waitForSellAck(extra && extra.mint, cmd === "sell_all");
+          } else if (isSettings) {
+            noteAck(ack || { t: "cmdack", cmd, ok: false, ts: Date.now()/1000, error: "Keine Bestätigung" });
           } else {
             setStatus("ok", "Befehl gesendet.");
           }
@@ -1685,6 +1938,8 @@
       window.__lastSellVia = "ntfy";
       if (isSell) {
         await waitForSellAck(extra && extra.mint, cmd === "sell_all");
+      } else if (isSettings) {
+        setStatus("info", "Einstellungen unterwegs…");
       } else {
         setStatus("ok", "Befehl gesendet.");
       }
@@ -1793,6 +2048,11 @@
       if (tab === "feed") renderFeed(d);
     }
     if (msg.feed_stats) d.feed_stats = msg.feed_stats;
+    if (msg.settings) {
+      d.settings = Object.assign(d.settings || {}, msg.settings);
+      if (tab === "settings" && !settingsDirty) renderSettings(d);
+    }
+    if (msg.settings_rev != null) d.settings_rev = msg.settings_rev;
     if (msg.last_cmd_ack) {
       d.last_cmd_ack = msg.last_cmd_ack;
       noteAck(msg.last_cmd_ack);
@@ -1912,7 +2172,7 @@
       reloading = true;
       location.reload();
     });
-    navigator.serviceWorker.register("./sw.js?v=12", { updateViaCache: "none" }).then((reg) => {
+    navigator.serviceWorker.register("./sw.js?v=13", { updateViaCache: "none" }).then((reg) => {
       const ping = () => { try { reg.update(); } catch (_) {} };
       ping();
       setInterval(ping, 15000);
