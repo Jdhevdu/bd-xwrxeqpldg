@@ -412,6 +412,19 @@
     .ag-card .st { font-size: 11px; color: var(--muted); font-weight: 600; }
     .ag-card .st.on { color: var(--green); }
     .ag-card .st.warn { color: var(--orange); }
+    .ag-card.ag-speed { min-width: 228px; }
+    .ag-speed .rows { display:flex; flex-direction:column; gap:6px; margin-top:10px; }
+    .ag-speed .rows div, .speed-strip div {
+      display:flex; justify-content:space-between; align-items:baseline; gap:10px;
+      font-size: 12px; color: var(--muted);
+    }
+    .ag-speed .rows b, .speed-strip b { color:#fff; font-variant-numeric: tabular-nums; font-size: 13px; font-weight: 800; }
+    .speed-strip {
+      display:grid; grid-template-columns: 1fr 1fr; gap:8px 14px;
+      margin: 10px 0 2px; padding: 12px 14px; border-radius: 16px;
+      background: #161616; border: 1px solid #222;
+    }
+    .speed-strip .hd { grid-column: 1 / -1; font-size: 12px; font-weight: 800; color:#fff; letter-spacing:.02em; }
     .ag-filters { margin-top: 8px; overflow:hidden; height: 88px; position:relative; }
     .ag-filters .reel { animation: reel 9s linear infinite; }
     @keyframes reel { from { transform: translateY(0); } to { transform: translateY(-50%); } }
@@ -535,7 +548,7 @@
     </div>
     <div id="livepill" class="live" hidden><span class="dot"></span> Live</div>
     <div class="search-box" id="search-box"><input id="search-inp" type="search" placeholder="Coin suchen…" autocomplete="off"></div>
-    <div class="paper-mini">Spielgeld · <span class="appver" id="appver">v15</span></div>
+    <div class="paper-mini">Spielgeld · <span class="appver" id="appver">v16</span></div>
     <div id="banners"></div>
     <canvas id="confetti"></canvas>
 
@@ -571,7 +584,7 @@
 
   <script>
   const POLL_MS = 8000;
-  const APP_VERSION = "v15";
+  const APP_VERSION = "v16";
   const DATA_BRANCH = "main";
   const bootAt = Date.now();
   let lastData = null;
@@ -798,6 +811,42 @@
         transform="rotate(-90 40 40)"/>
       <text x="40" y="46" text-anchor="middle" fill="#fff" font-size="22" font-weight="800" font-family="Inter,sans-serif">${score==null?"—":Math.round(s)}</text>
     </svg>`;
+  }
+
+  function fmtSec(v) {
+    if (v == null || !isFinite(Number(v))) return "—";
+    v = Number(v);
+    if (v < 10) return (Math.round(v * 10) / 10).toFixed(1) + "s";
+    return Math.round(v) + "s";
+  }
+  function speedData(d) {
+    return (d && d.agents && d.agents.speed) || (d && d.speed) || {};
+  }
+  function speedStrip(d) {
+    const s = speedData(d);
+    return `<div class="speed-strip">
+      <div class="hd">Speed</div>
+      <div><span>Neuer Coin → Kauf</span><b>${esc(fmtSec(s.new_to_buy_s))}</b></div>
+      <div><span>Scanner (neu)</span><b>${esc(fmtSec(s.discovery_s))}</b></div>
+      <div><span>Preis-Update</span><b>${esc(fmtSec(s.price_s))}</b></div>
+      <div><span>Stop → Verkauf</span><b>${esc(fmtSec(s.stop_to_sell_s))}</b></div>
+      <div><span>Bot → Handy</span><b>${esc(fmtSec(s.bot_to_phone_s))}</b></div>
+    </div>`;
+  }
+  function speedCard(d) {
+    const s = speedData(d);
+    const n = s.n_discovery || s.n_buys || 0;
+    const st = n ? "• live" : "• sammeln…";
+    return `<div class="ag-card ag-speed">
+      <div class="hd"><div class="ico">${ico("bolt")}</div><div><div class="nm">Speed</div><div class="st on">${st}</div></div></div>
+      <div class="rows">
+        <div><span>Neuer Coin → Kauf</span><b>${esc(fmtSec(s.new_to_buy_s))}</b></div>
+        <div><span>Scanner (neu)</span><b>${esc(fmtSec(s.discovery_s))}</b></div>
+        <div><span>Preis-Update</span><b>${esc(fmtSec(s.price_s))}</b></div>
+        <div><span>Stop → Verkauf</span><b>${esc(fmtSec(s.stop_to_sell_s))}</b></div>
+        <div><span>Bot → Handy</span><b>${esc(fmtSec(s.bot_to_phone_s))}</b></div>
+      </div>
+    </div>`;
   }
   function agentsCarousel(d) {
     const a = d.agents || {};
@@ -1029,6 +1078,7 @@
         </div>
         <div class="tf">${["LIVE","1H","4H","1D","1W","ALL"].map(x => `<button data-tf="${x}" class="${tf===x?"on":""}">${x}</button>`).join("")}</div>
         <div class="chart-box"><canvas id="eqchart"></canvas></div>
+        ${speedStrip(d)}
         <div class="home-slim">
           ${controlHtml(d)}
           ${walletHtml()}
@@ -2497,6 +2547,14 @@
     if (msg.fees_usd != null) d.fees_usd = msg.fees_usd;
     if (msg.failed_count != null) d.failed_count = msg.failed_count;
     if (msg.loop_latency) d.loop_latency = msg.loop_latency;
+    if (msg.spd) {
+      d.agents = d.agents || {};
+      const map = {nb:"new_to_buy_s", dc:"discovery_s", ss:"seen_to_score_s", sf:"score_to_fill_s", px:"price_s", st:"stop_to_sell_s", ph:"bot_to_phone_s"};
+      const cur = Object.assign({}, d.agents.speed || d.speed || {});
+      Object.keys(map).forEach(k => { if (msg.spd[k] != null) cur[map[k]] = msg.spd[k]; });
+      d.agents.speed = cur;
+      d.speed = cur;
+    }
     if (msg.direct && d.realtime && d.realtime.direct !== msg.direct) {
       if (d.realtime.direct_proto === "mqtt" && msg.direct_proto !== "mqtt") {
         // snapshot used to append /live to the broker URL; ignore that
@@ -2690,7 +2748,7 @@
       reloading = true;
       location.reload();
     });
-    navigator.serviceWorker.register("./sw.js?v=15", { updateViaCache: "none" }).then((reg) => {
+    navigator.serviceWorker.register("./sw.js?v=16", { updateViaCache: "none" }).then((reg) => {
       const ping = () => { try { reg.update(); } catch (_) {} };
       ping();
       setInterval(ping, 15000);
