@@ -322,6 +322,15 @@
     .set-row .l { color: var(--muted); font-size: 13px; font-weight: 600; flex: 1; }
     .set-row .nm { font-size: 14px; font-weight: 700; }
     .set-row .sub { font-size: 11px; color: var(--muted); margin-top: 2px; font-weight: 600; }
+    .pump-sc { display:inline-flex; align-items:center; margin-left:6px; font-size:11px; font-weight:800; padding:2px 7px; border-radius:999px; background:rgba(255,180,180,.16); color:#ffd0d0; vertical-align:middle; }
+    .pump-sc.hot { background:rgba(80,220,140,.22); color:#9dffc2; }
+    .pump-sc.warm { background:rgba(255,200,80,.2); color:#ffe08a; }
+    .pump-why { font-size:11px; color:var(--muted); font-weight:600; margin-top:1px; }
+    .radar-row { display:flex; align-items:center; gap:10px; padding:8px 0; border-bottom:1px solid var(--line); width:100%; text-align:left; background:none; color:inherit; }
+    .radar-row:last-child { border-bottom:0; }
+    .radar-sc { font-size:16px; font-weight:800; min-width:36px; text-align:right; font-variant-numeric:tabular-nums; color:#ffd0d0; }
+    .radar-sc.hot { color:#9dffc2; }
+    .radar-sc.warm { color:#ffe08a; }
     .set-num { display: inline-flex; align-items: center; gap: 4px; font-weight: 800; font-size: 13px; }
     .set-num input {
       width: 76px; text-align: right; font: inherit; font-weight: 800; color: #fff;
@@ -417,7 +426,7 @@
 
   <script>
   const POLL_MS = 8000;
-  const APP_VERSION = "v13";
+  const APP_VERSION = "v14";
   const DATA_BRANCH = "main";
   const bootAt = Date.now();
   let lastData = null;
@@ -653,8 +662,49 @@
     } else if (p.smart_n) {
       s += `<span class="tag-pf tag-sm">Smart Money: ${esc(p.smart_n)} Wallet${p.smart_n==1?"":"s"}</span>`;
     }
-    if (p.narrative) s += `<span class="tag-pf tag-nar">${esc(p.narrative)}</span>`;
+    if (p.narrative) s += `<span class="tag-pf tag-nar">${esc(typeof p.narrative==="string"?p.narrative:(p.narrative.keyword||""))}</span>`;
+    s += pumpScoreBadge(p);
     return s;
+  }
+  function pumpScoreOf(p) {
+    if (!p) return null;
+    const n = p.pump_score != null ? p.pump_score : (p.score != null && p.reasons ? p.score : (p.sc != null ? p.sc : null));
+    return n == null || Number.isNaN(+n) ? null : Number(n);
+  }
+  function pumpScoreClass(n) {
+    if (n == null) return "";
+    return n >= 70 ? "hot" : n >= 45 ? "warm" : "";
+  }
+  function pumpScoreBadge(p) {
+    const n = pumpScoreOf(p);
+    if (n == null) return "";
+    return `<span class="pump-sc ${pumpScoreClass(n)}">Pump ${Math.round(n)}</span>`;
+  }
+  function pumpReasons(p) {
+    const r = (p && (p.pump_reasons || p.reasons)) || [];
+    return r.filter(Boolean).slice(0, 3);
+  }
+  function pumpWhyLine(p) {
+    const r = pumpReasons(p);
+    return r.length ? `<div class="pump-why">${r.map(esc).join(" · ")}</div>` : "";
+  }
+  function radarHtml(d) {
+    const rows = (d && d.radar) || [];
+    const body = rows.length ? rows.slice(0, 12).map(r => {
+      const sym = r.symbol || r.s || "?";
+      const sc = r.score != null ? r.score : r.sc;
+      const early = r.early || r.e;
+      const reasons = pumpReasons(r);
+      return `<button type="button" class="radar-row" data-open="${esc(sym)}">
+        ${avatar(r.image_url, sym)}
+        <div class="mid">
+          <div class="nm">${esc(sym)}${early?`<span class="tag-pf">pump.fun</span>`:""}${pumpScoreBadge({pump_score:sc})}</div>
+          ${reasons.length?`<div class="pump-why">${reasons.map(esc).join(" · ")}</div>`:`<div class="sub">beobachten</div>`}
+        </div>
+        <div class="radar-sc ${pumpScoreClass(sc)}">${sc==null?"—":Math.round(sc)}</div>
+      </button>`;
+    }).join("") : `<div class="hint">Noch keine Kandidaten mit Pump-Score. Der Bot sammelt Signale im Hintergrund.</div>`;
+    return `<div class="sec-h"><h2>Radar</h2></div><div class="card" id="radar-card">${body}</div>`;
   }
 
   function lernenHtml(d) {
@@ -712,6 +762,7 @@
           <div class="chart-box"><canvas id="eqchart"></canvas></div>
         </div>
         ${positionsHtml(d)}
+        ${radarHtml(d)}
         ${agentsHtml(d, true)}
         <div class="sec-h"><h2>Activity</h2><button class="see" data-tab="activity">See all</button></div>
         <div class="card" id="home-act">${activityRows((d.trade_events || d.trades || []).slice(0,6), !firstPaint)}</div>
@@ -800,6 +851,12 @@
     if (!lastData || !symbol) return null;
     const pos = (lastData.positions||[]).find(p => p.symbol === symbol);
     if (pos) return pos;
+    const rad = (lastData.radar||[]).find(p => (p.symbol || p.s) === symbol);
+    if (rad) return {
+      symbol: rad.symbol || rad.s, mint: rad.mint || "", pool: rad.pool || "",
+      image_url: rad.image_url, pump_score: rad.score != null ? rad.score : rad.sc,
+      pump_reasons: rad.reasons || [], early: rad.early || rad.e, tag: rad.tag
+    };
     const tr = (lastData.trade_events||[]).find(t => t.symbol === symbol);
     return tr ? {
       symbol: tr.symbol, mint: tr.mint, pool: tr.pool, image_url: tr.image_url,
@@ -862,7 +919,9 @@
         <div class="row"><span class="l">Status</span><span class="r">${p.tp_done ? "Watching · trailing" : "Watching"}</span></div>
         <div class="row"><span class="l">Rule</span><span class="r">${esc(p.tp_label || p.risk_label || "−25% stop")}</span></div>
         ${p.smart_label || p.smart_n ? `<div class="row"><span class="l">Smart Money</span><span class="r">${esc(p.smart_label || ("Smart Money: " + p.smart_n + " Wallets"))}</span></div>` : ""}
-        ${p.narrative ? `<div class="row"><span class="l">Narrativ</span><span class="r">${esc(p.narrative)}${p.narrative_score!=null?" · "+esc(p.narrative_score):""}</span></div>` : ""}
+        ${p.narrative ? `<div class="row"><span class="l">Narrativ</span><span class="r">${esc(typeof p.narrative==="string"?p.narrative:(p.narrative.keyword||""))}${p.narrative_score!=null?" · "+esc(p.narrative_score):""}</span></div>` : ""}
+        ${pumpScoreOf(p)!=null?`<div class="row"><span class="l">Pump-Score</span><span class="r">${Math.round(pumpScoreOf(p))}</span></div>`:""}
+        ${pumpReasons(p).length?`<div class="row"><span class="l">Warum</span><span class="r">${pumpReasons(p).map(esc).join(" · ")}</span></div>`:""}
       </div>
       <p class="hint">Kursdaten von GeckoTerminal. ${p.dexscreener_url?`<a href="${esc(p.dexscreener_url)}" target="_blank" rel="noopener" style="color:#ffb4b4">Auf DexScreener öffnen</a>`:""}</p>`;
     $("#backhome").onclick = () => $("#detail").classList.remove("on");
@@ -1230,6 +1289,8 @@
     early_take_profit_pct: 0.40, early_trailing_stop_pct: 0.30, early_hard_stop_pct: 0.20,
     max_open_positions: 8, pump_max_open: 4,
     self_tuning_on: true, narratives_on: true, smart_money_on: true,
+    signal_accel_on: true, signal_curve_on: true, signal_holders_on: true,
+    signal_attention_on: true, signal_dev_on: true, signal_impact_on: true,
     early_min_mcap_usd: 15000, min_liquidity_usd: 10000
   };
   function setVal(s, k) {
@@ -1302,6 +1363,13 @@
         <div class="set-row"><div><div class="nm">Selbst-Lernen</div><div class="sub">Der Bot passt Regeln nach Trades vorsichtig an</div></div>${swBtn("self_tuning_on", !!setVal(s,"self_tuning_on"))}</div>
         <div class="set-row"><div><div class="nm">X-Narratives</div><div class="sub">Bonus für heiße Themen von X</div></div>${swBtn("narratives_on", !!setVal(s,"narratives_on"))}</div>
         <div class="set-row"><div><div class="nm">Smart Money</div><div class="sub">Frühe Käufe beobachteter Wallets</div></div>${swBtn("smart_money_on", !!setVal(s,"smart_money_on"))}</div>
+        <div class="k" style="margin-top:10px">Pump-Signale</div>
+        <div class="set-row"><div><div class="nm">Volumen-Beschleunigung</div><div class="sub">Käufe und Volumen 1/5 Min. gegen vorher</div></div>${swBtn("signal_accel_on", !!setVal(s,"signal_accel_on"))}</div>
+        <div class="set-row"><div><div class="nm">Bonding-Kurve</div><div class="sub">Fortschritt und Graduation-Tempo</div></div>${swBtn("signal_curve_on", !!setVal(s,"signal_curve_on"))}</div>
+        <div class="set-row"><div><div class="nm">Holder-Wachstum</div><div class="sub">Neue Holder und Top-10-Konzentration</div></div>${swBtn("signal_holders_on", !!setVal(s,"signal_holders_on"))}</div>
+        <div class="set-row"><div><div class="nm">Aufmerksamkeit</div><div class="sub">DexScreener-Boosts, Profile, Trending</div></div>${swBtn("signal_attention_on", !!setVal(s,"signal_attention_on"))}</div>
+        <div class="set-row"><div><div class="nm">Dev-Verhalten</div><div class="sub">Dev verkauft / frische Wallet-Bundles</div></div>${swBtn("signal_dev_on", !!setVal(s,"signal_dev_on"))}</div>
+        <div class="set-row"><div><div class="nm">Liquidität & Impact</div><div class="sub">Liquiditätswachstum und Jupiter-Preiswirkung</div></div>${swBtn("signal_impact_on", !!setVal(s,"signal_impact_on"))}</div>
       </div>
 
       <div class="card set-card">
@@ -1530,6 +1598,7 @@
           <div class="mid">
             <div class="nm">${esc(p.symbol)}${pumpTag(p)}</div>
             <div class="sub">${p.value_usd!=null?usd(p.value_usd):"—"} · ${esc(p.risk_label||"")}</div>
+            ${pumpWhyLine(p)}
           </div>
           <div class="rhs">
             <div class="${cls(pu)}" data-pnl-usd="${esc(key)}">${pu==null?"—":((pu>=0?"+":"")+usd(pu))}</div>
@@ -2052,6 +2121,22 @@
       d.settings = Object.assign(d.settings || {}, msg.settings);
       if (tab === "settings" && !settingsDirty) renderSettings(d);
     }
+    if (Array.isArray(msg.radar)) {
+      const prev = d.radar || [];
+      d.radar = msg.radar.map(r => {
+        const sym = r.symbol || r.s;
+        const old = prev.find(x => (x.symbol || x.s) === sym) || {};
+        return Object.assign({}, old, {
+          symbol: sym,
+          score: r.score != null ? r.score : (r.sc != null ? r.sc : old.score),
+          early: r.early != null ? r.early : (r.e != null ? r.e : old.early),
+          reasons: r.reasons || old.reasons || [],
+          mint: r.mint || old.mint || "",
+          image_url: r.image_url || old.image_url || "",
+          pool: r.pool || old.pool || ""
+        });
+      });
+    }
     if (msg.settings_rev != null) d.settings_rev = msg.settings_rev;
     if (msg.last_cmd_ack) {
       d.last_cmd_ack = msg.last_cmd_ack;
@@ -2094,6 +2179,16 @@
       if (btn) {
         if (d.paused) { btn.className = "btn-ctrl start"; btn.dataset.cmd = "resume"; btn.textContent = "Start bot"; }
         else { btn.className = "btn-ctrl"; btn.dataset.cmd = "pause"; btn.textContent = "Pause bot"; }
+      }
+      if (Array.isArray(msg.radar)) {
+        const box = document.getElementById("radar-card");
+        if (box) {
+          const tmp = document.createElement("div");
+          tmp.innerHTML = radarHtml(d);
+          const next = tmp.querySelector("#radar-card");
+          if (next) box.replaceWith(next);
+          document.querySelectorAll("#radar-card [data-open]").forEach(btn => btn.onclick = () => openDetail(btn.dataset.open));
+        }
       }
       if (Array.isArray(msg.positions) && msg.positions.length !== prevCount) {
         renderHome(d); bindHome();
