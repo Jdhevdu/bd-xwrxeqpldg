@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-18 00:52:41 CET",
+  "exported_at": "2026-11-18 00:52:31 CET",
   "last_update": "2026-11-18 00:52:20 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -124,13 +124,13 @@
   "loop_latency": {
     "p50_ms": 1000.1,
     "p95_ms": 1000.2,
-    "max_ms": 8565.2,
-    "last_ms": 8565.2,
+    "max_ms": 1004.2,
+    "last_ms": 1000.2,
     "n": 400,
     "work_p50_ms": 0.9,
     "work_p95_ms": 1.8,
     "work_max_ms": 7.5,
-    "work_last_ms": 0.9,
+    "work_last_ms": 0.3,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 74.99700376985966,
@@ -140,7 +140,7 @@
   "wins": 18,
   "halted": false,
   "counters": {
-    "cycles": 2024,
+    "cycles": 2023,
     "pools_scanned": 400420,
     "unique_pools": 20005,
     "prefilter_rejected": 50725,
@@ -5230,7 +5230,7 @@
       "confirm_s": 1.296,
       "n_discovery": 200,
       "n_buys": 4,
-      "updated_ts": 1794959561.6612475,
+      "updated_ts": 1794959551.0956028,
       "stages": {
         "discovery": {
           "p50_s": 79.402,
@@ -5276,16 +5276,16 @@
         },
         "price_interval": {
           "p50_s": 1.0,
-          "p95_s": 1.002,
-          "max_s": 8.565,
+          "p95_s": 1.001,
+          "max_s": 1.004,
           "last_s": 1.0,
           "n": 200
         },
         "price_staleness": {
           "p50_s": 1.0,
           "p95_s": 1.001,
-          "max_s": 8.565,
-          "last_s": 8.565,
+          "max_s": 1.003,
+          "last_s": 1.0,
           "n": 200
         },
         "stop_to_fill": {
@@ -5299,7 +5299,7 @@
           "p50_s": 0.221,
           "p95_s": 0.232,
           "max_s": 0.252,
-          "last_s": 0.219,
+          "last_s": 0.222,
           "n": 200
         },
         "event_to_phone": {
@@ -5581,7 +5581,7 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20005 Pools · 2024 Scans · Watch 400 · Graduiert 55 · letzter Scan: ds_search 15 · trending_1h 12 · trending_5m 14 · ds_boosts_top 10 · ds_boosts 28 · ds_profiles 24 · watchlist 59"
+      "detail": "20005 Pools · 2023 Scans · Watch 400 · Graduiert 55 · letzter Scan: ds_search 15 · trending_1h 12 · trending_5m 14 · ds_boosts_top 10 · ds_boosts 28 · ds_profiles 24 · watchlist 59"
     },
     {
       "name": "Analyst",
@@ -9719,7 +9719,7 @@
   ],
   "feed_stats": {
     "emitted": 18149,
-    "per_min": 143.76,
+    "per_min": 144.04,
     "by_decision": {
       "seen": 15510,
       "rejected": 2477,
@@ -9744,7 +9744,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.1,
+  "heartbeat_age_s": 0.6,
   "bot_alive": true,
   "supervisor_alive": true
 }
