@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-23 20:58:40 CET",
+  "exported_at": "2026-11-23 20:59:41 CET",
   "last_update": "2026-11-23 20:58:19 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -125,12 +125,12 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 24379.1,
-    "last_ms": 1000.1,
+    "last_ms": 1000.2,
     "n": 400,
     "work_p50_ms": 1.1,
-    "work_p95_ms": 2.2,
+    "work_p95_ms": 2.1,
     "work_max_ms": 122.8,
-    "work_last_ms": 2.8,
+    "work_last_ms": 2.0,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 72.80619607391677,
@@ -140,7 +140,7 @@
   "wins": 18,
   "halted": false,
   "counters": {
-    "cycles": 2103,
+    "cycles": 2104,
     "pools_scanned": 408603,
     "unique_pools": 20000,
     "prefilter_rejected": 52235,
@@ -192,7 +192,7 @@
       "risk_label": "−25% stop",
       "entry_time": "2026-11-17 23:13:02 CET",
       "entry_ts": 1794953582.6366339,
-      "held": "141h 45m",
+      "held": "141h 46m",
       "smart_n": 0,
       "smart_label": "",
       "narrative": null,
@@ -5057,14 +5057,14 @@
       "price_s": 1.0,
       "price_stale_s": 1.0,
       "stop_to_sell_s": 1.891,
-      "bot_to_phone_s": 0.222,
+      "bot_to_phone_s": 0.223,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795463920.0695207,
+      "updated_ts": 1795463981.233311,
       "stages": {
         "discovery": {
           "p50_s": 64.049,
@@ -5111,15 +5111,15 @@
         "price_interval": {
           "p50_s": 1.0,
           "p95_s": 1.001,
-          "max_s": 43.121,
-          "last_s": 1.001,
+          "max_s": 52.163,
+          "last_s": 52.163,
           "n": 200
         },
         "price_staleness": {
           "p50_s": 1.0,
           "p95_s": 1.001,
           "max_s": 43.044,
-          "last_s": 1.003,
+          "last_s": 1.0,
           "n": 200
         },
         "stop_to_fill": {
@@ -5130,11 +5130,11 @@
           "n": 3
         },
         "bot_to_phone": {
-          "p50_s": 0.222,
-          "p95_s": 0.604,
+          "p50_s": 0.223,
+          "p95_s": 0.602,
           "max_s": 0.721,
           "last_s": 0.227,
-          "n": 150
+          "n": 158
         },
         "event_to_phone": {
           "p50_s": 0,
@@ -5416,7 +5416,7 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20000 Pools · 2103 Scans · Watch 32 · Graduiert 58 · letzter Scan: ds_search 12 · trending_1h 13 · trending_5m 14 · ds_boosts 22 · ds_boosts_top 6 · ds_profiles 23 · watchlist 10"
+      "detail": "20000 Pools · 2104 Scans · Watch 32 · Graduiert 58 · letzter Scan: ds_search 12 · trending_1h 13 · trending_5m 14 · ds_boosts 22 · ds_boosts_top 6 · ds_profiles 23 · watchlist 10"
     },
     {
       "name": "Analyst",
@@ -9570,7 +9570,7 @@
   ],
   "feed_stats": {
     "emitted": 6538,
-    "per_min": 130.61,
+    "per_min": 130.18,
     "by_decision": {
       "seen": 5352,
       "rejected": 1024,
@@ -9594,7 +9594,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.8,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
