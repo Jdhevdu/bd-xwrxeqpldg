@@ -1,33 +1,33 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-23 23:45:59 CET",
+  "exported_at": "2026-11-23 23:47:01 CET",
   "last_update": "2026-11-23 23:45:17 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
-  "equity_eur": 7.682589957663678,
-  "equity_usd": 8.490798421209897,
-  "cash_usd": 6.733761939612298,
-  "cash_eur": 6.092799438664764,
+  "equity_eur": 7.691140469748457,
+  "equity_usd": 8.500248447165994,
+  "cash_usd": 8.500248447165994,
+  "cash_eur": 7.691140469748457,
   "start_eur": 20.0,
   "start_usd": 22.104,
-  "pnl_usd": -13.613201578790102,
-  "pnl_eur": -12.317410042336322,
-  "roi_pct": -61.58705021168161,
-  "multiplier": 0.3841,
-  "realized_usd": -9.972573020553412,
-  "fees_usd": 13.56844683649269,
+  "pnl_usd": -13.603751552834005,
+  "pnl_eur": -12.308859530251544,
+  "roi_pct": -61.544297651257715,
+  "multiplier": 0.3846,
+  "realized_usd": -9.829466832811184,
+  "fees_usd": 13.524545114818997,
   "fees": {
-    "swap": 1.690149491430804,
-    "slippage": 5.074785138689228,
-    "network": 0.620646504687508,
-    "priority": 4.385559905235377,
-    "jito": 1.3786864798257168,
-    "rent": 0.41861931662405627
+    "swap": 1.7099592164684239,
+    "slippage": 5.085051769442177,
+    "network": 0.6213666730499438,
+    "priority": 4.434486058258395,
+    "jito": 1.401924574790786,
+    "rent": 0.2717568228092706
   },
-  "fees_slippage_usd": 5.074785138689228,
-  "cash_sol": 0.09350260704091402,
-  "equity_sol": 0.11790018645769237,
+  "fees_slippage_usd": 5.085051769442177,
+  "cash_sol": 0.11803140613421545,
+  "equity_sol": 0.11803140613421546,
   "start_sol": 0.2735353172331269,
   "failed_count": 4,
   "failed_trades": [
@@ -103,20 +103,20 @@
   "loop_latency": {
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
-    "max_ms": 1024.3,
-    "last_ms": 1000.2,
+    "max_ms": 2475.9,
+    "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 1.1,
     "work_p95_ms": 2.1,
-    "work_max_ms": 10.7,
+    "work_max_ms": 197.3,
     "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 72.01683624356912,
   "eur_usd": 1.1052,
-  "open_count": 1,
-  "closed_count": 87,
-  "wins": 18,
+  "open_count": 0,
+  "closed_count": 88,
+  "wins": 19,
   "halted": false,
   "counters": {
     "cycles": 2280,
@@ -126,7 +126,7 @@
     "safety_rejected": 1730,
     "scored": 2223,
     "buys": 88,
-    "sells": 92
+    "sells": 93
   },
   "last_scan_sources": {
     "ds_search": 13,
@@ -139,71 +139,8 @@
   },
   "watch_count": 83,
   "graduation_count": 63,
-  "positions": [
-    {
-      "symbol": "PumpMas",
-      "dex": "pumpswap",
-      "origin": "ds_boosts",
-      "score": 66,
-      "mint": "EwUVBpdM5vw1CJHRMSLywzVjyQSJZpy6qboxEPBKpump",
-      "pool": "B1MJhdYiP3T6UqYhoiPJ1HZA1g3YxJBVFYsNJUCB5CgD",
-      "network": "Solana",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/EwUVBpdM5vw1CJHRMSLywzVjyQSJZpy6qboxEPBKpump.png",
-      "dexscreener_url": "https://dexscreener.com/solana/B1MJhdYiP3T6UqYhoiPJ1HZA1g3YxJBVFYsNJUCB5CgD",
-      "mcap": 133987.0,
-      "age_hours": null,
-      "entry_price": 0.0001174,
-      "current_price": 0.0001428,
-      "cost_usd": 1.696264736161989,
-      "cost_open_usd": 1.696264736161989,
-      "value_usd": 1.7570364815975998,
-      "proceeds_usd": 0.0,
-      "pnl_usd": 0.060771745435610924,
-      "unrealized_usd": 0.060771745435610924,
-      "pnl_pct": 0.21635434412265764,
-      "tp_done": false,
-      "tp_label": "Teilgewinn offen (bei +50 %)",
-      "early": false,
-      "graduated": false,
-      "pump_family": false,
-      "venue": "pumpswap",
-      "tag": null,
-      "risk_label": "−25% stop",
-      "entry_time": "2026-11-17 23:13:02 CET",
-      "entry_ts": 1794953582.6366339,
-      "held": "144h 32m",
-      "smart_n": 0,
-      "smart_label": "",
-      "narrative": null,
-      "narrative_score": null,
-      "pump_score": 26,
-      "pump_reasons": [
-        "Dex-Boost",
-        "Socials ergänzt"
-      ],
-      "pump_bucket": "pump:cool",
-      "peak": 0.0001597,
-      "stack_frac": 0.15476675835458792,
-      "entry_equity": 9.692003734828718,
-      "holders": null,
-      "volume_24h": null,
-      "liquidity_usd": 27143.23
-    }
-  ],
+  "positions": [],
   "closed": [
-    {
-      "symbol": "GM",
-      "mint": "CSmSeS8XkxXTVa47LHtY9Mx1FSSwqw94tjqy4te3pump",
-      "pool": "9DStvzqxJKCZ2beujpkfi39P5VK8bwVyPbFk6dHr7EEk",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/CSmSeS8XkxXTVa47LHtY9Mx1FSSwqw94tjqy4te3pump.png",
-      "dexscreener_url": "https://dexscreener.com/solana/9DStvzqxJKCZ2beujpkfi39P5VK8bwVyPbFk6dHr7EEk",
-      "pnl_usd": -0.14506955410098743,
-      "cost_usd": 1.7084985969051512,
-      "proceeds_usd": 1.5634290428041637,
-      "tp_done": false,
-      "entry_time": "2026-11-17 21:07:37 CET",
-      "exit_time": "2026-11-17 21:10:04 CET"
-    },
     {
       "symbol": "BIG",
       "mint": "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump",
@@ -385,9 +322,42 @@
       "tp_done": false,
       "entry_time": "2026-11-17 17:32:15 CET",
       "exit_time": "2026-11-23 20:08:36 CET"
+    },
+    {
+      "symbol": "PumpMas",
+      "mint": "EwUVBpdM5vw1CJHRMSLywzVjyQSJZpy6qboxEPBKpump",
+      "pool": "B1MJhdYiP3T6UqYhoiPJ1HZA1g3YxJBVFYsNJUCB5CgD",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/EwUVBpdM5vw1CJHRMSLywzVjyQSJZpy6qboxEPBKpump.png",
+      "dexscreener_url": "https://dexscreener.com/solana/B1MJhdYiP3T6UqYhoiPJ1HZA1g3YxJBVFYsNJUCB5CgD",
+      "pnl_usd": 0.1431061877422286,
+      "cost_usd": 1.696264736161989,
+      "proceeds_usd": 1.8393709239042175,
+      "tp_done": false,
+      "entry_time": "2026-11-17 23:13:02 CET",
+      "exit_time": "2026-11-23 23:46:41 CET"
     }
   ],
   "trades": [
+    {
+      "t": "2026-11-23 23:46:41 CET",
+      "ts": 1795474001.0,
+      "kind": "Trail",
+      "text": "PumpMas trailing stop 12% from peak $0.0001597 | sold 100% @ $0.0001375556 -> $1.84 (PnL +$0.14, +19.3% vs entry, jupiter)",
+      "symbol": "PumpMas",
+      "title": "Sold PumpMas",
+      "subtitle": "Risk · trailing stop",
+      "role": "Risk",
+      "amount_usd": 1.84,
+      "pnl_usd": 0.14,
+      "pnl_pct": 0.193,
+      "fill": null,
+      "mint": "EwUVBpdM5vw1CJHRMSLywzVjyQSJZpy6qboxEPBKpump",
+      "pool": "B1MJhdYiP3T6UqYhoiPJ1HZA1g3YxJBVFYsNJUCB5CgD",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/EwUVBpdM5vw1CJHRMSLywzVjyQSJZpy6qboxEPBKpump.png",
+      "dexscreener_url": "https://dexscreener.com/solana/B1MJhdYiP3T6UqYhoiPJ1HZA1g3YxJBVFYsNJUCB5CgD",
+      "score": 66,
+      "stack_frac": 0.15476675835458792
+    },
     {
       "t": "2026-11-23 20:08:36 CET",
       "ts": 1795460916.0,
@@ -625,8 +595,8 @@
       "pool": "B1MJhdYiP3T6UqYhoiPJ1HZA1g3YxJBVFYsNJUCB5CgD",
       "image_url": "https://cdn.dexscreener.com/tokens/solana/EwUVBpdM5vw1CJHRMSLywzVjyQSJZpy6qboxEPBKpump.png",
       "dexscreener_url": "https://dexscreener.com/solana/B1MJhdYiP3T6UqYhoiPJ1HZA1g3YxJBVFYsNJUCB5CgD",
-      "score": 62,
-      "stack_frac": null
+      "score": 66,
+      "stack_frac": 0.15476675835458792
     },
     {
       "t": "2026-11-17 23:11:58 CET",
@@ -651,6 +621,26 @@
   ],
   "trade_events": [
     {
+      "t": "2026-11-23 23:46:41 CET",
+      "ts": 1795474001.0,
+      "kind": "Trail",
+      "text": "PumpMas trailing stop 12% from peak $0.0001597 | sold 100% @ $0.0001375556 -> $1.84 (PnL +$0.14, +19.3% vs entry, jupiter)",
+      "symbol": "PumpMas",
+      "title": "Sold PumpMas",
+      "subtitle": "Risk · trailing stop",
+      "role": "Risk",
+      "amount_usd": 1.84,
+      "pnl_usd": 0.14,
+      "pnl_pct": 0.193,
+      "fill": null,
+      "mint": "EwUVBpdM5vw1CJHRMSLywzVjyQSJZpy6qboxEPBKpump",
+      "pool": "B1MJhdYiP3T6UqYhoiPJ1HZA1g3YxJBVFYsNJUCB5CgD",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/EwUVBpdM5vw1CJHRMSLywzVjyQSJZpy6qboxEPBKpump.png",
+      "dexscreener_url": "https://dexscreener.com/solana/B1MJhdYiP3T6UqYhoiPJ1HZA1g3YxJBVFYsNJUCB5CgD",
+      "score": 66,
+      "stack_frac": 0.15476675835458792
+    },
+    {
       "t": "2026-11-23 20:08:36 CET",
       "ts": 1795460916.0,
       "kind": "Stopped",
@@ -887,8 +877,8 @@
       "pool": "B1MJhdYiP3T6UqYhoiPJ1HZA1g3YxJBVFYsNJUCB5CgD",
       "image_url": "https://cdn.dexscreener.com/tokens/solana/EwUVBpdM5vw1CJHRMSLywzVjyQSJZpy6qboxEPBKpump.png",
       "dexscreener_url": "https://dexscreener.com/solana/B1MJhdYiP3T6UqYhoiPJ1HZA1g3YxJBVFYsNJUCB5CgD",
-      "score": 62,
-      "stack_frac": null
+      "score": 66,
+      "stack_frac": 0.15476675835458792
     },
     {
       "t": "2026-11-17 23:11:58 CET",
@@ -1500,7 +1490,7 @@
       "curve": false
     }
   ],
-  "curve_skips": 3743,
+  "curve_skips": 3740,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -3303,18 +3293,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795464519.467885,
-      "t_label": "2026-11-23 21:08:39 CET",
-      "usd": 8.7574,
-      "eur": 7.9238
-    },
-    {
-      "t": 1795464557.8080137,
-      "t_label": "2026-11-23 21:09:17 CET",
-      "usd": 8.7574,
-      "eur": 7.9238
-    },
-    {
       "t": 1795464584.6624317,
       "t_label": "2026-11-23 21:09:44 CET",
       "usd": 8.7574,
@@ -4501,6 +4479,18 @@
       "t_label": "2026-11-23 23:45:17 CET",
       "usd": 8.4908,
       "eur": 7.6826
+    },
+    {
+      "t": 1795473917.3721335,
+      "t_label": "2026-11-23 23:45:17 CET",
+      "usd": 8.3835,
+      "eur": 7.5855
+    },
+    {
+      "t": 1795473917.3721335,
+      "t_label": "2026-11-23 23:45:17 CET",
+      "usd": 8.5002,
+      "eur": 7.6911
     }
   ],
   "agents": {
@@ -4515,7 +4505,7 @@
       "score_to_fill_s": null,
       "price_s": 1.0,
       "price_stale_s": 1.0,
-      "stop_to_sell_s": 1.891,
+      "stop_to_sell_s": 3.912,
       "bot_to_phone_s": 0.222,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
@@ -4523,7 +4513,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795473958.3947315,
+      "updated_ts": 1795474019.7476504,
       "stages": {
         "discovery": {
           "p50_s": 57.961,
@@ -4582,17 +4572,17 @@
           "n": 200
         },
         "stop_to_fill": {
-          "p50_s": 1.891,
-          "p95_s": 3.912,
-          "max_s": 3.912,
-          "last_s": 3.912,
-          "n": 3
+          "p50_s": 3.912,
+          "p95_s": 31.349,
+          "max_s": 31.349,
+          "last_s": 31.349,
+          "n": 4
         },
         "bot_to_phone": {
           "p50_s": 0.222,
           "p95_s": 0.266,
           "max_s": 0.75,
-          "last_s": 0.228,
+          "last_s": 0.222,
           "n": 200
         },
         "event_to_phone": {
@@ -4703,18 +4693,18 @@
     "risk": {
       "name": "Risk",
       "title": "Guarding",
-      "token": "STONK",
+      "token": "PumpMas",
       "pill": "stop -6%  trail +12%",
       "pill_kind": "red",
-      "detail": "Stopped",
+      "detail": "Trailed out",
       "action": {
-        "label": "Stopped",
-        "symbol": "STONK",
-        "pnl_usd": -0.22
+        "label": "Trailed out",
+        "symbol": "PumpMas",
+        "pnl_usd": 0.14
       },
       "hard_stop_pct": 0.06,
       "trailing_stop_pct": 0.12,
-      "open": 1
+      "open": 0
     },
     "smart": {
       "name": "Insider",
@@ -4740,15 +4730,15 @@
       "name": "Learner",
       "title": "Tuning",
       "token": "",
-      "pill": "87 trades",
+      "pill": "88 trades",
       "pill_kind": "green",
       "detail": "pump.fun-Coins unter 5 Min verlieren oft → Mindestalter 9→10 Min",
       "on": true,
-      "trades_learned": 87
+      "trades_learned": 88
     }
   },
   "learn": {
-    "trades_learned": 87,
+    "trades_learned": 88,
     "last_lesson": "pump.fun-Coins unter 5 Min verlieren oft → Mindestalter 9→10 Min",
     "last_change_at": "2026-11-23 20:09:08 CET",
     "last_trigger": "periodic",
@@ -4887,7 +4877,7 @@
     },
     {
       "name": "Executor",
-      "detail": "Simuliert · 88 Käufe / 92 Verkäufe"
+      "detail": "Simuliert · 88 Käufe / 93 Verkäufe"
     },
     {
       "name": "Risk",
@@ -9029,7 +9019,7 @@
   ],
   "feed_stats": {
     "emitted": 27650,
-    "per_min": 127.24,
+    "per_min": 126.63,
     "by_decision": {
       "seen": 22737,
       "rejected": 4327,
@@ -9053,7 +9043,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.9,
+  "heartbeat_age_s": 0.7,
   "bot_alive": true,
   "supervisor_alive": true
 }
