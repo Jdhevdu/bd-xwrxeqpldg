@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-23 21:24:44 CET",
+  "exported_at": "2026-11-23 21:24:54 CET",
   "last_update": "2026-11-23 21:24:40 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -103,13 +103,13 @@
   "loop_latency": {
     "p50_ms": 1000.1,
     "p95_ms": 1000.4,
-    "max_ms": 17486.5,
-    "last_ms": 1000.4,
+    "max_ms": 3166.2,
+    "last_ms": 1000.1,
     "n": 400,
-    "work_p50_ms": 1.2,
+    "work_p50_ms": 1.1,
     "work_p95_ms": 2.2,
     "work_max_ms": 494.5,
-    "work_last_ms": 2.3,
+    "work_last_ms": 1.3,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 73.09774397310002,
@@ -5043,7 +5043,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795465483.9138916,
+      "updated_ts": 1795465493.8803813,
       "stages": {
         "discovery": {
           "p50_s": 68.692,
@@ -5091,14 +5091,14 @@
           "p50_s": 1.0,
           "p95_s": 1.001,
           "max_s": 1.008,
-          "last_s": 0.999,
+          "last_s": 1.0,
           "n": 200
         },
         "price_staleness": {
           "p50_s": 1.0,
           "p95_s": 1.001,
           "max_s": 1.008,
-          "last_s": 0.999,
+          "last_s": 1.0,
           "n": 200
         },
         "stop_to_fill": {
@@ -5110,9 +5110,9 @@
         },
         "bot_to_phone": {
           "p50_s": 0.221,
-          "p95_s": 0.422,
-          "max_s": 0.677,
-          "last_s": 0.225,
+          "p95_s": 0.489,
+          "max_s": 0.739,
+          "last_s": 0.489,
           "n": 200
         },
         "event_to_phone": {
@@ -9574,7 +9574,7 @@
   ],
   "feed_stats": {
     "emitted": 9317,
-    "per_min": 122.35,
+    "per_min": 122.0,
     "by_decision": {
       "seen": 7593,
       "rejected": 1460,
@@ -9598,7 +9598,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.1,
+  "heartbeat_age_s": 0.3,
   "bot_alive": true,
   "supervisor_alive": true
 }
