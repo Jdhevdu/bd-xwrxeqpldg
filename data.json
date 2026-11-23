@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-24 00:13:51 CET",
-  "last_update": "2026-11-24 00:13:15 CET",
+  "exported_at": "2026-11-24 00:14:12 CET",
+  "last_update": "2026-11-24 00:13:59 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.682014725310992,
@@ -108,8 +108,8 @@
     "n": 400,
     "work_p50_ms": 0.5,
     "work_p95_ms": 1.2,
-    "work_max_ms": 261.9,
-    "work_last_ms": 0.3,
+    "work_max_ms": 146.0,
+    "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 71.93138633593338,
@@ -119,12 +119,12 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 2306,
+    "cycles": 2307,
     "pools_scanned": 434373,
     "unique_pools": 20002,
     "prefilter_rejected": 56003,
     "safety_rejected": 1745,
-    "scored": 2281,
+    "scored": 2284,
     "buys": 88,
     "sells": 93
   },
@@ -823,6 +823,60 @@
   ],
   "scanner": [
     {
+      "t": "2026-11-24 00:13:59 CET",
+      "ts": 1795475639.0,
+      "kind": "Skipped",
+      "symbol": "SCINU",
+      "reason": "position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "SCINU score 84 - position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 00:13:59 CET",
+      "ts": 1795475639.0,
+      "kind": "Skipped",
+      "symbol": "THANKS",
+      "reason": "score 54 < 62",
+      "text": "THANKS score 54 - score 54 < 62",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 00:13:59 CET",
+      "ts": 1795475639.0,
+      "kind": "Skipped",
+      "symbol": "Phil",
+      "reason": "position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Phil score 77 - position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 00:13:59 CET",
+      "ts": 1795475639.0,
+      "kind": "Scored",
+      "symbol": "SCINU",
+      "reason": "SCINU [ds_boosts] score 84 | liq $14,791 | h1 +19.9% | top10 16% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:14.5 authorities:10 lp:10.0 age:5 momentum:10 pump:32 | pump 32 (Dex-Boost, Im Trend, Geringer Price Impact)",
+      "text": "SCINU [ds_boosts] score 84 | liq $14,791 | h1 +19.9% | top10 16% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:14.5 authorities:10 lp:10.0 age:5 momentum:10 pump:32 | pump 32 (Dex-Boost, Im Trend, Geringer Price Impact)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 00:13:57 CET",
+      "ts": 1795475637.0,
+      "kind": "Scored",
+      "symbol": "Phil",
+      "reason": "Phil [ds_profiles, graduated] score 77 | liq $14,078 | h1 +49.1% | top10 20% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:12.5 holders:13.0 authorities:10 lp:10.0 age:2 momentum:10 pump:43 | pump 43 (Volumen zieht an, Im Trend, Socials ergänzt)",
+      "text": "Phil [ds_profiles, graduated] score 77 | liq $14,078 | h1 +49.1% | top10 20% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:12.5 holders:13.0 authorities:10 lp:10.0 age:2 momentum:10 pump:43 | pump 43 (Volumen zieht an, Im Trend, Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 00:13:53 CET",
+      "ts": 1795475633.0,
+      "kind": "Scored",
+      "symbol": "THANKS",
+      "reason": "THANKS [ds_profiles, graduated] score 54 | liq $16,756 | h1 +93.1% | top10 24% | LP 100% | liquidity:0.5 vol_liq:2 buy_pressure:10.6 holders:11.2 authorities:10 lp:10.0 age:2 momentum:0 narrative:THANKS pump:37 | narrative THANKS | pump 37 (Narrativ THANKS, Im Trend, Socials ergänzt)",
+      "text": "THANKS [ds_profiles, graduated] score 54 | liq $16,756 | h1 +93.1% | top10 24% | LP 100% | liquidity:0.5 vol_liq:2 buy_pressure:10.6 holders:11.2 authorities:10 lp:10.0 age:2 momentum:0 narrative:THANKS pump:37 | narrative THANKS | pump 37 (Narrativ THANKS, Im Trend, Socials ergänzt)",
+      "curve": false
+    },
+    {
       "t": "2026-11-24 00:13:44 CET",
       "ts": 1795475624.0,
       "kind": "Rejected",
@@ -1127,63 +1181,63 @@
       "reason": "liquidity $0 < $10,000",
       "text": "SUIII (pumpswap) - liquidity $0 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-24 00:13:13 CET",
-      "ts": 1795475593.0,
-      "kind": "Rejected",
-      "symbol": "Terra",
-      "reason": "liquidity $1,511 < $10,000",
-      "text": "Terra (pumpswap) - liquidity $1,511 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 00:13:13 CET",
-      "ts": 1795475593.0,
-      "kind": "Rejected",
-      "symbol": "WOFL",
-      "reason": "liquidity $4,836 < $10,000",
-      "text": "WOFL (pumpswap) - liquidity $4,836 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 00:13:13 CET",
-      "ts": 1795475593.0,
-      "kind": "Rejected",
-      "symbol": "Bertcoin",
-      "reason": "liquidity $6,644 < $10,000",
-      "text": "Bertcoin (pumpswap) - liquidity $6,644 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 00:13:13 CET",
-      "ts": 1795475593.0,
-      "kind": "Rejected",
-      "symbol": "Doomcat",
-      "reason": "liquidity $7,673 < $10,000",
-      "text": "Doomcat (pumpswap) - liquidity $7,673 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 00:13:05 CET",
-      "ts": 1795475585.0,
-      "kind": "Skipped",
-      "symbol": "CBUCKS",
-      "reason": "score 52 < 62",
-      "text": "CBUCKS score 52 - score 52 < 62",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 00:13:05 CET",
-      "ts": 1795475585.0,
-      "kind": "Skipped",
-      "symbol": "SGI",
-      "reason": "score 59 < 62",
-      "text": "SGI score 59 - score 59 < 62",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-24 00:13:59 CET",
+      "ts": 1795475639.0,
+      "kind": "Skipped",
+      "symbol": "SCINU",
+      "reason": "position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "SCINU score 84 - position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 00:13:59 CET",
+      "ts": 1795475639.0,
+      "kind": "Skipped",
+      "symbol": "THANKS",
+      "reason": "score 54 < 62",
+      "text": "THANKS score 54 - score 54 < 62",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 00:13:59 CET",
+      "ts": 1795475639.0,
+      "kind": "Skipped",
+      "symbol": "Phil",
+      "reason": "position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Phil score 77 - position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 00:13:59 CET",
+      "ts": 1795475639.0,
+      "kind": "Scored",
+      "symbol": "SCINU",
+      "reason": "SCINU [ds_boosts] score 84 | liq $14,791 | h1 +19.9% | top10 16% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:14.5 authorities:10 lp:10.0 age:5 momentum:10 pump:32 | pump 32 (Dex-Boost, Im Trend, Geringer Price Impact)",
+      "text": "SCINU [ds_boosts] score 84 | liq $14,791 | h1 +19.9% | top10 16% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:14.5 authorities:10 lp:10.0 age:5 momentum:10 pump:32 | pump 32 (Dex-Boost, Im Trend, Geringer Price Impact)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 00:13:57 CET",
+      "ts": 1795475637.0,
+      "kind": "Scored",
+      "symbol": "Phil",
+      "reason": "Phil [ds_profiles, graduated] score 77 | liq $14,078 | h1 +49.1% | top10 20% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:12.5 holders:13.0 authorities:10 lp:10.0 age:2 momentum:10 pump:43 | pump 43 (Volumen zieht an, Im Trend, Socials ergänzt)",
+      "text": "Phil [ds_profiles, graduated] score 77 | liq $14,078 | h1 +49.1% | top10 20% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:12.5 holders:13.0 authorities:10 lp:10.0 age:2 momentum:10 pump:43 | pump 43 (Volumen zieht an, Im Trend, Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 00:13:53 CET",
+      "ts": 1795475633.0,
+      "kind": "Scored",
+      "symbol": "THANKS",
+      "reason": "THANKS [ds_profiles, graduated] score 54 | liq $16,756 | h1 +93.1% | top10 24% | LP 100% | liquidity:0.5 vol_liq:2 buy_pressure:10.6 holders:11.2 authorities:10 lp:10.0 age:2 momentum:0 narrative:THANKS pump:37 | narrative THANKS | pump 37 (Narrativ THANKS, Im Trend, Socials ergänzt)",
+      "text": "THANKS [ds_profiles, graduated] score 54 | liq $16,756 | h1 +93.1% | top10 24% | LP 100% | liquidity:0.5 vol_liq:2 buy_pressure:10.6 holders:11.2 authorities:10 lp:10.0 age:2 momentum:0 narrative:THANKS pump:37 | narrative THANKS | pump 37 (Narrativ THANKS, Im Trend, Socials ergänzt)",
+      "curve": false
+    },
     {
       "t": "2026-11-24 00:13:44 CET",
       "ts": 1795475624.0,
@@ -1354,63 +1408,9 @@
       "reason": "impersonates SOLANA (mint is not the official one)",
       "text": "SOLANA (pump-fun) - impersonates SOLANA (mint is not the official one)",
       "curve": false
-    },
-    {
-      "t": "2026-11-24 00:13:13 CET",
-      "ts": 1795475593.0,
-      "kind": "Rejected",
-      "symbol": "SUIII",
-      "reason": "liquidity $0 < $10,000",
-      "text": "SUIII (pumpswap) - liquidity $0 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 00:13:13 CET",
-      "ts": 1795475593.0,
-      "kind": "Rejected",
-      "symbol": "Terra",
-      "reason": "liquidity $1,511 < $10,000",
-      "text": "Terra (pumpswap) - liquidity $1,511 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 00:13:13 CET",
-      "ts": 1795475593.0,
-      "kind": "Rejected",
-      "symbol": "WOFL",
-      "reason": "liquidity $4,836 < $10,000",
-      "text": "WOFL (pumpswap) - liquidity $4,836 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 00:13:13 CET",
-      "ts": 1795475593.0,
-      "kind": "Rejected",
-      "symbol": "Bertcoin",
-      "reason": "liquidity $6,644 < $10,000",
-      "text": "Bertcoin (pumpswap) - liquidity $6,644 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 00:13:13 CET",
-      "ts": 1795475593.0,
-      "kind": "Rejected",
-      "symbol": "Doomcat",
-      "reason": "liquidity $7,673 < $10,000",
-      "text": "Doomcat (pumpswap) - liquidity $7,673 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 00:13:05 CET",
-      "ts": 1795475585.0,
-      "kind": "Skipped",
-      "symbol": "CBUCKS",
-      "reason": "score 52 < 62",
-      "text": "CBUCKS score 52 - score 52 < 62",
-      "curve": false
     }
   ],
-  "curve_skips": 3619,
+  "curve_skips": 3608,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -3213,12 +3213,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795465930.9624217,
-      "t_label": "2026-11-23 21:32:10 CET",
-      "usd": 8.7366,
-      "eur": 7.905
-    },
-    {
       "t": 1795465948.9953206,
       "t_label": "2026-11-23 21:32:28 CET",
       "usd": 8.7366,
@@ -4411,6 +4405,12 @@
       "t_label": "2026-11-24 00:13:15 CET",
       "usd": 8.4902,
       "eur": 7.682
+    },
+    {
+      "t": 1795475639.573575,
+      "t_label": "2026-11-24 00:13:59 CET",
+      "usd": 8.4902,
+      "eur": 7.682
     }
   ],
   "agents": {
@@ -4426,14 +4426,14 @@
       "price_s": 1.0,
       "price_stale_s": 1.0,
       "stop_to_sell_s": 3.912,
-      "bot_to_phone_s": 0.124,
+      "bot_to_phone_s": 0.125,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795475631.5751762,
+      "updated_ts": 1795475651.596769,
       "stages": {
         "discovery": {
           "p50_s": 72.96,
@@ -4499,10 +4499,10 @@
           "n": 4
         },
         "bot_to_phone": {
-          "p50_s": 0.124,
-          "p95_s": 0.277,
+          "p50_s": 0.125,
+          "p95_s": 0.3,
           "max_s": 0.586,
-          "last_s": 0.133,
+          "last_s": 0.23,
           "n": 200
         },
         "event_to_phone": {
@@ -4535,13 +4535,28 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "SUIII",
+      "token": "SCINU",
       "pill": "124 pools",
       "pill_kind": "blue",
       "detail": "20,002 unique pools",
       "pools": 124,
       "unique": 20002,
       "filters": [
+        {
+          "symbol": "SCINU",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "Phil",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "THANKS",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "SUIII",
           "text": "liq < $4k",
@@ -4566,32 +4581,17 @@
           "symbol": "$XMAS",
           "text": "only 28 txns in 1h",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "ENIGMA",
-          "text": "dex meteora-dbc not graduated/allowed",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "SOLARSYS",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "JNTH",
-          "text": "dex moonshot not graduated/allowed",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "Phil",
-      "pill": "77",
+      "token": "SCINU",
+      "pill": "84",
       "pill_kind": "purple",
-      "detail": "Phil [ds_profiles, graduated] score 77 | liq $14,723 | h1 +63.2% | top10 20% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:12.2 holders:13.0 authorities:10 lp:10.0 age:2 momentum:10 pump:43 | pump 43 (Volumen zieht an, Im Trend, Socials ergänzt)",
-      "score": 77,
+      "detail": "SCINU [ds_boosts] score 84 | liq $14,791 | h1 +19.9% | top10 16% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:14.5 authorities:10 lp:10.0 age:5 momentum:10 pump:32 | pump 32 (Dex-Boost, Im Trend, Geringer Price Impact)",
+      "score": 84,
       "passed": true,
       "status": "passed",
       "rejected": 57748
@@ -4652,21 +4652,21 @@
       "token": "",
       "pill": "88 trades",
       "pill_kind": "green",
-      "detail": "pump.fun-Coins unter 5 Min verlieren oft → Mindestalter 9→10 Min",
+      "detail": "niedriger Pump-Score verlieren oft → Gewicht Volumen-Beschleunigung 0.90×→0.85×",
       "on": true,
       "trades_learned": 88
     }
   },
   "learn": {
     "trades_learned": 88,
-    "last_lesson": "pump.fun-Coins unter 5 Min verlieren oft → Mindestalter 9→10 Min",
-    "last_change_at": "2026-11-23 20:09:08 CET",
+    "last_lesson": "niedriger Pump-Score verlieren oft → Gewicht Volumen-Beschleunigung 0.90×→0.85×",
+    "last_change_at": "2026-11-24 00:13:59 CET",
     "last_trigger": "periodic",
     "params": [
       {
         "key": "min_score",
         "label": "Mindest-Score",
-        "value": "62"
+        "value": "64"
       },
       {
         "key": "early_min_age_min",
@@ -4725,7 +4725,7 @@
       }
     ],
     "params_raw": {
-      "min_score": 62,
+      "min_score": 64,
       "early_min_age_min": 10,
       "early_min_buyers_m5": 10,
       "early_min_txns_m5": 20,
@@ -4745,7 +4745,7 @@
       "size_mult_graduated": 1.0,
       "size_mult_amm": 0.75,
       "size_mult_early": 1.0,
-      "w_accel": 0.9,
+      "w_accel": 0.85,
       "w_curve": 1.0,
       "w_holders": 1.0,
       "w_attention": 1.0,
@@ -4753,11 +4753,6 @@
       "w_dev": 1.0
     },
     "recent": [
-      {
-        "when": "2026-11-17 18:49:16 CET",
-        "lesson": "sonstige AMM-Coins verlieren oft → Mindest-Score 58→60",
-        "trigger": "periodic"
-      },
       {
         "when": "2026-11-17 21:24:27 CET",
         "lesson": "pump.fun-Coins unter 5 Min verlieren oft → Mindestalter 8→9 Min",
@@ -4777,6 +4772,11 @@
         "when": "2026-11-23 20:09:08 CET",
         "lesson": "pump.fun-Coins unter 5 Min verlieren oft → Mindestalter 9→10 Min",
         "trigger": "periodic"
+      },
+      {
+        "when": "2026-11-24 00:13:59 CET",
+        "lesson": "niedriger Pump-Score verlieren oft → Gewicht Volumen-Beschleunigung 0.90×→0.85×",
+        "trigger": "periodic"
       }
     ],
     "bounds_note": "Auto-Tuning ändert nur innerhalb fester Grenzen. Rug-Erkennung, Impersonator-Block, max. 20 % Equity pro Position und das Tagesverlust-Limit von 15 % bleiben unangetastet.",
@@ -4785,11 +4785,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20002 Pools · 2306 Scans · Watch 95 · Graduiert 65 · letzter Scan: trending_1h 15 · trending_5m 15 · ds_search 8 · ds_boosts 19 · ds_boosts_top 6 · ds_profiles 24 · watchlist 37"
+      "detail": "20002 Pools · 2307 Scans · Watch 95 · Graduiert 65 · letzter Scan: trending_1h 15 · trending_5m 15 · ds_search 8 · ds_boosts 19 · ds_boosts_top 6 · ds_profiles 24 · watchlist 37"
     },
     {
       "name": "Analyst",
-      "detail": "2281 bewertet · 57748 abgelehnt"
+      "detail": "2284 bewertet · 57748 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4902,7 +4902,56 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "Phil",
+      "mint": "GMLSyjZCKGtFwztp2mtT8PDeNUA6WEk7oQoe3QkFpump",
+      "pool": "EhniMDRzgsupg5cKyF3Vn8tKnQ9GzGb31TwpcDQF7Y6K",
+      "score": 43,
+      "reasons": [
+        "Volumen zieht an",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 44324.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/GMLSyjZCKGtFwztp2mtT8PDeNUA6WEk7oQoe3QkFpump.png"
+    },
+    {
+      "symbol": "THANKS",
+      "mint": "BECqBzwZmkzM7A3tWimc2qvm7ookzYi8XACHMZgipump",
+      "pool": "5K4J5SVv3PzVDgdNmbjnUbbmoe7Dimr4nxDNZA17tSkS",
+      "score": 37,
+      "reasons": [
+        "Narrativ THANKS",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 57798.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/BECqBzwZmkzM7A3tWimc2qvm7ookzYi8XACHMZgipump.png"
+    },
+    {
+      "symbol": "SCINU",
+      "mint": "GHWEB3FsfqDbNBt9QxVU7kXkUh1cX7kFk5NVDkgApump",
+      "pool": "71rFpnfDq3bpbyCQt2jTkawTLwk2xaBCuWXoAS9S2pft",
+      "score": 32,
+      "reasons": [
+        "Dex-Boost",
+        "Im Trend",
+        "Geringer Price Impact"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 46976.0,
+      "origin": "ds_boosts",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/GHWEB3FsfqDbNBt9QxVU7kXkUh1cX7kFk5NVDkgApump.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4920,126 +4969,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "SANTACAT",
-      "mint": "6jrb9NxTa7PHv6PWHaF5mo3ETgeFNJj7oLKzA4jFpump",
-      "pool": "Gps2EAMbVpULewgzRjG8WCwoKVujahqZSX5jsLeinvWH",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 3325.0,
-      "liq": 2938.37,
-      "age_min": 492.37,
-      "created_at": "2026-11-23T15:00:51Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795475593.497954,
-      "t": "2026-11-24 00:13:13 CET",
-      "id": "6jrb9NxTa7PHv6PWHaF5mo3ETgeFNJj7oLKzA4jFpump-1795475593497"
-    },
-    {
-      "symbol": "S&P500",
-      "mint": "H48z8Mn4c4FZs1AexoRDhVYzZZyNP7kgTRpcxuLcpump",
-      "pool": "1wGyY3Jq4Xdep4BKtrXrqSMFboPowWubNrbfuG6AQ9r",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 1296.0,
-      "liq": 2549.86,
-      "age_min": 254829.91,
-      "created_at": "2026-05-31T00:03:19Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795475593.5017335,
-      "t": "2026-11-24 00:13:13 CET",
-      "id": "H48z8Mn4c4FZs1AexoRDhVYzZZyNP7kgTRpcxuLcpump-1795475593501"
-    },
-    {
-      "symbol": "Terra",
-      "mint": "x6Te5oroApxvvHRGbkc28Bqyj21VpPTL1eXvFCFpump",
-      "pool": "DnYFLLp5nP66ffHsftaSAy2ApA55KdKKTjx5jAv9GEj3",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1445.0,
-      "liq": 1511.06,
-      "age_min": 90.08,
-      "created_at": "2026-11-23T21:43:09Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795475593.505318,
-      "t": "2026-11-24 00:13:13 CET",
-      "id": "x6Te5oroApxvvHRGbkc28Bqyj21VpPTL1eXvFCFpump-1795475593505"
-    },
-    {
-      "symbol": "FUCK!",
-      "mint": "CSjwLiCLyaJqXQm9XCV3LdYWMYswbZ7JQ71JKX77pump",
-      "pool": "fgRBLYqzxJg6hz9R6cB3r3rK8cwCRTTu1h77ZcStoX7",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 653.0,
-      "liq": 384.9,
-      "age_min": 383.69,
-      "created_at": "2026-11-23T16:49:32Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795475593.5088632,
-      "t": "2026-11-24 00:13:13 CET",
-      "id": "CSjwLiCLyaJqXQm9XCV3LdYWMYswbZ7JQ71JKX77pump-1795475593508"
-    },
-    {
-      "symbol": "SUIII",
-      "mint": "AQcV2M5MRS7WccGxocDnVFQM5jBcFR5vL5HXErTPpump",
-      "pool": "4u4xHEuVgzLxFqsiaHnManw5joTxH5J6oyAzExyCZiX4",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 0.0,
-      "liq": 0.0,
-      "age_min": 24.68,
-      "created_at": "2026-11-23T22:48:33Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795475593.51263,
-      "t": "2026-11-24 00:13:13 CET",
-      "id": "AQcV2M5MRS7WccGxocDnVFQM5jBcFR5vL5HXErTPpump-1795475593512"
-    },
-    {
-      "symbol": "WhalesMas",
-      "mint": "4fvx4so9U7fT7bS6sdmkC2GzVaq4gdTAjdEW27SJpump",
-      "pool": "7cqdT9g6UQaZ4hJTDnoXMfifSGL8Aak449KKfbdwkzCW",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "ds_boosts",
-      "mcap": 12923.06,
-      "liq": 0.0,
-      "age_min": 2432.11,
-      "created_at": "2026-11-22T06:41:07Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795475593.516144,
-      "t": "2026-11-24 00:13:13 CET",
-      "id": "4fvx4so9U7fT7bS6sdmkC2GzVaq4gdTAjdEW27SJpump-1795475593516"
-    },
     {
       "symbol": "STKFST",
       "mint": "DhLqheMQTimWUHdiQ2NR4jdLuhnrxHmFJ2ofMpdipump",
@@ -8935,16 +8864,160 @@
       "ts": 1795475624.8331347,
       "t": "2026-11-24 00:13:44 CET",
       "id": "AQcV2M5MRS7WccGxocDnVFQM5jBcFR5vL5HXErTPpump-1795475624833"
+    },
+    {
+      "symbol": "THANKS",
+      "mint": "BECqBzwZmkzM7A3tWimc2qvm7ookzYi8XACHMZgipump",
+      "pool": "5K4J5SVv3PzVDgdNmbjnUbbmoe7Dimr4nxDNZA17tSkS",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 57798.0,
+      "liq": 16756.4,
+      "age_min": 43.77,
+      "created_at": "2026-11-23T22:30:07Z",
+      "decision": "accepted",
+      "reason": "score 54",
+      "score": 54,
+      "pump_score": 37,
+      "pump_reasons": [
+        "Narrativ THANKS",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795475633.0161564,
+      "t": "2026-11-24 00:13:53 CET",
+      "id": "BECqBzwZmkzM7A3tWimc2qvm7ookzYi8XACHMZgipump-1795475633016"
+    },
+    {
+      "symbol": "Phil",
+      "mint": "GMLSyjZCKGtFwztp2mtT8PDeNUA6WEk7oQoe3QkFpump",
+      "pool": "EhniMDRzgsupg5cKyF3Vn8tKnQ9GzGb31TwpcDQF7Y6K",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 44324.0,
+      "liq": 14078.24,
+      "age_min": 9.5,
+      "created_at": "2026-11-23T23:04:28Z",
+      "decision": "accepted",
+      "reason": "score 77",
+      "score": 77,
+      "pump_score": 43,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795475637.7869222,
+      "t": "2026-11-24 00:13:57 CET",
+      "id": "GMLSyjZCKGtFwztp2mtT8PDeNUA6WEk7oQoe3QkFpump-1795475637786"
+    },
+    {
+      "symbol": "SCINU",
+      "mint": "GHWEB3FsfqDbNBt9QxVU7kXkUh1cX7kFk5NVDkgApump",
+      "pool": "71rFpnfDq3bpbyCQt2jTkawTLwk2xaBCuWXoAS9S2pft",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 46976.0,
+      "liq": 14791.33,
+      "age_min": 304.33,
+      "created_at": "2026-11-23T18:09:40Z",
+      "decision": "accepted",
+      "reason": "score 84",
+      "score": 84,
+      "pump_score": 32,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Im Trend",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795475639.5502295,
+      "t": "2026-11-24 00:13:59 CET",
+      "id": "GHWEB3FsfqDbNBt9QxVU7kXkUh1cX7kFk5NVDkgApump-1795475639550"
+    },
+    {
+      "symbol": "Phil",
+      "mint": "GMLSyjZCKGtFwztp2mtT8PDeNUA6WEk7oQoe3QkFpump",
+      "pool": "EhniMDRzgsupg5cKyF3Vn8tKnQ9GzGb31TwpcDQF7Y6K",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 44324.0,
+      "liq": 14078.24,
+      "age_min": 9.53,
+      "created_at": "2026-11-23T23:04:28Z",
+      "decision": "skipped",
+      "reason": "position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 77,
+      "pump_score": 43,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795475639.5550418,
+      "t": "2026-11-24 00:13:59 CET",
+      "id": "GMLSyjZCKGtFwztp2mtT8PDeNUA6WEk7oQoe3QkFpump-1795475639555"
+    },
+    {
+      "symbol": "THANKS",
+      "mint": "BECqBzwZmkzM7A3tWimc2qvm7ookzYi8XACHMZgipump",
+      "pool": "5K4J5SVv3PzVDgdNmbjnUbbmoe7Dimr4nxDNZA17tSkS",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 57798.0,
+      "liq": 16756.4,
+      "age_min": 43.88,
+      "created_at": "2026-11-23T22:30:07Z",
+      "decision": "skipped",
+      "reason": "score 54 < 62",
+      "score": 54,
+      "pump_score": 37,
+      "pump_reasons": [
+        "Narrativ THANKS",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795475639.5587046,
+      "t": "2026-11-24 00:13:59 CET",
+      "id": "BECqBzwZmkzM7A3tWimc2qvm7ookzYi8XACHMZgipump-1795475639558"
+    },
+    {
+      "symbol": "SCINU",
+      "mint": "GHWEB3FsfqDbNBt9QxVU7kXkUh1cX7kFk5NVDkgApump",
+      "pool": "71rFpnfDq3bpbyCQt2jTkawTLwk2xaBCuWXoAS9S2pft",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 46976.0,
+      "liq": 14791.33,
+      "age_min": 304.33,
+      "created_at": "2026-11-23T18:09:40Z",
+      "decision": "skipped",
+      "reason": "position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 84,
+      "pump_score": 32,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Im Trend",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795475639.5624645,
+      "t": "2026-11-24 00:13:59 CET",
+      "id": "GHWEB3FsfqDbNBt9QxVU7kXkUh1cX7kFk5NVDkgApump-1795475639562"
     }
   ],
   "feed_stats": {
-    "emitted": 31246,
-    "per_min": 127.4,
+    "emitted": 31252,
+    "per_min": 127.25,
     "by_decision": {
       "seen": 25646,
       "rejected": 4898,
-      "accepted": 351,
-      "skipped": 351
+      "accepted": 354,
+      "skipped": 354
     },
     "by_source": {
       "pump_logs": 64,
@@ -8952,9 +9025,9 @@
       "ds_search": 2664,
       "trending_5m": 3607,
       "trending_1h": 2724,
-      "ds_boosts": 4103,
+      "ds_boosts": 4105,
       "ds_boosts_top": 1401,
-      "ds_profiles": 5642,
+      "ds_profiles": 5646,
       "watchlist": 4884
     },
     "pumpfun": 13037
@@ -8963,7 +9036,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.3,
+  "heartbeat_age_s": 0.5,
   "bot_alive": true,
   "supervisor_alive": true
 }
