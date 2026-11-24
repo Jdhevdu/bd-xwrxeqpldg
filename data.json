@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-24 12:46:50 CET",
-  "last_update": "2026-11-24 12:45:34 CET",
+  "exported_at": "2026-11-24 12:47:20 CET",
+  "last_update": "2026-11-24 12:47:11 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.488685310576996,
@@ -107,7 +107,7 @@
     "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.4,
-    "work_p95_ms": 1.1,
+    "work_p95_ms": 1.0,
     "work_max_ms": 529.8,
     "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
@@ -119,12 +119,12 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 3008,
+    "cycles": 3009,
     "pools_scanned": 524011,
     "unique_pools": 20017,
     "prefilter_rejected": 75675,
-    "safety_rejected": 2120,
-    "scored": 3602,
+    "safety_rejected": 2121,
+    "scored": 3604,
     "buys": 88,
     "sells": 93
   },
@@ -339,6 +339,60 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-24 12:47:11 CET",
+      "ts": 1795520831.0,
+      "kind": "Skipped",
+      "symbol": "DUVAL",
+      "reason": "score 63 < 64",
+      "text": "DUVAL score 63 - score 63 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 12:47:11 CET",
+      "ts": 1795520831.0,
+      "kind": "Skipped",
+      "symbol": "FoolCoin",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "FoolCoin score 71 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 12:47:11 CET",
+      "ts": 1795520831.0,
+      "kind": "Skipped",
+      "symbol": "Scamsem",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Scamsem score 75 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 12:47:11 CET",
+      "ts": 1795520831.0,
+      "kind": "Rejected",
+      "symbol": "ANTFUN",
+      "reason": "top10 holders 59% > 50%",
+      "text": "ANTFUN - top10 holders 59% > 50%",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 12:47:11 CET",
+      "ts": 1795520831.0,
+      "kind": "Scored",
+      "symbol": "DUVAL",
+      "reason": "DUVAL [watchlist, graduated] score 63 | liq $24,153 | h1 +1.1% | top10 17% | LP 100% | liquidity:2.3 vol_liq:2 buy_pressure:10.5 holders:14.1 authorities:10 lp:10.0 age:5 momentum:5 pump:35 | pump 35 (Volumen zieht an, Geringer Price Impact, Im Trend)",
+      "text": "DUVAL [watchlist, graduated] score 63 | liq $24,153 | h1 +1.1% | top10 17% | LP 100% | liquidity:2.3 vol_liq:2 buy_pressure:10.5 holders:14.1 authorities:10 lp:10.0 age:5 momentum:5 pump:35 | pump 35 (Volumen zieht an, Geringer Price Impact, Im Trend)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 12:47:04 CET",
+      "ts": 1795520824.0,
+      "kind": "Scored",
+      "symbol": "Scamsem",
+      "reason": "Scamsem [ds_profiles, graduated] score 75 | liq $43,674 | h1 -21.6% | top10 20% | LP 100% | liquidity:5.1 vol_liq:15 buy_pressure:11.9 holders:13.0 authorities:10 lp:10.0 age:5 momentum:0 narrative:SCAMSEM pump:31 | narrative SCAMSEM | pump 31 (Narrativ SCAMSEM, Im Trend, Socials ergänzt)",
+      "text": "Scamsem [ds_profiles, graduated] score 75 | liq $43,674 | h1 -21.6% | top10 20% | LP 100% | liquidity:5.1 vol_liq:15 buy_pressure:11.9 holders:13.0 authorities:10 lp:10.0 age:5 momentum:0 narrative:SCAMSEM pump:31 | narrative SCAMSEM | pump 31 (Narrativ SCAMSEM, Im Trend, Socials ergänzt)",
+      "curve": false
+    },
     {
       "t": "2026-11-24 12:46:34 CET",
       "ts": 1795520794.0,
@@ -644,63 +698,63 @@
       "reason": "liquidity $2,326 < $10,000",
       "text": "Guest (pumpswap) - liquidity $2,326 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-24 12:45:41 CET",
-      "ts": 1795520741.0,
-      "kind": "Rejected",
-      "symbol": "RANSEM",
-      "reason": "liquidity $2,387 < $10,000",
-      "text": "RANSEM (pumpswap) - liquidity $2,387 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 12:45:41 CET",
-      "ts": 1795520741.0,
-      "kind": "Rejected",
-      "symbol": "NIO",
-      "reason": "liquidity $2,720 < $10,000",
-      "text": "NIO (pumpswap) - liquidity $2,720 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 12:45:41 CET",
-      "ts": 1795520741.0,
-      "kind": "Rejected",
-      "symbol": "scamsem",
-      "reason": "liquidity $3,739 < $10,000",
-      "text": "scamsem (pumpswap) - liquidity $3,739 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 12:45:41 CET",
-      "ts": 1795520741.0,
-      "kind": "Rejected",
-      "symbol": "bearpen",
-      "reason": "liquidity $4,371 < $10,000",
-      "text": "bearpen (pumpswap) - liquidity $4,371 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 12:45:41 CET",
-      "ts": 1795520741.0,
-      "kind": "Rejected",
-      "symbol": "Satoshi",
-      "reason": "liquidity $6,535 < $10,000",
-      "text": "Satoshi (pumpswap) - liquidity $6,535 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 12:45:41 CET",
-      "ts": 1795520741.0,
-      "kind": "Rejected",
-      "symbol": "AMBER",
-      "reason": "liquidity $9,952 < $10,000",
-      "text": "AMBER (pumpswap) - liquidity $9,952 < $10,000",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-24 12:47:11 CET",
+      "ts": 1795520831.0,
+      "kind": "Skipped",
+      "symbol": "DUVAL",
+      "reason": "score 63 < 64",
+      "text": "DUVAL score 63 - score 63 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 12:47:11 CET",
+      "ts": 1795520831.0,
+      "kind": "Skipped",
+      "symbol": "FoolCoin",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "FoolCoin score 71 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 12:47:11 CET",
+      "ts": 1795520831.0,
+      "kind": "Skipped",
+      "symbol": "Scamsem",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Scamsem score 75 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 12:47:11 CET",
+      "ts": 1795520831.0,
+      "kind": "Rejected",
+      "symbol": "ANTFUN",
+      "reason": "top10 holders 59% > 50%",
+      "text": "ANTFUN - top10 holders 59% > 50%",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 12:47:11 CET",
+      "ts": 1795520831.0,
+      "kind": "Scored",
+      "symbol": "DUVAL",
+      "reason": "DUVAL [watchlist, graduated] score 63 | liq $24,153 | h1 +1.1% | top10 17% | LP 100% | liquidity:2.3 vol_liq:2 buy_pressure:10.5 holders:14.1 authorities:10 lp:10.0 age:5 momentum:5 pump:35 | pump 35 (Volumen zieht an, Geringer Price Impact, Im Trend)",
+      "text": "DUVAL [watchlist, graduated] score 63 | liq $24,153 | h1 +1.1% | top10 17% | LP 100% | liquidity:2.3 vol_liq:2 buy_pressure:10.5 holders:14.1 authorities:10 lp:10.0 age:5 momentum:5 pump:35 | pump 35 (Volumen zieht an, Geringer Price Impact, Im Trend)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 12:47:04 CET",
+      "ts": 1795520824.0,
+      "kind": "Scored",
+      "symbol": "Scamsem",
+      "reason": "Scamsem [ds_profiles, graduated] score 75 | liq $43,674 | h1 -21.6% | top10 20% | LP 100% | liquidity:5.1 vol_liq:15 buy_pressure:11.9 holders:13.0 authorities:10 lp:10.0 age:5 momentum:0 narrative:SCAMSEM pump:31 | narrative SCAMSEM | pump 31 (Narrativ SCAMSEM, Im Trend, Socials ergänzt)",
+      "text": "Scamsem [ds_profiles, graduated] score 75 | liq $43,674 | h1 -21.6% | top10 20% | LP 100% | liquidity:5.1 vol_liq:15 buy_pressure:11.9 holders:13.0 authorities:10 lp:10.0 age:5 momentum:0 narrative:SCAMSEM pump:31 | narrative SCAMSEM | pump 31 (Narrativ SCAMSEM, Im Trend, Socials ergänzt)",
+      "curve": false
+    },
     {
       "t": "2026-11-24 12:46:34 CET",
       "ts": 1795520794.0,
@@ -871,63 +925,9 @@
       "reason": "liquidity $3,739 < $10,000",
       "text": "scamsem (pumpswap) - liquidity $3,739 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-24 12:45:41 CET",
-      "ts": 1795520741.0,
-      "kind": "Rejected",
-      "symbol": "bearpen",
-      "reason": "liquidity $4,371 < $10,000",
-      "text": "bearpen (pumpswap) - liquidity $4,371 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 12:45:41 CET",
-      "ts": 1795520741.0,
-      "kind": "Rejected",
-      "symbol": "Satoshi",
-      "reason": "liquidity $6,535 < $10,000",
-      "text": "Satoshi (pumpswap) - liquidity $6,535 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 12:45:41 CET",
-      "ts": 1795520741.0,
-      "kind": "Rejected",
-      "symbol": "AMBER",
-      "reason": "liquidity $9,952 < $10,000",
-      "text": "AMBER (pumpswap) - liquidity $9,952 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 12:45:41 CET",
-      "ts": 1795520741.0,
-      "kind": "Rejected",
-      "symbol": "TRUMP",
-      "reason": "official token TRUMP (not a memecoin)",
-      "text": "TRUMP (meteora) - official token TRUMP (not a memecoin)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 12:45:34 CET",
-      "ts": 1795520734.0,
-      "kind": "Skipped",
-      "symbol": "GROKIA",
-      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "GROKIA score 99 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 12:45:34 CET",
-      "ts": 1795520734.0,
-      "kind": "Skipped",
-      "symbol": "DUVAL",
-      "reason": "score 58 < 64",
-      "text": "DUVAL score 58 - score 58 < 64",
-      "curve": false
     }
   ],
-  "curve_skips": 2293,
+  "curve_skips": 2287,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -2730,12 +2730,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795505543.4218736,
-      "t_label": "2026-11-24 08:32:23 CET",
-      "usd": 8.4576,
-      "eur": 7.6525
-    },
-    {
       "t": 1795505579.7572374,
       "t_label": "2026-11-24 08:32:59 CET",
       "usd": 8.4576,
@@ -3928,6 +3922,12 @@
       "t_label": "2026-11-24 12:45:34 CET",
       "usd": 8.2765,
       "eur": 7.4887
+    },
+    {
+      "t": 1795520831.5773597,
+      "t_label": "2026-11-24 12:47:11 CET",
+      "usd": 8.2765,
+      "eur": 7.4887
     }
   ],
   "agents": {
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795520808.7199702,
+      "updated_ts": 1795520838.727624,
       "stages": {
         "discovery": {
           "p50_s": 56.497,
@@ -4017,7 +4017,7 @@
         },
         "bot_to_phone": {
           "p50_s": 0.122,
-          "p95_s": 0.153,
+          "p95_s": 0.139,
           "max_s": 0.608,
           "last_s": 0.121,
           "n": 200
@@ -4052,13 +4052,28 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "BANDIT",
+      "token": "ANTFUN",
       "pill": "118 pools",
       "pill_kind": "blue",
       "detail": "20,017 unique pools",
       "pools": 118,
       "unique": 20017,
       "filters": [
+        {
+          "symbol": "ANTFUN",
+          "text": "top 10 > 25%",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "DUVAL",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "Scamsem",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "BANDIT",
           "text": "dex pump-fun not graduated/allowed",
@@ -4083,35 +4098,20 @@
           "symbol": "dogbaton",
           "text": "dex pump-fun not graduated/allowed",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "$ANSEM",
-          "text": "dex pump-fun not graduated/allowed",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "trench",
-          "text": "dex pump-fun not graduated/allowed",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "MB",
-          "text": "pool age 1 min < 15",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "FoolCoin",
-      "pill": "71",
+      "token": "DUVAL",
+      "pill": "63",
       "pill_kind": "purple",
-      "detail": "FoolCoin [ds_profiles, graduated] score 71 | liq $13,276 | h1 +566.0% | top10 26% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:12.1 holders:10.4 authorities:10 lp:10.0 age:5 momentum:3 narrative:FOOLCOIN pump:31 | narrative FOOLCOIN | pump 31 (Narrativ FOOLCOIN, Im Trend, Socials ergänzt)",
-      "score": 71,
+      "detail": "DUVAL [watchlist, graduated] score 63 | liq $24,153 | h1 +1.1% | top10 17% | LP 100% | liquidity:2.3 vol_liq:2 buy_pressure:10.5 holders:14.1 authorities:10 lp:10.0 age:5 momentum:5 pump:35 | pump 35 (Volumen zieht an, Geringer Price Impact, Im Trend)",
+      "score": 63,
       "passed": true,
       "status": "passed",
-      "rejected": 77795
+      "rejected": 77796
     },
     "executor": {
       "name": "Executor",
@@ -4298,11 +4298,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20017 Pools · 3008 Scans · Watch 262 · Graduiert 110 · letzter Scan: ds_search 15 · trending_1h 16 · trending_5m 18 · ds_boosts 10 · ds_profiles 22 · watchlist 37"
+      "detail": "20017 Pools · 3009 Scans · Watch 262 · Graduiert 110 · letzter Scan: ds_search 15 · trending_1h 16 · trending_5m 18 · ds_boosts 10 · ds_profiles 22 · watchlist 37"
     },
     {
       "name": "Analyst",
-      "detail": "3602 bewertet · 77795 abgelehnt"
+      "detail": "3604 bewertet · 77796 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4415,7 +4415,56 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "DUVAL",
+      "mint": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
+      "pool": "CSvKMfrQ2TedEZEDpFSoHbGqxNb1A3w5o2vVM6Y5eoQ5",
+      "score": 35,
+      "reasons": [
+        "Volumen zieht an",
+        "Geringer Price Impact",
+        "Im Trend"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 106856.0,
+      "origin": "watchlist",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump.png"
+    },
+    {
+      "symbol": "FoolCoin",
+      "mint": "8RKV9GyNmhQAVaKVEYK9tBMWkJy7BAJ5JpXAsSV8pump",
+      "pool": "55W4D2FTCJkH7Z1iRfRxDXWr25eommcaa2m1XCYpnsHZ",
+      "score": 31,
+      "reasons": [
+        "Narrativ FOOLCOIN",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 38686.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/8RKV9GyNmhQAVaKVEYK9tBMWkJy7BAJ5JpXAsSV8pump.png"
+    },
+    {
+      "symbol": "Scamsem",
+      "mint": "5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat",
+      "pool": "DpbNUa2AJJWwt94p3WxRDummaMcDnu68QTtr41QjEaRW",
+      "score": 31,
+      "reasons": [
+        "Narrativ SCAMSEM",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 64106.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4433,126 +4482,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "UCASH",
-      "mint": "7cFiqdT46zs7ooHWLFiLSaSQKLMibtokh9dBinsspump",
-      "pool": "4h7R5JzaQ6PgNjFuD12AeUQJRQYgwz2YhPSrA6sh1Rxt",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 2811.0,
-      "liq": 3511.01,
-      "age_min": 2910.25,
-      "created_at": "2026-11-22T11:15:03Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795520718.0348005,
-      "t": "2026-11-24 12:45:18 CET",
-      "id": "7cFiqdT46zs7ooHWLFiLSaSQKLMibtokh9dBinsspump-1795520718034"
-    },
-    {
-      "symbol": "RANSEM",
-      "mint": "HgxPiLhX6r2a8fH39x1qc5qxnTZwLwzbGsi9TPRFpump",
-      "pool": "ExSAcFLV9v6RXAVJo2cori84ieTDfjPEYYpk4pnQsbfz",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 2278.0,
-      "liq": 2386.79,
-      "age_min": 46.62,
-      "created_at": "2026-11-24T10:58:41Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795520718.0385401,
-      "t": "2026-11-24 12:45:18 CET",
-      "id": "HgxPiLhX6r2a8fH39x1qc5qxnTZwLwzbGsi9TPRFpump-1795520718038"
-    },
-    {
-      "symbol": "DogeFart",
-      "mint": "9g6m4XPPHCawYDnuWNAzEJjux7zBp1sCGceJYAfEeqax",
-      "pool": "BepcdCN5w6cUzp4YuYuZ5g7kDeEb3rsT9SmVDwhWhJXv",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1942.0,
-      "liq": 2021.61,
-      "age_min": 174.42,
-      "created_at": "2026-11-24T08:50:53Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795520718.043301,
-      "t": "2026-11-24 12:45:18 CET",
-      "id": "9g6m4XPPHCawYDnuWNAzEJjux7zBp1sCGceJYAfEeqax-1795520718043"
-    },
-    {
-      "symbol": "Ansem",
-      "mint": "J9cZTMNvVfmsMqCrvLeojyxqhkoAGCeKWhvcfhhtzBnW",
-      "pool": "DHjgufeiLLkxSJ1EamodAUccCZf7sFfr6iHVrTupBJLW",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1831.0,
-      "liq": 1996.8,
-      "age_min": 167.8,
-      "created_at": "2026-11-24T08:57:30Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795520718.0470853,
-      "t": "2026-11-24 12:45:18 CET",
-      "id": "J9cZTMNvVfmsMqCrvLeojyxqhkoAGCeKWhvcfhhtzBnW-1795520718047"
-    },
-    {
-      "symbol": "Trenchers",
-      "mint": "BWtNaVHGyQRv8s358qWWn2qGmuavR9vn8upFnTKoBwtc",
-      "pool": "47k8sx6VWS3prGgE3WpN3UZ6HGfBvk6HjAY2RoTiCioj",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 1849.0,
-      "liq": 1885.35,
-      "age_min": 54.52,
-      "created_at": "2026-11-24T10:50:47Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795520718.0517576,
-      "t": "2026-11-24 12:45:18 CET",
-      "id": "BWtNaVHGyQRv8s358qWWn2qGmuavR9vn8upFnTKoBwtc-1795520718051"
-    },
-    {
-      "symbol": "Scam",
-      "mint": "Bbxy7BETF5p2XeXW2rJFZUzYuWpJA2pG1B7g4prppump",
-      "pool": "FRX11quVPLyb2XoEPPHYeYCXmekhtCtrMdLhBgcUwTUW",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1770.0,
-      "liq": 1828.26,
-      "age_min": 84.6,
-      "created_at": "2026-11-24T10:20:42Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795520718.0553298,
-      "t": "2026-11-24 12:45:18 CET",
-      "id": "Bbxy7BETF5p2XeXW2rJFZUzYuWpJA2pG1B7g4prppump-1795520718055"
-    },
     {
       "symbol": "BLACKBALLED",
       "mint": "FvcUtkcpCVfKLANAuTbRYtnpM5wzBYLkx1zL84Qrpump",
@@ -8468,27 +8397,167 @@
       "ts": 1795520796.847699,
       "t": "2026-11-24 12:46:36 CET",
       "id": "5LDowscYVD3a6ZS4m8gCqG5nU16eLTwRXhciFi1bpump-1795520796847"
+    },
+    {
+      "symbol": "Scamsem",
+      "mint": "5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat",
+      "pool": "DpbNUa2AJJWwt94p3WxRDummaMcDnu68QTtr41QjEaRW",
+      "dex": "raydium",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 64106.0,
+      "liq": 43673.64,
+      "age_min": 155.27,
+      "created_at": "2026-11-24T09:11:49Z",
+      "decision": "accepted",
+      "reason": "score 75",
+      "score": 75,
+      "pump_score": 31,
+      "pump_reasons": [
+        "Narrativ SCAMSEM",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795520824.9005334,
+      "t": "2026-11-24 12:47:04 CET",
+      "id": "5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat-1795520824900"
+    },
+    {
+      "symbol": "DUVAL",
+      "mint": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
+      "pool": "CSvKMfrQ2TedEZEDpFSoHbGqxNb1A3w5o2vVM6Y5eoQ5",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 106856.0,
+      "liq": 24152.9,
+      "age_min": 95.25,
+      "created_at": "2026-11-24T10:11:56Z",
+      "decision": "accepted",
+      "reason": "score 63",
+      "score": 63,
+      "pump_score": 35,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Geringer Price Impact",
+        "Im Trend"
+      ],
+      "ts": 1795520831.1745145,
+      "t": "2026-11-24 12:47:11 CET",
+      "id": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump-1795520831174"
+    },
+    {
+      "symbol": "ANTFUN",
+      "mint": "CWZ6BsdnjkDVTGkmL6bGbJXXig6ceef12KvyGQW14cMt",
+      "pool": "54Vp27uLaw4wNLo5n7r4fcC6zLamoQc28xBARjss4EUJ",
+      "dex": "meteora",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 93592805.1316402,
+      "liq": 11979140.5818,
+      "age_min": 197717.24,
+      "created_at": "2026-07-10T04:29:57Z",
+      "decision": "rejected",
+      "reason": "top10 holders 59% > 50%",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795520831.5552163,
+      "t": "2026-11-24 12:47:11 CET",
+      "id": "CWZ6BsdnjkDVTGkmL6bGbJXXig6ceef12KvyGQW14cMt-1795520831555"
+    },
+    {
+      "symbol": "Scamsem",
+      "mint": "5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat",
+      "pool": "DpbNUa2AJJWwt94p3WxRDummaMcDnu68QTtr41QjEaRW",
+      "dex": "raydium",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 64106.0,
+      "liq": 43673.64,
+      "age_min": 155.38,
+      "created_at": "2026-11-24T09:11:49Z",
+      "decision": "skipped",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 75,
+      "pump_score": 31,
+      "pump_reasons": [
+        "Narrativ SCAMSEM",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795520831.5598943,
+      "t": "2026-11-24 12:47:11 CET",
+      "id": "5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat-1795520831559"
+    },
+    {
+      "symbol": "FoolCoin",
+      "mint": "8RKV9GyNmhQAVaKVEYK9tBMWkJy7BAJ5JpXAsSV8pump",
+      "pool": "55W4D2FTCJkH7Z1iRfRxDXWr25eommcaa2m1XCYpnsHZ",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 38686.0,
+      "liq": 13275.77,
+      "age_min": 220.88,
+      "created_at": "2026-11-24T08:06:19Z",
+      "decision": "skipped",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 71,
+      "pump_score": 31,
+      "pump_reasons": [
+        "Narrativ FOOLCOIN",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795520831.5657976,
+      "t": "2026-11-24 12:47:11 CET",
+      "id": "8RKV9GyNmhQAVaKVEYK9tBMWkJy7BAJ5JpXAsSV8pump-1795520831565"
+    },
+    {
+      "symbol": "DUVAL",
+      "mint": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
+      "pool": "CSvKMfrQ2TedEZEDpFSoHbGqxNb1A3w5o2vVM6Y5eoQ5",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 106856.0,
+      "liq": 24152.9,
+      "age_min": 95.26,
+      "created_at": "2026-11-24T10:11:56Z",
+      "decision": "skipped",
+      "reason": "score 63 < 64",
+      "score": 63,
+      "pump_score": 35,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Geringer Price Impact",
+        "Im Trend"
+      ],
+      "ts": 1795520831.5697594,
+      "t": "2026-11-24 12:47:11 CET",
+      "id": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump-1795520831569"
     }
   ],
   "feed_stats": {
-    "emitted": 130376,
-    "per_min": 130.6,
+    "emitted": 130382,
+    "per_min": 130.54,
     "by_decision": {
       "seen": 102403,
-      "rejected": 24630,
-      "accepted": 1673,
-      "skipped": 1670
+      "rejected": 24631,
+      "accepted": 1675,
+      "skipped": 1673
     },
     "by_source": {
       "pump_logs": 1062,
       "new": 23013,
       "ds_search": 10475,
-      "trending_5m": 14106,
+      "trending_5m": 14107,
       "trending_1h": 11334,
       "ds_boosts": 12002,
       "ds_boosts_top": 2469,
-      "ds_profiles": 24207,
-      "watchlist": 31708
+      "ds_profiles": 24210,
+      "watchlist": 31710
     },
     "pumpfun": 54483
   },
@@ -8496,7 +8565,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.5,
+  "heartbeat_age_s": 1.0,
   "bot_alive": true,
   "supervisor_alive": true
 }
