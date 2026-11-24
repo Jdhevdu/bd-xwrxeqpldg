@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-24 18:02:57 CET",
+  "exported_at": "2026-11-24 18:03:59 CET",
   "last_update": "2026-11-24 18:02:51 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -103,13 +103,13 @@
   "loop_latency": {
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
-    "max_ms": 1005.4,
+    "max_ms": 45013.6,
     "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.1,
     "work_max_ms": 9.1,
-    "work_last_ms": 0.4,
+    "work_last_ms": 0.5,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 69.01818307200404,
@@ -119,7 +119,7 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 3312,
+    "cycles": 3313,
     "pools_scanned": 560062,
     "unique_pools": 20014,
     "prefilter_rejected": 85187,
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795539776.9464545,
+      "updated_ts": 1795539839.0033152,
       "stages": {
         "discovery": {
           "p50_s": 51.153,
@@ -4017,9 +4017,9 @@
         },
         "bot_to_phone": {
           "p50_s": 0.127,
-          "p95_s": 0.148,
+          "p95_s": 0.153,
           "max_s": 0.602,
-          "last_s": 0.125,
+          "last_s": 0.183,
           "n": 200
         },
         "event_to_phone": {
@@ -4298,7 +4298,7 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20014 Pools · 3312 Scans · Watch 334 · Graduiert 130 · letzter Scan: ds_search 15 · trending_5m 18 · trending_1h 5 · ds_boosts 19 · watchlist 41 · ds_profiles 23"
+      "detail": "20014 Pools · 3313 Scans · Watch 334 · Graduiert 130 · letzter Scan: ds_search 15 · trending_5m 18 · trending_1h 5 · ds_boosts 19 · watchlist 41 · ds_profiles 23"
     },
     {
       "name": "Analyst",
@@ -8528,7 +8528,7 @@
   ],
   "feed_stats": {
     "emitted": 174145,
-    "per_min": 132.5,
+    "per_min": 132.38,
     "by_decision": {
       "seen": 134613,
       "rejected": 34122,
@@ -8552,7 +8552,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.7,
+  "heartbeat_age_s": 0.3,
   "bot_alive": true,
   "supervisor_alive": true
 }
