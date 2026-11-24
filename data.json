@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 00:29:50 CET",
-  "last_update": "2026-11-25 00:29:28 CET",
+  "exported_at": "2026-11-25 00:30:00 CET",
+  "last_update": "2026-11-25 00:29:54 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.4657209218531095,
@@ -107,9 +107,9 @@
     "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.4,
-    "work_p95_ms": 1.2,
+    "work_p95_ms": 1.1,
     "work_max_ms": 260.9,
-    "work_last_ms": 0.3,
+    "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 69.90609561534477,
@@ -120,18 +120,18 @@
   "halted": false,
   "counters": {
     "cycles": 3689,
-    "pools_scanned": 609125,
-    "unique_pools": 20004,
-    "prefilter_rejected": 96396,
+    "pools_scanned": 609250,
+    "unique_pools": 20002,
+    "prefilter_rejected": 96410,
     "safety_rejected": 2502,
-    "scored": 5769,
+    "scored": 5771,
     "buys": 88,
     "sells": 93
   },
   "last_scan_sources": {
-    "ds_search": 13,
-    "trending_5m": 15,
-    "trending_1h": 11,
+    "ds_search": 12,
+    "trending_1h": 14,
+    "trending_5m": 13,
     "ds_boosts": 20,
     "ds_profiles": 26,
     "watchlist": 39,
@@ -340,6 +340,42 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-25 00:29:54 CET",
+      "ts": 1795562994.0,
+      "kind": "Skipped",
+      "symbol": "goldcoin",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "goldcoin score 66 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 00:29:54 CET",
+      "ts": 1795562994.0,
+      "kind": "Skipped",
+      "symbol": "ELF",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "ELF score 68 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 00:29:54 CET",
+      "ts": 1795562994.0,
+      "kind": "Scored",
+      "symbol": "ELF",
+      "reason": "ELF [watchlist, graduated] score 68 | liq $11,477 | h1 +12.8% | top10 22% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:5.1 holders:12.0 authorities:10 lp:10.0 age:2 momentum:10 pump:29 | pump 29 (Geringer Price Impact, Socials ergänzt)",
+      "text": "ELF [watchlist, graduated] score 68 | liq $11,477 | h1 +12.8% | top10 22% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:5.1 holders:12.0 authorities:10 lp:10.0 age:2 momentum:10 pump:29 | pump 29 (Geringer Price Impact, Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 00:29:52 CET",
+      "ts": 1795562992.0,
+      "kind": "Scored",
+      "symbol": "goldcoin",
+      "reason": "goldcoin [ds_profiles, graduated] score 66 | liq $23,360 | h1 +32.9% | top10 27% | LP 100% | liquidity:2.1 vol_liq:2 buy_pressure:13.3 holders:10.0 authorities:10 lp:10.0 age:5 momentum:10 pump:34 | pump 34 (Liquidität steigt, Geringer Price Impact, Im Trend)",
+      "text": "goldcoin [ds_profiles, graduated] score 66 | liq $23,360 | h1 +32.9% | top10 27% | LP 100% | liquidity:2.1 vol_liq:2 buy_pressure:13.3 holders:10.0 authorities:10 lp:10.0 age:5 momentum:10 pump:34 | pump 34 (Liquidität steigt, Geringer Price Impact, Im Trend)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 00:29:49 CET",
       "ts": 1795562989.0,
@@ -663,45 +699,45 @@
       "reason": "pool age 1 min < 15",
       "text": "Huang (pumpswap) - pool age 1 min < 15",
       "curve": false
-    },
-    {
-      "t": "2026-11-25 00:29:17 CET",
-      "ts": 1795562957.0,
-      "kind": "Rejected",
-      "symbol": "Town",
-      "reason": "liquidity $1,386 < $10,000",
-      "text": "Town (pumpswap) - liquidity $1,386 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 00:29:17 CET",
-      "ts": 1795562957.0,
-      "kind": "Rejected",
-      "symbol": "smolcat",
-      "reason": "liquidity $1,404 < $10,000",
-      "text": "smolcat (pumpswap) - liquidity $1,404 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 00:29:17 CET",
-      "ts": 1795562957.0,
-      "kind": "Rejected",
-      "symbol": "N3ON",
-      "reason": "liquidity $1,459 < $10,000",
-      "text": "N3ON (pumpswap) - liquidity $1,459 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 00:29:17 CET",
-      "ts": 1795562957.0,
-      "kind": "Rejected",
-      "symbol": "Red",
-      "reason": "liquidity $1,812 < $10,000",
-      "text": "Red (pumpswap) - liquidity $1,812 < $10,000",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-25 00:29:54 CET",
+      "ts": 1795562994.0,
+      "kind": "Skipped",
+      "symbol": "goldcoin",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "goldcoin score 66 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 00:29:54 CET",
+      "ts": 1795562994.0,
+      "kind": "Skipped",
+      "symbol": "ELF",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "ELF score 68 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 00:29:54 CET",
+      "ts": 1795562994.0,
+      "kind": "Scored",
+      "symbol": "ELF",
+      "reason": "ELF [watchlist, graduated] score 68 | liq $11,477 | h1 +12.8% | top10 22% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:5.1 holders:12.0 authorities:10 lp:10.0 age:2 momentum:10 pump:29 | pump 29 (Geringer Price Impact, Socials ergänzt)",
+      "text": "ELF [watchlist, graduated] score 68 | liq $11,477 | h1 +12.8% | top10 22% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:5.1 holders:12.0 authorities:10 lp:10.0 age:2 momentum:10 pump:29 | pump 29 (Geringer Price Impact, Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 00:29:52 CET",
+      "ts": 1795562992.0,
+      "kind": "Scored",
+      "symbol": "goldcoin",
+      "reason": "goldcoin [ds_profiles, graduated] score 66 | liq $23,360 | h1 +32.9% | top10 27% | LP 100% | liquidity:2.1 vol_liq:2 buy_pressure:13.3 holders:10.0 authorities:10 lp:10.0 age:5 momentum:10 pump:34 | pump 34 (Liquidität steigt, Geringer Price Impact, Im Trend)",
+      "text": "goldcoin [ds_profiles, graduated] score 66 | liq $23,360 | h1 +32.9% | top10 27% | LP 100% | liquidity:2.1 vol_liq:2 buy_pressure:13.3 holders:10.0 authorities:10 lp:10.0 age:5 momentum:10 pump:34 | pump 34 (Liquidität steigt, Geringer Price Impact, Im Trend)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 00:29:49 CET",
       "ts": 1795562989.0,
@@ -890,45 +926,9 @@
       "reason": "liquidity $1,386 < $10,000",
       "text": "Town (pumpswap) - liquidity $1,386 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-25 00:29:17 CET",
-      "ts": 1795562957.0,
-      "kind": "Rejected",
-      "symbol": "smolcat",
-      "reason": "liquidity $1,404 < $10,000",
-      "text": "smolcat (pumpswap) - liquidity $1,404 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 00:29:17 CET",
-      "ts": 1795562957.0,
-      "kind": "Rejected",
-      "symbol": "N3ON",
-      "reason": "liquidity $1,459 < $10,000",
-      "text": "N3ON (pumpswap) - liquidity $1,459 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 00:29:17 CET",
-      "ts": 1795562957.0,
-      "kind": "Rejected",
-      "symbol": "Red",
-      "reason": "liquidity $1,812 < $10,000",
-      "text": "Red (pumpswap) - liquidity $1,812 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 00:29:17 CET",
-      "ts": 1795562957.0,
-      "kind": "Rejected",
-      "symbol": "OATH",
-      "reason": "liquidity $1,825 < $10,000",
-      "text": "OATH (pumpswap) - liquidity $1,825 < $10,000",
-      "curve": false
     }
   ],
-  "curve_skips": 2163,
+  "curve_skips": 2157,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -2731,12 +2731,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795548281.7079005,
-      "t_label": "2026-11-24 20:24:41 CET",
-      "usd": 8.1852,
-      "eur": 7.4061
-    },
-    {
       "t": 1795548305.3150902,
       "t_label": "2026-11-24 20:25:05 CET",
       "usd": 8.1852,
@@ -3929,6 +3923,12 @@
       "t_label": "2026-11-25 00:29:11 CET",
       "usd": 8.2511,
       "eur": 7.4657
+    },
+    {
+      "t": 1795562994.9229028,
+      "t_label": "2026-11-25 00:29:54 CET",
+      "usd": 8.2511,
+      "eur": 7.4657
     }
   ],
   "agents": {
@@ -3944,14 +3944,14 @@
       "price_s": null,
       "price_stale_s": null,
       "stop_to_sell_s": null,
-      "bot_to_phone_s": 0.12,
+      "bot_to_phone_s": 0.122,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795562988.8441584,
+      "updated_ts": 1795562998.838316,
       "stages": {
         "discovery": {
           "p50_s": 56.271,
@@ -4017,10 +4017,10 @@
           "n": 0
         },
         "bot_to_phone": {
-          "p50_s": 0.12,
+          "p50_s": 0.122,
           "p95_s": 0.46,
           "max_s": 0.645,
-          "last_s": 0.121,
+          "last_s": 0.123,
           "n": 200
         },
         "event_to_phone": {
@@ -4053,13 +4053,23 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "Town",
+      "token": "ELF",
       "pill": "125 pools",
       "pill_kind": "blue",
-      "detail": "20,004 unique pools",
+      "detail": "20,002 unique pools",
       "pools": 125,
-      "unique": 20004,
+      "unique": 20002,
       "filters": [
+        {
+          "symbol": "ELF",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "goldcoin",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "Town",
           "text": "liq < $4k",
@@ -4089,16 +4099,6 @@
           "symbol": "viral",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "RAGE",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "Orange",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
@@ -4112,7 +4112,7 @@
       "score": 68,
       "passed": true,
       "status": "passed",
-      "rejected": 98898
+      "rejected": 98912
     },
     "executor": {
       "name": "Executor",
@@ -4299,11 +4299,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20004 Pools · 3689 Scans · Watch 357 · Graduiert 159 · letzter Scan: ds_search 13 · trending_5m 15 · trending_1h 11 · ds_boosts 20 · ds_profiles 26 · watchlist 39 · ds_boosts_top 1"
+      "detail": "20002 Pools · 3689 Scans · Watch 357 · Graduiert 159 · letzter Scan: ds_search 12 · trending_1h 14 · trending_5m 13 · ds_boosts 20 · ds_profiles 26 · watchlist 39 · ds_boosts_top 1"
     },
     {
       "name": "Analyst",
-      "detail": "5769 bewertet · 98898 abgelehnt"
+      "detail": "5771 bewertet · 98912 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4429,7 +4429,7 @@
       ],
       "early": false,
       "tag": null,
-      "mcap": 71505.0,
+      "mcap": 72248.0,
       "origin": "ds_profiles",
       "image_url": "https://cdn.dexscreener.com/tokens/solana/Cp6i5Ka8Gwzzn537KoqLyjQCFX6QBfoAC9WuxEbQpump.png"
     },
@@ -4466,86 +4466,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "Ghost",
-      "mint": "CCqphiiDYN4rcAphVDea9nfdLV1zaTtfPR3NHrcQpump",
-      "pool": "BTokiwU4P4eF151BDVDmz76bNK1DN9CAusR7W55FVvYp",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 2818.08,
-      "liq": 0.0,
-      "age_min": 201.77,
-      "created_at": "2026-11-24T20:07:31Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795562957.4995623,
-      "t": "2026-11-25 00:29:17 CET",
-      "id": "CCqphiiDYN4rcAphVDea9nfdLV1zaTtfPR3NHrcQpump-1795562957499"
-    },
-    {
-      "symbol": "Civilian",
-      "mint": "CiViLiANRXME3FP649zEekMvWahfycta5DUUedeeVnU4",
-      "pool": "9HaeY1xg1LkmJq4B8FvoqP5D6k2ryzSft3N2VeVDzUfd",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 12046.97,
-      "liq": 0.0,
-      "age_min": 195.79,
-      "created_at": "2026-11-24T20:13:30Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795562957.5032604,
-      "t": "2026-11-25 00:29:17 CET",
-      "id": "CiViLiANRXME3FP649zEekMvWahfycta5DUUedeeVnU4-1795562957503"
-    },
-    {
-      "symbol": "FalseFlag",
-      "mint": "JBScVF5MDVr15YxBwtUM6fV2WjJibWTCnKzRy49Mpump",
-      "pool": "73iUa7SzBaBMjjYJVipkWgEwvVN7My1A8JgTjH95dbyh",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 1950.93,
-      "liq": 0.0,
-      "age_min": 198.36,
-      "created_at": "2026-11-24T20:10:56Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795562957.5065224,
-      "t": "2026-11-25 00:29:17 CET",
-      "id": "JBScVF5MDVr15YxBwtUM6fV2WjJibWTCnKzRy49Mpump-1795562957506"
-    },
-    {
-      "symbol": "Ibex",
-      "mint": "E6Y3swiPZR7q3hLge7WJvtdyM1rj5yMtZPru8cGkpump",
-      "pool": "D4kSap7j8HVV3EZXGr8ftsmubV2Rs1yqDwArzqNQ1Rd3",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 2011.24,
-      "liq": 0.0,
-      "age_min": 200.61,
-      "created_at": "2026-11-24T20:08:41Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795562957.509772,
-      "t": "2026-11-25 00:29:17 CET",
-      "id": "E6Y3swiPZR7q3hLge7WJvtdyM1rj5yMtZPru8cGkpump-1795562957509"
-    },
     {
       "symbol": "S&P500",
       "mint": "FVs35DoehjSPhr6zumwdHZo5JZMfnvjEYY77nRuQUecR",
@@ -8479,35 +8399,129 @@
       "ts": 1795562989.079063,
       "t": "2026-11-25 00:29:49 CET",
       "id": "FDv89drtnpyApMMLqy6D2PiDSxnGUs7jeHBF26ebpump-1795562989079"
+    },
+    {
+      "symbol": "goldcoin",
+      "mint": "Cp6i5Ka8Gwzzn537KoqLyjQCFX6QBfoAC9WuxEbQpump",
+      "pool": "hGE1tMC84avducEFSwovCRYbYHpAYedrskSPcqgzAdH",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 72248.0,
+      "liq": 23360.19,
+      "age_min": 106.83,
+      "created_at": "2026-11-24T21:43:03Z",
+      "decision": "accepted",
+      "reason": "score 66",
+      "score": 66,
+      "pump_score": 34,
+      "pump_reasons": [
+        "Liquidität steigt",
+        "Geringer Price Impact",
+        "Im Trend"
+      ],
+      "ts": 1795562992.6772506,
+      "t": "2026-11-25 00:29:52 CET",
+      "id": "Cp6i5Ka8Gwzzn537KoqLyjQCFX6QBfoAC9WuxEbQpump-1795562992677"
+    },
+    {
+      "symbol": "ELF",
+      "mint": "o5LM35Afta4i5CFRGwsgtjuyUXq7QRr1Gg12P9Ypump",
+      "pool": "JAbzH1NwwCDNH6rCmefZpeVbW6YVN5api7MibDTgv2E5",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 31284.0,
+      "liq": 11477.43,
+      "age_min": 56.35,
+      "created_at": "2026-11-24T22:33:34Z",
+      "decision": "accepted",
+      "reason": "score 68",
+      "score": 68,
+      "pump_score": 29,
+      "pump_reasons": [
+        "Geringer Price Impact",
+        "Socials ergänzt"
+      ],
+      "ts": 1795562994.9086711,
+      "t": "2026-11-25 00:29:54 CET",
+      "id": "o5LM35Afta4i5CFRGwsgtjuyUXq7QRr1Gg12P9Ypump-1795562994908"
+    },
+    {
+      "symbol": "ELF",
+      "mint": "o5LM35Afta4i5CFRGwsgtjuyUXq7QRr1Gg12P9Ypump",
+      "pool": "JAbzH1NwwCDNH6rCmefZpeVbW6YVN5api7MibDTgv2E5",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 31284.0,
+      "liq": 11477.43,
+      "age_min": 56.35,
+      "created_at": "2026-11-24T22:33:34Z",
+      "decision": "skipped",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 68,
+      "pump_score": 29,
+      "pump_reasons": [
+        "Geringer Price Impact",
+        "Socials ergänzt"
+      ],
+      "ts": 1795562994.9132934,
+      "t": "2026-11-25 00:29:54 CET",
+      "id": "o5LM35Afta4i5CFRGwsgtjuyUXq7QRr1Gg12P9Ypump-1795562994913"
+    },
+    {
+      "symbol": "goldcoin",
+      "mint": "Cp6i5Ka8Gwzzn537KoqLyjQCFX6QBfoAC9WuxEbQpump",
+      "pool": "hGE1tMC84avducEFSwovCRYbYHpAYedrskSPcqgzAdH",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 72248.0,
+      "liq": 23360.19,
+      "age_min": 106.87,
+      "created_at": "2026-11-24T21:43:03Z",
+      "decision": "skipped",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 66,
+      "pump_score": 34,
+      "pump_reasons": [
+        "Liquidität steigt",
+        "Geringer Price Impact",
+        "Im Trend"
+      ],
+      "ts": 1795562994.9167275,
+      "t": "2026-11-25 00:29:54 CET",
+      "id": "Cp6i5Ka8Gwzzn537KoqLyjQCFX6QBfoAC9WuxEbQpump-1795562994916"
     }
   ],
   "feed_stats": {
-    "emitted": 29442,
-    "per_min": 142.67,
+    "emitted": 29585,
+    "per_min": 143.25,
     "by_decision": {
-      "seen": 22471,
-      "rejected": 5701,
-      "accepted": 637,
-      "skipped": 633
+      "seen": 22596,
+      "rejected": 5715,
+      "accepted": 639,
+      "skipped": 635
     },
     "by_source": {
       "new": 4896,
-      "ds_search": 2163,
-      "ds_profiles": 4781,
-      "ds_boosts": 3688,
-      "trending_5m": 2970,
-      "trending_1h": 2716,
-      "watchlist": 8001,
+      "ds_search": 2175,
+      "ds_profiles": 4813,
+      "ds_boosts": 3711,
+      "trending_5m": 2983,
+      "trending_1h": 2730,
+      "watchlist": 8049,
       "pump_logs": 70,
-      "ds_boosts_top": 157
+      "ds_boosts_top": 158
     },
-    "pumpfun": 12090
+    "pumpfun": 12139
   },
   "status": "running",
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.2,
+  "heartbeat_age_s": 0.4,
   "bot_alive": true,
   "supervisor_alive": true
 }
