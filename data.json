@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-24 15:43:36 CET",
-  "last_update": "2026-11-24 15:43:17 CET",
+  "exported_at": "2026-11-24 15:44:07 CET",
+  "last_update": "2026-11-24 15:43:42 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.449921747788753,
@@ -109,7 +109,7 @@
     "work_p50_ms": 0.5,
     "work_p95_ms": 1.3,
     "work_max_ms": 170.0,
-    "work_last_ms": 1.0,
+    "work_last_ms": 0.7,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 69.7581583184183,
@@ -120,11 +120,11 @@
   "halted": false,
   "counters": {
     "cycles": 3172,
-    "pools_scanned": 543156,
+    "pools_scanned": 543271,
     "unique_pools": 20013,
-    "prefilter_rejected": 80768,
+    "prefilter_rejected": 80782,
     "safety_rejected": 2203,
-    "scored": 4194,
+    "scored": 4197,
     "buys": 88,
     "sells": 93
   },
@@ -340,6 +340,42 @@
   "trade_events": [],
   "scanner": [
     {
+      "t": "2026-11-24 15:43:42 CET",
+      "ts": 1795531422.0,
+      "kind": "Skipped",
+      "symbol": "POORGOAT",
+      "reason": "score 57 < 64",
+      "text": "POORGOAT score 57 - score 57 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 15:43:42 CET",
+      "ts": 1795531422.0,
+      "kind": "Skipped",
+      "symbol": "Wolf",
+      "reason": "score 59 < 64",
+      "text": "Wolf score 59 - score 59 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 15:43:42 CET",
+      "ts": 1795531422.0,
+      "kind": "Skipped",
+      "symbol": "Memeployed",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Memeployed score 75 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 15:43:42 CET",
+      "ts": 1795531422.0,
+      "kind": "Scored",
+      "symbol": "Wolf",
+      "reason": "Wolf [ds_profiles, graduated] score 59 | liq $11,146 | h1 +4.0% | top10 26% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:10.9 holders:10.4 authorities:10 lp:10.0 age:2 momentum:5 pump:26 | pump 26 (Volumen zieht an, Socials ergänzt)",
+      "text": "Wolf [ds_profiles, graduated] score 59 | liq $11,146 | h1 +4.0% | top10 26% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:10.9 holders:10.4 authorities:10 lp:10.0 age:2 momentum:5 pump:26 | pump 26 (Volumen zieht an, Socials ergänzt)",
+      "curve": false
+    },
+    {
       "t": "2026-11-24 15:43:33 CET",
       "ts": 1795531413.0,
       "kind": "Scored",
@@ -661,47 +697,47 @@
       "symbol": "newtek",
       "reason": "liquidity $8,386 < $10,000",
       "text": "newtek (pumpswap) - liquidity $8,386 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 15:43:10 CET",
-      "ts": 1795531390.0,
-      "kind": "Rejected",
-      "symbol": "Taffy",
-      "reason": "liquidity $9,919 < $10,000",
-      "text": "Taffy (pumpswap) - liquidity $9,919 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 15:43:10 CET",
-      "ts": 1795531390.0,
-      "kind": "Rejected",
-      "symbol": "DUVAL",
-      "reason": "dumping -72% in 1h",
-      "text": "DUVAL (pumpswap) - dumping -72% in 1h",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 15:42:48 CET",
-      "ts": 1795531368.0,
-      "kind": "Skipped",
-      "symbol": "ROCKET",
-      "reason": "score 57 < 64",
-      "text": "ROCKET score 57 - score 57 < 64",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 15:42:48 CET",
-      "ts": 1795531368.0,
-      "kind": "Skipped",
-      "symbol": "poorcat",
-      "reason": "score 63 < 64",
-      "text": "poorcat score 63 - score 63 < 64",
       "curve": false
     }
   ],
   "scanner_highlights": [
     {
+      "t": "2026-11-24 15:43:42 CET",
+      "ts": 1795531422.0,
+      "kind": "Skipped",
+      "symbol": "POORGOAT",
+      "reason": "score 57 < 64",
+      "text": "POORGOAT score 57 - score 57 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 15:43:42 CET",
+      "ts": 1795531422.0,
+      "kind": "Skipped",
+      "symbol": "Wolf",
+      "reason": "score 59 < 64",
+      "text": "Wolf score 59 - score 59 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 15:43:42 CET",
+      "ts": 1795531422.0,
+      "kind": "Skipped",
+      "symbol": "Memeployed",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Memeployed score 75 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 15:43:42 CET",
+      "ts": 1795531422.0,
+      "kind": "Scored",
+      "symbol": "Wolf",
+      "reason": "Wolf [ds_profiles, graduated] score 59 | liq $11,146 | h1 +4.0% | top10 26% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:10.9 holders:10.4 authorities:10 lp:10.0 age:2 momentum:5 pump:26 | pump 26 (Volumen zieht an, Socials ergänzt)",
+      "text": "Wolf [ds_profiles, graduated] score 59 | liq $11,146 | h1 +4.0% | top10 26% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:10.9 holders:10.4 authorities:10 lp:10.0 age:2 momentum:5 pump:26 | pump 26 (Volumen zieht an, Socials ergänzt)",
+      "curve": false
+    },
+    {
       "t": "2026-11-24 15:43:33 CET",
       "ts": 1795531413.0,
       "kind": "Scored",
@@ -889,45 +925,9 @@
       "reason": "Wolf [ds_profiles, graduated] score 60 | liq $11,146 | h1 +4.0% | top10 26% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:10.9 holders:10.4 authorities:10 lp:10.0 age:2 momentum:5 pump:29 | pump 29 (Geringer Price Impact, Volumen zieht an, Socials ergänzt)",
       "text": "Wolf [ds_profiles, graduated] score 60 | liq $11,146 | h1 +4.0% | top10 26% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:10.9 holders:10.4 authorities:10 lp:10.0 age:2 momentum:5 pump:29 | pump 29 (Geringer Price Impact, Volumen zieht an, Socials ergänzt)",
       "curve": false
-    },
-    {
-      "t": "2026-11-24 15:43:13 CET",
-      "ts": 1795531393.0,
-      "kind": "Scored",
-      "symbol": "POORGOAT",
-      "reason": "POORGOAT [ds_profiles, graduated] score 57 | liq $13,876 | h1 +29.1% | top10 15% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:9.7 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:POORGOAT pump:46 | narrative POORGOAT | pump 46 (Liquidität steigt, Geringer Price Impact, Narrativ POORGOAT)",
-      "text": "POORGOAT [ds_profiles, graduated] score 57 | liq $13,876 | h1 +29.1% | top10 15% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:9.7 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:POORGOAT pump:46 | narrative POORGOAT | pump 46 (Liquidität steigt, Geringer Price Impact, Narrativ POORGOAT)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 15:43:10 CET",
-      "ts": 1795531390.0,
-      "kind": "Scored",
-      "symbol": "Memeployed",
-      "reason": "Memeployed [ds_profiles, graduated] score 75 | liq $22,853 | h1 +66.1% | top10 22% | LP 100% | liquidity:2.0 vol_liq:8 buy_pressure:15 holders:11.8 authorities:10 lp:10.0 age:2 momentum:10 narrative:PUMP pump:32 | narrative PUMP | pump 32 (Narrativ PUMP, Geringer Price Impact, Socials ergänzt)",
-      "text": "Memeployed [ds_profiles, graduated] score 75 | liq $22,853 | h1 +66.1% | top10 22% | LP 100% | liquidity:2.0 vol_liq:8 buy_pressure:15 holders:11.8 authorities:10 lp:10.0 age:2 momentum:10 narrative:PUMP pump:32 | narrative PUMP | pump 32 (Narrativ PUMP, Geringer Price Impact, Socials ergänzt)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 15:43:10 CET",
-      "ts": 1795531390.0,
-      "kind": "Rejected",
-      "symbol": "GPUBREAK",
-      "reason": "RugCheck unavailable, skipped for now",
-      "text": "GPUBREAK - RugCheck unavailable, skipped for now",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 15:43:10 CET",
-      "ts": 1795531390.0,
-      "kind": "Rejected",
-      "symbol": "HIB",
-      "reason": "liquidity $1,462 < $10,000",
-      "text": "HIB (pumpswap) - liquidity $1,462 < $10,000",
-      "curve": false
     }
   ],
-  "curve_skips": 2037,
+  "curve_skips": 2033,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -2730,12 +2730,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795518106.227749,
-      "t_label": "2026-11-24 12:01:46 CET",
-      "usd": 8.2948,
-      "eur": 7.5053
-    },
-    {
       "t": 1795518206.50736,
       "t_label": "2026-11-24 12:03:26 CET",
       "usd": 8.2948,
@@ -3928,6 +3922,12 @@
       "t_label": "2026-11-24 15:43:17 CET",
       "usd": 8.2337,
       "eur": 7.4499
+    },
+    {
+      "t": 1795531422.43347,
+      "t_label": "2026-11-24 15:43:42 CET",
+      "usd": 8.2337,
+      "eur": 7.4499
     }
   ],
   "agents": {
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795531416.7136104,
+      "updated_ts": 1795531447.319233,
       "stages": {
         "discovery": {
           "p50_s": 71.029,
@@ -4019,7 +4019,7 @@
           "p50_s": 0.126,
           "p95_s": 0.286,
           "max_s": 0.646,
-          "last_s": 0.134,
+          "last_s": 0.126,
           "n": 200
         },
         "event_to_phone": {
@@ -4052,13 +4052,18 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "POORGOAT",
+      "token": "Wolf",
       "pill": "115 pools",
       "pill_kind": "blue",
       "detail": "20,013 unique pools",
       "pools": 115,
       "unique": 20013,
       "filters": [
+        {
+          "symbol": "Wolf",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "POORGOAT",
           "text": "top 10 > 25%",
@@ -4093,25 +4098,20 @@
           "symbol": "Trenchers",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "BLACKBALLED",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "POORGOAT",
-      "pill": "57",
+      "token": "Wolf",
+      "pill": "59",
       "pill_kind": "purple",
-      "detail": "POORGOAT [ds_profiles, graduated] score 57 | liq $13,876 | h1 +29.1% | top10 15% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:9.7 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:POORGOAT pump:46 | narrative POORGOAT | pump 46 (Liquidität steigt, Geringer Price Impact, Narrativ POORGOAT)",
-      "score": 57,
+      "detail": "Wolf [ds_profiles, graduated] score 59 | liq $11,146 | h1 +4.0% | top10 26% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:10.9 holders:10.4 authorities:10 lp:10.0 age:2 momentum:5 pump:26 | pump 26 (Volumen zieht an, Socials ergänzt)",
+      "score": 59,
       "passed": true,
       "status": "passed",
-      "rejected": 82971
+      "rejected": 82985
     },
     "executor": {
       "name": "Executor",
@@ -4302,7 +4302,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "4194 bewertet · 82971 abgelehnt"
+      "detail": "4197 bewertet · 82985 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4452,9 +4452,8 @@
       "symbol": "Wolf",
       "mint": "2BZQURdxckva3QqzX47RbrRCkrfnv8dSrRm6BD1RigYH",
       "pool": "7ie6RovAh11cfQH8E7Xb4PMvnr3EDj3ejxpxgMcMzQ8j",
-      "score": 29,
+      "score": 26,
       "reasons": [
-        "Geringer Price Impact",
         "Volumen zieht an",
         "Socials ergänzt"
       ],
@@ -4482,86 +4481,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "bearpen",
-      "mint": "Bbs8d1i8eSydXFEv9NAkhrbBqnb8dvFwW66nWMJXpump",
-      "pool": "EvuspgLNpV6Mb4QMvdHpaNgCYTSvVZ72RWY19vZ5jvzs",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 5264.0,
-      "liq": 4051.08,
-      "age_min": 216.61,
-      "created_at": "2026-11-24T11:05:59Z",
-      "decision": "rejected",
-      "reason": "liquidity $4,051 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795531355.3762524,
-      "t": "2026-11-24 15:42:35 CET",
-      "id": "Bbs8d1i8eSydXFEv9NAkhrbBqnb8dvFwW66nWMJXpump-1795531355376"
-    },
-    {
-      "symbol": "scamsem",
-      "mint": "4pf9HEnkdN3ihjVbfZg2NwbZkCJyUk4na44oysuWpump",
-      "pool": "4DaiZ4KtRhkcFWQUGeFCRkrs9xFt7w8jHozhEMG4jdvT",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 3269.0,
-      "liq": 3077.27,
-      "age_min": 342.46,
-      "created_at": "2026-11-24T09:00:08Z",
-      "decision": "rejected",
-      "reason": "liquidity $3,077 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795531355.38307,
-      "t": "2026-11-24 15:42:35 CET",
-      "id": "4pf9HEnkdN3ihjVbfZg2NwbZkCJyUk4na44oysuWpump-1795531355383"
-    },
-    {
-      "symbol": "RANSEM",
-      "mint": "HgxPiLhX6r2a8fH39x1qc5qxnTZwLwzbGsi9TPRFpump",
-      "pool": "ExSAcFLV9v6RXAVJo2cori84ieTDfjPEYYpk4pnQsbfz",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 2653.0,
-      "liq": 2668.85,
-      "age_min": 223.91,
-      "created_at": "2026-11-24T10:58:41Z",
-      "decision": "rejected",
-      "reason": "liquidity $2,669 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795531355.3874235,
-      "t": "2026-11-24 15:42:35 CET",
-      "id": "HgxPiLhX6r2a8fH39x1qc5qxnTZwLwzbGsi9TPRFpump-1795531355387"
-    },
-    {
-      "symbol": "BITEFLY",
-      "mint": "FKYYhVAo9RnfBCrtn7wp2meexQ8xUWXSjRgMrJgkpump",
-      "pool": "AdNQRcj79baiBQSuE69edejQFDSbkTu3izhpdfJ1DjY4",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 1673.0,
-      "liq": 1852.65,
-      "age_min": 141.82,
-      "created_at": "2026-11-24T12:20:46Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,853 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795531355.3921392,
-      "t": "2026-11-24 15:42:35 CET",
-      "id": "FKYYhVAo9RnfBCrtn7wp2meexQ8xUWXSjRgMrJgkpump-1795531355392"
-    },
     {
       "symbol": "Scam",
       "mint": "Bbxy7BETF5p2XeXW2rJFZUzYuWpJA2pG1B7g4prppump",
@@ -8565,27 +8484,121 @@
       "ts": 1795531413.9454486,
       "t": "2026-11-24 15:43:33 CET",
       "id": "DE6jZSwe422PWGWWU5hNCUrUmPDHHhF5aVXpjFbFpump-1795531413945"
+    },
+    {
+      "symbol": "Wolf",
+      "mint": "2BZQURdxckva3QqzX47RbrRCkrfnv8dSrRm6BD1RigYH",
+      "pool": "7ie6RovAh11cfQH8E7Xb4PMvnr3EDj3ejxpxgMcMzQ8j",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 30224.0,
+      "liq": 11145.98,
+      "age_min": 31.09,
+      "created_at": "2026-11-24T14:12:37Z",
+      "decision": "accepted",
+      "reason": "score 59",
+      "score": 59,
+      "pump_score": 26,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Socials ergänzt"
+      ],
+      "ts": 1795531422.4073248,
+      "t": "2026-11-24 15:43:42 CET",
+      "id": "2BZQURdxckva3QqzX47RbrRCkrfnv8dSrRm6BD1RigYH-1795531422407"
+    },
+    {
+      "symbol": "Memeployed",
+      "mint": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn",
+      "pool": "GY7pC4TiJsvFdS85hMDsnGx5rcCP3vMdysjTGHLgDH8",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 73673.0,
+      "liq": 22853.15,
+      "age_min": 56.62,
+      "created_at": "2026-11-24T13:47:05Z",
+      "decision": "skipped",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 75,
+      "pump_score": 32,
+      "pump_reasons": [
+        "Narrativ PUMP",
+        "Geringer Price Impact",
+        "Socials ergänzt"
+      ],
+      "ts": 1795531422.4127479,
+      "t": "2026-11-24 15:43:42 CET",
+      "id": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn-1795531422412"
+    },
+    {
+      "symbol": "Wolf",
+      "mint": "2BZQURdxckva3QqzX47RbrRCkrfnv8dSrRm6BD1RigYH",
+      "pool": "7ie6RovAh11cfQH8E7Xb4PMvnr3EDj3ejxpxgMcMzQ8j",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 30224.0,
+      "liq": 11145.98,
+      "age_min": 31.09,
+      "created_at": "2026-11-24T14:12:37Z",
+      "decision": "skipped",
+      "reason": "score 59 < 64",
+      "score": 59,
+      "pump_score": 26,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Socials ergänzt"
+      ],
+      "ts": 1795531422.4166934,
+      "t": "2026-11-24 15:43:42 CET",
+      "id": "2BZQURdxckva3QqzX47RbrRCkrfnv8dSrRm6BD1RigYH-1795531422416"
+    },
+    {
+      "symbol": "POORGOAT",
+      "mint": "DE6jZSwe422PWGWWU5hNCUrUmPDHHhF5aVXpjFbFpump",
+      "pool": "52apPLNbmVFACWMGVDkvXGGffvhEjY4APrZF9dp88PkW",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 38739.0,
+      "liq": 13875.74,
+      "age_min": 28.19,
+      "created_at": "2026-11-24T14:15:31Z",
+      "decision": "skipped",
+      "reason": "score 57 < 64",
+      "score": 57,
+      "pump_score": 46,
+      "pump_reasons": [
+        "Liquidität steigt",
+        "Geringer Price Impact",
+        "Narrativ POORGOAT"
+      ],
+      "ts": 1795531422.4215934,
+      "t": "2026-11-24 15:43:42 CET",
+      "id": "DE6jZSwe422PWGWWU5hNCUrUmPDHHhF5aVXpjFbFpump-1795531422421"
     }
   ],
   "feed_stats": {
-    "emitted": 154269,
-    "per_min": 131.3,
+    "emitted": 154308,
+    "per_min": 131.31,
     "by_decision": {
-      "seen": 120093,
-      "rejected": 29648,
-      "accepted": 2266,
-      "skipped": 2262
+      "seen": 120111,
+      "rejected": 29663,
+      "accepted": 2269,
+      "skipped": 2265
     },
     "by_source": {
       "pump_logs": 1644,
       "new": 27107,
       "ds_search": 12502,
       "trending_5m": 16409,
-      "trending_1h": 13060,
-      "ds_boosts": 13985,
+      "trending_1h": 13062,
+      "ds_boosts": 13987,
       "ds_boosts_top": 2469,
-      "ds_profiles": 28602,
-      "watchlist": 38491
+      "ds_profiles": 28619,
+      "watchlist": 38509
     },
     "pumpfun": 64248
   },
