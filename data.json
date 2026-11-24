@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-24 06:00:27 CET",
-  "last_update": "2026-11-24 06:00:15 CET",
+  "exported_at": "2026-11-24 06:00:57 CET",
+  "last_update": "2026-11-24 06:00:40 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.66451570447888,
@@ -109,7 +109,7 @@
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.2,
     "work_max_ms": 249.0,
-    "work_last_ms": 0.4,
+    "work_last_ms": 0.3,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 71.76753233760299,
@@ -120,11 +120,11 @@
   "halted": false,
   "counters": {
     "cycles": 2636,
-    "pools_scanned": 478123,
+    "pools_scanned": 478245,
     "unique_pools": 20005,
-    "prefilter_rejected": 64451,
+    "prefilter_rejected": 64462,
     "safety_rejected": 1935,
-    "scored": 2880,
+    "scored": 2883,
     "buys": 88,
     "sells": 93
   },
@@ -339,6 +339,60 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-24 06:00:40 CET",
+      "ts": 1795496440.0,
+      "kind": "Skipped",
+      "symbol": "DIGS",
+      "reason": "position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "DIGS score 70 - position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 06:00:40 CET",
+      "ts": 1795496440.0,
+      "kind": "Skipped",
+      "symbol": "VIctory",
+      "reason": "score 61 < 64",
+      "text": "VIctory score 61 - score 61 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 06:00:40 CET",
+      "ts": 1795496440.0,
+      "kind": "Skipped",
+      "symbol": "Cilembu",
+      "reason": "position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Cilembu score 72 - position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 06:00:40 CET",
+      "ts": 1795496440.0,
+      "kind": "Scored",
+      "symbol": "DIGS",
+      "reason": "DIGS [trending_1h] score 70 | liq $45,084 | h1 -3.1% | top10 15% | LP 99% | liquidity:5.2 vol_liq:15 buy_pressure:7.8 holders:15 authorities:10 lp:9.9 age:3 momentum:0 pump:30 | pump 30 (Viele Käufer, Im Trend)",
+      "text": "DIGS [trending_1h] score 70 | liq $45,084 | h1 -3.1% | top10 15% | LP 99% | liquidity:5.2 vol_liq:15 buy_pressure:7.8 holders:15 authorities:10 lp:9.9 age:3 momentum:0 pump:30 | pump 30 (Viele Käufer, Im Trend)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 06:00:36 CET",
+      "ts": 1795496436.0,
+      "kind": "Scored",
+      "symbol": "VIctory",
+      "reason": "VIctory [ds_profiles, graduated] score 61 | liq $10,201 | h1 +43.6% | top10 28% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:8.8 holders:9.2 authorities:10 lp:10.0 age:5 momentum:0 pump:21 | pump 21 (Socials ergänzt)",
+      "text": "VIctory [ds_profiles, graduated] score 61 | liq $10,201 | h1 +43.6% | top10 28% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:8.8 holders:9.2 authorities:10 lp:10.0 age:5 momentum:0 pump:21 | pump 21 (Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 06:00:31 CET",
+      "ts": 1795496431.0,
+      "kind": "Scored",
+      "symbol": "Cilembu",
+      "reason": "Cilembu [watchlist, graduated] score 72 | liq $12,983 | h1 +26.5% | top10 21% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:8.4 holders:12.5 authorities:10 lp:10.0 age:2 momentum:10 pump:35 | pump 35 (Volumen zieht an)",
+      "text": "Cilembu [watchlist, graduated] score 72 | liq $12,983 | h1 +26.5% | top10 21% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:8.4 holders:12.5 authorities:10 lp:10.0 age:2 momentum:10 pump:35 | pump 35 (Volumen zieht an)",
+      "curve": false
+    },
     {
       "t": "2026-11-24 06:00:26 CET",
       "ts": 1795496426.0,
@@ -644,19 +698,48 @@
       "reason": "position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
       "text": "Cilembu score 73 - position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
       "curve": false
-    },
+    }
+  ],
+  "scanner_highlights": [
     {
-      "t": "2026-11-24 06:00:15 CET",
-      "ts": 1795496415.0,
-      "kind": "Scored",
-      "symbol": "GROKIA",
-      "reason": "GROKIA [trending_1h] score 90 | liq $114,855 | h1 +1556.1% | top10 21% | LP 100% | liquidity:9.7 vol_liq:15 buy_pressure:9.3 holders:12.6 authorities:10 lp:10.0 age:5 momentum:3 creator_hist:6 narrative:GROKIA pump:36 | narrative GROKIA | pump 36 (Narrativ GROKIA, Im Trend, Socials ergänzt)",
-      "text": "GROKIA [trending_1h] score 90 | liq $114,855 | h1 +1556.1% | top10 21% | LP 100% | liquidity:9.7 vol_liq:15 buy_pressure:9.3 holders:12.6 authorities:10 lp:10.0 age:5 momentum:3 creator_hist:6 narrative:GROKIA pump:36 | narrative GROKIA | pump 36 (Narrativ GROKIA, Im Trend, Socials ergänzt)",
+      "t": "2026-11-24 06:00:40 CET",
+      "ts": 1795496440.0,
+      "kind": "Skipped",
+      "symbol": "DIGS",
+      "reason": "position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "DIGS score 70 - position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
       "curve": false
     },
     {
-      "t": "2026-11-24 06:00:14 CET",
-      "ts": 1795496414.0,
+      "t": "2026-11-24 06:00:40 CET",
+      "ts": 1795496440.0,
+      "kind": "Skipped",
+      "symbol": "VIctory",
+      "reason": "score 61 < 64",
+      "text": "VIctory score 61 - score 61 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 06:00:40 CET",
+      "ts": 1795496440.0,
+      "kind": "Skipped",
+      "symbol": "Cilembu",
+      "reason": "position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Cilembu score 72 - position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 06:00:40 CET",
+      "ts": 1795496440.0,
+      "kind": "Scored",
+      "symbol": "DIGS",
+      "reason": "DIGS [trending_1h] score 70 | liq $45,084 | h1 -3.1% | top10 15% | LP 99% | liquidity:5.2 vol_liq:15 buy_pressure:7.8 holders:15 authorities:10 lp:9.9 age:3 momentum:0 pump:30 | pump 30 (Viele Käufer, Im Trend)",
+      "text": "DIGS [trending_1h] score 70 | liq $45,084 | h1 -3.1% | top10 15% | LP 99% | liquidity:5.2 vol_liq:15 buy_pressure:7.8 holders:15 authorities:10 lp:9.9 age:3 momentum:0 pump:30 | pump 30 (Viele Käufer, Im Trend)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 06:00:36 CET",
+      "ts": 1795496436.0,
       "kind": "Scored",
       "symbol": "VIctory",
       "reason": "VIctory [ds_profiles, graduated] score 61 | liq $10,201 | h1 +43.6% | top10 28% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:8.8 holders:9.2 authorities:10 lp:10.0 age:5 momentum:0 pump:21 | pump 21 (Socials ergänzt)",
@@ -664,43 +747,14 @@
       "curve": false
     },
     {
-      "t": "2026-11-24 06:00:04 CET",
-      "ts": 1795496404.0,
+      "t": "2026-11-24 06:00:31 CET",
+      "ts": 1795496431.0,
       "kind": "Scored",
       "symbol": "Cilembu",
-      "reason": "Cilembu [watchlist, graduated] score 73 | liq $12,983 | h1 +26.5% | top10 21% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:8.4 holders:12.5 authorities:10 lp:10.0 age:2 momentum:10 pump:39 | pump 39 (Volumen zieht an, Liquidität steigt)",
-      "text": "Cilembu [watchlist, graduated] score 73 | liq $12,983 | h1 +26.5% | top10 21% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:8.4 holders:12.5 authorities:10 lp:10.0 age:2 momentum:10 pump:39 | pump 39 (Volumen zieht an, Liquidität steigt)",
+      "reason": "Cilembu [watchlist, graduated] score 72 | liq $12,983 | h1 +26.5% | top10 21% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:8.4 holders:12.5 authorities:10 lp:10.0 age:2 momentum:10 pump:35 | pump 35 (Volumen zieht an)",
+      "text": "Cilembu [watchlist, graduated] score 72 | liq $12,983 | h1 +26.5% | top10 21% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:8.4 holders:12.5 authorities:10 lp:10.0 age:2 momentum:10 pump:35 | pump 35 (Volumen zieht an)",
       "curve": false
     },
-    {
-      "t": "2026-11-24 05:59:59 CET",
-      "ts": 1795496399.0,
-      "kind": "Rejected",
-      "symbol": "outsider",
-      "reason": "mcap $3,148 < $15,000 (early)",
-      "text": "outsider (pump-fun) - mcap $3,148 < $15,000 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 05:59:59 CET",
-      "ts": 1795496399.0,
-      "kind": "Rejected",
-      "symbol": "CHIBI",
-      "reason": "mcap $2,135 < $15,000 (early)",
-      "text": "CHIBI (pump-fun) - mcap $2,135 < $15,000 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 05:59:59 CET",
-      "ts": 1795496399.0,
-      "kind": "Rejected",
-      "symbol": "cig",
-      "reason": "mcap $2,228 < $15,000 (early)",
-      "text": "cig (pump-fun) - mcap $2,228 < $15,000 (early)",
-      "curve": false
-    }
-  ],
-  "scanner_highlights": [
     {
       "t": "2026-11-24 06:00:26 CET",
       "ts": 1795496426.0,
@@ -871,63 +925,9 @@
       "reason": "Cilembu [watchlist, graduated] score 73 | liq $12,983 | h1 +26.5% | top10 21% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:8.4 holders:12.5 authorities:10 lp:10.0 age:2 momentum:10 pump:39 | pump 39 (Volumen zieht an, Liquidität steigt)",
       "text": "Cilembu [watchlist, graduated] score 73 | liq $12,983 | h1 +26.5% | top10 21% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:8.4 holders:12.5 authorities:10 lp:10.0 age:2 momentum:10 pump:39 | pump 39 (Volumen zieht an, Liquidität steigt)",
       "curve": false
-    },
-    {
-      "t": "2026-11-24 05:59:59 CET",
-      "ts": 1795496399.0,
-      "kind": "Rejected",
-      "symbol": "outsider",
-      "reason": "mcap $3,148 < $15,000 (early)",
-      "text": "outsider (pump-fun) - mcap $3,148 < $15,000 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 05:59:59 CET",
-      "ts": 1795496399.0,
-      "kind": "Rejected",
-      "symbol": "CHIBI",
-      "reason": "mcap $2,135 < $15,000 (early)",
-      "text": "CHIBI (pump-fun) - mcap $2,135 < $15,000 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 05:59:59 CET",
-      "ts": 1795496399.0,
-      "kind": "Rejected",
-      "symbol": "cig",
-      "reason": "mcap $2,228 < $15,000 (early)",
-      "text": "cig (pump-fun) - mcap $2,228 < $15,000 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 05:59:59 CET",
-      "ts": 1795496399.0,
-      "kind": "Rejected",
-      "symbol": "TURKEY",
-      "reason": "mcap $7,151 < $15,000 (early)",
-      "text": "TURKEY (pump-fun) - mcap $7,151 < $15,000 (early)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 05:59:59 CET",
-      "ts": 1795496399.0,
-      "kind": "Rejected",
-      "symbol": "THEO",
-      "reason": "liquidity $1,583 < $10,000",
-      "text": "THEO (pumpswap) - liquidity $1,583 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 05:59:59 CET",
-      "ts": 1795496399.0,
-      "kind": "Rejected",
-      "symbol": "CHIBI",
-      "reason": "liquidity $1,682 < $10,000",
-      "text": "CHIBI (pumpswap) - liquidity $1,682 < $10,000",
-      "curve": false
     }
   ],
-  "curve_skips": 2657,
+  "curve_skips": 2648,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -2730,12 +2730,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795481940.9106405,
-      "t_label": "2026-11-24 01:59:00 CET",
-      "usd": 8.4915,
-      "eur": 7.6832
-    },
-    {
       "t": 1795482070.7488496,
       "t_label": "2026-11-24 02:01:10 CET",
       "usd": 8.4915,
@@ -3928,6 +3922,12 @@
       "t_label": "2026-11-24 06:00:15 CET",
       "usd": 8.4708,
       "eur": 7.6645
+    },
+    {
+      "t": 1795496440.8652046,
+      "t_label": "2026-11-24 06:00:40 CET",
+      "usd": 8.4708,
+      "eur": 7.6645
     }
   ],
   "agents": {
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795496427.626502,
+      "updated_ts": 1795496456.9207542,
       "stages": {
         "discovery": {
           "p50_s": 74.902,
@@ -4017,9 +4017,9 @@
         },
         "bot_to_phone": {
           "p50_s": 0.122,
-          "p95_s": 0.235,
+          "p95_s": 0.327,
           "max_s": 0.646,
-          "last_s": 0.235,
+          "last_s": 0.124,
           "n": 200
         },
         "event_to_phone": {
@@ -4052,13 +4052,28 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "THEO",
+      "token": "DIGS",
       "pill": "122 pools",
       "pill_kind": "blue",
       "detail": "20,005 unique pools",
       "pools": 122,
       "unique": 20005,
       "filters": [
+        {
+          "symbol": "DIGS",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "VIctory",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "Cilembu",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "THEO",
           "text": "liq < $4k",
@@ -4083,35 +4098,20 @@
           "symbol": "Spidercow",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "Ponder",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "NOCAP",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "FATU",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "GROKIA",
-      "pill": "90",
+      "token": "DIGS",
+      "pill": "70",
       "pill_kind": "purple",
-      "detail": "GROKIA [trending_1h] score 90 | liq $114,855 | h1 +1556.1% | top10 21% | LP 100% | liquidity:9.7 vol_liq:15 buy_pressure:9.3 holders:12.6 authorities:10 lp:10.0 age:5 momentum:3 creator_hist:6 narrative:GROKIA pump:36 | narrative GROKIA | pump 36 (Narrativ GROKIA, Im Trend, Socials ergänzt)",
-      "score": 90,
+      "detail": "DIGS [trending_1h] score 70 | liq $45,084 | h1 -3.1% | top10 15% | LP 99% | liquidity:5.2 vol_liq:15 buy_pressure:7.8 holders:15 authorities:10 lp:9.9 age:3 momentum:0 pump:30 | pump 30 (Viele Käufer, Im Trend)",
+      "score": 70,
       "passed": true,
       "status": "passed",
-      "rejected": 66386
+      "rejected": 66397
     },
     "executor": {
       "name": "Executor",
@@ -4302,7 +4302,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "2880 bewertet · 66386 abgelehnt"
+      "detail": "2883 bewertet · 66397 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4415,7 +4415,51 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "Cilembu",
+      "mint": "9oSSnxP6gD4SYPSH8mUNYkoWjKPDWT5F4fucL6CHpump",
+      "pool": "GmBZkAoVfYHYp48rewFpWZ2Yj9A1D4aNuj9imrTmS2Zk",
+      "score": 35,
+      "reasons": [
+        "Volumen zieht an"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 38602.0,
+      "origin": "watchlist",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/9oSSnxP6gD4SYPSH8mUNYkoWjKPDWT5F4fucL6CHpump.png"
+    },
+    {
+      "symbol": "DIGS",
+      "mint": "9QT8K685Hrae4k11dhGXirdtpfAaimExtyfwt8cPpump",
+      "pool": "3mxDjdZ1gAe5HziC4dj4UnLdXJ5DBcC9jsSYq55mFyKg",
+      "score": 30,
+      "reasons": [
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 155771.901723231,
+      "origin": "trending_1h",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/9QT8K685Hrae4k11dhGXirdtpfAaimExtyfwt8cPpump.png"
+    },
+    {
+      "symbol": "VIctory",
+      "mint": "81F3a7CihhMQEsk4TnEs34XVQgRr8QcbghBjNAZnpump",
+      "pool": "HUaQ19fzAgKURJtbLSQraEfNSkju5zfEk663q6jFq2xH",
+      "score": 21,
+      "reasons": [
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 24697.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/81F3a7CihhMQEsk4TnEs34XVQgRr8QcbghBjNAZnpump.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4433,166 +4477,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "NPCS",
-      "mint": "5ToDNkiBAK6k697RRyngTburU7yZNFZFx7jzsD1Uc7pK",
-      "pool": "4BKRQ2iL3Rv8mSpDsFM5FNkZ9SGq4iaqrYtgNWjGE3s4",
-      "dex": "raydium",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 354670.0,
-      "liq": 81495.65,
-      "age_min": 1276951.3,
-      "created_at": "2024-06-20T10:28:41Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795496399.1176531,
-      "t": "2026-11-24 05:59:59 CET",
-      "id": "5ToDNkiBAK6k697RRyngTburU7yZNFZFx7jzsD1Uc7pK-1795496399117"
-    },
-    {
-      "symbol": "ROCKET",
-      "mint": "6C9r2gzu8Pr54hTevHo3x5gSj9JqtpApj7obJnrtpump",
-      "pool": "9NLFujwRhgQYXkW2jUkKa1GjVtiBXaty2ad4QrysCkkE",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 703568.0,
-      "liq": 76956.82,
-      "age_min": 3918.85,
-      "created_at": "2026-11-21T11:41:08Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795496399.1212673,
-      "t": "2026-11-24 05:59:59 CET",
-      "id": "6C9r2gzu8Pr54hTevHo3x5gSj9JqtpApj7obJnrtpump-1795496399121"
-    },
-    {
-      "symbol": "JENSEN",
-      "mint": "HKiMA2mKQHU2cjfZ4Kbmru5GBGCauSNqPtpu8cfmpump",
-      "pool": "DqpqkbBQr3wMTy5rYjoq3NZrrZWbh7H9x2GJ7oSN9mHH",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_1h",
-      "mcap": 781406.021230649,
-      "liq": 66822.57,
-      "age_min": 670.8,
-      "created_at": "2026-11-23T17:49:11Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795496399.1249173,
-      "t": "2026-11-24 05:59:59 CET",
-      "id": "HKiMA2mKQHU2cjfZ4Kbmru5GBGCauSNqPtpu8cfmpump-1795496399124"
-    },
-    {
-      "symbol": "PFP",
-      "mint": "5TfqNKZbn9AnNtzq8bbkyhKgcPGTfNDc9wNzFrTBpump",
-      "pool": "GdFCD7L8x1GiudFz1wthNHEb352k3Ni37rSwtJgMgLpT",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 160214.0,
-      "liq": 55886.45,
-      "age_min": 601132.87,
-      "created_at": "2025-10-02T18:07:07Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795496399.1284814,
-      "t": "2026-11-24 05:59:59 CET",
-      "id": "5TfqNKZbn9AnNtzq8bbkyhKgcPGTfNDc9wNzFrTBpump-1795496399128"
-    },
-    {
-      "symbol": "JIMMY",
-      "mint": "38M2z4UCfZEkUHFzD48vhKQhFhNyRGto8pZbLjNipump",
-      "pool": "FnHWfV49ywCtGCDTyf34AVN8BiXxcgXUKqLctkrkP1gQ",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_1h",
-      "mcap": 355910.315679028,
-      "liq": 46150.261,
-      "age_min": 468.8,
-      "created_at": "2026-11-23T21:11:11Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795496399.1322873,
-      "t": "2026-11-24 05:59:59 CET",
-      "id": "38M2z4UCfZEkUHFzD48vhKQhFhNyRGto8pZbLjNipump-1795496399132"
-    },
-    {
-      "symbol": "PLAY",
-      "mint": "PLAYs3GSSadH2q2JLS7djp7yzeT75NK78XgrE5YLrfq",
-      "pool": "5LrRfERGV885eUGjNXQQ9Di5nErATUwyRB5rSJ6rjafK",
-      "dex": "raydium",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 1236698.0,
-      "liq": 45947.11,
-      "age_min": 539605.02,
-      "created_at": "2025-11-14T11:34:58Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795496399.1360676,
-      "t": "2026-11-24 05:59:59 CET",
-      "id": "PLAYs3GSSadH2q2JLS7djp7yzeT75NK78XgrE5YLrfq-1795496399136"
-    },
-    {
-      "symbol": "DIGS",
-      "mint": "9QT8K685Hrae4k11dhGXirdtpfAaimExtyfwt8cPpump",
-      "pool": "3mxDjdZ1gAe5HziC4dj4UnLdXJ5DBcC9jsSYq55mFyKg",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_1h",
-      "mcap": 155771.901723231,
-      "liq": 45084.3695,
-      "age_min": 38427.15,
-      "created_at": "2026-10-28T12:32:50Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795496399.1397407,
-      "t": "2026-11-24 05:59:59 CET",
-      "id": "9QT8K685Hrae4k11dhGXirdtpfAaimExtyfwt8cPpump-1795496399139"
-    },
-    {
-      "symbol": ":3",
-      "mint": "FSkyjfqB26u6c2GSgpACrjbxp9yQAR8rutxprVNppump",
-      "pool": "GxYbNxjGR9mEuVzXsGBi2Y78RGkwBMRok4RS9sMUb8hE",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_1h",
-      "mcap": 198194.112397374,
-      "liq": 39180.0832,
-      "age_min": 53944.17,
-      "created_at": "2026-10-17T17:55:49Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795496399.1436307,
-      "t": "2026-11-24 05:59:59 CET",
-      "id": "FSkyjfqB26u6c2GSgpACrjbxp9yQAR8rutxprVNppump-1795496399143"
-    },
     {
       "symbol": "$PLAY",
       "mint": "EvEFaj8bU5vNa4jc15GgRQrVMqu7Wzf9Kz6aKn3yeB1z",
@@ -8450,35 +8334,209 @@
       "ts": 1795496426.3859382,
       "t": "2026-11-24 06:00:26 CET",
       "id": "GVzahMEr1XjpE3aoRQvPViuVKWHSXASpdDAh7xJypump-1795496426385"
+    },
+    {
+      "symbol": "Cilembu",
+      "mint": "9oSSnxP6gD4SYPSH8mUNYkoWjKPDWT5F4fucL6CHpump",
+      "pool": "GmBZkAoVfYHYp48rewFpWZ2Yj9A1D4aNuj9imrTmS2Zk",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 38602.0,
+      "liq": 12983.24,
+      "age_min": 6.11,
+      "created_at": "2026-11-24T04:54:25Z",
+      "decision": "accepted",
+      "reason": "score 72",
+      "score": 72,
+      "pump_score": 35,
+      "pump_reasons": [
+        "Volumen zieht an"
+      ],
+      "ts": 1795496431.815043,
+      "t": "2026-11-24 06:00:31 CET",
+      "id": "9oSSnxP6gD4SYPSH8mUNYkoWjKPDWT5F4fucL6CHpump-1795496431815"
+    },
+    {
+      "symbol": "VIctory",
+      "mint": "81F3a7CihhMQEsk4TnEs34XVQgRr8QcbghBjNAZnpump",
+      "pool": "HUaQ19fzAgKURJtbLSQraEfNSkju5zfEk663q6jFq2xH",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 24697.0,
+      "liq": 10201.13,
+      "age_min": 124.53,
+      "created_at": "2026-11-24T02:56:04Z",
+      "decision": "accepted",
+      "reason": "score 61",
+      "score": 61,
+      "pump_score": 21,
+      "pump_reasons": [
+        "Socials ergänzt"
+      ],
+      "ts": 1795496436.0604165,
+      "t": "2026-11-24 06:00:36 CET",
+      "id": "81F3a7CihhMQEsk4TnEs34XVQgRr8QcbghBjNAZnpump-1795496436060"
+    },
+    {
+      "symbol": "OPUS",
+      "mint": "7sCw9NvfSxgMaj4Q7gGWBZWkXPtmaoji82Zr61UTpump",
+      "pool": "nSAm1hBNkrH4Q7T5HCWtKMcQ8a9fa5LomoJquxPStHj",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 6423.0,
+      "liq": 4486.8,
+      "age_min": 21.39,
+      "created_at": "2026-11-24T04:39:13Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795496436.1613388,
+      "t": "2026-11-24 06:00:36 CET",
+      "id": "7sCw9NvfSxgMaj4Q7gGWBZWkXPtmaoji82Zr61UTpump-1795496436161"
+    },
+    {
+      "symbol": "yippee",
+      "mint": "3mTQnHtok9wnT7yDA1G9BfMh5xNbyQerYkpfTDyKpump",
+      "pool": "Gg8gn8ggDfm33yWMFx7npszd3Vm6t37y4Au1SokfW81w",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 9952.0,
+      "liq": 6071.59,
+      "age_min": 39.34,
+      "created_at": "2026-11-24T04:21:16Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795496436.1657286,
+      "t": "2026-11-24 06:00:36 CET",
+      "id": "3mTQnHtok9wnT7yDA1G9BfMh5xNbyQerYkpfTDyKpump-1795496436165"
+    },
+    {
+      "symbol": "DIGS",
+      "mint": "9QT8K685Hrae4k11dhGXirdtpfAaimExtyfwt8cPpump",
+      "pool": "3mxDjdZ1gAe5HziC4dj4UnLdXJ5DBcC9jsSYq55mFyKg",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 155771.901723231,
+      "liq": 45084.3695,
+      "age_min": 38427.85,
+      "created_at": "2026-10-28T12:32:50Z",
+      "decision": "accepted",
+      "reason": "score 70",
+      "score": 70,
+      "pump_score": 30,
+      "pump_reasons": [
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "ts": 1795496440.8469837,
+      "t": "2026-11-24 06:00:40 CET",
+      "id": "9QT8K685Hrae4k11dhGXirdtpfAaimExtyfwt8cPpump-1795496440846"
+    },
+    {
+      "symbol": "Cilembu",
+      "mint": "9oSSnxP6gD4SYPSH8mUNYkoWjKPDWT5F4fucL6CHpump",
+      "pool": "GmBZkAoVfYHYp48rewFpWZ2Yj9A1D4aNuj9imrTmS2Zk",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 38602.0,
+      "liq": 12983.24,
+      "age_min": 6.26,
+      "created_at": "2026-11-24T04:54:25Z",
+      "decision": "skipped",
+      "reason": "position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 72,
+      "pump_score": 35,
+      "pump_reasons": [
+        "Volumen zieht an"
+      ],
+      "ts": 1795496440.8510096,
+      "t": "2026-11-24 06:00:40 CET",
+      "id": "9oSSnxP6gD4SYPSH8mUNYkoWjKPDWT5F4fucL6CHpump-1795496440851"
+    },
+    {
+      "symbol": "VIctory",
+      "mint": "81F3a7CihhMQEsk4TnEs34XVQgRr8QcbghBjNAZnpump",
+      "pool": "HUaQ19fzAgKURJtbLSQraEfNSkju5zfEk663q6jFq2xH",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 24697.0,
+      "liq": 10201.13,
+      "age_min": 124.61,
+      "created_at": "2026-11-24T02:56:04Z",
+      "decision": "skipped",
+      "reason": "score 61 < 64",
+      "score": 61,
+      "pump_score": 21,
+      "pump_reasons": [
+        "Socials ergänzt"
+      ],
+      "ts": 1795496440.8545501,
+      "t": "2026-11-24 06:00:40 CET",
+      "id": "81F3a7CihhMQEsk4TnEs34XVQgRr8QcbghBjNAZnpump-1795496440854"
+    },
+    {
+      "symbol": "DIGS",
+      "mint": "9QT8K685Hrae4k11dhGXirdtpfAaimExtyfwt8cPpump",
+      "pool": "3mxDjdZ1gAe5HziC4dj4UnLdXJ5DBcC9jsSYq55mFyKg",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 155771.901723231,
+      "liq": 45084.3695,
+      "age_min": 38427.85,
+      "created_at": "2026-10-28T12:32:50Z",
+      "decision": "skipped",
+      "reason": "position $0.68 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 70,
+      "pump_score": 30,
+      "pump_reasons": [
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "ts": 1795496440.8582792,
+      "t": "2026-11-24 06:00:40 CET",
+      "id": "9QT8K685Hrae4k11dhGXirdtpfAaimExtyfwt8cPpump-1795496440858"
     }
   ],
   "feed_stats": {
-    "emitted": 76819,
-    "per_min": 129.81,
+    "emitted": 76859,
+    "per_min": 129.8,
     "by_decision": {
-      "seen": 61437,
-      "rejected": 13482,
-      "accepted": 951,
-      "skipped": 949
+      "seen": 61460,
+      "rejected": 13493,
+      "accepted": 954,
+      "skipped": 952
     },
     "by_source": {
       "pump_logs": 208,
       "new": 13918,
-      "ds_search": 6035,
-      "trending_5m": 8379,
-      "trending_1h": 6448,
+      "ds_search": 6037,
+      "trending_5m": 8380,
+      "trending_1h": 6453,
       "ds_boosts": 8425,
       "ds_boosts_top": 2462,
-      "ds_profiles": 13393,
-      "watchlist": 17551
+      "ds_profiles": 13409,
+      "watchlist": 17567
     },
-    "pumpfun": 31993
+    "pumpfun": 31997
   },
   "status": "running",
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.3,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
