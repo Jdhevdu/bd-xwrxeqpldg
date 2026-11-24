@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-24 20:57:18 CET",
+  "exported_at": "2026-11-24 20:58:21 CET",
   "last_update": "2026-11-24 20:56:51 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -105,9 +105,9 @@
     "p95_ms": 1000.3,
     "max_ms": 1003.0,
     "last_ms": 1000.1,
-    "n": 111,
+    "n": 121,
     "work_p50_ms": 0.5,
-    "work_p95_ms": 1.0,
+    "work_p95_ms": 1.1,
     "work_max_ms": 4.5,
     "work_last_ms": 0.6,
     "lock_wait_ms": 0.0
@@ -120,23 +120,23 @@
   "halted": false,
   "counters": {
     "cycles": 3490,
-    "pools_scanned": 583269,
-    "unique_pools": 20000,
-    "prefilter_rejected": 90779,
+    "pools_scanned": 583405,
+    "unique_pools": 20005,
+    "prefilter_rejected": 90795,
     "safety_rejected": 2374,
-    "scored": 5132,
+    "scored": 5134,
     "buys": 88,
     "sells": 93
   },
   "last_scan_sources": {
     "ds_search": 15,
-    "trending_5m": 16,
-    "trending_1h": 17,
+    "trending_1h": 19,
+    "trending_5m": 17,
     "ds_boosts": 20,
     "ds_profiles": 21,
-    "watchlist": 43
+    "watchlist": 44
   },
-  "watch_count": 364,
+  "watch_count": 363,
   "graduation_count": 145,
   "positions": [],
   "closed": [
@@ -340,6 +340,168 @@
   "trade_events": [],
   "scanner": [
     {
+      "t": "2026-11-24 20:57:21 CET",
+      "ts": 1795550241.0,
+      "kind": "Scored",
+      "symbol": "CIA",
+      "reason": "CIA [watchlist, graduated] score 63 | liq $15,252 | h1 +79.3% | top10 19% | LP 100% | liquidity:0.1 vol_liq:2 buy_pressure:8.2 holders:13.4 authorities:10 lp:10.0 age:2 momentum:10 narrative:CIA pump:43 | narrative CIA | pump 43 (Volumen zieht an, Liquidität steigt, Geringer Price Impact)",
+      "text": "CIA [watchlist, graduated] score 63 | liq $15,252 | h1 +79.3% | top10 19% | LP 100% | liquidity:0.1 vol_liq:2 buy_pressure:8.2 holders:13.4 authorities:10 lp:10.0 age:2 momentum:10 narrative:CIA pump:43 | narrative CIA | pump 43 (Volumen zieht an, Liquidität steigt, Geringer Price Impact)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Scored",
+      "symbol": "DUVAL",
+      "reason": "DUVAL [trending_1h, graduated] score 68 | liq $26,370 | h1 +12.4% | top10 20% | LP 100% | liquidity:2.7 vol_liq:15 buy_pressure:7.8 holders:12.9 authorities:10 lp:10.0 age:5 momentum:0 narrative:DUVAL pump:30 | narrative DUVAL | pump 30 (Narrativ DUVAL, Im Trend, Viele Käufer)",
+      "text": "DUVAL [trending_1h, graduated] score 68 | liq $26,370 | h1 +12.4% | top10 20% | LP 100% | liquidity:2.7 vol_liq:15 buy_pressure:7.8 holders:12.9 authorities:10 lp:10.0 age:5 momentum:0 narrative:DUVAL pump:30 | narrative DUVAL | pump 30 (Narrativ DUVAL, Im Trend, Viele Käufer)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "pve",
+      "reason": "liquidity $18 < $10,000",
+      "text": "pve (pumpswap) - liquidity $18 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "BUY",
+      "reason": "liquidity $1,387 < $10,000",
+      "text": "BUY (pumpswap) - liquidity $1,387 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "HDDN",
+      "reason": "liquidity $1,434 < $10,000",
+      "text": "HDDN (pumpswap) - liquidity $1,434 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "BULLS",
+      "reason": "liquidity $1,461 < $10,000",
+      "text": "BULLS (pumpswap) - liquidity $1,461 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "SESAME",
+      "reason": "liquidity $1,611 < $10,000",
+      "text": "SESAME (pumpswap) - liquidity $1,611 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "frank",
+      "reason": "liquidity $1,755 < $10,000",
+      "text": "frank (pumpswap) - liquidity $1,755 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "OATH",
+      "reason": "liquidity $1,935 < $10,000",
+      "text": "OATH (pumpswap) - liquidity $1,935 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "TURKEY",
+      "reason": "liquidity $1,944 < $10,000",
+      "text": "TURKEY (pumpswap) - liquidity $1,944 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "scamsem",
+      "reason": "liquidity $2,980 < $10,000",
+      "text": "scamsem (pumpswap) - liquidity $2,980 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "CAMKT",
+      "reason": "liquidity $3,083 < $10,000",
+      "text": "CAMKT (pumpswap) - liquidity $3,083 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "FREEDOM",
+      "reason": "liquidity $4,730 < $10,000",
+      "text": "FREEDOM (pumpswap) - liquidity $4,730 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "FNF",
+      "reason": "liquidity $5,091 < $10,000",
+      "text": "FNF (pumpswap) - liquidity $5,091 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "CTO",
+      "reason": "liquidity $8,528 < $10,000",
+      "text": "CTO (pumpswap) - liquidity $8,528 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "wizardcat",
+      "reason": "liquidity $9,095 < $10,000",
+      "text": "wizardcat (pumpswap) - liquidity $9,095 < $10,000",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "ANT",
+      "reason": "pool age 5 min < 15",
+      "text": "ANT (pumpswap) - pool age 5 min < 15",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "RAY",
+      "reason": "official token RAY (not a memecoin)",
+      "text": "RAY (raydium-clmm) - official token RAY (not a memecoin)",
+      "curve": false
+    },
+    {
       "t": "2026-11-24 20:56:56 CET",
       "ts": 1795550216.0,
       "kind": "Rejected",
@@ -536,46 +698,30 @@
       "reason": "score 62 < 64",
       "text": "Gabriel score 62 - score 62 < 64",
       "curve": false
-    },
+    }
+  ],
+  "scanner_highlights": [
     {
-      "t": "2026-11-24 20:56:51 CET",
-      "ts": 1795550211.0,
-      "kind": "Skipped",
-      "symbol": "DUVAL",
-      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "DUVAL score 70 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:51 CET",
-      "ts": 1795550211.0,
-      "kind": "Scored",
-      "symbol": "Gabriel",
-      "reason": "Gabriel [ds_profiles, graduated] score 62 | liq $12,291 | h1 +27.0% | top10 24% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:9.9 holders:11.2 authorities:10 lp:10.0 age:5 momentum:10 pump:31 | pump 31 (Holder wachsen, Socials ergänzt)",
-      "text": "Gabriel [ds_profiles, graduated] score 62 | liq $12,291 | h1 +27.0% | top10 24% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:9.9 holders:11.2 authorities:10 lp:10.0 age:5 momentum:10 pump:31 | pump 31 (Holder wachsen, Socials ergänzt)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:48 CET",
-      "ts": 1795550208.0,
+      "t": "2026-11-24 20:57:21 CET",
+      "ts": 1795550241.0,
       "kind": "Scored",
       "symbol": "CIA",
-      "reason": "CIA [watchlist, graduated] score 52 | liq $14,178 | h1 +56.5% | top10 19% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:8.0 holders:13.4 authorities:10 lp:10.0 age:2 momentum:0 narrative:CIA pump:40 | narrative CIA | pump 40 (Volumen zieht an, Narrativ CIA, Geringer Price Impact)",
-      "text": "CIA [watchlist, graduated] score 52 | liq $14,178 | h1 +56.5% | top10 19% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:8.0 holders:13.4 authorities:10 lp:10.0 age:2 momentum:0 narrative:CIA pump:40 | narrative CIA | pump 40 (Volumen zieht an, Narrativ CIA, Geringer Price Impact)",
+      "reason": "CIA [watchlist, graduated] score 63 | liq $15,252 | h1 +79.3% | top10 19% | LP 100% | liquidity:0.1 vol_liq:2 buy_pressure:8.2 holders:13.4 authorities:10 lp:10.0 age:2 momentum:10 narrative:CIA pump:43 | narrative CIA | pump 43 (Volumen zieht an, Liquidität steigt, Geringer Price Impact)",
+      "text": "CIA [watchlist, graduated] score 63 | liq $15,252 | h1 +79.3% | top10 19% | LP 100% | liquidity:0.1 vol_liq:2 buy_pressure:8.2 holders:13.4 authorities:10 lp:10.0 age:2 momentum:10 narrative:CIA pump:43 | narrative CIA | pump 43 (Volumen zieht an, Liquidität steigt, Geringer Price Impact)",
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:46 CET",
-      "ts": 1795550206.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Scored",
       "symbol": "DUVAL",
-      "reason": "DUVAL [trending_1h, graduated] score 70 | liq $26,846 | h1 +13.1% | top10 20% | LP 100% | liquidity:2.8 vol_liq:15 buy_pressure:8.0 holders:12.9 authorities:10 lp:10.0 age:5 momentum:0 narrative:DUVAL pump:37 | narrative DUVAL | pump 37 (Viele Käufer, Narrativ DUVAL, Im Trend)",
-      "text": "DUVAL [trending_1h, graduated] score 70 | liq $26,846 | h1 +13.1% | top10 20% | LP 100% | liquidity:2.8 vol_liq:15 buy_pressure:8.0 holders:12.9 authorities:10 lp:10.0 age:5 momentum:0 narrative:DUVAL pump:37 | narrative DUVAL | pump 37 (Viele Käufer, Narrativ DUVAL, Im Trend)",
+      "reason": "DUVAL [trending_1h, graduated] score 68 | liq $26,370 | h1 +12.4% | top10 20% | LP 100% | liquidity:2.7 vol_liq:15 buy_pressure:7.8 holders:12.9 authorities:10 lp:10.0 age:5 momentum:0 narrative:DUVAL pump:30 | narrative DUVAL | pump 30 (Narrativ DUVAL, Im Trend, Viele Käufer)",
+      "text": "DUVAL [trending_1h, graduated] score 68 | liq $26,370 | h1 +12.4% | top10 20% | LP 100% | liquidity:2.7 vol_liq:15 buy_pressure:7.8 holders:12.9 authorities:10 lp:10.0 age:5 momentum:0 narrative:DUVAL pump:30 | narrative DUVAL | pump 30 (Narrativ DUVAL, Im Trend, Viele Käufer)",
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Rejected",
       "symbol": "pve",
       "reason": "liquidity $18 < $10,000",
@@ -583,8 +729,8 @@
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Rejected",
       "symbol": "BUY",
       "reason": "liquidity $1,387 < $10,000",
@@ -592,8 +738,8 @@
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Rejected",
       "symbol": "HDDN",
       "reason": "liquidity $1,434 < $10,000",
@@ -601,8 +747,8 @@
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Rejected",
       "symbol": "BULLS",
       "reason": "liquidity $1,461 < $10,000",
@@ -610,8 +756,8 @@
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Rejected",
       "symbol": "SESAME",
       "reason": "liquidity $1,611 < $10,000",
@@ -619,8 +765,8 @@
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Rejected",
       "symbol": "frank",
       "reason": "liquidity $1,755 < $10,000",
@@ -628,8 +774,8 @@
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Rejected",
       "symbol": "OATH",
       "reason": "liquidity $1,935 < $10,000",
@@ -637,8 +783,8 @@
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Rejected",
       "symbol": "TURKEY",
       "reason": "liquidity $1,944 < $10,000",
@@ -646,8 +792,8 @@
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Rejected",
       "symbol": "scamsem",
       "reason": "liquidity $2,980 < $10,000",
@@ -655,52 +801,68 @@
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Rejected",
       "symbol": "CAMKT",
-      "reason": "liquidity $3,109 < $10,000",
-      "text": "CAMKT (pumpswap) - liquidity $3,109 < $10,000",
+      "reason": "liquidity $3,083 < $10,000",
+      "text": "CAMKT (pumpswap) - liquidity $3,083 < $10,000",
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Rejected",
       "symbol": "FREEDOM",
-      "reason": "liquidity $4,271 < $10,000",
-      "text": "FREEDOM (pumpswap) - liquidity $4,271 < $10,000",
+      "reason": "liquidity $4,730 < $10,000",
+      "text": "FREEDOM (pumpswap) - liquidity $4,730 < $10,000",
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Rejected",
       "symbol": "FNF",
-      "reason": "liquidity $5,638 < $10,000",
-      "text": "FNF (pumpswap) - liquidity $5,638 < $10,000",
+      "reason": "liquidity $5,091 < $10,000",
+      "text": "FNF (pumpswap) - liquidity $5,091 < $10,000",
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Rejected",
       "symbol": "CTO",
-      "reason": "liquidity $8,514 < $10,000",
-      "text": "CTO (pumpswap) - liquidity $8,514 < $10,000",
+      "reason": "liquidity $8,528 < $10,000",
+      "text": "CTO (pumpswap) - liquidity $8,528 < $10,000",
       "curve": false
     },
     {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
       "kind": "Rejected",
       "symbol": "wizardcat",
-      "reason": "liquidity $8,744 < $10,000",
-      "text": "wizardcat (pumpswap) - liquidity $8,744 < $10,000",
+      "reason": "liquidity $9,095 < $10,000",
+      "text": "wizardcat (pumpswap) - liquidity $9,095 < $10,000",
       "curve": false
-    }
-  ],
-  "scanner_highlights": [
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "ANT",
+      "reason": "pool age 5 min < 15",
+      "text": "ANT (pumpswap) - pool age 5 min < 15",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 20:57:18 CET",
+      "ts": 1795550238.0,
+      "kind": "Rejected",
+      "symbol": "RAY",
+      "reason": "official token RAY (not a memecoin)",
+      "text": "RAY (raydium-clmm) - official token RAY (not a memecoin)",
+      "curve": false
+    },
     {
       "t": "2026-11-24 20:56:56 CET",
       "ts": 1795550216.0,
@@ -762,168 +924,6 @@
       "symbol": "Gabriel",
       "reason": "Gabriel [ds_profiles, graduated] score 62 | liq $12,291 | h1 +27.0% | top10 24% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:9.9 holders:11.2 authorities:10 lp:10.0 age:5 momentum:10 pump:31 | pump 31 (Holder wachsen, Socials ergänzt)",
       "text": "Gabriel [ds_profiles, graduated] score 62 | liq $12,291 | h1 +27.0% | top10 24% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:9.9 holders:11.2 authorities:10 lp:10.0 age:5 momentum:10 pump:31 | pump 31 (Holder wachsen, Socials ergänzt)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:48 CET",
-      "ts": 1795550208.0,
-      "kind": "Scored",
-      "symbol": "CIA",
-      "reason": "CIA [watchlist, graduated] score 52 | liq $14,178 | h1 +56.5% | top10 19% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:8.0 holders:13.4 authorities:10 lp:10.0 age:2 momentum:0 narrative:CIA pump:40 | narrative CIA | pump 40 (Volumen zieht an, Narrativ CIA, Geringer Price Impact)",
-      "text": "CIA [watchlist, graduated] score 52 | liq $14,178 | h1 +56.5% | top10 19% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:8.0 holders:13.4 authorities:10 lp:10.0 age:2 momentum:0 narrative:CIA pump:40 | narrative CIA | pump 40 (Volumen zieht an, Narrativ CIA, Geringer Price Impact)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:46 CET",
-      "ts": 1795550206.0,
-      "kind": "Scored",
-      "symbol": "DUVAL",
-      "reason": "DUVAL [trending_1h, graduated] score 70 | liq $26,846 | h1 +13.1% | top10 20% | LP 100% | liquidity:2.8 vol_liq:15 buy_pressure:8.0 holders:12.9 authorities:10 lp:10.0 age:5 momentum:0 narrative:DUVAL pump:37 | narrative DUVAL | pump 37 (Viele Käufer, Narrativ DUVAL, Im Trend)",
-      "text": "DUVAL [trending_1h, graduated] score 70 | liq $26,846 | h1 +13.1% | top10 20% | LP 100% | liquidity:2.8 vol_liq:15 buy_pressure:8.0 holders:12.9 authorities:10 lp:10.0 age:5 momentum:0 narrative:DUVAL pump:37 | narrative DUVAL | pump 37 (Viele Käufer, Narrativ DUVAL, Im Trend)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
-      "kind": "Rejected",
-      "symbol": "pve",
-      "reason": "liquidity $18 < $10,000",
-      "text": "pve (pumpswap) - liquidity $18 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
-      "kind": "Rejected",
-      "symbol": "BUY",
-      "reason": "liquidity $1,387 < $10,000",
-      "text": "BUY (pumpswap) - liquidity $1,387 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
-      "kind": "Rejected",
-      "symbol": "HDDN",
-      "reason": "liquidity $1,434 < $10,000",
-      "text": "HDDN (pumpswap) - liquidity $1,434 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
-      "kind": "Rejected",
-      "symbol": "BULLS",
-      "reason": "liquidity $1,461 < $10,000",
-      "text": "BULLS (pumpswap) - liquidity $1,461 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
-      "kind": "Rejected",
-      "symbol": "SESAME",
-      "reason": "liquidity $1,611 < $10,000",
-      "text": "SESAME (pumpswap) - liquidity $1,611 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
-      "kind": "Rejected",
-      "symbol": "frank",
-      "reason": "liquidity $1,755 < $10,000",
-      "text": "frank (pumpswap) - liquidity $1,755 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
-      "kind": "Rejected",
-      "symbol": "OATH",
-      "reason": "liquidity $1,935 < $10,000",
-      "text": "OATH (pumpswap) - liquidity $1,935 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
-      "kind": "Rejected",
-      "symbol": "TURKEY",
-      "reason": "liquidity $1,944 < $10,000",
-      "text": "TURKEY (pumpswap) - liquidity $1,944 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
-      "kind": "Rejected",
-      "symbol": "scamsem",
-      "reason": "liquidity $2,980 < $10,000",
-      "text": "scamsem (pumpswap) - liquidity $2,980 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
-      "kind": "Rejected",
-      "symbol": "CAMKT",
-      "reason": "liquidity $3,109 < $10,000",
-      "text": "CAMKT (pumpswap) - liquidity $3,109 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
-      "kind": "Rejected",
-      "symbol": "FREEDOM",
-      "reason": "liquidity $4,271 < $10,000",
-      "text": "FREEDOM (pumpswap) - liquidity $4,271 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
-      "kind": "Rejected",
-      "symbol": "FNF",
-      "reason": "liquidity $5,638 < $10,000",
-      "text": "FNF (pumpswap) - liquidity $5,638 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
-      "kind": "Rejected",
-      "symbol": "CTO",
-      "reason": "liquidity $8,514 < $10,000",
-      "text": "CTO (pumpswap) - liquidity $8,514 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:44 CET",
-      "ts": 1795550204.0,
-      "kind": "Rejected",
-      "symbol": "wizardcat",
-      "reason": "liquidity $8,744 < $10,000",
-      "text": "wizardcat (pumpswap) - liquidity $8,744 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:33 CET",
-      "ts": 1795550193.0,
-      "kind": "Skipped",
-      "symbol": "CIA",
-      "reason": "score 52 < 64",
-      "text": "CIA score 52 - score 52 < 64",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 20:56:33 CET",
-      "ts": 1795550193.0,
-      "kind": "Skipped",
-      "symbol": "Gabriel",
-      "reason": "score 62 < 64",
-      "text": "Gabriel score 62 - score 62 < 64",
       "curve": false
     }
   ],
@@ -3931,13 +3931,13 @@
     }
   ],
   "agents": {
-    "running": 7,
-    "running_label": "7 running",
+    "running": 0,
+    "running_label": "stopped",
     "speed": {
       "name": "Speed",
       "title": "Latenz",
       "new_to_buy_s": null,
-      "discovery_s": 60.566,
+      "discovery_s": 61.569,
       "seen_to_score_s": 27.993,
       "score_to_fill_s": null,
       "price_s": null,
@@ -3948,16 +3948,16 @@
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
-      "n_discovery": 78,
+      "n_discovery": 81,
       "n_buys": 0,
-      "updated_ts": 1795550237.742335,
+      "updated_ts": 1795550241.7833717,
       "stages": {
         "discovery": {
-          "p50_s": 60.566,
+          "p50_s": 61.569,
           "p95_s": 880.869,
           "max_s": 1115.735,
-          "last_s": 1115.735,
-          "n": 78
+          "last_s": 433.989,
+          "n": 81
         },
         "seen_to_score": {
           "p50_s": 27.993,
@@ -4019,7 +4019,7 @@
           "p50_s": 0.121,
           "p95_s": 0.133,
           "max_s": 0.599,
-          "last_s": 0.117,
+          "last_s": 0.12,
           "n": 200
         },
         "event_to_phone": {
@@ -4052,51 +4052,51 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "Professor",
-      "pill": "132 pools",
+      "token": "CIA",
+      "pill": "136 pools",
       "pill_kind": "blue",
-      "detail": "20,000 unique pools",
-      "pools": 132,
-      "unique": 20000,
+      "detail": "20,005 unique pools",
+      "pools": 136,
+      "unique": 20005,
       "filters": [
         {
-          "symbol": "Professor",
-          "text": "dex pump-fun not graduated/allowed",
-          "kind": "Rejected"
-        },
-        {
           "symbol": "CIA",
-          "text": "dex pump-fun not graduated/allowed",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "DUVAL",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "pve",
+          "text": "liq < $4k",
           "kind": "Rejected"
         },
         {
-          "symbol": "RED",
-          "text": "dex pump-fun not graduated/allowed",
+          "symbol": "BUY",
+          "text": "liq < $4k",
           "kind": "Rejected"
         },
         {
-          "symbol": "CARVER",
-          "text": "dex pump-fun not graduated/allowed",
+          "symbol": "HDDN",
+          "text": "liq < $4k",
           "kind": "Rejected"
         },
         {
-          "symbol": "RED",
-          "text": "pool age 1 min < 15",
+          "symbol": "BULLS",
+          "text": "liq < $4k",
           "kind": "Rejected"
         },
         {
-          "symbol": "CIAHACK",
-          "text": "dex pump-fun not graduated/allowed",
+          "symbol": "SESAME",
+          "text": "liq < $4k",
           "kind": "Rejected"
         },
         {
-          "symbol": "LEVIOR",
-          "text": "dex pump-fun not graduated/allowed",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "EHOUSE",
-          "text": "dex pump-fun not graduated/allowed",
+          "symbol": "frank",
+          "text": "liq < $4k",
           "kind": "Rejected"
         }
       ]
@@ -4104,14 +4104,14 @@
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "Gabriel",
-      "pill": "62",
+      "token": "CIA",
+      "pill": "63",
       "pill_kind": "purple",
-      "detail": "Gabriel [ds_profiles, graduated] score 62 | liq $12,291 | h1 +27.0% | top10 24% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:9.9 holders:11.2 authorities:10 lp:10.0 age:5 momentum:10 pump:31 | pump 31 (Holder wachsen, Socials ergänzt)",
-      "score": 62,
+      "detail": "CIA [watchlist, graduated] score 63 | liq $15,252 | h1 +79.3% | top10 19% | LP 100% | liquidity:0.1 vol_liq:2 buy_pressure:8.2 holders:13.4 authorities:10 lp:10.0 age:2 momentum:10 narrative:CIA pump:43 | narrative CIA | pump 43 (Volumen zieht an, Liquidität steigt, Geringer Price Impact)",
+      "score": 63,
       "passed": true,
       "status": "passed",
-      "rejected": 93153
+      "rejected": 93169
     },
     "executor": {
       "name": "Executor",
@@ -4298,11 +4298,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20000 Pools · 3490 Scans · Watch 364 · Graduiert 145 · letzter Scan: ds_search 15 · trending_5m 16 · trending_1h 17 · ds_boosts 20 · ds_profiles 21 · watchlist 43"
+      "detail": "20005 Pools · 3490 Scans · Watch 363 · Graduiert 145 · letzter Scan: ds_search 15 · trending_1h 19 · trending_5m 17 · ds_boosts 20 · ds_profiles 21 · watchlist 44"
     },
     {
       "name": "Analyst",
-      "detail": "5132 bewertet · 93153 abgelehnt"
+      "detail": "5134 bewertet · 93169 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4433,46 +4433,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "BUY",
-      "mint": "NJLs4YjdAqdmESQTs9jc4gQ1B2J7Gbf6DFjsU8Fpump",
-      "pool": "GKw3H5HJGcBemDAEQr3LFWegxT3r5YPjJP4FpYEs4jNu",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1300.0,
-      "liq": 1386.66,
-      "age_min": 117.91,
-      "created_at": "2026-11-24T17:58:50Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,387 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795550204.7065804,
-      "t": "2026-11-24 20:56:44 CET",
-      "id": "NJLs4YjdAqdmESQTs9jc4gQ1B2J7Gbf6DFjsU8Fpump-1795550204706"
-    },
-    {
-      "symbol": "pve",
-      "mint": "76ZzSomWnBqtWdPLUtN8Pwr4t8xvzVhhQfQYAhC9deJc",
-      "pool": "4zyi6ce9dNi386dRb2hcrJiEkaXUBs3fcEqGTpqhBi3M",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 18.0,
-      "liq": 18.03,
-      "age_min": 160.38,
-      "created_at": "2026-11-24T17:16:22Z",
-      "decision": "rejected",
-      "reason": "liquidity $18 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795550204.7105913,
-      "t": "2026-11-24 20:56:44 CET",
-      "id": "76ZzSomWnBqtWdPLUtN8Pwr4t8xvzVhhQfQYAhC9deJc-1795550204710"
-    },
     {
       "symbol": "DUVAL",
       "mint": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
@@ -8454,33 +8414,81 @@
       "ts": 1795550238.2469256,
       "t": "2026-11-24 20:57:18 CET",
       "id": "76ZzSomWnBqtWdPLUtN8Pwr4t8xvzVhhQfQYAhC9deJc-1795550238246"
+    },
+    {
+      "symbol": "DUVAL",
+      "mint": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
+      "pool": "CSvKMfrQ2TedEZEDpFSoHbGqxNb1A3w5o2vVM6Y5eoQ5",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 109070.669895744,
+      "liq": 26370.4317,
+      "age_min": 585.36,
+      "created_at": "2026-11-24T10:11:57Z",
+      "decision": "accepted",
+      "reason": "score 68",
+      "score": 68,
+      "pump_score": 30,
+      "pump_reasons": [
+        "Narrativ DUVAL",
+        "Im Trend",
+        "Viele Käufer"
+      ],
+      "ts": 1795550238.8473334,
+      "t": "2026-11-24 20:57:18 CET",
+      "id": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump-1795550238847"
+    },
+    {
+      "symbol": "CIA",
+      "mint": "ASCz2yyX66U4TpK5pxPh9LqUupBpovH33HCNo9kbpump",
+      "pool": "5UxGepr9tkJKd6xnSNcLcmGfjvpnYAY7kvQNc6eUR3kW",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 48708.0,
+      "liq": 15252.05,
+      "age_min": 7.12,
+      "created_at": "2026-11-24T19:50:14Z",
+      "decision": "accepted",
+      "reason": "score 63",
+      "score": 63,
+      "pump_score": 43,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Liquidität steigt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795550241.2948806,
+      "t": "2026-11-24 20:57:21 CET",
+      "id": "ASCz2yyX66U4TpK5pxPh9LqUupBpovH33HCNo9kbpump-1795550241294"
     }
   ],
   "feed_stats": {
-    "emitted": 485,
-    "per_min": 263.68,
+    "emitted": 639,
+    "per_min": 318.54,
     "by_decision": {
-      "seen": 359,
-      "rejected": 106,
-      "accepted": 10,
+      "seen": 495,
+      "rejected": 122,
+      "accepted": 12,
       "skipped": 10
     },
     "by_source": {
       "new": 120,
-      "ds_search": 47,
-      "ds_profiles": 67,
-      "ds_boosts": 51,
-      "trending_1h": 39,
-      "trending_5m": 39,
-      "watchlist": 122
+      "ds_search": 62,
+      "ds_profiles": 92,
+      "ds_boosts": 73,
+      "trending_1h": 59,
+      "trending_5m": 58,
+      "watchlist": 175
     },
-    "pumpfun": 209
+    "pumpfun": 260
   },
-  "status": "running",
-  "status_label": "Läuft",
-  "running": true,
+  "status": "delayed",
+  "status_label": "Verzögert",
+  "running": false,
   "paused": false,
-  "heartbeat_age_s": 0.5,
-  "bot_alive": true,
+  "heartbeat_age_s": 0.2,
+  "bot_alive": false,
   "supervisor_alive": true
 }
