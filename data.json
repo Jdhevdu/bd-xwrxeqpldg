@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-24 21:44:51 CET",
+  "exported_at": "2026-11-24 21:44:35 CET",
   "last_update": "2026-11-24 21:43:56 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -104,12 +104,12 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 33625.2,
-    "last_ms": 25205.4,
+    "last_ms": 1000.2,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.1,
     "work_max_ms": 238.2,
-    "work_last_ms": 8.7,
+    "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 69.01685406881997,
@@ -122,7 +122,7 @@
     "cycles": 3520,
     "pools_scanned": 587403,
     "unique_pools": 20000,
-    "prefilter_rejected": 91854,
+    "prefilter_rejected": 91836,
     "safety_rejected": 2396,
     "scored": 5252,
     "buys": 88,
@@ -340,15 +340,6 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
-    {
-      "t": "2026-11-24 21:44:37 CET",
-      "ts": 1795553077.0,
-      "kind": "Rejected",
-      "symbol": "SOL",
-      "reason": "impersonates SOL (mint is not the official one)",
-      "text": "SOL (raydium) - impersonates SOL (mint is not the official one)",
-      "curve": false
-    },
     {
       "t": "2026-11-24 21:44:09 CET",
       "ts": 1795553049.0,
@@ -699,18 +690,18 @@
       "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
       "text": "DUVAL score 70 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
       "curve": false
+    },
+    {
+      "t": "2026-11-24 21:43:37 CET",
+      "ts": 1795553017.0,
+      "kind": "Scored",
+      "symbol": "Max",
+      "reason": "Max [trending_5m] score 68 | liq $81,960 | h1 +5.1% | top10 16% | LP 100% | liquidity:8.1 vol_liq:8 buy_pressure:0 holders:14.5 authorities:10 lp:10.0 age:3 momentum:10 pump:34 | pump 34 (Volumen zieht an, Im Trend)",
+      "text": "Max [trending_5m] score 68 | liq $81,960 | h1 +5.1% | top10 16% | LP 100% | liquidity:8.1 vol_liq:8 buy_pressure:0 holders:14.5 authorities:10 lp:10.0 age:3 momentum:10 pump:34 | pump 34 (Volumen zieht an, Im Trend)",
+      "curve": false
     }
   ],
   "scanner_highlights": [
-    {
-      "t": "2026-11-24 21:44:37 CET",
-      "ts": 1795553077.0,
-      "kind": "Rejected",
-      "symbol": "SOL",
-      "reason": "impersonates SOL (mint is not the official one)",
-      "text": "SOL (raydium) - impersonates SOL (mint is not the official one)",
-      "curve": false
-    },
     {
       "t": "2026-11-24 21:44:09 CET",
       "ts": 1795553049.0,
@@ -926,9 +917,18 @@
       "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
       "text": "Gabriel score 66 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
       "curve": false
+    },
+    {
+      "t": "2026-11-24 21:43:37 CET",
+      "ts": 1795553017.0,
+      "kind": "Skipped",
+      "symbol": "DUVAL",
+      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "DUVAL score 70 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
     }
   ],
-  "curve_skips": 2095,
+  "curve_skips": 2096,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -3951,7 +3951,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795553091.5047824,
+      "updated_ts": 1795553075.5254984,
       "stages": {
         "discovery": {
           "p50_s": 48.354,
@@ -4018,9 +4018,9 @@
         },
         "bot_to_phone": {
           "p50_s": 0.123,
-          "p95_s": 0.446,
-          "max_s": 6.502,
-          "last_s": 6.502,
+          "p95_s": 0.406,
+          "max_s": 0.656,
+          "last_s": 0.131,
           "n": 200
         },
         "event_to_phone": {
@@ -4053,18 +4053,13 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "SOL",
+      "token": "CSI",
       "pill": "134 pools",
       "pill_kind": "blue",
       "detail": "20,000 unique pools",
       "pools": 134,
       "unique": 20000,
       "filters": [
-        {
-          "symbol": "SOL",
-          "text": "impersonator",
-          "kind": "Rejected"
-        },
         {
           "symbol": "CSI",
           "text": "liq < $4k",
@@ -4099,6 +4094,11 @@
           "symbol": "pump",
           "text": "impersonator",
           "kind": "Rejected"
+        },
+        {
+          "symbol": "HELLO",
+          "text": "dex pump-fun not graduated/allowed",
+          "kind": "Rejected"
         }
       ]
     },
@@ -4112,7 +4112,7 @@
       "score": 69,
       "passed": true,
       "status": "passed",
-      "rejected": 94250
+      "rejected": 94232
     },
     "executor": {
       "name": "Executor",
@@ -4303,7 +4303,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "5252 bewertet · 94250 abgelehnt"
+      "detail": "5252 bewertet · 94232 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4416,7 +4416,38 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "Gabriel",
+      "mint": "8DDM5ioUMwH8VgyHoNQzHjDUoHodXRgnZkSJtvSapump",
+      "pool": "6dA48bj1c72Um7vUojGykghG5t2KTZokkWKskkSVbnyt",
+      "score": 30,
+      "reasons": [
+        "Liquidität steigt",
+        "Geringer Price Impact",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 47019.0,
+      "origin": "watchlist",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/8DDM5ioUMwH8VgyHoNQzHjDUoHodXRgnZkSJtvSapump.png"
+    },
+    {
+      "symbol": "DUVAL",
+      "mint": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
+      "pool": "CSvKMfrQ2TedEZEDpFSoHbGqxNb1A3w5o2vVM6Y5eoQ5",
+      "score": 24,
+      "reasons": [
+        "Im Trend"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 105296.488714686,
+      "origin": "trending_1h",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4434,6 +4465,46 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
+    {
+      "symbol": "EXFIL",
+      "mint": "6FhVPctYg363pQbs4iSvqyHe2cJzfsvFD96gePy6pump",
+      "pool": "2zPfdGd48k7B2U9yqZ4hJSPAPtoVU9uiEbFQYXEoeXkv",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 1355462.72989653,
+      "liq": 100823.4447,
+      "age_min": 75576.56,
+      "created_at": "2026-10-03T09:06:56Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795553009.385059,
+      "t": "2026-11-24 21:43:29 CET",
+      "id": "6FhVPctYg363pQbs4iSvqyHe2cJzfsvFD96gePy6pump-1795553009385"
+    },
+    {
+      "symbol": "GROKIA",
+      "mint": "3cL47ohWa2HApLYKtqPsqkjaxJ6HLvT5Ri1KvWdXpump",
+      "pool": "CpfB8pTVj8Uzu55nKj6sX4KmV6zVe7J2t3C22mLgCVGg",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 1803431.51328083,
+      "liq": 100617.7104,
+      "age_min": 1107.94,
+      "created_at": "2026-11-24T02:15:33Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795553009.388421,
+      "t": "2026-11-24 21:43:29 CET",
+      "id": "3cL47ohWa2HApLYKtqPsqkjaxJ6HLvT5Ri1KvWdXpump-1795553009388"
+    },
     {
       "symbol": "DONJENSEN",
       "mint": "5LDowscYVD3a6ZS4m8gCqG5nU16eLTwRXhciFi1bpump",
@@ -8421,59 +8492,19 @@
       "ts": 1795553049.59658,
       "t": "2026-11-24 21:44:09 CET",
       "id": "85Rkhr4RzVWcfJuiLFX1JPnwhcbkzuPBMfudPYjiBBE4-1795553049596"
-    },
-    {
-      "symbol": "SOL",
-      "mint": "97owM7j5K2ciCKjh1Efi8ix8Et9Tp7sjgnmLM2CHMamN",
-      "pool": "8Mg3HKeUbJyfz5XVeqf5f77AvvHF8DGnb5o5DszoxRTu",
-      "dex": "raydium",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 2272618990.0,
-      "liq": 2272336434.77,
-      "age_min": 94618.11,
-      "created_at": "2026-09-20T03:46:31Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795553077.8192012,
-      "t": "2026-11-24 21:44:37 CET",
-      "id": "97owM7j5K2ciCKjh1Efi8ix8Et9Tp7sjgnmLM2CHMamN-1795553077819"
-    },
-    {
-      "symbol": "SOL",
-      "mint": "97owM7j5K2ciCKjh1Efi8ix8Et9Tp7sjgnmLM2CHMamN",
-      "pool": "8Mg3HKeUbJyfz5XVeqf5f77AvvHF8DGnb5o5DszoxRTu",
-      "dex": "raydium",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 2272618990.0,
-      "liq": 2272336434.77,
-      "age_min": 94618.11,
-      "created_at": "2026-09-20T03:46:31Z",
-      "decision": "rejected",
-      "reason": "impersonates SOL (mint is not the official one)",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795553077.8241315,
-      "t": "2026-11-24 21:44:37 CET",
-      "id": "97owM7j5K2ciCKjh1Efi8ix8Et9Tp7sjgnmLM2CHMamN-1795553077824"
     }
   ],
   "feed_stats": {
-    "emitted": 5024,
-    "per_min": 121.92,
+    "emitted": 4988,
+    "per_min": 122.64,
     "by_decision": {
-      "seen": 3707,
-      "rejected": 1081,
+      "seen": 3689,
+      "rejected": 1063,
       "accepted": 120,
       "skipped": 116
     },
     "by_source": {
-      "new": 1044,
+      "new": 1008,
       "ds_search": 389,
       "ds_profiles": 681,
       "ds_boosts": 601,
@@ -8483,7 +8514,7 @@
       "pump_logs": 4,
       "ds_boosts_top": 18
     },
-    "pumpfun": 2140
+    "pumpfun": 2106
   },
   "status": "running",
   "status_label": "Läuft",
