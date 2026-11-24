@@ -1,20 +1,20 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-24 01:54:29 CET",
+  "exported_at": "2026-11-24 01:54:50 CET",
   "last_update": "2026-11-24 01:54:24 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
-  "equity_eur": 7.687882699123103,
-  "equity_usd": 8.496647959070852,
-  "cash_usd": 8.496647959070852,
-  "cash_eur": 7.687882699123103,
+  "equity_eur": 7.6832479290186,
+  "equity_usd": 8.491525611151356,
+  "cash_usd": 8.491525611151356,
+  "cash_eur": 7.6832479290186,
   "start_eur": 20.0,
   "start_usd": 22.104,
-  "pnl_usd": -13.607352040929147,
-  "pnl_eur": -12.312117300876897,
-  "roi_pct": -61.560586504384496,
-  "multiplier": 0.3844,
+  "pnl_usd": -13.612474388848643,
+  "pnl_eur": -12.3167520709814,
+  "roi_pct": -61.583760354907,
+  "multiplier": 0.3842,
   "realized_usd": -9.829466832811184,
   "fees_usd": 13.524545114818997,
   "fees": {
@@ -27,7 +27,7 @@
   },
   "fees_slippage_usd": 5.085051769442177,
   "cash_sol": 0.11803140613421545,
-  "equity_sol": 0.11803140613421544,
+  "equity_sol": 0.11803140613421545,
   "start_sol": 0.2735353172331269,
   "failed_count": 4,
   "failed_trades": [
@@ -104,22 +104,22 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.4,
     "max_ms": 2958.1,
-    "last_ms": 1000.2,
+    "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.5,
-    "work_p95_ms": 1.1,
+    "work_p95_ms": 1.2,
     "work_max_ms": 118.6,
-    "work_last_ms": 0.6,
+    "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
   },
-  "sol_usd": 71.98633175147617,
+  "sol_usd": 71.9429335739295,
   "eur_usd": 1.1052,
   "open_count": 0,
   "closed_count": 88,
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 2400,
+    "cycles": 2401,
     "pools_scanned": 446559,
     "unique_pools": 20002,
     "prefilter_rejected": 57988,
@@ -2773,12 +2773,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795470752.408404,
-      "t_label": "2026-11-23 22:52:32 CET",
-      "usd": 8.5397,
-      "eur": 7.7268
-    },
-    {
       "t": 1795470779.5354283,
       "t_label": "2026-11-23 22:52:59 CET",
       "usd": 8.5397,
@@ -3971,6 +3965,12 @@
       "t_label": "2026-11-24 01:54:24 CET",
       "usd": 8.4966,
       "eur": 7.6879
+    },
+    {
+      "t": 1795481664.3658338,
+      "t_label": "2026-11-24 01:54:24 CET",
+      "usd": 8.4915,
+      "eur": 7.6832
     }
   ],
   "agents": {
@@ -3986,14 +3986,14 @@
       "price_s": 1.0,
       "price_stale_s": 1.0,
       "stop_to_sell_s": 3.912,
-      "bot_to_phone_s": 0.125,
+      "bot_to_phone_s": 0.124,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795481668.9560642,
+      "updated_ts": 1795481689.961248,
       "stages": {
         "discovery": {
           "p50_s": 54.312,
@@ -4059,8 +4059,8 @@
           "n": 4
         },
         "bot_to_phone": {
-          "p50_s": 0.125,
-          "p95_s": 0.477,
+          "p50_s": 0.124,
+          "p95_s": 0.447,
           "max_s": 0.646,
           "last_s": 0.117,
           "n": 200
@@ -4345,7 +4345,7 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20002 Pools · 2400 Scans · Watch 130 · Graduiert 73 · letzter Scan: ds_search 13 · trending_1h 13 · trending_5m 13 · ds_boosts 18 · ds_boosts_top 7 · ds_profiles 23 · watchlist 42"
+      "detail": "20002 Pools · 2401 Scans · Watch 130 · Graduiert 73 · letzter Scan: ds_search 13 · trending_1h 13 · trending_5m 13 · ds_boosts 18 · ds_boosts_top 7 · ds_profiles 23 · watchlist 42"
     },
     {
       "name": "Analyst",
@@ -8495,7 +8495,7 @@
   ],
   "feed_stats": {
     "emitted": 43436,
-    "per_min": 125.58,
+    "per_min": 125.46,
     "by_decision": {
       "seen": 35409,
       "rejected": 6931,
@@ -8519,7 +8519,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.8,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
