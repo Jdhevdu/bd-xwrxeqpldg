@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-24 19:27:29 CET",
+  "exported_at": "2026-11-24 19:28:00 CET",
   "last_update": "2026-11-24 19:26:49 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -102,9 +102,9 @@
   "realistic": true,
   "loop_latency": {
     "p50_ms": 1000.1,
-    "p95_ms": 1000.3,
+    "p95_ms": 1000.4,
     "max_ms": 6708.5,
-    "last_ms": 1000.1,
+    "last_ms": 1000.5,
     "n": 400,
     "work_p50_ms": 0.5,
     "work_p95_ms": 1.4,
@@ -120,9 +120,9 @@
   "halted": false,
   "counters": {
     "cycles": 3403,
-    "pools_scanned": 571672,
-    "unique_pools": 20019,
-    "prefilter_rejected": 87982,
+    "pools_scanned": 571807,
+    "unique_pools": 20021,
+    "prefilter_rejected": 88000,
     "safety_rejected": 2325,
     "scored": 4891,
     "buys": 88,
@@ -130,14 +130,14 @@
   },
   "last_scan_sources": {
     "ds_search": 15,
-    "trending_1h": 15,
+    "trending_1h": 16,
     "trending_5m": 18,
     "ds_boosts": 20,
     "ds_profiles": 21,
-    "watchlist": 43,
+    "watchlist": 42,
     "ds_boosts_top": 3
   },
-  "watch_count": 355,
+  "watch_count": 356,
   "graduation_count": 137,
   "positions": [],
   "closed": [
@@ -3944,14 +3944,14 @@
       "price_s": 1.0,
       "price_stale_s": 1.0,
       "stop_to_sell_s": 3.912,
-      "bot_to_phone_s": 0.125,
+      "bot_to_phone_s": 0.124,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795544848.9329965,
+      "updated_ts": 1795544880.2879474,
       "stages": {
         "discovery": {
           "p50_s": 70.865,
@@ -4017,10 +4017,10 @@
           "n": 4
         },
         "bot_to_phone": {
-          "p50_s": 0.125,
-          "p95_s": 0.552,
+          "p50_s": 0.124,
+          "p95_s": 0.55,
           "max_s": 0.66,
-          "last_s": 0.12,
+          "last_s": 0.119,
           "n": 200
         },
         "event_to_phone": {
@@ -4056,9 +4056,9 @@
       "token": "USEFULCOIN",
       "pill": "135 pools",
       "pill_kind": "blue",
-      "detail": "20,019 unique pools",
+      "detail": "20,021 unique pools",
       "pools": 135,
-      "unique": 20019,
+      "unique": 20021,
       "filters": [
         {
           "symbol": "USEFULCOIN",
@@ -4112,7 +4112,7 @@
       "score": 78,
       "passed": true,
       "status": "passed",
-      "rejected": 90307
+      "rejected": 90325
     },
     "executor": {
       "name": "Executor",
@@ -4299,11 +4299,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20019 Pools · 3403 Scans · Watch 355 · Graduiert 137 · letzter Scan: ds_search 15 · trending_1h 15 · trending_5m 18 · ds_boosts 20 · ds_profiles 21 · watchlist 43 · ds_boosts_top 3"
+      "detail": "20021 Pools · 3403 Scans · Watch 356 · Graduiert 137 · letzter Scan: ds_search 15 · trending_1h 16 · trending_5m 18 · ds_boosts 20 · ds_profiles 21 · watchlist 42 · ds_boosts_top 3"
     },
     {
       "name": "Analyst",
-      "detail": "4891 bewertet · 90307 abgelehnt"
+      "detail": "4891 bewertet · 90325 abgelehnt"
     },
     {
       "name": "Brain",
@@ -8444,32 +8444,32 @@
     }
   ],
   "feed_stats": {
-    "emitted": 186959,
-    "per_min": 133.66,
+    "emitted": 187112,
+    "per_min": 133.73,
     "by_decision": {
-      "seen": 144129,
-      "rejected": 36908,
+      "seen": 144264,
+      "rejected": 36926,
       "accepted": 2963,
       "skipped": 2959
     },
     "by_source": {
       "pump_logs": 1859,
       "new": 32473,
-      "ds_search": 15120,
-      "trending_5m": 19382,
-      "trending_1h": 15533,
-      "ds_boosts": 17405,
-      "ds_boosts_top": 2499,
-      "ds_profiles": 34254,
-      "watchlist": 48434
+      "ds_search": 15135,
+      "trending_5m": 19400,
+      "trending_1h": 15551,
+      "ds_boosts": 17427,
+      "ds_boosts_top": 2502,
+      "ds_profiles": 34277,
+      "watchlist": 48488
     },
-    "pumpfun": 76871
+    "pumpfun": 76923
   },
   "status": "running",
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.9,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
