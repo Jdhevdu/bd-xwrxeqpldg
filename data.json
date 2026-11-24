@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-24 21:05:09 CET",
+  "exported_at": "2026-11-24 21:05:19 CET",
   "last_update": "2026-11-24 21:04:44 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -105,11 +105,11 @@
     "p95_ms": 1000.3,
     "max_ms": 1017.6,
     "last_ms": 1000.1,
-    "n": 82,
+    "n": 97,
     "work_p50_ms": 0.4,
-    "work_p95_ms": 1.0,
+    "work_p95_ms": 1.5,
     "work_max_ms": 17.7,
-    "work_last_ms": 0.5,
+    "work_last_ms": 4.9,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 68.99048984328043,
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 74,
       "n_buys": 0,
-      "updated_ts": 1795550707.3883069,
+      "updated_ts": 1795550718.3890247,
       "stages": {
         "discovery": {
           "p50_s": 68.343,
@@ -4017,9 +4017,9 @@
         },
         "bot_to_phone": {
           "p50_s": 0.121,
-          "p95_s": 0.136,
+          "p95_s": 0.139,
           "max_s": 0.599,
-          "last_s": 0.121,
+          "last_s": 0.126,
           "n": 200
         },
         "event_to_phone": {
@@ -4433,46 +4433,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "frank",
-      "mint": "GWGFSXzFE94WubVVbeNvaGRY1zh2rTBH5DmaRFFpump",
-      "pool": "8pcgBqfZ4g4daZRMvJrTQUEvbXa9YsdDeV5du4NddCiG",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1672.0,
-      "liq": 1755.06,
-      "age_min": 145.92,
-      "created_at": "2026-11-24T17:38:06Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795550641.2969768,
-      "t": "2026-11-24 21:04:01 CET",
-      "id": "GWGFSXzFE94WubVVbeNvaGRY1zh2rTBH5DmaRFFpump-1795550641296"
-    },
-    {
-      "symbol": "BULLS",
-      "mint": "6Vhj7eqjibYbTRjpoXeYvFKGiSNsmR5ojN5cZ6sGpump",
-      "pool": "CW4FpLrzUjoaeuCYNzaGsjEEUB57ZdYxZJacWykTU98u",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1352.0,
-      "liq": 1460.84,
-      "age_min": 54.36,
-      "created_at": "2026-11-24T19:09:40Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795550641.3002756,
-      "t": "2026-11-24 21:04:01 CET",
-      "id": "6Vhj7eqjibYbTRjpoXeYvFKGiSNsmR5ojN5cZ6sGpump-1795550641300"
-    },
     {
       "symbol": "HDDN",
       "mint": "CcajfejAFHFXBkyuKbCP8hBt6v9BiX6s2W9N2WBipump",
@@ -8486,13 +8446,53 @@
       "ts": 1795550690.5135646,
       "t": "2026-11-24 21:04:50 CET",
       "id": "EBxtaze39ShYS7qrJLoMZ9bDNUBwDd8nTirkWoyapump-1795550690513"
+    },
+    {
+      "symbol": "NEW",
+      "mint": "",
+      "pool": "3dHAwswGPfgg4TTiXNsUpaRo1n4djczcQNZEw9B6QuHFJzopqsTPp76qYFakVxU5obBapuLnG1MKP8oBntFGkUMK",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "pump_logs",
+      "mcap": null,
+      "liq": 0.0,
+      "age_min": 0,
+      "created_at": null,
+      "decision": "seen",
+      "reason": "pump program log",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795550713.3879352,
+      "t": "2026-11-24 21:05:13 CET",
+      "id": "NEW-1795550713387"
+    },
+    {
+      "symbol": "NEW",
+      "mint": "",
+      "pool": "3dHAwswGPfgg4TTiXNsUpaRo1n4djczcQNZEw9B6QuHFJzopqsTPp76qYFakVxU5obBapuLnG1MKP8oBntFGkUMK",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "pump_logs",
+      "mcap": null,
+      "liq": 0.0,
+      "age_min": 0,
+      "created_at": null,
+      "decision": "seen",
+      "reason": "pump program log",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795550714.388424,
+      "t": "2026-11-24 21:05:14 CET",
+      "id": "NEW-1795550714388"
     }
   ],
   "feed_stats": {
-    "emitted": 373,
-    "per_min": 232.18,
+    "emitted": 375,
+    "per_min": 201.98,
     "by_decision": {
-      "seen": 238,
+      "seen": 240,
       "rejected": 117,
       "accepted": 9,
       "skipped": 9
@@ -8504,15 +8504,16 @@
       "ds_boosts": 33,
       "trending_5m": 31,
       "trending_1h": 18,
-      "watchlist": 88
+      "watchlist": 88,
+      "pump_logs": 2
     },
-    "pumpfun": 175
+    "pumpfun": 177
   },
   "status": "running",
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 1.0,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
