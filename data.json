@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-24 13:14:07 CET",
-  "last_update": "2026-11-24 13:13:16 CET",
+  "exported_at": "2026-11-24 13:14:17 CET",
+  "last_update": "2026-11-24 13:14:08 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.551507883415749,
@@ -107,9 +107,9 @@
     "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.5,
-    "work_p95_ms": 14.7,
+    "work_p95_ms": 14.8,
     "work_max_ms": 327.7,
-    "work_last_ms": 6.4,
+    "work_last_ms": 15.4,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 70.7093712266784,
@@ -119,12 +119,12 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 3027,
+    "cycles": 3028,
     "pools_scanned": 526336,
     "unique_pools": 20027,
     "prefilter_rejected": 76420,
     "safety_rejected": 2135,
-    "scored": 3698,
+    "scored": 3699,
     "buys": 88,
     "sells": 93
   },
@@ -340,6 +340,51 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-24 13:14:08 CET",
+      "ts": 1795522448.0,
+      "kind": "Skipped",
+      "symbol": "DUVAL",
+      "reason": "score 63 < 64",
+      "text": "DUVAL score 63 - score 63 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:14:08 CET",
+      "ts": 1795522448.0,
+      "kind": "Skipped",
+      "symbol": "FoolCoin",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "FoolCoin score 66 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:14:08 CET",
+      "ts": 1795522448.0,
+      "kind": "Skipped",
+      "symbol": "AMBER",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "AMBER score 72 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:14:08 CET",
+      "ts": 1795522448.0,
+      "kind": "Skipped",
+      "symbol": "Scamsem",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Scamsem score 72 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:14:08 CET",
+      "ts": 1795522448.0,
+      "kind": "Scored",
+      "symbol": "AMBER",
+      "reason": "AMBER [ds_profiles, graduated] score 72 | liq $10,133 | h1 +1.0% | top10 19% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:13.1 authorities:10 lp:10.0 age:5 momentum:0 pump:30 | pump 30 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "text": "AMBER [ds_profiles, graduated] score 72 | liq $10,133 | h1 +1.0% | top10 19% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:13.1 authorities:10 lp:10.0 age:5 momentum:0 pump:30 | pump 30 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "curve": false
+    },
     {
       "t": "2026-11-24 13:13:49 CET",
       "ts": 1795522429.0,
@@ -654,54 +699,54 @@
       "reason": "liquidity $3,816 < $10,000",
       "text": "scamsem (pumpswap) - liquidity $3,816 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-24 13:13:36 CET",
-      "ts": 1795522416.0,
-      "kind": "Rejected",
-      "symbol": "Satoshi",
-      "reason": "liquidity $6,441 < $10,000",
-      "text": "Satoshi (pumpswap) - liquidity $6,441 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:13:36 CET",
-      "ts": 1795522416.0,
-      "kind": "Rejected",
-      "symbol": "NEW",
-      "reason": "no price for bonding-curve fill",
-      "text": "NEW (pump-fun) - no price for bonding-curve fill",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:13:36 CET",
-      "ts": 1795522416.0,
-      "kind": "Rejected",
-      "symbol": "NEW",
-      "reason": "no price for bonding-curve fill",
-      "text": "NEW (pump-fun) - no price for bonding-curve fill",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:13:36 CET",
-      "ts": 1795522416.0,
-      "kind": "Rejected",
-      "symbol": "NEW",
-      "reason": "no price for bonding-curve fill",
-      "text": "NEW (pump-fun) - no price for bonding-curve fill",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:13:36 CET",
-      "ts": 1795522416.0,
-      "kind": "Rejected",
-      "symbol": "NEW",
-      "reason": "no price for bonding-curve fill",
-      "text": "NEW (pump-fun) - no price for bonding-curve fill",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-24 13:14:08 CET",
+      "ts": 1795522448.0,
+      "kind": "Skipped",
+      "symbol": "DUVAL",
+      "reason": "score 63 < 64",
+      "text": "DUVAL score 63 - score 63 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:14:08 CET",
+      "ts": 1795522448.0,
+      "kind": "Skipped",
+      "symbol": "FoolCoin",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "FoolCoin score 66 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:14:08 CET",
+      "ts": 1795522448.0,
+      "kind": "Skipped",
+      "symbol": "AMBER",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "AMBER score 72 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:14:08 CET",
+      "ts": 1795522448.0,
+      "kind": "Skipped",
+      "symbol": "Scamsem",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Scamsem score 72 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:14:08 CET",
+      "ts": 1795522448.0,
+      "kind": "Scored",
+      "symbol": "AMBER",
+      "reason": "AMBER [ds_profiles, graduated] score 72 | liq $10,133 | h1 +1.0% | top10 19% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:13.1 authorities:10 lp:10.0 age:5 momentum:0 pump:30 | pump 30 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "text": "AMBER [ds_profiles, graduated] score 72 | liq $10,133 | h1 +1.0% | top10 19% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:13.1 authorities:10 lp:10.0 age:5 momentum:0 pump:30 | pump 30 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "curve": false
+    },
     {
       "t": "2026-11-24 13:13:49 CET",
       "ts": 1795522429.0,
@@ -880,51 +925,6 @@
       "symbol": "Satoshi",
       "reason": "liquidity $6,441 < $10,000",
       "text": "Satoshi (pumpswap) - liquidity $6,441 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:13:36 CET",
-      "ts": 1795522416.0,
-      "kind": "Rejected",
-      "symbol": "NEW",
-      "reason": "no price for bonding-curve fill",
-      "text": "NEW (pump-fun) - no price for bonding-curve fill",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:13:36 CET",
-      "ts": 1795522416.0,
-      "kind": "Rejected",
-      "symbol": "NEW",
-      "reason": "no price for bonding-curve fill",
-      "text": "NEW (pump-fun) - no price for bonding-curve fill",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:13:36 CET",
-      "ts": 1795522416.0,
-      "kind": "Rejected",
-      "symbol": "NEW",
-      "reason": "no price for bonding-curve fill",
-      "text": "NEW (pump-fun) - no price for bonding-curve fill",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:13:36 CET",
-      "ts": 1795522416.0,
-      "kind": "Rejected",
-      "symbol": "NEW",
-      "reason": "no price for bonding-curve fill",
-      "text": "NEW (pump-fun) - no price for bonding-curve fill",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:13:36 CET",
-      "ts": 1795522416.0,
-      "kind": "Rejected",
-      "symbol": "NEW",
-      "reason": "no price for bonding-curve fill",
-      "text": "NEW (pump-fun) - no price for bonding-curve fill",
       "curve": false
     }
   ],
@@ -2731,12 +2731,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795506906.7943501,
-      "t_label": "2026-11-24 08:55:06 CET",
-      "usd": 8.4492,
-      "eur": 7.6449
-    },
-    {
       "t": 1795506998.0037937,
       "t_label": "2026-11-24 08:56:38 CET",
       "usd": 8.4492,
@@ -3929,6 +3923,12 @@
       "t_label": "2026-11-24 13:13:16 CET",
       "usd": 8.3459,
       "eur": 7.5515
+    },
+    {
+      "t": 1795522448.1919715,
+      "t_label": "2026-11-24 13:14:08 CET",
+      "usd": 8.3459,
+      "eur": 7.5515
     }
   ],
   "agents": {
@@ -3951,7 +3951,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795522445.3196526,
+      "updated_ts": 1795522457.2864935,
       "stages": {
         "discovery": {
           "p50_s": 63.047,
@@ -4018,9 +4018,9 @@
         },
         "bot_to_phone": {
           "p50_s": 0.122,
-          "p95_s": 0.144,
+          "p95_s": 0.157,
           "max_s": 0.538,
-          "last_s": 0.121,
+          "last_s": 0.125,
           "n": 200
         },
         "event_to_phone": {
@@ -4053,13 +4053,18 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "FoolCoin",
+      "token": "AMBER",
       "pill": "125 pools",
       "pill_kind": "blue",
       "detail": "20,027 unique pools",
       "pools": 125,
       "unique": 20027,
       "filters": [
+        {
+          "symbol": "AMBER",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "FoolCoin",
           "text": "top 10 > 25%",
@@ -4094,22 +4099,17 @@
           "symbol": "TUC",
           "text": "dex pump-fun not graduated/allowed",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "ECONOMIST",
-          "text": "dex pump-fun not graduated/allowed",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "FoolCoin",
-      "pill": "66",
+      "token": "AMBER",
+      "pill": "72",
       "pill_kind": "purple",
-      "detail": "FoolCoin [ds_profiles, graduated] score 66 | liq $10,532 | h1 +10.0% | top10 26% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:11.6 holders:10.4 authorities:10 lp:10.0 age:5 momentum:0 pump:28 | pump 28 (Im Trend, Socials ergänzt, Geringer Price Impact)",
-      "score": 66,
+      "detail": "AMBER [ds_profiles, graduated] score 72 | liq $10,133 | h1 +1.0% | top10 19% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:13.1 authorities:10 lp:10.0 age:5 momentum:0 pump:30 | pump 30 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "score": 72,
       "passed": true,
       "status": "passed",
       "rejected": 78555
@@ -4299,11 +4299,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20027 Pools · 3027 Scans · Watch 265 · Graduiert 110 · letzter Scan: pump_logs 14 · ds_search 15 · trending_1h 15 · trending_5m 12 · ds_boosts 11 · ds_profiles 21 · watchlist 37"
+      "detail": "20027 Pools · 3028 Scans · Watch 265 · Graduiert 110 · letzter Scan: pump_logs 14 · ds_search 15 · trending_1h 15 · trending_5m 12 · ds_boosts 11 · ds_profiles 21 · watchlist 37"
     },
     {
       "name": "Analyst",
-      "detail": "3698 bewertet · 78555 abgelehnt"
+      "detail": "3699 bewertet · 78555 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4416,7 +4416,71 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "DUVAL",
+      "mint": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
+      "pool": "CSvKMfrQ2TedEZEDpFSoHbGqxNb1A3w5o2vVM6Y5eoQ5",
+      "score": 36,
+      "reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 278789.599461737,
+      "origin": "trending_1h",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump.png"
+    },
+    {
+      "symbol": "AMBER",
+      "mint": "65ksadfsLqqGt42imSTVSrmV578aksSFzgpGge3dpump",
+      "pool": "3PZ25CX177v4pb4VZGWnTACooi2rHBnYdsLVUK5JDFB5",
+      "score": 30,
+      "reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 24976.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/65ksadfsLqqGt42imSTVSrmV578aksSFzgpGge3dpump.png"
+    },
+    {
+      "symbol": "FoolCoin",
+      "mint": "8RKV9GyNmhQAVaKVEYK9tBMWkJy7BAJ5JpXAsSV8pump",
+      "pool": "55W4D2FTCJkH7Z1iRfRxDXWr25eommcaa2m1XCYpnsHZ",
+      "score": 28,
+      "reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 25245.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/8RKV9GyNmhQAVaKVEYK9tBMWkJy7BAJ5JpXAsSV8pump.png"
+    },
+    {
+      "symbol": "Scamsem",
+      "mint": "5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat",
+      "pool": "DpbNUa2AJJWwt94p3WxRDummaMcDnu68QTtr41QjEaRW",
+      "score": 27,
+      "reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 63107.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4434,146 +4498,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "Bear",
-      "mint": "7Xj8duDuRsFHxAMchLZ2XBs7DcJE3h1KGosd3ms2pump",
-      "pool": "7nrXThfTGyLvBDq9KHT5ZHqLHdcc39akPS3vL7cdnnXw",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "ds_profiles",
-      "mcap": 22769.64,
-      "liq": 0.0,
-      "age_min": 57.81,
-      "created_at": "2026-11-24T11:15:44Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795522412.7739024,
-      "t": "2026-11-24 13:13:32 CET",
-      "id": "7Xj8duDuRsFHxAMchLZ2XBs7DcJE3h1KGosd3ms2pump-1795522412773"
-    },
-    {
-      "symbol": "D49",
-      "mint": "4BTjmkfui3UMzjsAyj96FyDCqF9oVFZTPpnjMuuFpump",
-      "pool": "GpRnz44ink7nhx6S4hPyTSQvLUyKMMkZ6cmCmkZmD8VB",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "ds_profiles",
-      "mcap": 0.0,
-      "liq": 0.0,
-      "age_min": 56.81,
-      "created_at": "2026-11-24T11:16:44Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795522412.778217,
-      "t": "2026-11-24 13:13:32 CET",
-      "id": "4BTjmkfui3UMzjsAyj96FyDCqF9oVFZTPpnjMuuFpump-1795522412778"
-    },
-    {
-      "symbol": "HIB",
-      "mint": "CNT5XpSy3HnzgsKxCFhhbV9CqmHzqbv6d9sT36cBpump",
-      "pool": "2ku7macSRjSceNQikMKNMbsousqxbex2MNrYZRLigUjq",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 1397.0,
-      "liq": 1507.03,
-      "age_min": 44.03,
-      "created_at": "2026-11-24T11:29:31Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795522412.784357,
-      "t": "2026-11-24 13:13:32 CET",
-      "id": "CNT5XpSy3HnzgsKxCFhhbV9CqmHzqbv6d9sT36cBpump-1795522412784"
-    },
-    {
-      "symbol": "callmaps",
-      "mint": "CALLY1eAdyfn33E6g3dBhdT7MUBEckLCMdNBX3QvMAPS",
-      "pool": "3hAqzSYsYsbbnBvZx9WckfqNB2pgs8KAh2Yiq7MHPm1A",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "ds_profiles",
-      "mcap": 7880.25,
-      "liq": 0.0,
-      "age_min": 56.43,
-      "created_at": "2026-11-24T11:17:07Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795522412.7889352,
-      "t": "2026-11-24 13:13:32 CET",
-      "id": "CALLY1eAdyfn33E6g3dBhdT7MUBEckLCMdNBX3QvMAPS-1795522412788"
-    },
-    {
-      "symbol": "NEW",
-      "mint": "",
-      "pool": "64aV3zzgVBtMDo7bH1Xyy6HB8NUbCtPT4fHrnwoA3sSK2RousrztbZU8Joj4wrxXwwmfhrZFvK2n3CYMUqtvmNx8",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "pump_logs",
-      "mcap": null,
-      "liq": 0.0,
-      "age_min": 0,
-      "created_at": null,
-      "decision": "seen",
-      "reason": "pump program log",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795522414.275976,
-      "t": "2026-11-24 13:13:34 CET",
-      "id": "NEW-1795522414275"
-    },
-    {
-      "symbol": "NEW",
-      "mint": "",
-      "pool": "64aV3zzgVBtMDo7bH1Xyy6HB8NUbCtPT4fHrnwoA3sSK2RousrztbZU8Joj4wrxXwwmfhrZFvK2n3CYMUqtvmNx8",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "pump_logs",
-      "mcap": null,
-      "liq": 0.0,
-      "age_min": 0,
-      "created_at": null,
-      "decision": "seen",
-      "reason": "pump program log",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795522414.282077,
-      "t": "2026-11-24 13:13:34 CET",
-      "id": "NEW-1795522414282"
-    },
-    {
-      "symbol": "NEW",
-      "mint": "",
-      "pool": "2QRMaUbc3w215gMsNBuYLTo2Peaq3qmQXr9DzR2H8kjMA5xtG7GuruG2pgwk19xGQNoLLm4tai3j4DZY5KTuj78E",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "pump_logs",
-      "mcap": null,
-      "liq": 0.0,
-      "age_min": 0,
-      "created_at": null,
-      "decision": "seen",
-      "reason": "pump program log",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795522414.2861233,
-      "t": "2026-11-24 13:13:34 CET",
-      "id": "NEW-1795522414286"
-    },
     {
       "symbol": "NEW",
       "mint": "",
@@ -8444,35 +8368,194 @@
       "ts": 1795522446.2797906,
       "t": "2026-11-24 13:14:06 CET",
       "id": "NEW-1795522446279"
+    },
+    {
+      "symbol": "AMBER",
+      "mint": "65ksadfsLqqGt42imSTVSrmV578aksSFzgpGge3dpump",
+      "pool": "3PZ25CX177v4pb4VZGWnTACooi2rHBnYdsLVUK5JDFB5",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 24976.0,
+      "liq": 10132.72,
+      "age_min": 529.09,
+      "created_at": "2026-11-24T03:25:03Z",
+      "decision": "accepted",
+      "reason": "score 72",
+      "score": 72,
+      "pump_score": 30,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795522448.166889,
+      "t": "2026-11-24 13:14:08 CET",
+      "id": "65ksadfsLqqGt42imSTVSrmV578aksSFzgpGge3dpump-1795522448166"
+    },
+    {
+      "symbol": "Scamsem",
+      "mint": "5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat",
+      "pool": "DpbNUa2AJJWwt94p3WxRDummaMcDnu68QTtr41QjEaRW",
+      "dex": "raydium",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 63107.0,
+      "liq": 43460.95,
+      "age_min": 182.32,
+      "created_at": "2026-11-24T09:11:49Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 72,
+      "pump_score": 27,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795522448.171897,
+      "t": "2026-11-24 13:14:08 CET",
+      "id": "5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat-1795522448171"
+    },
+    {
+      "symbol": "AMBER",
+      "mint": "65ksadfsLqqGt42imSTVSrmV578aksSFzgpGge3dpump",
+      "pool": "3PZ25CX177v4pb4VZGWnTACooi2rHBnYdsLVUK5JDFB5",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 24976.0,
+      "liq": 10132.72,
+      "age_min": 529.09,
+      "created_at": "2026-11-24T03:25:03Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 72,
+      "pump_score": 30,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795522448.1761587,
+      "t": "2026-11-24 13:14:08 CET",
+      "id": "65ksadfsLqqGt42imSTVSrmV578aksSFzgpGge3dpump-1795522448176"
+    },
+    {
+      "symbol": "FoolCoin",
+      "mint": "8RKV9GyNmhQAVaKVEYK9tBMWkJy7BAJ5JpXAsSV8pump",
+      "pool": "55W4D2FTCJkH7Z1iRfRxDXWr25eommcaa2m1XCYpnsHZ",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 25245.0,
+      "liq": 10531.57,
+      "age_min": 247.82,
+      "created_at": "2026-11-24T08:06:19Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 66,
+      "pump_score": 28,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795522448.180266,
+      "t": "2026-11-24 13:14:08 CET",
+      "id": "8RKV9GyNmhQAVaKVEYK9tBMWkJy7BAJ5JpXAsSV8pump-1795522448180"
+    },
+    {
+      "symbol": "DUVAL",
+      "mint": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
+      "pool": "CSvKMfrQ2TedEZEDpFSoHbGqxNb1A3w5o2vVM6Y5eoQ5",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 278789.599461737,
+      "liq": 40385.4489,
+      "age_min": 122.19,
+      "created_at": "2026-11-24T10:11:57Z",
+      "decision": "skipped",
+      "reason": "score 63 < 64",
+      "score": 63,
+      "pump_score": 36,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795522448.1846879,
+      "t": "2026-11-24 13:14:08 CET",
+      "id": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump-1795522448184"
+    },
+    {
+      "symbol": "NEW",
+      "mint": "",
+      "pool": "yZgBp2cg3iM2YnnTxosst11aY8beDnxDJd2krre8BnfyogcMqVBvja9fqocMGyoFzS4tD5zMBWw43EboXyv4NDL",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "pump_logs",
+      "mcap": null,
+      "liq": 0.0,
+      "age_min": 0,
+      "created_at": null,
+      "decision": "seen",
+      "reason": "pump program log",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795522454.2808175,
+      "t": "2026-11-24 13:14:14 CET",
+      "id": "NEW-1795522454280"
+    },
+    {
+      "symbol": "NEW",
+      "mint": "",
+      "pool": "yZgBp2cg3iM2YnnTxosst11aY8beDnxDJd2krre8BnfyogcMqVBvja9fqocMGyoFzS4tD5zMBWw43EboXyv4NDL",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "pump_logs",
+      "mcap": null,
+      "liq": 0.0,
+      "age_min": 0,
+      "created_at": null,
+      "decision": "seen",
+      "reason": "pump program log",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795522454.2886975,
+      "t": "2026-11-24 13:14:14 CET",
+      "id": "NEW-1795522454288"
     }
   ],
   "feed_stats": {
-    "emitted": 133728,
-    "per_min": 130.39,
+    "emitted": 133735,
+    "per_min": 130.38,
     "by_decision": {
-      "seen": 104876,
+      "seen": 104878,
       "rejected": 25319,
-      "accepted": 1769,
-      "skipped": 1764
+      "accepted": 1770,
+      "skipped": 1768
     },
     "by_source": {
-      "pump_logs": 1264,
+      "pump_logs": 1266,
       "new": 23709,
       "ds_search": 10754,
       "trending_5m": 14417,
-      "trending_1h": 11595,
+      "trending_1h": 11596,
       "ds_boosts": 12187,
       "ds_boosts_top": 2469,
-      "ds_profiles": 24813,
+      "ds_profiles": 24817,
       "watchlist": 32520
     },
-    "pumpfun": 56025
+    "pumpfun": 56027
   },
   "status": "running",
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.8,
+  "heartbeat_age_s": 0.0,
   "bot_alive": true,
   "supervisor_alive": true
 }
