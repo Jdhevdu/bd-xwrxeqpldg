@@ -1,20 +1,20 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-24 06:03:47 CET",
+  "exported_at": "2026-11-24 06:04:07 CET",
   "last_update": "2026-11-24 06:03:24 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
-  "equity_eur": 7.66451570447888,
-  "equity_usd": 8.470822756590058,
-  "cash_usd": 8.470822756590058,
-  "cash_eur": 7.66451570447888,
+  "equity_eur": 7.644241823537657,
+  "equity_usd": 8.448416063373818,
+  "cash_usd": 8.448416063373818,
+  "cash_eur": 7.644241823537657,
   "start_eur": 20.0,
   "start_usd": 22.104,
-  "pnl_usd": -13.633177243409941,
-  "pnl_eur": -12.33548429552112,
-  "roi_pct": -61.6774214776056,
-  "multiplier": 0.3832,
+  "pnl_usd": -13.655583936626181,
+  "pnl_eur": -12.355758176462343,
+  "roi_pct": -61.77879088231171,
+  "multiplier": 0.3822,
   "realized_usd": -9.829466832811184,
   "fees_usd": 13.524545114818997,
   "fees": {
@@ -27,7 +27,7 @@
   },
   "fees_slippage_usd": 5.085051769442177,
   "cash_sol": 0.11803140613421545,
-  "equity_sol": 0.11803140613421544,
+  "equity_sol": 0.11803140613421546,
   "start_sol": 0.2735353172331269,
   "failed_count": 4,
   "failed_trades": [
@@ -102,24 +102,24 @@
   "realistic": true,
   "loop_latency": {
     "p50_ms": 1000.1,
-    "p95_ms": 1000.4,
+    "p95_ms": 1000.3,
     "max_ms": 14271.8,
-    "last_ms": 1000.2,
+    "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.2,
-    "work_max_ms": 249.0,
-    "work_last_ms": 0.7,
+    "work_max_ms": 100.5,
+    "work_last_ms": 0.3,
     "lock_wait_ms": 0.0
   },
-  "sol_usd": 71.76753233760299,
+  "sol_usd": 71.57769563269444,
   "eur_usd": 1.1052,
   "open_count": 0,
   "closed_count": 88,
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 2640,
+    "cycles": 2641,
     "pools_scanned": 478745,
     "unique_pools": 20006,
     "prefilter_rejected": 64580,
@@ -2730,12 +2730,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795482280.8943906,
-      "t_label": "2026-11-24 02:04:40 CET",
-      "usd": 8.4915,
-      "eur": 7.6832
-    },
-    {
       "t": 1795482310.3195753,
       "t_label": "2026-11-24 02:05:10 CET",
       "usd": 8.4915,
@@ -3928,6 +3922,12 @@
       "t_label": "2026-11-24 06:03:24 CET",
       "usd": 8.4708,
       "eur": 7.6645
+    },
+    {
+      "t": 1795496604.638527,
+      "t_label": "2026-11-24 06:03:24 CET",
+      "usd": 8.4484,
+      "eur": 7.6442
     }
   ],
   "agents": {
@@ -3943,14 +3943,14 @@
       "price_s": 1.0,
       "price_stale_s": 1.0,
       "stop_to_sell_s": 3.912,
-      "bot_to_phone_s": 0.122,
+      "bot_to_phone_s": 0.123,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795496627.1925285,
+      "updated_ts": 1795496647.1934614,
       "stages": {
         "discovery": {
           "p50_s": 87.813,
@@ -4016,8 +4016,8 @@
           "n": 4
         },
         "bot_to_phone": {
-          "p50_s": 0.122,
-          "p95_s": 0.499,
+          "p50_s": 0.123,
+          "p95_s": 0.525,
           "max_s": 0.646,
           "last_s": 0.126,
           "n": 200
@@ -4298,7 +4298,7 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20006 Pools · 2640 Scans · Watch 186 · Graduiert 88 · letzter Scan: ds_search 13 · trending_5m 15 · trending_1h 19 · ds_boosts 15 · ds_profiles 23 · watchlist 40"
+      "detail": "20006 Pools · 2641 Scans · Watch 186 · Graduiert 88 · letzter Scan: ds_search 13 · trending_5m 15 · trending_1h 19 · ds_boosts 15 · ds_profiles 23 · watchlist 40"
     },
     {
       "name": "Analyst",
@@ -8483,7 +8483,7 @@
   ],
   "feed_stats": {
     "emitted": 77349,
-    "per_min": 129.94,
+    "per_min": 129.87,
     "by_decision": {
       "seen": 61815,
       "rejected": 13614,
@@ -8507,7 +8507,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.3,
+  "heartbeat_age_s": 0.6,
   "bot_alive": true,
   "supervisor_alive": true
 }
