@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-24 13:32:43 CET",
-  "last_update": "2026-11-24 13:31:12 CET",
+  "exported_at": "2026-11-24 13:33:03 CET",
+  "last_update": "2026-11-24 13:32:51 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.539218504478888,
@@ -107,8 +107,8 @@
     "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.4,
-    "work_p95_ms": 1.3,
-    "work_max_ms": 290.1,
+    "work_p95_ms": 1.2,
+    "work_max_ms": 74.9,
     "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
   },
@@ -119,12 +119,12 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 3037,
+    "cycles": 3038,
     "pools_scanned": 527498,
     "unique_pools": 20024,
     "prefilter_rejected": 76830,
-    "safety_rejected": 2138,
-    "scored": 3744,
+    "safety_rejected": 2140,
+    "scored": 3745,
     "buys": 88,
     "sells": 93
   },
@@ -339,6 +339,69 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-24 13:32:51 CET",
+      "ts": 1795523571.0,
+      "kind": "Skipped",
+      "symbol": "BITEFLY",
+      "reason": "score 58 < 64",
+      "text": "BITEFLY score 58 - score 58 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:32:51 CET",
+      "ts": 1795523571.0,
+      "kind": "Skipped",
+      "symbol": "AMBER",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "AMBER score 64 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:32:51 CET",
+      "ts": 1795523571.0,
+      "kind": "Skipped",
+      "symbol": "DUVAL",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "DUVAL score 64 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:32:51 CET",
+      "ts": 1795523571.0,
+      "kind": "Skipped",
+      "symbol": "Scamsem",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Scamsem score 70 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:32:51 CET",
+      "ts": 1795523571.0,
+      "kind": "Rejected",
+      "symbol": "ACHI",
+      "reason": "RugCheck danger: Large Amount of LP Unlocked",
+      "text": "ACHI - RugCheck danger: Large Amount of LP Unlocked",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:32:49 CET",
+      "ts": 1795523569.0,
+      "kind": "Rejected",
+      "symbol": "HYPE",
+      "reason": "RugCheck danger: Mint Authority still enabled",
+      "text": "HYPE - RugCheck danger: Mint Authority still enabled",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:32:49 CET",
+      "ts": 1795523569.0,
+      "kind": "Scored",
+      "symbol": "AMBER",
+      "reason": "AMBER [ds_profiles, graduated] score 64 | liq $10,144 | h1 -2.4% | top10 21% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:15 holders:12.6 authorities:10 lp:10.0 age:5 momentum:0 pump:25 | pump 25 (Im Trend, Socials ergänzt)",
+      "text": "AMBER [ds_profiles, graduated] score 64 | liq $10,144 | h1 -2.4% | top10 21% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:15 holders:12.6 authorities:10 lp:10.0 age:5 momentum:0 pump:25 | pump 25 (Im Trend, Socials ergänzt)",
+      "curve": false
+    },
     {
       "t": "2026-11-24 13:32:42 CET",
       "ts": 1795523562.0,
@@ -635,72 +698,72 @@
       "reason": "liquidity $2,464 < $10,000",
       "text": "RANSEM (pumpswap) - liquidity $2,464 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-24 13:32:04 CET",
-      "ts": 1795523524.0,
-      "kind": "Rejected",
-      "symbol": "bearpen",
-      "reason": "liquidity $2,591 < $10,000",
-      "text": "bearpen (pumpswap) - liquidity $2,591 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:32:04 CET",
-      "ts": 1795523524.0,
-      "kind": "Rejected",
-      "symbol": "NIO",
-      "reason": "liquidity $3,013 < $10,000",
-      "text": "NIO (pumpswap) - liquidity $3,013 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:32:04 CET",
-      "ts": 1795523524.0,
-      "kind": "Rejected",
-      "symbol": "scamsem",
-      "reason": "liquidity $3,897 < $10,000",
-      "text": "scamsem (pumpswap) - liquidity $3,897 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:32:04 CET",
-      "ts": 1795523524.0,
-      "kind": "Rejected",
-      "symbol": "FoolCoin",
-      "reason": "liquidity $7,944 < $10,000",
-      "text": "FoolCoin (pumpswap) - liquidity $7,944 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:32:04 CET",
-      "ts": 1795523524.0,
-      "kind": "Rejected",
-      "symbol": "JENSEN",
-      "reason": "pool age 12 min < 15",
-      "text": "JENSEN (pumpswap) - pool age 12 min < 15",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:32:04 CET",
-      "ts": 1795523524.0,
-      "kind": "Rejected",
-      "symbol": "Unemployed",
-      "reason": "pool age 5 min < 15",
-      "text": "Unemployed (meteora-damm-v2) - pool age 5 min < 15",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:31:12 CET",
-      "ts": 1795523472.0,
-      "kind": "Skipped",
-      "symbol": "CATE",
-      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "CATE score 74 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-24 13:32:51 CET",
+      "ts": 1795523571.0,
+      "kind": "Skipped",
+      "symbol": "BITEFLY",
+      "reason": "score 58 < 64",
+      "text": "BITEFLY score 58 - score 58 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:32:51 CET",
+      "ts": 1795523571.0,
+      "kind": "Skipped",
+      "symbol": "AMBER",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "AMBER score 64 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:32:51 CET",
+      "ts": 1795523571.0,
+      "kind": "Skipped",
+      "symbol": "DUVAL",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "DUVAL score 64 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:32:51 CET",
+      "ts": 1795523571.0,
+      "kind": "Skipped",
+      "symbol": "Scamsem",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Scamsem score 70 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:32:51 CET",
+      "ts": 1795523571.0,
+      "kind": "Rejected",
+      "symbol": "ACHI",
+      "reason": "RugCheck danger: Large Amount of LP Unlocked",
+      "text": "ACHI - RugCheck danger: Large Amount of LP Unlocked",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:32:49 CET",
+      "ts": 1795523569.0,
+      "kind": "Rejected",
+      "symbol": "HYPE",
+      "reason": "RugCheck danger: Mint Authority still enabled",
+      "text": "HYPE - RugCheck danger: Mint Authority still enabled",
+      "curve": false
+    },
+    {
+      "t": "2026-11-24 13:32:49 CET",
+      "ts": 1795523569.0,
+      "kind": "Scored",
+      "symbol": "AMBER",
+      "reason": "AMBER [ds_profiles, graduated] score 64 | liq $10,144 | h1 -2.4% | top10 21% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:15 holders:12.6 authorities:10 lp:10.0 age:5 momentum:0 pump:25 | pump 25 (Im Trend, Socials ergänzt)",
+      "text": "AMBER [ds_profiles, graduated] score 64 | liq $10,144 | h1 -2.4% | top10 21% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:15 holders:12.6 authorities:10 lp:10.0 age:5 momentum:0 pump:25 | pump 25 (Im Trend, Socials ergänzt)",
+      "curve": false
+    },
     {
       "t": "2026-11-24 13:32:42 CET",
       "ts": 1795523562.0,
@@ -861,69 +924,6 @@
       "symbol": "RANSEM",
       "reason": "liquidity $2,464 < $10,000",
       "text": "RANSEM (pumpswap) - liquidity $2,464 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:32:04 CET",
-      "ts": 1795523524.0,
-      "kind": "Rejected",
-      "symbol": "bearpen",
-      "reason": "liquidity $2,591 < $10,000",
-      "text": "bearpen (pumpswap) - liquidity $2,591 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:32:04 CET",
-      "ts": 1795523524.0,
-      "kind": "Rejected",
-      "symbol": "NIO",
-      "reason": "liquidity $3,013 < $10,000",
-      "text": "NIO (pumpswap) - liquidity $3,013 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:32:04 CET",
-      "ts": 1795523524.0,
-      "kind": "Rejected",
-      "symbol": "scamsem",
-      "reason": "liquidity $3,897 < $10,000",
-      "text": "scamsem (pumpswap) - liquidity $3,897 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:32:04 CET",
-      "ts": 1795523524.0,
-      "kind": "Rejected",
-      "symbol": "FoolCoin",
-      "reason": "liquidity $7,944 < $10,000",
-      "text": "FoolCoin (pumpswap) - liquidity $7,944 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:32:04 CET",
-      "ts": 1795523524.0,
-      "kind": "Rejected",
-      "symbol": "JENSEN",
-      "reason": "pool age 12 min < 15",
-      "text": "JENSEN (pumpswap) - pool age 12 min < 15",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:32:04 CET",
-      "ts": 1795523524.0,
-      "kind": "Rejected",
-      "symbol": "Unemployed",
-      "reason": "pool age 5 min < 15",
-      "text": "Unemployed (meteora-damm-v2) - pool age 5 min < 15",
-      "curve": false
-    },
-    {
-      "t": "2026-11-24 13:31:12 CET",
-      "ts": 1795523472.0,
-      "kind": "Skipped",
-      "symbol": "CATE",
-      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "CATE score 74 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
       "curve": false
     }
   ],
@@ -2730,12 +2730,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795507978.0468838,
-      "t_label": "2026-11-24 09:12:58 CET",
-      "usd": 8.4363,
-      "eur": 7.6332
-    },
-    {
       "t": 1795507993.176269,
       "t_label": "2026-11-24 09:13:13 CET",
       "usd": 8.4529,
@@ -3928,6 +3922,12 @@
       "t_label": "2026-11-24 13:31:12 CET",
       "usd": 8.3323,
       "eur": 7.5392
+    },
+    {
+      "t": 1795523571.7422075,
+      "t_label": "2026-11-24 13:32:51 CET",
+      "usd": 8.3323,
+      "eur": 7.5392
     }
   ],
   "agents": {
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795523563.038371,
+      "updated_ts": 1795523583.033864,
       "stages": {
         "discovery": {
           "p50_s": 92.961,
@@ -4019,7 +4019,7 @@
           "p50_s": 0.126,
           "p95_s": 0.564,
           "max_s": 0.651,
-          "last_s": 0.351,
+          "last_s": 0.122,
           "n": 200
         },
         "event_to_phone": {
@@ -4052,13 +4052,28 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "Scamsem",
+      "token": "ACHI",
       "pill": "113 pools",
       "pill_kind": "blue",
       "detail": "20,024 unique pools",
       "pools": 113,
       "unique": 20024,
       "filters": [
+        {
+          "symbol": "ACHI",
+          "text": "dev past rugs",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "HYPE",
+          "text": "mint not revoked",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "AMBER",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "Scamsem",
           "text": "top 10 > 25%",
@@ -4083,35 +4098,20 @@
           "symbol": "BULLSEYE",
           "text": "dex pump-fun not graduated/allowed",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "ANSEM",
-          "text": "pool age 2 min < 15",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "CUPSEY",
-          "text": "dex pump-fun not graduated/allowed",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "unepred",
-          "text": "dex pump-fun not graduated/allowed",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "Scamsem",
-      "pill": "70",
+      "token": "AMBER",
+      "pill": "64",
       "pill_kind": "purple",
-      "detail": "Scamsem [ds_profiles, graduated] score 70 | liq $45,343 | h1 +14.6% | top10 20% | LP 100% | liquidity:5.3 vol_liq:15 buy_pressure:9.3 holders:12.7 authorities:10 lp:10.0 age:5 momentum:0 pump:27 | pump 27 (Im Trend, Socials ergänzt)",
-      "score": 70,
+      "detail": "AMBER [ds_profiles, graduated] score 64 | liq $10,144 | h1 -2.4% | top10 21% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:15 holders:12.6 authorities:10 lp:10.0 age:5 momentum:0 pump:25 | pump 25 (Im Trend, Socials ergänzt)",
+      "score": 64,
       "passed": true,
       "status": "passed",
-      "rejected": 78968
+      "rejected": 78970
     },
     "executor": {
       "name": "Executor",
@@ -4298,11 +4298,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20024 Pools · 3037 Scans · Watch 268 · Graduiert 111 · letzter Scan: ds_search 15 · trending_1h 13 · trending_5m 16 · ds_boosts 12 · ds_profiles 19 · watchlist 38"
+      "detail": "20024 Pools · 3038 Scans · Watch 268 · Graduiert 111 · letzter Scan: ds_search 15 · trending_1h 13 · trending_5m 16 · ds_boosts 12 · ds_profiles 19 · watchlist 38"
     },
     {
       "name": "Analyst",
-      "detail": "3744 bewertet · 78968 abgelehnt"
+      "detail": "3745 bewertet · 78970 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4415,7 +4415,70 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "BITEFLY",
+      "mint": "FKYYhVAo9RnfBCrtn7wp2meexQ8xUWXSjRgMrJgkpump",
+      "pool": "AdNQRcj79baiBQSuE69edejQFDSbkTu3izhpdfJ1DjY4",
+      "score": 46,
+      "reasons": [
+        "Volumen zieht an",
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 85605.90138,
+      "origin": "trending_5m",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/FKYYhVAo9RnfBCrtn7wp2meexQ8xUWXSjRgMrJgkpump.png"
+    },
+    {
+      "symbol": "DUVAL",
+      "mint": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
+      "pool": "CSvKMfrQ2TedEZEDpFSoHbGqxNb1A3w5o2vVM6Y5eoQ5",
+      "score": 38,
+      "reasons": [
+        "Viele Käufer",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 379923.532416008,
+      "origin": "trending_5m",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump.png"
+    },
+    {
+      "symbol": "Scamsem",
+      "mint": "5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat",
+      "pool": "DpbNUa2AJJWwt94p3WxRDummaMcDnu68QTtr41QjEaRW",
+      "score": 27,
+      "reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 68854.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat.png"
+    },
+    {
+      "symbol": "AMBER",
+      "mint": "65ksadfsLqqGt42imSTVSrmV578aksSFzgpGge3dpump",
+      "pool": "3PZ25CX177v4pb4VZGWnTACooi2rHBnYdsLVUK5JDFB5",
+      "score": 25,
+      "reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 25085.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/65ksadfsLqqGt42imSTVSrmV578aksSFzgpGge3dpump.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4433,146 +4496,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "Trenchers",
-      "mint": "BWtNaVHGyQRv8s358qWWn2qGmuavR9vn8upFnTKoBwtc",
-      "pool": "47k8sx6VWS3prGgE3WpN3UZ6HGfBvk6HjAY2RoTiCioj",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 1574.0,
-      "liq": 1644.99,
-      "age_min": 100.14,
-      "created_at": "2026-11-24T10:50:47Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,645 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795523455.1671116,
-      "t": "2026-11-24 13:30:55 CET",
-      "id": "BWtNaVHGyQRv8s358qWWn2qGmuavR9vn8upFnTKoBwtc-1795523455167"
-    },
-    {
-      "symbol": "HIB",
-      "mint": "CNT5XpSy3HnzgsKxCFhhbV9CqmHzqbv6d9sT36cBpump",
-      "pool": "2ku7macSRjSceNQikMKNMbsousqxbex2MNrYZRLigUjq",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 1364.0,
-      "liq": 1474.77,
-      "age_min": 61.4,
-      "created_at": "2026-11-24T11:29:31Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,475 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795523455.171041,
-      "t": "2026-11-24 13:30:55 CET",
-      "id": "CNT5XpSy3HnzgsKxCFhhbV9CqmHzqbv6d9sT36cBpump-1795523455171"
-    },
-    {
-      "symbol": "coin",
-      "mint": "4u7Set7EcDjHZKtDFaY5F7fHvp4J799R2ktZSU3Npump",
-      "pool": "8TH56rwDUaHh314M1jfydNfMQQiZaq4YqYVGy1xD1HC7",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1376.0,
-      "liq": 1442.38,
-      "age_min": 254.55,
-      "created_at": "2026-11-24T08:16:22Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,442 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795523455.1748967,
-      "t": "2026-11-24 13:30:55 CET",
-      "id": "4u7Set7EcDjHZKtDFaY5F7fHvp4J799R2ktZSU3Npump-1795523455174"
-    },
-    {
-      "symbol": "Wilserdly",
-      "mint": "7y12o9Yju3ZiZbXHWfJxeHH2C7ZiiULKywwk1qZW6Wsd",
-      "pool": "GsRFeiNdPjVhHt8vRGrDQBLybkhNEdJQ4hCGCTmVyGEY",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 7373.14,
-      "liq": 0.0,
-      "age_min": 65.34,
-      "created_at": "2026-11-24T11:25:35Z",
-      "decision": "rejected",
-      "reason": "mcap $7,373 < $15,000 (early)",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795523455.178944,
-      "t": "2026-11-24 13:30:55 CET",
-      "id": "7y12o9Yju3ZiZbXHWfJxeHH2C7ZiiULKywwk1qZW6Wsd-1795523455178"
-    },
-    {
-      "symbol": "FEAR",
-      "mint": "4JT6qcRnStDMV44gZFBsrBp3i9tLYVuEHpgP7Pjhpump",
-      "pool": "2M1mS9qrpETqS2ZHtFU1VHuEG9omCGZJDXo9ubZTk94y",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 3040.35,
-      "liq": 0.0,
-      "age_min": 2328.59,
-      "created_at": "2026-11-22T21:42:20Z",
-      "decision": "rejected",
-      "reason": "mcap $3,040 < $15,000 (early)",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795523455.1828656,
-      "t": "2026-11-24 13:30:55 CET",
-      "id": "4JT6qcRnStDMV44gZFBsrBp3i9tLYVuEHpgP7Pjhpump-1795523455182"
-    },
-    {
-      "symbol": "PROVEN",
-      "mint": "DVeU9oDkaGBp6vnqCRkdXUvnTDSFvHaxZzsDgdarpump",
-      "pool": "CWovXZxpdJZHZqAneZu8nTgKmcD7uDBa1EiYkQFC2qsH",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 2436.88,
-      "liq": 0.0,
-      "age_min": 225.77,
-      "created_at": "2026-11-24T08:45:09Z",
-      "decision": "rejected",
-      "reason": "mcap $2,437 < $15,000 (early)",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795523455.1867971,
-      "t": "2026-11-24 13:30:55 CET",
-      "id": "DVeU9oDkaGBp6vnqCRkdXUvnTDSFvHaxZzsDgdarpump-1795523455186"
-    },
-    {
-      "symbol": "eCAT",
-      "mint": "2d1rMKdT4dH4beVbtqUp6PxsoLVdY83JN5UYpionpump",
-      "pool": "DkeZPysAewvyskfctpWzZedeyHkgCXkN5oi3QqoJ9oqH",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 0.0,
-      "liq": 0.0,
-      "age_min": 248.97,
-      "created_at": "2026-11-24T08:21:57Z",
-      "decision": "rejected",
-      "reason": "no price for bonding-curve fill",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795523455.1905897,
-      "t": "2026-11-24 13:30:55 CET",
-      "id": "2d1rMKdT4dH4beVbtqUp6PxsoLVdY83JN5UYpionpump-1795523455190"
-    },
     {
       "symbol": "JACKSAM",
       "mint": "8bftundF4gajUd4zNEqgtvV13eX9YTGT1vvCpbPjMLMQ",
@@ -8491,26 +8414,183 @@
       "ts": 1795523562.1097186,
       "t": "2026-11-24 13:32:42 CET",
       "id": "5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat-1795523562109"
+    },
+    {
+      "symbol": "AMBER",
+      "mint": "65ksadfsLqqGt42imSTVSrmV578aksSFzgpGge3dpump",
+      "pool": "3PZ25CX177v4pb4VZGWnTACooi2rHBnYdsLVUK5JDFB5",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 25085.0,
+      "liq": 10143.83,
+      "age_min": 547.77,
+      "created_at": "2026-11-24T03:25:03Z",
+      "decision": "accepted",
+      "reason": "score 64",
+      "score": 64,
+      "pump_score": 25,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795523569.3775775,
+      "t": "2026-11-24 13:32:49 CET",
+      "id": "65ksadfsLqqGt42imSTVSrmV578aksSFzgpGge3dpump-1795523569377"
+    },
+    {
+      "symbol": "HYPE",
+      "mint": "98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g",
+      "pool": "81GpCm4d13y8TozYtThabuSCLQN2o3bbrvDogXFPn8sA",
+      "dex": "meteora",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 41411103.3881905,
+      "liq": 1745027.1709,
+      "age_min": 589954.82,
+      "created_at": "2025-10-10T19:58:00Z",
+      "decision": "rejected",
+      "reason": "RugCheck danger: Mint Authority still enabled",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795523569.382889,
+      "t": "2026-11-24 13:32:49 CET",
+      "id": "98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g-1795523569382"
+    },
+    {
+      "symbol": "ACHI",
+      "mint": "cZ9FE2JtR2XCmYu9hPpFpmxs6ciX6bpBmsVjMn2NUsb",
+      "pool": "oZi2HxiXj6KnAJ5dkitDb5L89UdqeQGUA3DC9e8UYn8",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 154293.8241,
+      "liq": 158134.7539,
+      "age_min": 432.0,
+      "created_at": "2026-11-24T05:20:52Z",
+      "decision": "rejected",
+      "reason": "RugCheck danger: Large Amount of LP Unlocked",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795523571.7179513,
+      "t": "2026-11-24 13:32:51 CET",
+      "id": "cZ9FE2JtR2XCmYu9hPpFpmxs6ciX6bpBmsVjMn2NUsb-1795523571717"
+    },
+    {
+      "symbol": "Scamsem",
+      "mint": "5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat",
+      "pool": "DpbNUa2AJJWwt94p3WxRDummaMcDnu68QTtr41QjEaRW",
+      "dex": "raydium",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 68854.0,
+      "liq": 45343.14,
+      "age_min": 201.05,
+      "created_at": "2026-11-24T09:11:49Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 70,
+      "pump_score": 27,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795523571.7231643,
+      "t": "2026-11-24 13:32:51 CET",
+      "id": "5JWeGmA9z6yHd5F9P6B23A8wthho8BpZuDmQv5DfLoat-1795523571723"
+    },
+    {
+      "symbol": "DUVAL",
+      "mint": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
+      "pool": "CSvKMfrQ2TedEZEDpFSoHbGqxNb1A3w5o2vVM6Y5eoQ5",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 379923.532416008,
+      "liq": 48194.6406,
+      "age_min": 140.91,
+      "created_at": "2026-11-24T10:11:57Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 64,
+      "pump_score": 38,
+      "pump_reasons": [
+        "Viele Käufer",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795523571.7270186,
+      "t": "2026-11-24 13:32:51 CET",
+      "id": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump-1795523571727"
+    },
+    {
+      "symbol": "AMBER",
+      "mint": "65ksadfsLqqGt42imSTVSrmV578aksSFzgpGge3dpump",
+      "pool": "3PZ25CX177v4pb4VZGWnTACooi2rHBnYdsLVUK5JDFB5",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 25085.0,
+      "liq": 10143.83,
+      "age_min": 547.81,
+      "created_at": "2026-11-24T03:25:03Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 64,
+      "pump_score": 25,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795523571.7309022,
+      "t": "2026-11-24 13:32:51 CET",
+      "id": "65ksadfsLqqGt42imSTVSrmV578aksSFzgpGge3dpump-1795523571730"
+    },
+    {
+      "symbol": "BITEFLY",
+      "mint": "FKYYhVAo9RnfBCrtn7wp2meexQ8xUWXSjRgMrJgkpump",
+      "pool": "AdNQRcj79baiBQSuE69edejQFDSbkTu3izhpdfJ1DjY4",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 85605.90138,
+      "liq": 22544.3468,
+      "age_min": 12.1,
+      "created_at": "2026-11-24T12:20:46Z",
+      "decision": "skipped",
+      "reason": "score 58 < 64",
+      "score": 58,
+      "pump_score": 46,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "ts": 1795523571.734594,
+      "t": "2026-11-24 13:32:51 CET",
+      "id": "FKYYhVAo9RnfBCrtn7wp2meexQ8xUWXSjRgMrJgkpump-1795523571734"
     }
   ],
   "feed_stats": {
-    "emitted": 135489,
-    "per_min": 129.76,
+    "emitted": 135496,
+    "per_min": 129.72,
     "by_decision": {
       "seen": 106157,
-      "rejected": 25707,
-      "accepted": 1816,
-      "skipped": 1809
+      "rejected": 25709,
+      "accepted": 1817,
+      "skipped": 1813
     },
     "by_source": {
       "pump_logs": 1274,
       "new": 24113,
       "ds_search": 10914,
-      "trending_5m": 14577,
+      "trending_5m": 14581,
       "trending_1h": 11728,
       "ds_boosts": 12305,
       "ds_boosts_top": 2469,
-      "ds_profiles": 25156,
+      "ds_profiles": 25159,
       "watchlist": 32953
     },
     "pumpfun": 56815
@@ -8519,7 +8599,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.2,
+  "heartbeat_age_s": 0.5,
   "bot_alive": true,
   "supervisor_alive": true
 }
