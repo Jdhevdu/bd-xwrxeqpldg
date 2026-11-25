@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 21:38:50 CET",
+  "exported_at": "2026-11-25 21:39:05 CET",
   "last_update": "2026-11-25 21:37:49 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -104,12 +104,12 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 15028.4,
-    "last_ms": 1000.1,
+    "last_ms": 1000.2,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.5,
     "work_max_ms": 157.4,
-    "work_last_ms": 0.4,
+    "work_last_ms": 1.1,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 70.27458691633818,
@@ -3951,7 +3951,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795639129.129643,
+      "updated_ts": 1795639144.8806396,
       "stages": {
         "discovery": {
           "p50_s": 368.664,
@@ -4020,7 +4020,7 @@
           "p50_s": 0.123,
           "p95_s": 0.129,
           "max_s": 0.157,
-          "last_s": 0.127,
+          "last_s": 0.126,
           "n": 200
         },
         "event_to_phone": {
@@ -4434,46 +4434,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "Pcat",
-      "mint": "HDGHdVUHfbHdqiEeWqV9hPXN1d2un13E9EpJFwdLpump",
-      "pool": "AbrkYDBQVu9Laxs81DrMXEQT7x53S4N6KCh4sYoBT6TN",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 2145.4,
-      "liq": 0.0,
-      "age_min": 138.34,
-      "created_at": "2026-11-25T18:18:52Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795639032.376608,
-      "t": "2026-11-25 21:37:12 CET",
-      "id": "HDGHdVUHfbHdqiEeWqV9hPXN1d2un13E9EpJFwdLpump-1795639032376"
-    },
-    {
-      "symbol": "SOL2",
-      "mint": "CEfphXPrGJHY2sGEk2m4c268frsjBzdwGJ5TV6mJpump",
-      "pool": "21AbbK1jHGxf3eZ9F8sJyQQrFW8g7s8JN3zr4G18jaZf",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 1971.74,
-      "liq": 0.0,
-      "age_min": 129.69,
-      "created_at": "2026-11-25T18:27:31Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795639032.3803828,
-      "t": "2026-11-25 21:37:12 CET",
-      "id": "CEfphXPrGJHY2sGEk2m4c268frsjBzdwGJ5TV6mJpump-1795639032380"
-    },
     {
       "symbol": "TOLY",
       "mint": "3bRAhd4pXbjzSySsqCRXNP518QWDMwfXkXjXkda7pump",
@@ -8477,11 +8437,51 @@
       "ts": 1795639105.0682712,
       "t": "2026-11-25 21:38:25 CET",
       "id": "9yAXzLrFQvHJYZt3ndL4kdcgNkrQuPguRgs45PbqezaM-1795639105068"
+    },
+    {
+      "symbol": "MAGGIE",
+      "mint": "9bZpo1cZa7ufDzJveP9Lk9drxJA9yfF63JngNPDG4eRm",
+      "pool": "BHkGwbTFDdGwXbZDo8YPs35Yt3g5vLQK65QDDJjCGNup",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 14741.0,
+      "liq": 7559.05,
+      "age_min": 11.83,
+      "created_at": "2026-11-25T20:27:15Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795639145.0294359,
+      "t": "2026-11-25 21:39:05 CET",
+      "id": "9bZpo1cZa7ufDzJveP9Lk9drxJA9yfF63JngNPDG4eRm-1795639145029"
+    },
+    {
+      "symbol": "MAGGIE",
+      "mint": "9bZpo1cZa7ufDzJveP9Lk9drxJA9yfF63JngNPDG4eRm",
+      "pool": "BHkGwbTFDdGwXbZDo8YPs35Yt3g5vLQK65QDDJjCGNup",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 14741.0,
+      "liq": 7559.05,
+      "age_min": 11.83,
+      "created_at": "2026-11-25T20:27:15Z",
+      "decision": "rejected",
+      "reason": "liquidity $7,559 < $10,000",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795639145.0350378,
+      "t": "2026-11-25 21:39:05 CET",
+      "id": "9bZpo1cZa7ufDzJveP9Lk9drxJA9yfF63JngNPDG4eRm-1795639145035"
     }
   ],
   "feed_stats": {
     "emitted": 76360,
-    "per_min": 138.79,
+    "per_min": 138.75,
     "by_decision": {
       "seen": 58490,
       "rejected": 14863,
@@ -8505,7 +8505,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.5,
+  "heartbeat_age_s": 0.2,
   "bot_alive": true,
   "supervisor_alive": true
 }
