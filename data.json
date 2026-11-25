@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 01:30:25 CET",
-  "last_update": "2026-11-25 01:29:58 CET",
+  "exported_at": "2026-11-25 01:30:35 CET",
+  "last_update": "2026-11-25 01:30:28 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.443223206548954,
@@ -104,12 +104,12 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 1010.6,
-    "last_ms": 1000.1,
+    "last_ms": 1000.2,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 3.0,
     "work_max_ms": 28.1,
-    "work_last_ms": 0.5,
+    "work_last_ms": 0.3,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 69.69543579378949,
@@ -124,7 +124,7 @@
     "unique_pools": 20007,
     "prefilter_rejected": 98144,
     "safety_rejected": 2527,
-    "scored": 5983,
+    "scored": 5985,
     "buys": 88,
     "sells": 93
   },
@@ -340,6 +340,42 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-25 01:30:28 CET",
+      "ts": 1795566628.0,
+      "kind": "Skipped",
+      "symbol": "Pumpcar",
+      "reason": "score 58 < 64",
+      "text": "Pumpcar score 58 - score 58 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 01:30:28 CET",
+      "ts": 1795566628.0,
+      "kind": "Skipped",
+      "symbol": "WIKI",
+      "reason": "score 60 < 64",
+      "text": "WIKI score 60 - score 60 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 01:30:28 CET",
+      "ts": 1795566628.0,
+      "kind": "Skipped",
+      "symbol": "Memeployed",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Memeployed score 75 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 01:30:28 CET",
+      "ts": 1795566628.0,
+      "kind": "Scored",
+      "symbol": "Memeployed",
+      "reason": "Memeployed [ds_boosts, graduated] score 75 | liq $20,592 | h1 +20.6% | top10 19% | LP 100% | liquidity:1.5 vol_liq:15 buy_pressure:13.1 holders:13.1 authorities:10 lp:10.0 age:5 momentum:0 narrative:PUMP pump:40 | narrative PUMP | pump 40 (Dex-Boost, Im Trend, Narrativ PUMP)",
+      "text": "Memeployed [ds_boosts, graduated] score 75 | liq $20,592 | h1 +20.6% | top10 19% | LP 100% | liquidity:1.5 vol_liq:15 buy_pressure:13.1 holders:13.1 authorities:10 lp:10.0 age:5 momentum:0 narrative:PUMP pump:40 | narrative PUMP | pump 40 (Dex-Boost, Im Trend, Narrativ PUMP)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 01:30:22 CET",
       "ts": 1795566622.0,
@@ -663,45 +699,45 @@
       "reason": "mihao [trending_1h] score 73 | liq $279,118 | h1 -1.9% | top10 19% | LP 100% | liquidity:13.9 vol_liq:8 buy_pressure:10.6 holders:13.4 authorities:10 lp:10.0 age:3 momentum:0 pump:30 | pump 30 (Kaufdruck hoch, Geringer Price Impact, Im Trend)",
       "text": "mihao [trending_1h] score 73 | liq $279,118 | h1 -1.9% | top10 19% | LP 100% | liquidity:13.9 vol_liq:8 buy_pressure:10.6 holders:13.4 authorities:10 lp:10.0 age:3 momentum:0 pump:30 | pump 30 (Kaufdruck hoch, Geringer Price Impact, Im Trend)",
       "curve": false
-    },
-    {
-      "t": "2026-11-25 01:29:52 CET",
-      "ts": 1795566592.0,
-      "kind": "Rejected",
-      "symbol": "ANSEM",
-      "reason": "top10 holders 58% > 50%",
-      "text": "ANSEM - top10 holders 58% > 50%",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 01:29:52 CET",
-      "ts": 1795566592.0,
-      "kind": "Scored",
-      "symbol": "Memeployed",
-      "reason": "Memeployed [ds_boosts, graduated] score 74 | liq $20,592 | h1 +20.6% | top10 19% | LP 100% | liquidity:1.5 vol_liq:15 buy_pressure:13.1 holders:13.1 authorities:10 lp:10.0 age:5 momentum:0 narrative:PUMP pump:37 | narrative PUMP | pump 37 (Dex-Boost, Im Trend, Narrativ PUMP)",
-      "text": "Memeployed [ds_boosts, graduated] score 74 | liq $20,592 | h1 +20.6% | top10 19% | LP 100% | liquidity:1.5 vol_liq:15 buy_pressure:13.1 holders:13.1 authorities:10 lp:10.0 age:5 momentum:0 narrative:PUMP pump:37 | narrative PUMP | pump 37 (Dex-Boost, Im Trend, Narrativ PUMP)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 01:29:50 CET",
-      "ts": 1795566590.0,
-      "kind": "Scored",
-      "symbol": "Pumpcar",
-      "reason": "Pumpcar [ds_profiles, graduated] score 59 | liq $18,576 | h1 +150.0% | top10 21% | LP 100% | liquidity:1.0 vol_liq:2 buy_pressure:10.3 holders:12.5 authorities:10 lp:10.0 age:2 momentum:3 narrative:PUMPCAR pump:33 | narrative PUMPCAR | pump 33 (Narrativ PUMPCAR, Im Trend, Socials ergänzt)",
-      "text": "Pumpcar [ds_profiles, graduated] score 59 | liq $18,576 | h1 +150.0% | top10 21% | LP 100% | liquidity:1.0 vol_liq:2 buy_pressure:10.3 holders:12.5 authorities:10 lp:10.0 age:2 momentum:3 narrative:PUMPCAR pump:33 | narrative PUMPCAR | pump 33 (Narrativ PUMPCAR, Im Trend, Socials ergänzt)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 01:29:47 CET",
-      "ts": 1795566587.0,
-      "kind": "Scored",
-      "symbol": "WIKI",
-      "reason": "WIKI [trending_5m, graduated] score 60 | liq $25,374 | h1 +331.1% | top10 19% | LP 100% | liquidity:2.5 vol_liq:2 buy_pressure:10.1 holders:13.4 authorities:10 lp:10.0 age:2 momentum:3 narrative:WIKI pump:43 | narrative WIKI | pump 43 (Volumen zieht an, Viele Käufer, Narrativ WIKI)",
-      "text": "WIKI [trending_5m, graduated] score 60 | liq $25,374 | h1 +331.1% | top10 19% | LP 100% | liquidity:2.5 vol_liq:2 buy_pressure:10.1 holders:13.4 authorities:10 lp:10.0 age:2 momentum:3 narrative:WIKI pump:43 | narrative WIKI | pump 43 (Volumen zieht an, Viele Käufer, Narrativ WIKI)",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-25 01:30:28 CET",
+      "ts": 1795566628.0,
+      "kind": "Skipped",
+      "symbol": "Pumpcar",
+      "reason": "score 58 < 64",
+      "text": "Pumpcar score 58 - score 58 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 01:30:28 CET",
+      "ts": 1795566628.0,
+      "kind": "Skipped",
+      "symbol": "WIKI",
+      "reason": "score 60 < 64",
+      "text": "WIKI score 60 - score 60 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 01:30:28 CET",
+      "ts": 1795566628.0,
+      "kind": "Skipped",
+      "symbol": "Memeployed",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Memeployed score 75 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 01:30:28 CET",
+      "ts": 1795566628.0,
+      "kind": "Scored",
+      "symbol": "Memeployed",
+      "reason": "Memeployed [ds_boosts, graduated] score 75 | liq $20,592 | h1 +20.6% | top10 19% | LP 100% | liquidity:1.5 vol_liq:15 buy_pressure:13.1 holders:13.1 authorities:10 lp:10.0 age:5 momentum:0 narrative:PUMP pump:40 | narrative PUMP | pump 40 (Dex-Boost, Im Trend, Narrativ PUMP)",
+      "text": "Memeployed [ds_boosts, graduated] score 75 | liq $20,592 | h1 +20.6% | top10 19% | LP 100% | liquidity:1.5 vol_liq:15 buy_pressure:13.1 holders:13.1 authorities:10 lp:10.0 age:5 momentum:0 narrative:PUMP pump:40 | narrative PUMP | pump 40 (Dex-Boost, Im Trend, Narrativ PUMP)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 01:30:22 CET",
       "ts": 1795566622.0,
@@ -889,42 +925,6 @@
       "symbol": "Christmax",
       "reason": "score 52 < 64",
       "text": "Christmax score 52 - score 52 < 64",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 01:29:58 CET",
-      "ts": 1795566598.0,
-      "kind": "Skipped",
-      "symbol": "ROCKET",
-      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "ROCKET score 64 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 01:29:58 CET",
-      "ts": 1795566598.0,
-      "kind": "Skipped",
-      "symbol": "HOGE",
-      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "HOGE score 69 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 01:29:58 CET",
-      "ts": 1795566598.0,
-      "kind": "Skipped",
-      "symbol": "mihao",
-      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "mihao score 73 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 01:29:58 CET",
-      "ts": 1795566598.0,
-      "kind": "Skipped",
-      "symbol": "cateball",
-      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "cateball score 77 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
       "curve": false
     }
   ],
@@ -2731,12 +2731,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795552122.761009,
-      "t_label": "2026-11-24 21:28:42 CET",
-      "usd": 8.1462,
-      "eur": 7.3708
-    },
-    {
       "t": 1795552195.6628907,
       "t_label": "2026-11-24 21:29:55 CET",
       "usd": 8.1462,
@@ -3929,6 +3923,12 @@
       "t_label": "2026-11-25 01:29:58 CET",
       "usd": 8.2263,
       "eur": 7.4432
+    },
+    {
+      "t": 1795566628.9535725,
+      "t_label": "2026-11-25 01:30:28 CET",
+      "usd": 8.2263,
+      "eur": 7.4432
     }
   ],
   "agents": {
@@ -3951,7 +3951,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795566625.3674378,
+      "updated_ts": 1795566635.3680978,
       "stages": {
         "discovery": {
           "p50_s": 63.745,
@@ -4020,7 +4020,7 @@
           "p50_s": 0.128,
           "p95_s": 0.585,
           "max_s": 0.636,
-          "last_s": 0.126,
+          "last_s": 0.128,
           "n": 200
         },
         "event_to_phone": {
@@ -4053,13 +4053,18 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "Pumpcar",
+      "token": "Memeployed",
       "pill": "127 pools",
       "pill_kind": "blue",
       "detail": "20,007 unique pools",
       "pools": 127,
       "unique": 20007,
       "filters": [
+        {
+          "symbol": "Memeployed",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "Pumpcar",
           "text": "top 10 > 25%",
@@ -4094,22 +4099,17 @@
           "symbol": "OATH",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "viral",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "Pumpcar",
-      "pill": "58",
+      "token": "Memeployed",
+      "pill": "75",
       "pill_kind": "purple",
-      "detail": "Pumpcar [ds_profiles, graduated] score 58 | liq $18,576 | h1 +150.0% | top10 21% | LP 100% | liquidity:1.0 vol_liq:2 buy_pressure:10.3 holders:12.5 authorities:10 lp:10.0 age:2 momentum:3 narrative:PUMPCAR pump:30 | narrative PUMPCAR | pump 30 (Narrativ PUMPCAR, Im Trend, Socials ergänzt)",
-      "score": 58,
+      "detail": "Memeployed [ds_boosts, graduated] score 75 | liq $20,592 | h1 +20.6% | top10 19% | LP 100% | liquidity:1.5 vol_liq:15 buy_pressure:13.1 holders:13.1 authorities:10 lp:10.0 age:5 momentum:0 narrative:PUMP pump:40 | narrative PUMP | pump 40 (Dex-Boost, Im Trend, Narrativ PUMP)",
+      "score": 75,
       "passed": true,
       "status": "passed",
       "rejected": 100671
@@ -4303,7 +4303,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "5983 bewertet · 100671 abgelehnt"
+      "detail": "5985 bewertet · 100671 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4418,26 +4418,10 @@
   },
   "radar": [
     {
-      "symbol": "FIONA",
-      "mint": "B34nXKzCgsJb9ChLuSHPRpXLE3WFSWyeT8Cqkzzmpump",
-      "pool": "DjbLtX1HRGZZrJgJ7CwTX6SN3D7tBLiytkGwomBUwTVB",
-      "score": 49,
-      "reasons": [
-        "Dex-Boost",
-        "Im Trend",
-        "Viele Käufer"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 2723333.86422469,
-      "origin": "trending_1h",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/B34nXKzCgsJb9ChLuSHPRpXLE3WFSWyeT8Cqkzzmpump.png"
-    },
-    {
       "symbol": "WIKI",
       "mint": "E2MJUFBMaTH7j21P2HncB96erJ4dM3FPL2W6i8Dpump",
       "pool": "B6UE1U4u8Sf7hMPwkmT4tvxxz1JzVFsKgWEwuFTNRK9t",
-      "score": 43,
+      "score": 41,
       "reasons": [
         "Volumen zieht an",
         "Viele Käufer",
@@ -4445,46 +4429,15 @@
       ],
       "early": false,
       "tag": null,
-      "mcap": 130467.0561,
+      "mcap": 167278.116,
       "origin": "trending_5m",
       "image_url": "https://cdn.dexscreener.com/tokens/solana/E2MJUFBMaTH7j21P2HncB96erJ4dM3FPL2W6i8Dpump.png"
-    },
-    {
-      "symbol": "cateball",
-      "mint": "4npJ3avxnGhCzKbWQpLrQXAHsjWzKr4JqBsbu5Fspump",
-      "pool": "EkEXwkZqweA8rbv31KwjbYzSE3SoSgez1VrYkvu6uY2w",
-      "score": 39,
-      "reasons": [
-        "Dex-Boost",
-        "Socials ergänzt",
-        "Kaufdruck hoch"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 684608.0,
-      "origin": "ds_boosts",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/4npJ3avxnGhCzKbWQpLrQXAHsjWzKr4JqBsbu5Fspump.png"
-    },
-    {
-      "symbol": "HOGE",
-      "mint": "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump",
-      "pool": "7CNC9gGegzEfFK8fLXiYUhdtMEeFPQZoND56U1Mxhnor",
-      "score": 38,
-      "reasons": [
-        "Dex-Boost",
-        "Im Trend"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 656109.0,
-      "origin": "ds_boosts",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump.png"
     },
     {
       "symbol": "Memeployed",
       "mint": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn",
       "pool": "GY7pC4TiJsvFdS85hMDsnGx5rcCP3vMdysjTGHLgDH8",
-      "score": 37,
+      "score": 40,
       "reasons": [
         "Dex-Boost",
         "Im Trend",
@@ -4497,25 +4450,10 @@
       "image_url": "https://cdn.dexscreener.com/tokens/solana/4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn.png"
     },
     {
-      "symbol": "Christmax",
-      "mint": "D7MyAD7k3AqJpg4uxjUcmL51EDHrEsJxkjUynsxcpump",
-      "pool": "88sMwAF7twYij1PbLT9tSZZGPrdqG17B7j5b54aVuDSD",
-      "score": 35,
-      "reasons": [
-        "Dex-Boost",
-        "Socials ergänzt"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 256218.0,
-      "origin": "ds_boosts",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/D7MyAD7k3AqJpg4uxjUcmL51EDHrEsJxkjUynsxcpump.png"
-    },
-    {
       "symbol": "Pumpcar",
       "mint": "4M1tpKSat8qWnJk6pskUBciw4PBvXt4gNMc36NV8pump",
       "pool": "HEipZpT5PcJAPMyyVbY1hS4uSp4rjuSsi5ij9rn7rH8P",
-      "score": 33,
+      "score": 30,
       "reasons": [
         "Narrativ PUMPCAR",
         "Im Trend",
@@ -4526,37 +4464,6 @@
       "mcap": 73659.0,
       "origin": "ds_profiles",
       "image_url": "https://cdn.dexscreener.com/tokens/solana/4M1tpKSat8qWnJk6pskUBciw4PBvXt4gNMc36NV8pump.png"
-    },
-    {
-      "symbol": "ROCKET",
-      "mint": "6C9r2gzu8Pr54hTevHo3x5gSj9JqtpApj7obJnrtpump",
-      "pool": "9NLFujwRhgQYXkW2jUkKa1GjVtiBXaty2ad4QrysCkkE",
-      "score": 32,
-      "reasons": [
-        "Dex-Boost",
-        "Socials ergänzt"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 651268.0,
-      "origin": "ds_boosts",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/6C9r2gzu8Pr54hTevHo3x5gSj9JqtpApj7obJnrtpump.png"
-    },
-    {
-      "symbol": "mihao",
-      "mint": "4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump",
-      "pool": "Ho1aSG6WGH1FfXdEHrK2f4Ggt1Hoxo9s5jcLMDqeyeBz",
-      "score": 30,
-      "reasons": [
-        "Kaufdruck hoch",
-        "Geringer Price Impact",
-        "Im Trend"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 4928963.64122539,
-      "origin": "trending_1h",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump.png"
     }
   ],
   "error": null,
@@ -4576,106 +4483,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "Pumpcar",
-      "mint": "4M1tpKSat8qWnJk6pskUBciw4PBvXt4gNMc36NV8pump",
-      "pool": "HEipZpT5PcJAPMyyVbY1hS4uSp4rjuSsi5ij9rn7rH8P",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 73659.0,
-      "liq": 18576.5,
-      "age_min": 44.8,
-      "created_at": "2026-11-24T23:44:57Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795566584.7230742,
-      "t": "2026-11-25 01:29:44 CET",
-      "id": "4M1tpKSat8qWnJk6pskUBciw4PBvXt4gNMc36NV8pump-1795566584723"
-    },
-    {
-      "symbol": "VHAR",
-      "mint": "375PUdH8sX4YpPDfsKtiQK69f2RRD7xMeScUv2UkdjwA",
-      "pool": "66noPCvTQka9TxcVi5LMUYp4C5rXRQwSDExm6Z8XprZf",
-      "dex": "meteora-damm-v2",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 10743.18154,
-      "liq": 16361.5858,
-      "age_min": 4.96,
-      "created_at": "2026-11-25T00:24:47Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795566584.7264998,
-      "t": "2026-11-25 01:29:44 CET",
-      "id": "375PUdH8sX4YpPDfsKtiQK69f2RRD7xMeScUv2UkdjwA-1795566584726"
-    },
-    {
-      "symbol": "CHUCHU",
-      "mint": "6nQCcuXypcAjncXK7gzvJcdwvqitgJRdG3k1no4Jpump",
-      "pool": "AT4mW3pmS98i6wcw2Ssa5osNsWFVB7Fd8DPB2wrTv27b",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 35970.0,
-      "liq": 12364.48,
-      "age_min": 527.75,
-      "created_at": "2026-11-24T15:42:00Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795566584.729991,
-      "t": "2026-11-25 01:29:44 CET",
-      "id": "6nQCcuXypcAjncXK7gzvJcdwvqitgJRdG3k1no4Jpump-1795566584729"
-    },
-    {
-      "symbol": "scamsem",
-      "mint": "9hmtsWzZzq5gN3Nyn8tDin6HTR1H2iFcK3yz6XNNuMh4",
-      "pool": "81rsyEesEhFDzyLzDW6bAYwwdFWscTQYzwZUVpEwebYN",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 7788.531511,
-      "liq": 11582.0394,
-      "age_min": 9.73,
-      "created_at": "2026-11-25T00:20:01Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795566584.7334046,
-      "t": "2026-11-25 01:29:44 CET",
-      "id": "9hmtsWzZzq5gN3Nyn8tDin6HTR1H2iFcK3yz6XNNuMh4-1795566584733"
-    },
-    {
-      "symbol": "FOMO",
-      "mint": "QiTWMupiepfVBPuYtG2Zq5HuWkhQYT6Wkq8oFTgpump",
-      "pool": "7v3rtDpT2h5XE78nsukWJhwsfZno4yEyW7cnaiZkuzmE",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 30408.6946897741,
-      "liq": 11485.4729,
-      "age_min": 3.93,
-      "created_at": "2026-11-25T00:25:49Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795566584.736846,
-      "t": "2026-11-25 01:29:44 CET",
-      "id": "QiTWMupiepfVBPuYtG2Zq5HuWkhQYT6Wkq8oFTgpump-1795566584736"
-    },
     {
       "symbol": "ANIME",
       "mint": "AnimeXV38KBcwkdf8sQ3XES9pW6BiyCQPLUHvCrpTXgi",
@@ -8649,23 +8456,139 @@
       "ts": 1795566622.83383,
       "t": "2026-11-25 01:30:22 CET",
       "id": "4M1tpKSat8qWnJk6pskUBciw4PBvXt4gNMc36NV8pump-1795566622833"
+    },
+    {
+      "symbol": "Memeployed",
+      "mint": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn",
+      "pool": "GY7pC4TiJsvFdS85hMDsnGx5rcCP3vMdysjTGHLgDH8",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 56205.0,
+      "liq": 20591.67,
+      "age_min": 643.4,
+      "created_at": "2026-11-24T13:47:05Z",
+      "decision": "accepted",
+      "reason": "score 75",
+      "score": 75,
+      "pump_score": 40,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Im Trend",
+        "Narrativ PUMP"
+      ],
+      "ts": 1795566628.9355323,
+      "t": "2026-11-25 01:30:28 CET",
+      "id": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn-1795566628935"
+    },
+    {
+      "symbol": "Memeployed",
+      "mint": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn",
+      "pool": "GY7pC4TiJsvFdS85hMDsnGx5rcCP3vMdysjTGHLgDH8",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 56205.0,
+      "liq": 20591.67,
+      "age_min": 643.4,
+      "created_at": "2026-11-24T13:47:05Z",
+      "decision": "skipped",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 75,
+      "pump_score": 40,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Im Trend",
+        "Narrativ PUMP"
+      ],
+      "ts": 1795566628.9397721,
+      "t": "2026-11-25 01:30:28 CET",
+      "id": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn-1795566628939"
+    },
+    {
+      "symbol": "WIKI",
+      "mint": "E2MJUFBMaTH7j21P2HncB96erJ4dM3FPL2W6i8Dpump",
+      "pool": "B6UE1U4u8Sf7hMPwkmT4tvxxz1JzVFsKgWEwuFTNRK9t",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 167278.116,
+      "liq": 25156.5741,
+      "age_min": 15.98,
+      "created_at": "2026-11-25T00:14:30Z",
+      "decision": "skipped",
+      "reason": "score 60 < 64",
+      "score": 60,
+      "pump_score": 41,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Viele Käufer",
+        "Narrativ WIKI"
+      ],
+      "ts": 1795566628.944121,
+      "t": "2026-11-25 01:30:28 CET",
+      "id": "E2MJUFBMaTH7j21P2HncB96erJ4dM3FPL2W6i8Dpump-1795566628944"
+    },
+    {
+      "symbol": "Pumpcar",
+      "mint": "4M1tpKSat8qWnJk6pskUBciw4PBvXt4gNMc36NV8pump",
+      "pool": "HEipZpT5PcJAPMyyVbY1hS4uSp4rjuSsi5ij9rn7rH8P",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 73659.0,
+      "liq": 18576.5,
+      "age_min": 45.53,
+      "created_at": "2026-11-24T23:44:57Z",
+      "decision": "skipped",
+      "reason": "score 58 < 64",
+      "score": 58,
+      "pump_score": 30,
+      "pump_reasons": [
+        "Narrativ PUMPCAR",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795566628.94775,
+      "t": "2026-11-25 01:30:28 CET",
+      "id": "4M1tpKSat8qWnJk6pskUBciw4PBvXt4gNMc36NV8pump-1795566628947"
+    },
+    {
+      "symbol": "Amend",
+      "mint": "CYZJwxMPp3FtAMLRwT7x56D86gCCdoJ4WpH21SXjYbcA",
+      "pool": "FySPA2xMvsiujgR4RpNfQ5skHS39UgALwS48TLCz7ZBR",
+      "dex": "meteora-dbc",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 10181.43,
+      "liq": 0.0,
+      "age_min": 11.2,
+      "created_at": "2026-11-25T00:19:21Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795566632.7424798,
+      "t": "2026-11-25 01:30:32 CET",
+      "id": "CYZJwxMPp3FtAMLRwT7x56D86gCCdoJ4WpH21SXjYbcA-1795566632742"
     }
   ],
   "feed_stats": {
-    "emitted": 37969,
-    "per_min": 142.22,
+    "emitted": 37974,
+    "per_min": 142.15,
     "by_decision": {
       "seen": 28833,
       "rejected": 7439,
-      "accepted": 851,
-      "skipped": 846
+      "accepted": 853,
+      "skipped": 849
     },
     "by_source": {
       "new": 6382,
       "ds_search": 2802,
-      "ds_profiles": 6216,
-      "ds_boosts": 4852,
-      "trending_5m": 3793,
+      "ds_profiles": 6218,
+      "ds_boosts": 4854,
+      "trending_5m": 3794,
       "trending_1h": 3283,
       "watchlist": 10289,
       "pump_logs": 150,
@@ -8677,7 +8600,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.1,
+  "heartbeat_age_s": 0.2,
   "bot_alive": true,
   "supervisor_alive": true
 }
