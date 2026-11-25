@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 13:56:46 CET",
-  "last_update": "2026-11-25 13:56:11 CET",
+  "exported_at": "2026-11-25 13:56:56 CET",
+  "last_update": "2026-11-25 13:56:47 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.244354322650248,
@@ -107,7 +107,7 @@
     "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.5,
-    "work_p95_ms": 3.8,
+    "work_p95_ms": 3.6,
     "work_max_ms": 242.8,
     "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
@@ -122,9 +122,9 @@
     "cycles": 4274,
     "pools_scanned": 685230,
     "unique_pools": 20007,
-    "prefilter_rejected": 116897,
-    "safety_rejected": 2967,
-    "scored": 8150,
+    "prefilter_rejected": 116898,
+    "safety_rejected": 2968,
+    "scored": 8151,
     "buys": 88,
     "sells": 93
   },
@@ -339,6 +339,42 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-25 13:56:50 CET",
+      "ts": 1795611410.0,
+      "kind": "Rejected",
+      "symbol": "pompom",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "pompom (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-25 13:56:47 CET",
+      "ts": 1795611407.0,
+      "kind": "Skipped",
+      "symbol": "PERRO",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "PERRO score 72 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 13:56:47 CET",
+      "ts": 1795611407.0,
+      "kind": "Rejected",
+      "symbol": "BossJensen",
+      "reason": "RugCheck danger: Large Amount of LP Unlocked",
+      "text": "BossJensen - RugCheck danger: Large Amount of LP Unlocked",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 13:56:47 CET",
+      "ts": 1795611407.0,
+      "kind": "Scored",
+      "symbol": "PERRO",
+      "reason": "PERRO [trending_1h, graduated] score 72 | liq $30,635 | h1 -5.2% | top10 16% | LP 100% | liquidity:3.4 vol_liq:15 buy_pressure:8.6 holders:14.6 authorities:10 lp:10.0 age:5 momentum:0 pump:37 | pump 37 (Kaufdruck hoch, Viele Käufer, Im Trend)",
+      "text": "PERRO [trending_1h, graduated] score 72 | liq $30,635 | h1 -5.2% | top10 16% | LP 100% | liquidity:3.4 vol_liq:15 buy_pressure:8.6 holders:14.6 authorities:10 lp:10.0 age:5 momentum:0 pump:37 | pump 37 (Kaufdruck hoch, Viele Käufer, Im Trend)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 13:56:42 CET",
       "ts": 1795611402.0,
@@ -662,45 +698,36 @@
       "reason": "liquidity $4,354 < $10,000",
       "text": "Slotbound (pumpswap) - liquidity $4,354 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-25 13:56:08 CET",
-      "ts": 1795611368.0,
-      "kind": "Rejected",
-      "symbol": "VIOLA",
-      "reason": "liquidity $5,797 < $10,000",
-      "text": "VIOLA (pumpswap) - liquidity $5,797 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 13:56:08 CET",
-      "ts": 1795611368.0,
-      "kind": "Rejected",
-      "symbol": "Pompom",
-      "reason": "liquidity $7,660 < $10,000",
-      "text": "Pompom (pumpswap) - liquidity $7,660 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 13:56:08 CET",
-      "ts": 1795611368.0,
-      "kind": "Rejected",
-      "symbol": "Togi",
-      "reason": "liquidity $8,448 < $10,000",
-      "text": "Togi (pumpswap) - liquidity $8,448 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 13:55:58 CET",
-      "ts": 1795611358.0,
-      "kind": "Rejected",
-      "symbol": "ALLOC",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "ALLOC (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-25 13:56:47 CET",
+      "ts": 1795611407.0,
+      "kind": "Skipped",
+      "symbol": "PERRO",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "PERRO score 72 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 13:56:47 CET",
+      "ts": 1795611407.0,
+      "kind": "Rejected",
+      "symbol": "BossJensen",
+      "reason": "RugCheck danger: Large Amount of LP Unlocked",
+      "text": "BossJensen - RugCheck danger: Large Amount of LP Unlocked",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 13:56:47 CET",
+      "ts": 1795611407.0,
+      "kind": "Scored",
+      "symbol": "PERRO",
+      "reason": "PERRO [trending_1h, graduated] score 72 | liq $30,635 | h1 -5.2% | top10 16% | LP 100% | liquidity:3.4 vol_liq:15 buy_pressure:8.6 holders:14.6 authorities:10 lp:10.0 age:5 momentum:0 pump:37 | pump 37 (Kaufdruck hoch, Viele Käufer, Im Trend)",
+      "text": "PERRO [trending_1h, graduated] score 72 | liq $30,635 | h1 -5.2% | top10 16% | LP 100% | liquidity:3.4 vol_liq:15 buy_pressure:8.6 holders:14.6 authorities:10 lp:10.0 age:5 momentum:0 pump:37 | pump 37 (Kaufdruck hoch, Viele Käufer, Im Trend)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 13:56:42 CET",
       "ts": 1795611402.0,
@@ -898,36 +925,9 @@
       "reason": "liquidity $1,813 < $10,000",
       "text": "Boor (pumpswap) - liquidity $1,813 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-25 13:56:08 CET",
-      "ts": 1795611368.0,
-      "kind": "Rejected",
-      "symbol": "OG",
-      "reason": "liquidity $1,892 < $10,000",
-      "text": "OG (pumpswap) - liquidity $1,892 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 13:56:08 CET",
-      "ts": 1795611368.0,
-      "kind": "Rejected",
-      "symbol": "Nyamitto",
-      "reason": "liquidity $2,061 < $10,000",
-      "text": "Nyamitto (pumpswap) - liquidity $2,061 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 13:56:08 CET",
-      "ts": 1795611368.0,
-      "kind": "Rejected",
-      "symbol": "Nyamit",
-      "reason": "liquidity $2,505 < $10,000",
-      "text": "Nyamit (pumpswap) - liquidity $2,505 < $10,000",
-      "curve": false
     }
   ],
-  "curve_skips": 2272,
+  "curve_skips": 2270,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -2730,12 +2730,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795593819.535397,
-      "t_label": "2026-11-25 09:03:39 CET",
-      "usd": 8.0645,
-      "eur": 7.2969
-    },
-    {
       "t": 1795593876.0408342,
       "t_label": "2026-11-25 09:04:36 CET",
       "usd": 8.0645,
@@ -3928,6 +3922,12 @@
       "t_label": "2026-11-25 13:56:11 CET",
       "usd": 8.0065,
       "eur": 7.2444
+    },
+    {
+      "t": 1795611407.7118256,
+      "t_label": "2026-11-25 13:56:47 CET",
+      "usd": 8.0065,
+      "eur": 7.2444
     }
   ],
   "agents": {
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795611404.9698706,
+      "updated_ts": 1795611414.9735434,
       "stages": {
         "discovery": {
           "p50_s": 398.524,
@@ -4017,9 +4017,9 @@
         },
         "bot_to_phone": {
           "p50_s": 0.126,
-          "p95_s": 0.427,
+          "p95_s": 0.422,
           "max_s": 9.227,
-          "last_s": 0.116,
+          "last_s": 0.119,
           "n": 200
         },
         "event_to_phone": {
@@ -4052,13 +4052,28 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "$Queen",
+      "token": "pompom",
       "pill": "123 pools",
       "pill_kind": "blue",
       "detail": "20,007 unique pools",
       "pools": 123,
       "unique": 20007,
       "filters": [
+        {
+          "symbol": "pompom",
+          "text": "dex pump-fun not graduated/allowed",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "BossJensen",
+          "text": "dev past rugs",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "PERRO",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "$Queen",
           "text": "liq < $4k",
@@ -4083,21 +4098,6 @@
           "symbol": "SWARM",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "Boor",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "OG",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "Nyamitto",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
@@ -4105,13 +4105,13 @@
       "name": "Analyst",
       "title": "Scoring",
       "token": "PERRO",
-      "pill": "78",
+      "pill": "72",
       "pill_kind": "purple",
-      "detail": "PERRO [trending_1h, graduated] score 78 | liq $32,798 | h1 +5.8% | top10 16% | LP 100% | liquidity:3.7 vol_liq:15 buy_pressure:6.8 holders:14.6 authorities:10 lp:10.0 age:5 momentum:10 pump:27 | pump 27 (Im Trend, Viele Käufer)",
-      "score": 78,
+      "detail": "PERRO [trending_1h, graduated] score 72 | liq $30,635 | h1 -5.2% | top10 16% | LP 100% | liquidity:3.4 vol_liq:15 buy_pressure:8.6 holders:14.6 authorities:10 lp:10.0 age:5 momentum:0 pump:37 | pump 37 (Kaufdruck hoch, Viele Käufer, Im Trend)",
+      "score": 72,
       "passed": true,
       "status": "passed",
-      "rejected": 119864
+      "rejected": 119866
     },
     "executor": {
       "name": "Executor",
@@ -4302,7 +4302,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "8150 bewertet · 119864 abgelehnt"
+      "detail": "8151 bewertet · 119866 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4433,106 +4433,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "Boor",
-      "mint": "GHFpSSw2ZMjmKCyc1wrHUjJiqnJeP18mekY9GL1Xpump",
-      "pool": "6UZqwBCXnmVKLabzJoqS2EmLP5QBznNGNaEusJNK5YrU",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 1765.0,
-      "liq": 1813.04,
-      "age_min": 71.25,
-      "created_at": "2026-11-25T11:44:24Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,813 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795611338.7417853,
-      "t": "2026-11-25 13:55:38 CET",
-      "id": "GHFpSSw2ZMjmKCyc1wrHUjJiqnJeP18mekY9GL1Xpump-1795611338741"
-    },
-    {
-      "symbol": "SWARM",
-      "mint": "2Rw6rLRRZXQLNreForjeVvDjnpYUaW6rmMFXmRP9pump",
-      "pool": "HvxtByNUDvhLe67bvbqYFYk9syUuGdxa7oH2KJmkRLNy",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 1738.0,
-      "liq": 1771.49,
-      "age_min": 57.96,
-      "created_at": "2026-11-25T11:57:41Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,771 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795611338.7453015,
-      "t": "2026-11-25 13:55:38 CET",
-      "id": "2Rw6rLRRZXQLNreForjeVvDjnpYUaW6rmMFXmRP9pump-1795611338745"
-    },
-    {
-      "symbol": "SNOWCUMBRR",
-      "mint": "Gf9wm93TTDpbPC467Eio5Vc42Kr6MAomUD172drWpump",
-      "pool": "AigqiyVn3g3gENyBrWHGU9doRm6aQKervgEqVPZhrALF",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 1617.0,
-      "liq": 1734.27,
-      "age_min": 103.05,
-      "created_at": "2026-11-25T11:12:36Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,734 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795611338.7490296,
-      "t": "2026-11-25 13:55:38 CET",
-      "id": "Gf9wm93TTDpbPC467Eio5Vc42Kr6MAomUD172drWpump-1795611338749"
-    },
-    {
-      "symbol": "ZELENSKYY",
-      "mint": "2quw9e8VYEqvkybMsyMSWhtvWKZTkjxH8p5E8a6Fpump",
-      "pool": "8ZGJRjvLVQVoGEuXExEyAwpFVfPqutprWtQ2o953C7Wg",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1531.0,
-      "liq": 1669.82,
-      "age_min": 152.66,
-      "created_at": "2026-11-25T10:22:59Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,670 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795611338.7530658,
-      "t": "2026-11-25 13:55:38 CET",
-      "id": "2quw9e8VYEqvkybMsyMSWhtvWKZTkjxH8p5E8a6Fpump-1795611338753"
-    },
-    {
-      "symbol": "N&M",
-      "mint": "9uiGDHy53MyaLxxdEF2JXt4ASNeUytxh7rie79DWpump",
-      "pool": "6WPRHHbNkc3rfV11AqdLwtoMr7DNT7C4dCmTNbzYrfXy",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1269.0,
-      "liq": 1344.94,
-      "age_min": 196.61,
-      "created_at": "2026-11-25T09:39:02Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,345 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795611338.7570739,
-      "t": "2026-11-25 13:55:38 CET",
-      "id": "9uiGDHy53MyaLxxdEF2JXt4ASNeUytxh7rie79DWpump-1795611338757"
-    },
     {
       "symbol": "$Queen",
       "mint": "5byQeiWdiouqiXkgDZrDzLUmBJNhMwtNFZzbMmLtpump",
@@ -8444,34 +8344,142 @@
       "ts": 1795611402.9261725,
       "t": "2026-11-25 13:56:42 CET",
       "id": "5byQeiWdiouqiXkgDZrDzLUmBJNhMwtNFZzbMmLtpump-1795611402926"
+    },
+    {
+      "symbol": "PERRO",
+      "mint": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump",
+      "pool": "4s1epXdedd7TY1UtJ7frou3saSxuG98os7HcPtNEu8WH",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 157562.430701282,
+      "liq": 30634.7629,
+      "age_min": 692.62,
+      "created_at": "2026-11-25T01:24:10Z",
+      "decision": "accepted",
+      "reason": "score 72",
+      "score": 72,
+      "pump_score": 37,
+      "pump_reasons": [
+        "Kaufdruck hoch",
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "ts": 1795611407.4021,
+      "t": "2026-11-25 13:56:47 CET",
+      "id": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump-1795611407402"
+    },
+    {
+      "symbol": "BossJensen",
+      "mint": "FbgbMVS9vMxmcuDxwYPYi7KNHWm1GVLTtJr1N6ia1xeA",
+      "pool": "CzH2oq4TybLr21LUDpb1ntRsPCTL3QDxBSjUtokEq3Ne",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 115415.4735,
+      "liq": 204179.8315,
+      "age_min": 110.68,
+      "created_at": "2026-11-25T11:06:07Z",
+      "decision": "rejected",
+      "reason": "RugCheck danger: Large Amount of LP Unlocked",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795611407.693179,
+      "t": "2026-11-25 13:56:47 CET",
+      "id": "FbgbMVS9vMxmcuDxwYPYi7KNHWm1GVLTtJr1N6ia1xeA-1795611407693"
+    },
+    {
+      "symbol": "PERRO",
+      "mint": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump",
+      "pool": "4s1epXdedd7TY1UtJ7frou3saSxuG98os7HcPtNEu8WH",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 157562.430701282,
+      "liq": 30634.7629,
+      "age_min": 692.63,
+      "created_at": "2026-11-25T01:24:10Z",
+      "decision": "skipped",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 72,
+      "pump_score": 37,
+      "pump_reasons": [
+        "Kaufdruck hoch",
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "ts": 1795611407.7011595,
+      "t": "2026-11-25 13:56:47 CET",
+      "id": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump-1795611407701"
+    },
+    {
+      "symbol": "pompom",
+      "mint": "87hFHbdBUCReA8youYc5KMcUeeqFzFMYPMRtqCFZoCCq",
+      "pool": "EYTB3HwF1FrNq2hUoYCdgQxsut8DXhQgfu9zhUpHrRRh",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "ds_profiles",
+      "mcap": 10126.25,
+      "liq": 0.0,
+      "age_min": 0,
+      "created_at": null,
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795611410.8467317,
+      "t": "2026-11-25 13:56:50 CET",
+      "id": "87hFHbdBUCReA8youYc5KMcUeeqFzFMYPMRtqCFZoCCq-1795611410846"
+    },
+    {
+      "symbol": "pompom",
+      "mint": "87hFHbdBUCReA8youYc5KMcUeeqFzFMYPMRtqCFZoCCq",
+      "pool": "EYTB3HwF1FrNq2hUoYCdgQxsut8DXhQgfu9zhUpHrRRh",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "ds_profiles",
+      "mcap": 10126.25,
+      "liq": 0.0,
+      "age_min": 0,
+      "created_at": null,
+      "decision": "rejected",
+      "reason": "dex pump-fun not graduated/allowed",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795611410.8522265,
+      "t": "2026-11-25 13:56:50 CET",
+      "id": "87hFHbdBUCReA8youYc5KMcUeeqFzFMYPMRtqCFZoCCq-1795611410852"
     }
   ],
   "feed_stats": {
-    "emitted": 10863,
-    "per_min": 123.28,
+    "emitted": 10868,
+    "per_min": 123.11,
     "by_decision": {
-      "seen": 8436,
-      "rejected": 2169,
-      "accepted": 129,
-      "skipped": 129
+      "seen": 8437,
+      "rejected": 2171,
+      "accepted": 130,
+      "skipped": 130
     },
     "by_source": {
       "new": 1792,
       "ds_search": 898,
-      "ds_profiles": 1950,
+      "ds_profiles": 1952,
       "ds_boosts": 934,
-      "trending_5m": 1165,
-      "trending_1h": 1097,
+      "trending_5m": 1166,
+      "trending_1h": 1099,
       "watchlist": 2456,
       "pump_logs": 571
     },
-    "pumpfun": 4868
+    "pumpfun": 4870
   },
   "status": "running",
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.4,
+  "heartbeat_age_s": 0.5,
   "bot_alive": true,
   "supervisor_alive": true
 }
