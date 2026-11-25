@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 08:42:10 CET",
+  "exported_at": "2026-11-25 08:42:21 CET",
   "last_update": "2026-11-25 08:40:59 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -122,7 +122,7 @@
     "cycles": 4030,
     "pools_scanned": 653865,
     "unique_pools": 20013,
-    "prefilter_rejected": 108327,
+    "prefilter_rejected": 108329,
     "safety_rejected": 2798,
     "scored": 7389,
     "buys": 88,
@@ -339,6 +339,24 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-25 08:42:11 CET",
+      "ts": 1795592531.0,
+      "kind": "Rejected",
+      "symbol": "SOL",
+      "reason": "impersonates SOL (mint is not the official one)",
+      "text": "SOL (raydium) - impersonates SOL (mint is not the official one)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 08:42:11 CET",
+      "ts": 1795592531.0,
+      "kind": "Rejected",
+      "symbol": "SOLANAAI",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "SOLANAAI (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
     {
       "t": "2026-11-25 08:42:01 CET",
       "ts": 1795592521.0,
@@ -680,27 +698,18 @@
       "reason": "dex pump-fun not graduated/allowed",
       "text": "DWTA (pump-fun) - dex pump-fun not graduated/allowed",
       "curve": true
-    },
-    {
-      "t": "2026-11-25 08:40:28 CET",
-      "ts": 1795592428.0,
-      "kind": "Rejected",
-      "symbol": "Huang",
-      "reason": "pool age 1 min < 15",
-      "text": "Huang (pumpswap) - pool age 1 min < 15",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 08:40:28 CET",
-      "ts": 1795592428.0,
-      "kind": "Rejected",
-      "symbol": "🧠'nt",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "🧠'nt (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-25 08:42:11 CET",
+      "ts": 1795592531.0,
+      "kind": "Rejected",
+      "symbol": "SOL",
+      "reason": "impersonates SOL (mint is not the official one)",
+      "text": "SOL (raydium) - impersonates SOL (mint is not the official one)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 08:42:01 CET",
       "ts": 1795592521.0,
@@ -916,18 +925,9 @@
       "reason": "impersonates PUMP (mint is not the official one)",
       "text": "PUMP (pump-fun) - impersonates PUMP (mint is not the official one)",
       "curve": false
-    },
-    {
-      "t": "2026-11-25 08:40:20 CET",
-      "ts": 1795592420.0,
-      "kind": "Scored",
-      "symbol": "DUVAL",
-      "reason": "DUVAL [trending_1h, graduated] score 67 | liq $28,513 | h1 -4.0% | top10 19% | LP 100% | liquidity:3.1 vol_liq:15 buy_pressure:7.7 holders:13.4 authorities:10 lp:10.0 age:5 momentum:0 pump:27 | pump 27 (Geringer Price Impact, Im Trend)",
-      "text": "DUVAL [trending_1h, graduated] score 67 | liq $28,513 | h1 -4.0% | top10 19% | LP 100% | liquidity:3.1 vol_liq:15 buy_pressure:7.7 holders:13.4 authorities:10 lp:10.0 age:5 momentum:0 pump:27 | pump 27 (Geringer Price Impact, Im Trend)",
-      "curve": false
     }
   ],
-  "curve_skips": 2264,
+  "curve_skips": 2265,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795592530.1442146,
+      "updated_ts": 1795592540.1258526,
       "stages": {
         "discovery": {
           "p50_s": 76.334,
@@ -4017,9 +4017,9 @@
         },
         "bot_to_phone": {
           "p50_s": 0.118,
-          "p95_s": 0.335,
+          "p95_s": 0.338,
           "max_s": 0.63,
-          "last_s": 0.124,
+          "last_s": 0.123,
           "n": 200
         },
         "event_to_phone": {
@@ -4052,13 +4052,23 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "莫达",
+      "token": "SOL",
       "pill": "120 pools",
       "pill_kind": "blue",
       "detail": "20,013 unique pools",
       "pools": 120,
       "unique": 20013,
       "filters": [
+        {
+          "symbol": "SOL",
+          "text": "impersonator",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "SOLANAAI",
+          "text": "dex pump-fun not graduated/allowed",
+          "kind": "Rejected"
+        },
         {
           "symbol": "莫达",
           "text": "dex pump-fun not graduated/allowed",
@@ -4088,16 +4098,6 @@
           "symbol": "kittylick",
           "text": "dex pump-fun not graduated/allowed",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "PUMP",
-          "text": "impersonator",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "ANT",
-          "text": "dex pump-fun not graduated/allowed",
-          "kind": "Rejected"
         }
       ]
     },
@@ -4111,7 +4111,7 @@
       "score": 69,
       "passed": true,
       "status": "passed",
-      "rejected": 111125
+      "rejected": 111127
     },
     "executor": {
       "name": "Executor",
@@ -4302,7 +4302,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "7389 bewertet · 111125 abgelehnt"
+      "detail": "7389 bewertet · 111127 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4433,86 +4433,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "NPCS",
-      "mint": "5ToDNkiBAK6k697RRyngTburU7yZNFZFx7jzsD1Uc7pK",
-      "pool": "4BKRQ2iL3Rv8mSpDsFM5FNkZ9SGq4iaqrYtgNWjGE3s4",
-      "dex": "raydium",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 330320.0,
-      "liq": 75460.75,
-      "age_min": 1278545.97,
-      "created_at": "2024-06-20T10:28:41Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795592079.3854427,
-      "t": "2026-11-25 08:34:39 CET",
-      "id": "5ToDNkiBAK6k697RRyngTburU7yZNFZFx7jzsD1Uc7pK-1795592079385"
-    },
-    {
-      "symbol": "Jimmies",
-      "mint": "GisWWjhwrSud4aFGSHvTMt85Ky14sY7LeBFCpfoFpump",
-      "pool": "BXrbrMuLSW1qaS4P3R7AUPR6YX2E56Re94WJedoxLiV5",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 1087760.0,
-      "liq": 74340.66,
-      "age_min": 497.41,
-      "created_at": "2026-11-24T23:17:15Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795592079.388882,
-      "t": "2026-11-25 08:34:39 CET",
-      "id": "GisWWjhwrSud4aFGSHvTMt85Ky14sY7LeBFCpfoFpump-1795592079388"
-    },
-    {
-      "symbol": "KNIGHT",
-      "mint": "AzeNfRi7DX5HndH7dUgCxMD5sQPV7FPFH1cwDkoqpump",
-      "pool": "CjJ4aKLBYCgx4WrydnVXVXj2urMpwKKgSt6kcdmo3dvb",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 625597.751438159,
-      "liq": 74018.0549,
-      "age_min": 292841.79,
-      "created_at": "2026-05-05T22:52:52Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795592079.3926163,
-      "t": "2026-11-25 08:34:39 CET",
-      "id": "AzeNfRi7DX5HndH7dUgCxMD5sQPV7FPFH1cwDkoqpump-1795592079392"
-    },
-    {
-      "symbol": "Machi",
-      "mint": "ATBR4i19gcQ31Rfr7ymA2XvkCQEAkNFGBtVKTmdqpump",
-      "pool": "7cmefCYxzK6yfBcmB4j234A3EKY2w13GfEdB3DJvNWzx",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 187715.34880856,
-      "liq": 62098.3528,
-      "age_min": 385805.87,
-      "created_at": "2026-03-02T09:28:47Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795592079.3961697,
-      "t": "2026-11-25 08:34:39 CET",
-      "id": "ATBR4i19gcQ31Rfr7ymA2XvkCQEAkNFGBtVKTmdqpump-1795592079396"
-    },
     {
       "symbol": "PFP",
       "mint": "5TfqNKZbn9AnNtzq8bbkyhKgcPGTfNDc9wNzFrTBpump",
@@ -8482,20 +8402,100 @@
       "ts": 1795592521.8876696,
       "t": "2026-11-25 08:42:01 CET",
       "id": "DmQ1NDvR4NRrFzYypRB1iu9JyQxK7Us6WHYBjW3Zpump-1795592521887"
+    },
+    {
+      "symbol": "SOLANAAI",
+      "mint": "G4fLn8S2M29PSzdgsrU2MCRmd1DtEXVFuizrgk2vpump",
+      "pool": "Hc91dxGEW2RQZz7FTVhRaedHSM5mwnc8aLutU1XTVTX7",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "ds_search",
+      "mcap": 2594.1,
+      "liq": 0.0,
+      "age_min": 15892.94,
+      "created_at": "2026-11-14T06:49:15Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795592531.1351724,
+      "t": "2026-11-25 08:42:11 CET",
+      "id": "G4fLn8S2M29PSzdgsrU2MCRmd1DtEXVFuizrgk2vpump-1795592531135"
+    },
+    {
+      "symbol": "SOL",
+      "mint": "FwtKA62k47DYe3jHmPNjspjVdc7PhipbqZjxTMfp81m6",
+      "pool": "7jdtejM8Ld91oBEWvCDmCQkpGSmEBD1ssLQsd6e4Jszq",
+      "dex": "raydium",
+      "early": false,
+      "source": "ds_search",
+      "mcap": 2542447748.0,
+      "liq": 2542177622.57,
+      "age_min": 87322.04,
+      "created_at": "2026-09-25T16:20:09Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795592531.1402333,
+      "t": "2026-11-25 08:42:11 CET",
+      "id": "FwtKA62k47DYe3jHmPNjspjVdc7PhipbqZjxTMfp81m6-1795592531140"
+    },
+    {
+      "symbol": "SOLANAAI",
+      "mint": "G4fLn8S2M29PSzdgsrU2MCRmd1DtEXVFuizrgk2vpump",
+      "pool": "Hc91dxGEW2RQZz7FTVhRaedHSM5mwnc8aLutU1XTVTX7",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "ds_search",
+      "mcap": 2594.1,
+      "liq": 0.0,
+      "age_min": 15892.94,
+      "created_at": "2026-11-14T06:49:15Z",
+      "decision": "rejected",
+      "reason": "dex pump-fun not graduated/allowed",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795592531.1447005,
+      "t": "2026-11-25 08:42:11 CET",
+      "id": "G4fLn8S2M29PSzdgsrU2MCRmd1DtEXVFuizrgk2vpump-1795592531144"
+    },
+    {
+      "symbol": "SOL",
+      "mint": "FwtKA62k47DYe3jHmPNjspjVdc7PhipbqZjxTMfp81m6",
+      "pool": "7jdtejM8Ld91oBEWvCDmCQkpGSmEBD1ssLQsd6e4Jszq",
+      "dex": "raydium",
+      "early": false,
+      "source": "ds_search",
+      "mcap": 2542447748.0,
+      "liq": 2542177622.57,
+      "age_min": 87322.04,
+      "created_at": "2026-09-25T16:20:09Z",
+      "decision": "rejected",
+      "reason": "impersonates SOL (mint is not the official one)",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795592531.1486433,
+      "t": "2026-11-25 08:42:11 CET",
+      "id": "FwtKA62k47DYe3jHmPNjspjVdc7PhipbqZjxTMfp81m6-1795592531148"
     }
   ],
   "feed_stats": {
-    "emitted": 89033,
-    "per_min": 127.41,
+    "emitted": 89037,
+    "per_min": 127.39,
     "by_decision": {
-      "seen": 67216,
-      "rejected": 17307,
+      "seen": 67218,
+      "rejected": 17309,
       "accepted": 2258,
       "skipped": 2252
     },
     "by_source": {
       "new": 15960,
-      "ds_search": 6824,
+      "ds_search": 6828,
       "ds_profiles": 13823,
       "ds_boosts": 11158,
       "trending_5m": 9122,
@@ -8504,13 +8504,13 @@
       "pump_logs": 1446,
       "ds_boosts_top": 209
     },
-    "pumpfun": 37486
+    "pumpfun": 37488
   },
   "status": "running",
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.9,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
