@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 05:02:15 CET",
+  "exported_at": "2026-11-25 05:02:35 CET",
   "last_update": "2026-11-25 05:01:50 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -109,7 +109,7 @@
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.0,
     "work_max_ms": 166.1,
-    "work_last_ms": 0.6,
+    "work_last_ms": 0.3,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 69.14702308020792,
@@ -122,7 +122,7 @@
     "cycles": 3894,
     "pools_scanned": 635832,
     "unique_pools": 20006,
-    "prefilter_rejected": 103437,
+    "prefilter_rejected": 103454,
     "safety_rejected": 2623,
     "scored": 6751,
     "buys": 88,
@@ -3943,14 +3943,14 @@
       "price_s": null,
       "price_stale_s": null,
       "stop_to_sell_s": null,
-      "bot_to_phone_s": 0.127,
+      "bot_to_phone_s": 0.128,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795579335.2830372,
+      "updated_ts": 1795579355.2851033,
       "stages": {
         "discovery": {
           "p50_s": 72.725,
@@ -4016,10 +4016,10 @@
           "n": 0
         },
         "bot_to_phone": {
-          "p50_s": 0.127,
-          "p95_s": 0.547,
+          "p50_s": 0.128,
+          "p95_s": 0.549,
           "max_s": 0.65,
-          "last_s": 0.128,
+          "last_s": 0.127,
           "n": 200
         },
         "event_to_phone": {
@@ -4111,7 +4111,7 @@
       "score": 63,
       "passed": true,
       "status": "passed",
-      "rejected": 106060
+      "rejected": 106077
     },
     "executor": {
       "name": "Executor",
@@ -4302,7 +4302,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "6751 bewertet · 106060 abgelehnt"
+      "detail": "6751 bewertet · 106077 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4415,54 +4415,7 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [
-    {
-      "symbol": "Memeployed",
-      "mint": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn",
-      "pool": "GY7pC4TiJsvFdS85hMDsnGx5rcCP3vMdysjTGHLgDH8",
-      "score": 48,
-      "reasons": [
-        "Dex-Boost",
-        "Im Trend",
-        "Volumen zieht an"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 77305.0,
-      "origin": "ds_boosts",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn.png"
-    },
-    {
-      "symbol": "SLITHEEN",
-      "mint": "2ajAnFA8UKpeYbWSoEwobGQrLvdUUmjipjpongMepump",
-      "pool": "HnQ7DSiRvAC4gpXUjjJ7Xz92ZPHgaTGci5GSQ6h9HPj1",
-      "score": 41,
-      "reasons": [
-        "Narrativ SLITHEEN",
-        "Volumen zieht an",
-        "Im Trend"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 26342.0,
-      "origin": "ds_profiles",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/2ajAnFA8UKpeYbWSoEwobGQrLvdUUmjipjpongMepump.png"
-    },
-    {
-      "symbol": ":3",
-      "mint": "FSkyjfqB26u6c2GSgpACrjbxp9yQAR8rutxprVNppump",
-      "pool": "GxYbNxjGR9mEuVzXsGBi2Y78RGkwBMRok4RS9sMUb8hE",
-      "score": 27,
-      "reasons": [
-        "Im Trend"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 186170.938580821,
-      "origin": "trending_1h",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/FSkyjfqB26u6c2GSgpACrjbxp9yQAR8rutxprVNppump.png"
-    }
-  ],
+  "radar": [],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -8502,16 +8455,16 @@
     }
   ],
   "feed_stats": {
-    "emitted": 64640,
-    "per_min": 135.02,
+    "emitted": 64674,
+    "per_min": 135.0,
     "by_decision": {
-      "seen": 48776,
-      "rejected": 12630,
+      "seen": 48793,
+      "rejected": 12647,
       "accepted": 1619,
       "skipped": 1615
     },
     "by_source": {
-      "new": 11374,
+      "new": 11408,
       "ds_search": 4884,
       "ds_profiles": 10099,
       "ds_boosts": 8151,
@@ -8521,13 +8474,13 @@
       "pump_logs": 629,
       "ds_boosts_top": 203
     },
-    "pumpfun": 26892
+    "pumpfun": 26920
   },
   "status": "running",
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.2,
+  "heartbeat_age_s": 0.5,
   "bot_alive": true,
   "supervisor_alive": true
 }
