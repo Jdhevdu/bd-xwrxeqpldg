@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 10:59:29 CET",
-  "last_update": "2026-11-25 10:59:01 CET",
+  "exported_at": "2026-11-25 10:59:40 CET",
+  "last_update": "2026-11-25 10:59:30 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.20637522889534,
@@ -104,12 +104,12 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 4023.7,
-    "last_ms": 1000.2,
+    "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 0.9,
     "work_max_ms": 30.5,
-    "work_last_ms": 0.5,
+    "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 67.47768381170162,
@@ -119,12 +119,12 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 4125,
+    "cycles": 4126,
     "pools_scanned": 665988,
     "unique_pools": 20017,
     "prefilter_rejected": 112112,
     "safety_rejected": 2873,
-    "scored": 7855,
+    "scored": 7856,
     "buys": 88,
     "sells": 93
   },
@@ -339,6 +339,42 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-25 10:59:29 CET",
+      "ts": 1795600769.0,
+      "kind": "Skipped",
+      "symbol": "HELIORA",
+      "reason": "score 62 < 64",
+      "text": "HELIORA score 62 - score 62 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 10:59:29 CET",
+      "ts": 1795600769.0,
+      "kind": "Skipped",
+      "symbol": "Memeployed",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Memeployed score 67 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 10:59:29 CET",
+      "ts": 1795600769.0,
+      "kind": "Skipped",
+      "symbol": "PERRO",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "PERRO score 77 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 10:59:29 CET",
+      "ts": 1795600769.0,
+      "kind": "Scored",
+      "symbol": "Memeployed",
+      "reason": "Memeployed [ds_boosts, graduated] score 67 | liq $18,144 | h1 -5.3% | top10 18% | LP 100% | liquidity:0.9 vol_liq:15 buy_pressure:8.3 holders:13.6 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Dex-Boost, Im Trend)",
+      "text": "Memeployed [ds_boosts, graduated] score 67 | liq $18,144 | h1 -5.3% | top10 18% | LP 100% | liquidity:0.9 vol_liq:15 buy_pressure:8.3 holders:13.6 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Dex-Boost, Im Trend)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 10:59:28 CET",
       "ts": 1795600768.0,
@@ -662,45 +698,45 @@
       "reason": "score 63 < 64",
       "text": "HELIORA score 63 - score 63 < 64",
       "curve": false
-    },
-    {
-      "t": "2026-11-25 10:59:01 CET",
-      "ts": 1795600741.0,
-      "kind": "Skipped",
-      "symbol": "Memeployed",
-      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "Memeployed score 68 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 10:59:01 CET",
-      "ts": 1795600741.0,
-      "kind": "Skipped",
-      "symbol": "PERRO",
-      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "PERRO score 74 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 10:59:01 CET",
-      "ts": 1795600741.0,
-      "kind": "Rejected",
-      "symbol": "Tesla",
-      "reason": "RugCheck danger: Large Amount of LP Unlocked",
-      "text": "Tesla Robo - RugCheck danger: Large Amount of LP Unlocked",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 10:59:01 CET",
-      "ts": 1795600741.0,
-      "kind": "Scored",
-      "symbol": "Memeployed",
-      "reason": "Memeployed [ds_boosts, graduated] score 68 | liq $18,144 | h1 -10.0% | top10 18% | LP 100% | liquidity:0.9 vol_liq:15 buy_pressure:9.6 holders:13.6 authorities:10 lp:10.0 age:5 momentum:0 pump:35 | pump 35 (Dex-Boost, Im Trend)",
-      "text": "Memeployed [ds_boosts, graduated] score 68 | liq $18,144 | h1 -10.0% | top10 18% | LP 100% | liquidity:0.9 vol_liq:15 buy_pressure:9.6 holders:13.6 authorities:10 lp:10.0 age:5 momentum:0 pump:35 | pump 35 (Dex-Boost, Im Trend)",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-25 10:59:29 CET",
+      "ts": 1795600769.0,
+      "kind": "Skipped",
+      "symbol": "HELIORA",
+      "reason": "score 62 < 64",
+      "text": "HELIORA score 62 - score 62 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 10:59:29 CET",
+      "ts": 1795600769.0,
+      "kind": "Skipped",
+      "symbol": "Memeployed",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Memeployed score 67 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 10:59:29 CET",
+      "ts": 1795600769.0,
+      "kind": "Skipped",
+      "symbol": "PERRO",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "PERRO score 77 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 10:59:29 CET",
+      "ts": 1795600769.0,
+      "kind": "Scored",
+      "symbol": "Memeployed",
+      "reason": "Memeployed [ds_boosts, graduated] score 67 | liq $18,144 | h1 -5.3% | top10 18% | LP 100% | liquidity:0.9 vol_liq:15 buy_pressure:8.3 holders:13.6 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Dex-Boost, Im Trend)",
+      "text": "Memeployed [ds_boosts, graduated] score 67 | liq $18,144 | h1 -5.3% | top10 18% | LP 100% | liquidity:0.9 vol_liq:15 buy_pressure:8.3 holders:13.6 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Dex-Boost, Im Trend)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 10:59:28 CET",
       "ts": 1795600768.0,
@@ -888,42 +924,6 @@
       "symbol": "POOK",
       "reason": "liquidity $1,558 < $10,000",
       "text": "POOK (meteora-damm-v2) - liquidity $1,558 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 10:59:06 CET",
-      "ts": 1795600746.0,
-      "kind": "Rejected",
-      "symbol": "PUMP",
-      "reason": "impersonates PUMP (mint is not the official one)",
-      "text": "PUMP (pump-fun) - impersonates PUMP (mint is not the official one)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 10:59:01 CET",
-      "ts": 1795600741.0,
-      "kind": "Skipped",
-      "symbol": "HELIORA",
-      "reason": "score 63 < 64",
-      "text": "HELIORA score 63 - score 63 < 64",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 10:59:01 CET",
-      "ts": 1795600741.0,
-      "kind": "Skipped",
-      "symbol": "Memeployed",
-      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "Memeployed score 68 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 10:59:01 CET",
-      "ts": 1795600741.0,
-      "kind": "Skipped",
-      "symbol": "PERRO",
-      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "PERRO score 74 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
       "curve": false
     }
   ],
@@ -2730,12 +2730,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795581814.432186,
-      "t_label": "2026-11-25 05:43:34 CET",
-      "usd": 8.1392,
-      "eur": 7.3645
-    },
-    {
       "t": 1795581879.9501033,
       "t_label": "2026-11-25 05:44:39 CET",
       "usd": 8.1392,
@@ -3928,6 +3922,12 @@
       "t_label": "2026-11-25 10:59:01 CET",
       "usd": 7.9645,
       "eur": 7.2064
+    },
+    {
+      "t": 1795600770.0034318,
+      "t_label": "2026-11-25 10:59:30 CET",
+      "usd": 7.9645,
+      "eur": 7.2064
     }
   ],
   "agents": {
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795600769.7040532,
+      "updated_ts": 1795600779.697181,
       "stages": {
         "discovery": {
           "p50_s": 63.014,
@@ -4017,9 +4017,9 @@
         },
         "bot_to_phone": {
           "p50_s": 0.126,
-          "p95_s": 0.423,
+          "p95_s": 0.399,
           "max_s": 2.636,
-          "last_s": 0.129,
+          "last_s": 0.128,
           "n": 200
         },
         "event_to_phone": {
@@ -4052,13 +4052,18 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "HELIORA",
+      "token": "Memeployed",
       "pill": "115 pools",
       "pill_kind": "blue",
       "detail": "20,017 unique pools",
       "pools": 115,
       "unique": 20017,
       "filters": [
+        {
+          "symbol": "Memeployed",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "HELIORA",
           "text": "top 10 > 25%",
@@ -4093,22 +4098,17 @@
           "symbol": "JUDE",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "OG",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "HELIORA",
-      "pill": "62",
+      "token": "Memeployed",
+      "pill": "67",
       "pill_kind": "purple",
-      "detail": "HELIORA [trending_1h, graduated] score 62 | liq $18,157 | h1 -24.1% | top10 12% | LP 100% | liquidity:0.9 vol_liq:2 buy_pressure:10.5 holders:15 authorities:10 lp:10.0 age:5 momentum:0 narrative:HELIORA pump:41 | narrative HELIORA | pump 41 (Narrativ HELIORA, Im Trend, Socials ergänzt)",
-      "score": 62,
+      "detail": "Memeployed [ds_boosts, graduated] score 67 | liq $18,144 | h1 -5.3% | top10 18% | LP 100% | liquidity:0.9 vol_liq:15 buy_pressure:8.3 holders:13.6 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Dex-Boost, Im Trend)",
+      "score": 67,
       "passed": true,
       "status": "passed",
       "rejected": 114985
@@ -4298,11 +4298,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20017 Pools · 4125 Scans · Watch 387 · Graduiert 196 · letzter Scan: ds_search 13 · trending_5m 16 · trending_1h 16 · ds_boosts 15 · watchlist 37 · ds_profiles 18"
+      "detail": "20017 Pools · 4126 Scans · Watch 387 · Graduiert 196 · letzter Scan: ds_search 13 · trending_5m 16 · trending_1h 16 · ds_boosts 15 · watchlist 37 · ds_profiles 18"
     },
     {
       "name": "Analyst",
-      "detail": "7855 bewertet · 114985 abgelehnt"
+      "detail": "7856 bewertet · 114985 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4415,7 +4415,55 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "HELIORA",
+      "mint": "96qfge1RkUWhSsv8i9V4QZFANGypKEe1u7pzCDGGpump",
+      "pool": "5Rtww8dfdViHd8DByqjiZLEMHLLES2iZ7dqw2K1kycB7",
+      "score": 41,
+      "reasons": [
+        "Narrativ HELIORA",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 66665.1458399338,
+      "origin": "trending_1h",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/96qfge1RkUWhSsv8i9V4QZFANGypKEe1u7pzCDGGpump.png"
+    },
+    {
+      "symbol": "PERRO",
+      "mint": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump",
+      "pool": "4s1epXdedd7TY1UtJ7frou3saSxuG98os7HcPtNEu8WH",
+      "score": 33,
+      "reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 156725.760637359,
+      "origin": "trending_1h",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump.png"
+    },
+    {
+      "symbol": "Memeployed",
+      "mint": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn",
+      "pool": "GY7pC4TiJsvFdS85hMDsnGx5rcCP3vMdysjTGHLgDH8",
+      "score": 33,
+      "reasons": [
+        "Dex-Boost",
+        "Im Trend"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 45484.0,
+      "origin": "ds_boosts",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4433,86 +4481,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "TENEX",
-      "mint": "GpCiqGaWm9Lk98r8iFr5W32dkFMVq8suBRDdkfqbpump",
-      "pool": "3xGFZpmpyXomLAoy5PuyiHJnFTGfeEakpn9SHx5NsLAG",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 26312.0,
-      "liq": 10302.66,
-      "age_min": 591.92,
-      "created_at": "2026-11-25T00:06:50Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795600725.0148644,
-      "t": "2026-11-25 10:58:45 CET",
-      "id": "GpCiqGaWm9Lk98r8iFr5W32dkFMVq8suBRDdkfqbpump-1795600725014"
-    },
-    {
-      "symbol": "Taffy",
-      "mint": "5nmZzANRvvKSR49QsodoAtspjbGft7pfwmFBPxrKpump",
-      "pool": "75pEStYbjXtTV5e53b7ocRKNZvk4vsdMVxj7XP5njqhx",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 22757.0,
-      "liq": 9823.1,
-      "age_min": 222.37,
-      "created_at": "2026-11-25T06:16:23Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795600725.020887,
-      "t": "2026-11-25 10:58:45 CET",
-      "id": "5nmZzANRvvKSR49QsodoAtspjbGft7pfwmFBPxrKpump-1795600725020"
-    },
-    {
-      "symbol": "KRAHE",
-      "mint": "FZP6T8zAUBdmakAajcKiCsHmCdf9hYva7zdVsDby4yaH",
-      "pool": "DU81sX81dBRqn9TRJ4sGKNMjH2ydzLpFU9k9moLgZ22P",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 20178.0,
-      "liq": 8955.54,
-      "age_min": 222.65,
-      "created_at": "2026-11-25T06:16:06Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795600725.0251167,
-      "t": "2026-11-25 10:58:45 CET",
-      "id": "FZP6T8zAUBdmakAajcKiCsHmCdf9hYva7zdVsDby4yaH-1795600725025"
-    },
-    {
-      "symbol": "VIOLA",
-      "mint": "9Eu7WS2WqzQ4jvW4zXH7PaxDH8rpNDUrLuHKrUbbpump",
-      "pool": "7pqQ1FzJvP2K67smUkyi1WkvCWxRfuYzzJbuR67ANaKk",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 12598.0,
-      "liq": 6697.4,
-      "age_min": 727.7,
-      "created_at": "2026-11-24T21:51:03Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795600725.0292518,
-      "t": "2026-11-25 10:58:45 CET",
-      "id": "9Eu7WS2WqzQ4jvW4zXH7PaxDH8rpNDUrLuHKrUbbpump-1795600725029"
-    },
     {
       "symbol": "Slotbound",
       "mint": "6woMBVpn4QwQVYeLysGKB2JiBSUCxkENmbemj5eE9Zz3",
@@ -8462,24 +8430,118 @@
       "ts": 1795600768.4914553,
       "t": "2026-11-25 10:59:28 CET",
       "id": "96qfge1RkUWhSsv8i9V4QZFANGypKEe1u7pzCDGGpump-1795600768491"
+    },
+    {
+      "symbol": "Memeployed",
+      "mint": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn",
+      "pool": "GY7pC4TiJsvFdS85hMDsnGx5rcCP3vMdysjTGHLgDH8",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 45484.0,
+      "liq": 18144.39,
+      "age_min": 1212.42,
+      "created_at": "2026-11-24T13:47:05Z",
+      "decision": "accepted",
+      "reason": "score 67",
+      "score": 67,
+      "pump_score": 33,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Im Trend"
+      ],
+      "ts": 1795600769.9838915,
+      "t": "2026-11-25 10:59:29 CET",
+      "id": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn-1795600769983"
+    },
+    {
+      "symbol": "PERRO",
+      "mint": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump",
+      "pool": "4s1epXdedd7TY1UtJ7frou3saSxuG98os7HcPtNEu8WH",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 156725.760637359,
+      "liq": 30241.2334,
+      "age_min": 515.33,
+      "created_at": "2026-11-25T01:24:10Z",
+      "decision": "skipped",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 77,
+      "pump_score": 33,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795600769.9880245,
+      "t": "2026-11-25 10:59:29 CET",
+      "id": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump-1795600769988"
+    },
+    {
+      "symbol": "Memeployed",
+      "mint": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn",
+      "pool": "GY7pC4TiJsvFdS85hMDsnGx5rcCP3vMdysjTGHLgDH8",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 45484.0,
+      "liq": 18144.39,
+      "age_min": 1212.42,
+      "created_at": "2026-11-24T13:47:05Z",
+      "decision": "skipped",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 67,
+      "pump_score": 33,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Im Trend"
+      ],
+      "ts": 1795600769.99207,
+      "t": "2026-11-25 10:59:29 CET",
+      "id": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn-1795600769992"
+    },
+    {
+      "symbol": "HELIORA",
+      "mint": "96qfge1RkUWhSsv8i9V4QZFANGypKEe1u7pzCDGGpump",
+      "pool": "5Rtww8dfdViHd8DByqjiZLEMHLLES2iZ7dqw2K1kycB7",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 66665.1458399338,
+      "liq": 18156.942,
+      "age_min": 87.83,
+      "created_at": "2026-11-25T08:31:40Z",
+      "decision": "skipped",
+      "reason": "score 62 < 64",
+      "score": 62,
+      "pump_score": 41,
+      "pump_reasons": [
+        "Narrativ HELIORA",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795600769.9958389,
+      "t": "2026-11-25 10:59:29 CET",
+      "id": "96qfge1RkUWhSsv8i9V4QZFANGypKEe1u7pzCDGGpump-1795600769995"
     }
   ],
   "feed_stats": {
-    "emitted": 105623,
-    "per_min": 126.33,
+    "emitted": 105627,
+    "per_min": 126.31,
     "by_decision": {
       "seen": 79379,
       "rejected": 20804,
-      "accepted": 2724,
-      "skipped": 2716
+      "accepted": 2725,
+      "skipped": 2719
     },
     "by_source": {
       "new": 19135,
       "ds_search": 8106,
       "ds_profiles": 16053,
-      "ds_boosts": 13047,
+      "ds_boosts": 13049,
       "trending_5m": 10796,
-      "trending_1h": 9642,
+      "trending_1h": 9644,
       "watchlist": 26293,
       "pump_logs": 2341,
       "ds_boosts_top": 210
@@ -8490,7 +8552,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.1,
+  "heartbeat_age_s": 0.3,
   "bot_alive": true,
   "supervisor_alive": true
 }
