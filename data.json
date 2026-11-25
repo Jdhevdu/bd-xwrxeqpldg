@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 14:10:25 CET",
+  "exported_at": "2026-11-25 14:11:44 CET",
   "last_update": "2026-11-25 14:10:10 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795612223.3021405,
+      "updated_ts": 1795612304.148613,
       "stages": {
         "discovery": {
           "p50_s": 70.747,
@@ -4019,7 +4019,7 @@
           "p50_s": 0.128,
           "p95_s": 0.516,
           "max_s": 0.659,
-          "last_s": 0.412,
+          "last_s": 0.125,
           "n": 200
         },
         "event_to_phone": {
@@ -4449,26 +4449,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "SLITHEEN",
-      "mint": "2ajAnFA8UKpeYbWSoEwobGQrLvdUUmjipjpongMepump",
-      "pool": "HnQ7DSiRvAC4gpXUjjJ7Xz92ZPHgaTGci5GSQ6h9HPj1",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 16923.47655,
-      "liq": 7948.8835,
-      "age_min": 563.33,
-      "created_at": "2026-11-25T03:46:16Z",
-      "decision": "rejected",
-      "reason": "liquidity $7,949 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795612175.6831856,
-      "t": "2026-11-25 14:09:35 CET",
-      "id": "2ajAnFA8UKpeYbWSoEwobGQrLvdUUmjipjpongMepump-1795612175683"
-    },
     {
       "symbol": "Pompom",
       "mint": "8ArRsCwf3FqiMTY4wHqPmViWGJyJWQqQ6YucgTrhpump",
@@ -8462,6 +8442,26 @@
       "ts": 1795612223.1661623,
       "t": "2026-11-25 14:10:23 CET",
       "id": "YegYD5NkhzmjQUVFB5KgDFGtBJ93GrrgYzN1UL4pump-1795612223166"
+    },
+    {
+      "symbol": "Solchan",
+      "mint": "HuSWFV6k9i9FwScAtwuYEyMU6iWNrTVzu1rdzRTZpump",
+      "pool": "BtYbWBmdC7Rs32SkvZA7Pz5a6Yn3WjP6ahHeC9tWAj5W",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "ds_profiles",
+      "mcap": 6425.61,
+      "liq": 0.0,
+      "age_min": 134.24,
+      "created_at": "2026-11-25T10:56:11Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795612225.3896112,
+      "t": "2026-11-25 14:10:25 CET",
+      "id": "HuSWFV6k9i9FwScAtwuYEyMU6iWNrTVzu1rdzRTZpump-1795612225389"
     }
   ],
   "feed_stats": {
@@ -8489,7 +8489,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.7,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
