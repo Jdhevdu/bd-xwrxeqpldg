@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 05:58:27 CET",
+  "exported_at": "2026-11-25 05:58:57 CET",
   "last_update": "2026-11-25 05:57:14 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -103,13 +103,13 @@
   "loop_latency": {
     "p50_ms": 1000.1,
     "p95_ms": 1000.2,
-    "max_ms": 3734.6,
-    "last_ms": 1000.1,
+    "max_ms": 20683.4,
+    "last_ms": 20683.4,
     "n": 400,
     "work_p50_ms": 0.3,
-    "work_p95_ms": 9.9,
-    "work_max_ms": 60.0,
-    "work_last_ms": 0.9,
+    "work_p95_ms": 1.0,
+    "work_max_ms": 55.0,
+    "work_last_ms": 0.3,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 68.95816743110434,
@@ -122,7 +122,7 @@
     "cycles": 3930,
     "pools_scanned": 641098,
     "unique_pools": 20012,
-    "prefilter_rejected": 104727,
+    "prefilter_rejected": 104747,
     "safety_rejected": 2685,
     "scored": 6882,
     "buys": 88,
@@ -3919,7 +3919,7 @@
       "name": "Speed",
       "title": "Latenz",
       "new_to_buy_s": null,
-      "discovery_s": 69.731,
+      "discovery_s": 71.638,
       "seen_to_score_s": 164.401,
       "score_to_fill_s": null,
       "price_s": null,
@@ -3932,13 +3932,13 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795582705.767749,
+      "updated_ts": 1795582737.5441368,
       "stages": {
         "discovery": {
-          "p50_s": 69.731,
-          "p95_s": 164.129,
+          "p50_s": 71.638,
+          "p95_s": 164.121,
           "max_s": 280.178,
-          "last_s": 107.589,
+          "last_s": 102.151,
           "n": 200
         },
         "seen_to_score": {
@@ -4001,8 +4001,8 @@
           "p50_s": 0.12,
           "p95_s": 0.132,
           "max_s": 0.144,
-          "last_s": 0.119,
-          "n": 97
+          "last_s": 0.12,
+          "n": 107
         },
         "event_to_phone": {
           "p50_s": 0,
@@ -4093,7 +4093,7 @@
       "score": 79,
       "passed": true,
       "status": "passed",
-      "rejected": 107412
+      "rejected": 107432
     },
     "executor": {
       "name": "Executor",
@@ -4284,7 +4284,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "6882 bewertet · 107412 abgelehnt"
+      "detail": "6882 bewertet · 107432 abgelehnt"
     },
     {
       "name": "Brain",
@@ -8417,17 +8417,17 @@
     }
   ],
   "feed_stats": {
-    "emitted": 71401,
-    "per_min": 133.47,
+    "emitted": 71442,
+    "per_min": 133.39,
     "by_decision": {
-      "seen": 54113,
-      "rejected": 13792,
+      "seen": 54134,
+      "rejected": 13812,
       "accepted": 1750,
       "skipped": 1746
     },
     "by_source": {
-      "new": 12486,
-      "ds_search": 5414,
+      "new": 12526,
+      "ds_search": 5415,
       "ds_profiles": 11097,
       "ds_boosts": 9013,
       "trending_5m": 7227,
@@ -8436,13 +8436,13 @@
       "pump_logs": 1023,
       "ds_boosts_top": 206
     },
-    "pumpfun": 30014
+    "pumpfun": 30047
   },
   "status": "running",
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.4,
+  "heartbeat_age_s": 0.2,
   "bot_alive": true,
   "supervisor_alive": true
 }
