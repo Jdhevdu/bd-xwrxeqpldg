@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 03:52:44 CET",
+  "exported_at": "2026-11-25 03:53:17 CET",
   "last_update": "2026-11-25 03:51:31 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -109,7 +109,7 @@
     "work_p50_ms": 0.3,
     "work_p95_ms": 0.9,
     "work_max_ms": 172.2,
-    "work_last_ms": 0.3,
+    "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 69.25101802034757,
@@ -122,9 +122,9 @@
     "cycles": 3856,
     "pools_scanned": 630991,
     "unique_pools": 20006,
-    "prefilter_rejected": 102052,
+    "prefilter_rejected": 102053,
     "safety_rejected": 2589,
-    "scored": 6535,
+    "scored": 6536,
     "buys": 88,
     "sells": 93
   },
@@ -339,6 +339,24 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-25 03:52:52 CET",
+      "ts": 1795575172.0,
+      "kind": "Rejected",
+      "symbol": "SOL",
+      "reason": "impersonates SOL (mint is not the official one)",
+      "text": "SOL (raydium) - impersonates SOL (mint is not the official one)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 03:52:51 CET",
+      "ts": 1795575171.0,
+      "kind": "Scored",
+      "symbol": "TOUCAN",
+      "reason": "TOUCAN [ds_profiles, graduated] score 57 | liq $17,032 | h1 +176.0% | top10 24% | LP 100% | liquidity:0.6 vol_liq:2 buy_pressure:11.5 holders:11.3 authorities:10 lp:10.0 age:5 momentum:3 pump:30 | pump 30 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "text": "TOUCAN [ds_profiles, graduated] score 57 | liq $17,032 | h1 +176.0% | top10 24% | LP 100% | liquidity:0.6 vol_liq:2 buy_pressure:11.5 holders:11.3 authorities:10 lp:10.0 age:5 momentum:3 pump:30 | pump 30 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 03:52:42 CET",
       "ts": 1795575162.0,
@@ -680,27 +698,27 @@
       "reason": "dex pump-fun not graduated/allowed",
       "text": "Solmas (pump-fun) - dex pump-fun not graduated/allowed",
       "curve": true
-    },
-    {
-      "t": "2026-11-25 03:51:37 CET",
-      "ts": 1795575097.0,
-      "kind": "Rejected",
-      "symbol": "BITCH",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "BITCH (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-25 03:51:37 CET",
-      "ts": 1795575097.0,
-      "kind": "Rejected",
-      "symbol": "GrenCAT",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "GrenCAT (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-25 03:52:52 CET",
+      "ts": 1795575172.0,
+      "kind": "Rejected",
+      "symbol": "SOL",
+      "reason": "impersonates SOL (mint is not the official one)",
+      "text": "SOL (raydium) - impersonates SOL (mint is not the official one)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 03:52:51 CET",
+      "ts": 1795575171.0,
+      "kind": "Scored",
+      "symbol": "TOUCAN",
+      "reason": "TOUCAN [ds_profiles, graduated] score 57 | liq $17,032 | h1 +176.0% | top10 24% | LP 100% | liquidity:0.6 vol_liq:2 buy_pressure:11.5 holders:11.3 authorities:10 lp:10.0 age:5 momentum:3 pump:30 | pump 30 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "text": "TOUCAN [ds_profiles, graduated] score 57 | liq $17,032 | h1 +176.0% | top10 24% | LP 100% | liquidity:0.6 vol_liq:2 buy_pressure:11.5 holders:11.3 authorities:10 lp:10.0 age:5 momentum:3 pump:30 | pump 30 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 03:52:42 CET",
       "ts": 1795575162.0,
@@ -906,24 +924,6 @@
       "symbol": "PERRO",
       "reason": "score 63 < 64",
       "text": "PERRO score 63 - score 63 < 64",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 03:51:31 CET",
-      "ts": 1795575091.0,
-      "kind": "Skipped",
-      "symbol": "DUVAL",
-      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "DUVAL score 71 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 03:51:31 CET",
-      "ts": 1795575091.0,
-      "kind": "Skipped",
-      "symbol": "Memeployed",
-      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "Memeployed score 75 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
       "curve": false
     }
   ],
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795575163.353249,
+      "updated_ts": 1795575197.0808594,
       "stages": {
         "discovery": {
           "p50_s": 76.237,
@@ -4052,13 +4052,23 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "TRMP",
+      "token": "SOL",
       "pill": "131 pools",
       "pill_kind": "blue",
       "detail": "20,006 unique pools",
       "pools": 131,
       "unique": 20006,
       "filters": [
+        {
+          "symbol": "SOL",
+          "text": "impersonator",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "TOUCAN",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "TRMP",
           "text": "dex pump-fun not graduated/allowed",
@@ -4088,30 +4098,20 @@
           "symbol": "DEGENKING",
           "text": "dex pump-fun not graduated/allowed",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "Twelve",
-          "text": "dex pump-fun not graduated/allowed",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "WJ420",
-          "text": "dex pump-fun not graduated/allowed",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "PERRO",
-      "pill": "63",
+      "token": "TOUCAN",
+      "pill": "57",
       "pill_kind": "purple",
-      "detail": "PERRO [ds_profiles, graduated] score 63 | liq $40,536 | h1 +235.0% | top10 19% | LP 100% | liquidity:4.7 vol_liq:2 buy_pressure:9.4 holders:13.4 authorities:10 lp:10.0 age:5 momentum:3 narrative:PERRO pump:31 | narrative PERRO | pump 31 (Narrativ PERRO, Im Trend, Socials ergänzt)",
-      "score": 63,
+      "detail": "TOUCAN [ds_profiles, graduated] score 57 | liq $17,032 | h1 +176.0% | top10 24% | LP 100% | liquidity:0.6 vol_liq:2 buy_pressure:11.5 holders:11.3 authorities:10 lp:10.0 age:5 momentum:3 pump:30 | pump 30 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "score": 57,
       "passed": true,
       "status": "passed",
-      "rejected": 104641
+      "rejected": 104642
     },
     "executor": {
       "name": "Executor",
@@ -4302,7 +4302,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "6535 bewertet · 104641 abgelehnt"
+      "detail": "6536 bewertet · 104642 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4433,66 +4433,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "Solmas",
-      "mint": "E41M3EgTNLV6iVcwGuAu4zrYgyxbjYjg44TR2hPHpump",
-      "pool": "9gFcX7uRKV3tRvmdFwXKjDZxuCXc6WbHZcKFo7cFMweH",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "new",
-      "mcap": 1977.053323,
-      "liq": 1566.8741,
-      "age_min": 1.28,
-      "created_at": "2026-11-25T02:50:20Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795575096.9903927,
-      "t": "2026-11-25 03:51:36 CET",
-      "id": "E41M3EgTNLV6iVcwGuAu4zrYgyxbjYjg44TR2hPHpump-1795575096990"
-    },
-    {
-      "symbol": "ANSEM",
-      "mint": "B4rLJAwn3HAfKZo5rkn6tHjdQW6Pyp4Tp5f761RbrsbG",
-      "pool": "91mn6pKg1aVgN8rXFwUu3Xd6aQ4SREaDzetibxRwoX9f",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "new",
-      "mcap": 746.3575376,
-      "liq": 312.338,
-      "age_min": 1.37,
-      "created_at": "2026-11-25T02:50:15Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795575096.9939942,
-      "t": "2026-11-25 03:51:36 CET",
-      "id": "B4rLJAwn3HAfKZo5rkn6tHjdQW6Pyp4Tp5f761RbrsbG-1795575096993"
-    },
-    {
-      "symbol": "anthumb",
-      "mint": "BM95heyUqjQbUCwCmCfzH3tegj5q4vs3t233ao2mpump",
-      "pool": "HPjxZHH3rHzeZP1VcWbdfNR7zUMPQJotFypx7jauQWUS",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "new",
-      "mcap": 2366.314083,
-      "liq": 1851.4875,
-      "age_min": 1.45,
-      "created_at": "2026-11-25T02:50:10Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795575096.9976487,
-      "t": "2026-11-25 03:51:36 CET",
-      "id": "BM95heyUqjQbUCwCmCfzH3tegj5q4vs3t233ao2mpump-1795575096997"
-    },
     {
       "symbol": "GrenCAT",
       "mint": "4gNFUGderH2F84UEiBMEMYYHDpM7xkr4ZPvdafE4pump",
@@ -8436,21 +8376,85 @@
       "ts": 1795575162.1938741,
       "t": "2026-11-25 03:52:42 CET",
       "id": "3eczvRmGQbenEhfisfCznPBSuvvDMv5uoqbEvjA8MPTD-1795575162193"
+    },
+    {
+      "symbol": "TOUCAN",
+      "mint": "5Xd2vr3oY2YDhBeozvsZQto3rLiMzWDDBLadkgQspump",
+      "pool": "EXnbRRfcqQmkTLdUos3whV63LCe4FMsemSgmCL4zSks5",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 61588.0,
+      "liq": 17032.47,
+      "age_min": 75.63,
+      "created_at": "2026-11-25T01:37:13Z",
+      "decision": "accepted",
+      "reason": "score 57",
+      "score": 57,
+      "pump_score": 30,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795575171.0060365,
+      "t": "2026-11-25 03:52:51 CET",
+      "id": "5Xd2vr3oY2YDhBeozvsZQto3rLiMzWDDBLadkgQspump-1795575171006"
+    },
+    {
+      "symbol": "SOL",
+      "mint": "Ec7QYcw4RtXBvGkAsTZnq11uMbKhoyoLkCHbkLJV8V2E",
+      "pool": "5RDfuoHeonLGR7o5tYVuvJcLpAcHHRLK1HYD1pS25BET",
+      "dex": "raydium",
+      "early": false,
+      "source": "ds_search",
+      "mcap": 2511619859.0,
+      "liq": 2511354238.89,
+      "age_min": 76149.59,
+      "created_at": "2026-10-03T05:43:17Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795575172.372876,
+      "t": "2026-11-25 03:52:52 CET",
+      "id": "Ec7QYcw4RtXBvGkAsTZnq11uMbKhoyoLkCHbkLJV8V2E-1795575172372"
+    },
+    {
+      "symbol": "SOL",
+      "mint": "Ec7QYcw4RtXBvGkAsTZnq11uMbKhoyoLkCHbkLJV8V2E",
+      "pool": "5RDfuoHeonLGR7o5tYVuvJcLpAcHHRLK1HYD1pS25BET",
+      "dex": "raydium",
+      "early": false,
+      "source": "ds_search",
+      "mcap": 2511619859.0,
+      "liq": 2511354238.89,
+      "age_min": 76149.59,
+      "created_at": "2026-10-03T05:43:17Z",
+      "decision": "rejected",
+      "reason": "impersonates SOL (mint is not the official one)",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795575172.3774455,
+      "t": "2026-11-25 03:52:52 CET",
+      "id": "Ec7QYcw4RtXBvGkAsTZnq11uMbKhoyoLkCHbkLJV8V2E-1795575172377"
     }
   ],
   "feed_stats": {
-    "emitted": 57465,
-    "per_min": 140.38,
+    "emitted": 57468,
+    "per_min": 140.34,
     "by_decision": {
-      "seen": 43439,
-      "rejected": 11225,
-      "accepted": 1403,
+      "seen": 43440,
+      "rejected": 11226,
+      "accepted": 1404,
       "skipped": 1398
     },
     "by_source": {
       "new": 9869,
-      "ds_search": 4334,
-      "ds_profiles": 9058,
+      "ds_search": 4336,
+      "ds_profiles": 9059,
       "ds_boosts": 7306,
       "trending_5m": 5768,
       "trending_1h": 5023,
