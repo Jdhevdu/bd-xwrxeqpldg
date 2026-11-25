@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 14:20:43 CET",
-  "last_update": "2026-11-25 14:20:21 CET",
+  "exported_at": "2026-11-25 14:20:53 CET",
+  "last_update": "2026-11-25 14:20:49 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.244354322650248,
@@ -109,7 +109,7 @@
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.1,
     "work_max_ms": 235.0,
-    "work_last_ms": 0.6,
+    "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 67.8333052161454,
@@ -124,7 +124,7 @@
     "unique_pools": 20008,
     "prefilter_rejected": 117470,
     "safety_rejected": 2978,
-    "scored": 8187,
+    "scored": 8189,
     "buys": 88,
     "sells": 93
   },
@@ -339,6 +339,33 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-25 14:20:49 CET",
+      "ts": 1795612849.0,
+      "kind": "Skipped",
+      "symbol": "PERRO",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "PERRO score 73 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 14:20:49 CET",
+      "ts": 1795612849.0,
+      "kind": "Skipped",
+      "symbol": "Memeployed",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Memeployed score 74 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 14:20:49 CET",
+      "ts": 1795612849.0,
+      "kind": "Scored",
+      "symbol": "Memeployed",
+      "reason": "Memeployed [ds_boosts, graduated] score 74 | liq $19,688 | h1 +50.2% | top10 20% | LP 100% | liquidity:1.3 vol_liq:15 buy_pressure:6.3 holders:12.8 authorities:10 lp:10.0 age:5 momentum:10 pump:32 | pump 32 (Dex-Boost, Socials ergänzt, Geringer Price Impact)",
+      "text": "Memeployed [ds_boosts, graduated] score 74 | liq $19,688 | h1 +50.2% | top10 20% | LP 100% | liquidity:1.3 vol_liq:15 buy_pressure:6.3 holders:12.8 authorities:10 lp:10.0 age:5 momentum:10 pump:32 | pump 32 (Dex-Boost, Socials ergänzt, Geringer Price Impact)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 14:20:43 CET",
       "ts": 1795612843.0,
@@ -671,36 +698,36 @@
       "reason": "liquidity $11 < $10,000",
       "text": "$Queen (pumpswap) - liquidity $11 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-25 14:20:08 CET",
-      "ts": 1795612808.0,
-      "kind": "Rejected",
-      "symbol": "N&M",
-      "reason": "liquidity $1,346 < $10,000",
-      "text": "N&M (pumpswap) - liquidity $1,346 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 14:20:08 CET",
-      "ts": 1795612808.0,
-      "kind": "Rejected",
-      "symbol": "ZELENSKYY",
-      "reason": "liquidity $1,563 < $10,000",
-      "text": "ZELENSKYY (pumpswap) - liquidity $1,563 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 14:20:08 CET",
-      "ts": 1795612808.0,
-      "kind": "Rejected",
-      "symbol": "SWARM",
-      "reason": "liquidity $1,653 < $10,000",
-      "text": "SWARM (pumpswap) - liquidity $1,653 < $10,000",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-25 14:20:49 CET",
+      "ts": 1795612849.0,
+      "kind": "Skipped",
+      "symbol": "PERRO",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "PERRO score 73 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 14:20:49 CET",
+      "ts": 1795612849.0,
+      "kind": "Skipped",
+      "symbol": "Memeployed",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Memeployed score 74 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 14:20:49 CET",
+      "ts": 1795612849.0,
+      "kind": "Scored",
+      "symbol": "Memeployed",
+      "reason": "Memeployed [ds_boosts, graduated] score 74 | liq $19,688 | h1 +50.2% | top10 20% | LP 100% | liquidity:1.3 vol_liq:15 buy_pressure:6.3 holders:12.8 authorities:10 lp:10.0 age:5 momentum:10 pump:32 | pump 32 (Dex-Boost, Socials ergänzt, Geringer Price Impact)",
+      "text": "Memeployed [ds_boosts, graduated] score 74 | liq $19,688 | h1 +50.2% | top10 20% | LP 100% | liquidity:1.3 vol_liq:15 buy_pressure:6.3 holders:12.8 authorities:10 lp:10.0 age:5 momentum:10 pump:32 | pump 32 (Dex-Boost, Socials ergänzt, Geringer Price Impact)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 14:20:43 CET",
       "ts": 1795612843.0,
@@ -897,33 +924,6 @@
       "symbol": "ZELENSKYY",
       "reason": "liquidity $1,563 < $10,000",
       "text": "ZELENSKYY (pumpswap) - liquidity $1,563 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 14:20:08 CET",
-      "ts": 1795612808.0,
-      "kind": "Rejected",
-      "symbol": "SWARM",
-      "reason": "liquidity $1,653 < $10,000",
-      "text": "SWARM (pumpswap) - liquidity $1,653 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 14:20:08 CET",
-      "ts": 1795612808.0,
-      "kind": "Rejected",
-      "symbol": "SNOWCUMBRR",
-      "reason": "liquidity $1,683 < $10,000",
-      "text": "SNOWCUMBRR (pumpswap) - liquidity $1,683 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 14:20:08 CET",
-      "ts": 1795612808.0,
-      "kind": "Rejected",
-      "symbol": "Boor",
-      "reason": "liquidity $1,728 < $10,000",
-      "text": "Boor (pumpswap) - liquidity $1,728 < $10,000",
       "curve": false
     }
   ],
@@ -2730,12 +2730,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795595039.5156894,
-      "t_label": "2026-11-25 09:23:59 CET",
-      "usd": 8.0645,
-      "eur": 7.2969
-    },
-    {
       "t": 1795595062.6619484,
       "t_label": "2026-11-25 09:24:22 CET",
       "usd": 8.0645,
@@ -3928,6 +3922,12 @@
       "t_label": "2026-11-25 14:20:21 CET",
       "usd": 8.0065,
       "eur": 7.2444
+    },
+    {
+      "t": 1795612849.7889104,
+      "t_label": "2026-11-25 14:20:49 CET",
+      "usd": 8.0065,
+      "eur": 7.2444
     }
   ],
   "agents": {
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795612842.613782,
+      "updated_ts": 1795612852.609964,
       "stages": {
         "discovery": {
           "p50_s": 70.94,
@@ -4019,7 +4019,7 @@
           "p50_s": 0.128,
           "p95_s": 0.516,
           "max_s": 0.659,
-          "last_s": 0.126,
+          "last_s": 0.121,
           "n": 200
         },
         "event_to_phone": {
@@ -4052,13 +4052,18 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "PERRO",
+      "token": "Memeployed",
       "pill": "124 pools",
       "pill_kind": "blue",
       "detail": "20,008 unique pools",
       "pools": 124,
       "unique": 20008,
       "filters": [
+        {
+          "symbol": "Memeployed",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "PERRO",
           "text": "top 10 > 25%",
@@ -4093,22 +4098,17 @@
           "symbol": "Boor",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "PFP",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "PERRO",
-      "pill": "73",
+      "token": "Memeployed",
+      "pill": "74",
       "pill_kind": "purple",
-      "detail": "PERRO [trending_1h, graduated] score 73 | liq $30,100 | h1 -22.4% | top10 16% | LP 100% | liquidity:3.3 vol_liq:15 buy_pressure:10.6 holders:14.6 authorities:10 lp:10.0 age:5 momentum:0 pump:32 | pump 32 (Viele Käufer, Im Trend)",
-      "score": 73,
+      "detail": "Memeployed [ds_boosts, graduated] score 74 | liq $19,688 | h1 +50.2% | top10 20% | LP 100% | liquidity:1.3 vol_liq:15 buy_pressure:6.3 holders:12.8 authorities:10 lp:10.0 age:5 momentum:10 pump:32 | pump 32 (Dex-Boost, Socials ergänzt, Geringer Price Impact)",
+      "score": 74,
       "passed": true,
       "status": "passed",
       "rejected": 120448
@@ -4302,7 +4302,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "8187 bewertet · 120448 abgelehnt"
+      "detail": "8189 bewertet · 120448 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4415,7 +4415,39 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "PERRO",
+      "mint": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump",
+      "pool": "4s1epXdedd7TY1UtJ7frou3saSxuG98os7HcPtNEu8WH",
+      "score": 32,
+      "reasons": [
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 146818.602423488,
+      "origin": "trending_1h",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump.png"
+    },
+    {
+      "symbol": "Memeployed",
+      "mint": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn",
+      "pool": "GY7pC4TiJsvFdS85hMDsnGx5rcCP3vMdysjTGHLgDH8",
+      "score": 32,
+      "reasons": [
+        "Dex-Boost",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 52547.0,
+      "origin": "ds_boosts",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4433,66 +4465,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "$Queen",
-      "mint": "Ek3XG8o8zc1qC8qpm1UHcggDyUTvsYzTEruQaAJGpump",
-      "pool": "5UCEkAFi83iw78StqUr4whDFdzbGCJYvfJwMPF7dzDKt",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 12150.84,
-      "liq": 0.0,
-      "age_min": 201.09,
-      "created_at": "2026-11-25T09:59:03Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795612808.3105478,
-      "t": "2026-11-25 14:20:08 CET",
-      "id": "Ek3XG8o8zc1qC8qpm1UHcggDyUTvsYzTEruQaAJGpump-1795612808310"
-    },
-    {
-      "symbol": "$Queen",
-      "mint": "FtgCS95UZcfjwC73mCrDNChTaUoN2R7ccrAXuvQipump",
-      "pool": "Fu6Tp1rijhGMCMXHqKqLEUzdmiaVK98ALYzzN6mot2oS",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 67.46,
-      "liq": 0.0,
-      "age_min": 206.91,
-      "created_at": "2026-11-25T09:53:14Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795612808.3144612,
-      "t": "2026-11-25 14:20:08 CET",
-      "id": "FtgCS95UZcfjwC73mCrDNChTaUoN2R7ccrAXuvQipump-1795612808314"
-    },
-    {
-      "symbol": "Bernard",
-      "mint": "8LPJzr3SfD8Ehv13jjNj6LAUsxbaPeRsLemFdV8Wpump",
-      "pool": "EgD83Uv6kMkJt4zkLAJWUrqbXXtJcv2RkcJKkhARDdXN",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 4055.83,
-      "liq": 0.0,
-      "age_min": 216.34,
-      "created_at": "2026-11-25T09:43:48Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795612808.3184283,
-      "t": "2026-11-25 14:20:08 CET",
-      "id": "8LPJzr3SfD8Ehv13jjNj6LAUsxbaPeRsLemFdV8Wpump-1795612808318"
-    },
     {
       "symbol": "$Queen",
       "mint": "5s8YAKCS7fLbDuqZDm4FYb9MiQmDNMhxvZecb6abvvmL",
@@ -8449,24 +8421,95 @@
       "ts": 1795612843.007458,
       "t": "2026-11-25 14:20:43 CET",
       "id": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump-1795612843007"
+    },
+    {
+      "symbol": "Memeployed",
+      "mint": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn",
+      "pool": "GY7pC4TiJsvFdS85hMDsnGx5rcCP3vMdysjTGHLgDH8",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 52547.0,
+      "liq": 19687.82,
+      "age_min": 1413.75,
+      "created_at": "2026-11-24T13:47:05Z",
+      "decision": "accepted",
+      "reason": "score 74",
+      "score": 74,
+      "pump_score": 32,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795612849.7702124,
+      "t": "2026-11-25 14:20:49 CET",
+      "id": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn-1795612849770"
+    },
+    {
+      "symbol": "Memeployed",
+      "mint": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn",
+      "pool": "GY7pC4TiJsvFdS85hMDsnGx5rcCP3vMdysjTGHLgDH8",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 52547.0,
+      "liq": 19687.82,
+      "age_min": 1413.75,
+      "created_at": "2026-11-24T13:47:05Z",
+      "decision": "skipped",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 74,
+      "pump_score": 32,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795612849.7753267,
+      "t": "2026-11-25 14:20:49 CET",
+      "id": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn-1795612849775"
+    },
+    {
+      "symbol": "PERRO",
+      "mint": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump",
+      "pool": "4s1epXdedd7TY1UtJ7frou3saSxuG98os7HcPtNEu8WH",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 146818.602423488,
+      "liq": 30100.2704,
+      "age_min": 716.66,
+      "created_at": "2026-11-25T01:24:10Z",
+      "decision": "skipped",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 73,
+      "pump_score": 32,
+      "pump_reasons": [
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "ts": 1795612849.7792668,
+      "t": "2026-11-25 14:20:49 CET",
+      "id": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump-1795612849779"
     }
   ],
   "feed_stats": {
-    "emitted": 13604,
-    "per_min": 121.38,
+    "emitted": 13608,
+    "per_min": 121.24,
     "by_decision": {
       "seen": 10521,
       "rejected": 2753,
-      "accepted": 165,
-      "skipped": 165
+      "accepted": 167,
+      "skipped": 167
     },
     "by_source": {
       "new": 2204,
       "ds_search": 1141,
       "ds_profiles": 2457,
-      "ds_boosts": 1201,
+      "ds_boosts": 1203,
       "trending_5m": 1453,
-      "trending_1h": 1387,
+      "trending_1h": 1389,
       "watchlist": 3190,
       "pump_logs": 571
     },
@@ -8476,7 +8519,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.9,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
