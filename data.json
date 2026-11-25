@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 18:04:16 CET",
-  "last_update": "2026-11-25 18:03:52 CET",
+  "exported_at": "2026-11-25 18:04:26 CET",
+  "last_update": "2026-11-25 18:04:20 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.121409300482517,
@@ -109,7 +109,7 @@
     "work_p50_ms": 0.4,
     "work_p95_ms": 0.9,
     "work_max_ms": 4.2,
-    "work_last_ms": 1.2,
+    "work_last_ms": 0.7,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 66.6820960341988,
@@ -119,12 +119,12 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 4515,
+    "cycles": 4516,
     "pools_scanned": 716791,
     "unique_pools": 20010,
     "prefilter_rejected": 123801,
     "safety_rejected": 3110,
-    "scored": 8920,
+    "scored": 8922,
     "buys": 88,
     "sells": 93
   },
@@ -339,6 +339,51 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-25 18:04:20 CET",
+      "ts": 1795626260.0,
+      "kind": "Skipped",
+      "symbol": "hacked",
+      "reason": "score 63 < 64",
+      "text": "hacked score 63 - score 63 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 18:04:20 CET",
+      "ts": 1795626260.0,
+      "kind": "Skipped",
+      "symbol": "PERRO",
+      "reason": "position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "PERRO score 70 - position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 18:04:20 CET",
+      "ts": 1795626260.0,
+      "kind": "Skipped",
+      "symbol": "3sat",
+      "reason": "position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "3sat score 75 - position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 18:04:20 CET",
+      "ts": 1795626260.0,
+      "kind": "Skipped",
+      "symbol": "BIAO",
+      "reason": "position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "BIAO score 90 - position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 18:04:20 CET",
+      "ts": 1795626260.0,
+      "kind": "Scored",
+      "symbol": "hacked",
+      "reason": "hacked [watchlist, graduated] score 63 | liq $13,193 | h1 -3.4% | top10 15% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:11.3 holders:15 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Geringer Price Impact, Socials ergänzt)",
+      "text": "hacked [watchlist, graduated] score 63 | liq $13,193 | h1 -3.4% | top10 15% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:11.3 holders:15 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Geringer Price Impact, Socials ergänzt)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 18:04:15 CET",
       "ts": 1795626255.0,
@@ -653,10 +698,12 @@
       "reason": "dex pump-fun not graduated/allowed",
       "text": "SillyFrog (pump-fun) - dex pump-fun not graduated/allowed",
       "curve": true
-    },
+    }
+  ],
+  "scanner_highlights": [
     {
-      "t": "2026-11-25 18:03:52 CET",
-      "ts": 1795626232.0,
+      "t": "2026-11-25 18:04:20 CET",
+      "ts": 1795626260.0,
       "kind": "Skipped",
       "symbol": "hacked",
       "reason": "score 63 < 64",
@@ -664,8 +711,17 @@
       "curve": false
     },
     {
-      "t": "2026-11-25 18:03:52 CET",
-      "ts": 1795626232.0,
+      "t": "2026-11-25 18:04:20 CET",
+      "ts": 1795626260.0,
+      "kind": "Skipped",
+      "symbol": "PERRO",
+      "reason": "position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "PERRO score 70 - position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 18:04:20 CET",
+      "ts": 1795626260.0,
       "kind": "Skipped",
       "symbol": "3sat",
       "reason": "position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
@@ -673,8 +729,8 @@
       "curve": false
     },
     {
-      "t": "2026-11-25 18:03:52 CET",
-      "ts": 1795626232.0,
+      "t": "2026-11-25 18:04:20 CET",
+      "ts": 1795626260.0,
       "kind": "Skipped",
       "symbol": "BIAO",
       "reason": "position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
@@ -682,25 +738,14 @@
       "curve": false
     },
     {
-      "t": "2026-11-25 18:03:52 CET",
-      "ts": 1795626232.0,
+      "t": "2026-11-25 18:04:20 CET",
+      "ts": 1795626260.0,
       "kind": "Scored",
       "symbol": "hacked",
-      "reason": "hacked [watchlist, graduated] score 63 | liq $12,839 | h1 -8.2% | top10 15% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:11.3 holders:15 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Geringer Price Impact, Socials ergänzt)",
-      "text": "hacked [watchlist, graduated] score 63 | liq $12,839 | h1 -8.2% | top10 15% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:11.3 holders:15 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Geringer Price Impact, Socials ergänzt)",
+      "reason": "hacked [watchlist, graduated] score 63 | liq $13,193 | h1 -3.4% | top10 15% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:11.3 holders:15 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Geringer Price Impact, Socials ergänzt)",
+      "text": "hacked [watchlist, graduated] score 63 | liq $13,193 | h1 -3.4% | top10 15% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:11.3 holders:15 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Geringer Price Impact, Socials ergänzt)",
       "curve": false
     },
-    {
-      "t": "2026-11-25 18:03:49 CET",
-      "ts": 1795626229.0,
-      "kind": "Scored",
-      "symbol": "3sat",
-      "reason": "3sat [watchlist, graduated] score 75 | liq $13,643 | h1 +37.6% | top10 18% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:7.8 holders:13.6 authorities:10 lp:10.0 age:5 momentum:10 pump:33 | pump 33 (Im Trend, Socials ergänzt, Liquidität steigt)",
-      "text": "3sat [watchlist, graduated] score 75 | liq $13,643 | h1 +37.6% | top10 18% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:7.8 holders:13.6 authorities:10 lp:10.0 age:5 momentum:10 pump:33 | pump 33 (Im Trend, Socials ergänzt, Liquidität steigt)",
-      "curve": false
-    }
-  ],
-  "scanner_highlights": [
     {
       "t": "2026-11-25 18:04:15 CET",
       "ts": 1795626255.0,
@@ -880,54 +925,9 @@
       "reason": "position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
       "text": "BIAO score 90 - position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
       "curve": false
-    },
-    {
-      "t": "2026-11-25 18:03:52 CET",
-      "ts": 1795626232.0,
-      "kind": "Scored",
-      "symbol": "hacked",
-      "reason": "hacked [watchlist, graduated] score 63 | liq $12,839 | h1 -8.2% | top10 15% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:11.3 holders:15 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Geringer Price Impact, Socials ergänzt)",
-      "text": "hacked [watchlist, graduated] score 63 | liq $12,839 | h1 -8.2% | top10 15% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:11.3 holders:15 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Geringer Price Impact, Socials ergänzt)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 18:03:49 CET",
-      "ts": 1795626229.0,
-      "kind": "Scored",
-      "symbol": "3sat",
-      "reason": "3sat [watchlist, graduated] score 75 | liq $13,643 | h1 +37.6% | top10 18% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:7.8 holders:13.6 authorities:10 lp:10.0 age:5 momentum:10 pump:33 | pump 33 (Im Trend, Socials ergänzt, Liquidität steigt)",
-      "text": "3sat [watchlist, graduated] score 75 | liq $13,643 | h1 +37.6% | top10 18% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:7.8 holders:13.6 authorities:10 lp:10.0 age:5 momentum:10 pump:33 | pump 33 (Im Trend, Socials ergänzt, Liquidität steigt)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 18:03:42 CET",
-      "ts": 1795626222.0,
-      "kind": "Scored",
-      "symbol": "BIAO",
-      "reason": "BIAO [ds_profiles, graduated] score 90 | liq $37,434 | h1 +41.9% | top10 15% | LP 100% | liquidity:4.4 vol_liq:15 buy_pressure:14.5 holders:15 authorities:10 lp:10.0 age:5 momentum:10 narrative:BIAO pump:34 | narrative BIAO | pump 34 (Volumen zieht an, Narrativ BIAO, Socials ergänzt)",
-      "text": "BIAO [ds_profiles, graduated] score 90 | liq $37,434 | h1 +41.9% | top10 15% | LP 100% | liquidity:4.4 vol_liq:15 buy_pressure:14.5 holders:15 authorities:10 lp:10.0 age:5 momentum:10 narrative:BIAO pump:34 | narrative BIAO | pump 34 (Volumen zieht an, Narrativ BIAO, Socials ergänzt)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 18:03:39 CET",
-      "ts": 1795626219.0,
-      "kind": "Rejected",
-      "symbol": "SWARM",
-      "reason": "liquidity $1,579 < $10,000",
-      "text": "SWARM (pumpswap) - liquidity $1,579 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 18:03:39 CET",
-      "ts": 1795626219.0,
-      "kind": "Rejected",
-      "symbol": "PFP",
-      "reason": "liquidity $1,598 < $10,000",
-      "text": "PFP (pumpswap) - liquidity $1,598 < $10,000",
-      "curve": false
     }
   ],
-  "curve_skips": 2131,
+  "curve_skips": 2129,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -2730,12 +2730,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795612117.5156736,
-      "t_label": "2026-11-25 14:08:37 CET",
-      "usd": 8.0065,
-      "eur": 7.2444
-    },
-    {
       "t": 1795612146.8709211,
       "t_label": "2026-11-25 14:09:06 CET",
       "usd": 8.0065,
@@ -3928,6 +3922,12 @@
       "t_label": "2026-11-25 18:03:52 CET",
       "usd": 7.8706,
       "eur": 7.1214
+    },
+    {
+      "t": 1795626260.1790476,
+      "t_label": "2026-11-25 18:04:20 CET",
+      "usd": 7.8706,
+      "eur": 7.1214
     }
   ],
   "agents": {
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795626255.5855715,
+      "updated_ts": 1795626265.589533,
       "stages": {
         "discovery": {
           "p50_s": 889.861,
@@ -4019,7 +4019,7 @@
           "p50_s": 0.119,
           "p95_s": 0.124,
           "max_s": 0.148,
-          "last_s": 0.117,
+          "last_s": 0.119,
           "n": 200
         },
         "event_to_phone": {
@@ -4052,13 +4052,18 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "3sat",
+      "token": "hacked",
       "pill": "127 pools",
       "pill_kind": "blue",
       "detail": "20,010 unique pools",
       "pools": 127,
       "unique": 20010,
       "filters": [
+        {
+          "symbol": "hacked",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "3sat",
           "text": "top 10 > 25%",
@@ -4093,22 +4098,17 @@
           "symbol": "INUF",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "Boor",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "3sat",
-      "pill": "75",
+      "token": "hacked",
+      "pill": "63",
       "pill_kind": "purple",
-      "detail": "3sat [watchlist, graduated] score 75 | liq $13,449 | h1 +34.0% | top10 18% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:7.6 holders:13.6 authorities:10 lp:10.0 age:5 momentum:10 pump:30 | pump 30 (Im Trend, Socials ergänzt)",
-      "score": 75,
+      "detail": "hacked [watchlist, graduated] score 63 | liq $13,193 | h1 -3.4% | top10 15% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:11.3 holders:15 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Geringer Price Impact, Socials ergänzt)",
+      "score": 63,
       "passed": true,
       "status": "passed",
       "rejected": 126911
@@ -4298,11 +4298,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20010 Pools · 4515 Scans · Watch 371 · Graduiert 217 · letzter Scan: ds_search 15 · trending_1h 18 · trending_5m 18 · ds_boosts 16 · ds_profiles 18 · watchlist 42"
+      "detail": "20010 Pools · 4516 Scans · Watch 371 · Graduiert 217 · letzter Scan: ds_search 15 · trending_1h 18 · trending_5m 18 · ds_boosts 16 · ds_profiles 18 · watchlist 42"
     },
     {
       "name": "Analyst",
-      "detail": "8920 bewertet · 126911 abgelehnt"
+      "detail": "8922 bewertet · 126911 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4433,126 +4433,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "three",
-      "mint": "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump",
-      "pool": "5ByL7MZoLABYnwMPZKPKjf4MGkZ7FeBzrAnos19Pre2z",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 307003.0,
-      "liq": 98703.3,
-      "age_min": 302994.64,
-      "created_at": "2026-04-29T07:09:01Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795626219.2618618,
-      "t": "2026-11-25 18:03:39 CET",
-      "id": "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump-1795626219261"
-    },
-    {
-      "symbol": "hSOL",
-      "mint": "he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A",
-      "pool": "51V5bAPGaz3vj4SiJeoLGNzAQNxGr4Vps8gSBKmSZx71",
-      "dex": "raydium-clmm",
-      "early": false,
-      "source": "trending_1h",
-      "mcap": 39559349.7969569,
-      "liq": 97770.4468,
-      "age_min": 109416.7,
-      "created_at": "2026-09-10T17:26:57Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795626219.265528,
-      "t": "2026-11-25 18:03:39 CET",
-      "id": "he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A-1795626219265"
-    },
-    {
-      "symbol": "JIMMY",
-      "mint": "38M2z4UCfZEkUHFzD48vhKQhFhNyRGto8pZbLjNipump",
-      "pool": "FnHWfV49ywCtGCDTyf34AVN8BiXxcgXUKqLctkrkP1gQ",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_1h",
-      "mcap": 1224616.64753476,
-      "liq": 96433.2191,
-      "age_min": 2632.47,
-      "created_at": "2026-11-23T21:11:11Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795626219.2693028,
-      "t": "2026-11-25 18:03:39 CET",
-      "id": "38M2z4UCfZEkUHFzD48vhKQhFhNyRGto8pZbLjNipump-1795626219269"
-    },
-    {
-      "symbol": "WASTED",
-      "mint": "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump",
-      "pool": "TT7DKs9YjJZj1fwMGoPmKBmDreZzyMAMrHoDCGdfwqN",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 886385.0,
-      "liq": 91714.44,
-      "age_min": 37374.07,
-      "created_at": "2026-10-30T18:09:35Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795626219.2735455,
-      "t": "2026-11-25 18:03:39 CET",
-      "id": "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump-1795626219273"
-    },
-    {
-      "symbol": "swordcat",
-      "mint": "5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump",
-      "pool": "8ewuF2o8ACro7fqWepZ3tKhkbBjndZU4Ldk9scRPw83d",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_1h",
-      "mcap": 505825.005554683,
-      "liq": 85917.7571,
-      "age_min": 83990.5,
-      "created_at": "2026-09-28T09:13:09Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795626219.277296,
-      "t": "2026-11-25 18:03:39 CET",
-      "id": "5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump-1795626219277"
-    },
-    {
-      "symbol": "DESSA",
-      "mint": "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump",
-      "pool": "DEXTCER4k9dwbxTMU8zNVVwGevVmvHMB183pF2xxZwvH",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_1h",
-      "mcap": 773866.076527157,
-      "liq": 81895.4853,
-      "age_min": 43438.35,
-      "created_at": "2026-10-26T13:05:18Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795626219.2821798,
-      "t": "2026-11-25 18:03:39 CET",
-      "id": "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump-1795626219282"
-    },
     {
       "symbol": "ROCKET",
       "mint": "6C9r2gzu8Pr54hTevHo3x5gSj9JqtpApj7obJnrtpump",
@@ -8464,25 +8344,161 @@
       "ts": 1795626255.893114,
       "t": "2026-11-25 18:04:15 CET",
       "id": "FaWEANo8Kz9B415xv3cocE8q5JgghN7CY8FYG4C5pump-1795626255893"
+    },
+    {
+      "symbol": "hacked",
+      "mint": "FK7bc3fR8UL8uogN2u8J9yEpEbQJKR7yKsp3G8rvpump",
+      "pool": "BZNokmZvG8N6rA3ja22ZbHYtaU6sJavc6tbVQkhQ4gS8",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 40059.0,
+      "liq": 13192.96,
+      "age_min": 180.32,
+      "created_at": "2026-11-25T14:04:01Z",
+      "decision": "accepted",
+      "reason": "score 63",
+      "score": 63,
+      "pump_score": 29,
+      "pump_reasons": [
+        "Geringer Price Impact",
+        "Socials ergänzt"
+      ],
+      "ts": 1795626260.1563067,
+      "t": "2026-11-25 18:04:20 CET",
+      "id": "FK7bc3fR8UL8uogN2u8J9yEpEbQJKR7yKsp3G8rvpump-1795626260156"
+    },
+    {
+      "symbol": "BIAO",
+      "mint": "As3XtYSstuVdrVyb6sJZZ77Tu8JvjTBg6S6hgPv4pump",
+      "pool": "BnR3kT93PUxNYCCDnNgDtnk56U1V1Lho3MV9C7sUcqpt",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 301828.0,
+      "liq": 38744.38,
+      "age_min": 115.94,
+      "created_at": "2026-11-25T15:08:24Z",
+      "decision": "skipped",
+      "reason": "position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 90,
+      "pump_score": 37,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Narrativ BIAO",
+        "Liquidität steigt"
+      ],
+      "ts": 1795626260.1607525,
+      "t": "2026-11-25 18:04:20 CET",
+      "id": "As3XtYSstuVdrVyb6sJZZ77Tu8JvjTBg6S6hgPv4pump-1795626260160"
+    },
+    {
+      "symbol": "3sat",
+      "mint": "FaWEANo8Kz9B415xv3cocE8q5JgghN7CY8FYG4C5pump",
+      "pool": "FaQsX8LQ1p2XLv257QuhJ3viQChVP4vWtS2GBZdmGH2N",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 40948.0,
+      "liq": 13449.06,
+      "age_min": 177.34,
+      "created_at": "2026-11-25T14:07:00Z",
+      "decision": "skipped",
+      "reason": "position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 75,
+      "pump_score": 30,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795626260.1646328,
+      "t": "2026-11-25 18:04:20 CET",
+      "id": "FaWEANo8Kz9B415xv3cocE8q5JgghN7CY8FYG4C5pump-1795626260164"
+    },
+    {
+      "symbol": "PERRO",
+      "mint": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump",
+      "pool": "4s1epXdedd7TY1UtJ7frou3saSxuG98os7HcPtNEu8WH",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 174074.787278387,
+      "liq": 32286.7542,
+      "age_min": 940.17,
+      "created_at": "2026-11-25T01:24:10Z",
+      "decision": "skipped",
+      "reason": "position $0.63 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 70,
+      "pump_score": 27,
+      "pump_reasons": [
+        "Geringer Price Impact",
+        "Im Trend"
+      ],
+      "ts": 1795626260.1689086,
+      "t": "2026-11-25 18:04:20 CET",
+      "id": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump-1795626260168"
+    },
+    {
+      "symbol": "hacked",
+      "mint": "FK7bc3fR8UL8uogN2u8J9yEpEbQJKR7yKsp3G8rvpump",
+      "pool": "BZNokmZvG8N6rA3ja22ZbHYtaU6sJavc6tbVQkhQ4gS8",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 40059.0,
+      "liq": 13192.96,
+      "age_min": 180.32,
+      "created_at": "2026-11-25T14:04:01Z",
+      "decision": "skipped",
+      "reason": "score 63 < 64",
+      "score": 63,
+      "pump_score": 29,
+      "pump_reasons": [
+        "Geringer Price Impact",
+        "Socials ergänzt"
+      ],
+      "ts": 1795626260.1726797,
+      "t": "2026-11-25 18:04:20 CET",
+      "id": "FK7bc3fR8UL8uogN2u8J9yEpEbQJKR7yKsp3G8rvpump-1795626260172"
+    },
+    {
+      "symbol": "STARMIND",
+      "mint": "2hsmC7864Ve1giwLygu7bJjZU1R4JZKX9kCxWmD9yP6o",
+      "pool": "3W4JyTaycrxCfEdzVtSFKTX5YCCLwKSjbUnNPGJzf4hN",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 30439.0,
+      "liq": 11966.84,
+      "age_min": 15.09,
+      "created_at": "2026-11-25T16:49:15Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795626260.3177137,
+      "t": "2026-11-25 18:04:20 CET",
+      "id": "2hsmC7864Ve1giwLygu7bJjZU1R4JZKX9kCxWmD9yP6o-1795626260317"
     }
   ],
   "feed_stats": {
-    "emitted": 45678,
-    "per_min": 136.1,
+    "emitted": 45685,
+    "per_min": 136.05,
     "by_decision": {
-      "seen": 35173,
+      "seen": 35174,
       "rejected": 8711,
-      "accepted": 898,
-      "skipped": 896
+      "accepted": 900,
+      "skipped": 900
     },
     "by_source": {
       "new": 7210,
       "ds_search": 3834,
-      "ds_profiles": 8011,
+      "ds_profiles": 8013,
       "ds_boosts": 4028,
       "trending_5m": 4529,
-      "trending_1h": 4827,
-      "watchlist": 11555,
+      "trending_1h": 4828,
+      "watchlist": 11559,
       "pump_logs": 1670,
       "ds_boosts_top": 14
     },
@@ -8492,7 +8508,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.9,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
