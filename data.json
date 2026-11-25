@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 22:34:34 CET",
+  "exported_at": "2026-11-25 22:35:05 CET",
   "last_update": "2026-11-25 22:34:28 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -107,7 +107,7 @@
     "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.4,
-    "work_p95_ms": 1.0,
+    "work_p95_ms": 1.1,
     "work_max_ms": 154.2,
     "work_last_ms": 0.3,
     "lock_wait_ms": 0.0
@@ -119,7 +119,7 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 4776,
+    "cycles": 4777,
     "pools_scanned": 749989,
     "unique_pools": 20009,
     "prefilter_rejected": 130865,
@@ -3944,14 +3944,14 @@
       "price_s": null,
       "price_stale_s": null,
       "stop_to_sell_s": null,
-      "bot_to_phone_s": 0.12,
+      "bot_to_phone_s": 0.122,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795642473.6641471,
+      "updated_ts": 1795642503.664799,
       "stages": {
         "discovery": {
           "p50_s": 495.465,
@@ -4017,10 +4017,10 @@
           "n": 0
         },
         "bot_to_phone": {
-          "p50_s": 0.12,
+          "p50_s": 0.122,
           "p95_s": 0.126,
-          "max_s": 0.14,
-          "last_s": 0.119,
+          "max_s": 0.143,
+          "last_s": 0.124,
           "n": 200
         },
         "event_to_phone": {
@@ -4299,7 +4299,7 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20009 Pools · 4776 Scans · Watch 370 · Graduiert 241 · letzter Scan: ds_search 16 · ds_profiles 25 · trending_1h 15 · trending_5m 15 · ds_boosts_top 3 · ds_boosts 23 · watchlist 35"
+      "detail": "20009 Pools · 4777 Scans · Watch 370 · Graduiert 241 · letzter Scan: ds_search 16 · ds_profiles 25 · trending_1h 15 · trending_5m 15 · ds_boosts_top 3 · ds_boosts 23 · watchlist 35"
     },
     {
       "name": "Analyst",
@@ -4416,38 +4416,7 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [
-    {
-      "symbol": "Pnut",
-      "mint": "9bgy4dVrPqa7HozGvBRV5Qy1ccbDdYHHMyzKrJjqpump",
-      "pool": "EXxmL1AvgnzBwLxuqcR8BYxQHua1jPtpLzCpeMZA8M3J",
-      "score": 34,
-      "reasons": [
-        "Narrativ PNUT",
-        "Im Trend",
-        "Socials ergänzt"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 152418.0,
-      "origin": "ds_profiles",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/9bgy4dVrPqa7HozGvBRV5Qy1ccbDdYHHMyzKrJjqpump.png"
-    },
-    {
-      "symbol": "BEASTGAMES",
-      "mint": "ErfdcsXZSZHZYkT35jZRG7nBW4uLE5vAZP3gUtenpump",
-      "pool": "6bVowA6p7E4niQXn8CRvBpDev4jpWagR5UuSjAg9Z1dz",
-      "score": 21,
-      "reasons": [
-        "Socials ergänzt"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 52017.0,
-      "origin": "watchlist",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/ErfdcsXZSZHZYkT35jZRG7nBW4uLE5vAZP3gUtenpump.png"
-    }
-  ],
+  "radar": [],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4465,86 +4434,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "SOL2",
-      "mint": "8FiusJarHXpukyfcWjebQk5yDTZNFx3SQDUqKZKmpump",
-      "pool": "5aLeEvSpiGaFnV1wkzqfsMuD7Tkcp5GdDVb4KbRAF8r6",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 1970.12,
-      "liq": 0.0,
-      "age_min": 186.23,
-      "created_at": "2026-11-25T18:27:40Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795642433.958615,
-      "t": "2026-11-25 22:33:53 CET",
-      "id": "8FiusJarHXpukyfcWjebQk5yDTZNFx3SQDUqKZKmpump-1795642433958"
-    },
-    {
-      "symbol": "SOL2",
-      "mint": "CVi14AxoyotTXmU9nFnRDGeY9Z1wdXXvi1kGcwVypump",
-      "pool": "GQ1XaP1g2Em1K13g6K37KRG9uhLhK3dJYZ4NzHNmEwpM",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 1970.59,
-      "liq": 0.0,
-      "age_min": 186.32,
-      "created_at": "2026-11-25T18:27:35Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795642433.9623494,
-      "t": "2026-11-25 22:33:53 CET",
-      "id": "CVi14AxoyotTXmU9nFnRDGeY9Z1wdXXvi1kGcwVypump-1795642433962"
-    },
-    {
-      "symbol": "SOL2",
-      "mint": "FF5V2c6MTrboTxh8ep8sNgmXsgji2wn6FfH7Cxvkpump",
-      "pool": "3zjxf2KfN8PWdvZxGet33AW3r8Tnih5eKdwk3GBrdgMr",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 18543.0,
-      "liq": 9591.12,
-      "age_min": 177.87,
-      "created_at": "2026-11-25T18:36:02Z",
-      "decision": "rejected",
-      "reason": "liquidity $9,591 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795642433.969119,
-      "t": "2026-11-25 22:33:53 CET",
-      "id": "FF5V2c6MTrboTxh8ep8sNgmXsgji2wn6FfH7Cxvkpump-1795642433969"
-    },
-    {
-      "symbol": "FUND",
-      "mint": "6GKQJ5aJNbCWASAiFsxoSNFujMWVHnkBiMpK9FiHFUND",
-      "pool": "G9oAxDwajzzdcBNRxCqaBj79HBA9mBJcTbUb6WUn7kwU",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 21956.0,
-      "liq": 9297.59,
-      "age_min": 4.57,
-      "created_at": "2026-11-25T21:29:20Z",
-      "decision": "rejected",
-      "reason": "liquidity $9,298 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795642433.9733586,
-      "t": "2026-11-25 22:33:53 CET",
-      "id": "6GKQJ5aJNbCWASAiFsxoSNFujMWVHnkBiMpK9FiHFUND-1795642433973"
-    },
     {
       "symbol": "GRAVY",
       "mint": "9yAXzLrFQvHJYZt3ndL4kdcgNkrQuPguRgs45PbqezaM",
@@ -8488,13 +8377,93 @@
       "ts": 1795642468.9551105,
       "t": "2026-11-25 22:34:28 CET",
       "id": "ErfdcsXZSZHZYkT35jZRG7nBW4uLE5vAZP3gUtenpump-1795642468955"
+    },
+    {
+      "symbol": "NORFEATH",
+      "mint": "3gmFG4sFDJErDV8pacFrL2uUPXeGJTYLjfRy4hFypump",
+      "pool": "FUzScAtZzSt9rzMtt2pCDLPpJ1ikYC5LgDNjYtfWyqdj",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 266305.0,
+      "liq": 35597.47,
+      "age_min": 29.31,
+      "created_at": "2026-11-25T21:05:41Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795642499.7059488,
+      "t": "2026-11-25 22:34:59 CET",
+      "id": "3gmFG4sFDJErDV8pacFrL2uUPXeGJTYLjfRy4hFypump-1795642499705"
+    },
+    {
+      "symbol": "Squirrel",
+      "mint": "EmU2QZ3RKBxaydKn8ix9rrSrWbzPNVifVTa4NLH4pump",
+      "pool": "CfcvALBp6HDMWKz2dPpck67NU9PPAQKYKqM5hWpGQyXP",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 82227.0,
+      "liq": 19460.7,
+      "age_min": 30.91,
+      "created_at": "2026-11-25T21:04:05Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795642499.7109246,
+      "t": "2026-11-25 22:34:59 CET",
+      "id": "EmU2QZ3RKBxaydKn8ix9rrSrWbzPNVifVTa4NLH4pump-1795642499710"
+    },
+    {
+      "symbol": "UBI",
+      "mint": "hCM8Mga76sK983j3Gvui427SakSGYnG1tDi4Tsipump",
+      "pool": "91sRv5puZnqwoBpW5EheGpZa1q5SFHHcMTULzU1ipW2g",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 41765.0,
+      "liq": 16801.4,
+      "age_min": 45.53,
+      "created_at": "2026-11-25T20:49:28Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795642499.7149339,
+      "t": "2026-11-25 22:34:59 CET",
+      "id": "hCM8Mga76sK983j3Gvui427SakSGYnG1tDi4Tsipump-1795642499714"
+    },
+    {
+      "symbol": "BASKET",
+      "mint": "4Y3tVKemkjV89y9HCrPBd955jDqwbVYb5Y3GnTECMFXC",
+      "pool": "HjpDGuj3VgEapMoDQfcUX2f1jDXCmuCbMJZY6L6zzikb",
+      "dex": "meteora-dbc",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 18502.38,
+      "liq": 0.0,
+      "age_min": 3062.3,
+      "created_at": "2026-11-23T18:32:42Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795642499.718587,
+      "t": "2026-11-25 22:34:59 CET",
+      "id": "4Y3tVKemkjV89y9HCrPBd955jDqwbVYb5Y3GnTECMFXC-1795642499718"
     }
   ],
   "feed_stats": {
-    "emitted": 82572,
-    "per_min": 136.27,
+    "emitted": 82576,
+    "per_min": 136.17,
     "by_decision": {
-      "seen": 63225,
+      "seen": 63229,
       "rejected": 16007,
       "accepted": 1670,
       "skipped": 1670
@@ -8502,7 +8471,7 @@
     "by_source": {
       "new": 12671,
       "ds_search": 6837,
-      "ds_profiles": 14514,
+      "ds_profiles": 14518,
       "ds_boosts": 8551,
       "trending_5m": 8133,
       "trending_1h": 7828,
@@ -8516,7 +8485,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.1,
+  "heartbeat_age_s": 0.5,
   "bot_alive": true,
   "supervisor_alive": true
 }
