@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 07:36:31 CET",
-  "last_update": "2026-11-25 07:35:45 CET",
+  "exported_at": "2026-11-25 07:36:57 CET",
+  "last_update": "2026-11-25 07:36:45 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.3328560131110185,
@@ -103,13 +103,13 @@
   "loop_latency": {
     "p50_ms": 1000.1,
     "p95_ms": 1000.2,
-    "max_ms": 4826.2,
-    "last_ms": 1000.1,
+    "max_ms": 10042.6,
+    "last_ms": 10042.6,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.2,
     "work_max_ms": 376.0,
-    "work_last_ms": 0.3,
+    "work_last_ms": 2.2,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 68.66200048887663,
@@ -119,12 +119,12 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 3992,
+    "cycles": 3993,
     "pools_scanned": 649422,
     "unique_pools": 20007,
     "prefilter_rejected": 107025,
     "safety_rejected": 2755,
-    "scored": 7171,
+    "scored": 7173,
     "buys": 88,
     "sells": 93
   },
@@ -339,6 +339,60 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-25 07:36:45 CET",
+      "ts": 1795588605.0,
+      "kind": "Skipped",
+      "symbol": "Taffy",
+      "reason": "score 57 < 64",
+      "text": "Taffy score 57 - score 57 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 07:36:45 CET",
+      "ts": 1795588605.0,
+      "kind": "Skipped",
+      "symbol": "DUVAL",
+      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "DUVAL score 68 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 07:36:45 CET",
+      "ts": 1795588605.0,
+      "kind": "Skipped",
+      "symbol": "Memeployed",
+      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Memeployed score 73 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 07:36:45 CET",
+      "ts": 1795588605.0,
+      "kind": "Skipped",
+      "symbol": "PERRO",
+      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "PERRO score 82 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 07:36:45 CET",
+      "ts": 1795588605.0,
+      "kind": "Scored",
+      "symbol": "Memeployed",
+      "reason": "Memeployed [ds_boosts, graduated] score 73 | liq $23,886 | h1 -18.5% | top10 19% | LP 100% | liquidity:2.2 vol_liq:15 buy_pressure:13.6 holders:13.3 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Dex-Boost, Im Trend)",
+      "text": "Memeployed [ds_boosts, graduated] score 73 | liq $23,886 | h1 -18.5% | top10 19% | LP 100% | liquidity:2.2 vol_liq:15 buy_pressure:13.6 holders:13.3 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Dex-Boost, Im Trend)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 07:36:38 CET",
+      "ts": 1795588598.0,
+      "kind": "Scored",
+      "symbol": "DUVAL",
+      "reason": "DUVAL [trending_1h, graduated] score 68 | liq $28,267 | h1 -6.4% | top10 20% | LP 100% | liquidity:3.0 vol_liq:15 buy_pressure:8.0 holders:13.0 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Viele Käufer, Im Trend)",
+      "text": "DUVAL [trending_1h, graduated] score 68 | liq $28,267 | h1 -6.4% | top10 20% | LP 100% | liquidity:3.0 vol_liq:15 buy_pressure:8.0 holders:13.0 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Viele Käufer, Im Trend)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 07:36:08 CET",
       "ts": 1795588568.0,
@@ -644,37 +698,12 @@
       "reason": "dex pump-fun not graduated/allowed",
       "text": "jewed (pump-fun) - dex pump-fun not graduated/allowed",
       "curve": true
-    },
+    }
+  ],
+  "scanner_highlights": [
     {
-      "t": "2026-11-25 07:35:55 CET",
-      "ts": 1795588555.0,
-      "kind": "Rejected",
-      "symbol": "ANSEM",
-      "reason": "liquidity $50 < $10,000",
-      "text": "ANSEM (orca) - liquidity $50 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 07:35:55 CET",
-      "ts": 1795588555.0,
-      "kind": "Rejected",
-      "symbol": "Elf",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "Elf (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-25 07:35:45 CET",
-      "ts": 1795588545.0,
-      "kind": "Skipped",
-      "symbol": "DIGS",
-      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "DIGS score 75 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 07:35:45 CET",
-      "ts": 1795588545.0,
+      "t": "2026-11-25 07:36:45 CET",
+      "ts": 1795588605.0,
       "kind": "Skipped",
       "symbol": "Taffy",
       "reason": "score 57 < 64",
@@ -682,25 +711,50 @@
       "curve": false
     },
     {
-      "t": "2026-11-25 07:35:45 CET",
-      "ts": 1795588545.0,
+      "t": "2026-11-25 07:36:45 CET",
+      "ts": 1795588605.0,
       "kind": "Skipped",
       "symbol": "DUVAL",
       "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "DUVAL score 67 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "DUVAL score 68 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
       "curve": false
     },
     {
-      "t": "2026-11-25 07:35:45 CET",
-      "ts": 1795588545.0,
+      "t": "2026-11-25 07:36:45 CET",
+      "ts": 1795588605.0,
       "kind": "Skipped",
       "symbol": "Memeployed",
       "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
       "text": "Memeployed score 73 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
       "curve": false
-    }
-  ],
-  "scanner_highlights": [
+    },
+    {
+      "t": "2026-11-25 07:36:45 CET",
+      "ts": 1795588605.0,
+      "kind": "Skipped",
+      "symbol": "PERRO",
+      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "PERRO score 82 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 07:36:45 CET",
+      "ts": 1795588605.0,
+      "kind": "Scored",
+      "symbol": "Memeployed",
+      "reason": "Memeployed [ds_boosts, graduated] score 73 | liq $23,886 | h1 -18.5% | top10 19% | LP 100% | liquidity:2.2 vol_liq:15 buy_pressure:13.6 holders:13.3 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Dex-Boost, Im Trend)",
+      "text": "Memeployed [ds_boosts, graduated] score 73 | liq $23,886 | h1 -18.5% | top10 19% | LP 100% | liquidity:2.2 vol_liq:15 buy_pressure:13.6 holders:13.3 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Dex-Boost, Im Trend)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 07:36:38 CET",
+      "ts": 1795588598.0,
+      "kind": "Scored",
+      "symbol": "DUVAL",
+      "reason": "DUVAL [trending_1h, graduated] score 68 | liq $28,267 | h1 -6.4% | top10 20% | LP 100% | liquidity:3.0 vol_liq:15 buy_pressure:8.0 holders:13.0 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Viele Käufer, Im Trend)",
+      "text": "DUVAL [trending_1h, graduated] score 68 | liq $28,267 | h1 -6.4% | top10 20% | LP 100% | liquidity:3.0 vol_liq:15 buy_pressure:8.0 holders:13.0 authorities:10 lp:10.0 age:5 momentum:0 pump:29 | pump 29 (Viele Käufer, Im Trend)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 07:36:08 CET",
       "ts": 1795588568.0,
@@ -870,60 +924,6 @@
       "symbol": "Taffy",
       "reason": "pool age 0 min < 15",
       "text": "Taffy (pumpswap) - pool age 0 min < 15",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 07:35:55 CET",
-      "ts": 1795588555.0,
-      "kind": "Rejected",
-      "symbol": "ANSEM",
-      "reason": "liquidity $50 < $10,000",
-      "text": "ANSEM (orca) - liquidity $50 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 07:35:45 CET",
-      "ts": 1795588545.0,
-      "kind": "Skipped",
-      "symbol": "DIGS",
-      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "DIGS score 75 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 07:35:45 CET",
-      "ts": 1795588545.0,
-      "kind": "Skipped",
-      "symbol": "Taffy",
-      "reason": "score 57 < 64",
-      "text": "Taffy score 57 - score 57 < 64",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 07:35:45 CET",
-      "ts": 1795588545.0,
-      "kind": "Skipped",
-      "symbol": "DUVAL",
-      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "DUVAL score 67 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 07:35:45 CET",
-      "ts": 1795588545.0,
-      "kind": "Skipped",
-      "symbol": "Memeployed",
-      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "Memeployed score 73 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 07:35:45 CET",
-      "ts": 1795588545.0,
-      "kind": "Skipped",
-      "symbol": "PERRO",
-      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "PERRO score 82 - position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
       "curve": false
     }
   ],
@@ -2730,12 +2730,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795569904.919689,
-      "t_label": "2026-11-25 02:25:04 CET",
-      "usd": 8.2263,
-      "eur": 7.4432
-    },
-    {
       "t": 1795569927.3729088,
       "t_label": "2026-11-25 02:25:27 CET",
       "usd": 8.2263,
@@ -3928,6 +3922,12 @@
       "t_label": "2026-11-25 07:35:45 CET",
       "usd": 8.1043,
       "eur": 7.3329
+    },
+    {
+      "t": 1795588605.0990124,
+      "t_label": "2026-11-25 07:36:45 CET",
+      "usd": 8.1043,
+      "eur": 7.3329
     }
   ],
   "agents": {
@@ -3943,14 +3943,14 @@
       "price_s": null,
       "price_stale_s": null,
       "stop_to_sell_s": null,
-      "bot_to_phone_s": 0.124,
+      "bot_to_phone_s": 0.125,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795588591.9493182,
+      "updated_ts": 1795588617.032357,
       "stages": {
         "discovery": {
           "p50_s": 67.079,
@@ -4016,10 +4016,10 @@
           "n": 0
         },
         "bot_to_phone": {
-          "p50_s": 0.124,
+          "p50_s": 0.125,
           "p95_s": 0.414,
           "max_s": 0.665,
-          "last_s": 0.125,
+          "last_s": 0.127,
           "n": 200
         },
         "event_to_phone": {
@@ -4052,13 +4052,23 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "PERRO",
+      "token": "Memeployed",
       "pill": "127 pools",
       "pill_kind": "blue",
       "detail": "20,007 unique pools",
       "pools": 127,
       "unique": 20007,
       "filters": [
+        {
+          "symbol": "Memeployed",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "DUVAL",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "PERRO",
           "text": "top 10 > 25%",
@@ -4088,27 +4098,17 @@
           "symbol": "g8r",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "memecat",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "PENGUIN",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "PERRO",
-      "pill": "82",
+      "token": "Memeployed",
+      "pill": "73",
       "pill_kind": "purple",
-      "detail": "PERRO [trending_1h, graduated] score 82 | liq $33,012 | h1 +27.7% | top10 15% | LP 100% | liquidity:3.8 vol_liq:15 buy_pressure:8.7 holders:15.0 authorities:10 lp:10.0 age:5 momentum:10 pump:43 | pump 43 (Volumen zieht an, Viele Käufer, Im Trend)",
-      "score": 82,
+      "detail": "Memeployed [ds_boosts, graduated] score 73 | liq $23,886 | h1 -18.5% | top10 19% | LP 100% | liquidity:2.2 vol_liq:15 buy_pressure:13.6 holders:13.3 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Dex-Boost, Im Trend)",
+      "score": 73,
       "passed": true,
       "status": "passed",
       "rejected": 109780
@@ -4298,11 +4298,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20007 Pools · 3992 Scans · Watch 377 · Graduiert 186 · letzter Scan: ds_search 15 · trending_1h 17 · trending_5m 19 · ds_boosts 16 · ds_profiles 23 · watchlist 37"
+      "detail": "20007 Pools · 3993 Scans · Watch 377 · Graduiert 186 · letzter Scan: ds_search 15 · trending_1h 17 · trending_5m 19 · ds_boosts 16 · ds_profiles 23 · watchlist 37"
     },
     {
       "name": "Analyst",
-      "detail": "7171 bewertet · 109780 abgelehnt"
+      "detail": "7173 bewertet · 109780 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4415,7 +4415,69 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "PERRO",
+      "mint": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump",
+      "pool": "4s1epXdedd7TY1UtJ7frou3saSxuG98os7HcPtNEu8WH",
+      "score": 43,
+      "reasons": [
+        "Volumen zieht an",
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 190753.343228678,
+      "origin": "trending_1h",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump.png"
+    },
+    {
+      "symbol": "Memeployed",
+      "mint": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn",
+      "pool": "GY7pC4TiJsvFdS85hMDsnGx5rcCP3vMdysjTGHLgDH8",
+      "score": 33,
+      "reasons": [
+        "Dex-Boost",
+        "Im Trend"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 73901.0,
+      "origin": "ds_boosts",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn.png"
+    },
+    {
+      "symbol": "Taffy",
+      "mint": "5nmZzANRvvKSR49QsodoAtspjbGft7pfwmFBPxrKpump",
+      "pool": "75pEStYbjXtTV5e53b7ocRKNZvk4vsdMVxj7XP5njqhx",
+      "score": 32,
+      "reasons": [
+        "Narrativ TAFFY",
+        "Im Trend"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 78932.0,
+      "origin": "watchlist",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/5nmZzANRvvKSR49QsodoAtspjbGft7pfwmFBPxrKpump.png"
+    },
+    {
+      "symbol": "DUVAL",
+      "mint": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
+      "pool": "CSvKMfrQ2TedEZEDpFSoHbGqxNb1A3w5o2vVM6Y5eoQ5",
+      "score": 29,
+      "reasons": [
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 131167.220916293,
+      "origin": "trending_1h",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4433,126 +4495,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "OG",
-      "mint": "C1iV5tmB3Qh9Aod89MW33rYmVAZR9oKy9mSJtWxjogog",
-      "pool": "pAhhtL3mbJfFMoqUzrh9ik1iDH3Moob2YYZ5NmSz9CZ",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 1647.0,
-      "liq": 1918.04,
-      "age_min": 276.49,
-      "created_at": "2026-11-25T01:58:54Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,918 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795588523.511888,
-      "t": "2026-11-25 07:35:23 CET",
-      "id": "C1iV5tmB3Qh9Aod89MW33rYmVAZR9oKy9mSJtWxjogog-1795588523511"
-    },
-    {
-      "symbol": "PENGUIN",
-      "mint": "ACysJD3AESqsKq1SMqyHjC1pM78WZPUxqaED1b3Fpump",
-      "pool": "Gpbh2pTgQvJsx6JCcYYgyb7mgWvFSc8o8g6xjivx6kMq",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1498.0,
-      "liq": 1715.31,
-      "age_min": 202.66,
-      "created_at": "2026-11-25T03:12:44Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,715 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795588523.5155783,
-      "t": "2026-11-25 07:35:23 CET",
-      "id": "ACysJD3AESqsKq1SMqyHjC1pM78WZPUxqaED1b3Fpump-1795588523515"
-    },
-    {
-      "symbol": "memecat",
-      "mint": "J7hSb4BCEJnnwFuUVYR8wS18BW4SxGmmwoAxsQpXpump",
-      "pool": "7Fqrj8mNh7UqqCuZapfmSEK4q8GJxs7cjUp4A4EyVzjW",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1615.0,
-      "liq": 1660.35,
-      "age_min": 202.11,
-      "created_at": "2026-11-25T03:13:17Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,660 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795588523.5191455,
-      "t": "2026-11-25 07:35:23 CET",
-      "id": "J7hSb4BCEJnnwFuUVYR8wS18BW4SxGmmwoAxsQpXpump-1795588523519"
-    },
-    {
-      "symbol": "Manlet",
-      "mint": "HyXjbs37EKU1QPKm2MnSQ3YaxNCugdh2W8bktSfYpump",
-      "pool": "JAUW1tpRCYjSq1fgy21eFvaL6Td3vZEaLfgEGXgraBLK",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 1329.0,
-      "liq": 1464.29,
-      "age_min": 189.73,
-      "created_at": "2026-11-25T03:25:40Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,464 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795588523.5228379,
-      "t": "2026-11-25 07:35:23 CET",
-      "id": "HyXjbs37EKU1QPKm2MnSQ3YaxNCugdh2W8bktSfYpump-1795588523522"
-    },
-    {
-      "symbol": "g8r",
-      "mint": "Do7UdbGMGdtJF9bbQi9174gx71bc6iJ5pMPkbvtRpump",
-      "pool": "B6H5gtEZz6Q7eYSBKyF7GBvGNMcbeDiLuD7FEa87Xw1m",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 1053.0,
-      "liq": 1039.14,
-      "age_min": 111.39,
-      "created_at": "2026-11-25T04:44:00Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,039 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795588523.5263638,
-      "t": "2026-11-25 07:35:23 CET",
-      "id": "Do7UdbGMGdtJF9bbQi9174gx71bc6iJ5pMPkbvtRpump-1795588523526"
-    },
-    {
-      "symbol": "SLITHEEN",
-      "mint": "Bf1GiBiewWCJYgUCc8hLVdXmfPpFstEu5GAmER18pump",
-      "pool": "7njs9dvTWS6Poy2oofuM12eSGrmjkYvd3vEoDQXD7kpx",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 28432.91,
-      "liq": 0.0,
-      "age_min": 174.46,
-      "created_at": "2026-11-25T03:40:56Z",
-      "decision": "rejected",
-      "reason": "only 0 trades in 5m (need 20)",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795588523.5300024,
-      "t": "2026-11-25 07:35:23 CET",
-      "id": "Bf1GiBiewWCJYgUCc8hLVdXmfPpFstEu5GAmER18pump-1795588523530"
-    },
     {
       "symbol": "DEBT",
       "mint": "4hNG8r2vLzypqLwLCAHrEXEpSt8jFyYv63xbQzHmpump",
@@ -8469,25 +8411,164 @@
       "ts": 1795588568.4211953,
       "t": "2026-11-25 07:36:08 CET",
       "id": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump-1795588568421"
+    },
+    {
+      "symbol": "DUVAL",
+      "mint": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
+      "pool": "CSvKMfrQ2TedEZEDpFSoHbGqxNb1A3w5o2vVM6Y5eoQ5",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 131167.220916293,
+      "liq": 28266.7495,
+      "age_min": 1224.7,
+      "created_at": "2026-11-24T10:11:57Z",
+      "decision": "accepted",
+      "reason": "score 68",
+      "score": 68,
+      "pump_score": 29,
+      "pump_reasons": [
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "ts": 1795588598.8861675,
+      "t": "2026-11-25 07:36:38 CET",
+      "id": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump-1795588598886"
+    },
+    {
+      "symbol": "Memeployed",
+      "mint": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn",
+      "pool": "GY7pC4TiJsvFdS85hMDsnGx5rcCP3vMdysjTGHLgDH8",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 73901.0,
+      "liq": 23886.09,
+      "age_min": 1009.67,
+      "created_at": "2026-11-24T13:47:05Z",
+      "decision": "accepted",
+      "reason": "score 73",
+      "score": 73,
+      "pump_score": 33,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Im Trend"
+      ],
+      "ts": 1795588605.0784135,
+      "t": "2026-11-25 07:36:45 CET",
+      "id": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn-1795588605078"
+    },
+    {
+      "symbol": "PERRO",
+      "mint": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump",
+      "pool": "4s1epXdedd7TY1UtJ7frou3saSxuG98os7HcPtNEu8WH",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 190753.343228678,
+      "liq": 33011.7485,
+      "age_min": 312.58,
+      "created_at": "2026-11-25T01:24:10Z",
+      "decision": "skipped",
+      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 82,
+      "pump_score": 43,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "ts": 1795588605.082519,
+      "t": "2026-11-25 07:36:45 CET",
+      "id": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump-1795588605082"
+    },
+    {
+      "symbol": "Memeployed",
+      "mint": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn",
+      "pool": "GY7pC4TiJsvFdS85hMDsnGx5rcCP3vMdysjTGHLgDH8",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 73901.0,
+      "liq": 23886.09,
+      "age_min": 1009.67,
+      "created_at": "2026-11-24T13:47:05Z",
+      "decision": "skipped",
+      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 73,
+      "pump_score": 33,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Im Trend"
+      ],
+      "ts": 1795588605.0860271,
+      "t": "2026-11-25 07:36:45 CET",
+      "id": "4m2PS6yW2xDk5V9nJgPjnus1eguwCDSWXbA2YQeVkqxn-1795588605086"
+    },
+    {
+      "symbol": "DUVAL",
+      "mint": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
+      "pool": "CSvKMfrQ2TedEZEDpFSoHbGqxNb1A3w5o2vVM6Y5eoQ5",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 131167.220916293,
+      "liq": 28266.7495,
+      "age_min": 1224.8,
+      "created_at": "2026-11-24T10:11:57Z",
+      "decision": "skipped",
+      "reason": "position $0.65 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 68,
+      "pump_score": 29,
+      "pump_reasons": [
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "ts": 1795588605.089477,
+      "t": "2026-11-25 07:36:45 CET",
+      "id": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump-1795588605089"
+    },
+    {
+      "symbol": "Taffy",
+      "mint": "5nmZzANRvvKSR49QsodoAtspjbGft7pfwmFBPxrKpump",
+      "pool": "75pEStYbjXtTV5e53b7ocRKNZvk4vsdMVxj7XP5njqhx",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 78932.0,
+      "liq": 19051.08,
+      "age_min": 20.37,
+      "created_at": "2026-11-25T06:16:23Z",
+      "decision": "skipped",
+      "reason": "score 57 < 64",
+      "score": 57,
+      "pump_score": 32,
+      "pump_reasons": [
+        "Narrativ TAFFY",
+        "Im Trend"
+      ],
+      "ts": 1795588605.0931635,
+      "t": "2026-11-25 07:36:45 CET",
+      "id": "5nmZzANRvvKSR49QsodoAtspjbGft7pfwmFBPxrKpump-1795588605093"
     }
   ],
   "feed_stats": {
-    "emitted": 82644,
-    "per_min": 130.56,
+    "emitted": 82650,
+    "per_min": 130.45,
     "by_decision": {
       "seen": 62610,
       "rejected": 15962,
-      "accepted": 2039,
-      "skipped": 2033
+      "accepted": 2041,
+      "skipped": 2037
     },
     "by_source": {
       "new": 14688,
       "ds_search": 6299,
       "ds_profiles": 12862,
-      "ds_boosts": 10384,
+      "ds_boosts": 10386,
       "trending_5m": 8412,
-      "trending_1h": 7370,
-      "watchlist": 20974,
+      "trending_1h": 7373,
+      "watchlist": 20975,
       "pump_logs": 1446,
       "ds_boosts_top": 209
     },
@@ -8497,7 +8578,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 1.0,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
