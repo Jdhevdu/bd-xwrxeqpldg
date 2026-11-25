@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 08:35:37 CET",
+  "exported_at": "2026-11-25 08:35:57 CET",
   "last_update": "2026-11-25 08:34:28 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -104,7 +104,7 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 5303.0,
-    "last_ms": 1000.3,
+    "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.0,
@@ -3943,14 +3943,14 @@
       "price_s": null,
       "price_stale_s": null,
       "stop_to_sell_s": null,
-      "bot_to_phone_s": 0.117,
+      "bot_to_phone_s": 0.118,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795592137.1151338,
+      "updated_ts": 1795592157.1174805,
       "stages": {
         "discovery": {
           "p50_s": 72.244,
@@ -4016,10 +4016,10 @@
           "n": 0
         },
         "bot_to_phone": {
-          "p50_s": 0.117,
-          "p95_s": 0.187,
+          "p50_s": 0.118,
+          "p95_s": 0.335,
           "max_s": 0.63,
-          "last_s": 0.121,
+          "last_s": 0.122,
           "n": 200
         },
         "event_to_phone": {
@@ -8487,7 +8487,7 @@
   ],
   "feed_stats": {
     "emitted": 88936,
-    "per_min": 128.5,
+    "per_min": 128.44,
     "by_decision": {
       "seen": 67172,
       "rejected": 17268,
@@ -8511,7 +8511,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.1,
+  "heartbeat_age_s": 0.5,
   "bot_alive": true,
   "supervisor_alive": true
 }
