@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 23:49:33 CET",
+  "exported_at": "2026-11-25 23:51:38 CET",
   "last_update": "2026-11-25 23:49:23 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -103,13 +103,13 @@
   "loop_latency": {
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
-    "max_ms": 5714.7,
-    "last_ms": 1000.2,
+    "max_ms": 18273.2,
+    "last_ms": 18273.2,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.0,
     "work_max_ms": 106.0,
-    "work_last_ms": 0.4,
+    "work_last_ms": 0.3,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 70.45172212068007,
@@ -119,7 +119,7 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 4860,
+    "cycles": 4861,
     "pools_scanned": 760592,
     "unique_pools": 20007,
     "prefilter_rejected": 132952,
@@ -3944,14 +3944,14 @@
       "price_s": null,
       "price_stale_s": null,
       "stop_to_sell_s": null,
-      "bot_to_phone_s": 0.122,
+      "bot_to_phone_s": 0.123,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795646972.3322792,
+      "updated_ts": 1795647097.9339228,
       "stages": {
         "discovery": {
           "p50_s": 1000.633,
@@ -4017,10 +4017,10 @@
           "n": 0
         },
         "bot_to_phone": {
-          "p50_s": 0.122,
+          "p50_s": 0.123,
           "p95_s": 0.129,
           "max_s": 0.144,
-          "last_s": 0.123,
+          "last_s": 0.122,
           "n": 200
         },
         "event_to_phone": {
@@ -4299,7 +4299,7 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20007 Pools · 4860 Scans · Watch 358 · Graduiert 243 · letzter Scan: ds_search 15 · trending_5m 12 · trending_1h 16 · ds_profiles 20 · ds_boosts_top 5 · ds_boosts 22 · watchlist 34"
+      "detail": "20007 Pools · 4861 Scans · Watch 358 · Graduiert 243 · letzter Scan: ds_search 15 · trending_5m 12 · trending_1h 16 · ds_profiles 20 · ds_boosts_top 5 · ds_boosts 22 · watchlist 34"
     },
     {
       "name": "Analyst",
@@ -8494,7 +8494,7 @@
   ],
   "feed_stats": {
     "emitted": 94716,
-    "per_min": 139.1,
+    "per_min": 139.0,
     "by_decision": {
       "seen": 72544,
       "rejected": 18362,
