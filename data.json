@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 16:22:55 CET",
-  "last_update": "2026-11-25 16:22:34 CET",
+  "exported_at": "2026-11-25 16:23:05 CET",
+  "last_update": "2026-11-25 16:23:00 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.219353183987734,
@@ -104,12 +104,12 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 1001.2,
-    "last_ms": 1000.1,
+    "last_ms": 1000.4,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.0,
     "work_max_ms": 11.6,
-    "work_last_ms": 0.8,
+    "work_last_ms": 0.5,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 67.5992043157597,
@@ -124,7 +124,7 @@
     "unique_pools": 20010,
     "prefilter_rejected": 121193,
     "safety_rejected": 3046,
-    "scored": 8592,
+    "scored": 8595,
     "buys": 88,
     "sells": 93
   },
@@ -339,6 +339,42 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-25 16:23:00 CET",
+      "ts": 1795620180.0,
+      "kind": "Skipped",
+      "symbol": "hacked",
+      "reason": "score 56 < 64",
+      "text": "hacked score 56 - score 56 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 16:23:00 CET",
+      "ts": 1795620180.0,
+      "kind": "Skipped",
+      "symbol": "PERRO",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "PERRO score 68 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 16:23:00 CET",
+      "ts": 1795620180.0,
+      "kind": "Scored",
+      "symbol": "3sat",
+      "reason": "3sat [trending_1h, graduated] score 44 | liq $12,457 | h1 -37.9% | top10 35% | LP 0% | liquidity:0 vol_liq:8 buy_pressure:10.7 holders:6.6 authorities:10 lp:0.0 age:5 momentum:0 pump:28 | pump 28 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "text": "3sat [trending_1h, graduated] score 44 | liq $12,457 | h1 -37.9% | top10 35% | LP 0% | liquidity:0 vol_liq:8 buy_pressure:10.7 holders:6.6 authorities:10 lp:0.0 age:5 momentum:0 pump:28 | pump 28 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 16:22:56 CET",
+      "ts": 1795620176.0,
+      "kind": "Scored",
+      "symbol": "hacked",
+      "reason": "hacked [ds_profiles, graduated] score 56 | liq $12,742 | h1 +43.7% | top10 38% | LP 0% | liquidity:0 vol_liq:8 buy_pressure:12.4 holders:5.3 authorities:10 lp:0.0 age:5 momentum:10 narrative:HACKED pump:26 | narrative HACKED | pump 26 (Narrativ HACKED, Socials ergänzt)",
+      "text": "hacked [ds_profiles, graduated] score 56 | liq $12,742 | h1 +43.7% | top10 38% | LP 0% | liquidity:0 vol_liq:8 buy_pressure:12.4 holders:5.3 authorities:10 lp:0.0 age:5 momentum:10 narrative:HACKED pump:26 | narrative HACKED | pump 26 (Narrativ HACKED, Socials ergänzt)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 16:22:51 CET",
       "ts": 1795620171.0,
@@ -662,45 +698,45 @@
       "reason": "dex pump-fun not graduated/allowed",
       "text": "Plushi (pump-fun) - dex pump-fun not graduated/allowed",
       "curve": true
-    },
-    {
-      "t": "2026-11-25 16:22:23 CET",
-      "ts": 1795620143.0,
-      "kind": "Rejected",
-      "symbol": "OTTER",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "OTTER (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-25 16:22:23 CET",
-      "ts": 1795620143.0,
-      "kind": "Rejected",
-      "symbol": "CTO",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "CTO (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-25 16:22:23 CET",
-      "ts": 1795620143.0,
-      "kind": "Rejected",
-      "symbol": "CTO",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "CTO (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-25 16:22:23 CET",
-      "ts": 1795620143.0,
-      "kind": "Rejected",
-      "symbol": "BRENA",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "BRENA (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-25 16:23:00 CET",
+      "ts": 1795620180.0,
+      "kind": "Skipped",
+      "symbol": "hacked",
+      "reason": "score 56 < 64",
+      "text": "hacked score 56 - score 56 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 16:23:00 CET",
+      "ts": 1795620180.0,
+      "kind": "Skipped",
+      "symbol": "PERRO",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "PERRO score 68 - position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 16:23:00 CET",
+      "ts": 1795620180.0,
+      "kind": "Scored",
+      "symbol": "3sat",
+      "reason": "3sat [trending_1h, graduated] score 44 | liq $12,457 | h1 -37.9% | top10 35% | LP 0% | liquidity:0 vol_liq:8 buy_pressure:10.7 holders:6.6 authorities:10 lp:0.0 age:5 momentum:0 pump:28 | pump 28 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "text": "3sat [trending_1h, graduated] score 44 | liq $12,457 | h1 -37.9% | top10 35% | LP 0% | liquidity:0 vol_liq:8 buy_pressure:10.7 holders:6.6 authorities:10 lp:0.0 age:5 momentum:0 pump:28 | pump 28 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-25 16:22:56 CET",
+      "ts": 1795620176.0,
+      "kind": "Scored",
+      "symbol": "hacked",
+      "reason": "hacked [ds_profiles, graduated] score 56 | liq $12,742 | h1 +43.7% | top10 38% | LP 0% | liquidity:0 vol_liq:8 buy_pressure:12.4 holders:5.3 authorities:10 lp:0.0 age:5 momentum:10 narrative:HACKED pump:26 | narrative HACKED | pump 26 (Narrativ HACKED, Socials ergänzt)",
+      "text": "hacked [ds_profiles, graduated] score 56 | liq $12,742 | h1 +43.7% | top10 38% | LP 0% | liquidity:0 vol_liq:8 buy_pressure:12.4 holders:5.3 authorities:10 lp:0.0 age:5 momentum:10 narrative:HACKED pump:26 | narrative HACKED | pump 26 (Narrativ HACKED, Socials ergänzt)",
+      "curve": false
+    },
     {
       "t": "2026-11-25 16:22:51 CET",
       "ts": 1795620171.0,
@@ -888,42 +924,6 @@
       "symbol": "BIAO",
       "reason": "RugCheck danger: Large Amount of LP Unlocked, Low Liquidity",
       "text": "BIAO - RugCheck danger: Large Amount of LP Unlocked, Low Liquidity",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 16:22:25 CET",
-      "ts": 1795620145.0,
-      "kind": "Rejected",
-      "symbol": "HOPE",
-      "reason": "liquidity $0 < $10,000",
-      "text": "HOPE (meteora-damm-v2) - liquidity $0 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 16:22:25 CET",
-      "ts": 1795620145.0,
-      "kind": "Rejected",
-      "symbol": "SWARM",
-      "reason": "liquidity $1,554 < $10,000",
-      "text": "SWARM (pumpswap) - liquidity $1,554 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 16:22:25 CET",
-      "ts": 1795620145.0,
-      "kind": "Rejected",
-      "symbol": "SNOWCUMBRR",
-      "reason": "liquidity $1,556 < $10,000",
-      "text": "SNOWCUMBRR (pumpswap) - liquidity $1,556 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-25 16:22:25 CET",
-      "ts": 1795620145.0,
-      "kind": "Rejected",
-      "symbol": "PFP",
-      "reason": "liquidity $1,630 < $10,000",
-      "text": "PFP (pumpswap) - liquidity $1,630 < $10,000",
       "curve": false
     }
   ],
@@ -2730,12 +2730,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795605735.1399837,
-      "t_label": "2026-11-25 12:22:15 CET",
-      "usd": 8.0065,
-      "eur": 7.2444
-    },
-    {
       "t": 1795605756.97883,
       "t_label": "2026-11-25 12:22:36 CET",
       "usd": 8.0065,
@@ -3928,6 +3922,12 @@
       "t_label": "2026-11-25 16:22:34 CET",
       "usd": 7.9788,
       "eur": 7.2194
+    },
+    {
+      "t": 1795620180.774407,
+      "t_label": "2026-11-25 16:23:00 CET",
+      "usd": 7.9788,
+      "eur": 7.2194
     }
   ],
   "agents": {
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795620174.0070012,
+      "updated_ts": 1795620185.008441,
       "stages": {
         "discovery": {
           "p50_s": 262.746,
@@ -4019,7 +4019,7 @@
           "p50_s": 0.128,
           "p95_s": 0.277,
           "max_s": 0.629,
-          "last_s": 0.131,
+          "last_s": 0.126,
           "n": 200
         },
         "event_to_phone": {
@@ -4052,13 +4052,23 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "PERRO",
+      "token": "3sat",
       "pill": "128 pools",
       "pill_kind": "blue",
       "detail": "20,010 unique pools",
       "pools": 128,
       "unique": 20010,
       "filters": [
+        {
+          "symbol": "3sat",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "hacked",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "PERRO",
           "text": "top 10 > 25%",
@@ -4088,27 +4098,17 @@
           "symbol": "SNOWCUMBRR",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "PFP",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "PLUSHIFY",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "PERRO",
-      "pill": "68",
+      "token": "3sat",
+      "pill": "44",
       "pill_kind": "purple",
-      "detail": "PERRO [trending_1h, graduated] score 68 | liq $36,137 | h1 -6.3% | top10 17% | LP 100% | liquidity:4.2 vol_liq:15 buy_pressure:6.3 holders:14.2 authorities:10 lp:10.0 age:5 momentum:0 pump:22 | pump 22 (Im Trend)",
-      "score": 68,
+      "detail": "3sat [trending_1h, graduated] score 44 | liq $12,457 | h1 -37.9% | top10 35% | LP 0% | liquidity:0 vol_liq:8 buy_pressure:10.7 holders:6.6 authorities:10 lp:0.0 age:5 momentum:0 pump:28 | pump 28 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "score": 44,
       "passed": true,
       "status": "passed",
       "rejected": 124239
@@ -4302,7 +4302,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "8592 bewertet · 124239 abgelehnt"
+      "detail": "8595 bewertet · 124239 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4415,7 +4415,53 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "3sat",
+      "mint": "FaWEANo8Kz9B415xv3cocE8q5JgghN7CY8FYG4C5pump",
+      "pool": "FaQsX8LQ1p2XLv257QuhJ3viQChVP4vWtS2GBZdmGH2N",
+      "score": 28,
+      "reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 36401.15864,
+      "origin": "trending_1h",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/FaWEANo8Kz9B415xv3cocE8q5JgghN7CY8FYG4C5pump.png"
+    },
+    {
+      "symbol": "hacked",
+      "mint": "FK7bc3fR8UL8uogN2u8J9yEpEbQJKR7yKsp3G8rvpump",
+      "pool": "BZNokmZvG8N6rA3ja22ZbHYtaU6sJavc6tbVQkhQ4gS8",
+      "score": 26,
+      "reasons": [
+        "Narrativ HACKED",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 40162.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/FK7bc3fR8UL8uogN2u8J9yEpEbQJKR7yKsp3G8rvpump.png"
+    },
+    {
+      "symbol": "PERRO",
+      "mint": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump",
+      "pool": "4s1epXdedd7TY1UtJ7frou3saSxuG98os7HcPtNEu8WH",
+      "score": 22,
+      "reasons": [
+        "Im Trend"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 220091.313747089,
+      "origin": "trending_1h",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4433,106 +4479,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "Boty",
-      "mint": "6KV2auqheHhSEN1YkhZjdn9rBeYvZLDSSnsZd1Wgpump",
-      "pool": "BaAaztzBKb6hfRTezWgRLdDfPUqzKiE6XCTkwwjdCfx",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "new",
-      "mcap": 3746.130984,
-      "liq": 1485.7055,
-      "age_min": 29.8,
-      "created_at": "2026-11-25T14:52:36Z",
-      "decision": "rejected",
-      "reason": "dex pump-fun not graduated/allowed",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795620143.77967,
-      "t": "2026-11-25 16:22:23 CET",
-      "id": "6KV2auqheHhSEN1YkhZjdn9rBeYvZLDSSnsZd1Wgpump-1795620143779"
-    },
-    {
-      "symbol": "X",
-      "mint": "3b3aph9sexic3Je8jG4cVzNN8V2joLCPvW9RrgB2pump",
-      "pool": "GEJoRHnAPgnfVMXqogNabSdGZCwK2PiGQjFLozFFdRzT",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "new",
-      "mcap": 8420.817868,
-      "liq": 4044.2381,
-      "age_min": 29.8,
-      "created_at": "2026-11-25T14:52:36Z",
-      "decision": "rejected",
-      "reason": "dex pump-fun not graduated/allowed",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795620143.7834294,
-      "t": "2026-11-25 16:22:23 CET",
-      "id": "3b3aph9sexic3Je8jG4cVzNN8V2joLCPvW9RrgB2pump-1795620143783"
-    },
-    {
-      "symbol": "$SLJK",
-      "mint": "Bvvmt7VSgzE4PtH5jYYvh5sbYmN9KJVwXV1GDNeGpump",
-      "pool": "3BuxUKrjbpkAyFT2Bt3CxcNva8f7jNcUzQMvU9V2CE4H",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "new",
-      "mcap": 983.4998324,
-      "liq": 962.3239,
-      "age_min": 29.83,
-      "created_at": "2026-11-25T14:52:34Z",
-      "decision": "rejected",
-      "reason": "dex pump-fun not graduated/allowed",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795620143.7874193,
-      "t": "2026-11-25 16:22:23 CET",
-      "id": "Bvvmt7VSgzE4PtH5jYYvh5sbYmN9KJVwXV1GDNeGpump-1795620143787"
-    },
-    {
-      "symbol": "CTO",
-      "mint": "HGvijMFWpY13pbdCKzopgNADhKkNgC5oJoqncWLw1xz9",
-      "pool": "AupNaSJSATnSnn77EP3uLAT56TP3cNP4Mfc5YV6eoTwt",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "new",
-      "mcap": 3061.630458,
-      "liq": 2428.1791163025,
-      "age_min": 29.88,
-      "created_at": "2026-11-25T14:52:31Z",
-      "decision": "rejected",
-      "reason": "dex pump-fun not graduated/allowed",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795620143.7913263,
-      "t": "2026-11-25 16:22:23 CET",
-      "id": "HGvijMFWpY13pbdCKzopgNADhKkNgC5oJoqncWLw1xz9-1795620143791"
-    },
-    {
-      "symbol": "CTO",
-      "mint": "3AbqXETFHfQPnhR6gfsNm8fpWgfdLEnfmRfWxrpw9CsE",
-      "pool": "2KtSnfeejkxibhrXsXNjHP6Cmf1uC64k3N3BeF3Jor5p",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "new",
-      "mcap": 3043.39393,
-      "liq": 2413.71572624731,
-      "age_min": 29.88,
-      "created_at": "2026-11-25T14:52:31Z",
-      "decision": "rejected",
-      "reason": "dex pump-fun not graduated/allowed",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795620143.7953265,
-      "t": "2026-11-25 16:22:23 CET",
-      "id": "3AbqXETFHfQPnhR6gfsNm8fpWgfdLEnfmRfWxrpw9CsE-1795620143795"
-    },
     {
       "symbol": "CTO",
       "mint": "GaWLoY32MT22kE51tDCa19aMVfzYBCaYXpe9Vp5KYy5K",
@@ -8452,24 +8398,140 @@
       "ts": 1795620171.1930056,
       "t": "2026-11-25 16:22:51 CET",
       "id": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump-1795620171193"
+    },
+    {
+      "symbol": "hacked",
+      "mint": "FK7bc3fR8UL8uogN2u8J9yEpEbQJKR7yKsp3G8rvpump",
+      "pool": "BZNokmZvG8N6rA3ja22ZbHYtaU6sJavc6tbVQkhQ4gS8",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 40162.0,
+      "liq": 12741.94,
+      "age_min": 78.93,
+      "created_at": "2026-11-25T14:04:01Z",
+      "decision": "accepted",
+      "reason": "score 56",
+      "score": 56,
+      "pump_score": 26,
+      "pump_reasons": [
+        "Narrativ HACKED",
+        "Socials ergänzt"
+      ],
+      "ts": 1795620176.6024542,
+      "t": "2026-11-25 16:22:56 CET",
+      "id": "FK7bc3fR8UL8uogN2u8J9yEpEbQJKR7yKsp3G8rvpump-1795620176602"
+    },
+    {
+      "symbol": "3sat",
+      "mint": "FaWEANo8Kz9B415xv3cocE8q5JgghN7CY8FYG4C5pump",
+      "pool": "FaQsX8LQ1p2XLv257QuhJ3viQChVP4vWtS2GBZdmGH2N",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 36401.15864,
+      "liq": 12457.1799,
+      "age_min": 76.01,
+      "created_at": "2026-11-25T14:07:00Z",
+      "decision": "accepted",
+      "reason": "score 44",
+      "score": 44,
+      "pump_score": 28,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795620180.7540793,
+      "t": "2026-11-25 16:23:00 CET",
+      "id": "FaWEANo8Kz9B415xv3cocE8q5JgghN7CY8FYG4C5pump-1795620180754"
+    },
+    {
+      "symbol": "PERRO",
+      "mint": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump",
+      "pool": "4s1epXdedd7TY1UtJ7frou3saSxuG98os7HcPtNEu8WH",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 220091.313747089,
+      "liq": 36137.1008,
+      "age_min": 838.85,
+      "created_at": "2026-11-25T01:24:10Z",
+      "decision": "skipped",
+      "reason": "position $0.64 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 68,
+      "pump_score": 22,
+      "pump_reasons": [
+        "Im Trend"
+      ],
+      "ts": 1795620180.7589815,
+      "t": "2026-11-25 16:23:00 CET",
+      "id": "4Di56UJzpnb7E4D7aLXFf7aLF5TrpJYv9Q3mR398pump-1795620180758"
+    },
+    {
+      "symbol": "hacked",
+      "mint": "FK7bc3fR8UL8uogN2u8J9yEpEbQJKR7yKsp3G8rvpump",
+      "pool": "BZNokmZvG8N6rA3ja22ZbHYtaU6sJavc6tbVQkhQ4gS8",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 40162.0,
+      "liq": 12741.94,
+      "age_min": 79.0,
+      "created_at": "2026-11-25T14:04:01Z",
+      "decision": "skipped",
+      "reason": "score 56 < 64",
+      "score": 56,
+      "pump_score": 26,
+      "pump_reasons": [
+        "Narrativ HACKED",
+        "Socials ergänzt"
+      ],
+      "ts": 1795620180.763322,
+      "t": "2026-11-25 16:23:00 CET",
+      "id": "FK7bc3fR8UL8uogN2u8J9yEpEbQJKR7yKsp3G8rvpump-1795620180763"
+    },
+    {
+      "symbol": "3sat",
+      "mint": "FaWEANo8Kz9B415xv3cocE8q5JgghN7CY8FYG4C5pump",
+      "pool": "FaQsX8LQ1p2XLv257QuhJ3viQChVP4vWtS2GBZdmGH2N",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 36401.15864,
+      "liq": 12457.1799,
+      "age_min": 76.01,
+      "created_at": "2026-11-25T14:07:00Z",
+      "decision": "skipped",
+      "reason": "score 44 < 64",
+      "score": 44,
+      "pump_score": 28,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795620180.7672749,
+      "t": "2026-11-25 16:23:00 CET",
+      "id": "FaWEANo8Kz9B415xv3cocE8q5JgghN7CY8FYG4C5pump-1795620180767"
     }
   ],
   "feed_stats": {
-    "emitted": 32811,
-    "per_min": 140.09,
+    "emitted": 32817,
+    "per_min": 140.01,
     "by_decision": {
       "seen": 25616,
       "rejected": 6055,
-      "accepted": 570,
-      "skipped": 570
+      "accepted": 573,
+      "skipped": 573
     },
     "by_source": {
       "new": 4699,
       "ds_search": 2809,
-      "ds_profiles": 6076,
+      "ds_profiles": 6078,
       "ds_boosts": 2991,
       "trending_5m": 3375,
-      "trending_1h": 3496,
+      "trending_1h": 3500,
       "watchlist": 7736,
       "pump_logs": 1619,
       "ds_boosts_top": 10
@@ -8480,7 +8542,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.6,
+  "heartbeat_age_s": 0.8,
   "bot_alive": true,
   "supervisor_alive": true
 }
