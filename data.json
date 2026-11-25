@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-25 02:44:27 CET",
+  "exported_at": "2026-11-25 02:44:47 CET",
   "last_update": "2026-11-25 02:44:22 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -104,12 +104,12 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 4102.8,
-    "last_ms": 1000.3,
+    "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.0,
     "work_max_ms": 105.4,
-    "work_last_ms": 0.4,
+    "work_last_ms": 1.0,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 69.69543579378949,
@@ -119,7 +119,7 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 3801,
+    "cycles": 3802,
     "pools_scanned": 623473,
     "unique_pools": 20006,
     "prefilter_rejected": 100092,
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795571066.295229,
+      "updated_ts": 1795571086.3124795,
       "stages": {
         "discovery": {
           "p50_s": 58.34,
@@ -4017,9 +4017,9 @@
         },
         "bot_to_phone": {
           "p50_s": 0.125,
-          "p95_s": 0.489,
+          "p95_s": 0.442,
           "max_s": 0.66,
-          "last_s": 0.126,
+          "last_s": 0.122,
           "n": 200
         },
         "event_to_phone": {
@@ -4298,7 +4298,7 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20006 Pools · 3801 Scans · Watch 366 · Graduiert 171 · letzter Scan: ds_search 15 · trending_1h 12 · trending_5m 18 · ds_boosts 18 · ds_profiles 18 · watchlist 41"
+      "detail": "20006 Pools · 3802 Scans · Watch 366 · Graduiert 171 · letzter Scan: ds_search 15 · trending_1h 12 · trending_5m 18 · ds_boosts 18 · ds_profiles 18 · watchlist 41"
     },
     {
       "name": "Analyst",
@@ -8492,7 +8492,7 @@
   ],
   "feed_stats": {
     "emitted": 47961,
-    "per_min": 140.63,
+    "per_min": 140.49,
     "by_decision": {
       "seen": 36320,
       "rejected": 9423,
@@ -8516,7 +8516,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.2,
+  "heartbeat_age_s": 0.5,
   "bot_alive": true,
   "supervisor_alive": true
 }
