@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-26 00:10:27 CET",
-  "last_update": "2026-11-26 00:09:57 CET",
+  "exported_at": "2026-11-26 00:10:48 CET",
+  "last_update": "2026-11-26 00:10:30 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.515318386658905,
@@ -104,7 +104,7 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 24665.8,
-    "last_ms": 1000.3,
+    "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.1,
@@ -119,12 +119,12 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 4878,
+    "cycles": 4879,
     "pools_scanned": 762790,
     "unique_pools": 20007,
     "prefilter_rejected": 133449,
     "safety_rejected": 3410,
-    "scored": 9985,
+    "scored": 9986,
     "buys": 88,
     "sells": 93
   },
@@ -340,6 +340,33 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-26 00:10:30 CET",
+      "ts": 1795648230.0,
+      "kind": "Skipped",
+      "symbol": "BEASTGAMES",
+      "reason": "score 54 < 64",
+      "text": "BEASTGAMES score 54 - score 54 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 00:10:30 CET",
+      "ts": 1795648230.0,
+      "kind": "Skipped",
+      "symbol": "Grinch",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Grinch score 75 - position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 00:10:30 CET",
+      "ts": 1795648230.0,
+      "kind": "Scored",
+      "symbol": "Grinch",
+      "reason": "Grinch [ds_profiles, graduated] score 75 | liq $13,932 | h1 +35.1% | top10 20% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:7.3 holders:12.8 authorities:10 lp:10.0 age:5 momentum:10 narrative:GRINCH pump:30 | narrative GRINCH | pump 30 (Narrativ GRINCH, Geringer Price Impact, Kaufdruck hoch)",
+      "text": "Grinch [ds_profiles, graduated] score 75 | liq $13,932 | h1 +35.1% | top10 20% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:7.3 holders:12.8 authorities:10 lp:10.0 age:5 momentum:10 narrative:GRINCH pump:30 | narrative GRINCH | pump 30 (Narrativ GRINCH, Geringer Price Impact, Kaufdruck hoch)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 00:10:26 CET",
       "ts": 1795648226.0,
@@ -672,10 +699,12 @@
       "reason": "dex pump-fun not graduated/allowed",
       "text": "block0 (pump-fun) - dex pump-fun not graduated/allowed",
       "curve": true
-    },
+    }
+  ],
+  "scanner_highlights": [
     {
-      "t": "2026-11-26 00:09:57 CET",
-      "ts": 1795648197.0,
+      "t": "2026-11-26 00:10:30 CET",
+      "ts": 1795648230.0,
       "kind": "Skipped",
       "symbol": "BEASTGAMES",
       "reason": "score 54 < 64",
@@ -683,8 +712,8 @@
       "curve": false
     },
     {
-      "t": "2026-11-26 00:09:57 CET",
-      "ts": 1795648197.0,
+      "t": "2026-11-26 00:10:30 CET",
+      "ts": 1795648230.0,
       "kind": "Skipped",
       "symbol": "Grinch",
       "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
@@ -692,16 +721,14 @@
       "curve": false
     },
     {
-      "t": "2026-11-26 00:09:57 CET",
-      "ts": 1795648197.0,
+      "t": "2026-11-26 00:10:30 CET",
+      "ts": 1795648230.0,
       "kind": "Scored",
       "symbol": "Grinch",
-      "reason": "Grinch [ds_profiles, graduated] score 75 | liq $13,889 | h1 +25.7% | top10 20% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:7.1 holders:12.8 authorities:10 lp:10.0 age:5 momentum:10 narrative:GRINCH pump:24 | narrative GRINCH | pump 24 (Narrativ GRINCH, Socials ergänzt)",
-      "text": "Grinch [ds_profiles, graduated] score 75 | liq $13,889 | h1 +25.7% | top10 20% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:7.1 holders:12.8 authorities:10 lp:10.0 age:5 momentum:10 narrative:GRINCH pump:24 | narrative GRINCH | pump 24 (Narrativ GRINCH, Socials ergänzt)",
+      "reason": "Grinch [ds_profiles, graduated] score 75 | liq $13,932 | h1 +35.1% | top10 20% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:7.3 holders:12.8 authorities:10 lp:10.0 age:5 momentum:10 narrative:GRINCH pump:30 | narrative GRINCH | pump 30 (Narrativ GRINCH, Geringer Price Impact, Kaufdruck hoch)",
+      "text": "Grinch [ds_profiles, graduated] score 75 | liq $13,932 | h1 +35.1% | top10 20% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:7.3 holders:12.8 authorities:10 lp:10.0 age:5 momentum:10 narrative:GRINCH pump:30 | narrative GRINCH | pump 30 (Narrativ GRINCH, Geringer Price Impact, Kaufdruck hoch)",
       "curve": false
-    }
-  ],
-  "scanner_highlights": [
+    },
     {
       "t": "2026-11-26 00:10:26 CET",
       "ts": 1795648226.0,
@@ -898,33 +925,6 @@
       "symbol": "NPAY",
       "reason": "liquidity $0 < $10,000",
       "text": "NPAY (pumpswap) - liquidity $0 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 00:09:50 CET",
-      "ts": 1795648190.0,
-      "kind": "Rejected",
-      "symbol": "HUSSPAD",
-      "reason": "liquidity $1,367 < $10,000",
-      "text": "HUSSPAD (pumpswap) - liquidity $1,367 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 00:09:50 CET",
-      "ts": 1795648190.0,
-      "kind": "Rejected",
-      "symbol": "Nala",
-      "reason": "liquidity $1,621 < $10,000",
-      "text": "Nala (pumpswap) - liquidity $1,621 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 00:09:50 CET",
-      "ts": 1795648190.0,
-      "kind": "Rejected",
-      "symbol": "TURKEY",
-      "reason": "liquidity $1,722 < $10,000",
-      "text": "TURKEY (pumpswap) - liquidity $1,722 < $10,000",
       "curve": false
     }
   ],
@@ -2733,12 +2733,6 @@
     {
       "t": 1795634128.1360018,
       "t_label": "2026-11-25 20:15:28 CET",
-      "usd": 8.2087,
-      "eur": 7.4274
-    },
-    {
-      "t": 1795634128.1360018,
-      "t_label": "2026-11-25 20:15:28 CET",
       "usd": 8.2394,
       "eur": 7.4551
     },
@@ -3929,6 +3923,12 @@
       "t_label": "2026-11-26 00:09:41 CET",
       "usd": 8.3059,
       "eur": 7.5153
+    },
+    {
+      "t": 1795648230.407522,
+      "t_label": "2026-11-26 00:10:30 CET",
+      "usd": 8.3059,
+      "eur": 7.5153
     }
   ],
   "agents": {
@@ -3951,7 +3951,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795648227.7210002,
+      "updated_ts": 1795648247.7213316,
       "stages": {
         "discovery": {
           "p50_s": 1000.633,
@@ -4018,9 +4018,9 @@
         },
         "bot_to_phone": {
           "p50_s": 0.118,
-          "p95_s": 0.129,
+          "p95_s": 0.127,
           "max_s": 0.156,
-          "last_s": 0.117,
+          "last_s": 0.125,
           "n": 200
         },
         "event_to_phone": {
@@ -4053,13 +4053,18 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "BEASTGAMES",
+      "token": "Grinch",
       "pill": "118 pools",
       "pill_kind": "blue",
       "detail": "20,007 unique pools",
       "pools": 118,
       "unique": 20007,
       "filters": [
+        {
+          "symbol": "Grinch",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "BEASTGAMES",
           "text": "top 10 > 25%",
@@ -4094,22 +4099,17 @@
           "symbol": "TURKEY",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "COIN",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "BEASTGAMES",
-      "pill": "54",
+      "token": "Grinch",
+      "pill": "75",
       "pill_kind": "purple",
-      "detail": "BEASTGAMES [watchlist, graduated] score 54 | liq $20,111 | h1 -3.7% | top10 29% | LP 100% | liquidity:1.4 vol_liq:8 buy_pressure:7.5 holders:8.9 authorities:10 lp:10.0 age:5 momentum:0 pump:27 | pump 27 (Geringer Price Impact, Socials ergänzt)",
-      "score": 54,
+      "detail": "Grinch [ds_profiles, graduated] score 75 | liq $13,932 | h1 +35.1% | top10 20% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:7.3 holders:12.8 authorities:10 lp:10.0 age:5 momentum:10 narrative:GRINCH pump:30 | narrative GRINCH | pump 30 (Narrativ GRINCH, Geringer Price Impact, Kaufdruck hoch)",
+      "score": 75,
       "passed": true,
       "status": "passed",
       "rejected": 136859
@@ -4299,11 +4299,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20007 Pools · 4878 Scans · Watch 357 · Graduiert 246 · letzter Scan: ds_search 15 · trending_5m 9 · trending_1h 8 · ds_boosts_top 7 · ds_boosts 22 · ds_profiles 22 · watchlist 35"
+      "detail": "20007 Pools · 4879 Scans · Watch 357 · Graduiert 246 · letzter Scan: ds_search 15 · trending_5m 9 · trending_1h 8 · ds_boosts_top 7 · ds_boosts 22 · ds_profiles 22 · watchlist 35"
     },
     {
       "name": "Analyst",
-      "detail": "9985 bewertet · 136859 abgelehnt"
+      "detail": "9986 bewertet · 136859 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4416,7 +4416,39 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "Grinch",
+      "mint": "J1b5HnRzmXsYK5akPTFtBR7B4E74JG8eyULodd7ypump",
+      "pool": "3Sj9QAjGktmF3r4cidJrM7kFKBDR5LhnbjzQFK7Q1eC2",
+      "score": 30,
+      "reasons": [
+        "Narrativ GRINCH",
+        "Geringer Price Impact",
+        "Kaufdruck hoch"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 45704.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/J1b5HnRzmXsYK5akPTFtBR7B4E74JG8eyULodd7ypump.png"
+    },
+    {
+      "symbol": "BEASTGAMES",
+      "mint": "ErfdcsXZSZHZYkT35jZRG7nBW4uLE5vAZP3gUtenpump",
+      "pool": "6bVowA6p7E4niQXn8CRvBpDev4jpWagR5UuSjAg9Z1dz",
+      "score": 27,
+      "reasons": [
+        "Geringer Price Impact",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 60481.0,
+      "origin": "watchlist",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/ErfdcsXZSZHZYkT35jZRG7nBW4uLE5vAZP3gUtenpump.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4434,66 +4466,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "Poly",
-      "mint": "BKRt21e4vXSaFkWfEpdARiV72FGMcChXpZQh1fQXpump",
-      "pool": "9SRTq794Nbc6ia1qdwopq8WiRucAngBjAJSBgiy7yy5Q",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 0.0,
-      "liq": 0.0,
-      "age_min": 211.33,
-      "created_at": "2026-11-25T19:38:31Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795648190.837683,
-      "t": "2026-11-26 00:09:50 CET",
-      "id": "BKRt21e4vXSaFkWfEpdARiV72FGMcChXpZQh1fQXpump-1795648190837"
-    },
-    {
-      "symbol": "PAULIE",
-      "mint": "2jtiuKJtPknu7eo6cQWb5VAzFFFAt1E3iLrbB69tpump",
-      "pool": "4yYPF4vruBnwjPqYThLpKTaBnEQBPYXM8QQ2X54djSTP",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 0.0,
-      "liq": 0.0,
-      "age_min": 211.73,
-      "created_at": "2026-11-25T19:38:07Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795648190.841038,
-      "t": "2026-11-26 00:09:50 CET",
-      "id": "2jtiuKJtPknu7eo6cQWb5VAzFFFAt1E3iLrbB69tpump-1795648190841"
-    },
-    {
-      "symbol": "Anon",
-      "mint": "8ESUqBfH76D3HqH3UPm3dGPSY3zfR28BPv2oSdxipump",
-      "pool": "Do3yt8ACYeb29kaTagDA9srmQvdRKFuFdaAAUJYkxQnJ",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 1968.31,
-      "liq": 0.0,
-      "age_min": 213.21,
-      "created_at": "2026-11-25T19:36:38Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795648190.84445,
-      "t": "2026-11-26 00:09:50 CET",
-      "id": "8ESUqBfH76D3HqH3UPm3dGPSY3zfR28BPv2oSdxipump-1795648190844"
-    },
     {
       "symbol": "SOL3",
       "mint": "EFCio3m7yc5ErBPwJbmMaT2DSYUYNw6Ksci3TAggpump",
@@ -8448,25 +8420,96 @@
       "ts": 1795648226.139318,
       "t": "2026-11-26 00:10:26 CET",
       "id": "ErfdcsXZSZHZYkT35jZRG7nBW4uLE5vAZP3gUtenpump-1795648226139"
+    },
+    {
+      "symbol": "Grinch",
+      "mint": "J1b5HnRzmXsYK5akPTFtBR7B4E74JG8eyULodd7ypump",
+      "pool": "3Sj9QAjGktmF3r4cidJrM7kFKBDR5LhnbjzQFK7Q1eC2",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 45704.0,
+      "liq": 13932.3,
+      "age_min": 66.89,
+      "created_at": "2026-11-25T22:03:37Z",
+      "decision": "accepted",
+      "reason": "score 75",
+      "score": 75,
+      "pump_score": 30,
+      "pump_reasons": [
+        "Narrativ GRINCH",
+        "Geringer Price Impact",
+        "Kaufdruck hoch"
+      ],
+      "ts": 1795648230.39387,
+      "t": "2026-11-26 00:10:30 CET",
+      "id": "J1b5HnRzmXsYK5akPTFtBR7B4E74JG8eyULodd7ypump-1795648230393"
+    },
+    {
+      "symbol": "Grinch",
+      "mint": "J1b5HnRzmXsYK5akPTFtBR7B4E74JG8eyULodd7ypump",
+      "pool": "3Sj9QAjGktmF3r4cidJrM7kFKBDR5LhnbjzQFK7Q1eC2",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 45704.0,
+      "liq": 13932.3,
+      "age_min": 66.89,
+      "created_at": "2026-11-25T22:03:37Z",
+      "decision": "skipped",
+      "reason": "position $0.66 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 75,
+      "pump_score": 30,
+      "pump_reasons": [
+        "Narrativ GRINCH",
+        "Geringer Price Impact",
+        "Kaufdruck hoch"
+      ],
+      "ts": 1795648230.3978636,
+      "t": "2026-11-26 00:10:30 CET",
+      "id": "J1b5HnRzmXsYK5akPTFtBR7B4E74JG8eyULodd7ypump-1795648230397"
+    },
+    {
+      "symbol": "BEASTGAMES",
+      "mint": "ErfdcsXZSZHZYkT35jZRG7nBW4uLE5vAZP3gUtenpump",
+      "pool": "6bVowA6p7E4niQXn8CRvBpDev4jpWagR5UuSjAg9Z1dz",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 60481.0,
+      "liq": 20111.33,
+      "age_min": 185.76,
+      "created_at": "2026-11-25T20:04:45Z",
+      "decision": "skipped",
+      "reason": "score 54 < 64",
+      "score": 54,
+      "pump_score": 27,
+      "pump_reasons": [
+        "Geringer Price Impact",
+        "Socials ergänzt"
+      ],
+      "ts": 1795648230.4015524,
+      "t": "2026-11-26 00:10:30 CET",
+      "id": "ErfdcsXZSZHZYkT35jZRG7nBW4uLE5vAZP3gUtenpump-1795648230401"
     }
   ],
   "feed_stats": {
-    "emitted": 97250,
-    "per_min": 138.57,
+    "emitted": 97253,
+    "per_min": 138.51,
     "by_decision": {
       "seen": 74443,
       "rejected": 18882,
-      "accepted": 1963,
-      "skipped": 1962
+      "accepted": 1964,
+      "skipped": 1964
     },
     "by_source": {
       "new": 14762,
       "ds_search": 8130,
-      "ds_profiles": 16876,
+      "ds_profiles": 16878,
       "ds_boosts": 10682,
       "trending_5m": 9425,
       "trending_1h": 9196,
-      "watchlist": 25788,
+      "watchlist": 25789,
       "pump_logs": 1753,
       "ds_boosts_top": 638
     },
@@ -8476,7 +8519,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.2,
+  "heartbeat_age_s": 0.4,
   "bot_alive": true,
   "supervisor_alive": true
 }
