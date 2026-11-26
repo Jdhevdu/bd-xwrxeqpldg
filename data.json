@@ -1,20 +1,20 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-26 04:40:46 CET",
-  "last_update": "2026-11-26 04:40:39 CET",
+  "exported_at": "2026-11-26 04:41:27 CET",
+  "last_update": "2026-11-26 04:40:49 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
-  "equity_eur": 7.593037469645869,
-  "equity_usd": 8.391825011452614,
-  "cash_usd": 8.391825011452614,
-  "cash_eur": 7.593037469645869,
+  "equity_eur": 7.582847475671784,
+  "equity_usd": 8.380563030112455,
+  "cash_usd": 8.380563030112455,
+  "cash_eur": 7.582847475671784,
   "start_eur": 20.0,
   "start_usd": 22.104,
-  "pnl_usd": -13.712174988547385,
-  "pnl_eur": -12.40696253035413,
-  "roi_pct": -62.03481265177066,
-  "multiplier": 0.3797,
+  "pnl_usd": -13.723436969887544,
+  "pnl_eur": -12.417152524328216,
+  "roi_pct": -62.08576262164108,
+  "multiplier": 0.3791,
   "realized_usd": -9.829466832811184,
   "fees_usd": 13.524545114818997,
   "fees": {
@@ -27,7 +27,7 @@
   },
   "fees_slippage_usd": 5.085051769442177,
   "cash_sol": 0.11803140613421545,
-  "equity_sol": 0.11803140613421545,
+  "equity_sol": 0.11803140613421544,
   "start_sol": 0.2735353172331269,
   "failed_count": 4,
   "failed_trades": [
@@ -104,40 +104,40 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 8451.7,
-    "last_ms": 1000.1,
+    "last_ms": 1000.2,
     "n": 400,
     "work_p50_ms": 0.4,
-    "work_p95_ms": 1.0,
+    "work_p95_ms": 1.1,
     "work_max_ms": 131.6,
-    "work_last_ms": 0.3,
+    "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
   },
-  "sol_usd": 71.09823805631979,
+  "sol_usd": 71.0028229315745,
   "eur_usd": 1.1052,
   "open_count": 0,
   "closed_count": 88,
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 5120,
-    "pools_scanned": 794578,
-    "unique_pools": 20005,
-    "prefilter_rejected": 140799,
+    "cycles": 5121,
+    "pools_scanned": 794714,
+    "unique_pools": 20003,
+    "prefilter_rejected": 140818,
     "safety_rejected": 3531,
-    "scored": 10603,
+    "scored": 10605,
     "buys": 88,
     "sells": 93
   },
   "last_scan_sources": {
     "ds_search": 15,
-    "trending_1h": 10,
-    "trending_5m": 19,
+    "trending_1h": 14,
+    "trending_5m": 15,
     "ds_boosts": 23,
     "ds_boosts_top": 4,
     "ds_profiles": 21,
     "watchlist": 44
   },
-  "watch_count": 322,
+  "watch_count": 320,
   "graduation_count": 261,
   "positions": [],
   "closed": [
@@ -340,6 +340,51 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-26 04:41:16 CET",
+      "ts": 1795664476.0,
+      "kind": "Rejected",
+      "symbol": "Harlod",
+      "reason": "pool age 6 min < 15",
+      "text": "Harlod (meteora-damm-v2) - pool age 6 min < 15",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:40:49 CET",
+      "ts": 1795664449.0,
+      "kind": "Skipped",
+      "symbol": "MCAP",
+      "reason": "score 53 < 64",
+      "text": "MCAP score 53 - score 53 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:40:49 CET",
+      "ts": 1795664449.0,
+      "kind": "Skipped",
+      "symbol": "coin",
+      "reason": "score 58 < 64",
+      "text": "coin score 58 - score 58 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:40:49 CET",
+      "ts": 1795664449.0,
+      "kind": "Scored",
+      "symbol": "MCAP",
+      "reason": "MCAP [ds_profiles, graduated] score 53 | liq $16,939 | h1 +106.0% | top10 24% | LP 100% | liquidity:0.6 vol_liq:2 buy_pressure:10.3 holders:11.2 authorities:10 lp:10.0 age:2 momentum:3 pump:31 | pump 31 (Im Trend, Socials ergänzt, Liquidität steigt)",
+      "text": "MCAP [ds_profiles, graduated] score 53 | liq $16,939 | h1 +106.0% | top10 24% | LP 100% | liquidity:0.6 vol_liq:2 buy_pressure:10.3 holders:11.2 authorities:10 lp:10.0 age:2 momentum:3 pump:31 | pump 31 (Im Trend, Socials ergänzt, Liquidität steigt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:40:47 CET",
+      "ts": 1795664447.0,
+      "kind": "Scored",
+      "symbol": "coin",
+      "reason": "coin [trending_5m, graduated] score 58 | liq $19,705 | h1 +173.1% | top10 19% | LP 100% | liquidity:1.3 vol_liq:2 buy_pressure:9.5 holders:13.3 authorities:10 lp:10.0 age:2 momentum:3 narrative:COIN pump:40 | narrative COIN | pump 40 (Viele Käufer, Narrativ COIN, Im Trend)",
+      "text": "coin [trending_5m, graduated] score 58 | liq $19,705 | h1 +173.1% | top10 19% | LP 100% | liquidity:1.3 vol_liq:2 buy_pressure:9.5 holders:13.3 authorities:10 lp:10.0 age:2 momentum:3 narrative:COIN pump:40 | narrative COIN | pump 40 (Viele Käufer, Narrativ COIN, Im Trend)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 04:40:46 CET",
       "ts": 1795664446.0,
@@ -654,54 +699,54 @@
       "reason": "liquidity $2,302 < $10,000",
       "text": "LOKI (pumpswap) - liquidity $2,302 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-26 04:40:27 CET",
-      "ts": 1795664427.0,
-      "kind": "Rejected",
-      "symbol": "ð",
-      "reason": "liquidity $2,630 < $10,000",
-      "text": "ð (pumpswap) - liquidity $2,630 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:40:27 CET",
-      "ts": 1795664427.0,
-      "kind": "Rejected",
-      "symbol": "Copyinu",
-      "reason": "liquidity $2,826 < $10,000",
-      "text": "Copyinu (pumpswap) - liquidity $2,826 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:40:27 CET",
-      "ts": 1795664427.0,
-      "kind": "Rejected",
-      "symbol": "Bababoi",
-      "reason": "liquidity $3,242 < $10,000",
-      "text": "Bababoi (pumpswap) - liquidity $3,242 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:40:27 CET",
-      "ts": 1795664427.0,
-      "kind": "Rejected",
-      "symbol": "Togi",
-      "reason": "liquidity $3,848 < $10,000",
-      "text": "Togi (pumpswap) - liquidity $3,848 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:40:27 CET",
-      "ts": 1795664427.0,
-      "kind": "Rejected",
-      "symbol": "STUDS",
-      "reason": "liquidity $4,382 < $10,000",
-      "text": "STUDS (pumpswap) - liquidity $4,382 < $10,000",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-26 04:41:16 CET",
+      "ts": 1795664476.0,
+      "kind": "Rejected",
+      "symbol": "Harlod",
+      "reason": "pool age 6 min < 15",
+      "text": "Harlod (meteora-damm-v2) - pool age 6 min < 15",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:40:49 CET",
+      "ts": 1795664449.0,
+      "kind": "Skipped",
+      "symbol": "MCAP",
+      "reason": "score 53 < 64",
+      "text": "MCAP score 53 - score 53 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:40:49 CET",
+      "ts": 1795664449.0,
+      "kind": "Skipped",
+      "symbol": "coin",
+      "reason": "score 58 < 64",
+      "text": "coin score 58 - score 58 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:40:49 CET",
+      "ts": 1795664449.0,
+      "kind": "Scored",
+      "symbol": "MCAP",
+      "reason": "MCAP [ds_profiles, graduated] score 53 | liq $16,939 | h1 +106.0% | top10 24% | LP 100% | liquidity:0.6 vol_liq:2 buy_pressure:10.3 holders:11.2 authorities:10 lp:10.0 age:2 momentum:3 pump:31 | pump 31 (Im Trend, Socials ergänzt, Liquidität steigt)",
+      "text": "MCAP [ds_profiles, graduated] score 53 | liq $16,939 | h1 +106.0% | top10 24% | LP 100% | liquidity:0.6 vol_liq:2 buy_pressure:10.3 holders:11.2 authorities:10 lp:10.0 age:2 momentum:3 pump:31 | pump 31 (Im Trend, Socials ergänzt, Liquidität steigt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:40:47 CET",
+      "ts": 1795664447.0,
+      "kind": "Scored",
+      "symbol": "coin",
+      "reason": "coin [trending_5m, graduated] score 58 | liq $19,705 | h1 +173.1% | top10 19% | LP 100% | liquidity:1.3 vol_liq:2 buy_pressure:9.5 holders:13.3 authorities:10 lp:10.0 age:2 momentum:3 narrative:COIN pump:40 | narrative COIN | pump 40 (Viele Käufer, Narrativ COIN, Im Trend)",
+      "text": "coin [trending_5m, graduated] score 58 | liq $19,705 | h1 +173.1% | top10 19% | LP 100% | liquidity:1.3 vol_liq:2 buy_pressure:9.5 holders:13.3 authorities:10 lp:10.0 age:2 momentum:3 narrative:COIN pump:40 | narrative COIN | pump 40 (Viele Käufer, Narrativ COIN, Im Trend)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 04:40:46 CET",
       "ts": 1795664446.0,
@@ -880,51 +925,6 @@
       "symbol": "MCAP",
       "reason": "score 52 < 64",
       "text": "MCAP score 52 - score 52 < 64",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:40:39 CET",
-      "ts": 1795664439.0,
-      "kind": "Skipped",
-      "symbol": "coin",
-      "reason": "score 57 < 64",
-      "text": "coin score 57 - score 57 < 64",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:40:39 CET",
-      "ts": 1795664439.0,
-      "kind": "Rejected",
-      "symbol": "4chanpump",
-      "reason": "RugCheck danger: Large Amount of LP Unlocked",
-      "text": "4chanpump - RugCheck danger: Large Amount of LP Unlocked",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:40:37 CET",
-      "ts": 1795664437.0,
-      "kind": "Scored",
-      "symbol": "BARRON",
-      "reason": "BARRON [trending_5m] score 61 | liq $25,824 | h1 +274.1% | top10 43% | LP 100% | liquidity:2.6 vol_liq:15 buy_pressure:6.3 holders:3.2 authorities:10 lp:10.0 age:5 momentum:3 narrative:BARRON pump:40 | narrative BARRON | pump 40 (Volumen zieht an, Viele Käufer, Narrativ BARRON)",
-      "text": "BARRON [trending_5m] score 61 | liq $25,824 | h1 +274.1% | top10 43% | LP 100% | liquidity:2.6 vol_liq:15 buy_pressure:6.3 holders:3.2 authorities:10 lp:10.0 age:5 momentum:3 narrative:BARRON pump:40 | narrative BARRON | pump 40 (Volumen zieht an, Viele Käufer, Narrativ BARRON)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:40:36 CET",
-      "ts": 1795664436.0,
-      "kind": "Rejected",
-      "symbol": "BIRB",
-      "reason": "top10 holders 88% > 50%",
-      "text": "BIRB - top10 holders 88% > 50%",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:40:35 CET",
-      "ts": 1795664435.0,
-      "kind": "Scored",
-      "symbol": "MCAP",
-      "reason": "MCAP [ds_profiles, graduated] score 52 | liq $16,939 | h1 +106.0% | top10 24% | LP 100% | liquidity:0.6 vol_liq:2 buy_pressure:10.3 holders:11.2 authorities:10 lp:10.0 age:2 momentum:3 pump:27 | pump 27 (Im Trend, Socials ergänzt)",
-      "text": "MCAP [ds_profiles, graduated] score 52 | liq $16,939 | h1 +106.0% | top10 24% | LP 100% | liquidity:0.6 vol_liq:2 buy_pressure:10.3 holders:11.2 authorities:10 lp:10.0 age:2 momentum:3 pump:27 | pump 27 (Im Trend, Socials ergänzt)",
       "curve": false
     }
   ],
@@ -2731,12 +2731,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795649405.730032,
-      "t_label": "2026-11-26 00:30:05 CET",
-      "usd": 8.3282,
-      "eur": 7.5354
-    },
-    {
       "t": 1795649489.7081153,
       "t_label": "2026-11-26 00:31:29 CET",
       "usd": 8.3282,
@@ -3929,6 +3923,12 @@
       "t_label": "2026-11-26 04:40:39 CET",
       "usd": 8.3918,
       "eur": 7.593
+    },
+    {
+      "t": 1795664449.385844,
+      "t_label": "2026-11-26 04:40:49 CET",
+      "usd": 8.3806,
+      "eur": 7.5828
     }
   ],
   "agents": {
@@ -3938,7 +3938,7 @@
       "name": "Speed",
       "title": "Latenz",
       "new_to_buy_s": null,
-      "discovery_s": 131.89,
+      "discovery_s": 133.607,
       "seen_to_score_s": 122.072,
       "score_to_fill_s": null,
       "price_s": null,
@@ -3951,13 +3951,13 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795664445.3814764,
+      "updated_ts": 1795664486.1172204,
       "stages": {
         "discovery": {
-          "p50_s": 131.89,
-          "p95_s": 353.06,
+          "p50_s": 133.607,
+          "p95_s": 356.063,
           "max_s": 944.407,
-          "last_s": 315.683,
+          "last_s": 359.012,
           "n": 200
         },
         "seen_to_score": {
@@ -4020,7 +4020,7 @@
           "p50_s": 0.127,
           "p95_s": 0.137,
           "max_s": 0.151,
-          "last_s": 0.117,
+          "last_s": 0.115,
           "n": 200
         },
         "event_to_phone": {
@@ -4053,13 +4053,28 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "NSFW",
+      "token": "Harlod",
       "pill": "136 pools",
       "pill_kind": "blue",
-      "detail": "20,005 unique pools",
+      "detail": "20,003 unique pools",
       "pools": 136,
-      "unique": 20005,
+      "unique": 20003,
       "filters": [
+        {
+          "symbol": "Harlod",
+          "text": "pool age 6 min < 15",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "MCAP",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "coin",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "NSFW",
           "text": "liq < $4k",
@@ -4084,35 +4099,20 @@
           "symbol": "TURKEY",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "River",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "RASMR",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "Slapcat",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "BARRON",
-      "pill": "61",
+      "token": "MCAP",
+      "pill": "53",
       "pill_kind": "purple",
-      "detail": "BARRON [trending_5m] score 61 | liq $25,824 | h1 +274.1% | top10 43% | LP 100% | liquidity:2.6 vol_liq:15 buy_pressure:6.3 holders:3.2 authorities:10 lp:10.0 age:5 momentum:3 narrative:BARRON pump:40 | narrative BARRON | pump 40 (Volumen zieht an, Viele Käufer, Narrativ BARRON)",
-      "score": 61,
+      "detail": "MCAP [ds_profiles, graduated] score 53 | liq $16,939 | h1 +106.0% | top10 24% | LP 100% | liquidity:0.6 vol_liq:2 buy_pressure:10.3 holders:11.2 authorities:10 lp:10.0 age:2 momentum:3 pump:31 | pump 31 (Im Trend, Socials ergänzt, Liquidität steigt)",
+      "score": 53,
       "passed": true,
       "status": "passed",
-      "rejected": 144330
+      "rejected": 144349
     },
     "executor": {
       "name": "Executor",
@@ -4299,11 +4299,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20005 Pools · 5120 Scans · Watch 322 · Graduiert 261 · letzter Scan: ds_search 15 · trending_1h 10 · trending_5m 19 · ds_boosts 23 · ds_boosts_top 4 · ds_profiles 21 · watchlist 44"
+      "detail": "20003 Pools · 5121 Scans · Watch 320 · Graduiert 261 · letzter Scan: ds_search 15 · trending_1h 14 · trending_5m 15 · ds_boosts 23 · ds_boosts_top 4 · ds_profiles 21 · watchlist 44"
     },
     {
       "name": "Analyst",
-      "detail": "10603 bewertet · 144330 abgelehnt"
+      "detail": "10605 bewertet · 144349 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4416,55 +4416,7 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [
-    {
-      "symbol": "BARRON",
-      "mint": "ebSyELGXjyddEmEcZ9MpvZdANmx1aFB6kGWKDkUpump",
-      "pool": "KqBjQffnLMW59NgXwCPhdL4BzoeXAo1MNzWKuRJQbNW",
-      "score": 40,
-      "reasons": [
-        "Volumen zieht an",
-        "Viele Käufer",
-        "Narrativ BARRON"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 147127.1838,
-      "origin": "trending_5m",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/ebSyELGXjyddEmEcZ9MpvZdANmx1aFB6kGWKDkUpump.png"
-    },
-    {
-      "symbol": "coin",
-      "mint": "CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump",
-      "pool": "4nPuuequT31Jjvqm9woDKLwR1ag4K6XnoNZRv6uXvKNz",
-      "score": 37,
-      "reasons": [
-        "Viele Käufer",
-        "Narrativ COIN",
-        "Im Trend"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 76173.6070199999,
-      "origin": "trending_5m",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump.png"
-    },
-    {
-      "symbol": "MCAP",
-      "mint": "AYij72wApHA4qGV5RbZJhsAVocjHtJJhgoUswV3tpump",
-      "pool": "6BsxczVuomX7VTaH8QDj6jGUwB7WvNcnUGXyjLE4gQCL",
-      "score": 27,
-      "reasons": [
-        "Im Trend",
-        "Socials ergänzt"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 61155.0,
-      "origin": "ds_profiles",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/AYij72wApHA4qGV5RbZJhsAVocjHtJJhgoUswV3tpump.png"
-    }
-  ],
+  "radar": [],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4482,126 +4434,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "SOL",
-      "mint": "AyiQP43hqPXRfJNH1kcRVS7jq1AjbCqXK2E4jxmWVP5u",
-      "pool": "Eocz7H8FZVBHiwG9EXzZqgn6Nia3msn1Rs3ugyADF1zi",
-      "dex": "raydium",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 2191389781.0,
-      "liq": 2191052577.02,
-      "age_min": 48834.39,
-      "created_at": "2026-10-23T05:46:04Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795664427.3117998,
-      "t": "2026-11-26 04:40:27 CET",
-      "id": "AyiQP43hqPXRfJNH1kcRVS7jq1AjbCqXK2E4jxmWVP5u-1795664427311"
-    },
-    {
-      "symbol": "SOL",
-      "mint": "FbLaAw9wKLVcvGpfE7eDL1DHmANyNUdn59dfkD4u31zC",
-      "pool": "GExZDqpydGczBqDjfCufe1FXC7XSo184ZwLs5n4JMYMi",
-      "dex": "raydium",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 2178932463.0,
-      "liq": 2178464724.03,
-      "age_min": 119406.14,
-      "created_at": "2026-09-04T05:34:19Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795664427.3165333,
-      "t": "2026-11-26 04:40:27 CET",
-      "id": "FbLaAw9wKLVcvGpfE7eDL1DHmANyNUdn59dfkD4u31zC-1795664427316"
-    },
-    {
-      "symbol": "SOL",
-      "mint": "CkH8iAKJhdAvLj9EijKdYwpbhrq6wjmFRZLSu5Rgsjrp",
-      "pool": "9mama83nykLeoMhioEmYx3SYSHUtqDkegLdLqGj4zwX",
-      "dex": "raydium",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 2159626966.0,
-      "liq": 2159225075.66,
-      "age_min": 124535.87,
-      "created_at": "2026-08-31T16:04:35Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795664427.3215165,
-      "t": "2026-11-26 04:40:27 CET",
-      "id": "CkH8iAKJhdAvLj9EijKdYwpbhrq6wjmFRZLSu5Rgsjrp-1795664427321"
-    },
-    {
-      "symbol": "SOL",
-      "mint": "5vhw96LZoKA4K8kbBkTJXBYvJSN1RWJzJgJbYEorBChv",
-      "pool": "7DYVdkbhQ5ZgeJNhVBBDnvhbfoJeGrF46EGeDaohT6Hu",
-      "dex": "raydium",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 1597357236.0,
-      "liq": 1597167472.5,
-      "age_min": 151120.19,
-      "created_at": "2026-08-13T05:00:16Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795664427.3264873,
-      "t": "2026-11-26 04:40:27 CET",
-      "id": "5vhw96LZoKA4K8kbBkTJXBYvJSN1RWJzJgJbYEorBChv-1795664427326"
-    },
-    {
-      "symbol": "Solana",
-      "mint": "6Dyz9eEBoQaXMcU3SNhAva1rZ1EsfjADsaYJFMGnK52G",
-      "pool": "35aFe6FhR7CnbLJE5ma8c93YJ2pkrURCTYv2GvVTAack",
-      "dex": "raydium",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 1558858299.0,
-      "liq": 1558700568.53,
-      "age_min": 3525.62,
-      "created_at": "2026-11-23T16:54:50Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795664427.331584,
-      "t": "2026-11-26 04:40:27 CET",
-      "id": "6Dyz9eEBoQaXMcU3SNhAva1rZ1EsfjADsaYJFMGnK52G-1795664427331"
-    },
-    {
-      "symbol": "PUMP",
-      "mint": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
-      "pool": "2uF4Xh61rDwxnG9woyxsVQP7zuA6kLFpb3NvnRQeoiSd",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_1h",
-      "mcap": 2147258641.33044,
-      "liq": 18355379.9099,
-      "age_min": 719204.56,
-      "created_at": "2025-07-14T16:55:54Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795664427.336568,
-      "t": "2026-11-26 04:40:27 CET",
-      "id": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn-1795664427336"
-    },
     {
       "symbol": "WETH",
       "mint": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
@@ -8503,27 +8335,163 @@
       "ts": 1795664446.32087,
       "t": "2026-11-26 04:40:46 CET",
       "id": "8SEQBLxwZNjbJkByhhqYGBZ5hWXKJDDt8QJR9TcVpump-1795664446320"
+    },
+    {
+      "symbol": "coin",
+      "mint": "CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump",
+      "pool": "4nPuuequT31Jjvqm9woDKLwR1ag4K6XnoNZRv6uXvKNz",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 76173.6070199999,
+      "liq": 19704.6554,
+      "age_min": 27.12,
+      "created_at": "2026-11-26T03:13:40Z",
+      "decision": "accepted",
+      "reason": "score 58",
+      "score": 58,
+      "pump_score": 40,
+      "pump_reasons": [
+        "Viele Käufer",
+        "Narrativ COIN",
+        "Im Trend"
+      ],
+      "ts": 1795664447.4754672,
+      "t": "2026-11-26 04:40:47 CET",
+      "id": "CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump-1795664447475"
+    },
+    {
+      "symbol": "MCAP",
+      "mint": "AYij72wApHA4qGV5RbZJhsAVocjHtJJhgoUswV3tpump",
+      "pool": "6BsxczVuomX7VTaH8QDj6jGUwB7WvNcnUGXyjLE4gQCL",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 61155.0,
+      "liq": 16939.49,
+      "age_min": 46.99,
+      "created_at": "2026-11-26T02:53:50Z",
+      "decision": "accepted",
+      "reason": "score 53",
+      "score": 53,
+      "pump_score": 31,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Liquidität steigt"
+      ],
+      "ts": 1795664449.370735,
+      "t": "2026-11-26 04:40:49 CET",
+      "id": "AYij72wApHA4qGV5RbZJhsAVocjHtJJhgoUswV3tpump-1795664449370"
+    },
+    {
+      "symbol": "coin",
+      "mint": "CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump",
+      "pool": "4nPuuequT31Jjvqm9woDKLwR1ag4K6XnoNZRv6uXvKNz",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 76173.6070199999,
+      "liq": 19704.6554,
+      "age_min": 27.16,
+      "created_at": "2026-11-26T03:13:40Z",
+      "decision": "skipped",
+      "reason": "score 58 < 64",
+      "score": 58,
+      "pump_score": 40,
+      "pump_reasons": [
+        "Viele Käufer",
+        "Narrativ COIN",
+        "Im Trend"
+      ],
+      "ts": 1795664449.37486,
+      "t": "2026-11-26 04:40:49 CET",
+      "id": "CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump-1795664449374"
+    },
+    {
+      "symbol": "MCAP",
+      "mint": "AYij72wApHA4qGV5RbZJhsAVocjHtJJhgoUswV3tpump",
+      "pool": "6BsxczVuomX7VTaH8QDj6jGUwB7WvNcnUGXyjLE4gQCL",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 61155.0,
+      "liq": 16939.49,
+      "age_min": 46.99,
+      "created_at": "2026-11-26T02:53:50Z",
+      "decision": "skipped",
+      "reason": "score 53 < 64",
+      "score": 53,
+      "pump_score": 31,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Liquidität steigt"
+      ],
+      "ts": 1795664449.3786466,
+      "t": "2026-11-26 04:40:49 CET",
+      "id": "AYij72wApHA4qGV5RbZJhsAVocjHtJJhgoUswV3tpump-1795664449378"
+    },
+    {
+      "symbol": "Harlod",
+      "mint": "7engr7vwVC91UxkARNz9eJVDj7RpZ3Fo8AJUsJHcoGjr",
+      "pool": "6HhrkNG4hnGMFEkvdpFcpEnUyxQoyg6ypHBy2qoiYBDC",
+      "dex": "meteora-damm-v2",
+      "early": false,
+      "source": "new",
+      "mcap": 18284.1397682841,
+      "liq": 31834.8726,
+      "age_min": 5.98,
+      "created_at": "2026-11-26T03:35:17Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795664476.012065,
+      "t": "2026-11-26 04:41:16 CET",
+      "id": "7engr7vwVC91UxkARNz9eJVDj7RpZ3Fo8AJUsJHcoGjr-1795664476012"
+    },
+    {
+      "symbol": "Harlod",
+      "mint": "7engr7vwVC91UxkARNz9eJVDj7RpZ3Fo8AJUsJHcoGjr",
+      "pool": "6HhrkNG4hnGMFEkvdpFcpEnUyxQoyg6ypHBy2qoiYBDC",
+      "dex": "meteora-damm-v2",
+      "early": false,
+      "source": "new",
+      "mcap": 18284.1397682841,
+      "liq": 31834.8726,
+      "age_min": 5.98,
+      "created_at": "2026-11-26T03:35:17Z",
+      "decision": "rejected",
+      "reason": "pool age 6 min < 15",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795664476.0177608,
+      "t": "2026-11-26 04:41:16 CET",
+      "id": "7engr7vwVC91UxkARNz9eJVDj7RpZ3Fo8AJUsJHcoGjr-1795664476017"
     }
   ],
   "feed_stats": {
-    "emitted": 21357,
-    "per_min": 139.45,
+    "emitted": 21404,
+    "per_min": 139.14,
     "by_decision": {
-      "seen": 16375,
-      "rejected": 4458,
-      "accepted": 262,
-      "skipped": 262
+      "seen": 16399,
+      "rejected": 4477,
+      "accepted": 264,
+      "skipped": 264
     },
     "by_source": {
-      "new": 3219,
+      "new": 3221,
       "pump_logs": 426,
       "ds_search": 1611,
       "trending_1h": 1262,
-      "trending_5m": 1880,
+      "trending_5m": 1886,
       "ds_boosts_top": 537,
-      "ds_boosts": 3031,
-      "ds_profiles": 2940,
-      "watchlist": 6451
+      "ds_boosts": 3039,
+      "ds_profiles": 2949,
+      "watchlist": 6473
     },
     "pumpfun": 8516
   },
@@ -8531,7 +8499,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.4,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
