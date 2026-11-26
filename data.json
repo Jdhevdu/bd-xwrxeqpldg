@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-26 07:15:31 CET",
+  "exported_at": "2026-11-26 07:16:32 CET",
   "last_update": "2026-11-26 07:15:22 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -107,7 +107,7 @@
     "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.4,
-    "work_p95_ms": 0.9,
+    "work_p95_ms": 1.0,
     "work_max_ms": 166.5,
     "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
@@ -122,7 +122,7 @@
     "cycles": 5237,
     "pools_scanned": 810854,
     "unique_pools": 20006,
-    "prefilter_rejected": 144360,
+    "prefilter_rejected": 144361,
     "safety_rejected": 3622,
     "scored": 10910,
     "buys": 88,
@@ -340,6 +340,15 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-26 07:16:27 CET",
+      "ts": 1795673787.0,
+      "kind": "Rejected",
+      "symbol": "SOL",
+      "reason": "impersonates SOL (mint is not the official one)",
+      "text": "SOL (raydium) - impersonates SOL (mint is not the official one)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 07:15:22 CET",
       "ts": 1795673722.0,
@@ -690,18 +699,18 @@
       "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
       "text": "alx score 69 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
       "curve": false
-    },
-    {
-      "t": "2026-11-26 07:14:29 CET",
-      "ts": 1795673669.0,
-      "kind": "Skipped",
-      "symbol": "FEDORA",
-      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "FEDORA score 77 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-26 07:16:27 CET",
+      "ts": 1795673787.0,
+      "kind": "Rejected",
+      "symbol": "SOL",
+      "reason": "impersonates SOL (mint is not the official one)",
+      "text": "SOL (raydium) - impersonates SOL (mint is not the official one)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 07:15:22 CET",
       "ts": 1795673722.0,
@@ -917,18 +926,9 @@
       "reason": "liquidity $2,162 < $10,000",
       "text": "coin (pumpswap) - liquidity $2,162 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-26 07:14:43 CET",
-      "ts": 1795673683.0,
-      "kind": "Rejected",
-      "symbol": "Bababoi",
-      "reason": "liquidity $2,268 < $10,000",
-      "text": "Bababoi (pumpswap) - liquidity $2,268 < $10,000",
-      "curve": false
     }
   ],
-  "curve_skips": 1988,
+  "curve_skips": 1987,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -3951,7 +3951,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795673731.1379826,
+      "updated_ts": 1795673791.1334422,
       "stages": {
         "discovery": {
           "p50_s": 904.417,
@@ -4018,10 +4018,10 @@
         },
         "bot_to_phone": {
           "p50_s": 0.127,
-          "p95_s": 0.13,
-          "max_s": 0.163,
-          "last_s": 0.127,
-          "n": 93
+          "p95_s": 0.133,
+          "max_s": 0.376,
+          "last_s": 0.126,
+          "n": 151
         },
         "event_to_phone": {
           "p50_s": 0,
@@ -4053,13 +4053,18 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "FEDORA",
+      "token": "SOL",
       "pill": "132 pools",
       "pill_kind": "blue",
       "detail": "20,006 unique pools",
       "pools": 132,
       "unique": 20006,
       "filters": [
+        {
+          "symbol": "SOL",
+          "text": "impersonator",
+          "kind": "Rejected"
+        },
         {
           "symbol": "FEDORA",
           "text": "top 10 > 25%",
@@ -4094,11 +4099,6 @@
           "symbol": "Bababoi",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "Togi",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
@@ -4112,7 +4112,7 @@
       "score": 87,
       "passed": true,
       "status": "passed",
-      "rejected": 147982
+      "rejected": 147983
     },
     "executor": {
       "name": "Executor",
@@ -4303,7 +4303,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "10910 bewertet · 147982 abgelehnt"
+      "detail": "10910 bewertet · 147983 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4416,23 +4416,7 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [
-    {
-      "symbol": "FEDORA",
-      "mint": "FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat",
-      "pool": "69bFbXmMi1D24xXPiEyrzY7uLfLLh84azSLnoMcZUmoo",
-      "score": 30,
-      "reasons": [
-        "Im Trend",
-        "Socials ergänzt"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 133033.0,
-      "origin": "watchlist",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat.png"
-    }
-  ],
+  "radar": [],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4450,66 +4434,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "HOGE",
-      "mint": "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump",
-      "pool": "7CNC9gGegzEfFK8fLXiYUhdtMEeFPQZoND56U1Mxhnor",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 574205.0,
-      "liq": 98815.93,
-      "age_min": 15798.55,
-      "created_at": "2026-11-15T06:56:10Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795673682.915992,
-      "t": "2026-11-26 07:14:42 CET",
-      "id": "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump-1795673682915"
-    },
-    {
-      "symbol": "FEDORA",
-      "mint": "FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat",
-      "pool": "69bFbXmMi1D24xXPiEyrzY7uLfLLh84azSLnoMcZUmoo",
-      "dex": "raydium",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 135744.0,
-      "liq": 72001.36,
-      "age_min": 115.98,
-      "created_at": "2026-11-26T04:18:44Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795673682.9213214,
-      "t": "2026-11-26 07:14:42 CET",
-      "id": "FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat-1795673682921"
-    },
-    {
-      "symbol": "Elonmas",
-      "mint": "54rYvFMMbXmwdTbotcgDYyvMLHtCy2k8WdRqyYXC9yRh",
-      "pool": "3auSzLcLiNBBpsB55gApn7BfqBWL8JuHQYUpsE1KVnS1",
-      "dex": "meteora-damm-v2",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 14292.7475804618,
-      "liq": 39241.1794,
-      "age_min": 23.07,
-      "created_at": "2026-11-26T05:51:39Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795673682.9254022,
-      "t": "2026-11-26 07:14:42 CET",
-      "id": "54rYvFMMbXmwdTbotcgDYyvMLHtCy2k8WdRqyYXC9yRh-1795673682925"
-    },
     {
       "symbol": "Zero",
       "mint": "3phHbENA4QdqbvY3P7XfmoGXU5PE6G3Cq9ySf1sjuH2t",
@@ -8461,21 +8385,81 @@
       "ts": 1795673722.7649086,
       "t": "2026-11-26 07:15:22 CET",
       "id": "FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat-1795673722764"
+    },
+    {
+      "symbol": "SOL",
+      "mint": "Cqnm4mkL5tAfBmKqqSwvg4zT2SQWBUuT3DGxhgg21FmM",
+      "pool": "DXKsdZg1W8Fwe6VvqjZarfkT5H3sj3N8LCKdk4jQAnCy",
+      "dex": "raydium",
+      "early": false,
+      "source": "ds_search",
+      "mcap": 2488122420.0,
+      "liq": 2487853483.19,
+      "age_min": 80735.63,
+      "created_at": "2026-10-01T04:40:49Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795673786.9931736,
+      "t": "2026-11-26 07:16:26 CET",
+      "id": "Cqnm4mkL5tAfBmKqqSwvg4zT2SQWBUuT3DGxhgg21FmM-1795673786993"
+    },
+    {
+      "symbol": "SOL",
+      "mint": "6xKicXmEgJEZ8YeWUBKyh8iSU1kJ9fMEUbZJjQfF7dd9",
+      "pool": "81x3UAk1GYDTZktQVMNPSzwQrZfPTBDeSPzVAzrfqMt1",
+      "dex": "raydium",
+      "early": false,
+      "source": "ds_search",
+      "mcap": 2517151229.0,
+      "liq": 2516856971.23,
+      "age_min": 74203.98,
+      "created_at": "2026-10-05T17:32:28Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795673786.998873,
+      "t": "2026-11-26 07:16:26 CET",
+      "id": "6xKicXmEgJEZ8YeWUBKyh8iSU1kJ9fMEUbZJjQfF7dd9-1795673786998"
+    },
+    {
+      "symbol": "SOL",
+      "mint": "Cqnm4mkL5tAfBmKqqSwvg4zT2SQWBUuT3DGxhgg21FmM",
+      "pool": "DXKsdZg1W8Fwe6VvqjZarfkT5H3sj3N8LCKdk4jQAnCy",
+      "dex": "raydium",
+      "early": false,
+      "source": "ds_search",
+      "mcap": 2488122420.0,
+      "liq": 2487853483.19,
+      "age_min": 80735.63,
+      "created_at": "2026-10-01T04:40:49Z",
+      "decision": "rejected",
+      "reason": "impersonates SOL (mint is not the official one)",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795673787.003196,
+      "t": "2026-11-26 07:16:27 CET",
+      "id": "Cqnm4mkL5tAfBmKqqSwvg4zT2SQWBUuT3DGxhgg21FmM-1795673787003"
     }
   ],
   "feed_stats": {
-    "emitted": 39778,
-    "per_min": 129.18,
+    "emitted": 39781,
+    "per_min": 128.78,
     "by_decision": {
-      "seen": 30689,
-      "rejected": 7951,
+      "seen": 30691,
+      "rejected": 7952,
       "accepted": 569,
       "skipped": 569
     },
     "by_source": {
       "new": 5522,
       "pump_logs": 765,
-      "ds_search": 3151,
+      "ds_search": 3154,
       "trending_1h": 2895,
       "trending_5m": 3616,
       "ds_boosts_top": 848,
@@ -8489,7 +8473,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.8,
+  "heartbeat_age_s": 0.9,
   "bot_alive": true,
   "supervisor_alive": true
 }
