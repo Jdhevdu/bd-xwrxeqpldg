@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-26 04:45:40 CET",
-  "last_update": "2026-11-26 04:45:08 CET",
+  "exported_at": "2026-11-26 04:46:00 CET",
+  "last_update": "2026-11-26 04:45:46 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.582847475671784,
@@ -103,13 +103,13 @@
   "loop_latency": {
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
-    "max_ms": 8451.7,
-    "last_ms": 1000.1,
+    "max_ms": 10137.4,
+    "last_ms": 10137.4,
     "n": 400,
     "work_p50_ms": 0.4,
-    "work_p95_ms": 1.0,
+    "work_p95_ms": 0.9,
     "work_max_ms": 131.6,
-    "work_last_ms": 0.4,
+    "work_last_ms": 2.7,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 71.0028229315745,
@@ -119,12 +119,12 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 5123,
+    "cycles": 5124,
     "pools_scanned": 795117,
     "unique_pools": 20004,
     "prefilter_rejected": 140962,
-    "safety_rejected": 3536,
-    "scored": 10619,
+    "safety_rejected": 3537,
+    "scored": 10621,
     "buys": 88,
     "sells": 93
   },
@@ -340,6 +340,60 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-26 04:45:46 CET",
+      "ts": 1795664746.0,
+      "kind": "Skipped",
+      "symbol": "CLAUDIA",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "CLAUDIA score 71 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:45:46 CET",
+      "ts": 1795664746.0,
+      "kind": "Skipped",
+      "symbol": "coin",
+      "reason": "score 51 < 64",
+      "text": "coin score 51 - score 51 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:45:46 CET",
+      "ts": 1795664746.0,
+      "kind": "Skipped",
+      "symbol": "MCAP",
+      "reason": "score 53 < 64",
+      "text": "MCAP score 53 - score 53 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:45:46 CET",
+      "ts": 1795664746.0,
+      "kind": "Scored",
+      "symbol": "CLAUDIA",
+      "reason": "CLAUDIA [trending_5m] score 71 | liq $402,715 | h1 -5.3% | top10 16% | LP 100% | liquidity:15.7 vol_liq:8 buy_pressure:3.7 holders:14.6 authorities:10 lp:10.0 age:3 momentum:0 pump:45 | pump 45 (Volumen zieht an, Viele Käufer, Geringer Price Impact)",
+      "text": "CLAUDIA [trending_5m] score 71 | liq $402,715 | h1 -5.3% | top10 16% | LP 100% | liquidity:15.7 vol_liq:8 buy_pressure:3.7 holders:14.6 authorities:10 lp:10.0 age:3 momentum:0 pump:45 | pump 45 (Volumen zieht an, Viele Käufer, Geringer Price Impact)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:45:43 CET",
+      "ts": 1795664743.0,
+      "kind": "Rejected",
+      "symbol": "SPCX",
+      "reason": "mint authority NOT revoked",
+      "text": "SPCX - mint authority NOT revoked",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:45:43 CET",
+      "ts": 1795664743.0,
+      "kind": "Scored",
+      "symbol": "coin",
+      "reason": "coin [ds_profiles, graduated] score 51 | liq $15,642 | h1 +75.5% | top10 19% | LP 100% | liquidity:0.2 vol_liq:2 buy_pressure:9.7 holders:13.3 authorities:10 lp:10.0 age:2 momentum:0 pump:30 | pump 30 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "text": "coin [ds_profiles, graduated] score 51 | liq $15,642 | h1 +75.5% | top10 19% | LP 100% | liquidity:0.2 vol_liq:2 buy_pressure:9.7 holders:13.3 authorities:10 lp:10.0 age:2 momentum:0 pump:30 | pump 30 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 04:45:23 CET",
       "ts": 1795664723.0,
@@ -645,63 +699,63 @@
       "reason": "dex pump-fun not graduated/allowed",
       "text": "LINK (pump-fun) - dex pump-fun not graduated/allowed",
       "curve": true
-    },
-    {
-      "t": "2026-11-26 04:45:21 CET",
-      "ts": 1795664721.0,
-      "kind": "Rejected",
-      "symbol": "N1",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "N1 (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 04:45:21 CET",
-      "ts": 1795664721.0,
-      "kind": "Rejected",
-      "symbol": "GrenCAT",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "GrenCAT (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 04:45:21 CET",
-      "ts": 1795664721.0,
-      "kind": "Rejected",
-      "symbol": "TOAD",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "TOAD (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 04:45:21 CET",
-      "ts": 1795664721.0,
-      "kind": "Rejected",
-      "symbol": "link",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "link (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 04:45:21 CET",
-      "ts": 1795664721.0,
-      "kind": "Rejected",
-      "symbol": "ONLYFAN",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "ONLYFAN (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 04:45:08 CET",
-      "ts": 1795664708.0,
-      "kind": "Skipped",
-      "symbol": "TBW",
-      "reason": "score 63 < 64",
-      "text": "TBW score 63 - score 63 < 64",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-26 04:45:46 CET",
+      "ts": 1795664746.0,
+      "kind": "Skipped",
+      "symbol": "CLAUDIA",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "CLAUDIA score 71 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:45:46 CET",
+      "ts": 1795664746.0,
+      "kind": "Skipped",
+      "symbol": "coin",
+      "reason": "score 51 < 64",
+      "text": "coin score 51 - score 51 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:45:46 CET",
+      "ts": 1795664746.0,
+      "kind": "Skipped",
+      "symbol": "MCAP",
+      "reason": "score 53 < 64",
+      "text": "MCAP score 53 - score 53 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:45:46 CET",
+      "ts": 1795664746.0,
+      "kind": "Scored",
+      "symbol": "CLAUDIA",
+      "reason": "CLAUDIA [trending_5m] score 71 | liq $402,715 | h1 -5.3% | top10 16% | LP 100% | liquidity:15.7 vol_liq:8 buy_pressure:3.7 holders:14.6 authorities:10 lp:10.0 age:3 momentum:0 pump:45 | pump 45 (Volumen zieht an, Viele Käufer, Geringer Price Impact)",
+      "text": "CLAUDIA [trending_5m] score 71 | liq $402,715 | h1 -5.3% | top10 16% | LP 100% | liquidity:15.7 vol_liq:8 buy_pressure:3.7 holders:14.6 authorities:10 lp:10.0 age:3 momentum:0 pump:45 | pump 45 (Volumen zieht an, Viele Käufer, Geringer Price Impact)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:45:43 CET",
+      "ts": 1795664743.0,
+      "kind": "Rejected",
+      "symbol": "SPCX",
+      "reason": "mint authority NOT revoked",
+      "text": "SPCX - mint authority NOT revoked",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 04:45:43 CET",
+      "ts": 1795664743.0,
+      "kind": "Scored",
+      "symbol": "coin",
+      "reason": "coin [ds_profiles, graduated] score 51 | liq $15,642 | h1 +75.5% | top10 19% | LP 100% | liquidity:0.2 vol_liq:2 buy_pressure:9.7 holders:13.3 authorities:10 lp:10.0 age:2 momentum:0 pump:30 | pump 30 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "text": "coin [ds_profiles, graduated] score 51 | liq $15,642 | h1 +75.5% | top10 19% | LP 100% | liquidity:0.2 vol_liq:2 buy_pressure:9.7 holders:13.3 authorities:10 lp:10.0 age:2 momentum:0 pump:30 | pump 30 (Im Trend, Socials ergänzt, Geringer Price Impact)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 04:45:23 CET",
       "ts": 1795664723.0,
@@ -871,60 +925,6 @@
       "symbol": "FUCKCANCER",
       "reason": "liquidity $6,138 < $10,000",
       "text": "FUCKCANCER (pumpswap) - liquidity $6,138 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:45:21 CET",
-      "ts": 1795664721.0,
-      "kind": "Rejected",
-      "symbol": "WIF",
-      "reason": "impersonates WIF (mint is not the official one)",
-      "text": "WIF (pump-fun) - impersonates WIF (mint is not the official one)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:45:21 CET",
-      "ts": 1795664721.0,
-      "kind": "Rejected",
-      "symbol": "coin",
-      "reason": "liquidity $0 < $10,000",
-      "text": "coin (pumpswap) - liquidity $0 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:45:21 CET",
-      "ts": 1795664721.0,
-      "kind": "Rejected",
-      "symbol": "XMAS",
-      "reason": "liquidity $0 < $10,000",
-      "text": "XMAS (meteora-damm-v2) - liquidity $0 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:45:21 CET",
-      "ts": 1795664721.0,
-      "kind": "Rejected",
-      "symbol": "Merzsh",
-      "reason": "pool age 6 min < 15",
-      "text": "Merzsh (pumpswap) - pool age 6 min < 15",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:45:08 CET",
-      "ts": 1795664708.0,
-      "kind": "Skipped",
-      "symbol": "TBW",
-      "reason": "score 63 < 64",
-      "text": "TBW score 63 - score 63 < 64",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 04:45:08 CET",
-      "ts": 1795664708.0,
-      "kind": "Skipped",
-      "symbol": "MCAP",
-      "reason": "score 52 < 64",
-      "text": "MCAP score 52 - score 52 < 64",
       "curve": false
     }
   ],
@@ -2731,12 +2731,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795649591.5214171,
-      "t_label": "2026-11-26 00:33:11 CET",
-      "usd": 8.3282,
-      "eur": 7.5354
-    },
-    {
       "t": 1795649614.3582726,
       "t_label": "2026-11-26 00:33:34 CET",
       "usd": 8.3282,
@@ -3929,6 +3923,12 @@
       "t_label": "2026-11-26 04:45:08 CET",
       "usd": 8.3806,
       "eur": 7.5828
+    },
+    {
+      "t": 1795664746.1816146,
+      "t_label": "2026-11-26 04:45:46 CET",
+      "usd": 8.3806,
+      "eur": 7.5828
     }
   ],
   "agents": {
@@ -3944,14 +3944,14 @@
       "price_s": null,
       "price_stale_s": null,
       "stop_to_sell_s": null,
-      "bot_to_phone_s": 0.125,
+      "bot_to_phone_s": 0.124,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795664740.1567738,
+      "updated_ts": 1795664760.3659642,
       "stages": {
         "discovery": {
           "p50_s": 264.962,
@@ -4017,10 +4017,10 @@
           "n": 0
         },
         "bot_to_phone": {
-          "p50_s": 0.125,
+          "p50_s": 0.124,
           "p95_s": 0.13,
           "max_s": 0.157,
-          "last_s": 0.122,
+          "last_s": 0.124,
           "n": 200
         },
         "event_to_phone": {
@@ -4053,13 +4053,28 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "MCAP",
+      "token": "CLAUDIA",
       "pill": "132 pools",
       "pill_kind": "blue",
       "detail": "20,004 unique pools",
       "pools": 132,
       "unique": 20004,
       "filters": [
+        {
+          "symbol": "CLAUDIA",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "SPCX",
+          "text": "mint not revoked",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "coin",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "MCAP",
           "text": "top 10 > 25%",
@@ -4084,35 +4099,20 @@
           "symbol": "PI",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "TURKEY",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "River",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "RASMR",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "MCAP",
-      "pill": "53",
+      "token": "CLAUDIA",
+      "pill": "71",
       "pill_kind": "purple",
-      "detail": "MCAP [trending_1h, graduated] score 53 | liq $17,871 | h1 +129.4% | top10 24% | LP 100% | liquidity:0.8 vol_liq:2 buy_pressure:10.3 holders:11.2 authorities:10 lp:10.0 age:2 momentum:3 pump:30 | pump 30 (Im Trend, Socials ergänzt, Viele Käufer)",
-      "score": 53,
+      "detail": "CLAUDIA [trending_5m] score 71 | liq $402,715 | h1 -5.3% | top10 16% | LP 100% | liquidity:15.7 vol_liq:8 buy_pressure:3.7 holders:14.6 authorities:10 lp:10.0 age:3 momentum:0 pump:45 | pump 45 (Volumen zieht an, Viele Käufer, Geringer Price Impact)",
+      "score": 71,
       "passed": true,
       "status": "passed",
-      "rejected": 144498
+      "rejected": 144499
     },
     "executor": {
       "name": "Executor",
@@ -4299,11 +4299,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20004 Pools · 5123 Scans · Watch 321 · Graduiert 261 · letzter Scan: ds_search 15 · trending_1h 8 · trending_5m 17 · ds_boosts 23 · ds_boosts_top 4 · ds_profiles 21 · watchlist 44"
+      "detail": "20004 Pools · 5124 Scans · Watch 321 · Graduiert 261 · letzter Scan: ds_search 15 · trending_1h 8 · trending_5m 17 · ds_boosts 23 · ds_boosts_top 4 · ds_profiles 21 · watchlist 44"
     },
     {
       "name": "Analyst",
-      "detail": "10619 bewertet · 144498 abgelehnt"
+      "detail": "10621 bewertet · 144499 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4416,7 +4416,56 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "CLAUDIA",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pool": "Fe7bpDYCs74GqiCUF14HwgUMToPKV1d9mDYVX5BTohFr",
+      "score": 45,
+      "reasons": [
+        "Volumen zieht an",
+        "Viele Käufer",
+        "Geringer Price Impact"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 7232422.85258968,
+      "origin": "trending_5m",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM.png"
+    },
+    {
+      "symbol": "MCAP",
+      "mint": "AYij72wApHA4qGV5RbZJhsAVocjHtJJhgoUswV3tpump",
+      "pool": "6BsxczVuomX7VTaH8QDj6jGUwB7WvNcnUGXyjLE4gQCL",
+      "score": 30,
+      "reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Viele Käufer"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 66380.02073,
+      "origin": "trending_1h",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/AYij72wApHA4qGV5RbZJhsAVocjHtJJhgoUswV3tpump.png"
+    },
+    {
+      "symbol": "coin",
+      "mint": "CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump",
+      "pool": "4nPuuequT31Jjvqm9woDKLwR1ag4K6XnoNZRv6uXvKNz",
+      "score": 30,
+      "reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 50897.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4434,135 +4483,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "MCAP",
-      "mint": "AYij72wApHA4qGV5RbZJhsAVocjHtJJhgoUswV3tpump",
-      "pool": "6BsxczVuomX7VTaH8QDj6jGUwB7WvNcnUGXyjLE4gQCL",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 66780.0,
-      "liq": 17687.12,
-      "age_min": 50.85,
-      "created_at": "2026-11-26T02:53:50Z",
-      "decision": "accepted",
-      "reason": "score 52",
-      "score": 52,
-      "pump_score": 25,
-      "pump_reasons": [
-        "Im Trend",
-        "Socials ergänzt"
-      ],
-      "ts": 1795664681.1144152,
-      "t": "2026-11-26 04:44:41 CET",
-      "id": "AYij72wApHA4qGV5RbZJhsAVocjHtJJhgoUswV3tpump-1795664681114"
-    },
-    {
-      "symbol": "coin",
-      "mint": "CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump",
-      "pool": "4nPuuequT31Jjvqm9woDKLwR1ag4K6XnoNZRv6uXvKNz",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 57711.39161,
-      "liq": 16618.4734,
-      "age_min": 31.39,
-      "created_at": "2026-11-26T03:13:40Z",
-      "decision": "accepted",
-      "reason": "score 54",
-      "score": 54,
-      "pump_score": 36,
-      "pump_reasons": [
-        "Im Trend",
-        "Socials ergänzt",
-        "Geringer Price Impact"
-      ],
-      "ts": 1795664703.4589765,
-      "t": "2026-11-26 04:45:03 CET",
-      "id": "CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump-1795664703458"
-    },
-    {
-      "symbol": "MOODENG",
-      "mint": "ED5nyyWEzpPPiWimP8vYm7sD7TD3LAt3Q3gRTWHzPJBY",
-      "pool": "22WrmyTj8x2TRVQen3fxxi2r4Rn6JDHWoMTpsSmn8RUd",
-      "dex": "raydium",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 29277930.7148611,
-      "liq": 1899348.0378,
-      "age_min": 1161171.93,
-      "created_at": "2024-09-10T18:53:08Z",
-      "decision": "rejected",
-      "reason": "top10 holders 58% > 50%",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795664704.0019011,
-      "t": "2026-11-26 04:45:04 CET",
-      "id": "ED5nyyWEzpPPiWimP8vYm7sD7TD3LAt3Q3gRTWHzPJBY-1795664704001"
-    },
-    {
-      "symbol": "GOTF",
-      "mint": "8PfvQMxJpNn1cB4EYHY23xf8WMM93mVh2pQmHncMoxBM",
-      "pool": "A8rfzb5mNMApWhNJ7pqhaSKJTuDkkLkdgSJPPQA2p5K9",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 113250.6498,
-      "liq": 165615.1319,
-      "age_min": 62.84,
-      "created_at": "2026-11-26T02:42:15Z",
-      "decision": "rejected",
-      "reason": "RugCheck danger: Large Amount of LP Unlocked",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795664705.2377958,
-      "t": "2026-11-26 04:45:05 CET",
-      "id": "8PfvQMxJpNn1cB4EYHY23xf8WMM93mVh2pQmHncMoxBM-1795664705237"
-    },
-    {
-      "symbol": "PNP",
-      "mint": "HdpwBx5A6GfCNrD9vAa84Jrr3VSrUjjkek4cyj5T538k",
-      "pool": "HrrvcVJ3gEYa1BA7fF1hSDbJTVZqk7nXStJvcJjzkQck",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 77276.526,
-      "liq": 21522.6089,
-      "age_min": 23.58,
-      "created_at": "2026-11-26T03:21:32Z",
-      "decision": "rejected",
-      "reason": "top10 holders 84% > 50%",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795664706.7396786,
-      "t": "2026-11-26 04:45:06 CET",
-      "id": "HdpwBx5A6GfCNrD9vAa84Jrr3VSrUjjkek4cyj5T538k-1795664706739"
-    },
-    {
-      "symbol": "TBW",
-      "mint": "9FTqGrt13Skmq9ic7G3cv8aWSv696kuXsYsphVLcpump",
-      "pool": "8unrzRNZ4jtS7T58W6UHDPy4CJyrqmn8KQQRr3xqAvD",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 34288.0,
-      "liq": 12163.72,
-      "age_min": 2588.39,
-      "created_at": "2026-11-24T08:36:45Z",
-      "decision": "accepted",
-      "reason": "score 63",
-      "score": 63,
-      "pump_score": 32,
-      "pump_reasons": [
-        "Socials ergänzt"
-      ],
-      "ts": 1795664708.3001473,
-      "t": "2026-11-26 04:45:08 CET",
-      "id": "9FTqGrt13Skmq9ic7G3cv8aWSv696kuXsYsphVLcpump-1795664708300"
-    },
     {
       "symbol": "coin",
       "mint": "CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump",
@@ -8455,26 +8375,166 @@
       "ts": 1795664723.441757,
       "t": "2026-11-26 04:45:23 CET",
       "id": "AYij72wApHA4qGV5RbZJhsAVocjHtJJhgoUswV3tpump-1795664723441"
+    },
+    {
+      "symbol": "coin",
+      "mint": "CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump",
+      "pool": "4nPuuequT31Jjvqm9woDKLwR1ag4K6XnoNZRv6uXvKNz",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 50897.0,
+      "liq": 15641.61,
+      "age_min": 32.05,
+      "created_at": "2026-11-26T03:13:40Z",
+      "decision": "accepted",
+      "reason": "score 51",
+      "score": 51,
+      "pump_score": 30,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795664743.002197,
+      "t": "2026-11-26 04:45:43 CET",
+      "id": "CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump-1795664743002"
+    },
+    {
+      "symbol": "SPCX",
+      "mint": "SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb",
+      "pool": "FjuBy7jjf9DXj9d3R7cHpvcnoFW2iQxf7F7P3vqx4Jza",
+      "dex": "raydium-clmm",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 13428205.0198584,
+      "liq": 2215298.4934,
+      "age_min": 239748.52,
+      "created_at": "2026-06-12T15:57:12Z",
+      "decision": "rejected",
+      "reason": "mint authority NOT revoked",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795664743.398912,
+      "t": "2026-11-26 04:45:43 CET",
+      "id": "SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb-1795664743398"
+    },
+    {
+      "symbol": "CLAUDIA",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pool": "Fe7bpDYCs74GqiCUF14HwgUMToPKV1d9mDYVX5BTohFr",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 7232422.76418317,
+      "liq": 402715.2083,
+      "age_min": 72121.27,
+      "created_at": "2026-10-07T01:44:30Z",
+      "decision": "accepted",
+      "reason": "score 71",
+      "score": 71,
+      "pump_score": 45,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Viele Käufer",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795664746.159582,
+      "t": "2026-11-26 04:45:46 CET",
+      "id": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM-1795664746159"
+    },
+    {
+      "symbol": "MCAP",
+      "mint": "AYij72wApHA4qGV5RbZJhsAVocjHtJJhgoUswV3tpump",
+      "pool": "6BsxczVuomX7VTaH8QDj6jGUwB7WvNcnUGXyjLE4gQCL",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_1h",
+      "mcap": 66380.02073,
+      "liq": 17871.1276,
+      "age_min": 51.94,
+      "created_at": "2026-11-26T02:53:50Z",
+      "decision": "skipped",
+      "reason": "score 53 < 64",
+      "score": 53,
+      "pump_score": 30,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Viele Käufer"
+      ],
+      "ts": 1795664746.1644893,
+      "t": "2026-11-26 04:45:46 CET",
+      "id": "AYij72wApHA4qGV5RbZJhsAVocjHtJJhgoUswV3tpump-1795664746164"
+    },
+    {
+      "symbol": "coin",
+      "mint": "CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump",
+      "pool": "4nPuuequT31Jjvqm9woDKLwR1ag4K6XnoNZRv6uXvKNz",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 50897.0,
+      "liq": 15641.61,
+      "age_min": 32.1,
+      "created_at": "2026-11-26T03:13:40Z",
+      "decision": "skipped",
+      "reason": "score 51 < 64",
+      "score": 51,
+      "pump_score": 30,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795664746.1681304,
+      "t": "2026-11-26 04:45:46 CET",
+      "id": "CMmfK9KFjFRPgAEkixMpchNnA5zTz7xYdQkSSc8Upump-1795664746168"
+    },
+    {
+      "symbol": "CLAUDIA",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pool": "Fe7bpDYCs74GqiCUF14HwgUMToPKV1d9mDYVX5BTohFr",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 7232422.76418317,
+      "liq": 402715.2083,
+      "age_min": 72121.27,
+      "created_at": "2026-10-07T01:44:30Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 71,
+      "pump_score": 45,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Viele Käufer",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795664746.1717796,
+      "t": "2026-11-26 04:45:46 CET",
+      "id": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM-1795664746171"
     }
   ],
   "feed_stats": {
-    "emitted": 22035,
-    "per_min": 139.52,
+    "emitted": 22041,
+    "per_min": 139.15,
     "by_decision": {
       "seen": 16854,
-      "rejected": 4626,
-      "accepted": 278,
-      "skipped": 277
+      "rejected": 4627,
+      "accepted": 280,
+      "skipped": 280
     },
     "by_source": {
       "new": 3325,
       "pump_logs": 426,
       "ds_search": 1660,
-      "trending_1h": 1305,
-      "trending_5m": 1948,
+      "trending_1h": 1306,
+      "trending_5m": 1951,
       "ds_boosts_top": 554,
       "ds_boosts": 3135,
-      "ds_profiles": 3030,
+      "ds_profiles": 3032,
       "watchlist": 6652
     },
     "pumpfun": 8765
@@ -8483,7 +8543,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.3,
+  "heartbeat_age_s": 0.6,
   "bot_alive": true,
   "supervisor_alive": true
 }
