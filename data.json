@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-26 13:41:35 CET",
-  "last_update": "2026-11-26 13:41:18 CET",
+  "exported_at": "2026-11-26 13:41:45 CET",
+  "last_update": "2026-11-26 13:41:45 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.557990367510827,
@@ -124,7 +124,7 @@
     "unique_pools": 20016,
     "prefilter_rejected": 155067,
     "safety_rejected": 3787,
-    "scored": 11560,
+    "scored": 11563,
     "buys": 88,
     "sells": 93
   },
@@ -340,6 +340,60 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-26 13:41:45 CET",
+      "ts": 1795696905.0,
+      "kind": "Skipped",
+      "symbol": "Hey",
+      "reason": "score 51 < 64",
+      "text": "Hey score 51 - score 51 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 13:41:45 CET",
+      "ts": 1795696905.0,
+      "kind": "Skipped",
+      "symbol": "xmascoin",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "xmascoin score 65 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 13:41:45 CET",
+      "ts": 1795696905.0,
+      "kind": "Skipped",
+      "symbol": "duk",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "duk score 68 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 13:41:45 CET",
+      "ts": 1795696905.0,
+      "kind": "Skipped",
+      "symbol": "Pinky",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Pinky score 72 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 13:41:45 CET",
+      "ts": 1795696905.0,
+      "kind": "Scored",
+      "symbol": "xmascoin",
+      "reason": "xmascoin [ds_boosts, graduated] score 65 | liq $10,306 | h1 -3.9% | top10 21% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:15 holders:12.3 authorities:10 lp:10.0 age:5 momentum:0 pump:37 | pump 37 (Dex-Boost, Socials ergänzt, Geringer Price Impact)",
+      "text": "xmascoin [ds_boosts, graduated] score 65 | liq $10,306 | h1 -3.9% | top10 21% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:15 holders:12.3 authorities:10 lp:10.0 age:5 momentum:0 pump:37 | pump 37 (Dex-Boost, Socials ergänzt, Geringer Price Impact)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 13:41:38 CET",
+      "ts": 1795696898.0,
+      "kind": "Scored",
+      "symbol": "Hey",
+      "reason": "Hey [ds_profiles, graduated] score 51 | liq $12,074 | h1 +22.1% | top10 27% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:9.5 holders:10.0 authorities:10 lp:10.0 age:2 momentum:0 pump:19 | pump 19 (Geringer Price Impact, Socials ergänzt)",
+      "text": "Hey [ds_profiles, graduated] score 51 | liq $12,074 | h1 +22.1% | top10 27% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:9.5 holders:10.0 authorities:10 lp:10.0 age:2 momentum:0 pump:19 | pump 19 (Geringer Price Impact, Socials ergänzt)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 13:41:34 CET",
       "ts": 1795696894.0,
@@ -645,63 +699,63 @@
       "reason": "liquidity $1,589 < $10,000",
       "text": "OG (pumpswap) - liquidity $1,589 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-26 13:41:07 CET",
-      "ts": 1795696867.0,
-      "kind": "Rejected",
-      "symbol": "RSA",
-      "reason": "liquidity $1,829 < $10,000",
-      "text": "RSA (pumpswap) - liquidity $1,829 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 13:41:07 CET",
-      "ts": 1795696867.0,
-      "kind": "Rejected",
-      "symbol": "NUBU",
-      "reason": "liquidity $2,020 < $10,000",
-      "text": "NUBU (pumpswap) - liquidity $2,020 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 13:41:07 CET",
-      "ts": 1795696867.0,
-      "kind": "Rejected",
-      "symbol": "STRUCK",
-      "reason": "liquidity $2,183 < $10,000",
-      "text": "STRUCK (pumpswap) - liquidity $2,183 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 13:41:07 CET",
-      "ts": 1795696867.0,
-      "kind": "Rejected",
-      "symbol": "Ascend",
-      "reason": "liquidity $2,189 < $10,000",
-      "text": "Ascend (pumpswap) - liquidity $2,189 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 13:41:07 CET",
-      "ts": 1795696867.0,
-      "kind": "Rejected",
-      "symbol": "Oro",
-      "reason": "liquidity $2,208 < $10,000",
-      "text": "Oro (pumpswap) - liquidity $2,208 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 13:41:07 CET",
-      "ts": 1795696867.0,
-      "kind": "Rejected",
-      "symbol": "gob",
-      "reason": "liquidity $2,386 < $10,000",
-      "text": "gob (pumpswap) - liquidity $2,386 < $10,000",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-26 13:41:45 CET",
+      "ts": 1795696905.0,
+      "kind": "Skipped",
+      "symbol": "Hey",
+      "reason": "score 51 < 64",
+      "text": "Hey score 51 - score 51 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 13:41:45 CET",
+      "ts": 1795696905.0,
+      "kind": "Skipped",
+      "symbol": "xmascoin",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "xmascoin score 65 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 13:41:45 CET",
+      "ts": 1795696905.0,
+      "kind": "Skipped",
+      "symbol": "duk",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "duk score 68 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 13:41:45 CET",
+      "ts": 1795696905.0,
+      "kind": "Skipped",
+      "symbol": "Pinky",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Pinky score 72 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 13:41:45 CET",
+      "ts": 1795696905.0,
+      "kind": "Scored",
+      "symbol": "xmascoin",
+      "reason": "xmascoin [ds_boosts, graduated] score 65 | liq $10,306 | h1 -3.9% | top10 21% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:15 holders:12.3 authorities:10 lp:10.0 age:5 momentum:0 pump:37 | pump 37 (Dex-Boost, Socials ergänzt, Geringer Price Impact)",
+      "text": "xmascoin [ds_boosts, graduated] score 65 | liq $10,306 | h1 -3.9% | top10 21% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:15 holders:12.3 authorities:10 lp:10.0 age:5 momentum:0 pump:37 | pump 37 (Dex-Boost, Socials ergänzt, Geringer Price Impact)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 13:41:38 CET",
+      "ts": 1795696898.0,
+      "kind": "Scored",
+      "symbol": "Hey",
+      "reason": "Hey [ds_profiles, graduated] score 51 | liq $12,074 | h1 +22.1% | top10 27% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:9.5 holders:10.0 authorities:10 lp:10.0 age:2 momentum:0 pump:19 | pump 19 (Geringer Price Impact, Socials ergänzt)",
+      "text": "Hey [ds_profiles, graduated] score 51 | liq $12,074 | h1 +22.1% | top10 27% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:9.5 holders:10.0 authorities:10 lp:10.0 age:2 momentum:0 pump:19 | pump 19 (Geringer Price Impact, Socials ergänzt)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 13:41:34 CET",
       "ts": 1795696894.0,
@@ -872,63 +926,9 @@
       "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
       "text": "Grodia score 80 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
       "curve": false
-    },
-    {
-      "t": "2026-11-26 13:41:18 CET",
-      "ts": 1795696878.0,
-      "kind": "Skipped",
-      "symbol": "NORFEATH",
-      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "NORFEATH score 81 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 13:41:18 CET",
-      "ts": 1795696878.0,
-      "kind": "Skipped",
-      "symbol": "Hey",
-      "reason": "score 51 < 64",
-      "text": "Hey score 51 - score 51 < 64",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 13:41:18 CET",
-      "ts": 1795696878.0,
-      "kind": "Skipped",
-      "symbol": "Pinky",
-      "reason": "score 58 < 64",
-      "text": "Pinky score 58 - score 58 < 64",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 13:41:18 CET",
-      "ts": 1795696878.0,
-      "kind": "Skipped",
-      "symbol": "xmascoin",
-      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "xmascoin score 65 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 13:41:18 CET",
-      "ts": 1795696878.0,
-      "kind": "Skipped",
-      "symbol": "duk",
-      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "duk score 68 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 13:41:18 CET",
-      "ts": 1795696878.0,
-      "kind": "Scored",
-      "symbol": "Santa",
-      "reason": "Santa [ds_boosts] score 69 | liq $24,738 | h1 +3.9% | top10 18% | LP 100% | liquidity:2.4 vol_liq:8 buy_pressure:11.3 holders:13.5 authorities:10 lp:10.0 age:5 momentum:5 pump:35 | pump 35 (Dex-Boost, Socials ergänzt)",
-      "text": "Santa [ds_boosts] score 69 | liq $24,738 | h1 +3.9% | top10 18% | LP 100% | liquidity:2.4 vol_liq:8 buy_pressure:11.3 holders:13.5 authorities:10 lp:10.0 age:5 momentum:5 pump:35 | pump 35 (Dex-Boost, Socials ergänzt)",
-      "curve": false
     }
   ],
-  "curve_skips": 2583,
+  "curve_skips": 2574,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -2731,12 +2731,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795681223.6553905,
-      "t_label": "2026-11-26 09:20:23 CET",
-      "usd": 8.363,
-      "eur": 7.567
-    },
-    {
       "t": 1795681265.7448883,
       "t_label": "2026-11-26 09:21:05 CET",
       "usd": 8.3608,
@@ -3929,6 +3923,12 @@
       "t_label": "2026-11-26 13:41:18 CET",
       "usd": 8.3531,
       "eur": 7.558
+    },
+    {
+      "t": 1795696905.1182995,
+      "t_label": "2026-11-26 13:41:45 CET",
+      "usd": 8.3531,
+      "eur": 7.558
     }
   ],
   "agents": {
@@ -3951,7 +3951,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795696893.847781,
+      "updated_ts": 1795696903.8475988,
       "stages": {
         "discovery": {
           "p50_s": 55.403,
@@ -4020,7 +4020,7 @@
           "p50_s": 0.125,
           "p95_s": 0.131,
           "max_s": 0.158,
-          "last_s": 0.124,
+          "last_s": 0.127,
           "n": 200
         },
         "event_to_phone": {
@@ -4053,13 +4053,23 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "Pinky",
+      "token": "xmascoin",
       "pill": "132 pools",
       "pill_kind": "blue",
       "detail": "20,016 unique pools",
       "pools": 132,
       "unique": 20016,
       "filters": [
+        {
+          "symbol": "xmascoin",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "Hey",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "Pinky",
           "text": "top 10 > 25%",
@@ -4089,27 +4099,17 @@
           "symbol": "STRUCK",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "Ascend",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "Oro",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "Pinky",
-      "pill": "72",
+      "token": "xmascoin",
+      "pill": "65",
       "pill_kind": "purple",
-      "detail": "Pinky [trending_5m, graduated] score 72 | liq $15,824 | h1 +13.3% | top10 15% | LP 100% | liquidity:0.3 vol_liq:2 buy_pressure:11.2 holders:15 authorities:10 lp:10.0 age:5 momentum:10 narrative:PINKY pump:41 | narrative PINKY | pump 41 (Holder wachsen, Narrativ PINKY, Viele Käufer)",
-      "score": 72,
+      "detail": "xmascoin [ds_boosts, graduated] score 65 | liq $10,306 | h1 -3.9% | top10 21% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:15 holders:12.3 authorities:10 lp:10.0 age:5 momentum:0 pump:37 | pump 37 (Dex-Boost, Socials ergänzt, Geringer Price Impact)",
+      "score": 65,
       "passed": true,
       "status": "passed",
       "rejected": 158854
@@ -4311,7 +4311,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "11560 bewertet · 158854 abgelehnt"
+      "detail": "11563 bewertet · 158854 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4426,51 +4426,19 @@
   },
   "radar": [
     {
-      "symbol": "Grodia",
-      "mint": "6HS1aeSk7osT5B1CzLp1HTRTAweFr5wurfMHS4vppump",
-      "pool": "7wNXypS79Whx7vX8NCrkdhQAFiYVbQZbBuqrRdKMRbve",
-      "score": 53,
+      "symbol": "Pinky",
+      "mint": "Ag6hKhaYos8a2taqpq1nrqD9B4ArtFN3Nny6tuEZpump",
+      "pool": "6jozJ4s8nA3pUZbXC3AEvqcVUG9PLj4SvAdNxYTAtZHD",
+      "score": 41,
       "reasons": [
-        "Dex-Boost",
-        "Im Trend",
-        "Kaufdruck hoch"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 317466.338748223,
-      "origin": "trending_1h",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/6HS1aeSk7osT5B1CzLp1HTRTAweFr5wurfMHS4vppump.png"
-    },
-    {
-      "symbol": "NORFEATH",
-      "mint": "3gmFG4sFDJErDV8pacFrL2uUPXeGJTYLjfRy4hFypump",
-      "pool": "FUzScAtZzSt9rzMtt2pCDLPpJ1ikYC5LgDNjYtfWyqdj",
-      "score": 49,
-      "reasons": [
-        "Dex-Boost",
-        "Im Trend",
+        "Holder wachsen",
+        "Narrativ PINKY",
         "Viele Käufer"
       ],
       "early": false,
       "tag": null,
-      "mcap": 484289.086331718,
+      "mcap": 49118.52506,
       "origin": "trending_5m",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/3gmFG4sFDJErDV8pacFrL2uUPXeGJTYLjfRy4hFypump.png"
-    },
-    {
-      "symbol": "Pinky",
-      "mint": "Ag6hKhaYos8a2taqpq1nrqD9B4ArtFN3Nny6tuEZpump",
-      "pool": "6jozJ4s8nA3pUZbXC3AEvqcVUG9PLj4SvAdNxYTAtZHD",
-      "score": 37,
-      "reasons": [
-        "Holder wachsen",
-        "Narrativ PINKY",
-        "Im Trend"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 45394.0,
-      "origin": "watchlist",
       "image_url": "https://cdn.dexscreener.com/tokens/solana/Ag6hKhaYos8a2taqpq1nrqD9B4ArtFN3Nny6tuEZpump.png"
     },
     {
@@ -4506,21 +4474,6 @@
       "image_url": "https://cdn.dexscreener.com/tokens/solana/DG2EJSEtPBge5F7zBCTZG78p27LTCiq8tUkJ39qupump.png"
     },
     {
-      "symbol": "Santa",
-      "mint": "CcpN5RXTEjbRqbtuHoxyiMZorzsghbfpeyYQjSvTgS27",
-      "pool": "4P4WjRDEihtBCa4M1Fnrvf1f9JuLspqzo1smCR1Mnr7v",
-      "score": 35,
-      "reasons": [
-        "Dex-Boost",
-        "Socials ergänzt"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 185136.0,
-      "origin": "ds_boosts",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/CcpN5RXTEjbRqbtuHoxyiMZorzsghbfpeyYQjSvTgS27.png"
-    },
-    {
       "symbol": "Hey",
       "mint": "F9CwhBgSsEJuCigbodtUH257EqQpRSzKLKwHPPKNpump",
       "pool": "CAtr14PDQ2ZBY5geCLu4c5nynPYzfU2kr8V6L22LF76Y",
@@ -4553,126 +4506,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "Hormzg",
-      "mint": "7Y58eSL2156fM8YhbKYhkvUjHRNKAoXCSnKCSTemmoon",
-      "pool": "C5cWQFKCo7VSU2z1Zg9kCCc8Ewkv3GoxSwnqJiZioYc",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "new",
-      "mcap": 47085.44235,
-      "liq": 88882.8278,
-      "age_min": 0.68,
-      "created_at": "2026-11-26T12:40:26Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795696866.698306,
-      "t": "2026-11-26 13:41:06 CET",
-      "id": "7Y58eSL2156fM8YhbKYhkvUjHRNKAoXCSnKCSTemmoon-1795696866698"
-    },
-    {
-      "symbol": "HUNAN",
-      "mint": "8DxH1yDDw3d9XV3uvFaXfZNaWn8QGmH5hmfBUaMBpump",
-      "pool": "E69aqq1CGTcREVGvZFByKy3eWgB49WwiG6vAe2ThPzi1",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "new",
-      "mcap": 2817.144358,
-      "liq": 2175.8898,
-      "age_min": 0.7,
-      "created_at": "2026-11-26T12:40:25Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795696866.7041397,
-      "t": "2026-11-26 13:41:06 CET",
-      "id": "8DxH1yDDw3d9XV3uvFaXfZNaWn8QGmH5hmfBUaMBpump-1795696866704"
-    },
-    {
-      "symbol": "CAT",
-      "mint": "HP2JaPWyJn6zVZCogVAovKE9rvdsmZsxTET4V6cupump",
-      "pool": "GocXAxHkNonTnjAfEgqhu1qGakAjVif9QLU7UZU8yUoL",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "new",
-      "mcap": 4439.652533,
-      "liq": 3192.5983,
-      "age_min": 0.83,
-      "created_at": "2026-11-26T12:40:17Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795696866.7079723,
-      "t": "2026-11-26 13:41:06 CET",
-      "id": "HP2JaPWyJn6zVZCogVAovKE9rvdsmZsxTET4V6cupump-1795696866707"
-    },
-    {
-      "symbol": "抱抱我",
-      "mint": "8MPwUtwqJvAiq7uradM8ypyMar2puz6C7VuiBvj9pump",
-      "pool": "DLZs7Uxac5P8ZjEE6MTJoKb2LJwHAZVA4JfZuNAPWk6i",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "new",
-      "mcap": 4053.162445,
-      "liq": 2342.539,
-      "age_min": 0.85,
-      "created_at": "2026-11-26T12:40:16Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795696866.7119784,
-      "t": "2026-11-26 13:41:06 CET",
-      "id": "8MPwUtwqJvAiq7uradM8ypyMar2puz6C7VuiBvj9pump-1795696866711"
-    },
-    {
-      "symbol": "Gib",
-      "mint": "3eAoF96qnSRLJhVVfp1xquhsktgs3SAWutPde86ipump",
-      "pool": "GHCTNbiPpMsC6zvg9mSPJ7mLju9YjAWYqEiLUctFuoig",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "new",
-      "mcap": 5144.879857,
-      "liq": 3709.2184,
-      "age_min": 0.9,
-      "created_at": "2026-11-26T12:40:13Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795696866.7156308,
-      "t": "2026-11-26 13:41:06 CET",
-      "id": "3eAoF96qnSRLJhVVfp1xquhsktgs3SAWutPde86ipump-1795696866715"
-    },
-    {
-      "symbol": "FLOW",
-      "mint": "HHfPJJuDDig3yD7qU3t25pEnmbEmd3d7iCRz9cAcEwQX",
-      "pool": "DiT5hUwki5H3u3kZW5En1C4CuHwzBTi9Vo3hrpMTtXaJ",
-      "dex": "meteora-damm-v2",
-      "early": false,
-      "source": "new",
-      "mcap": 6908.508903,
-      "liq": 6743.1374,
-      "age_min": 0.96,
-      "created_at": "2026-11-26T12:40:09Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795696866.7192342,
-      "t": "2026-11-26 13:41:06 CET",
-      "id": "HHfPJJuDDig3yD7qU3t25pEnmbEmd3d7iCRz9cAcEwQX-1795696866719"
-    },
     {
       "symbol": "OMEGA",
       "mint": "3dpkjiwoH8pE3Vqj4G79EPvWbSCSycMYr3V1G3fnpump",
@@ -8612,27 +8445,169 @@
       "ts": 1795696894.5365715,
       "t": "2026-11-26 13:41:34 CET",
       "id": "Ag6hKhaYos8a2taqpq1nrqD9B4ArtFN3Nny6tuEZpump-1795696894536"
+    },
+    {
+      "symbol": "Hey",
+      "mint": "F9CwhBgSsEJuCigbodtUH257EqQpRSzKLKwHPPKNpump",
+      "pool": "CAtr14PDQ2ZBY5geCLu4c5nynPYzfU2kr8V6L22LF76Y",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 35157.0,
+      "liq": 12074.01,
+      "age_min": 42.23,
+      "created_at": "2026-11-26T11:59:25Z",
+      "decision": "accepted",
+      "reason": "score 51",
+      "score": 51,
+      "pump_score": 19,
+      "pump_reasons": [
+        "Geringer Price Impact",
+        "Socials ergänzt"
+      ],
+      "ts": 1795696898.7813272,
+      "t": "2026-11-26 13:41:38 CET",
+      "id": "F9CwhBgSsEJuCigbodtUH257EqQpRSzKLKwHPPKNpump-1795696898781"
+    },
+    {
+      "symbol": "xmascoin",
+      "mint": "DTLJXMxGdD1tMhKXurxbS7aqX3j79YkCkGQsQu5Zpump",
+      "pool": "C2JV9WD4GhJKnxYXPfopVzdrmzZT1BdsVpTXEe7BQNH6",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 26688.0,
+      "liq": 10305.55,
+      "age_min": 277.02,
+      "created_at": "2026-11-26T08:04:44Z",
+      "decision": "accepted",
+      "reason": "score 65",
+      "score": 65,
+      "pump_score": 37,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795696905.0936525,
+      "t": "2026-11-26 13:41:45 CET",
+      "id": "DTLJXMxGdD1tMhKXurxbS7aqX3j79YkCkGQsQu5Zpump-1795696905093"
+    },
+    {
+      "symbol": "Pinky",
+      "mint": "Ag6hKhaYos8a2taqpq1nrqD9B4ArtFN3Nny6tuEZpump",
+      "pool": "6jozJ4s8nA3pUZbXC3AEvqcVUG9PLj4SvAdNxYTAtZHD",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 49118.52506,
+      "liq": 15824.3751,
+      "age_min": 60.52,
+      "created_at": "2026-11-26T11:41:14Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 72,
+      "pump_score": 41,
+      "pump_reasons": [
+        "Holder wachsen",
+        "Narrativ PINKY",
+        "Viele Käufer"
+      ],
+      "ts": 1795696905.0982537,
+      "t": "2026-11-26 13:41:45 CET",
+      "id": "Ag6hKhaYos8a2taqpq1nrqD9B4ArtFN3Nny6tuEZpump-1795696905098"
+    },
+    {
+      "symbol": "duk",
+      "mint": "DG2EJSEtPBge5F7zBCTZG78p27LTCiq8tUkJ39qupump",
+      "pool": "4XVReVDHQDFUM6FfvTmo7FdmEq7ZGWxZ1Jhj7qVA68wx",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 42795.0,
+      "liq": 14731.58,
+      "age_min": 155.25,
+      "created_at": "2026-11-26T10:06:30Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 68,
+      "pump_score": 35,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795696905.1025429,
+      "t": "2026-11-26 13:41:45 CET",
+      "id": "DG2EJSEtPBge5F7zBCTZG78p27LTCiq8tUkJ39qupump-1795696905102"
+    },
+    {
+      "symbol": "xmascoin",
+      "mint": "DTLJXMxGdD1tMhKXurxbS7aqX3j79YkCkGQsQu5Zpump",
+      "pool": "C2JV9WD4GhJKnxYXPfopVzdrmzZT1BdsVpTXEe7BQNH6",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 26688.0,
+      "liq": 10305.55,
+      "age_min": 277.02,
+      "created_at": "2026-11-26T08:04:44Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 65,
+      "pump_score": 37,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795696905.107504,
+      "t": "2026-11-26 13:41:45 CET",
+      "id": "DTLJXMxGdD1tMhKXurxbS7aqX3j79YkCkGQsQu5Zpump-1795696905107"
+    },
+    {
+      "symbol": "Hey",
+      "mint": "F9CwhBgSsEJuCigbodtUH257EqQpRSzKLKwHPPKNpump",
+      "pool": "CAtr14PDQ2ZBY5geCLu4c5nynPYzfU2kr8V6L22LF76Y",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 35157.0,
+      "liq": 12074.01,
+      "age_min": 42.34,
+      "created_at": "2026-11-26T11:59:25Z",
+      "decision": "skipped",
+      "reason": "score 51 < 64",
+      "score": 51,
+      "pump_score": 19,
+      "pump_reasons": [
+        "Geringer Price Impact",
+        "Socials ergänzt"
+      ],
+      "ts": 1795696905.111685,
+      "t": "2026-11-26 13:41:45 CET",
+      "id": "F9CwhBgSsEJuCigbodtUH257EqQpRSzKLKwHPPKNpump-1795696905111"
     }
   ],
   "feed_stats": {
-    "emitted": 92515,
-    "per_min": 133.31,
+    "emitted": 92522,
+    "per_min": 133.29,
     "by_decision": {
       "seen": 71916,
       "rejected": 18162,
-      "accepted": 1224,
-      "skipped": 1213
+      "accepted": 1227,
+      "skipped": 1217
     },
     "by_source": {
       "new": 14468,
       "pump_logs": 2619,
       "ds_search": 7631,
       "trending_1h": 7469,
-      "trending_5m": 8982,
+      "trending_5m": 8984,
       "ds_boosts_top": 1031,
-      "ds_boosts": 11708,
-      "ds_profiles": 14369,
-      "watchlist": 24238
+      "ds_boosts": 11710,
+      "ds_profiles": 14371,
+      "watchlist": 24239
     },
     "pumpfun": 37640
   },
@@ -8640,7 +8615,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.8,
+  "heartbeat_age_s": 1.0,
   "bot_alive": true,
   "supervisor_alive": true
 }
