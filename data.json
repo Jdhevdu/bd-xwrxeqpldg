@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-26 01:41:43 CET",
+  "exported_at": "2026-11-26 01:42:44 CET",
   "last_update": "2026-11-26 01:41:40 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -103,13 +103,13 @@
   "loop_latency": {
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
-    "max_ms": 1009.7,
+    "max_ms": 4394.5,
     "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.5,
-    "work_p95_ms": 1.3,
-    "work_max_ms": 10.1,
-    "work_last_ms": 0.4,
+    "work_p95_ms": 1.2,
+    "work_max_ms": 8.7,
+    "work_last_ms": 0.5,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 71.01519294483903,
@@ -119,7 +119,7 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 4962,
+    "cycles": 4963,
     "pools_scanned": 773116,
     "unique_pools": 20007,
     "prefilter_rejected": 135595,
@@ -3951,7 +3951,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795653703.0967348,
+      "updated_ts": 1795653763.4992187,
       "stages": {
         "discovery": {
           "p50_s": 46.739,
@@ -4018,9 +4018,9 @@
         },
         "bot_to_phone": {
           "p50_s": 0.123,
-          "p95_s": 0.129,
+          "p95_s": 0.128,
           "max_s": 0.146,
-          "last_s": 0.123,
+          "last_s": 0.122,
           "n": 200
         },
         "event_to_phone": {
@@ -4299,7 +4299,7 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20007 Pools · 4962 Scans · Watch 339 · Graduiert 250 · letzter Scan: ds_search 13 · trending_5m 12 · trending_1h 10 · ds_boosts_top 6 · ds_boosts 23 · ds_profiles 22 · watchlist 39"
+      "detail": "20007 Pools · 4963 Scans · Watch 339 · Graduiert 250 · letzter Scan: ds_search 13 · trending_5m 12 · trending_1h 10 · ds_boosts_top 6 · ds_boosts 23 · ds_profiles 22 · watchlist 39"
     },
     {
       "name": "Analyst",
@@ -8468,7 +8468,7 @@
   ],
   "feed_stats": {
     "emitted": 109322,
-    "per_min": 137.85,
+    "per_min": 137.69,
     "by_decision": {
       "seen": 83776,
       "rejected": 21034,
@@ -8492,7 +8492,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.1,
+  "heartbeat_age_s": 0.8,
   "bot_alive": true,
   "supervisor_alive": true
 }
