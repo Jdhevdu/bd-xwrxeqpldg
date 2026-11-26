@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-26 15:09:28 CET",
-  "last_update": "2026-11-26 15:09:09 CET",
+  "exported_at": "2026-11-26 15:09:49 CET",
+  "last_update": "2026-11-26 15:09:34 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.581323172958304,
@@ -104,12 +104,12 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 50795.0,
-    "last_ms": 1000.2,
+    "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.5,
     "work_p95_ms": 1.1,
     "work_max_ms": 212.6,
-    "work_last_ms": 0.5,
+    "work_last_ms": 0.4,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 70.98854995615113,
@@ -119,12 +119,12 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 5667,
+    "cycles": 5668,
     "pools_scanned": 867726,
     "unique_pools": 20013,
-    "prefilter_rejected": 157312,
-    "safety_rejected": 3836,
-    "scored": 11845,
+    "prefilter_rejected": 157314,
+    "safety_rejected": 3837,
+    "scored": 11847,
     "buys": 88,
     "sells": 93
   },
@@ -339,6 +339,87 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-26 15:09:45 CET",
+      "ts": 1795702185.0,
+      "kind": "Rejected",
+      "symbol": "AT",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "AT 7K??? (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-26 15:09:45 CET",
+      "ts": 1795702185.0,
+      "kind": "Rejected",
+      "symbol": "Iro",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "Iro (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
+    {
+      "t": "2026-11-26 15:09:34 CET",
+      "ts": 1795702174.0,
+      "kind": "Skipped",
+      "symbol": "Legatum",
+      "reason": "score 55 < 64",
+      "text": "Legatum score 55 - score 55 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 15:09:34 CET",
+      "ts": 1795702174.0,
+      "kind": "Skipped",
+      "symbol": "PAIR",
+      "reason": "score 56 < 64",
+      "text": "PAIR score 56 - score 56 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 15:09:34 CET",
+      "ts": 1795702174.0,
+      "kind": "Skipped",
+      "symbol": "Irochan",
+      "reason": "score 57 < 64",
+      "text": "Irochan score 57 - score 57 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 15:09:34 CET",
+      "ts": 1795702174.0,
+      "kind": "Skipped",
+      "symbol": "xmascoin",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "xmascoin score 82 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 15:09:34 CET",
+      "ts": 1795702174.0,
+      "kind": "Rejected",
+      "symbol": "JIMMY",
+      "reason": "RugCheck danger: Large Amount of LP Unlocked",
+      "text": "JIMMY - RugCheck danger: Large Amount of LP Unlocked",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 15:09:34 CET",
+      "ts": 1795702174.0,
+      "kind": "Scored",
+      "symbol": "Irochan",
+      "reason": "Irochan [watchlist, graduated] score 57 | liq $10,715 | h1 -18.1% | top10 14% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:10.6 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:IROCHAN pump:40 | narrative IROCHAN | pump 40 (Volumen zieht an, Narrativ IROCHAN, Geringer Price Impact)",
+      "text": "Irochan [watchlist, graduated] score 57 | liq $10,715 | h1 -18.1% | top10 14% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:10.6 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:IROCHAN pump:40 | narrative IROCHAN | pump 40 (Volumen zieht an, Narrativ IROCHAN, Geringer Price Impact)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 15:09:32 CET",
+      "ts": 1795702172.0,
+      "kind": "Scored",
+      "symbol": "xmascoin",
+      "reason": "xmascoin [ds_boosts, graduated] score 82 | liq $11,820 | h1 +17.1% | top10 22% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:12.2 authorities:10 lp:10.0 age:5 momentum:10 pump:37 | pump 37 (Volumen zieht an, Kaufdruck hoch, Dex-Boost)",
+      "text": "xmascoin [ds_boosts, graduated] score 82 | liq $11,820 | h1 +17.1% | top10 22% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:12.2 authorities:10 lp:10.0 age:5 momentum:10 pump:37 | pump 37 (Volumen zieht an, Kaufdruck hoch, Dex-Boost)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 15:09:23 CET",
       "ts": 1795702163.0,
@@ -617,90 +698,72 @@
       "reason": "dex pump-fun not graduated/allowed",
       "text": "Weila (pump-fun) - dex pump-fun not graduated/allowed",
       "curve": true
-    },
-    {
-      "t": "2026-11-26 15:08:51 CET",
-      "ts": 1795702131.0,
-      "kind": "Rejected",
-      "symbol": "PAIR",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "PAIR (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 15:08:51 CET",
-      "ts": 1795702131.0,
-      "kind": "Rejected",
-      "symbol": "Neiro",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "Neiro Chan (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 15:08:51 CET",
-      "ts": 1795702131.0,
-      "kind": "Rejected",
-      "symbol": "FIRE",
-      "reason": "pool age 1 min < 15",
-      "text": "FIRE (meteora-damm-v2) - pool age 1 min < 15",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 15:08:51 CET",
-      "ts": 1795702131.0,
-      "kind": "Rejected",
-      "symbol": "OMEGA",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "OMEGA (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 15:08:51 CET",
-      "ts": 1795702131.0,
-      "kind": "Rejected",
-      "symbol": "SCHITTY",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "SCHITTY (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 15:08:51 CET",
-      "ts": 1795702131.0,
-      "kind": "Rejected",
-      "symbol": "Pair",
-      "reason": "dex meteora-dbc not graduated/allowed",
-      "text": "Pair (meteora-dbc) - dex meteora-dbc not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 15:08:42 CET",
-      "ts": 1795702122.0,
-      "kind": "Scored",
-      "symbol": "PAIR",
-      "reason": "PAIR [trending_1h, graduated] score 58 | liq $24,770 | h1 +309.9% | top10 20% | LP 100% | liquidity:2.4 vol_liq:2 buy_pressure:10.6 holders:12.9 authorities:10 lp:10.0 age:2 momentum:3 pump:38 | pump 38 (Viele Käufer, Im Trend, Socials ergänzt)",
-      "text": "PAIR [trending_1h, graduated] score 58 | liq $24,770 | h1 +309.9% | top10 20% | LP 100% | liquidity:2.4 vol_liq:2 buy_pressure:10.6 holders:12.9 authorities:10 lp:10.0 age:2 momentum:3 pump:38 | pump 38 (Viele Käufer, Im Trend, Socials ergänzt)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 15:08:35 CET",
-      "ts": 1795702115.0,
-      "kind": "Rejected",
-      "symbol": "OG",
-      "reason": "liquidity $1,629 < $10,000",
-      "text": "OG (pumpswap) - liquidity $1,629 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 15:08:35 CET",
-      "ts": 1795702115.0,
-      "kind": "Rejected",
-      "symbol": "hep",
-      "reason": "liquidity $1,744 < $10,000",
-      "text": "hep (pumpswap) - liquidity $1,744 < $10,000",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-26 15:09:34 CET",
+      "ts": 1795702174.0,
+      "kind": "Skipped",
+      "symbol": "Legatum",
+      "reason": "score 55 < 64",
+      "text": "Legatum score 55 - score 55 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 15:09:34 CET",
+      "ts": 1795702174.0,
+      "kind": "Skipped",
+      "symbol": "PAIR",
+      "reason": "score 56 < 64",
+      "text": "PAIR score 56 - score 56 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 15:09:34 CET",
+      "ts": 1795702174.0,
+      "kind": "Skipped",
+      "symbol": "Irochan",
+      "reason": "score 57 < 64",
+      "text": "Irochan score 57 - score 57 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 15:09:34 CET",
+      "ts": 1795702174.0,
+      "kind": "Skipped",
+      "symbol": "xmascoin",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "xmascoin score 82 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 15:09:34 CET",
+      "ts": 1795702174.0,
+      "kind": "Rejected",
+      "symbol": "JIMMY",
+      "reason": "RugCheck danger: Large Amount of LP Unlocked",
+      "text": "JIMMY - RugCheck danger: Large Amount of LP Unlocked",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 15:09:34 CET",
+      "ts": 1795702174.0,
+      "kind": "Scored",
+      "symbol": "Irochan",
+      "reason": "Irochan [watchlist, graduated] score 57 | liq $10,715 | h1 -18.1% | top10 14% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:10.6 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:IROCHAN pump:40 | narrative IROCHAN | pump 40 (Volumen zieht an, Narrativ IROCHAN, Geringer Price Impact)",
+      "text": "Irochan [watchlist, graduated] score 57 | liq $10,715 | h1 -18.1% | top10 14% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:10.6 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:IROCHAN pump:40 | narrative IROCHAN | pump 40 (Volumen zieht an, Narrativ IROCHAN, Geringer Price Impact)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 15:09:32 CET",
+      "ts": 1795702172.0,
+      "kind": "Scored",
+      "symbol": "xmascoin",
+      "reason": "xmascoin [ds_boosts, graduated] score 82 | liq $11,820 | h1 +17.1% | top10 22% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:12.2 authorities:10 lp:10.0 age:5 momentum:10 pump:37 | pump 37 (Volumen zieht an, Kaufdruck hoch, Dex-Boost)",
+      "text": "xmascoin [ds_boosts, graduated] score 82 | liq $11,820 | h1 +17.1% | top10 22% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:12.2 authorities:10 lp:10.0 age:5 momentum:10 pump:37 | pump 37 (Volumen zieht an, Kaufdruck hoch, Dex-Boost)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 15:09:23 CET",
       "ts": 1795702163.0,
@@ -862,72 +925,9 @@
       "reason": "score 62 < 64",
       "text": "Legatum score 62 - score 62 < 64",
       "curve": false
-    },
-    {
-      "t": "2026-11-26 15:09:09 CET",
-      "ts": 1795702149.0,
-      "kind": "Skipped",
-      "symbol": "xmascoin",
-      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "xmascoin score 82 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 15:09:09 CET",
-      "ts": 1795702149.0,
-      "kind": "Rejected",
-      "symbol": "ME",
-      "reason": "top10 holders 68% > 50%",
-      "text": "ME - top10 holders 68% > 50%",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 15:09:09 CET",
-      "ts": 1795702149.0,
-      "kind": "Scored",
-      "symbol": "Irochan",
-      "reason": "Irochan [watchlist, graduated] score 57 | liq $10,878 | h1 -15.1% | top10 14% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:10.7 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:IROCHAN pump:40 | narrative IROCHAN | pump 40 (Volumen zieht an, Narrativ IROCHAN, Geringer Price Impact)",
-      "text": "Irochan [watchlist, graduated] score 57 | liq $10,878 | h1 -15.1% | top10 14% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:10.7 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:IROCHAN pump:40 | narrative IROCHAN | pump 40 (Volumen zieht an, Narrativ IROCHAN, Geringer Price Impact)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 15:09:06 CET",
-      "ts": 1795702146.0,
-      "kind": "Scored",
-      "symbol": "xmascoin",
-      "reason": "xmascoin [ds_boosts, graduated] score 82 | liq $11,463 | h1 +10.9% | top10 22% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:12.2 authorities:10 lp:10.0 age:5 momentum:10 pump:37 | pump 37 (Volumen zieht an, Kaufdruck hoch, Dex-Boost)",
-      "text": "xmascoin [ds_boosts, graduated] score 82 | liq $11,463 | h1 +10.9% | top10 22% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:15 holders:12.2 authorities:10 lp:10.0 age:5 momentum:10 pump:37 | pump 37 (Volumen zieht an, Kaufdruck hoch, Dex-Boost)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 15:08:54 CET",
-      "ts": 1795702134.0,
-      "kind": "Scored",
-      "symbol": "Legatum",
-      "reason": "Legatum [ds_profiles, graduated] score 62 | liq $13,329 | h1 +29.5% | top10 28% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:11.1 holders:9.3 authorities:10 lp:10.0 age:2 momentum:0 narrative:LEGATUM pump:27 | narrative LEGATUM | pump 27 (Narrativ LEGATUM, Geringer Price Impact, Socials ergänzt)",
-      "text": "Legatum [ds_profiles, graduated] score 62 | liq $13,329 | h1 +29.5% | top10 28% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:11.1 holders:9.3 authorities:10 lp:10.0 age:2 momentum:0 narrative:LEGATUM pump:27 | narrative LEGATUM | pump 27 (Narrativ LEGATUM, Geringer Price Impact, Socials ergänzt)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 15:08:51 CET",
-      "ts": 1795702131.0,
-      "kind": "Rejected",
-      "symbol": "Irochan",
-      "reason": "pool age 1 min < 15",
-      "text": "Irochan (meteora-damm-v2) - pool age 1 min < 15",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 15:08:51 CET",
-      "ts": 1795702131.0,
-      "kind": "Rejected",
-      "symbol": "Brainiss",
-      "reason": "pool age 1 min < 15",
-      "text": "Brainiss (pumpswap) - pool age 1 min < 15",
-      "curve": false
     }
   ],
-  "curve_skips": 2383,
+  "curve_skips": 2385,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -2732,12 +2732,6 @@
     {
       "t": 1795686042.3913777,
       "t_label": "2026-11-26 10:40:42 CET",
-      "usd": 8.3795,
-      "eur": 7.5819
-    },
-    {
-      "t": 1795686042.3913777,
-      "t_label": "2026-11-26 10:40:42 CET",
       "usd": 8.3858,
       "eur": 7.5876
     },
@@ -3928,6 +3922,12 @@
       "t_label": "2026-11-26 15:09:09 CET",
       "usd": 8.3789,
       "eur": 7.5813
+    },
+    {
+      "t": 1795702174.6549745,
+      "t_label": "2026-11-26 15:09:34 CET",
+      "usd": 8.3789,
+      "eur": 7.5813
     }
   ],
   "agents": {
@@ -3937,33 +3937,33 @@
       "name": "Speed",
       "title": "Latenz",
       "new_to_buy_s": null,
-      "discovery_s": 69.434,
-      "seen_to_score_s": 176.019,
+      "discovery_s": 69.445,
+      "seen_to_score_s": 296.44,
       "score_to_fill_s": null,
       "price_s": null,
       "price_stale_s": null,
       "stop_to_sell_s": null,
-      "bot_to_phone_s": 0.123,
+      "bot_to_phone_s": 0.124,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795702167.0886757,
+      "updated_ts": 1795702187.0974395,
       "stages": {
         "discovery": {
-          "p50_s": 69.434,
+          "p50_s": 69.445,
           "p95_s": 427.354,
           "max_s": 1171.97,
-          "last_s": 808.149,
+          "last_s": 144.357,
           "n": 200
         },
         "seen_to_score": {
-          "p50_s": 176.019,
+          "p50_s": 296.44,
           "p95_s": 3062.553,
           "max_s": 16220.907,
-          "last_s": 440.054,
+          "last_s": 1850.427,
           "n": 200
         },
         "score_to_fill": {
@@ -4016,7 +4016,7 @@
           "n": 0
         },
         "bot_to_phone": {
-          "p50_s": 0.123,
+          "p50_s": 0.124,
           "p95_s": 0.135,
           "max_s": 22.088,
           "last_s": 0.126,
@@ -4052,13 +4052,38 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "Legatum",
+      "token": "AT",
       "pill": "126 pools",
       "pill_kind": "blue",
       "detail": "20,013 unique pools",
       "pools": 126,
       "unique": 20013,
       "filters": [
+        {
+          "symbol": "AT",
+          "text": "dex pump-fun not graduated/allowed",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "Iro",
+          "text": "dex pump-fun not graduated/allowed",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "JIMMY",
+          "text": "dev past rugs",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "Irochan",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "xmascoin",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "Legatum",
           "text": "top 10 > 25%",
@@ -4073,45 +4098,20 @@
           "symbol": "STA",
           "text": "mcap $1,987 < $15,000 (early)",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "OG",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "hep",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "Hindsight",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "NUBU",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "FUND",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "Legatum",
-      "pill": "55",
+      "token": "Irochan",
+      "pill": "57",
       "pill_kind": "purple",
-      "detail": "Legatum [ds_profiles, graduated] score 55 | liq $12,865 | h1 +20.8% | top10 28% | LP 100% | liquidity:0 vol_liq:8 buy_pressure:11.0 holders:9.3 authorities:10 lp:10.0 age:2 momentum:0 narrative:LEGATUM pump:25 | narrative LEGATUM | pump 25 (Narrativ LEGATUM, Socials ergänzt)",
-      "score": 55,
+      "detail": "Irochan [watchlist, graduated] score 57 | liq $10,715 | h1 -18.1% | top10 14% | LP 100% | liquidity:0 vol_liq:2 buy_pressure:10.6 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:IROCHAN pump:40 | narrative IROCHAN | pump 40 (Volumen zieht an, Narrativ IROCHAN, Geringer Price Impact)",
+      "score": 57,
       "passed": true,
       "status": "passed",
-      "rejected": 161148
+      "rejected": 161151
     },
     "executor": {
       "name": "Executor",
@@ -4306,11 +4306,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20013 Pools · 5667 Scans · Watch 341 · Graduiert 296 · letzter Scan: ds_search 16 · trending_1h 17 · trending_5m 17 · ds_boosts 16 · ds_profiles 21 · watchlist 39"
+      "detail": "20013 Pools · 5668 Scans · Watch 341 · Graduiert 296 · letzter Scan: ds_search 16 · trending_1h 17 · trending_5m 17 · ds_boosts 16 · ds_profiles 21 · watchlist 39"
     },
     {
       "name": "Analyst",
-      "detail": "11845 bewertet · 161148 abgelehnt"
+      "detail": "11847 bewertet · 161151 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4441,226 +4441,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "Ducknald",
-      "mint": "BkMMPEFD1n8DuoD7ZD2UJLs2HaRe5hVdvbfAEKqYRXXF",
-      "pool": "BV7aGpepHXDDCjFT52cUUwJBzAQB6LUCLfpm1JjLqPqa",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 2097.29,
-      "liq": 0.0,
-      "age_min": 139.43,
-      "created_at": "2026-11-26T11:49:10Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795702115.5774076,
-      "t": "2026-11-26 15:08:35 CET",
-      "id": "BkMMPEFD1n8DuoD7ZD2UJLs2HaRe5hVdvbfAEKqYRXXF-1795702115577"
-    },
-    {
-      "symbol": "Solana",
-      "mint": "HmY9uswYXLAkbiGRWiePbUVrz182iELMUnDFfT2hpump",
-      "pool": "CuMAQG1rYxPKas2fdqJPNeqSVeX8je5m2JYbp4uqS8HW",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 233.34,
-      "liq": 0.0,
-      "age_min": 142.01,
-      "created_at": "2026-11-26T11:46:35Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795702115.5812302,
-      "t": "2026-11-26 15:08:35 CET",
-      "id": "HmY9uswYXLAkbiGRWiePbUVrz182iELMUnDFfT2hpump-1795702115581"
-    },
-    {
-      "symbol": "LOKI",
-      "mint": "DonZ58SrPrFw5AGUJ9YSq6jmnZqvfN9jByUDPCPEpump",
-      "pool": "24QJ5KoLFURtZyqdGXwTZk9QwTcDwaLPHwj9Xay5GgUR",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 2160.3,
-      "liq": 0.0,
-      "age_min": 159.46,
-      "created_at": "2026-11-26T11:29:08Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795702115.58507,
-      "t": "2026-11-26 15:08:35 CET",
-      "id": "DonZ58SrPrFw5AGUJ9YSq6jmnZqvfN9jByUDPCPEpump-1795702115585"
-    },
-    {
-      "symbol": "Yaranaika",
-      "mint": "HaQsAL1wUyKGpPPnxs69gs4862japa4gTUiwiLhApump",
-      "pool": "4Efg46Lbv5FZAsb9TaDXRUirW3DUvmJvnkhcHdd3xuNb",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 4874.84,
-      "liq": 0.0,
-      "age_min": 176.71,
-      "created_at": "2026-11-26T11:11:53Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795702115.5890481,
-      "t": "2026-11-26 15:08:35 CET",
-      "id": "HaQsAL1wUyKGpPPnxs69gs4862japa4gTUiwiLhApump-1795702115589"
-    },
-    {
-      "symbol": "TheLore",
-      "mint": "8V76kWnur1i5qLpUVBWfhwT3cyxSoW9eA6MnR9Hppump",
-      "pool": "9LbxbL58GKQqpndqJix69Y5ZRdPZ63JQ6NJ1zyfvhExt",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 2983.16,
-      "liq": 0.0,
-      "age_min": 182.36,
-      "created_at": "2026-11-26T11:06:14Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795702115.5930161,
-      "t": "2026-11-26 15:08:35 CET",
-      "id": "8V76kWnur1i5qLpUVBWfhwT3cyxSoW9eA6MnR9Hppump-1795702115593"
-    },
-    {
-      "symbol": "VIBE",
-      "mint": "J8mH9efJ944TWc4X3WFNG8daTM6G41hdg9AMBEg4YsSY",
-      "pool": "FwRXMp7FErMGr9LtSafPEKsYuT75ZwyiiXosakFKdGC4",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 1969.15,
-      "liq": 0.0,
-      "age_min": 181.96,
-      "created_at": "2026-11-26T11:06:38Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795702115.5967057,
-      "t": "2026-11-26 15:08:35 CET",
-      "id": "J8mH9efJ944TWc4X3WFNG8daTM6G41hdg9AMBEg4YsSY-1795702115596"
-    },
-    {
-      "symbol": "Yaranaika",
-      "mint": "6YX1DQfLkEvy8cNQH8ChKed8LG4jicJzad5Jsr9MPkMm",
-      "pool": "AKLsDfA1Zu7n7zFTeQdc4S8ECzgFQCCq9UTzA2apGKzp",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 3438.38,
-      "liq": 0.0,
-      "age_min": 192.71,
-      "created_at": "2026-11-26T10:55:53Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795702115.6008534,
-      "t": "2026-11-26 15:08:35 CET",
-      "id": "6YX1DQfLkEvy8cNQH8ChKed8LG4jicJzad5Jsr9MPkMm-1795702115600"
-    },
-    {
-      "symbol": "FCAT",
-      "mint": "9fj8BVkUP8xrt68trV44TnpJfS7iUaQ3CmugE9bSpump",
-      "pool": "Ch8r31mhab45tBgitB4Cg67ZYo7nff78jUVqE4QNWbWT",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "watchlist",
-      "mcap": 4889.17,
-      "liq": 0.0,
-      "age_min": 236.56,
-      "created_at": "2026-11-26T10:12:02Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795702115.6067,
-      "t": "2026-11-26 15:08:35 CET",
-      "id": "9fj8BVkUP8xrt68trV44TnpJfS7iUaQ3CmugE9bSpump-1795702115606"
-    },
-    {
-      "symbol": "Hey",
-      "mint": "F9CwhBgSsEJuCigbodtUH257EqQpRSzKLKwHPPKNpump",
-      "pool": "CAtr14PDQ2ZBY5geCLu4c5nynPYzfU2kr8V6L22LF76Y",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 38839.0,
-      "liq": 12869.37,
-      "age_min": 129.18,
-      "created_at": "2026-11-26T11:59:25Z",
-      "decision": "rejected",
-      "reason": "dumping -46% in 1h",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795702115.6151724,
-      "t": "2026-11-26 15:08:35 CET",
-      "id": "F9CwhBgSsEJuCigbodtUH257EqQpRSzKLKwHPPKNpump-1795702115615"
-    },
-    {
-      "symbol": "Zero",
-      "mint": "7QcMYR1D3hgrwvDfgcjNhkhez4vBEeznX5jZqdYhXgvR",
-      "pool": "AjswNpZ4pkeJEtBrMzh6ZDYsQSTrtupWfMnZP57mM8pB",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 9125.6599651862,
-      "liq": 12208.5184,
-      "age_min": 7.13,
-      "created_at": "2026-11-26T14:01:28Z",
-      "decision": "rejected",
-      "reason": "pool age 7 min < 15",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795702115.6194532,
-      "t": "2026-11-26 15:08:35 CET",
-      "id": "7QcMYR1D3hgrwvDfgcjNhkhez4vBEeznX5jZqdYhXgvR-1795702115619"
-    },
-    {
-      "symbol": "Pinky",
-      "mint": "Ag6hKhaYos8a2taqpq1nrqD9B4ArtFN3Nny6tuEZpump",
-      "pool": "6jozJ4s8nA3pUZbXC3AEvqcVUG9PLj4SvAdNxYTAtZHD",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 11278.0,
-      "liq": 6717.59,
-      "age_min": 147.36,
-      "created_at": "2026-11-26T11:41:14Z",
-      "decision": "rejected",
-      "reason": "liquidity $6,718 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795702115.6243515,
-      "t": "2026-11-26 15:08:35 CET",
-      "id": "Ag6hKhaYos8a2taqpq1nrqD9B4ArtFN3Nny6tuEZpump-1795702115624"
-    },
     {
       "symbol": "FIONA",
       "mint": "773REsVP9j51ayEQGxCRddPYJup3Xto6vwD6QB16pump",
@@ -8478,35 +8258,277 @@
       "ts": 1795702163.863152,
       "t": "2026-11-26 15:09:23 CET",
       "id": "HkPSDYRcw4uqgRzZMDd5sRnMpE4ungR1K8MRNXnBVtQ2-1795702163863"
+    },
+    {
+      "symbol": "xmascoin",
+      "mint": "DTLJXMxGdD1tMhKXurxbS7aqX3j79YkCkGQsQu5Zpump",
+      "pool": "C2JV9WD4GhJKnxYXPfopVzdrmzZT1BdsVpTXEe7BQNH6",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 33921.0,
+      "liq": 11820.32,
+      "age_min": 364.8,
+      "created_at": "2026-11-26T08:04:44Z",
+      "decision": "accepted",
+      "reason": "score 82",
+      "score": 82,
+      "pump_score": 37,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Kaufdruck hoch",
+        "Dex-Boost"
+      ],
+      "ts": 1795702172.2515254,
+      "t": "2026-11-26 15:09:32 CET",
+      "id": "DTLJXMxGdD1tMhKXurxbS7aqX3j79YkCkGQsQu5Zpump-1795702172251"
+    },
+    {
+      "symbol": "Irochan",
+      "mint": "DCRBawVJ7NAGPaFgPmd12Htwez2SJBqJLW4NC9tUpump",
+      "pool": "Gh4uPiDXoj73jEaJq4gG1GpHWwMihB7MYaDQhxiYQwHk",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 23316.0,
+      "liq": 10715.49,
+      "age_min": 10.22,
+      "created_at": "2026-11-26T13:59:21Z",
+      "decision": "accepted",
+      "reason": "score 57",
+      "score": 57,
+      "pump_score": 40,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Narrativ IROCHAN",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795702174.3257947,
+      "t": "2026-11-26 15:09:34 CET",
+      "id": "DCRBawVJ7NAGPaFgPmd12Htwez2SJBqJLW4NC9tUpump-1795702174325"
+    },
+    {
+      "symbol": "JIMMY",
+      "mint": "3Q7VMGppDLPhaCksZZs5v3BwnbYXLDkuAFcLpRnH62ZV",
+      "pool": "CVqVYEioq6s5tpJKL9rG3orJxZVHmK46BqjTSsWSsA1o",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 12502.21506,
+      "liq": 15013.9996,
+      "age_min": 31.69,
+      "created_at": "2026-11-26T13:37:53Z",
+      "decision": "rejected",
+      "reason": "RugCheck danger: Large Amount of LP Unlocked",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795702174.6268868,
+      "t": "2026-11-26 15:09:34 CET",
+      "id": "3Q7VMGppDLPhaCksZZs5v3BwnbYXLDkuAFcLpRnH62ZV-1795702174626"
+    },
+    {
+      "symbol": "xmascoin",
+      "mint": "DTLJXMxGdD1tMhKXurxbS7aqX3j79YkCkGQsQu5Zpump",
+      "pool": "C2JV9WD4GhJKnxYXPfopVzdrmzZT1BdsVpTXEe7BQNH6",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_boosts",
+      "mcap": 33921.0,
+      "liq": 11820.32,
+      "age_min": 364.84,
+      "created_at": "2026-11-26T08:04:44Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 82,
+      "pump_score": 37,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Kaufdruck hoch",
+        "Dex-Boost"
+      ],
+      "ts": 1795702174.6336985,
+      "t": "2026-11-26 15:09:34 CET",
+      "id": "DTLJXMxGdD1tMhKXurxbS7aqX3j79YkCkGQsQu5Zpump-1795702174633"
+    },
+    {
+      "symbol": "Irochan",
+      "mint": "DCRBawVJ7NAGPaFgPmd12Htwez2SJBqJLW4NC9tUpump",
+      "pool": "Gh4uPiDXoj73jEaJq4gG1GpHWwMihB7MYaDQhxiYQwHk",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 23316.0,
+      "liq": 10715.49,
+      "age_min": 10.23,
+      "created_at": "2026-11-26T13:59:21Z",
+      "decision": "skipped",
+      "reason": "score 57 < 64",
+      "score": 57,
+      "pump_score": 40,
+      "pump_reasons": [
+        "Volumen zieht an",
+        "Narrativ IROCHAN",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795702174.6384304,
+      "t": "2026-11-26 15:09:34 CET",
+      "id": "DCRBawVJ7NAGPaFgPmd12Htwez2SJBqJLW4NC9tUpump-1795702174638"
+    },
+    {
+      "symbol": "PAIR",
+      "mint": "32rBxcFjCFnyqZ41CEPM5AL67X1dcw8w83vZt6Kxpump",
+      "pool": "qkiYfkcm2QGfpNbEpuXvA5wiXq4F6ZdUWnZk2Y19cym",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 119631.0,
+      "liq": 24950.57,
+      "age_min": 44.18,
+      "created_at": "2026-11-26T13:25:24Z",
+      "decision": "skipped",
+      "reason": "score 56 < 64",
+      "score": 56,
+      "pump_score": 27,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795702174.6424072,
+      "t": "2026-11-26 15:09:34 CET",
+      "id": "32rBxcFjCFnyqZ41CEPM5AL67X1dcw8w83vZt6Kxpump-1795702174642"
+    },
+    {
+      "symbol": "Legatum",
+      "mint": "HkPSDYRcw4uqgRzZMDd5sRnMpE4ungR1K8MRNXnBVtQ2",
+      "pool": "V4TmDhKuMG8MMuMxrAc6u8rqaya5rGFAC7Z65ns8eRc",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 38458.0,
+      "liq": 12865.19,
+      "age_min": 20.88,
+      "created_at": "2026-11-26T13:48:42Z",
+      "decision": "skipped",
+      "reason": "score 55 < 64",
+      "score": 55,
+      "pump_score": 25,
+      "pump_reasons": [
+        "Narrativ LEGATUM",
+        "Socials ergänzt"
+      ],
+      "ts": 1795702174.6467843,
+      "t": "2026-11-26 15:09:34 CET",
+      "id": "HkPSDYRcw4uqgRzZMDd5sRnMpE4ungR1K8MRNXnBVtQ2-1795702174646"
+    },
+    {
+      "symbol": "Iro",
+      "mint": "73rFRQhZVikrE5va2rkVvWeoJFnLtNFPJUBjqNupump",
+      "pool": "H2S8FUp41V8b4MktXUncswSeBbLM1nXompEjdieqvVYE",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "new",
+      "mcap": 2848.908485,
+      "liq": 0.0,
+      "age_min": 1.36,
+      "created_at": "2026-11-26T14:08:24Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795702185.3514585,
+      "t": "2026-11-26 15:09:45 CET",
+      "id": "73rFRQhZVikrE5va2rkVvWeoJFnLtNFPJUBjqNupump-1795702185351"
+    },
+    {
+      "symbol": "AT 7K???",
+      "mint": "6Wxe77HAc2F22UYnEHoDJQTfrc5CvpBUy9gfL2BoHJp6",
+      "pool": "ALaiba6d6WCy9VymJz2HTVVxNKUT2jCtiPxz4HPPHQSx",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "new",
+      "mcap": 1995.885291,
+      "liq": 0.0,
+      "age_min": 2.41,
+      "created_at": "2026-11-26T14:07:21Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795702185.3574004,
+      "t": "2026-11-26 15:09:45 CET",
+      "id": "6Wxe77HAc2F22UYnEHoDJQTfrc5CvpBUy9gfL2BoHJp6-1795702185357"
+    },
+    {
+      "symbol": "Iro",
+      "mint": "73rFRQhZVikrE5va2rkVvWeoJFnLtNFPJUBjqNupump",
+      "pool": "H2S8FUp41V8b4MktXUncswSeBbLM1nXompEjdieqvVYE",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "new",
+      "mcap": 2848.908485,
+      "liq": 0.0,
+      "age_min": 1.36,
+      "created_at": "2026-11-26T14:08:24Z",
+      "decision": "rejected",
+      "reason": "dex pump-fun not graduated/allowed",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795702185.3617868,
+      "t": "2026-11-26 15:09:45 CET",
+      "id": "73rFRQhZVikrE5va2rkVvWeoJFnLtNFPJUBjqNupump-1795702185361"
+    },
+    {
+      "symbol": "AT 7K???",
+      "mint": "6Wxe77HAc2F22UYnEHoDJQTfrc5CvpBUy9gfL2BoHJp6",
+      "pool": "ALaiba6d6WCy9VymJz2HTVVxNKUT2jCtiPxz4HPPHQSx",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "new",
+      "mcap": 1995.885291,
+      "liq": 0.0,
+      "age_min": 2.41,
+      "created_at": "2026-11-26T14:07:21Z",
+      "decision": "rejected",
+      "reason": "dex pump-fun not graduated/allowed",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795702185.3657737,
+      "t": "2026-11-26 15:09:45 CET",
+      "id": "6Wxe77HAc2F22UYnEHoDJQTfrc5CvpBUy9gfL2BoHJp6-1795702185365"
     }
   ],
   "feed_stats": {
-    "emitted": 103651,
-    "per_min": 132.57,
+    "emitted": 103662,
+    "per_min": 132.53,
     "by_decision": {
-      "seen": 80239,
-      "rejected": 20406,
-      "accepted": 1509,
-      "skipped": 1497
+      "seen": 80241,
+      "rejected": 20409,
+      "accepted": 1511,
+      "skipped": 1501
     },
     "by_source": {
-      "new": 16544,
+      "new": 16548,
       "pump_logs": 2737,
       "ds_search": 8564,
       "trending_1h": 8417,
-      "trending_5m": 10190,
+      "trending_5m": 10191,
       "ds_boosts_top": 1033,
-      "ds_boosts": 12924,
-      "ds_profiles": 15944,
-      "watchlist": 27298
+      "ds_boosts": 12926,
+      "ds_profiles": 15946,
+      "watchlist": 27300
     },
-    "pumpfun": 41887
+    "pumpfun": 41891
   },
   "status": "running",
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.6,
+  "heartbeat_age_s": 1.0,
   "bot_alive": true,
   "supervisor_alive": true
 }
