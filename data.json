@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-26 06:46:46 CET",
-  "last_update": "2026-11-26 06:46:19 CET",
+  "exported_at": "2026-11-26 06:47:06 CET",
+  "last_update": "2026-11-26 06:47:00 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.594410093279221,
@@ -107,9 +107,9 @@
     "last_ms": 1000.1,
     "n": 400,
     "work_p50_ms": 0.4,
-    "work_p95_ms": 1.2,
+    "work_p95_ms": 1.1,
     "work_max_ms": 146.9,
-    "work_last_ms": 0.4,
+    "work_last_ms": 0.3,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 71.11109076806208,
@@ -119,12 +119,12 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 5214,
+    "cycles": 5215,
     "pools_scanned": 807947,
     "unique_pools": 20007,
     "prefilter_rejected": 143790,
     "safety_rejected": 3598,
-    "scored": 10845,
+    "scored": 10846,
     "buys": 88,
     "sells": 93
   },
@@ -340,6 +340,33 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-26 06:47:00 CET",
+      "ts": 1795672020.0,
+      "kind": "Skipped",
+      "symbol": "GIVEMAS",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "GIVEMAS score 72 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 06:47:00 CET",
+      "ts": 1795672020.0,
+      "kind": "Skipped",
+      "symbol": "FEDORA",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "FEDORA score 74 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 06:47:00 CET",
+      "ts": 1795672020.0,
+      "kind": "Scored",
+      "symbol": "GIVEMAS",
+      "reason": "GIVEMAS [ds_profiles, graduated] score 72 | liq $10,835 | h1 +11.7% | top10 27% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:9.1 holders:10.0 authorities:10 lp:10.0 age:5 momentum:10 pump:25 | pump 25 (Im Trend, Socials ergänzt)",
+      "text": "GIVEMAS [ds_profiles, graduated] score 72 | liq $10,835 | h1 +11.7% | top10 27% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:9.1 holders:10.0 authorities:10 lp:10.0 age:5 momentum:10 pump:25 | pump 25 (Im Trend, Socials ergänzt)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 06:46:38 CET",
       "ts": 1795671998.0,
@@ -672,36 +699,36 @@
       "reason": "impersonates ... (mint is not the official one)",
       "text": "... (pump-fun) - impersonates ... (mint is not the official one)",
       "curve": false
-    },
-    {
-      "t": "2026-11-26 06:46:08 CET",
-      "ts": 1795671968.0,
-      "kind": "Rejected",
-      "symbol": "STAR",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "STAR (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 06:45:58 CET",
-      "ts": 1795671958.0,
-      "kind": "Skipped",
-      "symbol": "GIVEMAS",
-      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "GIVEMAS score 73 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 06:45:58 CET",
-      "ts": 1795671958.0,
-      "kind": "Skipped",
-      "symbol": "FEDORA",
-      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "text": "FEDORA score 73 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-26 06:47:00 CET",
+      "ts": 1795672020.0,
+      "kind": "Skipped",
+      "symbol": "GIVEMAS",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "GIVEMAS score 72 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 06:47:00 CET",
+      "ts": 1795672020.0,
+      "kind": "Skipped",
+      "symbol": "FEDORA",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "FEDORA score 74 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 06:47:00 CET",
+      "ts": 1795672020.0,
+      "kind": "Scored",
+      "symbol": "GIVEMAS",
+      "reason": "GIVEMAS [ds_profiles, graduated] score 72 | liq $10,835 | h1 +11.7% | top10 27% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:9.1 holders:10.0 authorities:10 lp:10.0 age:5 momentum:10 pump:25 | pump 25 (Im Trend, Socials ergänzt)",
+      "text": "GIVEMAS [ds_profiles, graduated] score 72 | liq $10,835 | h1 +11.7% | top10 27% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:9.1 holders:10.0 authorities:10 lp:10.0 age:5 momentum:10 pump:25 | pump 25 (Im Trend, Socials ergänzt)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 06:46:38 CET",
       "ts": 1795671998.0,
@@ -899,36 +926,9 @@
       "reason": "liquidity $2,254 < $10,000",
       "text": "coin (pumpswap) - liquidity $2,254 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-26 06:46:10 CET",
-      "ts": 1795671970.0,
-      "kind": "Rejected",
-      "symbol": "Bababoi",
-      "reason": "liquidity $2,276 < $10,000",
-      "text": "Bababoi (pumpswap) - liquidity $2,276 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 06:46:10 CET",
-      "ts": 1795671970.0,
-      "kind": "Rejected",
-      "symbol": "Togi",
-      "reason": "liquidity $3,192 < $10,000",
-      "text": "Togi (pumpswap) - liquidity $3,192 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 06:46:10 CET",
-      "ts": 1795671970.0,
-      "kind": "Rejected",
-      "symbol": "STUDS",
-      "reason": "liquidity $3,406 < $10,000",
-      "text": "STUDS (pumpswap) - liquidity $3,406 < $10,000",
-      "curve": false
     }
   ],
-  "curve_skips": 2087,
+  "curve_skips": 2083,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -2731,12 +2731,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795655660.2333627,
-      "t_label": "2026-11-26 02:14:20 CET",
-      "usd": 8.3616,
-      "eur": 7.5657
-    },
-    {
       "t": 1795655944.547995,
       "t_label": "2026-11-26 02:19:04 CET",
       "usd": 8.3616,
@@ -3929,6 +3923,12 @@
       "t_label": "2026-11-26 06:46:19 CET",
       "usd": 8.3933,
       "eur": 7.5944
+    },
+    {
+      "t": 1795672020.6108742,
+      "t_label": "2026-11-26 06:47:00 CET",
+      "usd": 8.3933,
+      "eur": 7.5944
     }
   ],
   "agents": {
@@ -3951,7 +3951,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795672005.3398466,
+      "updated_ts": 1795672025.3308976,
       "stages": {
         "discovery": {
           "p50_s": 517.315,
@@ -4018,9 +4018,9 @@
         },
         "bot_to_phone": {
           "p50_s": 0.125,
-          "p95_s": 0.129,
-          "max_s": 0.143,
-          "last_s": 0.119,
+          "p95_s": 0.128,
+          "max_s": 0.133,
+          "last_s": 0.118,
           "n": 200
         },
         "event_to_phone": {
@@ -4053,13 +4053,18 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "FEDORA",
+      "token": "GIVEMAS",
       "pill": "136 pools",
       "pill_kind": "blue",
       "detail": "20,007 unique pools",
       "pools": 136,
       "unique": 20007,
       "filters": [
+        {
+          "symbol": "GIVEMAS",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "FEDORA",
           "text": "top 10 > 25%",
@@ -4094,22 +4099,17 @@
           "symbol": "Togi",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "STUDS",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "FEDORA",
-      "pill": "74",
+      "token": "GIVEMAS",
+      "pill": "72",
       "pill_kind": "purple",
-      "detail": "FEDORA [watchlist, graduated] score 74 | liq $56,671 | h1 -22.5% | top10 20% | LP 100% | liquidity:6.3 vol_liq:15 buy_pressure:10.5 holders:12.9 authorities:10 lp:10.0 age:5 momentum:0 pump:33 | pump 33 (Im Trend, Socials ergänzt, Geringer Price Impact)",
-      "score": 74,
+      "detail": "GIVEMAS [ds_profiles, graduated] score 72 | liq $10,835 | h1 +11.7% | top10 27% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:9.1 holders:10.0 authorities:10 lp:10.0 age:5 momentum:10 pump:25 | pump 25 (Im Trend, Socials ergänzt)",
+      "score": 72,
       "passed": true,
       "status": "passed",
       "rejected": 147388
@@ -4299,11 +4299,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20007 Pools · 5214 Scans · Watch 321 · Graduiert 265 · letzter Scan: ds_search 16 · trending_5m 20 · ds_boosts_top 3 · ds_boosts 26 · watchlist 27 · trending_1h 18 · ds_profiles 26"
+      "detail": "20007 Pools · 5215 Scans · Watch 321 · Graduiert 265 · letzter Scan: ds_search 16 · trending_5m 20 · ds_boosts_top 3 · ds_boosts 26 · watchlist 27 · trending_1h 18 · ds_profiles 26"
     },
     {
       "name": "Analyst",
-      "detail": "10845 bewertet · 147388 abgelehnt"
+      "detail": "10846 bewertet · 147388 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4416,7 +4416,39 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "FEDORA",
+      "mint": "FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat",
+      "pool": "69bFbXmMi1D24xXPiEyrzY7uLfLLh84azSLnoMcZUmoo",
+      "score": 33,
+      "reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 84800.0,
+      "origin": "watchlist",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat.png"
+    },
+    {
+      "symbol": "GIVEMAS",
+      "mint": "BVGHBTnfnvWufgPjBZfKwUkWXQ3tf43RBd9rx9Qgpump",
+      "pool": "AMBGn3RarZUC2YTZxpFhteG2ensXZdn57MrJj4aHrmFk",
+      "score": 25,
+      "reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 29048.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/BVGHBTnfnvWufgPjBZfKwUkWXQ3tf43RBd9rx9Qgpump.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4434,77 +4466,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "FEDORA",
-      "mint": "FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat",
-      "pool": "69bFbXmMi1D24xXPiEyrzY7uLfLLh84azSLnoMcZUmoo",
-      "dex": "raydium",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 84579.0,
-      "liq": 56597.25,
-      "age_min": 87.22,
-      "created_at": "2026-11-26T04:18:44Z",
-      "decision": "accepted",
-      "reason": "score 73",
-      "score": 73,
-      "pump_score": 30,
-      "pump_reasons": [
-        "Im Trend",
-        "Socials ergänzt",
-        "Geringer Price Impact"
-      ],
-      "ts": 1795671957.4607115,
-      "t": "2026-11-26 06:45:57 CET",
-      "id": "FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat-1795671957460"
-    },
-    {
-      "symbol": "GIVEMAS",
-      "mint": "BVGHBTnfnvWufgPjBZfKwUkWXQ3tf43RBd9rx9Qgpump",
-      "pool": "AMBGn3RarZUC2YTZxpFhteG2ensXZdn57MrJj4aHrmFk",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 29061.0,
-      "liq": 10837.52,
-      "age_min": 160.11,
-      "created_at": "2026-11-26T03:05:52Z",
-      "decision": "accepted",
-      "reason": "score 73",
-      "score": 73,
-      "pump_score": 25,
-      "pump_reasons": [
-        "Im Trend",
-        "Socials ergänzt"
-      ],
-      "ts": 1795671958.7052968,
-      "t": "2026-11-26 06:45:58 CET",
-      "id": "BVGHBTnfnvWufgPjBZfKwUkWXQ3tf43RBd9rx9Qgpump-1795671958705"
-    },
-    {
-      "symbol": "FEDORA",
-      "mint": "FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat",
-      "pool": "69bFbXmMi1D24xXPiEyrzY7uLfLLh84azSLnoMcZUmoo",
-      "dex": "raydium",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 84579.0,
-      "liq": 56597.25,
-      "age_min": 87.25,
-      "created_at": "2026-11-26T04:18:44Z",
-      "decision": "skipped",
-      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
-      "score": 73,
-      "pump_score": 30,
-      "pump_reasons": [
-        "Im Trend",
-        "Socials ergänzt",
-        "Geringer Price Impact"
-      ],
-      "ts": 1795671958.7092588,
-      "t": "2026-11-26 06:45:58 CET",
-      "id": "FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat-1795671958709"
-    },
     {
       "symbol": "GIVEMAS",
       "mint": "BVGHBTnfnvWufgPjBZfKwUkWXQ3tf43RBd9rx9Qgpump",
@@ -8465,16 +8426,86 @@
       "ts": 1795671998.5542922,
       "t": "2026-11-26 06:46:38 CET",
       "id": "FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat-1795671998554"
+    },
+    {
+      "symbol": "GIVEMAS",
+      "mint": "BVGHBTnfnvWufgPjBZfKwUkWXQ3tf43RBd9rx9Qgpump",
+      "pool": "AMBGn3RarZUC2YTZxpFhteG2ensXZdn57MrJj4aHrmFk",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 29048.0,
+      "liq": 10834.93,
+      "age_min": 161.14,
+      "created_at": "2026-11-26T03:05:52Z",
+      "decision": "accepted",
+      "reason": "score 72",
+      "score": 72,
+      "pump_score": 25,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795672020.59326,
+      "t": "2026-11-26 06:47:00 CET",
+      "id": "BVGHBTnfnvWufgPjBZfKwUkWXQ3tf43RBd9rx9Qgpump-1795672020593"
+    },
+    {
+      "symbol": "FEDORA",
+      "mint": "FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat",
+      "pool": "69bFbXmMi1D24xXPiEyrzY7uLfLLh84azSLnoMcZUmoo",
+      "dex": "raydium",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 84800.0,
+      "liq": 56671.23,
+      "age_min": 88.28,
+      "created_at": "2026-11-26T04:18:44Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 74,
+      "pump_score": 33,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt",
+        "Geringer Price Impact"
+      ],
+      "ts": 1795672020.5980234,
+      "t": "2026-11-26 06:47:00 CET",
+      "id": "FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat-1795672020598"
+    },
+    {
+      "symbol": "GIVEMAS",
+      "mint": "BVGHBTnfnvWufgPjBZfKwUkWXQ3tf43RBd9rx9Qgpump",
+      "pool": "AMBGn3RarZUC2YTZxpFhteG2ensXZdn57MrJj4aHrmFk",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 29048.0,
+      "liq": 10834.93,
+      "age_min": 161.14,
+      "created_at": "2026-11-26T03:05:52Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 72,
+      "pump_score": 25,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795672020.6017718,
+      "t": "2026-11-26 06:47:00 CET",
+      "id": "BVGHBTnfnvWufgPjBZfKwUkWXQ3tf43RBd9rx9Qgpump-1795672020601"
     }
   ],
   "feed_stats": {
-    "emitted": 36578,
-    "per_min": 131.03,
+    "emitted": 36581,
+    "per_min": 130.89,
     "by_decision": {
       "seen": 28214,
       "rejected": 7357,
-      "accepted": 504,
-      "skipped": 503
+      "accepted": 505,
+      "skipped": 505
     },
     "by_source": {
       "new": 5144,
@@ -8484,8 +8515,8 @@
       "trending_5m": 3287,
       "ds_boosts_top": 820,
       "ds_boosts": 5334,
-      "ds_profiles": 5653,
-      "watchlist": 10091
+      "ds_profiles": 5655,
+      "watchlist": 10092
     },
     "pumpfun": 13984
   },
@@ -8493,7 +8524,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.8,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
