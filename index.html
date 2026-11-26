@@ -213,6 +213,50 @@ canvas{display:block;width:100%}
 .banner.warn{background:rgba(245,200,76,.1);border:1px solid rgba(245,200,76,.35);color:var(--yellow)}
 .banner.err{background:rgba(255,77,109,.1);border:1px solid rgba(255,77,109,.4);color:var(--red)}
 .wallet-addr{font-family:ui-monospace,Menlo,monospace;font-weight:700}
+/* column headers (desktop only) + side panel bits */
+.colh{display:none}
+.side{display:none}
+.btn.sm{padding:5px 9px;font-size:11px}
+.mini{display:flex;gap:8px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--line);cursor:pointer;font-size:12px}
+.mini .tk{font-weight:800;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mini:hover{background:var(--panel)}
+.keys{margin:14px 12px 20px;padding:10px 12px;border:1px dashed var(--line2);border-radius:10px;color:var(--mut);font-size:11px;display:flex;flex-direction:column;gap:5px}
+.keys b{color:var(--txt);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em}
+kbd{display:inline-block;min-width:18px;padding:1px 5px;border:1px solid var(--line2);border-bottom-width:2px;border-radius:4px;background:var(--panel2);color:var(--txt);font:700 10.5px/1.4 ui-monospace,Menlo,monospace;text-align:center}
+/* ---------------- desktop / PC (>=1024px) ---------------- */
+@media (min-width:1024px){
+  #app{max-width:none;margin:0;padding:0 380px 0 76px;min-height:100vh}
+  nav.tabs{top:0;bottom:0;right:auto;width:76px;border-top:0;border-right:1px solid var(--line);padding:0;align-items:flex-start}
+  nav.tabs .in{flex-direction:column;max-width:none;padding-top:14px;gap:4px}
+  nav.tabs button{flex:none;padding:12px 0;font-size:10px}
+  nav.tabs button.on{background:var(--panel)}
+  nav.tabs button.on::before{top:20%;bottom:20%;left:0;right:auto;width:2px;height:auto}
+  nav.tabs button:hover{color:var(--txt)}
+  .top{padding:10px 18px}
+  .bal-row{gap:28px}
+  .seg{display:none}
+  .toolbar{top:var(--toph,110px);padding:8px 18px}
+  .toolbar .search{max-width:520px}
+  .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;scroll-snap-type:none}
+  .col{flex:none;max-width:none;min-height:calc(100vh - var(--toph,110px) - 50px);border-right:1px solid var(--line);overflow:clip}
+  .col:last-child{border-right:0}
+  .colh{display:flex;align-items:center;justify-content:space-between;position:sticky;top:calc(var(--toph,110px) + 49px);z-index:5;padding:8px 12px;background:var(--panel);border-bottom:1px solid var(--line);font-size:11.5px;font-weight:800;letter-spacing:.02em}
+  .colh .n{color:var(--mut2);font-size:10.5px}
+  .row:hover,.pos:hover{background:rgba(255,255,255,.025)}
+  .side{display:block;position:fixed;top:0;right:0;bottom:0;width:380px;z-index:25;background:#08090d;border-left:1px solid var(--line);overflow-y:auto}
+  .side .pos .sells button{padding:6px 0}
+  .sheet{left:auto;right:0;width:460px;border-left:1px solid var(--line2);box-shadow:-20px 0 50px rgba(0,0,0,.55);z-index:50}
+  .sheet .bar{padding:10px 12px}
+  .modal-bg{place-items:center}
+  .modal{border-radius:16px;border:1px solid var(--line2);max-width:440px}
+  #toast{bottom:20px;left:calc(50% - 152px)}
+  .savebar{bottom:12px;max-width:760px}
+  body.wide #view > .set,body.wide #view > .h,body.wide #view > .empty,body.wide #view > .banner{max-width:760px}
+}
+@media (min-width:1024px) and (max-width:1279px){
+  #app{padding-right:320px}
+  .side{width:320px}
+}
 
   </style>
 </head>
@@ -236,6 +280,7 @@ canvas{display:block;width:100%}
     </header>
     <main id="view"></main>
   </div>
+  <aside class="side" id="side" aria-label="Positionen"></aside>
   <section class="sheet" id="sheet" aria-label="Token"></section>
   <nav class="tabs"><div class="in">
     <button data-tab="pulse"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Pulse</button>
@@ -247,7 +292,7 @@ canvas{display:block;width:100%}
   <div id="modal"></div>
   <script>
 "use strict";
-const APP_VERSION = "v18";
+const APP_VERSION = "v19";
 const POLL_MS = 8000;
 const DATA_BRANCH = "main";
 const SOLANA_RPC = "https://solana-rpc.publicnode.com";
@@ -269,6 +314,8 @@ let detail = null;          // {mint, pool, symbol, ...}
 let dtTf = "5m", dtSide = "b", dtAmt = null;
 let walletState = { status: "idle", address: null, providerName: null, balanceSol: null, error: null };
 let seenAcks = new Set();
+const WIDE_MQ = window.matchMedia("(min-width: 1024px)");
+const isWide = () => WIDE_MQ.matches;
 
 const $ = (s, el = document) => el.querySelector(s);
 const unent = (s) => String(s ?? "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, "\"").replace(/&#39;/g, "'");
@@ -286,7 +333,13 @@ const usd = (n, d = 2) => { n = num(n); if (n == null) return "—"; return (n <
 const sgnUsd = (n) => { n = num(n); if (n == null) return "—"; return (n >= 0 ? "+" : "-") + "$" + Math.abs(n).toFixed(2); };
 const pct = (n, frac = true) => { n = num(n); if (n == null) return "—"; const v = frac ? n * 100 : n; return (v >= 0 ? "+" : "") + v.toFixed(Math.abs(v) >= 100 ? 0 : 1) + "%"; };
 const cls = (n) => (num(n) || 0) >= 0 ? "up" : "down";
-function price(p) { p = num(p); if (p == null) return "—"; if (p >= 1) return "$" + p.toFixed(4); if (p >= 0.01) return "$" + p.toFixed(5); const s = p.toExponential(3); return "$" + p.toFixed(Math.min(12, 2 + Math.ceil(-Math.log10(p)) + 3)); }
+const SUB = "₀₁₂₃₄₅₆₇₈₉";
+function price(p) {
+  p = num(p); if (p == null) return "—"; if (p <= 0) return "$0";
+  if (p >= 1) return "$" + p.toFixed(4); if (p >= 0.01) return "$" + p.toFixed(5); if (p >= 0.001) return "$" + p.toFixed(6);
+  const s = p.toFixed(14).slice(2); const z = s.match(/^0*/)[0].length; const sig = s.slice(z, z + 4).replace(/0+$/, "") || "0";
+  return "$0.0" + String(z).split("").map(d => SUB[+d]).join("") + sig;
+}
 function ageStr(min) {
   min = num(min); if (min == null) return "";
   if (min < 1) return Math.max(1, Math.round(min * 60)) + "s";
@@ -472,6 +525,9 @@ function handleAck(a) {
     if (a.mint) delete pendingSells[a.mint]; else pendingSells = {};
     if (a.ok) toast(`Verkauft: ${sym || "Positionen"}${a.pnl_usd != null ? " · " + sgnUsd(a.pnl_usd) : ""}`, "ok"); else toast(`Verkauf fehlgeschlagen: ${a.error || ""}`, "err");
     renderLive();
+  } else if (a.cmd === "reset_account") {
+    if (a.pending) return;
+    if (a.ok) toast(`Spielkonto zurückgesetzt auf ${(+a.eur || 0).toFixed(2)} € (${usd(a.usd)}).`, "ok"); else toast(`Zurücksetzen abgelehnt: ${a.error || "Fehler"}`, "err");
   } else if (a.cmd === "set_settings" || a.cmd === "reset_settings" || a.cmd === "reset_params") {
     if (a.settings) { D.settings = Object.assign(D.settings || {}, a.settings); if (a.settings.auto_trade_on != null) D.auto_trade = !!a.settings.auto_trade_on; }
   }
@@ -664,9 +720,9 @@ function renderPulse() {
     $("#qb-in").onchange = (e) => { const x = num(String(e.target.value).replace(",", ".")); if (x && x > 0 && x <= 50) { qbAmt = x; localStorage.setItem("ax_qb", x); } e.target.value = qbAmt; fillCols(); };
     const cols = $("#cols");
     let st = null;
-    cols.addEventListener("scroll", () => { clearTimeout(st); st = setTimeout(() => { const i = Math.round(cols.scrollLeft / cols.clientWidth); const k = COLS[i] && COLS[i][0]; if (k && k !== pcol) goCol(k, false); }, 80); }, { passive: true });
+    cols.addEventListener("scroll", () => { if (isWide()) return; clearTimeout(st); st = setTimeout(() => { const i = Math.round(cols.scrollLeft / cols.clientWidth); const k = COLS[i] && COLS[i][0]; if (k && k !== pcol) goCol(k, false); }, 80); }, { passive: true });
     cols.addEventListener("click", onListClick);
-    requestAnimationFrame(() => { cols.scrollLeft = COLS.findIndex(c => c[0] === pcol) * cols.clientWidth; });
+    requestAnimationFrame(() => { if (!isWide()) cols.scrollLeft = COLS.findIndex(c => c[0] === pcol) * cols.clientWidth; });
   }
   fillCols();
 }
@@ -681,7 +737,8 @@ function fillCols() {
     const rows = pulseRows(k);
     const n = $("#n-" + k); if (n) n.textContent = rows.length;
     const hint = { new: "Noch keine neuen Paare – der Scanner sucht laufend.", final: "Gerade kein Coin kurz vor der Migration (Bonding-Curve fast voll).", migrated: "Noch keine frisch migrierten Coins." }[k];
-    el.innerHTML = rows.length ? rows.map(pulseRow).join("") : `<div class="empty">${hint}</div>`;
+    const head = `<div class="colh"><span>${COLS.find(c => c[0] === k)[1]}</span><span class="n">${rows.length}</span></div>`;
+    el.innerHTML = head + (rows.length ? rows.map(pulseRow).join("") : `<div class="empty">${hint}</div>`);
   }
 }
 function findToken(mint) {
@@ -942,6 +999,8 @@ function renderSet() {
   const v = $("#view");
   const on = D.auto_trade !== false;
   const tik = !!sv("tiktok_mode_on");
+  const scalp = sv("scalp_mode_on") !== false;
+  const startEur = D.start_eur != null ? Math.round(+D.start_eur * 100) / 100 : 20;
   v.innerHTML = `
     <div class="h"><h2>Trading</h2><span class="paper">NUR SPIELGELD</span></div>
     <div class="set">
@@ -955,8 +1014,9 @@ function renderSet() {
       ${nin("size_max_equity_frac", "Max. Größe pro Position", "Hart gedeckelt auf 20 %", "%", 4, 20)}
     </div>
     <div class="set"><div class="t">Bot-Strategie (Auto-Trade)</div>
-      ${tgl("tiktok_mode_on", "TikTok-Modus", "8 % pro Trade, Stop −6 %, Trailing 12 % vom Hoch")}
-      ${tik ? "" : `<div class="srow"><div class="lab">Positionsgröße</div><div class="segsm" id="size-seg"><button data-size="auto" class="${sv("size_mode") !== "fixed" ? "on" : ""}">Auto</button><button data-size="fixed" class="${sv("size_mode") === "fixed" ? "on" : ""}">Fest</button></div></div>
+      <div class="srow"><div class="lab"><b>Scalp-Modus</b> <span class="tag">Cupsey-Stil</span><small>Viele kleine, schnelle Trades: 12 % vom Kontostand pro Trade (mind. $1,50, max. 20 %), Take-Profit +20 % (Hälfte) und +35 %, Stop −8 %, max. 15 Min halten, 20 Min Pause pro Coin. Lockerere Einstiegsfilter – Rug- & Fake-Check bleiben Pflicht.</small></div><button class="tg ${scalp ? "on" : ""}" data-tg="scalp_mode_on" aria-label="Scalp-Modus"></button></div>
+      ${tgl("tiktok_mode_on", "TikTok-Modus", scalp ? "Wird vom Scalp-Modus überstimmt, solange der an ist" : "8 % pro Trade, Stop −6 %, Trailing 12 % vom Hoch")}
+      ${tik || scalp ? "" : `<div class="srow"><div class="lab">Positionsgröße</div><div class="segsm" id="size-seg"><button data-size="auto" class="${sv("size_mode") !== "fixed" ? "on" : ""}">Auto</button><button data-size="fixed" class="${sv("size_mode") === "fixed" ? "on" : ""}">Fest</button></div></div>
       ${nin("size_fixed_pct", "Feste Größe", "vom Kontostand", "%", 1, 20)}
       ${nin("hard_stop_pct", "Hard-Stop", "", "%", 5, 50)}
       ${nin("trailing_stop_pct", "Trailing-Stop", "vom Hoch", "%", 10, 80)}
@@ -980,6 +1040,10 @@ function renderSet() {
     </div>
     <div class="h"><h2>Wallet</h2><span class="mut" style="font-size:11px">nur Anzeige</span></div>
     <div class="set" id="wallet-box">${walletHtml()}</div>
+    <div class="set"><div class="t">Spielkonto</div>
+      <div class="srow"><div class="lab">Startguthaben (Spielgeld)<small>Aktuell gestartet mit ${startEur.toFixed(2)} €. Die Positionsgröße passt sich automatisch an.</small></div><input class="num" id="rs-eur" inputmode="decimal" value="${startEur}" aria-label="Startguthaben in Euro"><span class="mut" style="width:22px">€</span></div>
+      <div class="srow"><div class="lab">Spielkonto zurücksetzen<small>Neues Startguthaben, Verlauf beginnt neu (Backup wird gespeichert). Nur ohne offene Positionen.</small></div><button class="btn red" id="rs-acct">Spielkonto zurücksetzen</button></div>
+    </div>
     <div class="set"><div class="t">Zurücksetzen</div>
       <div class="srow"><div class="lab">Standard wiederherstellen<small>Alle Einstellungen auf Werkszustand</small></div><button class="btn" id="rs-set">Zurücksetzen</button></div>
       <div class="srow"><div class="lab">Lernen zurücksetzen<small>Gelernte Gewichte verwerfen</small></div><button class="btn" id="rs-learn">Zurücksetzen</button></div>
@@ -998,6 +1062,15 @@ function renderSet() {
   const ok = $("#sv-ok"); if (ok) ok.onclick = saveSettings;
   const no = $("#sv-no"); if (no) no.onclick = () => { draft = {}; settingsDirty = false; renderSet(); };
   $("#rs-set").onclick = () => confirmBox("Einstellungen zurücksetzen?", "Alle Einstellungen gehen auf Standard. Rug-Check, Fake-Check und 20 %-Deckel bleiben aktiv.", "Zurücksetzen", async () => { try { await sendCmd("reset_settings"); toast("Standard wiederhergestellt.", "ok"); } catch (_) {} });
+  $("#rs-acct").onclick = () => {
+    const eur = num(String($("#rs-eur").value).replace(",", "."));
+    if (!eur || eur < 1 || eur > 100000) { toast("Betrag zwischen 1 und 100.000 € eingeben.", "err"); return; }
+    if ((D.positions || []).length) { toast("Erst alle Positionen verkaufen, dann zurücksetzen.", "err"); return; }
+    confirmBox("Spielkonto zurücksetzen?", `Das Spielkonto startet neu mit ${eur.toFixed(2)} € (Spielgeld). Bisheriger Verlauf wird gesichert und in der App zurückgesetzt.`, "Zurücksetzen", async () => {
+      try { const a = await sendCmd("reset_account", { eur, confirm: true }); if (a && !a.pending) handleAck(Object.assign({ cmd: "reset_account" }, a)); else toast("Zurücksetzen gesendet…", "info"); setTimeout(tick, 1500); }
+      catch (_) { toast("Befehl konnte nicht gesendet werden.", "err"); }
+    });
+  };
   $("#rs-learn").onclick = () => confirmBox("Lernen zurücksetzen?", "Die gelernten Gewichte werden auf Standard gesetzt.", "Zurücksetzen", async () => { try { await sendCmd("reset_params"); toast("Lernen zurückgesetzt.", "ok"); } catch (_) {} });
   bindWallet();
 }
@@ -1040,6 +1113,51 @@ async function refreshBal() {
 }
 async function silentWallet() { const p = phantomProvider() || solflareProvider(); if (!p || !localStorage.getItem(WALLET_LS)) return; try { const r = await p.connect({ onlyIfTrusted: true }); const a = pk(r, p); if (a) { walletState = { status: "connected", address: a, balanceSol: null }; refreshBal(); } } catch (_) {} }
 
+/* ---------------- desktop side panel + keyboard ---------------- */
+function renderSide() {
+  const el = $("#side"); if (!el) return;
+  if (!isWide() || !D) { if (el.innerHTML) el.innerHTML = ""; return; }
+  const ps = D.positions || [];
+  const cl = (D.closed || []).slice(-8).reverse();
+  const keep = el.scrollTop;
+  el.innerHTML = `
+    <div class="h"><h2>Positionen <span class="mut">(${ps.length})</span></h2><button class="btn red sm" id="side-sell-all" ${ps.length ? "" : "disabled"}>Alle verkaufen</button></div>
+    <div id="side-pos">${ps.length ? ps.map(posRow).join("") : `<div class="empty">Keine offenen Positionen.</div>`}</div>
+    <div class="h"><h2>Letzte Trades</h2><button class="btn sm" data-goto-hist>Verlauf</button></div>
+    <div>${cl.length ? cl.map(c => `<div class="mini" data-open="${esc(c.mint)}"><span class="tk">${esc(c.symbol)}</span><span class="${cls(c.pnl_usd)}">${pct(c.pnl_pct)}</span><b class="${cls(c.pnl_usd)}">${sgnUsd(c.pnl_usd)}</b></div>`).join("") : `<div class="empty">Noch keine Trades.</div>`}</div>
+    <div class="keys"><b>Tastatur</b><span><kbd>1</kbd>–<kbd>4</kbd> Tabs</span><span><kbd>/</kbd> Suche</span><span><kbd>Shift</kbd>+<kbd>A</kbd> Auto-Trade</span><span><kbd>Esc</kbd> Schließen</span><span>Token offen: <kbd>B</kbd> Kaufen · <kbd>Q</kbd>/<kbd>W</kbd>/<kbd>E</kbd> Verkauf 25/50/100 %</span></div>`;
+  el.scrollTop = keep;
+  const sa = $("#side-sell-all"); if (sa) sa.onclick = sellAll;
+}
+function onSideClick(e) {
+  if (e.target.closest("[data-goto-hist]")) { setTab("hist"); return; }
+  onListClick(e);
+}
+document.addEventListener("keydown", (e) => {
+  const typing = e.target && (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA" || e.target.isContentEditable);
+  if (e.key === "Escape") {
+    if ($("#modal").innerHTML) { $("#modal").innerHTML = ""; return; }
+    if (detail) { history.back(); return; }
+    if (typing) e.target.blur();
+    return;
+  }
+  if (typing || e.ctrlKey || e.metaKey || e.altKey || !D) return;
+  const k = e.key;
+  if (k === "A" && e.shiftKey) { e.preventDefault(); toggleAuto(); return; }
+  if (detail) {
+    const pos = (D.positions || []).find(p => p.mint === detail.mint);
+    if (k === "b" || k === "B") { e.preventDefault(); if (!pos) quickBuy(detail, dtAmt); return; }
+    const m = { q: 25, w: 50, e: 100 }[k.toLowerCase()];
+    if (m && pos) { e.preventDefault(); sell(pos.mint, m, pos.symbol); return; }
+    return;
+  }
+  const t = { "1": "pulse", "2": "pos", "3": "hist", "4": "set" }[k];
+  if (t) { e.preventDefault(); setTab(t); return; }
+  if (k === "/") { e.preventDefault(); if (tab !== "pulse") setTab("pulse"); setTimeout(() => { const q = $("#q"); if (q) q.focus(); }, 0); }
+});
+WIDE_MQ.addEventListener("change", () => { document.body.classList.toggle("wide", isWide()); $("#view").innerHTML = ""; renderView(); renderSide(); });
+document.body.classList.toggle("wide", isWide());
+
 /* ---------------- tabs / render ---------------- */
 function setTab(t) {
   tab = t; localStorage.setItem("ax_tab", t);
@@ -1060,6 +1178,7 @@ function renderLive() {
   liveRaf = requestAnimationFrame(() => {
     liveRaf = 0;
     paintTop();
+    renderSide();
     if (tab === "pulse") fillCols();
     else if (tab === "pos") renderPos();
     if (detail) { const keepScroll = $("#sheet").scrollTop; renderDetail(); $("#sheet").scrollTop = keepScroll; }
@@ -1075,6 +1194,7 @@ async function tick() {
     if (first) { setTab(tab); hideBoot(); }
     else if (tab === "hist" || (tab === "set" && !settingsDirty)) renderView();
     else renderLive();
+    renderSide();
   } catch (e) {
     if (!D) { hideBoot(); $("#view").innerHTML = `<div class="banner err">Daten konnten nicht geladen werden. Netz prüfen und neu laden.</div>`; }
   }
@@ -1083,12 +1203,13 @@ function hideBoot() { $("#boot").classList.add("hide"); document.body.dataset.re
 
 document.querySelectorAll("nav.tabs [data-tab]").forEach(b => b.onclick = () => setTab(b.dataset.tab));
 $("#auto-sw").onclick = toggleAuto;
+$("#side").addEventListener("click", onSideClick);
 tick(); setInterval(tick, POLL_MS);
 silentWallet();
 if ("serviceWorker" in navigator) {
   let reloading = false;
   navigator.serviceWorker.addEventListener("controllerchange", () => { if (reloading) return; reloading = true; location.reload(); });
-  navigator.serviceWorker.register("./sw.js?v=18", { updateViaCache: "none" }).then(reg => { const ping = () => { try { reg.update(); } catch (_) {} }; ping(); setInterval(ping, 15000); if (reg.waiting) reg.waiting.postMessage("skipWaiting"); }).catch(() => {});
+  navigator.serviceWorker.register("./sw.js?v=19", { updateViaCache: "none" }).then(reg => { const ping = () => { try { reg.update(); } catch (_) {} }; ping(); setInterval(ping, 15000); if (reg.waiting) reg.waiting.postMessage("skipWaiting"); }).catch(() => {});
 }
 
   </script>
