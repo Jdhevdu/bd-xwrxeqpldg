@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-26 02:14:51 CET",
+  "exported_at": "2026-11-26 02:15:14 CET",
   "last_update": "2026-11-26 02:14:20 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -104,12 +104,12 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.4,
     "max_ms": 3137.6,
-    "last_ms": 1000.2,
-    "n": 231,
-    "work_p50_ms": 0.7,
+    "last_ms": 1000.1,
+    "n": 251,
+    "work_p50_ms": 0.6,
     "work_p95_ms": 19.4,
     "work_max_ms": 96.0,
-    "work_last_ms": 0.4,
+    "work_last_ms": 0.5,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 70.84224847129263,
@@ -122,7 +122,7 @@
     "cycles": 4987,
     "pools_scanned": 776314,
     "unique_pools": 20004,
-    "prefilter_rejected": 136509,
+    "prefilter_rejected": 136510,
     "safety_rejected": 3455,
     "scored": 10363,
     "buys": 88,
@@ -3951,7 +3951,7 @@
       "confirm_s": null,
       "n_discovery": 77,
       "n_buys": 0,
-      "updated_ts": 1795655690.3409073,
+      "updated_ts": 1795655714.3362343,
       "stages": {
         "discovery": {
           "p50_s": 131.439,
@@ -4018,10 +4018,10 @@
         },
         "bot_to_phone": {
           "p50_s": 0.121,
-          "p95_s": 0.133,
+          "p95_s": 0.132,
           "max_s": 0.155,
-          "last_s": 0.126,
-          "n": 161
+          "last_s": 0.132,
+          "n": 175
         },
         "event_to_phone": {
           "p50_s": 0,
@@ -4112,7 +4112,7 @@
       "score": 87,
       "passed": true,
       "status": "passed",
-      "rejected": 139964
+      "rejected": 139965
     },
     "executor": {
       "name": "Executor",
@@ -4303,7 +4303,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "10363 bewertet · 139964 abgelehnt"
+      "detail": "10363 bewertet · 139965 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4416,38 +4416,7 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [
-    {
-      "symbol": "ATX",
-      "mint": "xc9F6cbuPhZPEQSrJRQSkcNYFTTNLifxcHp7vwXpump",
-      "pool": "rDxFmGsvvkuorYBmFgRwMCVHUq8jcruVo5eGvmzQZvX",
-      "score": 38,
-      "reasons": [
-        "Kaufdruck hoch",
-        "Viele Käufer",
-        "Geringer Price Impact"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 1943431384.14912,
-      "origin": "trending_5m",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/xc9F6cbuPhZPEQSrJRQSkcNYFTTNLifxcHp7vwXpump.png"
-    },
-    {
-      "symbol": "Pnut",
-      "mint": "9bgy4dVrPqa7HozGvBRV5Qy1ccbDdYHHMyzKrJjqpump",
-      "pool": "EXxmL1AvgnzBwLxuqcR8BYxQHua1jPtpLzCpeMZA8M3J",
-      "score": 27,
-      "reasons": [
-        "Geringer Price Impact"
-      ],
-      "early": false,
-      "tag": null,
-      "mcap": 35917.0,
-      "origin": "watchlist",
-      "image_url": "https://cdn.dexscreener.com/tokens/solana/9bgy4dVrPqa7HozGvBRV5Qy1ccbDdYHHMyzKrJjqpump.png"
-    }
-  ],
+  "radar": [],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -8525,16 +8494,16 @@
     }
   ],
   "feed_stats": {
-    "emitted": 1179,
-    "per_min": 165.59,
+    "emitted": 1181,
+    "per_min": 158.46,
     "by_decision": {
-      "seen": 940,
-      "rejected": 195,
+      "seen": 941,
+      "rejected": 196,
       "accepted": 22,
       "skipped": 22
     },
     "by_source": {
-      "new": 124,
+      "new": 126,
       "pump_logs": 192,
       "ds_search": 73,
       "trending_1h": 63,
@@ -8544,13 +8513,13 @@
       "ds_profiles": 155,
       "watchlist": 283
     },
-    "pumpfun": 572
+    "pumpfun": 574
   },
   "status": "running",
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.7,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
