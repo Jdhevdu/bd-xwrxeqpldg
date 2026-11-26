@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-26 12:36:40 CET",
+  "exported_at": "2026-11-26 12:37:41 CET",
   "last_update": "2026-11-26 12:36:16 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -104,7 +104,7 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 20124.0,
-    "last_ms": 1000.1,
+    "last_ms": 1000.3,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 0.8,
@@ -122,7 +122,7 @@
     "cycles": 5533,
     "pools_scanned": 850386,
     "unique_pools": 20006,
-    "prefilter_rejected": 153147,
+    "prefilter_rejected": 153148,
     "safety_rejected": 3756,
     "scored": 11379,
     "buys": 88,
@@ -339,6 +339,15 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-26 12:37:05 CET",
+      "ts": 1795693025.0,
+      "kind": "Rejected",
+      "symbol": "LOKI",
+      "reason": "dex pump-fun not graduated/allowed",
+      "text": "LOKI (pump-fun) - dex pump-fun not graduated/allowed",
+      "curve": true
+    },
     {
       "t": "2026-11-26 12:36:16 CET",
       "ts": 1795692976.0,
@@ -689,15 +698,6 @@
       "reason": "dex pump-fun not graduated/allowed",
       "text": "att (pump-fun) - dex pump-fun not graduated/allowed",
       "curve": true
-    },
-    {
-      "t": "2026-11-26 12:35:19 CET",
-      "ts": 1795692919.0,
-      "kind": "Rejected",
-      "symbol": "hello",
-      "reason": "RugCheck unavailable, skipped for now",
-      "text": "hello - RugCheck unavailable, skipped for now",
-      "curve": false
     }
   ],
   "scanner_highlights": [
@@ -927,7 +927,7 @@
       "curve": false
     }
   ],
-  "curve_skips": 2650,
+  "curve_skips": 2651,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -3937,7 +3937,7 @@
       "name": "Speed",
       "title": "Latenz",
       "new_to_buy_s": null,
-      "discovery_s": 65.171,
+      "discovery_s": 65.494,
       "seen_to_score_s": 17.577,
       "score_to_fill_s": null,
       "price_s": null,
@@ -3950,13 +3950,13 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795692999.938977,
+      "updated_ts": 1795693060.948119,
       "stages": {
         "discovery": {
-          "p50_s": 65.171,
-          "p95_s": 107.267,
+          "p50_s": 65.494,
+          "p95_s": 119.912,
           "max_s": 849.711,
-          "last_s": 89.582,
+          "last_s": 119.912,
           "n": 200
         },
         "seen_to_score": {
@@ -4019,7 +4019,7 @@
           "p50_s": 0.123,
           "p95_s": 0.133,
           "max_s": 0.455,
-          "last_s": 0.123,
+          "last_s": 0.125,
           "n": 200
         },
         "event_to_phone": {
@@ -4052,13 +4052,18 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "hello",
+      "token": "LOKI",
       "pill": "130 pools",
       "pill_kind": "blue",
       "detail": "20,006 unique pools",
       "pools": 130,
       "unique": 20006,
       "filters": [
+        {
+          "symbol": "LOKI",
+          "text": "dex pump-fun not graduated/allowed",
+          "kind": "Rejected"
+        },
         {
           "symbol": "hello",
           "text": "dev past rugs",
@@ -4093,11 +4098,6 @@
           "symbol": "gob",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "STRUCK",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
@@ -4111,7 +4111,7 @@
       "score": null,
       "passed": false,
       "status": "idle",
-      "rejected": 156903
+      "rejected": 156904
     },
     "executor": {
       "name": "Executor",
@@ -4310,7 +4310,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "11379 bewertet · 156903 abgelehnt"
+      "detail": "11379 bewertet · 156904 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4441,46 +4441,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "ISABELLE",
-      "mint": "HjcgA51WU4NLhzmA97YudCFepYqoiUtEGBvU6QuNpump",
-      "pool": "4Lg16i6rJwE8N5GqQ7y6ge4pgwznJG1UYZZz1hFPPL3W",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1914.0,
-      "liq": 1847.96,
-      "age_min": 218.55,
-      "created_at": "2026-11-26T07:56:47Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,848 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795692919.7228563,
-      "t": "2026-11-26 12:35:19 CET",
-      "id": "HjcgA51WU4NLhzmA97YudCFepYqoiUtEGBvU6QuNpump-1795692919722"
-    },
-    {
-      "symbol": "RSA",
-      "mint": "BXyqxJkUeCr8rt6PPxRus1PwpHoo4a8PP4JEgwETpump",
-      "pool": "AH9PHfT2kkrivAXWsMMsSudnKjmDtyQWLSKvYFtp1C9W",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1894.0,
-      "liq": 1845.16,
-      "age_min": 46.46,
-      "created_at": "2026-11-26T10:48:52Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,845 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795692919.7266445,
-      "t": "2026-11-26 12:35:19 CET",
-      "id": "BXyqxJkUeCr8rt6PPxRus1PwpHoo4a8PP4JEgwETpump-1795692919726"
-    },
     {
       "symbol": "OG",
       "mint": "AC6jhfpFFFYUciEX563ouCiMCZTxvDi1mr6zXhAMogog",
@@ -8440,19 +8400,59 @@
       "ts": 1795692976.1300962,
       "t": "2026-11-26 12:36:16 CET",
       "id": "2Lw9FQA1iAwg5Wo1NTh8GTs3zmVQc7XHGBbexqZgqtWJ-1795692976130"
+    },
+    {
+      "symbol": "LOKI",
+      "mint": "6K6zQiBb7vNauqk6ALMxFXrgAiTC5URfEhEBCZ3upump",
+      "pool": "2g4f8fwMs4bpHphzs1cNe2MRi7YUwmj3QjYCetaUodf8",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "new",
+      "mcap": 3016.4213442475,
+      "liq": 2275.5825,
+      "age_min": 2.0,
+      "created_at": "2026-11-26T11:35:06Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795693025.9123175,
+      "t": "2026-11-26 12:37:05 CET",
+      "id": "6K6zQiBb7vNauqk6ALMxFXrgAiTC5URfEhEBCZ3upump-1795693025912"
+    },
+    {
+      "symbol": "LOKI",
+      "mint": "6K6zQiBb7vNauqk6ALMxFXrgAiTC5URfEhEBCZ3upump",
+      "pool": "2g4f8fwMs4bpHphzs1cNe2MRi7YUwmj3QjYCetaUodf8",
+      "dex": "pump-fun",
+      "early": true,
+      "source": "new",
+      "mcap": 3016.4213442475,
+      "liq": 2275.5825,
+      "age_min": 2.0,
+      "created_at": "2026-11-26T11:35:06Z",
+      "decision": "rejected",
+      "reason": "dex pump-fun not graduated/allowed",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795693025.9188187,
+      "t": "2026-11-26 12:37:05 CET",
+      "id": "6K6zQiBb7vNauqk6ALMxFXrgAiTC5URfEhEBCZ3upump-1795693025918"
     }
   ],
   "feed_stats": {
-    "emitted": 82989,
-    "per_min": 131.93,
+    "emitted": 82991,
+    "per_min": 131.73,
     "by_decision": {
-      "seen": 64605,
-      "rejected": 16308,
+      "seen": 64606,
+      "rejected": 16309,
       "accepted": 1040,
       "skipped": 1036
     },
     "by_source": {
-      "new": 12848,
+      "new": 12850,
       "pump_logs": 2337,
       "ds_search": 6826,
       "trending_1h": 6567,
@@ -8462,13 +8462,13 @@
       "ds_profiles": 12853,
       "watchlist": 21624
     },
-    "pumpfun": 33639
+    "pumpfun": 33641
   },
   "status": "running",
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.4,
+  "heartbeat_age_s": 0.3,
   "bot_alive": true,
   "supervisor_alive": true
 }
