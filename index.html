@@ -271,7 +271,8 @@ let walletState = { status: "idle", address: null, providerName: null, balanceSo
 let seenAcks = new Set();
 
 const $ = (s, el = document) => el.querySelector(s);
-const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[c]));
+const unent = (s) => String(s ?? "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, "\"").replace(/&#39;/g, "'");
+const esc = (s) => unent(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[c]));
 const num = (v) => (v == null || v === "" || Number.isNaN(+v)) ? null : +v;
 function fmtK(n, pre = "$") {
   n = num(n); if (n == null) return "—";
