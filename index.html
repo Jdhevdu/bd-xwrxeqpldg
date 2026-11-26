@@ -274,6 +274,59 @@ kbd{display:inline-block;min-width:18px;padding:1px 5px;border:1px solid var(--l
 .h h2 .upd{margin-left:6px;font-weight:600}
 #dt-age{margin-top:1px;text-align:right}
 @media (prefers-reduced-motion:reduce){.fu,.fd,.fl,.fl-new{animation:none}}
+/* v21 Analyse */
+.kpis{display:grid;grid-template-columns:1fr;gap:8px;margin:0 12px 10px}
+@media (min-width:700px){.kpis{grid-template-columns:repeat(3,1fr)}}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.kpi .k{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.kpi .v{font-size:18px;font-weight:800;margin-top:2px}
+.kpi .s{font-size:11px;color:var(--mut);margin-top:2px}
+.ev{padding:10px 12px;border-top:1px solid var(--line);cursor:pointer}
+.evh{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.evh .sm,.rj .sm,.srcr .sm{font-size:11px}
+.scb{min-width:30px;text-align:center;font-weight:800;border-radius:6px;padding:2px 6px;font-size:12px}
+.scb.g{background:rgba(46,229,157,.15);color:var(--green)}.scb.y{background:rgba(245,200,76,.14);color:var(--yellow)}.scb.r{background:rgba(255,77,109,.14);color:var(--red)}
+.sig{margin-left:auto;font-size:10px;font-weight:800;letter-spacing:.05em;color:var(--mut);border:1px solid var(--line2);border-radius:4px;padding:1px 6px}
+.sig.on{color:var(--green);border-color:rgba(46,229,157,.5)}
+.sig.warn{color:var(--yellow);border-color:rgba(245,200,76,.45);margin-left:6px}
+.evr{font-size:11.5px;color:#c9ccd6;margin-top:4px;line-height:1.35}
+.subs{display:grid;grid-template-columns:1fr 1fr;gap:3px 14px;margin-top:7px}
+.sb{display:grid;grid-template-columns:78px 1fr 24px;align-items:center;gap:6px;font-size:10.5px;color:var(--mut)}
+.sb i{height:5px;background:#1d2029;border-radius:3px;overflow:hidden;display:block}
+.sb i b{display:block;height:100%;border-radius:3px}
+.sb i b.g{background:var(--green)}.sb i b.y{background:var(--yellow)}.sb i b.r{background:var(--red)}
+.sb em{font-style:normal;text-align:right;color:var(--txt);font-weight:700}
+.why{margin:6px 0 0;padding-left:16px;font-size:11.5px;color:#c9ccd6}
+.more{font-size:10.5px;color:var(--blue);margin-top:5px}
+.rj{padding:8px 12px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.rj .evr{flex-basis:100%}
+.chips{display:flex;flex-wrap:wrap;gap:5px;padding:8px 12px}
+.chip{font-size:10.5px;background:var(--panel2);border:1px solid var(--line2);border-radius:999px;padding:2px 8px;color:#c9ccd6}
+.srcr{padding:7px 12px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.srcr .sm{flex-basis:100%;padding-left:2px}
+.pill{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;border-radius:4px;padding:1px 6px;background:#1d2029;color:var(--mut)}
+.pill.ok{background:rgba(46,229,157,.15);color:var(--green)}
+.pill.needs_key{background:rgba(245,200,76,.14);color:var(--yellow)}
+.pill.blocked,.pill.down,.pill.error{background:rgba(255,77,109,.14);color:var(--red)}
+.pill.rate_limited,.pill.no_public_api,.pill.no_data{background:rgba(167,139,250,.14);color:var(--violet)}
+.tblw{overflow-x:auto;padding:4px 12px 2px}
+.tbl{width:100%;border-collapse:collapse;font-size:11.5px}
+.tbl th{text-align:left;color:var(--mut);font-weight:600;font-size:10px;padding:4px 6px;border-bottom:1px solid var(--line)}
+.tbl td{padding:5px 6px;border-bottom:1px solid var(--line);white-space:nowrap}
+.mutnote{font-size:10.5px;color:var(--mut);padding:4px 12px 10px;line-height:1.4}
+
+/* v21 Nacht-Modus */
+.banner.ok{background:rgba(46,204,113,.12);border:1px solid rgba(46,204,113,.35);color:#7ee2a8}
+.spark{width:100%;height:60px;color:#5b8cff;display:block}
+.nlq{width:100%;margin:8px 0;text-align:left}
+.nlog{max-height:70vh;overflow:auto}
+.nl{padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;flex-wrap:wrap;gap:6px;align-items:baseline;font-size:12.5px}
+.nl .evr{flex-basis:100%}
+.nl .ev{font-size:11px;padding:1px 5px;border-radius:4px;background:rgba(255,255,255,.08)}
+.nl.ENTER .ev{background:rgba(46,204,113,.2);color:#7ee2a8}
+.nl.EXIT .ev{background:rgba(91,140,255,.2);color:#9db8ff}
+.nl.FILTERED .ev{color:#aaa}
+.nl.PAUSE .ev{background:rgba(255,80,80,.2);color:#ff9a9a}
 
   </style>
 </head>
@@ -302,6 +355,8 @@ kbd{display:inline-block;min-width:18px;padding:1px 5px;border:1px solid var(--l
   <nav class="tabs"><div class="in">
     <button data-tab="pulse"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Pulse</button>
     <button data-tab="pos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 6V4h8v2"/></svg>Positionen<span class="cnt" id="nav-cnt" hidden>0</span></button>
+    <button data-tab="ana"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Analyse</button>
+    <button data-tab="night"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>Nacht</button>
     <button data-tab="hist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Verlauf</button>
     <button data-tab="set"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Einstellungen</button>
   </div></nav>
@@ -309,10 +364,10 @@ kbd{display:inline-block;min-width:18px;padding:1px 5px;border:1px solid var(--l
   <div id="modal"></div>
   <script>
 "use strict";
-const APP_VERSION = "v20";
+const APP_VERSION = "v21";
 const POLL_MS = 8000;          // data.json poll while MQTT is not live
 const POLL_LIVE_MS = 30000;    // data.json poll while MQTT ticks arrive (history, settings)
-const CACHE_LS = "ax_cache_v20";
+const CACHE_LS = "ax_cache_v21";
 const DATA_BRANCH = "main";
 const SOLANA_RPC = "https://solana-rpc.publicnode.com";
 const SOLANA_RPC_FALLBACK = "https://api.mainnet-beta.solana.com";
@@ -1172,8 +1227,119 @@ function drawCandles() {
   g.fillStyle = "#5a5f72"; g.font = "9px Inter,sans-serif"; g.fillText((factor ? "Market Cap" : "Preis") + " · " + dtTf + " · GeckoTerminal + Live-Ticks", 4, h - 6);
 }
 
+/* ---------------- Analyse (v21) ---------------- */
+let anaOpen = {};
+const SUBL = { security: "Sicherheit", entry_timing: "Einstieg", momentum: "Momentum", liquidity: "Liquidität", manipulation: "Manipulation", holders: "Holder", organic: "Organisch", social: "Social" };
+function scCls(x) { return x >= 70 ? "g" : x >= 50 ? "y" : "r"; }
+function pctOrDash(x, d = 0) { return x == null ? "—" : (x * 100).toFixed(d) + " %"; }
+function agoS(ts) { if (!ts) return "—"; const s = Date.now() / 1000 - ts; return s < 90 ? Math.round(s) + " s" : s < 5400 ? Math.round(s / 60) + " min" : Math.round(s / 3600) + " h"; }
+function perfCard(t, p) {
+  if (!p || !p.n) return `<div class="kpi"><div class="k">${t}</div><div class="v mut">noch keine Trades</div></div>`;
+  return `<div class="kpi"><div class="k">${t} · ${p.n} Trades</div><div class="v ${cls(p.pnl)}">${sgnUsd(p.pnl)}</div>
+    <div class="s">Trefferquote ${pctOrDash(p.win_rate)} · Max-DD ${usd(p.max_drawdown_usd)} · PF ${p.profit_factor ?? "—"} · Gebühren ${usd(p.fees_usd)}</div></div>`;
+}
+function btBlock(bt) {
+  if (!bt) return `<div class="empty">Backtest läuft noch nicht/keine Datei.</div>`;
+  const row = (k, r) => r ? `<tr><td>${esc(k)}</td><td>${r.n}</td><td>${pctOrDash(r.win_rate)}</td><td class="${cls(r.pnl)}">${sgnUsd(r.pnl)}</td><td>${r.avg_pct != null ? r.avg_pct.toFixed(2) + " %" : "—"}</td><td>${usd(r.max_dd)}</td></tr>` : "";
+  const rows = [];
+  for (const sname of Object.keys(bt.strategies || {})) { const x = bt.strategies[sname]; rows.push(row(sname + " · IS", x.in_sample)); rows.push(row(sname + " · OOS", x.out_of_sample)); }
+  return `<div class="tblw"><table class="tbl"><tr><th>Strategie</th><th>n</th><th>Treffer</th><th>PnL</th><th>Ø/Trade</th><th>Max-DD</th></tr>${rows.join("")}</table></div>
+    <div class="mutnote">${esc(bt.note || "")}</div>`;
+}
+function renderAna() {
+  const v = $("#view"), V = D.v21 || {};
+  const keep = window.scrollY;
+  const em = V.emergency;
+  const cnt = V.counts || {};
+  const disc = V.discovered || [], rej = V.rejected || [];
+  const streams = V.streams || {}, src = (V.sources || {}).sources || [];
+  const learned = (V.learned || {}).results || [];
+  v.innerHTML = `
+    <div class="h"><h2>Analyse</h2><span class="paper">v21 · SPIELGELD</span></div>
+    ${em ? `<div class="banner err">NOTSTOPP aktiv: ${esc(em.why)} – keine automatischen Käufe, Stops laufen weiter.</div>` : ""}
+    <div class="kpis">
+      ${perfCard("Seit Konto-Reset", V.perf_since_reset)}
+      ${perfCard("Nur v21-Trades (Forward-Test)", V.perf_v21)}
+      <div class="kpi"><div class="k">Bewertet seit Neustart</div><div class="v">${cnt.evaluated || 0}</div><div class="s">${cnt.signals || 0} Signale · ${cnt.no_signal || 0} kein Signal · ${cnt.insufficient || 0} zu wenig Daten · ${cnt.rejected || 0} abgelehnt</div></div>
+    </div>
+    <div class="set"><div class="t">Strategie-Performance (Backtest, echte Daten)</div>${btBlock(V.backtest)}</div>
+    ${V.perf_since_reset && V.perf_since_reset.by_strategy ? `<div class="set"><div class="t">Trades nach Strategie</div><div class="chips">${Object.entries(V.perf_since_reset.by_strategy).map(([k, x]) => `<span class="chip">${esc(k)}: ${x.n} · ${x.n ? Math.round(100 * x.wins / x.n) : 0}% · <b class="${cls(x.pnl)}">${sgnUsd(x.pnl)}</b></span>`).join("")}</div></div>` : ""}
+    <div class="set"><div class="t">Entdeckt – Score & Begründung <span class="mut">(${disc.length})</span></div>
+      ${disc.length ? disc.map(e => `<div class="ev" data-ev="${esc(e.mint)}">
+        <div class="evh"><span class="scb ${scCls(e.score)}">${e.score}</span><b>${esc(e.symbol || "?")}</b><span class="mut sm">${esc(e.origin || "")} · Liq ${fmtK(e.liq)} · ${agoS(e.ts)}</span>
+          <span class="sig ${e.signal ? "on" : ""}">${e.signal ? "SIGNAL" : "kein Signal"}</span></div>
+        ${!e.signal && e.no_signal_why ? `<div class="evr">${esc(e.no_signal_why)}</div>` : ""}
+        <div class="subs">${Object.keys(SUBL).map(k => `<div class="sb"><span>${SUBL[k]}</span><i><b class="${scCls((e.subs || {})[k] || 0)}" style="width:${(e.subs || {})[k] || 0}%"></b></i><em>${(e.subs || {})[k] ?? "—"}</em></div>`).join("")}</div>
+        ${anaOpen[e.mint] ? `<ul class="why">${(e.why || []).map(w => `<li>${esc(w)}</li>`).join("")}</ul>` : `<div class="more">Begründung anzeigen</div>`}
+      </div>`).join("") : `<div class="empty">Noch nichts bewertet seit dem Neustart.</div>`}
+    </div>
+    <div class="set"><div class="t">Abgelehnt – Gründe <span class="mut">(${rej.length})</span></div>
+      <div class="chips">${(V.top_reasons || []).map(([r, n]) => `<span class="chip">${esc(r)} · ${n}</span>`).join("")}</div>
+      ${rej.slice(0, 40).map(r => `<div class="rj"><b>${esc(r.symbol || "?")}</b><span class="mut sm">${esc(r.stage || "")} · ${agoS(r.ts)}</span><div class="evr">${(r.reasons || []).map(esc).join(" · ")}</div></div>`).join("") || `<div class="empty">Keine.</div>`}
+    </div>
+    <div class="set"><div class="t">Livestreams <span class="mut">(Erwähnung = nur kleiner Score-Input, nie Kaufsignal)</span></div>
+      ${(streams.platforms || []).map(p => `<div class="srcr"><span class="pill ${p.status}">${esc(p.status)}</span><b>${esc(p.name)}</b><span class="mut sm">${esc(p.note || "")}${p.latency_ms != null ? " · " + p.latency_ms + " ms" : ""}${p.items != null ? " · " + p.items + " Einträge" : ""}</span></div>`).join("")}
+      ${(streams.spikes || []).length ? `<div class="chips">${streams.spikes.map(s => `<span class="chip">Spike ${esc(s.key)} · ${s.now_10m}/10min</span>`).join("")}</div>` : ""}
+      ${(streams.mentions || []).slice(0, 25).map(m => `<div class="rj"><b>${esc(m.platform)}</b><span class="mut sm">${m.viewers ?? 0} Zuschauer · ${agoS(m.ts)}${m.tickers && m.tickers.length ? " · $" + m.tickers.slice(0, 3).map(esc).join(" $") : ""}</span>
+        ${m.shill ? `<span class="sig warn">Werbung?</span>` : ""}<div class="evr">${esc((m.text || "").slice(0, 120))}${m.shill_why ? ` <span class="mut">(${esc(m.shill_why)})</span>` : ""}</div></div>`).join("") || `<div class="empty">Keine Erwähnungen.</div>`}
+    </div>
+    <div class="set"><div class="t">Datenquellen – gemessen ${V.sources ? "vor " + agoS(V.sources.ts) : ""}</div>
+      ${src.map(r => `<div class="srcr"><span class="pill ${r.status}">${esc(r.status)}</span><b>${esc(r.name)}</b><span class="mut sm">${r.latency_ms != null ? r.latency_ms + " ms" : ""}${r.data_age_s != null ? " · Daten " + r.data_age_s + " s alt" : ""}${r.http ? " · HTTP " + r.http : ""}${r.note ? " · " + esc(String(r.note).slice(0, 90)) : ""}</span></div>`).join("") || `<div class="empty">Noch keine Messung.</div>`}
+    </div>
+    <div class="set"><div class="t">Selbst-Lernen (Walk-Forward, Out-of-Sample)</div>
+      ${learned.map(r => `<div class="srcr"><span class="pill ${r.applied ? "ok" : "no_data"}">${r.applied ? "übernommen" : "nicht übernommen"}</span><b>${esc(r.key)}</b><span class="mut sm">${esc(r.why || "")}</span></div>`).join("") || `<div class="empty">Noch keine Auswertung.</div>`}
+    </div>`;
+  v.querySelectorAll("[data-ev]").forEach(el => el.onclick = () => { anaOpen[el.dataset.ev] = !anaOpen[el.dataset.ev]; renderAna(); });
+  window.scrollTo(0, keep);
+}
+
+
+/* ---------------- Nacht-Modus ---------------- */
+let nightEv = "ALL", nightQ = "";
+function spark(curve) {
+  if (!curve || curve.length < 2) return `<div class="empty">Equity-Kurve: noch keine Schließungen.</div>`;
+  const ys = curve.map(r => +r[1]), lo = Math.min(...ys), hi = Math.max(...ys), w = 300, h = 60;
+  const pts = ys.map((y, i) => `${(i / (ys.length - 1) * w).toFixed(1)},${(h - (hi > lo ? (y - lo) / (hi - lo) : .5) * h).toFixed(1)}`).join(" ");
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><polyline fill="none" stroke="currentColor" stroke-width="1.6" points="${pts}"/></svg><div class="mutnote">Equity bei jeder Schließung: $${lo.toFixed(2)} – $${hi.toFixed(2)} · ${ys.length} Punkte</div>`;
+}
+function renderNight() {
+  const v = $("#view"), N = D.night || {};
+  const keep = window.scrollY;
+  const ag = N.agents || {}, pos = N.positions || [], log = (N.log || []).slice().reverse();
+  const q = nightQ.toLowerCase();
+  const rows = log.filter(r => (nightEv === "ALL" || r.ev === nightEv) && (!q || `${r.symbol || ""} ${r.reason || ""} ${r.mint || ""}`.toLowerCase().includes(q)));
+  const cnt = k => log.filter(r => r.ev === k).length;
+  const st0 = N.start_equity, bal = N.balance;
+  const win = N.window ? `${String(N.window[0]).padStart(2, "0")}:00–${String(N.window[1]).padStart(2, "0")}:00` : "22:00–07:00";
+  v.innerHTML = `
+    <div class="h"><h2>Nacht-Modus</h2><span class="paper">SPIELGELD</span></div>
+    <div class="banner ${N.active ? "ok" : ""}">${N.active ? "AKTIV" : "Inaktiv (Tagprofil)"} · Modus ${esc(N.mode || "auto")} · Fenster ${win} Wien · max 2 Positionen · 20 % pro Trade (Sicherheits-Deckel) · Stop −12 % · Zeit-Stop 25 min · TP 40 % @2x, 30 % @4x, Rest Trail 25 %</div>
+    ${N.paused ? `<div class="banner err">PAUSIERT: ${esc(N.pause_why || "")}</div>` : ""}
+    <div class="kpis">
+      <div class="kpi"><div class="k">Balance (Equity)</div><div class="v">$${bal != null ? (+bal).toFixed(2) : "—"}</div><div class="s">Cash $${N.cash != null ? (+N.cash).toFixed(2) : "—"}${st0 != null ? ` · Nacht-Start $${(+st0).toFixed(2)} (<b class="${cls(bal - st0)}">${sgnUsd(bal - st0)}</b>)` : ""}</div></div>
+      <div class="kpi"><div class="k">Trades diese Nacht</div><div class="v">${N.trades || 0}</div><div class="s"><b class="pos">${N.wins || 0} Gewinne</b> · <b class="neg">${N.losses || 0} Verluste</b>${N.peak_equity ? ` · Peak $${(+N.peak_equity).toFixed(2)}` : ""}</div></div>
+      <div class="kpi"><div class="k">Wallet-Listen</div><div class="v">${(N.wallet_lists || {}).smart || 0} / ${(N.wallet_lists || {}).kol || 0}</div><div class="s">Smart / KOL – leer = Signal AUS (config/*_wallets.json)</div></div>
+    </div>
+    <div class="set"><div class="t">Equity-Kurve</div>${spark(N.equity_curve)}</div>
+    <div class="set"><div class="t">Agenten</div>
+      ${["scanner", "rugcheck", "sizer", "executor", "logger"].map(k => { const a = ag[k] || {}; const s = a.status || "—"; return `<div class="srcr"><span class="pill ${s === "ok" ? "ok" : "no_data"}">${esc(s)}</span><b>${k}</b><span class="mut sm">${a.n || 0}× · ${a.last ? "vor " + agoS(a.last) : "noch nie"}${a.note ? " · " + esc(a.note) : ""}</span></div>`; }).join("")}
+    </div>
+    <div class="set"><div class="t">Offene Nacht-Positionen <span class="mut">(${pos.length})</span></div>
+      ${pos.length ? `<div class="tblw"><table class="tbl"><tr><th>Coin</th><th>Fill</th><th>Jetzt</th><th>PnL</th><th>Wert</th><th>TP</th><th>Alter</th></tr>${pos.map(p => `<tr><td><b>${esc(p.symbol || "?")}</b></td><td>${(+p.fill || 0).toPrecision(4)}</td><td>${(+p.last || 0).toPrecision(4)}</td><td class="${cls(p.pnl_pct)}">${p.pnl_pct > 0 ? "+" : ""}${p.pnl_pct}%</td><td>$${p.value}</td><td>${p.tp_stage}/2</td><td>${p.age_min} min</td></tr>`).join("")}</table></div>` : `<div class="empty">Keine.</div>`}
+    </div>
+    <div class="set"><div class="t">Nacht-Log <span class="mut">(${rows.length} von ${N.log_total || log.length})</span></div>
+      <div class="segsm" id="nl-seg">${[["ALL", "Alle"], ["ENTER", "ENTER " + cnt("ENTER")], ["EXIT", "EXIT " + cnt("EXIT")], ["FILTERED", "FILTERED " + cnt("FILTERED")], ["INFO", "INFO"], ["PAUSE", "PAUSE"]].map(([k, l]) => `<button data-nl="${k}" class="${nightEv === k ? "on" : ""}">${l}</button>`).join("")}</div>
+      <input class="num nlq" id="nl-q" placeholder="Filter: Coin, Grund, Mint …" value="${esc(nightQ)}">
+      <div class="nlog">${rows.slice(0, 400).map(r => `<div class="nl ${r.ev}"><span class="mut sm">${esc((r.ts || "").slice(11))}</span><b class="ev">${r.ev}</b><b>${esc(r.symbol || "")}</b>${r.size_usd ? `<span>$${(+r.size_usd).toFixed(2)}</span>` : ""}${r.fill ? `<span class="mut sm">@ ${(+r.fill).toPrecision(4)}</span>` : ""}${r.pnl != null ? `<b class="${cls(r.pnl)}">${sgnUsd(r.pnl)}</b>` : ""}<div class="evr">${esc(r.reason || "")}</div></div>`).join("") || `<div class="empty">${N.active ? "Noch keine Einträge – strenge Filter: keine Trades ist möglich und ok." : "Nacht-Modus startet automatisch um " + win.slice(0, 5) + "."}</div>`}</div>
+      ${rows.length > 400 ? `<div class="mutnote">${rows.length - 400} ältere Einträge ausgeblendet – Filter nutzen.</div>` : ""}
+    </div>`;
+  v.querySelectorAll("[data-nl]").forEach(b => b.onclick = () => { nightEv = b.dataset.nl; renderNight(); });
+  const qi = $("#nl-q"); if (qi) qi.oninput = () => { nightQ = qi.value; clearTimeout(qi._t); qi._t = setTimeout(() => { renderNight(); const n = $("#nl-q"); if (n) { n.focus(); n.setSelectionRange(n.value.length, n.value.length); } }, 250); };
+  window.scrollTo(0, keep);
+}
+
 /* ---------------- Settings ---------------- */
-const PCT = new Set(["daily_loss_limit_pct", "size_fixed_pct", "size_max_equity_frac", "take_profit_pct", "trailing_stop_pct", "hard_stop_pct", "early_take_profit_pct", "early_trailing_stop_pct", "early_hard_stop_pct"]);
+const PCT = new Set(["night_pos_pct", "night_dd_pause_pct", "night_stop", "max_price_impact_pct", "emergency_dd_pct", "late_h1_max_pct", "daily_loss_limit_pct", "size_fixed_pct", "size_max_equity_frac", "take_profit_pct", "trailing_stop_pct", "hard_stop_pct", "early_take_profit_pct", "early_trailing_stop_pct", "early_hard_stop_pct"]);
 function sv(k) { if (k in draft) return draft[k]; const s = D.settings || {}; return s[k]; }
 function tgl(k, label, sub, lock) { const on = lock ? true : !!sv(k); return `<div class="srow"><div class="lab">${label}${sub ? `<small>${sub}</small>` : ""}</div>${lock ? `<span class="lockico">IMMER AN</span>` : ""}<button class="tg ${on ? "on" : ""} ${lock ? "lock" : ""}" ${lock ? "disabled" : `data-tg="${k}"`} aria-label="${esc(label)}"></button></div>`; }
 function nin(k, label, sub, unit, min, max, step) { let v = sv(k); if (v != null && PCT.has(k)) v = Math.round(v * 1000) / 10; return `<div class="srow"><div class="lab">${label}${sub ? `<small>${sub}</small>` : ""}</div><input class="num" data-num="${k}" inputmode="decimal" value="${v != null ? v : ""}" data-min="${min}" data-max="${max}"><span class="mut" style="width:22px">${unit}</span></div>`; }
@@ -1193,10 +1359,30 @@ function renderSet() {
       ${tgl("daily_limit_on", "Tageslimit", "Stoppt automatische Käufe nach Tagesverlust")}
       ${nin("daily_loss_limit_pct", "Tagesverlust-Limit", "vom Startkapital", "%", 1, 50)}
       ${nin("max_open_positions", "Max. offene Positionen", "", "", 1, 12)}
+      ${nin("v21_max_open", "Max. offene Auto-Positionen (v21)", "Weniger, bessere Trades – Gebühren sparen", "", 1, 8)}
       ${nin("size_max_equity_frac", "Max. Größe pro Position", "Hart gedeckelt auf 20 %", "%", 4, 20)}
+      ${nin("max_price_impact_pct", "Max. Preis-Impact", "Slippage-Schutz: Kauf wird abgelehnt, wenn unsere Größe den Preis stärker bewegt", "%", 0.5, 10)}
+      ${tgl("emergency_on", "Notstopp", "Stoppt Auto-Käufe bei veralteten Daten, vielen Quote-Fehlern oder Drawdown")}
+      ${nin("emergency_dd_pct", "Notstopp ab Drawdown", "gemessen ab v21-Start bzw. Hoch", "%", 10, 90)}
+      ${nin("loss_cooldown_min", "Pause nach Verlust", "pro Coin", "min", 0, 1440)}
+      ${nin("max_entries_per_mint_day", "Max. Einstiege pro Coin/Tag", "", "", 1, 10)}
+    </div>
+    <div class="set"><div class="t">Nacht-Modus</div>
+      <div class="srow"><div class="lab"><b>Nacht-Profil</b><small>Auto = nur im Zeitfenster (Standard über Nacht). Strenge Filter: frische Pools ≤ 6 h, Liq ≥ $40k, 5m-Vol ≥ $25k, ≥ 300 Holder, ≥ 2 Scanner-Signale + Rug-Check PASS.</small></div><div class="segsm" id="nm-seg">${["auto", "on", "off"].map(m => `<button data-nm="${m}" class="${(sv("night_mode") || "auto") === m ? "on" : ""}">${{ auto: "Auto", on: "Immer", off: "Aus" }[m]}</button>`).join("")}</div></div>
+      ${nin("night_start_h", "Start", "Stunde (Wien)", "h", 0, 23)}
+      ${nin("night_end_h", "Ende", "Stunde (Wien) – Recap um diese Uhrzeit", "h", 0, 23)}
+      ${nin("night_pos_pct", "Größe pro Trade", "von aktueller Equity (Zinseszins), hart max 20 %", "%", 5, 20)}
+      ${nin("night_stop", "Hard-Stop", "vom Fill", "%", 5, 30)}
+      ${nin("night_time_stop_min", "Zeit-Stop", "solange kein TP erreicht", "min", 5, 120)}
+      ${nin("night_dd_pause_pct", "Pause ab Drawdown", "vom Nacht-Peak", "%", 10, 50)}
+    </div>
+    <div class="set"><div class="t">Signal-Filter (v21)</div>
+      ${nin("v21_min_score", "Mindest-Score", "0–100; darunter kein Trade. Kein Trade ist ok.", "", 50, 95)}
+      ${nin("late_h1_max_pct", "Zu-spät-Grenze", "kein Kauf, wenn schon so viel in 1h gestiegen", "%", 20, 100)}
+      ${tgl("_scam", "Scam-Filter", "Mint/Freeze, Honeypot, Bundles, Wash-Trading, Dev-Verkauf, LP", true)}
     </div>
     <div class="set"><div class="t">Bot-Strategie (Auto-Trade)</div>
-      <div class="srow"><div class="lab"><b>Scalp-Modus</b> <span class="tag">Cupsey-Stil</span><small>Viele kleine, schnelle Trades: 12 % vom Kontostand pro Trade (mind. $1,50, max. 20 %), Take-Profit +20 % (Hälfte) und +35 %, Stop −8 %, max. 15 Min halten, 20 Min Pause pro Coin. Lockerere Einstiegsfilter – Rug- & Fake-Check bleiben Pflicht.</small></div><button class="tg ${scalp ? "on" : ""}" data-tg="scalp_mode_on" aria-label="Scalp-Modus"></button></div>
+      <div class="srow"><div class="lab"><b>Scalp-Modus</b> <span class="tag">Cupsey-Stil</span><small>Schnelle Trades: 12 % vom Kontostand pro Trade (max. 20 %), Take-Profit +20 % (Hälfte) und +35 %, Stop −8 %, max. 15 Min halten. Seit v21: nur mit v21-Signal (Score ≥ Mindest-Score), Mindest-Liquidität $40k, Momentum bestätigt (5m > 0, 1h +3…40 %), max. 2 Käufe pro Zyklus, max. 3 offene Positionen.</small></div><button class="tg ${scalp ? "on" : ""}" data-tg="scalp_mode_on" aria-label="Scalp-Modus"></button></div>
       ${tgl("tiktok_mode_on", "TikTok-Modus", scalp ? "Wird vom Scalp-Modus überstimmt, solange der an ist" : "8 % pro Trade, Stop −6 %, Trailing 12 % vom Hoch")}
       ${tik || scalp ? "" : `<div class="srow"><div class="lab">Positionsgröße</div><div class="segsm" id="size-seg"><button data-size="auto" class="${sv("size_mode") !== "fixed" ? "on" : ""}">Auto</button><button data-size="fixed" class="${sv("size_mode") === "fixed" ? "on" : ""}">Fest</button></div></div>
       ${nin("size_fixed_pct", "Feste Größe", "vom Kontostand", "%", 1, 20)}
@@ -1236,6 +1422,7 @@ function renderSet() {
   v.querySelectorAll("[data-qbs]").forEach(b => b.onclick = () => { qbAmt = +b.dataset.qbs; localStorage.setItem("ax_qb", qbAmt); renderSet(); });
   v.querySelectorAll("[data-tg]").forEach(b => b.onclick = () => { draft[b.dataset.tg] = !sv(b.dataset.tg); settingsDirty = true; renderSet(); });
   v.querySelectorAll("[data-size]").forEach(b => b.onclick = () => { draft.size_mode = b.dataset.size; settingsDirty = true; renderSet(); });
+  v.querySelectorAll("[data-nm]").forEach(b => b.onclick = () => { draft.night_mode = b.dataset.nm; settingsDirty = true; renderSet(); });
   v.querySelectorAll("[data-num]").forEach(i => i.onchange = () => {
     const k = i.dataset.num; let x = num(String(i.value).replace(",", ".")); if (x == null) return;
     x = Math.min(+i.dataset.max, Math.max(+i.dataset.min, x));
@@ -1338,7 +1525,7 @@ document.addEventListener("keydown", (e) => {
     if (m && pos) { e.preventDefault(); sell(pos.mint, m, pos.symbol); return; }
     return;
   }
-  const t = { "1": "pulse", "2": "pos", "3": "hist", "4": "set" }[k];
+  const t = { "1": "pulse", "2": "pos", "3": "hist", "4": "set", "5": "ana", "6": "night" }[k];
   if (t) { e.preventDefault(); setTab(t); return; }
   if (k === "/") { e.preventDefault(); if (tab !== "pulse") setTab("pulse"); setTimeout(() => { const q = $("#q"); if (q) q.focus(); }, 0); }
 });
@@ -1357,6 +1544,8 @@ function renderView() {
   if (tab === "pulse") renderPulse();
   else if (tab === "pos") renderPos();
   else if (tab === "hist") renderHist();
+  else if (tab === "ana") renderAna();
+  else if (tab === "night") renderNight();
   else if (tab === "set") { if (!settingsDirty || !$("#view").children.length) renderSet(); }
 }
 let liveRaf = 0;
@@ -1379,7 +1568,8 @@ async function tick() {
     connectLive();
     paintTop();
     if (first) { setTab(tab); hideBoot(); }
-    else if (tab === "hist" || (tab === "set" && !settingsDirty)) renderView();
+    else if (tab === "hist" || tab === "ana" || (tab === "set" && !settingsDirty)) renderView();
+    else if (tab === "night" && document.activeElement && document.activeElement.id !== "nl-q") renderView();
     else renderLive();
     renderSide();
   } catch (e) {
@@ -1398,14 +1588,14 @@ $("#side").addEventListener("click", onSideClick);
     try { connectLive(); paintTop(); setTab(tab); hideBoot(); renderSide(); } catch (_) {}
   }
   setTimeout(() => { firstPaintDone = true; }, 1500);
-  const loop = async () => { await tick(); const live = liveSource === "direct" && Date.now() - lastTickAt < 5000; setTimeout(loop, live ? POLL_LIVE_MS : POLL_MS); };
+  const loop = async () => { await tick(); const live = liveSource === "direct" && Date.now() - lastTickAt < 5000; setTimeout(loop, tab === "ana" ? 10000 : tab === "night" ? 3000 : live ? POLL_LIVE_MS : POLL_MS); };
   loop();
 })();
 silentWallet();
 if ("serviceWorker" in navigator) {
   let reloading = false;
   navigator.serviceWorker.addEventListener("controllerchange", () => { if (reloading) return; reloading = true; location.reload(); });
-  navigator.serviceWorker.register("./sw.js?v=20", { updateViaCache: "none" }).then(reg => { const ping = () => { try { reg.update(); } catch (_) {} }; ping(); setInterval(ping, 15000); if (reg.waiting) reg.waiting.postMessage("skipWaiting"); }).catch(() => {});
+  navigator.serviceWorker.register("./sw.js?v=21", { updateViaCache: "none" }).then(reg => { const ping = () => { try { reg.update(); } catch (_) {} }; ping(); setInterval(ping, 15000); if (reg.waiting) reg.waiting.postMessage("skipWaiting"); }).catch(() => {});
 }
 
   </script>
