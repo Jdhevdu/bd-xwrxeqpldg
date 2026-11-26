@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-26 02:45:53 CET",
-  "last_update": "2026-11-26 02:45:16 CET",
+  "exported_at": "2026-11-26 02:46:56 CET",
+  "last_update": "2026-11-26 02:45:59 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.553517775747225,
@@ -104,13 +104,13 @@
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
     "max_ms": 26264.5,
-    "last_ms": 1000.1,
+    "last_ms": 4367.1,
     "n": 400,
-    "work_p50_ms": 0.4,
+    "work_p50_ms": 0.5,
     "work_p95_ms": 1.2,
     "work_max_ms": 102.1,
-    "work_last_ms": 0.5,
-    "lock_wait_ms": 0.0
+    "work_last_ms": 52.8,
+    "lock_wait_ms": 0.1
   },
   "sol_usd": 70.7281910736793,
   "eur_usd": 1.1052,
@@ -119,12 +119,12 @@
   "wins": 19,
   "halted": false,
   "counters": {
-    "cycles": 5016,
+    "cycles": 5017,
     "pools_scanned": 780333,
     "unique_pools": 20002,
     "prefilter_rejected": 137413,
     "safety_rejected": 3469,
-    "scored": 10408,
+    "scored": 10410,
     "buys": 88,
     "sells": 93
   },
@@ -340,6 +340,51 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-26 02:45:59 CET",
+      "ts": 1795657559.0,
+      "kind": "Skipped",
+      "symbol": "NORFEATH",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "NORFEATH score 87 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 02:45:59 CET",
+      "ts": 1795657559.0,
+      "kind": "Skipped",
+      "symbol": "Pumpcat",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Pumpcat score 88 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 02:45:59 CET",
+      "ts": 1795657559.0,
+      "kind": "Skipped",
+      "symbol": "Pnut",
+      "reason": "score 63 < 64",
+      "text": "Pnut score 63 - score 63 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 02:45:59 CET",
+      "ts": 1795657559.0,
+      "kind": "Scored",
+      "symbol": "Pumpcat",
+      "reason": "Pumpcat [ds_profiles] score 88 | liq $43,835 | h1 +10.2% | top10 12% | LP 100% | liquidity:5.1 vol_liq:15 buy_pressure:14.9 holders:15 authorities:10 lp:10.0 age:5 momentum:10 pump:27 | pump 27 (Im Trend, Socials ergänzt)",
+      "text": "Pumpcat [ds_profiles] score 88 | liq $43,835 | h1 +10.2% | top10 12% | LP 100% | liquidity:5.1 vol_liq:15 buy_pressure:14.9 holders:15 authorities:10 lp:10.0 age:5 momentum:10 pump:27 | pump 27 (Im Trend, Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 02:45:55 CET",
+      "ts": 1795657555.0,
+      "kind": "Scored",
+      "symbol": "NORFEATH",
+      "reason": "NORFEATH [trending_5m] score 87 | liq $55,968 | h1 +2.5% | top10 1% | LP 100% | liquidity:6.3 vol_liq:15 buy_pressure:15 holders:15 authorities:10 lp:10.0 age:5 momentum:5 pump:45 | pump 45 (Dex-Boost, Im Trend, Viele Käufer)",
+      "text": "NORFEATH [trending_5m] score 87 | liq $55,968 | h1 +2.5% | top10 1% | LP 100% | liquidity:6.3 vol_liq:15 buy_pressure:15 holders:15 authorities:10 lp:10.0 age:5 momentum:5 pump:45 | pump 45 (Dex-Boost, Im Trend, Viele Käufer)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 02:45:51 CET",
       "ts": 1795657551.0,
@@ -654,54 +699,54 @@
       "reason": "dex pump-fun not graduated/allowed",
       "text": "GOLDTURK (pump-fun) - dex pump-fun not graduated/allowed",
       "curve": true
-    },
-    {
-      "t": "2026-11-26 02:45:25 CET",
-      "ts": 1795657525.0,
-      "kind": "Rejected",
-      "symbol": "$SLJK",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "$SLJK (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 02:45:25 CET",
-      "ts": 1795657525.0,
-      "kind": "Rejected",
-      "symbol": "KEYL",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "KEYL (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 02:45:25 CET",
-      "ts": 1795657525.0,
-      "kind": "Rejected",
-      "symbol": "Cornell",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "Cornell (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 02:45:25 CET",
-      "ts": 1795657525.0,
-      "kind": "Rejected",
-      "symbol": "pairless",
-      "reason": "dex pump-fun not graduated/allowed",
-      "text": "pairless (pump-fun) - dex pump-fun not graduated/allowed",
-      "curve": true
-    },
-    {
-      "t": "2026-11-26 02:45:16 CET",
-      "ts": 1795657516.0,
-      "kind": "Skipped",
-      "symbol": "Pnut",
-      "reason": "score 62 < 64",
-      "text": "Pnut score 62 - score 62 < 64",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-26 02:45:59 CET",
+      "ts": 1795657559.0,
+      "kind": "Skipped",
+      "symbol": "NORFEATH",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "NORFEATH score 87 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 02:45:59 CET",
+      "ts": 1795657559.0,
+      "kind": "Skipped",
+      "symbol": "Pumpcat",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "Pumpcat score 88 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 02:45:59 CET",
+      "ts": 1795657559.0,
+      "kind": "Skipped",
+      "symbol": "Pnut",
+      "reason": "score 63 < 64",
+      "text": "Pnut score 63 - score 63 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 02:45:59 CET",
+      "ts": 1795657559.0,
+      "kind": "Scored",
+      "symbol": "Pumpcat",
+      "reason": "Pumpcat [ds_profiles] score 88 | liq $43,835 | h1 +10.2% | top10 12% | LP 100% | liquidity:5.1 vol_liq:15 buy_pressure:14.9 holders:15 authorities:10 lp:10.0 age:5 momentum:10 pump:27 | pump 27 (Im Trend, Socials ergänzt)",
+      "text": "Pumpcat [ds_profiles] score 88 | liq $43,835 | h1 +10.2% | top10 12% | LP 100% | liquidity:5.1 vol_liq:15 buy_pressure:14.9 holders:15 authorities:10 lp:10.0 age:5 momentum:10 pump:27 | pump 27 (Im Trend, Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 02:45:55 CET",
+      "ts": 1795657555.0,
+      "kind": "Scored",
+      "symbol": "NORFEATH",
+      "reason": "NORFEATH [trending_5m] score 87 | liq $55,968 | h1 +2.5% | top10 1% | LP 100% | liquidity:6.3 vol_liq:15 buy_pressure:15 holders:15 authorities:10 lp:10.0 age:5 momentum:5 pump:45 | pump 45 (Dex-Boost, Im Trend, Viele Käufer)",
+      "text": "NORFEATH [trending_5m] score 87 | liq $55,968 | h1 +2.5% | top10 1% | LP 100% | liquidity:6.3 vol_liq:15 buy_pressure:15 holders:15 authorities:10 lp:10.0 age:5 momentum:5 pump:45 | pump 45 (Dex-Boost, Im Trend, Viele Käufer)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 02:45:51 CET",
       "ts": 1795657551.0,
@@ -881,54 +926,9 @@
       "reason": "liquidity $0 < $10,000",
       "text": "AGI (pumpswap) - liquidity $0 < $10,000",
       "curve": false
-    },
-    {
-      "t": "2026-11-26 02:45:16 CET",
-      "ts": 1795657516.0,
-      "kind": "Skipped",
-      "symbol": "Pnut",
-      "reason": "score 62 < 64",
-      "text": "Pnut score 62 - score 62 < 64",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 02:45:16 CET",
-      "ts": 1795657516.0,
-      "kind": "Scored",
-      "symbol": "Pnut",
-      "reason": "Pnut [watchlist, graduated] score 62 | liq $12,423 | h1 -36.1% | top10 18% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:5.1 holders:13.8 authorities:10 lp:10.0 age:5 momentum:0 pump:23 | pump 23",
-      "text": "Pnut [watchlist, graduated] score 62 | liq $12,423 | h1 -36.1% | top10 18% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:5.1 holders:13.8 authorities:10 lp:10.0 age:5 momentum:0 pump:23 | pump 23",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 02:45:16 CET",
-      "ts": 1795657516.0,
-      "kind": "Rejected",
-      "symbol": "NSFW",
-      "reason": "liquidity $0 < $10,000",
-      "text": "NSFW (pumpswap) - liquidity $0 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 02:45:16 CET",
-      "ts": 1795657516.0,
-      "kind": "Rejected",
-      "symbol": "SOL",
-      "reason": "impersonates SOL (mint is not the official one)",
-      "text": "SOL (pumpswap) - impersonates SOL (mint is not the official one)",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 02:45:16 CET",
-      "ts": 1795657516.0,
-      "kind": "Rejected",
-      "symbol": "Nala",
-      "reason": "liquidity $1,568 < $10,000",
-      "text": "Nala (pumpswap) - liquidity $1,568 < $10,000",
-      "curve": false
     }
   ],
-  "curve_skips": 1904,
+  "curve_skips": 1903,
   "equity_history": [
     {
       "t": 1794842006.0,
@@ -2731,12 +2731,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795643398.3799782,
-      "t_label": "2026-11-25 22:49:58 CET",
-      "usd": 8.3502,
-      "eur": 7.5554
-    },
-    {
       "t": 1795643419.5052564,
       "t_label": "2026-11-25 22:50:19 CET",
       "usd": 8.3502,
@@ -3929,6 +3923,12 @@
       "t_label": "2026-11-26 02:45:00 CET",
       "usd": 8.3481,
       "eur": 7.5535
+    },
+    {
+      "t": 1795657559.5596213,
+      "t_label": "2026-11-26 02:45:59 CET",
+      "usd": 8.3481,
+      "eur": 7.5535
     }
   ],
   "agents": {
@@ -3944,14 +3944,14 @@
       "price_s": null,
       "price_stale_s": null,
       "stop_to_sell_s": null,
-      "bot_to_phone_s": 0.121,
+      "bot_to_phone_s": 0.123,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795657552.6311986,
+      "updated_ts": 1795657615.9957275,
       "stages": {
         "discovery": {
           "p50_s": 541.169,
@@ -4017,10 +4017,10 @@
           "n": 0
         },
         "bot_to_phone": {
-          "p50_s": 0.121,
-          "p95_s": 0.132,
-          "max_s": 0.166,
-          "last_s": 0.166,
+          "p50_s": 0.123,
+          "p95_s": 0.131,
+          "max_s": 0.539,
+          "last_s": 0.539,
           "n": 200
         },
         "event_to_phone": {
@@ -4053,13 +4053,23 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "Pnut",
+      "token": "Pumpcat",
       "pill": "135 pools",
       "pill_kind": "blue",
       "detail": "20,002 unique pools",
       "pools": 135,
       "unique": 20002,
       "filters": [
+        {
+          "symbol": "Pumpcat",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "NORFEATH",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "Pnut",
           "text": "top 10 > 25%",
@@ -4089,27 +4099,17 @@
           "symbol": "FUND",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "River",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "TURKEY",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
     "analyst": {
       "name": "Analyst",
       "title": "Scoring",
-      "token": "Pnut",
-      "pill": "63",
+      "token": "Pumpcat",
+      "pill": "88",
       "pill_kind": "purple",
-      "detail": "Pnut [watchlist, graduated] score 63 | liq $12,480 | h1 -24.6% | top10 18% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:4.8 holders:13.8 authorities:10 lp:10.0 age:5 momentum:0 pump:27 | pump 27 (Geringer Price Impact)",
-      "score": 63,
+      "detail": "Pumpcat [ds_profiles] score 88 | liq $43,835 | h1 +10.2% | top10 12% | LP 100% | liquidity:5.1 vol_liq:15 buy_pressure:14.9 holders:15 authorities:10 lp:10.0 age:5 momentum:10 pump:27 | pump 27 (Im Trend, Socials ergänzt)",
+      "score": 88,
       "passed": true,
       "status": "passed",
       "rejected": 140882
@@ -4299,11 +4299,11 @@
   "modules": [
     {
       "name": "Scanner",
-      "detail": "20002 Pools · 5016 Scans · Watch 333 · Graduiert 253 · letzter Scan: ds_search 14 · trending_5m 15 · trending_1h 10 · ds_boosts_top 6 · ds_boosts 22 · ds_profiles 23 · watchlist 45"
+      "detail": "20002 Pools · 5017 Scans · Watch 333 · Graduiert 253 · letzter Scan: ds_search 14 · trending_5m 15 · trending_1h 10 · ds_boosts_top 6 · ds_boosts 22 · ds_profiles 23 · watchlist 45"
     },
     {
       "name": "Analyst",
-      "detail": "10408 bewertet · 140882 abgelehnt"
+      "detail": "10410 bewertet · 140882 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4416,7 +4416,53 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "NORFEATH",
+      "mint": "3gmFG4sFDJErDV8pacFrL2uUPXeGJTYLjfRy4hFypump",
+      "pool": "FUzScAtZzSt9rzMtt2pCDLPpJ1ikYC5LgDNjYtfWyqdj",
+      "score": 45,
+      "reasons": [
+        "Dex-Boost",
+        "Im Trend",
+        "Viele Käufer"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 593802.039465681,
+      "origin": "trending_5m",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/3gmFG4sFDJErDV8pacFrL2uUPXeGJTYLjfRy4hFypump.png"
+    },
+    {
+      "symbol": "Pnut",
+      "mint": "9bgy4dVrPqa7HozGvBRV5Qy1ccbDdYHHMyzKrJjqpump",
+      "pool": "EXxmL1AvgnzBwLxuqcR8BYxQHua1jPtpLzCpeMZA8M3J",
+      "score": 27,
+      "reasons": [
+        "Geringer Price Impact"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 29669.0,
+      "origin": "watchlist",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/9bgy4dVrPqa7HozGvBRV5Qy1ccbDdYHHMyzKrJjqpump.png"
+    },
+    {
+      "symbol": "Pumpcat",
+      "mint": "5CPiu3nmhYWWnj6BfebvMzqqwPUBm8UzBtNGW4cEpump",
+      "pool": "4j4q8fC5Y3iazhQRZJMti95jEuQk38yX397q2DePxwnf",
+      "score": 27,
+      "reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 390233.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/5CPiu3nmhYWWnj6BfebvMzqqwPUBm8UzBtNGW4cEpump.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4434,106 +4480,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "TURKEY",
-      "mint": "FE7zN2fJJppwrU71mQfuXmjgKmcGfVuCpMYrhwAhpump",
-      "pool": "9qW5EtmzZ3QHk6fFahxmJb3xFKXp9xk7APBAS2vLUeLh",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1904.0,
-      "liq": 1839.5,
-      "age_min": 173.47,
-      "created_at": "2026-11-25T22:51:48Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,840 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795657516.064939,
-      "t": "2026-11-26 02:45:16 CET",
-      "id": "FE7zN2fJJppwrU71mQfuXmjgKmcGfVuCpMYrhwAhpump-1795657516064"
-    },
-    {
-      "symbol": "River",
-      "mint": "HJxaaQv6zenNfMFgknnaWBNPetVXSAv7cEup1yAgpump",
-      "pool": "2jgXLVu4QStGCvwzz1spMGZXhzi1dMgCRA3cWt3kVaxH",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_profiles",
-      "mcap": 1873.0,
-      "liq": 1810.85,
-      "age_min": 136.48,
-      "created_at": "2026-11-25T23:28:47Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,811 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795657516.068572,
-      "t": "2026-11-26 02:45:16 CET",
-      "id": "HJxaaQv6zenNfMFgknnaWBNPetVXSAv7cEup1yAgpump-1795657516068"
-    },
-    {
-      "symbol": "FUND",
-      "mint": "6GKQJ5aJNbCWASAiFsxoSNFujMWVHnkBiMpK9FiHFUND",
-      "pool": "G9oAxDwajzzdcBNRxCqaBj79HBA9mBJcTbUb6WUn7kwU",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 1832.0,
-      "liq": 1779.09,
-      "age_min": 255.93,
-      "created_at": "2026-11-25T21:29:20Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,779 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795657516.0723276,
-      "t": "2026-11-26 02:45:16 CET",
-      "id": "6GKQJ5aJNbCWASAiFsxoSNFujMWVHnkBiMpK9FiHFUND-1795657516072"
-    },
-    {
-      "symbol": "Nala",
-      "mint": "FeBG8AEG4j7LT7xQF38gPXQFBRBtXBTNzhZjSa3bpump",
-      "pool": "3AwU6aP4cwQHbtFB2FyxPjv6E3n824eSgYKX6bNPCDQU",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 1584.0,
-      "liq": 1567.64,
-      "age_min": 265.48,
-      "created_at": "2026-11-25T21:19:47Z",
-      "decision": "rejected",
-      "reason": "liquidity $1,568 < $10,000",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795657516.0758512,
-      "t": "2026-11-26 02:45:16 CET",
-      "id": "FeBG8AEG4j7LT7xQF38gPXQFBRBtXBTNzhZjSa3bpump-1795657516075"
-    },
-    {
-      "symbol": "SOL",
-      "mint": "8inL13ZhFhX8x3Nd41AQNz1uGEKdMJGNddWRJH6Hpump",
-      "pool": "GZ1wRRC2ZeLTuVMBKSxyfzvzRJJ3t738SvxckRseK4Xj",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "watchlist",
-      "mcap": 7.0,
-      "liq": 11.99,
-      "age_min": 155.85,
-      "created_at": "2026-11-25T23:09:25Z",
-      "decision": "rejected",
-      "reason": "impersonates SOL (mint is not the official one)",
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795657516.0793657,
-      "t": "2026-11-26 02:45:16 CET",
-      "id": "8inL13ZhFhX8x3Nd41AQNz1uGEKdMJGNddWRJH6Hpump-1795657516079"
-    },
     {
       "symbol": "NSFW",
       "mint": "8SEQBLxwZNjbJkByhhqYGBZ5hWXKJDDt8QJR9TcVpump",
@@ -8435,27 +8381,143 @@
       "ts": 1795657551.641203,
       "t": "2026-11-26 02:45:51 CET",
       "id": "9bgy4dVrPqa7HozGvBRV5Qy1ccbDdYHHMyzKrJjqpump-1795657551641"
+    },
+    {
+      "symbol": "NORFEATH",
+      "mint": "3gmFG4sFDJErDV8pacFrL2uUPXeGJTYLjfRy4hFypump",
+      "pool": "FUzScAtZzSt9rzMtt2pCDLPpJ1ikYC5LgDNjYtfWyqdj",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 593802.039465681,
+      "liq": 55968.1681,
+      "age_min": 280.23,
+      "created_at": "2026-11-25T21:05:41Z",
+      "decision": "accepted",
+      "reason": "score 87",
+      "score": 87,
+      "pump_score": 45,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Im Trend",
+        "Viele Käufer"
+      ],
+      "ts": 1795657555.0483215,
+      "t": "2026-11-26 02:45:55 CET",
+      "id": "3gmFG4sFDJErDV8pacFrL2uUPXeGJTYLjfRy4hFypump-1795657555048"
+    },
+    {
+      "symbol": "Pumpcat",
+      "mint": "5CPiu3nmhYWWnj6BfebvMzqqwPUBm8UzBtNGW4cEpump",
+      "pool": "4j4q8fC5Y3iazhQRZJMti95jEuQk38yX397q2DePxwnf",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 390233.0,
+      "liq": 43834.67,
+      "age_min": 103.14,
+      "created_at": "2026-11-26T00:02:51Z",
+      "decision": "accepted",
+      "reason": "score 88",
+      "score": 88,
+      "pump_score": 27,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795657559.5391185,
+      "t": "2026-11-26 02:45:59 CET",
+      "id": "5CPiu3nmhYWWnj6BfebvMzqqwPUBm8UzBtNGW4cEpump-1795657559539"
+    },
+    {
+      "symbol": "Pnut",
+      "mint": "9bgy4dVrPqa7HozGvBRV5Qy1ccbDdYHHMyzKrJjqpump",
+      "pool": "EXxmL1AvgnzBwLxuqcR8BYxQHua1jPtpLzCpeMZA8M3J",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "watchlist",
+      "mcap": 29669.0,
+      "liq": 12479.96,
+      "age_min": 303.19,
+      "created_at": "2026-11-25T20:42:48Z",
+      "decision": "skipped",
+      "reason": "score 63 < 64",
+      "score": 63,
+      "pump_score": 27,
+      "pump_reasons": [
+        "Geringer Price Impact"
+      ],
+      "ts": 1795657559.5436962,
+      "t": "2026-11-26 02:45:59 CET",
+      "id": "9bgy4dVrPqa7HozGvBRV5Qy1ccbDdYHHMyzKrJjqpump-1795657559543"
+    },
+    {
+      "symbol": "Pumpcat",
+      "mint": "5CPiu3nmhYWWnj6BfebvMzqqwPUBm8UzBtNGW4cEpump",
+      "pool": "4j4q8fC5Y3iazhQRZJMti95jEuQk38yX397q2DePxwnf",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 390233.0,
+      "liq": 43834.67,
+      "age_min": 103.14,
+      "created_at": "2026-11-26T00:02:51Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 88,
+      "pump_score": 27,
+      "pump_reasons": [
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795657559.5472784,
+      "t": "2026-11-26 02:45:59 CET",
+      "id": "5CPiu3nmhYWWnj6BfebvMzqqwPUBm8UzBtNGW4cEpump-1795657559547"
+    },
+    {
+      "symbol": "NORFEATH",
+      "mint": "3gmFG4sFDJErDV8pacFrL2uUPXeGJTYLjfRy4hFypump",
+      "pool": "FUzScAtZzSt9rzMtt2pCDLPpJ1ikYC5LgDNjYtfWyqdj",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 593802.039465681,
+      "liq": 55968.1681,
+      "age_min": 280.31,
+      "created_at": "2026-11-25T21:05:41Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 87,
+      "pump_score": 45,
+      "pump_reasons": [
+        "Dex-Boost",
+        "Im Trend",
+        "Viele Käufer"
+      ],
+      "ts": 1795657559.5507936,
+      "t": "2026-11-26 02:45:59 CET",
+      "id": "3gmFG4sFDJErDV8pacFrL2uUPXeGJTYLjfRy4hFypump-1795657559550"
     }
   ],
   "feed_stats": {
-    "emitted": 5455,
-    "per_min": 142.52,
+    "emitted": 5460,
+    "per_min": 138.83,
     "by_decision": {
       "seen": 4209,
       "rejected": 1113,
-      "accepted": 67,
-      "skipped": 66
+      "accepted": 69,
+      "skipped": 69
     },
     "by_source": {
       "new": 781,
       "pump_logs": 192,
       "ds_search": 408,
       "trending_1h": 302,
-      "trending_5m": 444,
+      "trending_5m": 446,
       "ds_boosts_top": 154,
       "ds_boosts": 785,
-      "ds_profiles": 857,
-      "watchlist": 1532
+      "ds_profiles": 859,
+      "watchlist": 1533
     },
     "pumpfun": 2299
   },
@@ -8463,7 +8525,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.7,
+  "heartbeat_age_s": 0.3,
   "bot_alive": true,
   "supervisor_alive": true
 }
