@@ -1,8 +1,8 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-26 11:27:54 CET",
-  "last_update": "2026-11-26 11:27:14 CET",
+  "exported_at": "2026-11-26 11:28:57 CET",
+  "last_update": "2026-11-26 11:27:57 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
   "equity_eur": 7.586913026959699,
@@ -109,7 +109,7 @@
     "work_p50_ms": 0.4,
     "work_p95_ms": 8.5,
     "work_max_ms": 160.7,
-    "work_last_ms": 0.7,
+    "work_last_ms": 0.6,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 71.04089116638222,
@@ -123,8 +123,8 @@
     "pools_scanned": 843778,
     "unique_pools": 20010,
     "prefilter_rejected": 151622,
-    "safety_rejected": 3723,
-    "scored": 11330,
+    "safety_rejected": 3724,
+    "scored": 11332,
     "buys": 88,
     "sells": 93
   },
@@ -339,6 +339,60 @@
   "trades": [],
   "trade_events": [],
   "scanner": [
+    {
+      "t": "2026-11-26 11:27:57 CET",
+      "ts": 1795688877.0,
+      "kind": "Skipped",
+      "symbol": "STRUCK",
+      "reason": "score 56 < 64",
+      "text": "STRUCK score 56 - score 56 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 11:27:57 CET",
+      "ts": 1795688877.0,
+      "kind": "Skipped",
+      "symbol": "duk",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "duk score 65 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 11:27:57 CET",
+      "ts": 1795688877.0,
+      "kind": "Rejected",
+      "symbol": "DOG",
+      "reason": "RugCheck unavailable, skipped for now",
+      "text": "DOG - RugCheck unavailable, skipped for now",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 11:27:57 CET",
+      "ts": 1795688877.0,
+      "kind": "Rejected",
+      "symbol": "Anthropic",
+      "reason": "RugCheck danger: Large Amount of LP Unlocked",
+      "text": "Anthropic - RugCheck danger: Large Amount of LP Unlocked",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 11:27:57 CET",
+      "ts": 1795688877.0,
+      "kind": "Scored",
+      "symbol": "duk",
+      "reason": "duk [ds_profiles, graduated] score 65 | liq $11,469 | h1 +2.0% | top10 26% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:11.4 holders:10.4 authorities:10 lp:10.0 age:2 momentum:0 narrative:DUK pump:33 | narrative DUK | pump 33 (Narrativ DUK, Im Trend, Socials ergänzt)",
+      "text": "duk [ds_profiles, graduated] score 65 | liq $11,469 | h1 +2.0% | top10 26% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:11.4 holders:10.4 authorities:10 lp:10.0 age:2 momentum:0 narrative:DUK pump:33 | narrative DUK | pump 33 (Narrativ DUK, Im Trend, Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 11:27:55 CET",
+      "ts": 1795688875.0,
+      "kind": "Scored",
+      "symbol": "STRUCK",
+      "reason": "STRUCK [trending_5m, graduated] score 56 | liq $19,566 | h1 +57.7% | top10 11% | LP 100% | liquidity:1.3 vol_liq:2 buy_pressure:9.1 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:STRUCK pump:39 | narrative STRUCK | pump 39 (Narrativ STRUCK, Viele Käufer, Im Trend)",
+      "text": "STRUCK [trending_5m, graduated] score 56 | liq $19,566 | h1 +57.7% | top10 11% | LP 100% | liquidity:1.3 vol_liq:2 buy_pressure:9.1 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:STRUCK pump:39 | narrative STRUCK | pump 39 (Narrativ STRUCK, Viele Käufer, Im Trend)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 11:27:32 CET",
       "ts": 1795688852.0,
@@ -644,63 +698,63 @@
       "reason": "STRUCK [trending_5m, graduated] score 57 | liq $19,566 | h1 +57.7% | top10 11% | LP 100% | liquidity:1.3 vol_liq:2 buy_pressure:9.1 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:STRUCK pump:44 | narrative STRUCK | pump 44 (Liquidität steigt, Geringer Price Impact, Narrativ STRUCK)",
       "text": "STRUCK [trending_5m, graduated] score 57 | liq $19,566 | h1 +57.7% | top10 11% | LP 100% | liquidity:1.3 vol_liq:2 buy_pressure:9.1 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:STRUCK pump:44 | narrative STRUCK | pump 44 (Liquidität steigt, Geringer Price Impact, Narrativ STRUCK)",
       "curve": false
-    },
-    {
-      "t": "2026-11-26 11:27:06 CET",
-      "ts": 1795688826.0,
-      "kind": "Rejected",
-      "symbol": "SOLVI",
-      "reason": "liquidity $2 < $10,000",
-      "text": "SOLVI (pumpswap) - liquidity $2 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 11:27:06 CET",
-      "ts": 1795688826.0,
-      "kind": "Rejected",
-      "symbol": "OG",
-      "reason": "liquidity $1,611 < $10,000",
-      "text": "OG (pumpswap) - liquidity $1,611 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 11:27:06 CET",
-      "ts": 1795688826.0,
-      "kind": "Rejected",
-      "symbol": "Oro",
-      "reason": "liquidity $1,897 < $10,000",
-      "text": "Oro (pumpswap) - liquidity $1,897 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 11:27:06 CET",
-      "ts": 1795688826.0,
-      "kind": "Rejected",
-      "symbol": "ISABELLE",
-      "reason": "liquidity $1,934 < $10,000",
-      "text": "ISABELLE (pumpswap) - liquidity $1,934 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 11:27:06 CET",
-      "ts": 1795688826.0,
-      "kind": "Rejected",
-      "symbol": "SI",
-      "reason": "liquidity $2,246 < $10,000",
-      "text": "SI (pumpswap) - liquidity $2,246 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 11:27:06 CET",
-      "ts": 1795688826.0,
-      "kind": "Rejected",
-      "symbol": "PPV",
-      "reason": "liquidity $2,444 < $10,000",
-      "text": "PPV (pumpswap) - liquidity $2,444 < $10,000",
-      "curve": false
     }
   ],
   "scanner_highlights": [
+    {
+      "t": "2026-11-26 11:27:57 CET",
+      "ts": 1795688877.0,
+      "kind": "Skipped",
+      "symbol": "STRUCK",
+      "reason": "score 56 < 64",
+      "text": "STRUCK score 56 - score 56 < 64",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 11:27:57 CET",
+      "ts": 1795688877.0,
+      "kind": "Skipped",
+      "symbol": "duk",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "text": "duk score 65 - position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 11:27:57 CET",
+      "ts": 1795688877.0,
+      "kind": "Rejected",
+      "symbol": "DOG",
+      "reason": "RugCheck unavailable, skipped for now",
+      "text": "DOG - RugCheck unavailable, skipped for now",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 11:27:57 CET",
+      "ts": 1795688877.0,
+      "kind": "Rejected",
+      "symbol": "Anthropic",
+      "reason": "RugCheck danger: Large Amount of LP Unlocked",
+      "text": "Anthropic - RugCheck danger: Large Amount of LP Unlocked",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 11:27:57 CET",
+      "ts": 1795688877.0,
+      "kind": "Scored",
+      "symbol": "duk",
+      "reason": "duk [ds_profiles, graduated] score 65 | liq $11,469 | h1 +2.0% | top10 26% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:11.4 holders:10.4 authorities:10 lp:10.0 age:2 momentum:0 narrative:DUK pump:33 | narrative DUK | pump 33 (Narrativ DUK, Im Trend, Socials ergänzt)",
+      "text": "duk [ds_profiles, graduated] score 65 | liq $11,469 | h1 +2.0% | top10 26% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:11.4 holders:10.4 authorities:10 lp:10.0 age:2 momentum:0 narrative:DUK pump:33 | narrative DUK | pump 33 (Narrativ DUK, Im Trend, Socials ergänzt)",
+      "curve": false
+    },
+    {
+      "t": "2026-11-26 11:27:55 CET",
+      "ts": 1795688875.0,
+      "kind": "Scored",
+      "symbol": "STRUCK",
+      "reason": "STRUCK [trending_5m, graduated] score 56 | liq $19,566 | h1 +57.7% | top10 11% | LP 100% | liquidity:1.3 vol_liq:2 buy_pressure:9.1 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:STRUCK pump:39 | narrative STRUCK | pump 39 (Narrativ STRUCK, Viele Käufer, Im Trend)",
+      "text": "STRUCK [trending_5m, graduated] score 56 | liq $19,566 | h1 +57.7% | top10 11% | LP 100% | liquidity:1.3 vol_liq:2 buy_pressure:9.1 holders:15 authorities:10 lp:10.0 age:2 momentum:0 narrative:STRUCK pump:39 | narrative STRUCK | pump 39 (Narrativ STRUCK, Viele Käufer, Im Trend)",
+      "curve": false
+    },
     {
       "t": "2026-11-26 11:27:32 CET",
       "ts": 1795688852.0,
@@ -870,60 +924,6 @@
       "symbol": "Oro",
       "reason": "liquidity $1,897 < $10,000",
       "text": "Oro (pumpswap) - liquidity $1,897 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 11:27:06 CET",
-      "ts": 1795688826.0,
-      "kind": "Rejected",
-      "symbol": "ISABELLE",
-      "reason": "liquidity $1,934 < $10,000",
-      "text": "ISABELLE (pumpswap) - liquidity $1,934 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 11:27:06 CET",
-      "ts": 1795688826.0,
-      "kind": "Rejected",
-      "symbol": "SI",
-      "reason": "liquidity $2,246 < $10,000",
-      "text": "SI (pumpswap) - liquidity $2,246 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 11:27:06 CET",
-      "ts": 1795688826.0,
-      "kind": "Rejected",
-      "symbol": "PPV",
-      "reason": "liquidity $2,444 < $10,000",
-      "text": "PPV (pumpswap) - liquidity $2,444 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 11:27:06 CET",
-      "ts": 1795688826.0,
-      "kind": "Rejected",
-      "symbol": "IShowSpace",
-      "reason": "liquidity $5,456 < $10,000",
-      "text": "IShowSpace (pumpswap) - liquidity $5,456 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 11:27:06 CET",
-      "ts": 1795688826.0,
-      "kind": "Rejected",
-      "symbol": "gob",
-      "reason": "liquidity $6,193 < $10,000",
-      "text": "gob (pumpswap) - liquidity $6,193 < $10,000",
-      "curve": false
-    },
-    {
-      "t": "2026-11-26 11:27:06 CET",
-      "ts": 1795688826.0,
-      "kind": "Rejected",
-      "symbol": "Fug",
-      "reason": "liquidity $6,508 < $10,000",
-      "text": "Fug (pumpswap) - liquidity $6,508 < $10,000",
       "curve": false
     }
   ],
@@ -2730,12 +2730,6 @@
       "eur": 19.2996
     },
     {
-      "t": 1795673962.511254,
-      "t_label": "2026-11-26 07:19:22 CET",
-      "usd": 8.3419,
-      "eur": 7.5478
-    },
-    {
       "t": 1795673994.6598847,
       "t_label": "2026-11-26 07:19:54 CET",
       "usd": 8.3419,
@@ -3928,6 +3922,12 @@
       "t_label": "2026-11-26 11:27:14 CET",
       "usd": 8.3851,
       "eur": 7.5869
+    },
+    {
+      "t": 1795688877.4336529,
+      "t_label": "2026-11-26 11:27:57 CET",
+      "usd": 8.3851,
+      "eur": 7.5869
     }
   ],
   "agents": {
@@ -3950,7 +3950,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795688873.5287545,
+      "updated_ts": 1795688936.9681277,
       "stages": {
         "discovery": {
           "p50_s": 64.0,
@@ -4019,7 +4019,7 @@
           "p50_s": 0.125,
           "p95_s": 0.13,
           "max_s": 0.187,
-          "last_s": 0.125,
+          "last_s": 0.128,
           "n": 200
         },
         "event_to_phone": {
@@ -4052,13 +4052,33 @@
     "scanner": {
       "name": "Scanner",
       "title": "Scanning",
-      "token": "SOLVI",
+      "token": "DOG",
       "pill": "124 pools",
       "pill_kind": "blue",
       "detail": "20,010 unique pools",
       "pools": 124,
       "unique": 20010,
       "filters": [
+        {
+          "symbol": "DOG",
+          "text": "dev past rugs",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "Anthropic",
+          "text": "dev past rugs",
+          "kind": "Rejected"
+        },
+        {
+          "symbol": "duk",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
+        {
+          "symbol": "STRUCK",
+          "text": "top 10 > 25%",
+          "kind": "Scored"
+        },
         {
           "symbol": "SOLVI",
           "text": "liq < $4k",
@@ -4078,26 +4098,6 @@
           "symbol": "ISABELLE",
           "text": "liq < $4k",
           "kind": "Rejected"
-        },
-        {
-          "symbol": "SI",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "PPV",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "IShowSpace",
-          "text": "liq < $4k",
-          "kind": "Rejected"
-        },
-        {
-          "symbol": "gob",
-          "text": "liq < $4k",
-          "kind": "Rejected"
         }
       ]
     },
@@ -4107,11 +4107,11 @@
       "token": "duk",
       "pill": "65",
       "pill_kind": "purple",
-      "detail": "duk [ds_profiles, graduated] score 65 | liq $11,105 | h1 -3.7% | top10 26% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:11.3 holders:10.4 authorities:10 lp:10.0 age:2 momentum:0 narrative:DUK pump:37 | narrative DUK | pump 37 (Volumen zieht an, Narrativ DUK, Im Trend)",
+      "detail": "duk [ds_profiles, graduated] score 65 | liq $11,469 | h1 +2.0% | top10 26% | LP 100% | liquidity:0 vol_liq:15 buy_pressure:11.4 holders:10.4 authorities:10 lp:10.0 age:2 momentum:0 narrative:DUK pump:33 | narrative DUK | pump 33 (Narrativ DUK, Im Trend, Socials ergänzt)",
       "score": 65,
       "passed": true,
       "status": "passed",
-      "rejected": 155345
+      "rejected": 155346
     },
     "executor": {
       "name": "Executor",
@@ -4310,7 +4310,7 @@
     },
     {
       "name": "Analyst",
-      "detail": "11330 bewertet · 155345 abgelehnt"
+      "detail": "11332 bewertet · 155346 abgelehnt"
     },
     {
       "name": "Brain",
@@ -4423,7 +4423,40 @@
     },
     "tiktok_has_backup": true
   },
-  "radar": [],
+  "radar": [
+    {
+      "symbol": "STRUCK",
+      "mint": "HN9jRRCKuLNL3oSgNV1MBvd3Krg6TingFntJp1PSpump",
+      "pool": "8NASHzpZXrkxLcTcV5NfoLC1Wpy3Rz2nKdjWTmeuZHDz",
+      "score": 39,
+      "reasons": [
+        "Narrativ STRUCK",
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 47075.28534,
+      "origin": "trending_5m",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/HN9jRRCKuLNL3oSgNV1MBvd3Krg6TingFntJp1PSpump.png"
+    },
+    {
+      "symbol": "duk",
+      "mint": "DG2EJSEtPBge5F7zBCTZG78p27LTCiq8tUkJ39qupump",
+      "pool": "4XVReVDHQDFUM6FfvTmo7FdmEq7ZGWxZ1Jhj7qVA68wx",
+      "score": 33,
+      "reasons": [
+        "Narrativ DUK",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "early": false,
+      "tag": null,
+      "mcap": 29341.0,
+      "origin": "ds_profiles",
+      "image_url": "https://cdn.dexscreener.com/tokens/solana/DG2EJSEtPBge5F7zBCTZG78p27LTCiq8tUkJ39qupump.png"
+    }
+  ],
   "error": null,
   "realtime": {
     "base": "https://ntfy.adminforge.de",
@@ -4441,126 +4474,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "GTA6",
-      "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
-      "pool": "FDamUzyiEA7Cq1VNiQcbhuHpfCmmcJfgA6DwQQ1hhLd2",
-      "dex": "raydium",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 2395462.0,
-      "liq": 207798.7,
-      "age_min": 161091.19,
-      "created_at": "2026-08-06T13:35:55Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795688826.3249707,
-      "t": "2026-11-26 11:27:06 CET",
-      "id": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz-1795688826324"
-    },
-    {
-      "symbol": "PUMPCHAN",
-      "mint": "Fo2HAwr7ZAUM2bSZ7MWSi16e3aWGpbw5MsUDYCttpump",
-      "pool": "DDcyemq9bkyqtC93djkwaH6VaMKCjVsoCUVGV29q7teB",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 6443661.42579555,
-      "liq": 185932.129,
-      "age_min": 535.94,
-      "created_at": "2026-11-26T01:31:10Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795688826.3285906,
-      "t": "2026-11-26 11:27:06 CET",
-      "id": "Fo2HAwr7ZAUM2bSZ7MWSi16e3aWGpbw5MsUDYCttpump-1795688826328"
-    },
-    {
-      "symbol": "Anthropic",
-      "mint": "8Di9FbUApRwpaEoTBh8xdDtqeq5nhn6mbyXetbLiDanA",
-      "pool": "AsWNKcSMP4obAMt1D6yVtc2dg1s31stUmoBzurdWe5L1",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 113559.1663,
-      "liq": 164283.6357,
-      "age_min": 61.27,
-      "created_at": "2026-11-26T09:25:50Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795688826.3325481,
-      "t": "2026-11-26 11:27:06 CET",
-      "id": "8Di9FbUApRwpaEoTBh8xdDtqeq5nhn6mbyXetbLiDanA-1795688826332"
-    },
-    {
-      "symbol": "FIONA",
-      "mint": "B34nXKzCgsJb9ChLuSHPRpXLE3WFSWyeT8Cqkzzmpump",
-      "pool": "DjbLtX1HRGZZrJgJ7CwTX6SN3D7tBLiytkGwomBUwTVB",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "ds_boosts",
-      "mcap": 2000490.0,
-      "liq": 157173.18,
-      "age_min": 9453.62,
-      "created_at": "2026-11-19T20:53:29Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795688826.3362794,
-      "t": "2026-11-26 11:27:06 CET",
-      "id": "B34nXKzCgsJb9ChLuSHPRpXLE3WFSWyeT8Cqkzzmpump-1795688826336"
-    },
-    {
-      "symbol": "STRUCK",
-      "mint": "D9y72wSANsQWmHw5QjQcfyuxfxnP8prTYNUQSFNpruFV",
-      "pool": "7hT7C9BAsNUX66pHd4mJt1zxphKAXCzhWdcdD9k3c3gs",
-      "dex": "pumpswap",
-      "early": false,
-      "source": "trending_5m",
-      "mcap": 86691.18767,
-      "liq": 133422.2453,
-      "age_min": 8.04,
-      "created_at": "2026-11-26T10:19:04Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795688826.3401349,
-      "t": "2026-11-26 11:27:06 CET",
-      "id": "D9y72wSANsQWmHw5QjQcfyuxfxnP8prTYNUQSFNpruFV-1795688826340"
-    },
-    {
-      "symbol": "JACK",
-      "mint": "9iKLhkPgrzdvFMZYKsuQdYjj52oTGPeNz2WTpMh5gcMP",
-      "pool": "Fy6thj1ef75fcsE6RW5RyGToVDDR65sjsMYZGWy8QrAg",
-      "dex": "raydium",
-      "early": false,
-      "source": "ds_search",
-      "mcap": 329392.0,
-      "liq": 108947.25,
-      "age_min": 67527.01,
-      "created_at": "2026-10-10T13:00:06Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795688826.3438563,
-      "t": "2026-11-26 11:27:06 CET",
-      "id": "9iKLhkPgrzdvFMZYKsuQdYjj52oTGPeNz2WTpMh5gcMP-1795688826343"
-    },
     {
       "symbol": "ROCKET",
       "mint": "6C9r2gzu8Pr54hTevHo3x5gSj9JqtpApj7obJnrtpump",
@@ -8456,26 +8369,162 @@
       "ts": 1795688870.8867874,
       "t": "2026-11-26 11:27:50 CET",
       "id": "EPPiSnGoWRcAV8XhPEokxCw4y6CH2LV6nzSo1YsGSEnj-1795688870886"
+    },
+    {
+      "symbol": "STRUCK",
+      "mint": "HN9jRRCKuLNL3oSgNV1MBvd3Krg6TingFntJp1PSpump",
+      "pool": "8NASHzpZXrkxLcTcV5NfoLC1Wpy3Rz2nKdjWTmeuZHDz",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 47075.28534,
+      "liq": 19565.9641,
+      "age_min": 17.19,
+      "created_at": "2026-11-26T10:10:44Z",
+      "decision": "accepted",
+      "reason": "score 56",
+      "score": 56,
+      "pump_score": 39,
+      "pump_reasons": [
+        "Narrativ STRUCK",
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "ts": 1795688875.517695,
+      "t": "2026-11-26 11:27:55 CET",
+      "id": "HN9jRRCKuLNL3oSgNV1MBvd3Krg6TingFntJp1PSpump-1795688875517"
+    },
+    {
+      "symbol": "duk",
+      "mint": "DG2EJSEtPBge5F7zBCTZG78p27LTCiq8tUkJ39qupump",
+      "pool": "4XVReVDHQDFUM6FfvTmo7FdmEq7ZGWxZ1Jhj7qVA68wx",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 29341.0,
+      "liq": 11468.62,
+      "age_min": 21.46,
+      "created_at": "2026-11-26T10:06:30Z",
+      "decision": "accepted",
+      "reason": "score 65",
+      "score": 65,
+      "pump_score": 33,
+      "pump_reasons": [
+        "Narrativ DUK",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795688877.4094918,
+      "t": "2026-11-26 11:27:57 CET",
+      "id": "DG2EJSEtPBge5F7zBCTZG78p27LTCiq8tUkJ39qupump-1795688877409"
+    },
+    {
+      "symbol": "Anthropic",
+      "mint": "8Di9FbUApRwpaEoTBh8xdDtqeq5nhn6mbyXetbLiDanA",
+      "pool": "AsWNKcSMP4obAMt1D6yVtc2dg1s31stUmoBzurdWe5L1",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 113559.1663,
+      "liq": 164283.6357,
+      "age_min": 62.12,
+      "created_at": "2026-11-26T09:25:50Z",
+      "decision": "rejected",
+      "reason": "RugCheck danger: Large Amount of LP Unlocked",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795688877.4143486,
+      "t": "2026-11-26 11:27:57 CET",
+      "id": "8Di9FbUApRwpaEoTBh8xdDtqeq5nhn6mbyXetbLiDanA-1795688877414"
+    },
+    {
+      "symbol": "DOG",
+      "mint": "3nsEzgrXoGWWBgQLZ11cY22mtoXLM9Pfi36oB1ReBiKe",
+      "pool": "cAXiNirpiRYJig9DZZUNK1S7NaTzkUvh2a5xkkpbY2u",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 123516.4883,
+      "liq": 213423.2292,
+      "age_min": 99.97,
+      "created_at": "2026-11-26T08:47:59Z",
+      "decision": "rejected",
+      "reason": "RugCheck unavailable, retrying",
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795688877.418637,
+      "t": "2026-11-26 11:27:57 CET",
+      "id": "3nsEzgrXoGWWBgQLZ11cY22mtoXLM9Pfi36oB1ReBiKe-1795688877418"
+    },
+    {
+      "symbol": "duk",
+      "mint": "DG2EJSEtPBge5F7zBCTZG78p27LTCiq8tUkJ39qupump",
+      "pool": "4XVReVDHQDFUM6FfvTmo7FdmEq7ZGWxZ1Jhj7qVA68wx",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "ds_profiles",
+      "mcap": 29341.0,
+      "liq": 11468.62,
+      "age_min": 21.46,
+      "created_at": "2026-11-26T10:06:30Z",
+      "decision": "skipped",
+      "reason": "position $0.67 below minimum $1.50 (fixed 8.0% of equity)",
+      "score": 65,
+      "pump_score": 33,
+      "pump_reasons": [
+        "Narrativ DUK",
+        "Im Trend",
+        "Socials ergänzt"
+      ],
+      "ts": 1795688877.4227076,
+      "t": "2026-11-26 11:27:57 CET",
+      "id": "DG2EJSEtPBge5F7zBCTZG78p27LTCiq8tUkJ39qupump-1795688877422"
+    },
+    {
+      "symbol": "STRUCK",
+      "mint": "HN9jRRCKuLNL3oSgNV1MBvd3Krg6TingFntJp1PSpump",
+      "pool": "8NASHzpZXrkxLcTcV5NfoLC1Wpy3Rz2nKdjWTmeuZHDz",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "trending_5m",
+      "mcap": 47075.28534,
+      "liq": 19565.9641,
+      "age_min": 17.22,
+      "created_at": "2026-11-26T10:10:44Z",
+      "decision": "skipped",
+      "reason": "score 56 < 64",
+      "score": 56,
+      "pump_score": 39,
+      "pump_reasons": [
+        "Narrativ STRUCK",
+        "Viele Käufer",
+        "Im Trend"
+      ],
+      "ts": 1795688877.426604,
+      "t": "2026-11-26 11:27:57 CET",
+      "id": "HN9jRRCKuLNL3oSgNV1MBvd3Krg6TingFntJp1PSpump-1795688877426"
     }
   ],
   "feed_stats": {
-    "emitted": 75819,
-    "per_min": 135.36,
+    "emitted": 75838,
+    "per_min": 135.34,
     "by_decision": {
-      "seen": 59111,
-      "rejected": 14730,
-      "accepted": 991,
-      "skipped": 987
+      "seen": 59124,
+      "rejected": 14732,
+      "accepted": 993,
+      "skipped": 989
     },
     "by_source": {
       "new": 11478,
       "pump_logs": 2291,
-      "ds_search": 6190,
+      "ds_search": 6203,
       "trending_1h": 5937,
-      "trending_5m": 7263,
+      "trending_5m": 7267,
       "ds_boosts_top": 1031,
       "ds_boosts": 10287,
-      "ds_profiles": 11632,
+      "ds_profiles": 11634,
       "watchlist": 19710
     },
     "pumpfun": 30593
@@ -8484,7 +8533,7 @@
   "status_label": "Läuft",
   "running": true,
   "paused": false,
-  "heartbeat_age_s": 0.8,
+  "heartbeat_age_s": 0.1,
   "bot_alive": true,
   "supervisor_alive": true
 }
