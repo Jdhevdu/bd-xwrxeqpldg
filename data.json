@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-26 01:01:48 CET",
+  "exported_at": "2026-11-26 01:02:17 CET",
   "last_update": "2026-11-26 01:01:21 CET",
   "started_at": "2026-11-16 16:13:26 CET",
   "started_ts": 1794842006.9742942,
@@ -103,13 +103,13 @@
   "loop_latency": {
     "p50_ms": 1000.1,
     "p95_ms": 1000.3,
-    "max_ms": 3822.2,
-    "last_ms": 1000.1,
+    "max_ms": 23426.3,
+    "last_ms": 23426.3,
     "n": 400,
     "work_p50_ms": 0.4,
     "work_p95_ms": 1.0,
     "work_max_ms": 301.5,
-    "work_last_ms": 0.4,
+    "work_last_ms": 0.6,
     "lock_wait_ms": 0.0
   },
   "sol_usd": 70.39705567054334,
@@ -3951,7 +3951,7 @@
       "confirm_s": null,
       "n_discovery": 200,
       "n_buys": 0,
-      "updated_ts": 1795651307.2268007,
+      "updated_ts": 1795651337.6658669,
       "stages": {
         "discovery": {
           "p50_s": 1000.633,
@@ -4020,7 +4020,7 @@
           "p50_s": 0.125,
           "p95_s": 0.132,
           "max_s": 0.57,
-          "last_s": 0.126,
+          "last_s": 0.116,
           "n": 200
         },
         "event_to_phone": {
@@ -4496,26 +4496,6 @@
     "direct_ack": "fomo/pb5HCOrnzCnHVNkrqHgT6Y1jZZp2JB5kDd76hR/ack"
   },
   "feed": [
-    {
-      "symbol": "pode",
-      "mint": "8VWH6ntFczuCzTgGeNVarnRDfi6utetSBn3JfTLxpump",
-      "pool": "CU1hxyj68o8SRHabkQxU6D6nyKfqvtNpF541j2goXwbE",
-      "dex": "pump-fun",
-      "early": true,
-      "source": "ds_boosts",
-      "mcap": 13436.68,
-      "liq": 0.0,
-      "age_min": 7199.72,
-      "created_at": "2026-11-21T00:01:12Z",
-      "decision": "seen",
-      "reason": null,
-      "score": null,
-      "pump_score": null,
-      "pump_reasons": [],
-      "ts": 1795651254.9598093,
-      "t": "2026-11-26 01:00:54 CET",
-      "id": "8VWH6ntFczuCzTgGeNVarnRDfi6utetSBn3JfTLxpump-1795651254959"
-    },
     {
       "symbol": "Bababoi",
       "mint": "28B9kDm6XtQNqAkzuiKH3Zu1L8cVM6SLW4iRamFspump",
@@ -8530,11 +8510,31 @@
       "ts": 1795651296.8167694,
       "t": "2026-11-26 01:01:36 CET",
       "id": "ErfdcsXZSZHZYkT35jZRG7nBW4uLE5vAZP3gUtenpump-1795651296816"
+    },
+    {
+      "symbol": "SOL",
+      "mint": "8inL13ZhFhX8x3Nd41AQNz1uGEKdMJGNddWRJH6Hpump",
+      "pool": "GZ1wRRC2ZeLTuVMBKSxyfzvzRJJ3t738SvxckRseK4Xj",
+      "dex": "pumpswap",
+      "early": false,
+      "source": "new",
+      "mcap": 7.629941852,
+      "liq": 12.7592,
+      "age_min": 52.88,
+      "created_at": "2026-11-25T23:09:25Z",
+      "decision": "seen",
+      "reason": null,
+      "score": null,
+      "pump_score": null,
+      "pump_reasons": [],
+      "ts": 1795651337.768151,
+      "t": "2026-11-26 01:02:17 CET",
+      "id": "8inL13ZhFhX8x3Nd41AQNz1uGEKdMJGNddWRJH6Hpump-1795651337768"
     }
   ],
   "feed_stats": {
     "emitted": 104126,
-    "per_min": 138.25,
+    "per_min": 138.16,
     "by_decision": {
       "seen": 79675,
       "rejected": 20196,
