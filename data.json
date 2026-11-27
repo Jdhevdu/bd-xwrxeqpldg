@@ -1,7 +1,7 @@
 {
   "mode": "PAPER",
   "label": "Realistisch-Modus (Spielgeld)",
-  "exported_at": "2026-11-27 19:13:51 CET",
+  "exported_at": "2026-11-27 19:13:33 CET",
   "last_update": "2026-11-27 19:11:58 CET",
   "started_at": "2026-11-26 16:56:55 CET",
   "started_ts": 1795708615.369555,
@@ -8416,8 +8416,8 @@
     }
   ],
   "agents": {
-    "running": 7,
-    "running_label": "7 running",
+    "running": 0,
+    "running_label": "stopped",
     "speed": {
       "name": "Speed",
       "title": "Latenz",
@@ -8428,7 +8428,7 @@
       "price_s": null,
       "price_stale_s": null,
       "stop_to_sell_s": null,
-      "bot_to_phone_s": 0.119,
+      "bot_to_phone_s": 0.12,
       "cmd_to_ack_s": null,
       "cmd_to_fill_s": null,
       "quote_s": null,
@@ -8501,7 +8501,7 @@
           "n": 0
         },
         "bot_to_phone": {
-          "p50_s": 0.119,
+          "p50_s": 0.12,
           "p95_s": 0.243,
           "max_s": 10.998,
           "last_s": 0.117,
@@ -16723,11 +16723,11 @@
     },
     "pumpfun": 31287
   },
-  "status": "running",
-  "status_label": "Läuft",
-  "running": true,
+  "status": "delayed",
+  "status_label": "Verzögert",
+  "running": false,
   "paused": false,
-  "heartbeat_age_s": 18.7,
-  "bot_alive": true,
+  "heartbeat_age_s": 0.2,
+  "bot_alive": false,
   "supervisor_alive": true
 }
