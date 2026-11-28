@@ -1,8 +1,8 @@
 /* Cache icons only. Never cache HTML or live data — phone sells broke
    when an old index.html was served from the service worker. */
-const CACHE = "fomo-terminal-v21";
+const CACHE = "fomo-terminal-v22";
 const PRECACHE = ["./manifest.json", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
-const VERSION = "v21";
+const VERSION = "v22";
 
 function isHTML(request) {
   if (request.mode === "navigate") return true;

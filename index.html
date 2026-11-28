@@ -328,6 +328,9 @@ kbd{display:inline-block;min-width:18px;padding:1px 5px;border:1px solid var(--l
 .nl.FILTERED .ev{color:#aaa}
 .nl.PAUSE .ev{background:rgba(255,80,80,.2);color:#ff9a9a}
 
+/* v22 Tweet-Coins */
+nav.tabs button{font-size:9.5px;padding:7px 0 8px}
+
   </style>
 </head>
 <body>
@@ -356,6 +359,7 @@ kbd{display:inline-block;min-width:18px;padding:1px 5px;border:1px solid var(--l
     <button data-tab="pulse"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Pulse</button>
     <button data-tab="pos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 6V4h8v2"/></svg>Positionen<span class="cnt" id="nav-cnt" hidden>0</span></button>
     <button data-tab="ana"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Analyse</button>
+    <button data-tab="tweets"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h11l5 8-5 8H4l5-8z"/></svg>Tweets</button>
     <button data-tab="night"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>Nacht</button>
     <button data-tab="hist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Verlauf</button>
     <button data-tab="set"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Einstellungen</button>
@@ -364,10 +368,10 @@ kbd{display:inline-block;min-width:18px;padding:1px 5px;border:1px solid var(--l
   <div id="modal"></div>
   <script>
 "use strict";
-const APP_VERSION = "v21";
+const APP_VERSION = "v22";
 const POLL_MS = 8000;          // data.json poll while MQTT is not live
 const POLL_LIVE_MS = 30000;    // data.json poll while MQTT ticks arrive (history, settings)
-const CACHE_LS = "ax_cache_v21";
+const CACHE_LS = "ax_cache_v22";
 const DATA_BRANCH = "main";
 const SOLANA_RPC = "https://solana-rpc.publicnode.com";
 const SOLANA_RPC_FALLBACK = "https://api.mainnet-beta.solana.com";
@@ -1294,6 +1298,55 @@ function renderAna() {
 }
 
 
+
+/* ---------------- Tweet-Coins ---------------- */
+function fmtDelay(s) {
+  if (s == null) return "—";
+  s = +s;
+  if (s < 60) return Math.round(s) + "s";
+  if (s < 3600) return (s / 60).toFixed(1) + " min";
+  return (s / 3600).toFixed(1) + " h";
+}
+function renderTweets() {
+  const v = $("#view"), T = D.tweet || {};
+  const keep = window.scrollY;
+  const lat = T.latency || {};
+  const tweets = T.tweets || [], chosen = T.chosen || [], cands = T.candidates || [], rej = T.rejected || [];
+  const pos = T.positions || [];
+  v.innerHTML = `
+    <div class="h"><h2>Tweet-Coins</h2><span class="paper">SPIELGELD</span></div>
+    <div class="banner ${T.on ? "ok" : ""}">${T.on ? "Modus AN" : "Modus AUS"} · Käufe nur wenn Auto-Trade AN (jetzt ${T.auto_trade ? "AN" : "AUS"}) · max 20 % je Position · Zeit-Stop 1–3 min · Rug-Check immer an · kein Coin-Launch</div>
+    <div class="kpis">
+      <div class="kpi"><div class="k">Gemessene Tweet-Verzögerung</div><div class="v">${lat.n ? fmtDelay(lat.p50_s) : "—"}</div><div class="s">${lat.n ? `Median · p90 ${fmtDelay(lat.p90_s)} · n=${lat.n} · min ${fmtDelay(lat.min_s)} / max ${fmtDelay(lat.max_s)}` : "Noch keine Tweets im Feed. Ein Feeder muss output/live/tweets.json schreiben."}</div></div>
+      <div class="kpi"><div class="k">Trades (Tweet-Modus)</div><div class="v">${T.trades || 0}</div><div class="s"><b class="pos">${T.wins || 0} Gewinne</b> · <b class="neg">${T.losses || 0} Verluste</b></div></div>
+      <div class="kpi"><div class="k">Feed</div><div class="v">${T.feed ? (T.feed.n_active || 0) : 0}</div><div class="s">${T.feed && T.feed.source ? "Quelle: " + esc(T.feed.source) : "kein Feed"}${T.feed && T.feed.updated_at ? " · " + agoS(T.feed.updated_at) : ""}</div></div>
+    </div>
+    <div class="mutnote">${esc(T.note || "")}</div>
+    <div class="set"><div class="t">Beobachtete Konten <span class="mut">(config/watch_accounts.json)</span></div>
+      <div class="chips">${(T.watch || []).map(a => `<span class="chip">@${esc(a.username)}</span>`).join("") || "—"}</div>
+    </div>
+    <div class="set"><div class="t">Aktuelle Tweets <span class="mut">(${tweets.length})</span></div>
+      ${tweets.map(t => `<div class="rj"><b>@${esc(t.username || "")}</b><span class="mut sm">${t.delay_s != null ? "gesehen nach " + fmtDelay(t.delay_s) : ""} · ${t.likes || 0} ♥${t.is_rt ? " · RT" : ""}</span>
+        <div class="evr">${esc((t.text || "").slice(0, 220))}</div></div>`).join("") || `<div class="empty">Keine Tweets im Zeitfenster.</div>`}
+    </div>
+    <div class="set"><div class="t">Gewählte Münze (erste / stärkste je Story)</div>
+      ${chosen.length ? chosen.map(c => `<div class="ev">
+        <div class="evh"><span class="scb ${scCls(c.score)}">${c.score ?? "—"}</span><b>${esc(c.symbol || "?")}</b><span class="mut sm">@${esc(c.tweet_user || "")} · Liq ${fmtK(c.liq)} · Coin ${fmtDelay(c.coin_age_s)} · Tweet ${fmtDelay(c.tweet_delay_s)}</span></div>
+        <div class="evr">${esc((c.why || []).join(" · "))} · ${esc(c.pick_why || "")}</div>
+        <div class="evr mut">${esc((c.tweet_text || "").slice(0, 180))}</div>
+      </div>`).join("") : `<div class="empty">Keine passende Münze zu den aktuellen Tweets.</div>`}
+    </div>
+    <div class="set"><div class="t">Kandidaten & Kopien <span class="mut">(${cands.length})</span></div>
+      ${cands.map(c => `<div class="rj"><b>${esc(c.symbol || "?")}</b> <span class="sig ${c.chosen ? "on" : ""}">${c.chosen ? "GEWÄHLT" : "Kopie/Fail"}</span>
+        <span class="mut sm">@${esc(c.tweet_user || "")} · ${esc(c.pick_why || "")}</span>
+        <div class="evr">${esc((c.why || []).join(" · "))}</div></div>`).join("") || `<div class="empty">Keine.</div>`}
+    </div>
+    <div class="set"><div class="t">Offene Tweet-Positionen <span class="mut">(${pos.length})</span></div>
+      ${pos.length ? pos.map(p => `<div class="rj"><b>${esc(p.symbol)}</b> <span class="${cls(p.pnl_pct)}">${p.pnl_pct > 0 ? "+" : ""}${p.pnl_pct}%</span> <span class="mut sm">@${esc(p.tweet || "")} · ${p.age_s}s · ${esc(p.why || "")}</span></div>`).join("") : `<div class="empty">Keine.</div>`}
+    </div>`;
+  window.scrollTo(0, keep);
+}
+
 /* ---------------- Nacht-Modus ---------------- */
 let nightEv = "ALL", nightQ = "";
 function spark(curve) {
@@ -1339,7 +1392,7 @@ function renderNight() {
 }
 
 /* ---------------- Settings ---------------- */
-const PCT = new Set(["night_pos_pct", "night_dd_pause_pct", "night_stop", "max_price_impact_pct", "emergency_dd_pct", "late_h1_max_pct", "daily_loss_limit_pct", "size_fixed_pct", "size_max_equity_frac", "take_profit_pct", "trailing_stop_pct", "hard_stop_pct", "early_take_profit_pct", "early_trailing_stop_pct", "early_hard_stop_pct"]);
+const PCT = new Set(["tweet_pos_pct", "tweet_stop", "night_pos_pct", "night_dd_pause_pct", "night_stop", "max_price_impact_pct", "emergency_dd_pct", "late_h1_max_pct", "daily_loss_limit_pct", "size_fixed_pct", "size_max_equity_frac", "take_profit_pct", "trailing_stop_pct", "hard_stop_pct", "early_take_profit_pct", "early_trailing_stop_pct", "early_hard_stop_pct"]);
 function sv(k) { if (k in draft) return draft[k]; const s = D.settings || {}; return s[k]; }
 function tgl(k, label, sub, lock) { const on = lock ? true : !!sv(k); return `<div class="srow"><div class="lab">${label}${sub ? `<small>${sub}</small>` : ""}</div>${lock ? `<span class="lockico">IMMER AN</span>` : ""}<button class="tg ${on ? "on" : ""} ${lock ? "lock" : ""}" ${lock ? "disabled" : `data-tg="${k}"`} aria-label="${esc(label)}"></button></div>`; }
 function nin(k, label, sub, unit, min, max, step) { let v = sv(k); if (v != null && PCT.has(k)) v = Math.round(v * 1000) / 10; return `<div class="srow"><div class="lab">${label}${sub ? `<small>${sub}</small>` : ""}</div><input class="num" data-num="${k}" inputmode="decimal" value="${v != null ? v : ""}" data-min="${min}" data-max="${max}"><span class="mut" style="width:22px">${unit}</span></div>`; }
@@ -1366,6 +1419,12 @@ function renderSet() {
       ${nin("emergency_dd_pct", "Notstopp ab Drawdown", "gemessen ab v21-Start bzw. Hoch", "%", 10, 90)}
       ${nin("loss_cooldown_min", "Pause nach Verlust", "pro Coin", "min", 0, 1440)}
       ${nin("max_entries_per_mint_day", "Max. Einstiege pro Coin/Tag", "", "", 1, 10)}
+    </div>
+    <div class="set"><div class="t">Tweet-Coins</div>
+      ${tgl("tweet_mode_on", "Tweet-Modus", "Paper: matcht neue Coins zu Tweets beobachteter Konten, nimmt nur die erste/stärkste Münze je Story, nur nach Rug-Check. Käufe nur bei Auto-Trade AN. Kein Coin-Launch.")}
+      ${nin("tweet_pos_pct", "Größe pro Trade", "von Equity, hart max 20 %", "%", 5, 20)}
+      ${nin("tweet_hold_s", "Zeit-Stop", "harter Ausstieg nach 1–3 Minuten", "s", 60, 180)}
+      ${nin("tweet_stop", "Hard-Stop", "vom Fill", "%", 5, 30)}
     </div>
     <div class="set"><div class="t">Nacht-Modus</div>
       <div class="srow"><div class="lab"><b>Nacht-Profil</b><small>Auto = nur im Zeitfenster (Standard über Nacht). Strenge Filter: frische Pools ≤ 6 h, Liq ≥ $40k, 5m-Vol ≥ $25k, ≥ 300 Holder, ≥ 2 Scanner-Signale + Rug-Check PASS.</small></div><div class="segsm" id="nm-seg">${["auto", "on", "off"].map(m => `<button data-nm="${m}" class="${(sv("night_mode") || "auto") === m ? "on" : ""}">${{ auto: "Auto", on: "Immer", off: "Aus" }[m]}</button>`).join("")}</div></div>
@@ -1525,7 +1584,7 @@ document.addEventListener("keydown", (e) => {
     if (m && pos) { e.preventDefault(); sell(pos.mint, m, pos.symbol); return; }
     return;
   }
-  const t = { "1": "pulse", "2": "pos", "3": "hist", "4": "set", "5": "ana", "6": "night" }[k];
+  const t = { "1": "pulse", "2": "pos", "3": "hist", "4": "set", "5": "ana", "6": "night", "7": "tweets" }[k];
   if (t) { e.preventDefault(); setTab(t); return; }
   if (k === "/") { e.preventDefault(); if (tab !== "pulse") setTab("pulse"); setTimeout(() => { const q = $("#q"); if (q) q.focus(); }, 0); }
 });
@@ -1546,6 +1605,7 @@ function renderView() {
   else if (tab === "hist") renderHist();
   else if (tab === "ana") renderAna();
   else if (tab === "night") renderNight();
+  else if (tab === "tweets") renderTweets();
   else if (tab === "set") { if (!settingsDirty || !$("#view").children.length) renderSet(); }
 }
 let liveRaf = 0;
@@ -1570,6 +1630,7 @@ async function tick() {
     if (first) { setTab(tab); hideBoot(); }
     else if (tab === "hist" || tab === "ana" || (tab === "set" && !settingsDirty)) renderView();
     else if (tab === "night" && document.activeElement && document.activeElement.id !== "nl-q") renderView();
+    else if (tab === "tweets") renderView();
     else renderLive();
     renderSide();
   } catch (e) {
@@ -1588,14 +1649,14 @@ $("#side").addEventListener("click", onSideClick);
     try { connectLive(); paintTop(); setTab(tab); hideBoot(); renderSide(); } catch (_) {}
   }
   setTimeout(() => { firstPaintDone = true; }, 1500);
-  const loop = async () => { await tick(); const live = liveSource === "direct" && Date.now() - lastTickAt < 5000; setTimeout(loop, tab === "ana" ? 10000 : tab === "night" ? 3000 : live ? POLL_LIVE_MS : POLL_MS); };
+  const loop = async () => { await tick(); const live = liveSource === "direct" && Date.now() - lastTickAt < 5000; setTimeout(loop, tab === "ana" ? 10000 : tab === "night" || tab === "tweets" ? 3000 : live ? POLL_LIVE_MS : POLL_MS); };
   loop();
 })();
 silentWallet();
 if ("serviceWorker" in navigator) {
   let reloading = false;
   navigator.serviceWorker.addEventListener("controllerchange", () => { if (reloading) return; reloading = true; location.reload(); });
-  navigator.serviceWorker.register("./sw.js?v=21", { updateViaCache: "none" }).then(reg => { const ping = () => { try { reg.update(); } catch (_) {} }; ping(); setInterval(ping, 15000); if (reg.waiting) reg.waiting.postMessage("skipWaiting"); }).catch(() => {});
+  navigator.serviceWorker.register("./sw.js?v=22", { updateViaCache: "none" }).then(reg => { const ping = () => { try { reg.update(); } catch (_) {} }; ping(); setInterval(ping, 15000); if (reg.waiting) reg.waiting.postMessage("skipWaiting"); }).catch(() => {});
 }
 
   </script>
